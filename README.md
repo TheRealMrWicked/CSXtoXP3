@@ -8,8 +8,10 @@ The English patch for Yosuga no Sora can be found in the YNS [Discord](https://d
 ## Credits
 Yosuga no Sora Conversion Tool written by [MrWicked](https://github.com/TheRealMrWicked) under [GPL License](https://github.com/TheRealMrWicked/Yosuga-no-Sora-Patch-Conversion/blob/main/LICENSE).
 
-[BRV](https://linktr.ee/BrendanRVlogs) for proofreading and helping with formatting the finalized patch file.
-
 [CSX Importer/Exporter](https://proger.me/vn/old/#csx+extractor%2Fimporter) written by [ProgerXP](https://proger.me).
 
+[GARbro](https://github.com/morkt/GARbro) written by [morkt](https://github.com/morkt).
+
 [TRJR Team](https://trjr.wordpress.com) for making the English Translations of Yosuga no Sora and Haruka na Sora.
+
+[BRV](https://linktr.ee/BrendanRVlogs) for proofreading and helping with formatting the finalized patch file.
