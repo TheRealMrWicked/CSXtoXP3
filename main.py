@@ -1110,7 +1110,7 @@ while True:
     else:
         break
 
-csxDecrypter(2)
+csxDecrypter(choice)
 utfCombiner()
 textReplacer()
 chapterCreator()
