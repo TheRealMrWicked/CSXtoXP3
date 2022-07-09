@@ -338,7 +338,7 @@
 @Char file=CF06_06M 
 @Font face=36
 
-@Talk name=Haruka_and_Ryouhei_and_Nao voice=RH020226/NO020063
+@Talk name=Haruka　and　Ryouhei　and　Nao voice=RH020226/NO020063
 
 @Hitret id=20872
 
@@ -452,7 +452,7 @@
 @Char file=CF06_05M x=300   
 @Char file=CC07_04M x=-300   
 
-@Talk name=Akira_and_Ryouhei voice=AK020625/RH020231
+@Talk name=Akira　and　Ryouhei voice=AK020625/RH020231
 
 @Hitret id=20885
 

@@ -1,0 +1,2453 @@
+
+@set(__ALBUM_SCREENSHOT__ = 0)
+
+class AlbumModeScene extends Sprite, SelectItemNotifyBase, SceneBase, ChainItemBase{
+	var _adv;
+
+	var _title;
+
+	var _base;
+
+	var _list;
+
+	var _tempEventCamera;
+
+	var _charPage = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+	var _tgtChar = 0;
+	var _tgtChkList = null;
+	var _tgtCgList = null;
+	var _tgtBustupList = null;
+	var _tgtCutinList = null;
+
+	var _tempNum = [];
+
+	var _btnChar = [];
+	var _thumbBase = [];
+	var _btnThumb = [];
+	var _btnMode = [];
+	var _btnPreview;
+
+	var _sprComplete;
+
+	var _grpPage;
+
+	var _imgClose;
+	var _imgMask;
+
+	var _viewType = VIEWTYPE_NULL;
+	var _viewEnter = false;
+	var _viewIndex, _viewDiff;
+
+	var _viewMenu;
+	var _viewBtn = [];
+	var _viewMenuArea;
+	var _viewMenuAreaEnter = false;
+
+	var _viewZoom = false;
+	var _zoomViewArea;
+	var _viewWidth;
+	var _viewHeight;
+
+	var _imgCompNum;
+	var _completeTimer;
+	var _completeRatio, _completeCount;
+	var _completeCountEnd = false;
+
+	var _pcb;
+
+	var _max_thumb = 9;
+
+	var _selChar = 0;
+	var _selPage = 0;
+	var _selCharPage = [];
+
+	var _prevCg = "";
+
+	//達成率
+	var _appG, _appK;
+	var _compNumber, _compDemon;
+
+	function AlbumModeScene(win, par){
+		Sprite(...);
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		hitThreshold = 0;
+		absolute = LAYER_APPRECIATION;
+
+		_base = new global.SelectItemGroupSprite(win, this);
+		with(_base){
+			.loadImages("FRM_06C01");
+			.setSizeToImageSize();
+			.opacity = 0;
+			.visible = true;
+		}
+
+		_title = new global.Layer(win, _base);
+		with(_title){
+			.loadImages("FRM_06C02");
+			.setSize(.imageWidth\3, .imageHeight);
+			.setImagePos(-.width * 2, 0);
+			.setPos(24, 33);
+			.visible = true;
+		}
+
+		_adv = new ADVScreen(win, LAYER_ADVSCREEN, LAYER_ADVMESSAGE);
+
+		var numBtnList = [
+			"FRM_06C21", "FRM_06C22", "FRM_06C23", "FRM_06C24", "FRM_06C25", "FRM_06C26"
+		];
+
+		for(var i=0;i<numBtnList.count;i++){
+			_tempNum[i] = new global.Layer(win, this);
+			with(_tempNum[i]){
+				.loadImages(numBtnList[i]);
+				.setSizeToImageSize();
+			}
+		}
+
+		//_list[charID][id]
+		_list = Scripts.evalStorage("CgModeList.tjs");
+		calcComplete();
+
+		_imgCompNum = new global.Layer(win, _base);
+		with(_imgCompNum){
+			.loadImages("FRM_06C31");
+			.setSizeToImageSize();
+		}
+		_sprComplete = new global.Layer(win, _base);
+		with(_sprComplete){
+			.setSize(_imgCompNum.width\11*4, _imgCompNum.height);
+			.setPos(652, 537);
+
+			_completeRatio = (_compNumber * 100) \ _compDemon;
+			_completeCount = 0;
+			drawCompleteNumber();
+
+			.visible = true;
+		}
+		_completeTimer = new Timer(onCompleteNumber, "");
+		_completeTimer.interval = 10;
+
+		_appG = new GdiPlus.Appearance();
+		_appG.addBrush(0xff3fff3f, 0, 0, 0);
+		_appG.addPen(0xffffffff, 2, 0, 0);
+		_appK = new GdiPlus.Appearance();
+		_appK.addBrush(0xff3f3f3f, 0, 0);
+		_appK.addPen(0xffffffff, 2, 0, 0);
+
+		var x = 32;
+		var y = 140;
+		var pitch = 65;
+		var name = [
+			["FRM_06C11", 0, 164, 4], 
+			["FRM_06C12", 0, 164, 4], 
+			["FRM_06C13", 0, 164, 4], 
+			["FRM_06C14", 0, 164, 4], 
+			["FRM_06C15", 0, 164, 4], 
+			["FRM_06C18", 0, 164, 4], 
+			["FRM_06C19", 0, 164, 4]
+		];
+
+		for(var i=0;i<_list.count;i++){
+			var num = _list[i].cg.count;
+			name[i][1] = num \ 9;
+			if(num % 9) name[i][1]++;
+		}
+
+		var y = 122;
+		for(var i=0;i<name.count;i++){
+			_btnChar[i] = new NameTag(win, _base, name[i][0], name[i][1], _tempNum, name[i][2], name[i][3]);
+			with(_btnChar[i]){
+				.setPos(16, y);
+				y += _btnChar[i].height + 6;
+				.visible = true;
+			}
+			_selCharPage[i] = 0;
+		}
+
+		_grpPage = new RadioButtonGroup();
+		for(var iC=0;iC<_btnChar.count;iC++){
+			for(var iP=0;iP<_btnChar[iC].btn.count;iP++){
+				_grpPage.add(_btnChar[iC].btn[iP]);
+			}
+		}
+		_grpPage.on(_btnChar[0].btn[0]);
+
+		_btnPreview = new ToggleOnBaseButton(win, _base);
+		with(_btnPreview){
+			.create("FRM_06C05", 4, 0, 0, 171);
+			.setPos(376, 550);
+			.state = sysReg._cgModeShowPreview;
+		}
+
+		_btnMode[0] = new Button(win, _base);
+		with(_btnMode[0]){
+			.create("FRM_06C03", 3);
+			.setPos(510, 33);
+		}
+		_btnMode[1] = new Button(win, _base);
+		with(_btnMode[1]){
+			.create("FRM_06C04", 3);
+			.setPos(644, 33);
+		}
+
+		var selectImg = new global.Layer(win, _base);
+		with(selectImg){
+			.loadImages("FRM_06C06");
+			.setSizeToImageSize();
+		}
+		_imgClose = new global.Layer(win, _base);
+		with(_imgClose){
+			.loadImages("FRM_06C07");
+			.setSizeToImageSize();
+		}
+		_imgMask = new global.Layer(win, _base);
+		with(_imgMask){
+			.loadImages("FRM_06C08");
+			.setSizeToImageSize();
+		}
+		for(var i=0;i<_max_thumb;i++){
+			_thumbBase[i] = new SelectItemGroupLayer(win, _base);
+			with(_thumbBase[i]){
+				.hasImage = true;
+				.setSize(selectImg.width\2, selectImg.height);
+				.face = dfMask;
+				.copyRect(0, 0, _imgMask, 0, 0, _imgClose.width, _imgClose.height);
+				.holdAlpha = true;
+				.face = dfMain;			//以後、メインのコピだけ。
+				.copyRect(0, 0, _imgMask, 0, 0, .width, .height);
+				.setPos(296+164*(i%3), 101+128*(i\3));
+				.visible = true;
+			}
+			_btnThumb[i] = new Button(win, _thumbBase[i]);
+			with(_btnThumb[i]){
+				.create(selectImg, 2);
+				.fillRect(0, 0, .width, .height, 0x0);
+			}
+		}
+		invalidate selectImg;
+
+		_viewMenu = new SelectItemGroupSprite(win, this);
+		with(_viewMenu){
+			.setSize(WINDOW_WIDTH, 306);
+			.setPos(0, WINDOW_HEIGHT-.height);
+			.opacity = 0;
+			.visible = true;
+		}
+		_viewMenuArea = new Rect(0, WINDOW_HEIGHT-156, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+		_viewBtn[0] = new ToggleButton(win, _viewMenu);
+		with(_viewBtn[0]){
+			.create("FRM_06C42", 4);
+			.setPos(757, 263);
+		}
+		_viewBtn[1] = new ToggleButton(win, _viewMenu);
+		with(_viewBtn[1]){
+			.create("FRM_06C41", 4);
+			.setPos(24, 176);
+		}
+		_viewBtn[2] = new AlbumCrossSlider(win, _viewMenu);
+		with(_viewBtn[2]){
+			.setPos(_viewBtn[0].left-196, _viewBtn[0].top-100);
+			.absolute = _viewBtn[0].absolute - 1;
+		}
+		HitThresholdSelectItems(_viewBtn, 256);
+
+		var w = WINDOW_WIDTH * 0.5;
+		var h = WINDOW_HEIGHT * 0.5;
+		_zoomViewArea = new Rect(WINDOW_CENTER_X-w/2, WINDOW_CENTER_Y-h/2, WINDOW_CENTER_X+w/2-1, WINDOW_CENTER_Y+h/2-1);
+
+		_pcb = new PreviewCrossBar(win, _adv);
+		with(_pcb){
+			.create(5, 4, 2, 4);
+			.setPos(-182, 172);
+			.opacity = 0;
+			.visible = true;
+		}
+
+		setPage(_selChar, _selPage);
+		setInput(false);
+
+		show();
+		visible = true;
+
+		PlayBgm("BGM17");
+
+		PlaySystemVoice("ＣＧモード");
+
+		_tempEventCamera = CONFIG.eventCamera;
+		CONFIG.eventCamera = 1;
+
+		mouseTrackingMode = global.ChainItemBase.MOUSETRACKINGMODE_FREE;
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		CONFIG.eventCamera = _tempEventCamera;
+
+		invalidate _list;
+
+		invalidate _viewMenu;
+		invalidate _zoomViewArea;
+		invalidate _viewMenuArea;
+		InvalidateArray(_viewBtn);
+
+		invalidate _imgClose;
+		invalidate _imgMask;
+
+		invalidate _sprComplete;
+		invalidate _appG;
+		invalidate _appK;
+
+		_completeTimer.enabled = false;
+		invalidate _completeTimer;
+		invalidate _imgCompNum;
+
+		InvalidateArray(_tempNum);
+
+		InvalidateArray(_btnChar);
+		InvalidateArray(_btnThumb);
+		InvalidateArray(_btnMode);
+		InvalidateArray(_thumbBase);
+
+		invalidate _btnPreview;
+
+		invalidate _grpPage;
+
+		invalidate _pcb;
+
+		invalidate _base;
+		invalidate _title;
+
+		invalidate _adv;
+
+		global.Sprite.finalize();
+		global.ChainItemBase.finalize();
+	}
+	function who(){return "AlbumModeScene";}
+
+	function setPage(char, page){
+		_tgtChar = char;
+		_tgtCgList = _list[char].cg;
+		if(_list[char].cutinview !== void){
+			_viewType = VIEWTYPE_CUTIN;
+//			_tgtChkList = _tgtCutinList = _list[char].cutin;
+			_tgtChkList = _tgtCutinList = _list[char].cg;
+			_tgtBustupList = null;
+		}else if(_list[char].bustupview !== void){
+			_viewType = VIEWTYPE_BUSTUP;
+			_tgtChkList = _tgtBustupList = _list[char].bustup;
+			_tgtCutinList = null;
+		}else{
+			_viewType = VIEWTYPE_CG;
+			_tgtChkList = _list[char].cg;
+			_tgtBustupList = null;
+			_tgtCutinList = null;
+		}
+
+		_grpPage.on(_btnChar[char].btn[page]);
+		_selCharPage[char] = page;
+
+		var num = _tgtCgList.count;
+		var index = page * _max_thumb;
+		if(index >= num) return;
+
+		var img = new global.Layer(window, this);
+		var i;
+		for(i=0;i<_max_thumb && index+i<num;i++){
+			var base;
+			switch(_viewType){
+			case VIEWTYPE_CG :
+				base = _tgtChkList[index+i][0].substring(0, 4);
+				break;
+			case VIEWTYPE_BUSTUP :
+				base = _tgtChkList[index+i][0].substring(0, 4);
+				break;
+			case VIEWTYPE_CUTIN :
+				base = _tgtChkList[index+i][0].substring(0, 4);
+				break;
+			}
+
+			with(_thumbBase[i]){
+				if(ChkCgFlag(CG_FLAG_LIST[base])){
+					try{
+						img.loadImages(base + "TL");
+					}catch{
+						img.loadImages("dummyTL");
+					}
+					.copyRect(0, 0, img, 0, 0, .width, .height);
+					_btnThumb[i].valid = true;
+
+					if(_viewType != VIEWTYPE_BUSTUP){
+						var ref = _tgtChkList[index+i];
+						var size = 8;
+						var pitch = (size+2);
+						var w = ref.count * pitch;
+						if(.width < w){
+							size = 6;
+							pitch = (size+2);
+							w = ref.count * pitch;
+						}
+						var x = .width\2 - w\2;
+						var y = .height - 14 - size \ 2;
+						.colorRect(0, y-3, .width, size+7, RGB(0, 0, 64), 64);
+						for(var j=0;j<ref.count;j++){
+							if(ChkCgFlag(CG_FLAG_LIST[ref[j]])){
+								var g = 127 + (128 * j) \ ref.count;
+								var r = 255 - (128 * j) \ ref.count;
+								_appG.clear();
+								_appG.addBrush(RGBA(r, g, 64), 0, 0, 0);
+								_appG.addPen(0xffffffff, 2, 0, 0);
+								.drawArc(_appG, x+pitch*j, y, size, size, 0, 360);
+							}else{
+								.drawArc(_appK, x+pitch*j, y, size, size, 0, 360);
+							}
+						}
+					}
+				}else{
+					.copyRect(0, 0, _imgClose, 0, 0, .width, .height);
+					_btnThumb[i].valid = false;
+				}
+				@if(__DEBUGMODE__)
+					if(debug.tglSupExp.state){
+						.font.height = 16;
+						var w = .font.getTextWidth(base);
+						if(CG_INFO[base] === void)
+							.drawText(16, 16, base, GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+						else
+							.drawText(16, 16, CG_INFO[base], GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+					}
+				@endif
+
+				.visible = true;
+			}
+			_btnThumb[i].visible = true;
+		}
+		for(;i<_max_thumb;i++){
+			_thumbBase[i].visible = false;
+			_btnThumb[i].visible = false;
+			_btnThumb[i].valid = false;
+		}
+	}
+
+	function viewEnter(char, page, index){
+		_prevCg = "";
+		if(_viewType == VIEWTYPE_CUTIN){
+			_viewZoom = false;
+			_viewBtn[0].visible = false;
+			changeZoom(false);
+		}else{
+			_viewBtn[0].visible = true;
+			@if(__HARUKA__ == 0)
+				if(_viewType == VIEWTYPE_BUSTUP){
+					_viewBtn[0].visible = true;
+				}else{
+					_viewBtn[0].visible = false;
+					_viewBtn[0].state = 0;
+				}
+			@endif
+
+			_viewZoom = _viewBtn[0].state;
+		}
+
+		if(_viewType == VIEWTYPE_CG)
+			_viewBtn[2].visible = _viewZoom;
+		else
+			_viewBtn[2].visible = false;
+
+		if(_btnPreview.state && _viewBtn[1].state){
+			_viewMenu.setBlendingEnvelope(255);
+			_viewMenu.beginActivation(300);
+			_viewMenuAreaEnter = true;
+		}
+
+		_viewEnter = true;
+
+		setInput(true);
+		HitThresholdSelectItems(_viewBtn, 0);
+
+		_viewIndex = page * _max_thumb + index;
+		_viewDiff = searchDiff(_tgtChkList, _viewIndex, 0, true);
+
+		//プレビュー情報を作成
+		var list = makePreviewList();
+		var checkBase = _tgtChkList[_viewIndex][0];
+		switch(_viewType){
+		case VIEWTYPE_CG : 
+			checkBase = checkBase.substring(0, 4);
+			break;
+		case VIEWTYPE_BUSTUP : 
+			checkBase = checkBase.substring(0, 4);
+			break;
+		case VIEWTYPE_CUTIN : 
+			checkBase = checkBase.substring(0, 4);
+			break;
+		}
+		var i;
+		for(i=0;i<list.count;i++){
+			var check = list[i][0];
+			switch(_viewType){
+			case VIEWTYPE_CG : 
+				check = check.substring(0, 4);
+				break;
+			case VIEWTYPE_BUSTUP : 
+				check = check.substring(0, 4);
+				break;
+			case VIEWTYPE_CUTIN : 
+				check = check.substring(0, 7);
+				break;
+			}
+
+			if(checkBase == check) break;
+		}
+		_pcb.set(list, i);
+
+		presetView(0);
+
+//		_adv.moveCamera(%[pos:"0,0", time:0]);
+//		_viewBtn[2].setTrimPos(0, 0);
+
+		if(_btnPreview.state)
+			_pcb.show(, !_viewBtn[1].state);
+
+		if(_viewBtn[1].state == 0){
+			with(_viewMenu){
+				.opacity = 255;
+				.setBlendingEnvelope(0);
+				.beginActivation(1000);
+			}
+		}
+
+		hide();
+	}
+	function viewLeave(){
+		_viewEnter = false;
+
+		cursor = crDefault;
+
+		_viewMenu.setBlendingEnvelope(0);
+		_viewMenu.beginActivation(100);
+		_viewMenuAreaEnter = false;
+
+		setInput(false);
+		HitThresholdSelectItems(_viewBtn, 256);
+
+		_pcb.hide();
+
+		show();
+	}
+
+	function viewNext(){
+		var index = _viewIndex;
+		var diff = _viewDiff;
+		if((_viewDiff = searchDiff(_tgtChkList, _viewIndex, _viewDiff+1, true)) == -1){
+			_viewIndex = searchIndex(_tgtChkList, _viewIndex+1, true);
+			_viewDiff = searchDiff(_tgtChkList, _viewIndex, 0, true);
+			index = diff = -1;
+		}
+
+		if(index != _viewIndex) _pcb.rotateH(true, true);
+		else if(diff != _viewDiff) _pcb.rotateV(true);
+
+		presetView();
+
+		if(_btnPreview.state)
+			_pcb.show(, (_viewBtn[1].state == false) && (_viewMenuAreaEnter == false));
+	}
+	function viewPrev(){
+		var index = _viewIndex;
+		var diff = _viewDiff;
+		if((_viewDiff = searchDiff(_tgtChkList, _viewIndex, _viewDiff-1, false)) == -1){
+			_viewIndex = searchIndex(_tgtChkList, _viewIndex-1, false);
+			_viewDiff = searchDiff(_tgtChkList, _viewIndex, _tgtChkList[_viewIndex].count-1, false);
+			index = diff = -1;
+		}
+
+		if(index != _viewIndex) _pcb.rotateH(false, false);
+		else if(diff != _viewDiff) _pcb.rotateV(false);
+
+		presetView();
+
+		if(_btnPreview.state)
+			_pcb.show(, (_viewBtn[1].state == false) && (_viewMenuAreaEnter == false));
+	}
+	function viewStepNext(){
+		_viewIndex = searchIndex(_tgtChkList, _viewIndex+1, true);
+		_viewDiff = searchDiff(_tgtChkList, _viewIndex, 0, true);
+
+		presetView();
+
+		_pcb.rotateH(true, true);
+
+		if(_btnPreview.state)
+			_pcb.show(, (_viewBtn[1].state == false) && (_viewMenuAreaEnter == false));
+	}
+	function viewStepPrev(){
+		_viewIndex = searchIndex(_tgtChkList, _viewIndex-1, false);
+		_viewDiff = searchDiff(_tgtChkList, _viewIndex, 0, true);
+
+		presetView();
+
+		_pcb.rotateH(false, true);
+
+		if(_btnPreview.state)
+			_pcb.show(, (_viewBtn[1].state == false) && (_viewMenuAreaEnter == false));
+	}
+	function searchDiff(list, sIndex, sDiff, fForward=true){
+		var diff = sDiff;
+		while(0 <= diff && diff < list[sIndex].count){
+			var file = list[sIndex][diff];
+			switch(_viewType){
+			case VIEWTYPE_CG : 
+			case VIEWTYPE_CUTIN : 
+				break;
+			case VIEWTYPE_BUSTUP : 
+				file = file.substring(0, 4);
+				break;
+			}
+			if(ChkCgFlag(CG_FLAG_LIST[file])){
+				return diff;
+			}
+
+			if(fForward)	diff++;
+			else			diff--;
+		}
+
+		return -1;
+	}
+	function searchIndex(list, sIndex, fForward=true){
+		var index = sIndex;
+		while(true){
+			if(fForward){
+				if(list.count <= index) index = 0;
+			}else{
+				if(index < 0) index = list.count - 1;
+			}
+
+			var file = list[index][0];
+			switch(_viewType){
+			case VIEWTYPE_CG : 
+				file = file.substring(0, 4);
+				break;
+			case VIEWTYPE_BUSTUP : 
+				file = file.substring(0, 4);
+				break;
+			case VIEWTYPE_CUTIN : 
+				file = file.substring(0, 4);
+				break;
+			}
+			if(ChkCgFlag(CG_FLAG_LIST[file])){
+				return index;
+			}
+
+			if(fForward){
+				index++;
+			}else{
+				index--;
+			}
+		}
+	}
+	function presetView(time=300, fRefresh=false){
+		var cg = null;
+		var char = null;
+		var cutin = null;
+		switch(_viewType){
+		case VIEWTYPE_CG :
+			cg = _tgtCgList[_viewIndex][_viewDiff];
+			if(_viewZoom) cg += "L";
+			break;
+		case VIEWTYPE_BUSTUP :
+			cg = _tgtCgList[_viewIndex][0];
+			char = _tgtBustupList!=null?_tgtBustupList[_viewIndex][_viewDiff]:null;
+			if(_viewZoom){
+				char = char.substring(0, 7) + "L";
+			}else{
+				if(char[7] == "") char += "M";
+			}
+			break;
+		case VIEWTYPE_CUTIN :
+//			cg = _tgtCgList[_viewIndex][0];
+//			cutin = _tgtCutinList!=null?_tgtCutinList[_viewIndex][_viewDiff]:null;
+			cg = _tgtCgList[_viewIndex][_viewDiff];
+			break;
+		}
+
+		view(cg, char, cutin, time, fRefresh);
+	}
+
+	function view(cg=null, char=null, cutin=null, time=300, fRefresh=false){
+		var pos = "0,0";
+		@if(__ALBUM_SCREENSHOT__ == 0)
+			pos = "%d,%d".sprintf(_adv._camera_pos.x/2, _adv._camera_pos.y/2);
+		@endif
+
+		if(cg != null){
+			if(_list[_tgtChar][cg] !== void){
+				var ref = _list[_tgtChar][cg].pre;
+				var fSameCategory = (_prevCg.substring(0, 4) == cg.substring(0, 4));
+				for(var i=0;i<ref.count;i++){
+					if(ref[i].tagname == "cg"){
+						var temp = %[];
+						(Dictionary.assignStruct incontextof temp)(ref[i]);
+						if(fSameCategory) temp.pos = pos;
+						_adv.addOrderList(temp);
+					}else{
+						_adv.addOrderList(ref[i]);
+					}
+				}
+				_prevCg = cg;
+			}else if((cg != _prevCg) || fRefresh){
+				_adv.addOrderList(%[tagname:"cg", file:cg, pos:pos, center:-1]);
+				_prevCg = cg;
+			}
+		}
+		if(char != null){
+			_adv.addOrderList(%[tagname:"clearchar"]);
+			_adv.addOrderList(%[tagname:"char", file:char]);
+		}
+		if(cutin != null)
+			_adv.addOrderList(%[tagname:"cutin", file:cutin, pos:"0,100"]);
+
+		_adv._update |= UPDATE_CG;
+
+		@if(__ALBUM_SCREENSHOT__ == 0)
+			_adv.update(%[time:time]);
+
+			var file = cg.toUpperCase().substring(0, 4);
+			var fHCg = (CG_HSCENE_LIST[file] !== void);
+
+			var obj = _adv.getADVObjectObject("背景");
+			with(_viewBtn[2]){
+				.create(256, 256, obj._spr._image, fHCg);
+				.setTrimPos(_adv._camera_pos.x/2, _adv._camera_pos.y/2);
+				_adv.moveCamera(%[pos:"%d,%d".sprintf(.trimX, .trimY), time:0]);
+				.setPos(_viewBtn[0].left-(.width-_viewBtn[0].width)+4, _viewBtn[0].top-(.height-_viewBtn[0].height)+4);
+			}
+		@endif
+		@if(__ALBUM_SCREENSHOT__ == 1)
+			_adv.update(%[time:0]);
+			with(_adv){
+				var spr = new global.Layer(window, this);
+				spr.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+				.hasImage = true;
+				spr.piledCopy(0, 0, _adv, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+				.hasImage = false;
+				spr.saveLayerImage(DATA_PATH + "thumb\\" + char + ".bmp");
+				invalidate spr;
+			}
+		@endif
+
+		if(_list[_tgtChar][cg] !== void){
+			var ref = _list[_tgtChar][cg].post;
+			if(ref.count){
+				for(var i=0;i<ref.count;i++) _adv.addOrderList(ref[i]);
+				_adv._update |= UPDATE_CG;
+				_adv.update();
+			}
+		}
+
+		//画像のサイズを取得
+		var obj = _adv.getADVObjectObject("背景");
+		_viewWidth = obj.width;
+		_viewHeight = obj.height;
+
+		if(_viewType == VIEWTYPE_CG)
+			_viewBtn[2].visible =  (_viewWidth > WINDOW_WIDTH || _viewHeight > WINDOW_HEIGHT);
+
+	}
+
+	function makePreviewList(){
+		var list = [];
+
+		for(var i=0;i<_tgtChkList.count;i++){
+			var index1 = list.count;
+			for(var j=0;j<_tgtChkList[i].count;j++){
+				var base, diff;
+				switch(_viewType){
+				case VIEWTYPE_CG : 
+					diff = _tgtChkList[i][j];
+					base = _tgtChkList[i][0].substring(0, 4);
+					break;
+				case VIEWTYPE_BUSTUP : 
+					diff = _tgtChkList[i][0].substring(0, 4);
+					base = diff;
+					break;
+				case VIEWTYPE_CUTIN : 
+					diff = _tgtChkList[i][j];
+					base = _tgtChkList[i][0].substring(0, 6);
+					break;
+				}
+				if(ChkCgFlag(CG_FLAG_LIST[base]) && ChkCgFlag(CG_FLAG_LIST[diff])){
+					if(list[index1] === void) list[index1] = [];
+					var index2 = list[index1].count;
+					list[index1][index2] = _tgtChkList[i][j];
+				}
+			}
+		}
+
+		return list;
+	}
+
+	function changeZoom(zoom){
+		if(_viewType == VIEWTYPE_CUTIN) return;
+
+		_viewZoom = zoom;
+
+		_viewBtn[0].state = zoom?1:0;
+
+		if(_viewType == VIEWTYPE_CG)
+			_viewBtn[2].visible = zoom;
+		else
+			_viewBtn[2].visible = false;
+
+		if(!zoom) cursor = crDefault;
+
+		if(_viewEnter){
+		//画像サイズ切り替え
+			presetView();
+			onMouseMove();
+		}
+	}
+
+	function setInput(enter=false){
+		removeChainItemAll();
+
+		if(!enter){
+			addChainItem(_btnMode[0]);
+			addChainItem(_btnMode[1]);
+
+			for(var iC=0;iC<_btnChar.count;iC++){
+				if(!_btnChar[iC].visible) continue;
+
+				for(var iP=0;iP<_btnChar[iC].btn.count;iP++){
+					addChainItem(_btnChar[iC].btn[iP]);
+				}
+			}
+
+			for(var i=0;i<_btnThumb.count;i++){
+				addChainItem(_btnThumb[i]);
+			}
+			addChainItem(_btnPreview);
+		}
+
+		var param = enter?256:0;
+		HitThresholdSelectItems(_btnChar, param);
+		for(var i=0;i<_btnChar.count;i++){
+			_btnChar[i].hitThreshold = param;
+			for(var j=0;j<_btnChar[i].btn.count;j++){
+				_btnChar[i].btn[j].hitThreshold = param;
+			}
+		}
+		HitThresholdSelectItems(_btnThumb, param);
+	}
+
+	function show(time=300){
+		_btnMode[0].hitThreshold = 0;
+		_btnMode[1].hitThreshold = 0;
+
+		_base.setTransitionCompleteCall();
+		_base.setBlendingEnvelope(255);
+		_base.beginActivation(time);
+		_base.visible = true;
+
+		if(!_completeCountEnd) _completeTimer.enabled = true;
+	}
+	function hide(time=300){
+		_btnMode[0].hitThreshold = 256;
+		_btnMode[1].hitThreshold = 256;
+
+		_base.setTransitionCompleteCall(onHideEnd);
+		_base.setBlendingEnvelope(0);
+		_base.beginActivation(time);
+	}
+	function onHideEnd(){
+		_base.visible = false;
+	}
+
+	function onCharEnter(char = -1){
+		for(var i=0;i<_btnChar.count;i++) _btnChar[i].opacity = 128;
+		if(char != -1) _btnChar[char].opacity = 255;
+	}
+
+	function onButtonEnter(target){
+		for(var iC=0;iC<_btnChar.count;iC++){
+			for(var iP=0;iP<_btnChar[iC].btn.count;iP++){
+				if(target == _btnChar[iC].btn[iP]){
+//					onCharEnter(iC);
+				}
+			}
+		}
+	}
+
+	function onButtonDownL(target){
+		for(var iC=0;iC<_btnChar.count;iC++){
+			if(target == _btnChar[iC]){
+				if(_selChar == iC && _selPage == _selCharPage[iC]) continue;
+
+				_selChar = iC;
+				_selPage = _selCharPage[iC];
+				setPage(_selChar, _selPage);
+				return;
+			}
+		}
+		for(var iC=0;iC<_btnChar.count;iC++){
+			for(var iP=0;iP<_btnChar[iC].btn.count;iP++){
+				if(target == _btnChar[iC].btn[iP]){
+					_selChar = iC;
+					_selPage = iP;
+					setPage(_selChar, _selPage);
+					return;
+				}
+			}
+		}
+
+		switch(target){
+		case _btnMode[0] : changeScene(SCENE_MUSIC); break;
+		case _btnMode[1] : changeScene(SCENE_MEMORIES); break;
+
+		case _btnPreview : 
+			sysReg._cgModeShowPreview = _btnPreview.state;
+			_viewBtn[1].visible = _btnPreview.state;
+			break;
+
+		case _btnThumb[0] : viewEnter(_selChar, _selPage, 0); break;
+		case _btnThumb[1] : viewEnter(_selChar, _selPage, 1); break;
+		case _btnThumb[2] : viewEnter(_selChar, _selPage, 2); break;
+		case _btnThumb[3] : viewEnter(_selChar, _selPage, 3); break;
+		case _btnThumb[4] : viewEnter(_selChar, _selPage, 4); break;
+		case _btnThumb[5] : viewEnter(_selChar, _selPage, 5); break;
+		case _btnThumb[6] : viewEnter(_selChar, _selPage, 6); break;
+		case _btnThumb[7] : viewEnter(_selChar, _selPage, 7); break;
+		case _btnThumb[8] : viewEnter(_selChar, _selPage, 8); break;
+
+		case _viewBtn[0] : changeZoom(_viewBtn[0].state); break;
+		case _viewBtn[1] : 
+			if(_viewBtn[1].state) _pcb.show(, false);
+			break;
+
+		}
+	}
+	function onButtonDownR(target){
+		onMouseDown(0, 0, mbRight, 0);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		switch(button){
+		case mbLeft:
+			if(_viewEnter)	viewNext();
+			break;
+		case mbRight:
+			if(_viewEnter)	viewLeave();
+			else			changeScene(SCENE_TITLE);
+			break;
+		}
+	}
+	function onMouseWheel(shift, delta, x, y){
+		if(delta < 0){
+			if(_viewEnter)	viewNext();
+			else			onButtonDownL(_grpPage.next());
+		}else if(delta > 0){
+			if(_viewEnter)	viewPrev();
+			else			onButtonDownL(_grpPage.prev());
+		}
+	}
+
+	function onSliderMove(target){
+		var pos = "%d,%d".sprintf(int target.trimX, int target.trimY);
+		_adv.moveCamera(%[pos:pos, time:0]);
+	}
+
+	function onMouseMove(x, y, shift){
+		if(!_viewEnter) return;
+
+		if(_viewMenuAreaEnter == false && (_viewMenuArea.isInnerPoint(cursorX, cursorY) || _viewBtn[2].isInnerPoint(cursorX, cursorY))){
+		//メニュー領域に入った
+			_viewMenu.setBlendingEnvelope(255);
+			_viewMenu.beginActivation(100);
+			_viewMenuAreaEnter = true;
+
+			if(_btnPreview.state) _pcb.show(, false);
+		}else if(_viewMenuAreaEnter == true && !_viewMenuArea.isInnerPoint(cursorX, cursorY) && !_viewBtn[2].isInnerPoint(cursorX, cursorY) &&
+		(_viewBtn[1].state == 0 || (_viewBtn[1].state == 1 && _btnPreview.state == 0))){
+		//メニュー領域から外れた
+			_viewMenu.setBlendingEnvelope(0);
+			_viewMenu.beginActivation(100);
+			_viewMenuAreaEnter = false;
+
+			if(!_viewBtn[1].state) _pcb.hide();
+		}
+	}
+
+	function onKeyDown(key, shift){
+		if(shift & ssShift){
+			if(_viewEnter && _viewBtn[2].visible){
+				_adv.flushMoveCamera();
+				var f = false;
+				var x = _adv._camera_pos.x/2;
+				var y = _adv._camera_pos.y/2;
+				var stepX = _viewBtn[2].rangeX \ 4;
+				var stepY = _viewBtn[2].rangeY \ 4;
+				if(System.getKeyState(VK_LEFT)) x -= stepX, f = true;
+				if(System.getKeyState(VK_RIGHT)) x += stepX, f = true;
+				if(System.getKeyState(VK_UP)) y -= stepY, f = true;
+				if(System.getKeyState(VK_DOWN)) y += stepY, f = true;
+				if(f){
+					_viewBtn[2].setTrimPos(x, y);
+					var pos = "%d,%d".sprintf(_viewBtn[2].trimX, _viewBtn[2].trimY);
+					_adv.moveCamera(%[pos:pos, time:300]);
+				}
+			}
+			switch(key){
+			case VK_TAB:
+				if(_viewEnter)	viewPrev();
+				break;
+			case VK_PRIOR : 
+				if(!_viewEnter) onButtonDownL(_grpPage.prev());
+				break;
+			case VK_NEXT : 
+				if(!_viewEnter) onButtonDownL(_grpPage.next());
+				break;
+			}
+		}else{
+			switch(key){
+			case VK_RETURN:
+			case VK_DOWN:
+				if(_viewEnter)	viewNext();
+				break;
+			case VK_UP:
+				if(_viewEnter)	viewPrev();
+				break;
+			case VK_RIGHT:
+				if(_viewEnter)	viewStepNext();
+				break;
+			case VK_LEFT:
+				if(_viewEnter)	viewStepPrev();
+				break;
+			case VK_TAB:
+				if(_viewEnter)	viewNext();
+				break;
+
+			case VK_ESCAPE:
+				if(_viewEnter)	viewLeave();
+				else			changeScene(SCENE_TITLE);
+				break;
+
+			case VK_L :
+			case VK_SPACE:
+				@if(__HARUKA__ == 0)
+					if(_viewEnter && _viewType == VIEWTYPE_BUSTUP) changeZoom(!_viewZoom);
+				@endif
+				@if(__HARUKA__ == 1)
+					if(_viewEnter) changeZoom(!_viewZoom);
+				@endif
+				break;
+
+			case VK_PRIOR : 
+				if(!_viewEnter) onButtonDownL(_grpPage.prev());
+				break;
+			case VK_NEXT : 
+				if(!_viewEnter) onButtonDownL(_grpPage.next());
+				break;
+			}
+		}
+		global.ChainItemBase.onKeyDown(...);
+	}
+
+	function close(){
+		valid = false;
+	}
+
+	function changeScene(scene){
+		//HitThresholdSelectItems(_btn, 256);
+		game.changeScene(scene, true, %[submenu:1]);
+		_adv.visible = false;
+
+		setTransitionCompleteCall(close);
+		setBlendingEnvelope(0);
+		beginActivation(300);
+	}
+
+	//達成率を調べる。
+	function calcComplete(){
+		_compNumber = 0;
+		_compDemon = 0;
+
+		for(var i=0;i<_list.count;i++){
+			var type = 0;
+			var tgt;
+			if(_list[i].cgview !== void){
+				type = 1;
+				tgt = _list[i].cg;
+			}else if(_list[i].cutinview !== void){
+				type = 2;
+//				tgt = _list[i].cutin;
+				tgt = _list[i].cg;
+			}else if(_list[i].bustupview !== void){
+				type = 3;
+				tgt = _list[i].bustup;
+			}
+
+			switch(type){
+			case 1 : //イベント
+			case 2 : //カットイン
+				for(var j=0;j<tgt.count;j++){
+					var line = tgt[j];
+					for(var k=0;k<line.count;k++){
+						_compDemon++;
+						var file = line[k];
+						var flag = CG_FLAG_LIST[file];
+						if(flag === void){
+							dm("無いのはおかしい : " + file);
+							continue;
+						}
+						if(ChkCgFlag(flag)) _compNumber++;
+					}
+				}
+				break;
+			case 3 : 
+			//バストアップ
+				for(var j=0;j<tgt.count;j++){
+					_compDemon++;
+					var file = tgt[j][0].substring(0, 4);
+					if(ChkCgFlag(CG_FLAG_LIST[file])) _compNumber++;
+				}
+				break;
+			}
+		}
+
+		dm("達成数：%d/%d".sprintf(_compNumber, _compDemon));
+	}
+
+	function onCompleteNumber(){
+		drawCompleteNumber(_completeCount);
+
+		_completeCount++;
+
+		if(_completeCount > _completeRatio){
+			_completeTimer.enabled = false;
+			_completeCountEnd = true;
+		}
+	}
+
+	function drawCompleteNumber(ratio){
+		with(_sprComplete){
+			var w = _imgCompNum.width \ 11;
+			var h = _imgCompNum.height;
+			var num = ratio;
+			var nums = [];
+			for(var i=0;i<3;i++){
+				nums[2-i] = num%10;
+				num \= 10;
+			}
+			var i = 0;
+			for(;i<2;i++){ if(nums[i] != 0) break; }
+			for(;i<3;i++){
+				.copyRect(w*i, 0, _imgCompNum, w*nums[i], 0, w, h);
+			}
+			.copyRect(w*3, 0, _imgCompNum, w*10, 0, w, h);
+		}
+	}
+
+	class NameTag extends Button{
+		var _btnX, _btnY;
+		var _btn = [];
+		function NameTag(win, par, file, btnNum, iBtn, btnX=0, btnY=0){
+			super.Button(win, par);
+
+			create(file, 1);
+
+			for(var i=0;i<btnNum;i++){
+				_btn[i] = new RadioButton(win, par);
+				with(_btn[i]){
+					.create(iBtn[i], 3);
+				}
+			}
+
+			_btnX = btnX;
+			_btnY = btnY;
+		}
+		function finalize(){
+			InvalidateArray(_btn);
+			super.finalize();
+		}
+
+		function setPos(x, y){
+			super.setPos(...);
+			for(var i=0;i<_btn.count;i++){
+				_btn[i].setPos(x+_btnX+(i%3)*36, y+_btnY+(i\3)*36);
+			}
+		}
+
+		property btn{
+			getter(){return _btn;}
+		}
+		property visible{
+			getter(){return super.visible;}
+			setter(v){
+				super.visible = v;
+				for(var i=0;i<_btn.count;i++) _btn[i].visible = v;
+			}
+		}
+	}
+}
+AlbumModeScene.VIEWTYPE_NULL = -1;
+AlbumModeScene.VIEWTYPE_CG = 0;
+AlbumModeScene.VIEWTYPE_BUSTUP = 1;
+AlbumModeScene.VIEWTYPE_CUTIN = 2;
+
+class PreviewThumbnail extends Sprite{
+	var _fCreate = false;
+	var _imgReset;
+	var _filename = "";
+
+	function PreviewThumbnail(win, par, imgReset){
+		Sprite(...);
+		_imgReset = imgReset;
+
+		setSize(_imgReset.width, _imgReset.height);
+
+		face = dfMask;
+		copyRect(0, 0, _imgReset, 0, 0, _imgReset.width, _imgReset.height);
+		holdAlpha = true;
+		face = dfMain;			//以後、メインのコピだけ。
+	}
+	function finalize(){
+		super.finalize();
+	}
+
+	function set(file){
+		if(_filename == file && _fCreate) return;
+
+		_filename = file;
+		init();
+	}
+
+	function create(){
+		if(_fCreate) return;
+		if(_filename == "") return;
+
+		var opa = opacity;
+		var img = new global.Layer(window, this);
+		try{
+			img.loadImages(_filename.substring(0, 7) + "TS");
+		}catch{
+			img.loadImages("dummyTS");
+		}
+//		if(CG_HSCENE_LIST[_filename.substring(0, 6)] !== void)
+//			img.doBoxBlur(2, 2);
+		copyRect(0, 0, img, 0, 0, width, height);
+		opacity = opa;
+
+		@if(__DEBUGMODE__)
+			if(debug.tglSupExp.state){
+				font.height = 16;
+				drawText(4, 4, _filename, GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+			}
+		@endif
+
+		_fCreate = true;
+	}
+
+	function init(){
+		_fCreate = false;
+		copyRect(0, 0, _imgReset, 0, 0, width, height);
+	}
+
+	function isCreate(){
+		return _fCreate;
+	}
+}
+
+class PreviewCrossBar extends Sprite{
+	var _imgReset;
+	var _hideTimer;
+	var _createTimer;
+	var _list;
+
+	var _base_x, _base_y;
+
+	var _prev_h, _prev_v;
+
+	var _v;
+
+	var NUM_PREV_H = 10 + 2;
+	var NUM_PREV_V = 8 + 3;
+	var HOTSPOT_H = 2;
+	var HOTSPOT_V = 4;
+
+	var PITCH_H = 100 + 18;
+	var PITCH_V = 75 + 8;
+
+	function PreviewCrossBar(win, par){
+		Sprite(...);
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		_base_x = -198;
+		_base_y = 280;
+		setPos(_base_x, _base_y);
+
+		_imgReset = new global.Layer(win, this);
+		with(_imgReset){
+			.loadImages("FRM_06C09");
+			.setSizeToImageSize();
+		}
+
+		_hideTimer = new Timer(hide, "");
+		_createTimer = new Timer(onCreateTimer, "");
+		_createTimer.mode = atmExclusive;
+
+	}
+	function finalize(){
+		super.finalize();
+
+		invalidate _hideTimer;
+		invalidate _createTimer;
+
+		invalidate _imgReset;
+		invalidate _prev_h;
+		invalidate _prev_v;
+
+		invalidate _list;
+	}
+
+	function create(numX=5, numY=4, cx=2, cy=4){
+		NUM_PREV_H = numX + 2;
+		NUM_PREV_V = numY + 3;
+		HOTSPOT_H = cx;
+		HOTSPOT_V = cy;
+
+		if(_prev_h !== void) invalidate _prev_h;
+		if(_prev_v !== void) invalidate _prev_v;
+
+		_prev_h = new RingBuffer(NUM_PREV_H);
+		_prev_v = new RingBuffer(NUM_PREV_V);
+
+		_prev_h.clear();
+		for(var i=0;i<NUM_PREV_H;i++){
+			_prev_h.add(new PreviewThumbnail(win, this, _imgReset));
+			with(_prev_h.get(0)){
+				.init();
+				.setPos(PITCH_H*i, PITCH_V*HOTSPOT_V);
+				.font.height = 24;
+				.drawText(8, 8, NUM_PREV_H-i-1, GetDefineColor("white"), 255, true, 1024, GetDefineColor("green"), 2, 1, 1);
+				.visible = true;
+			}
+		}
+
+		_prev_v.clear();
+		for(var i=0;i<NUM_PREV_V;i++){
+			_prev_v.add(new PreviewThumbnail(win, this, _imgReset));
+			with(_prev_v.get(0)){
+				.init();
+				.setPos(PITCH_H*HOTSPOT_H, PITCH_V*i);
+				.font.height = 24;
+				.drawText(8, 8, NUM_PREV_V-i-1, GetDefineColor("white"), 255, true, 1024, GetDefineColor("green"), 2, 1, 1);
+				.visible = true;
+			}
+		}
+
+		_prev_h.index = HOTSPOT_H;
+		_prev_v.index = HOTSPOT_V;
+		_prev_h.get(HOTSPOT_H).opacity = 0;
+		_prev_h.get(HOTSPOT_H+1).opacity = 0;
+		_prev_v.get(HOTSPOT_V).opacity = 0;
+		_prev_v.get(HOTSPOT_V+1).opacity = 0;
+	}
+
+	function show(time=500, hide=true){
+		if(hide){
+			_hideTimer.interval = time;
+		}
+		_hideTimer.enabled = hide;
+
+		setBlendingEnvelope(192);
+		beginActivation(300);
+	}
+
+	function hide(){
+		_hideTimer.enabled = false;
+
+		setBlendingEnvelope(0);
+		beginActivation(300);
+	}
+
+	function startCreateTimer(time=100){
+		_createTimer.interval = time;
+		_createTimer.enabled = true;
+	}
+
+	function onCreateTimer(){
+		_createTimer.interval = 50;
+		for(var i=0;i<NUM_PREV_V;i++){
+			with(_prev_v.get(i)){
+				if(!.visible) continue;
+				if(.isCreate()) continue;
+
+				.create();
+				return;
+			}
+		}
+		for(var i=NUM_PREV_H-1;i>=0;i--){
+			with(_prev_h.get(i)){
+				if(!.visible) continue;
+				if(.isCreate()) continue;
+
+				.create();
+				return;
+			}
+		}
+
+		_createTimer.enabled = true;
+	}
+
+	function set(list, index){
+		invalidate _list;
+		_list = new RingBuffer(list.count);
+
+		for(var i=0;i<list.count;i++){
+			_list.add(list[i]);
+		}
+		_list.index = index;
+
+		refreshPreview(false);
+
+		startCreateTimer();
+	}
+
+	function refreshPreview(fCreate=false){
+		refreshPreviewH(fCreate);
+		refreshPreviewV(, , fCreate);
+	}
+
+	function refreshPreviewH(fCreate=false){
+		for(var i=0;i<HOTSPOT_H+1;i++){
+			with(_prev_h.get(i)){
+				if(.isActivation()) .flushActivation();
+				.set(_list.get(i)[0]);
+				if(fCreate) .create();
+			}
+		}
+		for(var i=1;i<NUM_PREV_H-HOTSPOT_H;i++){
+			with(_prev_h.get(-i)){
+				if(.isActivation()) .flushActivation();
+				.set(_list.get(-i)[0]);
+				if(fCreate) .create();
+			}
+		}
+	}
+	function refreshPreviewV(index=0, top=true, fCreate=false){
+	//top
+	// true  : 先頭
+	// false : 最後
+		var ref = _list.get(index);
+		if(top){
+			var i;
+			for(i=0;i<HOTSPOT_V+1 && i < ref.count;i++){
+				with(_prev_v.get(i)){
+					if(.isActivation()) .flushActivation();
+					.set(ref[i]);
+					if(fCreate) .create();
+					.visible = true;
+				}
+			}
+			for(;i<NUM_PREV_V;i++){
+				with(_prev_v.get(i)){
+					if(.isActivation()) .flushActivation();
+					.init();
+					.visible = false;
+				}
+			}
+		}else{
+			var i;
+			for(i=0;i<NUM_PREV_V-HOTSPOT_V && i < ref.count;i++){
+				with(_prev_v.get(-i)){
+					if(.isActivation()) .flushActivation();
+					.set(ref[ref.count-i-1]);
+					if(fCreate) .create();
+					.visible = true;
+				}
+			}
+			for(;i<NUM_PREV_V;i++){
+				with(_prev_v.get(-i)){
+					if(.isActivation()) .flushActivation();
+					.init();
+					.visible = false;
+				}
+			}
+		}
+
+		_prev_v.get(0).create();
+		_prev_v.get(0).zoom = 120;
+
+		for(var i=1;i<NUM_PREV_V;i++){
+			with(_prev_v.get(-i)){
+				if(!.visible) continue;
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(150);
+			}
+		}
+
+		_v = top?0:ref.count-1;
+	}
+
+	function addPreviewH(forward, vTop){
+		var f1 = forward?HOTSPOT_H:HOTSPOT_H-NUM_PREV_H+1;
+		var i1 = forward?HOTSPOT_H-NUM_PREV_H:HOTSPOT_H+1;
+		with(_prev_h.get(f1)){
+			.set(_list.get(i1)[0]);
+		}
+
+		refreshPreviewV(forward?-1:1, vTop);
+	}
+	function addPreviewV(forward){
+		var f1 = forward?HOTSPOT_V+1:HOTSPOT_V;
+		var ref = _list.get(0);
+
+		if(forward)	_v++;
+		else		_v--;
+		if(_v < 0) _v = 0;
+		if(_v >= ref.count) _v = ref.count - 1;
+
+		var i;
+		if(forward)	i = _v+f1-1;
+		else		i = _v-f1+2;
+
+		var over = false;
+		if(i < 0 || i >= ref.count) over = true;
+
+		with(_prev_v.get(f1)){
+			if(over){
+				.visible = false;
+			}else{
+				.set(ref[i]);
+				.create();
+				.visible = true;
+			}
+		}
+	}
+
+	function rotateH(forward, vTop){
+		var move = forward?-PITCH_H:PITCH_H;
+		var f1 = forward?HOTSPOT_H  :HOTSPOT_H+1;
+		var f2 = forward?HOTSPOT_H-1:HOTSPOT_H+2;
+		var bx = forward?PITCH_H*NUM_PREV_H:-PITCH_H;
+		var by = PITCH_V*HOTSPOT_V;
+		var b1 = forward?HOTSPOT_H+1:HOTSPOT_H  ;
+		var b2 = forward?HOTSPOT_H+2:HOTSPOT_H-1;
+		var c1 = 0;
+		var c2 = forward?NUM_PREV_H-1:1;
+
+		for(var i=0;i<NUM_PREV_H;i++){
+			with(_prev_h.get(i)){
+				if(.isActivation()) .flushActivation();
+
+				switch(i){
+				case f1 :
+					.setPos(bx, by);
+					.opacity = 0;
+					break;
+				case f2 :
+					.setBlendingEnvelope(0);
+					break;
+				case b1 :
+					.setBlendingEnvelope(255);
+					break;
+				case c1 :
+					.setBlendingEnvelope(255);
+					break;
+				case c2 :
+					.setBlendingEnvelope(0);
+					break;
+				}
+				.setMovingEnvelope(.left, .top, .left+move, .top, 2);
+				.beginActivation(300);
+			}
+		}
+		addPreviewH(forward, vTop);
+		if(forward){
+			_prev_h.index++;
+			_list.index++;
+		}else{
+			_prev_h.index--;
+			_list.index--;
+		}
+
+		startCreateTimer();
+	}
+	function rotateV(forward){
+		var move = forward?PITCH_V:-PITCH_V;
+		var f1 = forward?HOTSPOT_V+1:HOTSPOT_V  ;
+		var f2 = forward?HOTSPOT_V+2:HOTSPOT_V-1;
+		var bx = PITCH_H*HOTSPOT_H;
+		var by = forward?-PITCH_V:PITCH_V*NUM_PREV_V;
+		var b1 = forward?HOTSPOT_V  :HOTSPOT_V+1;
+		var b2 = forward?HOTSPOT_V-1:HOTSPOT_V+2;
+		var c1 = 0;
+		var c2 = forward?1:NUM_PREV_H-1;
+
+		for(var i=0;i<NUM_PREV_V;i++){
+			with(_prev_v.get(i)){
+				if(.isActivation()) .flushActivation();
+
+				switch(i){
+				case f1 :
+					.setPos(bx, by);
+					.opacity = 0;
+					break;
+				case f2 :
+					.setBlendingEnvelope(0);
+					break;
+				case b1 :
+					.setBlendingEnvelope(255);
+					break;
+				case c1 : 
+					.setZoomingEnvelope(120, 100);
+					break;
+				case c2 : 
+					.setZoomingEnvelope(100, 120);
+					break;
+				}
+				.setMovingEnvelope(.left, .top, .left, .top+move, 2);
+				.beginActivation(300);
+			}
+		}
+		addPreviewV(forward);
+		if(forward) _prev_v.index--;
+		else		_prev_v.index++;
+
+		startCreateTimer(300);
+	}
+
+	function flushRotate(){
+		for(var i=0;i<NUM_PREV_H;i++){
+			_prev_h.get(i).flushActivation();
+		}
+		for(var i=0;i<NUM_PREV_V;i++){
+			_prev_v.get(i).flushActivation();
+		}
+	}
+}
+
+class AlbumCrossSlider extends SelectItemBase{
+	var _sprTrim;
+
+	var _dragging = false;
+	var _correctionX, _correctionY;
+
+	var _xRange, _yRange;
+	var _trimPos;
+	var _trimRange;
+
+	var _xPitch, _yPitch;
+
+	function AlbumCrossSlider(win, par){
+		super.SelectItemBase(win, par);
+		_sprTrim = new global.Layer(win, this);
+		_trimPos = new Point();
+		_trimRange = new Point();
+	}
+	function finalize(){
+		invalidate _trimPos;
+		invalidate _trimRange;
+		invalidate _sprTrim;
+		super.finalize();
+	}
+
+	function kind(){return "DebugCrossSlider";}
+
+	function create(baseW=64, baseH=64, spr=null, blur=false){
+		var imageSize;
+		if(spr!=null){
+			imageSize = AdjustFitSize(baseW, baseH, spr.imageWidth, spr.imageHeight);
+			setSize(imageSize.width, imageSize.height);
+
+			operateStretch(0, 0, width, height, spr, 0, 0, spr.imageWidth, spr.imageHeight, omAuto, 255, stFastLinear);
+
+			imageSize.set(spr.imageWidth, spr.imageHeight);
+		}else{
+			setSize(baseW, baseH);
+			fillRect(0, 0, width, height, 0x80000088);
+
+			imageSize = new Size(width, height);
+		}
+		if(blur) doBoxBlur(4, 4);
+
+		var app = new GdiPlus.Appearance();
+		app.addBrush(0x4000007f, 0, 0, 0);
+		app.addPen(0xffffffff, 3, 0, 0, 0);
+		drawRectangle(app, 0, 0, width-1, height-1);
+
+		app.clear();
+		app.addPen(0x80ffffff, 0, 0, 0);
+		drawLine(app, 0, height\2, width-1, height\2);
+		drawLine(app, width\2, 0, width\2, height-1);
+
+		_xRange = (imageSize.width - WINDOW_WIDTH) \ 2;
+		_yRange = (imageSize.height - WINDOW_HEIGHT) \ 2;
+		_trimRange.set(_xRange, _yRange);
+
+		var trimW = int (width * (WINDOW_WIDTH/imageSize.width));
+		var trimH = int (height * (WINDOW_HEIGHT/imageSize.height));
+		_xPitch = _xRange?(width-trimW) / (_xRange * 2) : 0;
+		_yPitch = _yRange?(height-trimH) / (_yRange * 2) : 0;
+
+		with(_sprTrim){
+			if(_xRange == 0 && _yRange == 0){
+				.visible = false;
+			}else if(trimW != .width || trimH != .height){
+				.setSize(trimW, trimH);
+				.fillRect(0, 0, .width, .height, 0);
+				app.clear();
+				app.addBrush(0x40ff0000, 0, 0, 0);
+				app.addPen(0xffffffff, 1, 0, 0, 0);
+				.drawRectangle(app, 0, 0, .width-1, .height-1);
+				app.clear();
+				app.addPen(0x80ffffff, 1, 0, 0, 0);
+				.drawLine(app, .width\2-3, .height\2, .width\2+3, .height\2);
+				.drawLine(app, .width\2, .height\2-3, .width\2, .height\2+3);
+				.hitType = htMask;
+				.hitThreshold = 256;
+				.visible = true;
+			}else{
+				.visible = true;
+			}
+		}
+
+		setTrimPos(0, 0);
+
+		invalidate app;
+		invalidate imageSize;
+	}
+
+	function setTrimPos(x, y){
+		if(x < -_xRange)		x = -_xRange;
+		else if(x > _xRange)	x = _xRange;
+		if(y < -_yRange)		y = -_yRange;
+		else if(y > _yRange)	y = _yRange;
+
+		_trimPos.set(int(x), int(y));
+
+		with(_sprTrim){
+			var tempX = x * _xPitch;
+			if(x >= _xRange)
+				tempX = (width-.width)/2;
+			var tempY = y * _yPitch;
+			if(y >= _yRange)
+				tempY = (height-.height)/2;
+
+			.setPos(tempX + width/2 - .width/2, tempY + height/2 - .height/2);
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(button == mbLeft){
+			_dragging = true;
+			_correctionX = (_sprTrim.left+_sprTrim.width\2) - x;
+			_correctionY = (_sprTrim.top+_sprTrim.height\2) - y;
+
+			parent.onSliderMoveStart(this);
+		}else if(button == mbRight){
+			//setTrimPos(0, 0);
+			parent.onButtonDownR(this);
+		}
+	}
+	function onMouseUp(x, y, button, shift){
+		if(button == mbLeft){
+			if(_dragging) parent.onSliderMoveEnd(this);
+			_dragging = false;
+		}
+	}
+	function onMouseMove(x, y, shift){
+		if(_dragging){
+			cursorToTrimPos(x+_correctionX, y+_correctionY);
+			parent.onSliderMove(this);
+		}
+		parent.onMouseMove(...);
+	}
+
+	function cursorToTrimPos(x, y){
+		var tempX, tempY;
+		if(x < _sprTrim.width/2){
+			tempX = 0;
+		}else if(x > width-_sprTrim.width/2){
+			tempX = _trimRange.x;
+		}else{
+			tempX = x - _sprTrim.width/2;
+		}
+
+		if(y < _sprTrim.height/2){
+			tempY = 0;
+		}else if(y > height-_sprTrim.height/2){
+			tempY = _trimRange.y;
+		}else{
+			tempY = y - _sprTrim.height/2;
+		}
+
+		setTrimPos(int (tempX/_xPitch-_xRange), int (tempY/_yPitch-_yRange));
+	}
+
+	function isInnerPoint(mx, my){
+		var pos = new Point();
+		GetAbsolutePos(this, pos);
+
+		return (pos.x <= mx && pos.y <= my && pos.x+width > mx && pos.y+height > my);
+	}
+
+	property trim{
+		setter(v){_trimPos = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){return _trimPos;}
+	}
+	property trimX{
+		setter(v){_trimPos.x = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){return _trimPos.x;}
+	}
+	property trimY{
+		setter(v){_trimPos.y = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){return _trimPos.y;}
+	}
+
+	property rangeX{
+		getter(){return _xRange;}
+	}
+	property rangeY{
+		getter(){return _yRange;}
+	}
+}
+
+class MusicModeScene extends Sprite, SelectItemNotifyBase, SceneBase, ChainItemBase{
+	var _title;
+
+	var _tempConfigMute;
+	var _tempConfigMuteMaster;
+	var _tempConfigVol;
+	var _btn = [];
+	var _btnMode = [];
+	var _btnStop;
+	var _grp;
+	var _sld;
+
+	var _imgNumber;
+	var _sprNumber;
+
+	var _LIST = [
+		%[bgmfile:"BGM01",		frmfile:"FRM_06M11", pos:[192, 128]], 
+		%[bgmfile:"BGM03",		frmfile:"FRM_06M12", pos:[192, 159]], 
+		%[bgmfile:"BGM04",		frmfile:"FRM_06M13", pos:[192, 190]], 
+		%[bgmfile:"BGM05",		frmfile:"FRM_06M14", pos:[192, 221]], 
+		%[bgmfile:"BGM06",		frmfile:"FRM_06M15", pos:[192, 252]], 
+		%[bgmfile:"BGM07",		frmfile:"FRM_06M16", pos:[192, 283]], 
+		%[bgmfile:"BGM08",		frmfile:"FRM_06M17", pos:[192, 314]], 
+		%[bgmfile:"BGM09",		frmfile:"FRM_06M18", pos:[192, 345]], 
+		%[bgmfile:"BGM10",		frmfile:"FRM_06M19", pos:[192, 376]], 
+		%[bgmfile:"BGM11",		frmfile:"FRM_06M20", pos:[192, 407]], 
+		%[bgmfile:"BGM12",		frmfile:"FRM_06M21", pos:[192, 438]], 
+
+		%[bgmfile:"BGM13",		frmfile:"FRM_06M22", pos:[416, 128]], 
+		%[bgmfile:"BGM14",		frmfile:"FRM_06M23", pos:[416, 159]], 
+		%[bgmfile:"BGM15",		frmfile:"FRM_06M24", pos:[416, 190]], 
+		%[bgmfile:"BGM16",		frmfile:"FRM_06M25", pos:[416, 221]], 
+		%[bgmfile:"BGM17",		frmfile:"FRM_06M26", pos:[416, 252]], 
+		%[bgmfile:"BGM18",		frmfile:"FRM_06M27", pos:[416, 283]], 
+		%[bgmfile:"BGM19",		frmfile:"FRM_06M28", pos:[416, 314]], 
+		%[bgmfile:"BGM20",		frmfile:"FRM_06M29", pos:[416, 345]], 
+		%[bgmfile:"BGM21",		frmfile:"FRM_06M30", pos:[416, 376]], 
+		%[bgmfile:"BGM02_S",	frmfile:"FRM_06M31", pos:[416, 407]]
+	];
+
+	function MusicModeScene(win, par){
+		Sprite(...);
+
+		_title = new global.Layer(win, this);
+		with(_title){
+			.loadImages("FRM_06C03");
+			.setSize(.imageWidth\3, .imageHeight);
+			.setImagePos(-.width * 2, 0);
+			.setPos(40, 40);
+			.visible = true;
+		}
+
+		_tempConfigMuteMaster = CONFIG.muteMaster;
+		_tempConfigMute = CONFIG.muteBgm;
+		CONFIG.muteMaster = 0;
+		CONFIG.muteBgm = 0;
+		_tempConfigVol = BGM.volume;
+
+		loadImages("FRM_06M01");
+		setSizeToImageSize();
+		absolute = LAYER_APPRECIATION;
+		opacity = 0;
+
+		_btnMode[0] = new Button(win, this);
+		with(_btnMode[0]){
+			.create("FRM_06C02", 3);
+			.setPos(510, 33);
+		}
+		_btnMode[1] = new Button(win, this);
+		with(_btnMode[1]){
+			.create("FRM_06C04", 3);
+			.setPos(644, 33);
+		}
+		addChainItem(_btnMode[0]);
+		addChainItem(_btnMode[1]);
+
+		_grp = new RadioButtonGroup();
+
+		for(var i=0;i<_LIST.count;i++){
+			_btn[i] = new RadioButton(win, this);
+			_btn[i].create(_LIST[i].frmfile);
+
+			_btn[i].setPos(_LIST[i].pos[0], _LIST[i].pos[1]);
+
+//			@if(__DEBUGMODE__)
+//				_btn[i].font.face = "メイリオ";
+//				_btn[i].font.height = 21;
+//				_btn[i].drawText(_btn[i].width*0+64, 8, _LIST[i].title, GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+//				_btn[i].drawText(_btn[i].width*1+64, 8, _LIST[i].title, GetDefineColor("cyan"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+//				_btn[i].drawText(_btn[i].width*2+64, 8, _LIST[i].title, GetDefineColor("red"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+//			@endif
+
+			_grp.add(_btn[i]);
+			addChainItem(_btn[i]);
+		}
+
+		_sld = new SliderH(win, this);
+		_sld.create("FRM_02A41", 202, 13, 1, 100);
+		_sld.setPos(547, 557);
+		_sld.trim = int(BGM.volume * 100);
+		addChainItem(_sld);
+
+		_btnStop = new Button(win, this);
+		_btnStop.create("FRM_06M02", 4);
+		_btnStop.setPos(343, 545);
+		_btnStop.valid = false;
+		addChainItem(_btnStop);
+
+		_imgNumber = new global.Layer(window, this);
+		with(_imgNumber){
+			.loadImages("FRM_02A42");
+			.setSizeToImageSize();
+		}
+		_sprNumber = new global.Layer(window, this);
+		with(_sprNumber){
+			.setSize(_imgNumber.width/10 * 3, _imgNumber.height);
+			.fillRect(0, 0, .width, .height, 0x0);
+		}
+
+		show();
+		visible = true;
+
+		StopBgm();
+
+		PlaySystemVoice("音楽モード");
+
+		mouseTrackingMode = global.ChainItemBase.MOUSETRACKINGMODE_FREE;
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		CONFIG.muteMaster = _tempConfigMuteMaster;
+		CONFIG.muteBgm = _tempConfigMute;
+		BGM.volume = _tempConfigVol;
+
+		InvalidateArray(_btn);
+		InvalidateArray(_btnMode);
+		invalidate _sld;
+
+		invalidate _grp;
+
+		invalidate _btnStop;
+
+		invalidate _imgNumber;
+		invalidate _sprNumber;
+
+		invalidate _title;
+
+		global.Sprite.finalize();
+		global.ChainItemBase.finalize();
+
+		StopBgm();
+	}
+	function who(){return "MusicModeScene";}
+
+	function show(time=300){
+		setBlendingEnvelope(255);
+		beginActivation(time);
+	}
+	function hide(time=300){
+		setBlendingEnvelope(0);
+		beginActivation(time);
+	}
+
+	function onButtonDownL(target){
+		switch(target){
+		case _btnStop : 
+			_btnStop.valid = false;
+			StopBgm();
+			_grp.reset();
+			break;
+
+		case _btnMode[0] : changeScene(SCENE_ALBUM); break;
+		case _btnMode[1] : changeScene(SCENE_MEMORIES); break;
+
+		default : 
+			for(var i=0;i<_btn.count;i++){
+				if(target == _btn[i]){
+					PlayBgm(_LIST[i].bgmfile);
+					_btnStop.valid = true;
+					break;
+				}
+			}
+			break;
+		}
+	}
+	function onButtonDownR(target){
+		onMouseDown(0, 0, mbRight, 0);
+	}
+
+	function onSliderEnter(target){
+		drawNumber(target);
+		_sprNumber.visible = true;
+	}
+	function onSliderLeave(target){
+		_sprNumber.visible = false;
+	}
+
+	function onSliderMoveStart(target){
+		BGM.volume = target.trim / 100.0;
+		drawNumber(target);
+	}
+	function onSliderMove(target){
+		BGM.volume = target.trim / 100.0;
+		drawNumber(target);
+	}
+	function onSliderMoveEnd(target){
+		BGM.volume = target.trim / 100.0;
+	}
+
+	function onMouseDown(x, y, button, shift){
+		switch(button){
+		case mbRight:
+			changeScene(SCENE_TITLE);
+			break;
+		}
+	}
+	function onKeyDown(key, shift){
+		switch(key){
+		case VK_ESCAPE:
+			changeScene(SCENE_TITLE);
+			break;
+		}
+		global.ChainItemBase.onKeyDown(...);
+	}
+
+	function drawNumber(item){
+		with(_sprNumber){
+			var x = item.left+item._trim.left+(item._trim.width/2) - .width/2;
+			var y = item.top - 12;
+			.setPos(x, y);
+
+			.fillRect(0, 0, .width, .height, 0);
+
+			x = 0;
+			if(item.trim < 10)
+				x = -(_imgNumber.width \ 20) * 2;
+			else if(10 <= item.trim && item.trim < 100)
+				x = -(_imgNumber.width \ 20) * 1;
+
+			var num = item.trim;
+			var w = .width / 3;
+			var pitch = w;
+			var h = .height;
+			.pileRect(x + pitch * 2, 0, _imgNumber, w * (num%10), 0, w, h);
+			num \= 10;
+			if(item.trim >= 10)
+				.pileRect(x + pitch * 1, 0, _imgNumber, w * (num%10), 0, w, h);
+			num \= 10;
+			if(item.trim >= 100)
+				.pileRect(x + pitch * 0, 0, _imgNumber, w * (num%10), 0, w, h);
+		}
+	}
+
+	function close(){
+		valid = false;
+	}
+
+	function changeScene(scene){
+		HitThresholdSelectItems(_btn, 256);
+		game.changeScene(scene, true, %[submenu:1]);
+		setTransitionCompleteCall(close);
+		hide();
+	}
+
+}
+
+class MemoriesModeScene extends Sprite, SelectItemNotifyBase, SceneBase, ChainItemBase{
+	var _btn = [];
+
+	var _title;
+
+	var _page = 0;
+
+	var _btnMode = [];
+	var _btnPage = [];
+
+	var _btnImage;
+	var _imgClose;
+
+	var _group;
+
+	var _decide = false;
+
+	var BTN_BX = 192;
+	var BTN_BY = 101;
+	var BTN_IW = 199;
+	var BTN_IH = 192;
+
+	var _LIST = [
+		[
+			%[chk:51, start:51, end:51, frm:"FRM_06R21", src:"00_a020/recollect" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:52, start:52, end:52, frm:"FRM_06R22", src:"00_a022/recollect" , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:53, start:53, end:53, frm:"FRM_06R23", src:"00_a025b/recollect" , pos:[BTN_IW*2, BTN_IH*0], title:""], 
+			%[chk:54, start:54, end:54, frm:"FRM_06R24", src:"00_a026/recollect" , pos:[BTN_IW*0, BTN_IH*1], title:""], 
+			%[chk:55, start:55, end:55, frm:"FRM_06R25", src:"00_a032/recollect" , pos:[BTN_IW*1, BTN_IH*1], title:""]
+		], [
+			%[chk:61, start:61, end:61, frm:"FRM_06R26", src:"00_b005/recollect" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:62, start:62, end:62, frm:"FRM_06R27", src:"00_b021/recollect" , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:63, start:63, end:63, frm:"FRM_06R28", src:"00_b025/recollect" , pos:[BTN_IW*2, BTN_IH*0], title:""], 
+			%[chk:64, start:64, end:64, frm:"FRM_06R29", src:"00_b032/recollect" , pos:[BTN_IW*0, BTN_IH*1], title:""]
+		], [
+			%[chk:71, start:71, end:71, frm:"FRM_06R30", src:"00_c019b/recollect" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:72, start:72, end:72, frm:"FRM_06R31", src:"00_c023/recollect" , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:73, start:73, end:73, frm:"FRM_06R32", src:"00_c034/recollect" , pos:[BTN_IW*2, BTN_IH*0], title:""]
+		], [
+			%[chk:81, start:81, end:81, frm:"FRM_06R33", src:"00_d025b/recollect" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:82, start:82, end:82, frm:"FRM_06R34", src:"00_d028b/recollect" , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:83, start:83, end:83, frm:"FRM_06R35", src:"00_d042b/recollect" , pos:[BTN_IW*2, BTN_IH*0], title:""]
+		], [
+			%[chk:91, start:91, end:91, frm:"FRM_06R36", src:"00_e013c/recollect" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:92, start:92, end:92, frm:"FRM_06R37", src:"00_e024b/recollect" , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:93, start:93, end:93, frm:"FRM_06R38", src:"00_e036/recollect" , pos:[BTN_IW*2, BTN_IH*0], title:""]
+		], [
+			%[chk: 0, start: 0, end: 0, frm:"FRM_06R49", src:"movie/opening" , pos:[BTN_IW*0, BTN_IH*0], title:""], 
+			%[chk:11, start:11, end:11, frm:"FRM_06R50", src:"movie/スタッフロール_穹"   , pos:[BTN_IW*1, BTN_IH*0], title:""], 
+			%[chk:12, start:12, end:12, frm:"FRM_06R51", src:"movie/スタッフロール_奈緒" , pos:[BTN_IW*2, BTN_IH*0], title:""], 
+			%[chk:13, start:13, end:13, frm:"FRM_06R52", src:"movie/スタッフロール_瑛"   , pos:[BTN_IW*0, BTN_IH*1], title:""], 
+			%[chk:14, start:14, end:14, frm:"FRM_06R53", src:"movie/スタッフロール_一葉" , pos:[BTN_IW*1, BTN_IH*1], title:""], 
+			%[chk:15, start:15, end:15, frm:"FRM_06R54", src:"movie/スタッフロール_初佳" , pos:[BTN_IW*2, BTN_IH*1], title:""]
+		]
+	];
+
+	var PAGE_MAX = _LIST.count;
+	var PAGE_THUMB_MAX = 20;
+
+	function MemoriesModeScene(win, par){
+		Sprite(...);
+		loadImages("FRM_06R01");
+		setSizeToImageSize();
+		absolute = LAYER_APPRECIATION;
+		opacity = 0;
+
+		_title = new global.Layer(win, this);
+		with(_title){
+			.loadImages("FRM_06C04");
+			.setSize(.imageWidth\3, .imageHeight);
+			.setImagePos(-.width * 2, 0);
+			.setPos(40, 40);
+			.visible = true;
+		}
+
+		_btnMode[0] = new Button(win, this);
+		with(_btnMode[0]){
+			.create("FRM_06C02", 3);
+			.setPos(510, 33);
+		}
+		_btnMode[1] = new Button(win, this);
+		with(_btnMode[1]){
+			.create("FRM_06C03", 3);
+			.setPos(644, 33);
+		}
+		addChainItem(_btnMode[0]);
+		addChainItem(_btnMode[1]);
+
+		_imgClose = new global.Layer(window, this);
+		with(_imgClose){
+			.loadImages("FRM_06R02");
+			.setSizeToImageSize();
+		}
+
+		_btnImage = new global.Layer(window, this);
+		with(_btnImage){
+			.loadImages("FRM_06R04");
+			.setSizeToImageSize();
+		}
+
+		var TAG_INFO = [
+			%[file:"FRM_06R11", pos:[16, 117+46*0]], 
+			%[file:"FRM_06R12", pos:[16, 117+46*1]], 
+			%[file:"FRM_06R13", pos:[16, 117+46*2]], 
+			%[file:"FRM_06R14", pos:[16, 117+46*3]], 
+			%[file:"FRM_06R15", pos:[16, 117+46*4]], 
+			%[file:"FRM_06R18", pos:[16, 117+46*5]]
+		];
+		_group = new RadioButtonGroup();
+		for(var i=0;i<_LIST.count;i++){
+			_btnPage[i] = new RadioButton(win, this);
+			with(_btnPage[i]){
+				.create(TAG_INFO[i].file, 3);
+				.ptnInvalid = 1;
+				.setPos(TAG_INFO[i].pos[0], TAG_INFO[i].pos[1]);
+			}
+			_group.add(_btnPage[i]);
+			addChainItem(_btnPage[i]);
+		}
+
+		for(var i=0;i<PAGE_THUMB_MAX;i++){
+			_btn[i] = %[];
+			_btn[i].img = new SelectItemGroupLayer(win, this);
+			_btn[i].img.hasImage = true;
+			_btn[i].title = new global.Layer(win, _btn[i].img);
+			with(_btn[i].title){
+				.setSize(284, 31);
+				.setPos(6, 12);
+				.hitThreshold = 256;
+			}
+			_btn[i].btn = new Button(win, _btn[i].img);
+			addChainItem(_btn[i].btn);
+		}
+
+		PlayBgm("BGM17");
+
+		if(sysReg._recollectChar){
+			setPage(sysReg._recollectChar - 1);
+		}else{
+			setPage(0);
+		}
+
+		PlaySystemVoice("回想モード");
+
+		show();
+		visible = true;
+
+		mouseTrackingMode = global.ChainItemBase.MOUSETRACKINGMODE_FREE;
+		cursorCenterAuto = 0;
+		itemCenterAuto = 0;
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		invalidate _title;
+
+		InvalidateDicArray(_btn);
+		InvalidateArray(_btnMode);
+		InvalidateArray(_btnPage);
+
+		invalidate _btnImage;
+		invalidate _imgClose;
+
+		invalidate _group;
+
+		global.Sprite.finalize();
+		global.ChainItemBase.finalize();
+
+		global.Sprite.finalize();
+	}
+	function who(){return "MemoriesModeScene";}
+
+	function show(time=300){
+		setBlendingEnvelope(255);
+		beginActivation(time);
+	}
+	function hide(time=300){
+		setBlendingEnvelope(0);
+		beginActivation(time);
+	}
+
+	function setPage(id){
+		sysReg._recollectChar = id + 1;
+
+		var opa = opacity;
+		opacity = opa;
+
+		var tgtList = _LIST[id];
+		_page = id;
+		_group.on(_btnPage[id]);
+
+		for(var i=0;i<PAGE_THUMB_MAX;i++){
+			_btn[i].img.visible = false;
+			_btn[i].btn.visible = _btn[i].btn.valid = false;
+			_btn[i].title.visible = false;
+		}
+
+		for(var i=0;i<tgtList.count;i++){
+			if(tgtList[i].chk === void) continue;
+
+			if(ChkGlobalFlag(tgtList[i].chk) || tgtList[i].chk == 0){
+				try{
+					_btn[i].img.loadImages(tgtList[i].frm);
+				}catch{
+					_btn[i].img.loadImages("FRM_0106");
+				}
+				_btn[i].img.setSizeToImageSize();
+
+				_btn[i].img.setPos(BTN_BX+tgtList[i].pos[0], BTN_BY+tgtList[i].pos[1]);
+
+				@if(__DEBUGMODE__)
+					if(true && tgtList[i].sz >= 2 && debug.tglSupExp.state){
+						_btn[i].img.font.face = "メイリオ";
+						_btn[i].img.font.height = 21;
+						_btn[i].img.drawText(16, 8, tgtList[i].src, GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+					}
+				@endif
+
+				_btn[i].img.visible = true;
+				_btn[i].btn.create(_btnImage, 2);
+				_btn[i].btn.valid = true;
+
+				if(tgtList[i].title !== void){
+					with(_btn[i].title){
+						.fillRect(0, 0, .width, .height, 0x0);
+						if(false){
+							.font.face = GetFontFace("21");
+						}else{
+							.font.face = FONT_DEFAULT_FACE;
+							.font.height = 18;
+						}
+						var textW = .font.getTextWidth(tgtList[i].title);
+
+						var info = %[ratio:0, height:.font.height];
+						if(PRFONT_DIC[.font.face] !== void) info = PRFONT_DIC[.font.face];
+						.drawText(.width\2-textW\2, 4+info.ratio, tgtList[i].title, RGB(255,255,255), 255, true, 4024, GetDefineColor("mediumpurple"), 4, 0, 0);
+						.setPos(.left, _btn[i].btn.height - .height - 2);
+						.visible = true;
+					}
+				}
+			}else if(tgtList[i].sz == 3 || tgtList[i].sz == 2){
+				_btn[i].img.assignImages(_imgClose);
+				_btn[i].img.setSizeToImageSize();
+				_btn[i].img.visible = true;
+				_btn[i].btn.create(_imgClose, 1);
+				_btn[i].btn.valid = false;
+
+				_btn[i].img.setPos(BTN_BX+tgtList[i].pos[0], BTN_BY+tgtList[i].pos[1]);
+			}
+		}
+	}
+
+	function onButtonDownL(target){
+		if(_decide) return;
+
+		for(var i=0;i<_LIST[_page].count;i++){
+			if(target == _btn[i].btn){
+				startRecollect(i); break;
+				return;
+			}
+		}
+		switch(target){
+		case _btnMode[0] : changeScene(SCENE_ALBUM); break;
+		case _btnMode[1] : changeScene(SCENE_MUSIC); break;
+
+		case _btnPage[0] : setPage(0); break;
+		case _btnPage[1] : setPage(1); break;
+		case _btnPage[2] : setPage(2); break;
+		case _btnPage[3] : setPage(3); break;
+		case _btnPage[4] : setPage(4); break;
+		case _btnPage[5] : setPage(5); break;
+		case _btnPage[6] : setPage(6); break;
+		case _btnPage[7] : setPage(7); break;
+		}
+	}
+	function onButtonDownR(target){
+		onMouseDown(0, 0, mbRight, 0);
+	}
+
+	function onSliderMoveStart(target){
+		BGM.volume = target.trim / 100.0;
+	}
+	function onSliderMove(target){
+		BGM.volume = target.trim / 100.0;
+	}
+	function onSliderMoveEnd(target){
+		BGM.volume = target.trim / 100.0;
+	}
+
+	function onMouseDown(x, y, button, shift){
+		switch(button){
+		case mbRight:
+			if(_decide) return;
+
+			changeScene(SCENE_TITLE);
+			break;
+		}
+	}
+
+	function onKeyDown(key, shift){
+		if(_decide) return;
+
+		switch(key){
+		case VK_ESCAPE:
+			if(_decide) return;
+
+			changeScene(SCENE_TITLE);
+			break;
+		case VK_PRIOR : 
+			_page--;
+			if(_page < 0) _page = PAGE_MAX - 1;
+			setPage(_page);
+			break;
+		case VK_NEXT : 
+			_page++;
+			if(_page >= PAGE_MAX) _page = 0;
+			setPage(_page);
+			break;
+		}
+		global.ChainItemBase.onKeyDown(...);
+	}
+
+	function startRecollect(id){
+		_decide = true;
+
+		StopSystemSound();
+		StopBgm();
+
+		var sc = _LIST[_page][id].src.split("/");
+		var start = _LIST[_page][id].start;
+		var end = _LIST[_page][id].end;
+
+		game.changeScene(SCENE_ADV, true, %[scenario:sc[0], label:sc[1], recollect:true, recollectStart:start, recollectEnd:end]);
+		setTransitionCompleteCall(close);
+
+		hide();
+	}
+
+	function close(){
+		valid = false;
+	}
+
+	function onMouseWheel(shift, delta, x, y){
+		if(delta < 0){
+			_page++;
+			if(_page >= PAGE_MAX) _page = 0;
+			setPage(_page);
+		}else if(delta > 0){
+			_page--;
+			if(_page < 0) _page = PAGE_MAX - 1;
+			setPage(_page);
+		}
+	}
+
+	function changeScene(scene){
+		sysReg._recollectChar = 0;
+		HitThresholdSelectItems(_btn, 256);
+		game.changeScene(scene, true, %[recollect:1]);
+		setTransitionCompleteCall(close);
+		hide();
+	}
+}

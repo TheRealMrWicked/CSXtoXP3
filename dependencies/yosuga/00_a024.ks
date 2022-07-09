@@ -480,7 +480,7 @@
 @ClearChar id=穹
 @Char file=CH01_08M 
 
-@Talk name=Class_Rep voice=KO010156
+@Talk name=Class　Rep voice=KO010156
 
 @Hitret id=7679
 
@@ -496,7 +496,7 @@
 @PlayBgm file=BGM08
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO010157
+@Talk name=Class　Rep voice=KO010157
 
 @Hitret id=7682
 
@@ -508,7 +508,7 @@
 
 @Hitret id=7684
 
-@Talk name=Class_Rep voice=KO010158
+@Talk name=Class　Rep voice=KO010158
 
 @Hitret id=7685
 
@@ -519,7 +519,7 @@
 
 @Char file=CH01_09M 
 
-@Talk name=Class_Rep voice=KO010159
+@Talk name=Class　Rep voice=KO010159
 
 @Hitret id=7687
 
@@ -530,11 +530,11 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO010160
+@Talk name=Class　Rep voice=KO010160
 
 @Hitret id=7689
 
-@Talk name=Class_Rep voice=KO010161
+@Talk name=Class　Rep voice=KO010161
 
 @Hitret id=7690
 
@@ -559,7 +559,7 @@
 
 @Char file=CH01_09M x=-400  
 
-@Talk name=Class_Rep voice=KO010162
+@Talk name=Class　Rep voice=KO010162
 
 @Hitret id=7694
 
@@ -571,7 +571,7 @@
 @StopBgm
 @Char file=CH01_06M 
 
-@Talk name=Class_Rep voice=KO010163
+@Talk name=Class　Rep voice=KO010163
 
 @Hitret id=7696
 
@@ -589,7 +589,7 @@
 
 @Char file=CH01_08M 
 
-@Talk name=Class_Rep voice=KO010164
+@Talk name=Class　Rep voice=KO010164
 
 @Hitret id=7699
 

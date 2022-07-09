@@ -1,0 +1,330 @@
+
+class ConfirmWindow extends SettingWindowBase{
+	var _type;
+	var _yesFunc = null;
+	var _noFunc = null;
+	var _btn = [];
+	var _sprBase;
+	var _mess;
+	var _decide = false;
+
+	function ConfirmWindow(win, par){
+		super.SettingWindowBase(win, par);
+		win.add(this);
+	}
+	function finalize(){
+		if(!isvalid this) return;
+
+		win.remove(this);
+
+		super.finalize();
+		InvalidateArray(_btn);
+		invalidate _sprBase;
+		invalidate _mess;
+	}
+
+	function who(){return "ConfirmWindow";}
+
+	function create(message, type, yesFunc=null, noFunc=null){
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		fillRect(0, 0, width, height, 0x7f000000);
+		//hasImage = false;
+
+		_type = type;
+
+		_yesFunc = yesFunc;
+		_noFunc = noFunc;
+
+		_sprBase = new SelectItemGroupLayer(win, this);
+		with(_sprBase){
+			.hasImage = true;
+			.loadImages("FRM_0701");
+			.setSizeToImageSize();
+			.setPos((WINDOW_WIDTH-.width)/2, (WINDOW_HEIGHT-.height)/2);
+			.visible = true;
+		}
+
+		_btn[0] = new Button(win, _sprBase);
+		with(_btn[0]){
+			.create("FRM_0711", 2);
+			.setPos(286, 79);
+		}
+		_btn[1] = new Button(win, _sprBase);
+		with(_btn[1]){
+			.create("FRM_0712", 2);
+			.setPos(432, 79);
+		}
+		_btn[2] = new ToggleOnBaseButton(win, _sprBase);
+		with(_btn[2]){
+			.create("FRM_02A31", 4, 0, 0, 115);
+			.setPos(406, 127);
+			.state = CONFIG.confirmWindow[_type];
+		}
+
+		_mess = new MessageArea(win, _sprBase, true);
+		with(_mess){
+			.setSize(_sprBase.width, _sprBase.height);
+
+			.setMargin(4, 4, .width-4, .height-4);
+			.setDefaultDrawTextParam(GetDefineColor("white"), 255, true, 3024, RGB(32, 32, 32), 3, 0, 0);
+			.setDefaultFontStyle(GetFontFace("24"), 32, ADV_FONT_MESS_INDENT, true);
+			.resetDrawTextParam();
+			.resetFontStyle();
+			.setRubyParam(0.4, true, 0xff3f3f, 255, true);
+
+			var messWidth = .font.getTextWidth(.extractOutputString(message));
+			.cursor_x = 400 - messWidth/2;
+			.cursor_y = 32;
+			.output(message, true);
+
+			.visible = true;
+		}
+
+		absolute = LAYER_CONFIRM;
+
+		opacity = 0;
+
+		addChainItem(_btn[0]);
+		addChainItem(_btn[1]);
+		addChainItem(_btn[2]);
+		if(CONFIG.mouseTracking) mouseTracking(_btn[1]);
+	}
+
+	var _msCnt = false;
+	function onMouseDown(x, y, button, shift){
+		if(_decide) return;
+
+		if(button == mbRight){
+			_msCnt = !_msCnt;
+			if(_noFunc != null && _msCnt){
+				var asyncNo = new AsyncTrigger(_noFunc, "");
+				asyncNo.trigger();
+			}
+			HitThresholdSelectItems(_btn, 256);
+			hide(300, ConfirmDelete);
+			_decide = true;
+		}
+	}
+	function onKeyDown(key, shift){
+		if(_decide) return;
+
+		if( key == VK_ESCAPE || 
+			key == VK_N){
+			if(_noFunc != null){
+				var asyncNo = new AsyncTrigger(_noFunc, "");
+				asyncNo.trigger();
+			}
+			HitThresholdSelectItems(_btn, 256);
+			hide(300, ConfirmDelete);
+			_decide = true;
+		}else if(key == VK_Y){
+			if(_yesFunc != null){
+				var asyncYes = new AsyncTrigger(_yesFunc, "");
+				asyncYes.trigger();
+			}
+			HitThresholdSelectItems(_btn, 256);
+			hide(300, ConfirmDelete);
+			_decide = true;
+		}
+		super.onKeyDown(...);
+	}
+
+	function onButtonDownL(target){
+		if(_decide) return;
+
+		if(target == _btn[0]){
+			HitThresholdSelectItems(_btn, 256);
+			if(_yesFunc != null){
+				var asyncYes = new AsyncTrigger(_yesFunc, "");
+				asyncYes.trigger();
+			}
+			for(var i=0;i<_btn.count;i++) _btn[i].hitThreshold = 256;
+			hide(300, ConfirmDelete);
+			_decide = true;
+		}else if(target == _btn[1]){
+			HitThresholdSelectItems(_btn, 256);
+			if(_noFunc != null){
+				var asyncNo = new AsyncTrigger(_noFunc, "");
+				asyncNo.trigger();
+			}
+			for(var i=0;i<_btn.count;i++) _btn[i].hitThreshold = 256;
+			hide(300, ConfirmDelete);
+			_decide = true;
+		}else if(target == _btn[2]){
+			CONFIG.confirmWindow[_type] = _btn[2].state;
+			if(IsShowConfig()) SPR_CONFIG.applyToConfig();
+		}
+	}
+}
+
+var SPR_CONFIRM = null;
+function CallConfirm(message, type, yesFunc=null, noFunc=null){
+	if(SPR_CONFIRM !== null) return false;
+
+	if(CONFIG.confirmWindow[type] == 0 && !System.getKeyState(VK_SHIFT)){
+		var async = new AsyncTrigger(yesFunc, "");
+		async.cached = true;
+		async.mode = atmAtIdle;
+		async.trigger();
+
+		return;
+	}
+
+	SPR_CONFIRM = new ConfirmWindow(win, win.baseLayer);
+	SPR_CONFIRM.create(message, type, yesFunc, noFunc);
+	SPR_CONFIRM.visible = true;
+
+	SPR_CONFIRM.show(300);
+	return true;
+}
+function ConfirmDelete(){
+	if(SPR_CONFIRM === null) return;
+
+	var scene = game.getScene(SCENE_ADV);
+	if(scene !== void) scene.action(%[type:"onHideConfirm"]);
+
+	invalidate SPR_CONFIRM;
+	SPR_CONFIRM = null;
+}
+function IsShowConfirm(){
+	return (SPR_CONFIRM !== null);
+}
+
+class InformationWindow extends Sprite{
+	var _base;
+	var _ma;
+	var _wait;
+	var _waitTimer;
+	var _x, _y;
+	var _mess = "";
+
+	function InformationWindow(win, par){
+		super.Sprite(...);
+		absolute = LAYER_INFORMATION;
+
+		_base = new global.Layer(win, this);
+		with(_base){
+			.loadImages("FRM_0751");
+			.setSizeToImageSize();
+			//.opacity = (255 * CONFIG.windowDepth) \ 100;
+			.hitThreshold = 256;
+			.absolute = 1;
+			.visible = true;
+		}
+
+		hasImage = false;
+		setSize(_base.width, _base.height);
+		_x = (WINDOW_WIDTH - width) / 2;
+		_y = (WINDOW_HEIGHT - height) / 2;
+		setPos(_x, _y);
+
+		hitThreshold = 256;
+
+		font.face = ADV_FONT_MESS_FACE;
+		font.height = 24;
+
+		_ma = new MessageArea(win, this, true);
+		with(_ma){
+			.setSize(width, height);
+			.setMargin(4, 4, width-4, height-4);
+			.setDefaultDrawTextParam(GetDefineColor("white"), 255, true, 1024, GetDefineColor("black"), 2, 1, 1);
+			.setDefaultFontStyle(GetFontFace("30"), ADV_FONT_MESS_SIZE, ADV_FONT_MESS_INDENT, true);
+			.resetDrawTextParam();
+			.resetFontStyle();
+			.setRubyParam(0.4, true, 0xff3f3f, 255, true);
+			.hitThreshold = 256;
+			.absolute = 2;
+			.visible = true;
+		}
+
+		_waitTimer = new Timer(leave, "");
+
+		opacity = 0;
+		win.add(this);
+	}
+	function finalize(){
+		if(!isvalid this) return;
+
+		win.remove(this);
+
+		invalidate _base;
+		invalidate _ma;
+		invalidate _waitTimer;
+
+		super.finalize();
+	}
+
+	function enter(mess, time=3000, x=WINDOW_CENTER_X, y=WINDOW_CENTER_Y){
+		_mess = mess;
+		with(_ma){
+			var textWidth = .font.getTextWidth(.extractOutputString(mess));
+			.cursor_x = (width-textWidth)/2;
+			.cursor_y = (height-font.height)/2 - 4;
+			.output(mess, true);
+		}
+
+		_x = x - width\2;
+		_y = y - height\2;
+
+		setTransitionCompleteCall(wait);
+		setBlendingEnvelope(255);
+		setMovingEnvelope(_x, _y+32, _x, _y, 2);
+		beginActivation(300);
+		visible = true;
+
+		_wait = time;
+	}
+	function wait(){
+		setTransitionCompleteCall();
+		with(_waitTimer){
+			.interval = _wait;
+			.capacity = 1;
+			.enabled = true;
+		}
+	}
+	function leave(){
+		if(_waitTimer !== void) _waitTimer.enabled = false;
+
+		setTransitionCompleteCall();
+		if(isActivation()) stopActivation();
+
+		setTransitionCompleteCall(leaveEnd);
+		setBlendingEnvelope(0);
+		setMovingEnvelope(left, top, _x, _y-32, 2);
+		beginActivation(300);
+	}
+	function leaveEnd(){
+		setTransitionCompleteCall();
+
+		var async = new AsyncTrigger(InformationDestroy, "");
+		with(async){
+			.cached = true;
+			.mode = atmAtIdle;
+			.trigger();
+		}
+	}
+
+	property mess{
+		getter(){return _mess;}
+	}
+}
+
+var SPR_INFORMATION = null;
+function Information(mess, time=1000, x=WINDOW_CENTER_X, y=WINDOW_CENTER_Y){
+	if(SPR_INFORMATION != null) InformationDestroy();
+
+	SPR_INFORMATION = new InformationWindow(win, win.baseLayer);
+	SPR_INFORMATION.enter(mess, time, x, y);
+}
+function InformationDestroy(){
+	if(SPR_INFORMATION === null) return;
+
+	invalidate SPR_INFORMATION;
+	SPR_INFORMATION = null;
+}
+function InfomationMessage(){
+	if(SPR_INFORMATION === null) return "";
+
+	return SPR_INFORMATION.mess;
+}
+

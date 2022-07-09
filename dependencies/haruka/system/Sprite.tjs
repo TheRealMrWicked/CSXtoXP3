@@ -1,0 +1,340 @@
+/*
+	非同期演出レイヤ
+	AffineLayerに非同期演出を追加したレイヤ
+*/
+
+class Sprite extends AffineLayer{
+	var _beginActivationTime = -1;	//beginActivation()開始時間
+
+	var _file = "";
+
+	var _isTransition = false;
+
+	var _center;	//中心位置
+
+	//非同期演出用パラメータ群
+	var _activationTime;
+	var _startOpacity, _endOpacity;	//透明度
+	var _sx, _sy, _ex, _ey, _accel;	//移動
+	var _moveType, _moving, _sMoving1, _sMoving2, _sMoving3;
+	var _zoom1, _zoom2;				//拡大縮小
+	var _rotate1, _rotate2, _turn;	//回転
+
+	var _tmpLinear;
+
+	var _async;
+	var _transitionCompleteCall = null;
+	var _transitionCompleteCallAsync = false;
+	var _actionCall = null;
+
+	function Sprite(win, par=null){
+		super.AffineLayer(win,par);
+
+		_center = new Point(0, 0, 0);
+
+		_tmpLinear = new Linear();
+
+		_moving = new D3Linear();
+		_sMoving1 = new Spline();
+		_sMoving2 = new Spline();
+		_sMoving3 = new Spline();
+
+		initAsyncParameter();
+
+	}
+
+	function finalize(){
+		System.removeContinuousHandler(on_activationTimer);
+		_transitionCompleteCall = null;
+
+		invalidate _tmpLinear;
+
+		invalidate _center;
+		invalidate _moving;
+		invalidate _sMoving1;
+		invalidate _sMoving2;
+		invalidate _sMoving3;
+
+		invalidate _async;
+
+		super.finalize();
+	}
+
+	function loadImages(file){
+		super.loadImages(file);
+		_file = file;
+	}
+
+	function setCenter(x, y){
+		_center.set(int(x), int(y));
+	}
+
+	function setBlendingEnvelope(opa){
+		_endOpacity = opa;
+	}
+	function setMovingEnvelope(sx, sy, ex, ey, accel=0){
+		_moveType = MOVETYPE_LINE;
+		_sx = sx;
+		_sy = sy;
+		_ex = ex;
+		_ey = ey;
+		_accel = accel;
+
+		_moving.set(new Point(_sx, _sy, 0), new Point(_ex, _ey, 0), _accel);
+	}
+	function setMovingSplineEnvelope(srcPath, accel=0){
+	//スプライン移動
+	//srcPath : [x1, y1, x2, y2, x3, y3...]
+		_moveType = MOVETYPE_SPLINE;
+		_accel = accel;
+
+		var path = [];
+		for(var i=0;i<srcPath.count;i++){
+			path.add(srcPath[i]);
+			if(i & 0x1) path.add(0);
+		}
+		_sMoving1.set(path, accel);
+	}
+	function setMovingSplineEnvelope2(srcPath, accel=0){
+	//srcPath : [x1, y1, z1, opa1, zoomx1, zoomy1, rot1, x2, y2, z2, opa2, zoomx2, zoomy2, rot2, x3, y3, z3, opa3, zoomx3, zoomy3, rot3...]
+		var PARAM = 7;
+
+		var points = srcPath.count \ PARAM;
+		if(points < 3) return;
+
+		_moveType = MOVETYPE_SPLINE2;
+		_accel = accel;
+
+		var path1 = [];
+		for(var i=0;i<points;i++){path1[i*3] = srcPath[i*PARAM];}
+		for(var i=0;i<points;i++){path1[i*3+1] = srcPath[i*PARAM+1];}
+		for(var i=0;i<points;i++){path1[i*3+2] = srcPath[i*PARAM+2];}
+		var path2 = [];
+		for(var i=0;i<points;i++){path2[i*3] = srcPath[i*PARAM+3];}
+		for(var i=0;i<points;i++){path2[i*3+1] = srcPath[i*PARAM+4];}
+		for(var i=0;i<points;i++){path2[i*3+2] = srcPath[i*PARAM+5];}
+		var path3 = [];
+		for(var i=0;i<points;i++){path3[i*3] = srcPath[i*PARAM+6];}
+		for(var i=0;i<points;i++){path3[i*3+1] = 0;}
+		for(var i=0;i<points;i++){path3[i*3+2] = 0;}
+
+		_sMoving1.set(path1, accel);
+		_sMoving2.set(path2, accel);
+		_sMoving3.set(path3, accel);
+	}
+	function setZoomingEnvelope(zoom1, zoom2, accel){
+		_zoom1 = zoom1;
+		_zoom2 = zoom2;
+		_accel = accel;
+	}
+	function setRotatingEnvelope(rotate1, rotate2, turn = true){
+	//turnがtrueなら左回転、falseなら右回転
+		_rotate1 = rotate1;
+		_rotate2 = rotate2;
+		_turn = turn;
+	}
+
+	function beginActivation(time){
+		if(time < 0) time = 0;
+
+		if(_endOpacity != -1)
+			_startOpacity = opacity;
+
+		if(time == 0){
+			flushActivation();
+			return;
+		}
+
+		_activationTime = time;
+
+		_beginActivationTime = System.getTickCount();
+
+		System.addContinuousHandler(on_activationTimer);
+	}
+
+	function stopActivation(){
+		initAsyncParameter();
+		System.removeContinuousHandler(on_activationTimer);
+		_beginActivationTime = -1;
+
+		onEndActivation(1);
+	}
+
+	function flushActivation(){
+		if(!(isvalid this)) return;
+		if(parent == null ? true : !(isvalid parent)) return;
+
+		//透明度
+		if(_startOpacity != -1) opacity = _endOpacity;
+		//移動
+		if(_moveType == MOVETYPE_LINE) setPos(_ex, _ey);
+		else if(_moveType == MOVETYPE_SPLINE){
+			var pos = _sMoving1.pt(1.0);
+			setPos(int(pos.x), int(pos.y));
+		}else if(_moveType == MOVETYPE_SPLINE2){
+			var pos = _sMoving1.pt(1.0);
+			setPos(Math.round(pos.x), Math.round(pos.y));
+			absolute = Math.round(pos.z);
+
+			var pos = _sMoving2.pt(1.0);
+			opacity = UDLimit(Math.round(pos.x), 255, 0);
+			setZoom(Math.round(pos.y), Math.round(pos.z));
+
+			var pos = _sMoving3.pt(1.0);
+			rotate = Math.round(pos.x);
+		}
+		//拡大
+		if(_zoom1 != -1) zoom = _zoom2;
+		//回転
+		if(_rotate1 != -1) rotate = _rotate2;
+
+		initAsyncParameter();
+		System.removeContinuousHandler(on_activationTimer);
+		_beginActivationTime = -1;
+
+		onEndActivation(2);
+	}
+
+	function isActivation(){return (_beginActivationTime != -1);}
+	function isBlendingActivation(){return isActivation() && (_startOpacity != -1);}
+	function isMovingActivation(){return isActivation() && (_sx != 0xffffffff);}
+	function isZoomingActivation(){return isActivation() && (_zoom1 != -1);}
+	function isRotateActivation(){return isActivation() && (_rotate1 != -1);}
+
+	function onEndActivation(status){
+		onTransitionCompleted();
+	}
+
+	function on_activationTimer(now){
+		if(!(isvalid this)) return;
+		if(parent == null ? true : !(isvalid parent)) return;
+
+		var tick = real(now - _beginActivationTime) / _activationTime;
+		if(tick > 1.0){
+			flushActivation();
+			return;
+		}
+
+		//透明度
+		if(_startOpacity != -1){
+			opacity = _startOpacity + (_endOpacity - _startOpacity)*tick;
+		}
+		//移動
+		if(_moveType == MOVETYPE_LINE){
+			var pos = _moving.pt(tick);
+			setPos(int(pos.x), int(pos.y));
+		}else if(_moveType == MOVETYPE_SPLINE){
+			var pos = _sMoving1.pt(tick);
+			setPos(int(pos.x), int(pos.y));
+		}else if(_moveType == MOVETYPE_SPLINE2){
+			var pos = _sMoving1.pt(tick);
+			setPos(Math.round(pos.x), Math.round(pos.y));
+			absolute = Math.round(pos.z);
+
+			var pos = _sMoving2.pt(tick);
+			opacity = UDLimit(Math.round(pos.x), 255, 0);
+			setZoom(Math.round(pos.y), Math.round(pos.z));
+
+			var pos = _sMoving3.pt(tick);
+			rotate = Math.round(pos.x);
+		}
+		//拡大
+		if(_zoom1 != -1){
+//			zoom = _zoom1 + (_zoom2 - _zoom1) * tick;
+			_tmpLinear.set(_zoom1, _zoom2, _accel);
+			zoom = _tmpLinear.pt(tick);
+		}
+		//回転
+		if(_rotate1 != -1){
+			var i = _turn == true ? 1 : -1;
+			rotate = _rotate1 + (_rotate2 - _rotate1) * tick * i;
+		}
+	}
+
+	function initAsyncParameter(){
+		_startOpacity = _endOpacity = -1;
+		_moveType = MOVETYPE_NONE;
+		_sx = _sy = _ex = _ey = 0xffffffff;
+		_zoom1 = _zoom2 = -1;
+		_rotate1 = _rotate2 = -1;
+		_turn = true;
+	}
+
+	function beginTransition(name, withcildren, transsrc, options){
+		if(isTransition()) stopTransition();
+
+		if(options.time != 0){
+			super.beginTransition(...);
+			_isTransition = true;
+		}else{
+			onTransitionCompleted(this, transsrc);
+		}
+	}
+
+	function onTransitionCompleted(dest, src){
+		_isTransition = false;
+		if(_transitionCompleteCall != null){
+			if(_transitionCompleteCallAsync){
+				invalidate _async;
+				_async = new AsyncTrigger(_transitionCompleteCall, "");
+				_async.trigger();
+			}else{
+				_transitionCompleteCall(this, src);
+			}
+		}
+	}
+
+	function setTransitionCompleteCall(func=null, async=false){
+		_transitionCompleteCall = func;
+		_transitionCompleteCallAsync = async;
+	}
+
+	function isTransition(){
+		return _isTransition;
+	}
+
+	function setActionCall(func = null){
+		_actionCall = func;
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(_actionCall != null)
+			_actionCall(%[target:this, type:"onMouseDown", x:x, y:y, button:button, shift:shift]);
+	}
+
+	function onKeyDown(key, shift, process=true){
+		if(_actionCall != null)
+			_actionCall(%[target:this, type:"onKeyDown", key:key, shift:shift, process:process]);
+	}
+
+	function setPos(x, y){
+		left = x;
+		top = y;
+	}
+
+	function move(mx, my){
+		setPos(left + mx, top + my);
+	}
+
+	property top{
+		setter(v){super.top = v - _center.y;}
+		getter(){return super.top + _center.y;}
+	}
+	property left{
+		setter(v){super.left = v - _center.x;}
+		getter(){return super.left + _center.x;}
+	}
+	property y{
+		setter(v){super.top = v - _center.y;}
+		getter(){return super.top + _center.y;}
+	}
+	property x{
+		setter(v){super.left = v - _center.x;}
+		getter(){return super.left + _center.x;}
+	}
+}
+Sprite.MOVETYPE_NONE			= 0;
+Sprite.MOVETYPE_LINE			= 1;
+Sprite.MOVETYPE_LINEARFRAME		= 2;
+Sprite.MOVETYPE_SPLINE			= 3;
+Sprite.MOVETYPE_SPLINE2			= 4;

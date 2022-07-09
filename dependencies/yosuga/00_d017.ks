@@ -186,7 +186,7 @@
 
 @Cg file=EZ06c  
 
-@Talk name=Math_Teacher voice=NP120006
+@Talk name=Math　Teacher voice=NP120006
 
 @Hitret id=28793
 
@@ -206,7 +206,7 @@
 
 @Hitret id=28797
 
-@Talk name=Math_Teacher voice=NP120007
+@Talk name=Math　Teacher voice=NP120007
 
 @Hitret id=28798
 
@@ -214,7 +214,7 @@
 
 @Hitret id=28799
 
-@Talk name=Math_Teacher voice=NP120008
+@Talk name=Math　Teacher voice=NP120008
 
 @Hitret id=28800
 
@@ -226,7 +226,7 @@
 
 @Hitret id=28802
 
-@Talk name=Math_Teacher voice=NP120009
+@Talk name=Math　Teacher voice=NP120009
 
 @Hitret id=28803
 
@@ -280,7 +280,7 @@
 
 @Hitret id=28814
 
-@Talk name=Math_Teacher voice=NP120010
+@Talk name=Math　Teacher voice=NP120010
 
 @Hitret id=28815
 
@@ -288,7 +288,7 @@
 
 @Hitret id=28816
 
-@Talk name=Math_Teacher voice=NP120011
+@Talk name=Math　Teacher voice=NP120011
 
 @Hitret id=28817
 
@@ -296,7 +296,7 @@
 
 @Hitret id=28818
 
-@Talk name=Math_Teacher voice=NP120012
+@Talk name=Math　Teacher voice=NP120012
 
 @Hitret id=28819
 
@@ -324,7 +324,7 @@
 
 @Hitret id=28825
 
-@Talk name=Math_Teacher voice=NP120013
+@Talk name=Math　Teacher voice=NP120013
 
 @Hitret id=28826
 
@@ -589,7 +589,7 @@
 
 @Hitret id=28876
 
-@Talk name=Akira_and_Ryouhei voice=AK040251/RH040167
+@Talk name=Akira　and　Ryouhei voice=AK040251/RH040167
 
 @Hitret id=28877
 

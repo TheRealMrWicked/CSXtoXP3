@@ -458,7 +458,7 @@
 
 @Hitret id=22075
 
-@Talk name=Akira_and_Kazuha voice=AK020894/KA020331
+@Talk name=Akira@and@Kazuha voice=AK020894/KA020331
 
 @Hitret id=22076
 

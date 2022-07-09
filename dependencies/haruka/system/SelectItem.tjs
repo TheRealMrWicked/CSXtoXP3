@@ -1,0 +1,2674 @@
+/*
+	選択アイテムクラス
+
+	※約束事
+	■ボタンが押された・離された・動いた等の通知は親レイヤ(parent)にする。
+	　親となるレイヤはSelectItemNotifyBaseを継承すること。
+	例）
+	parent.onButtonDownL(this);
+	parent.onButtonUp(this);
+	parent.onSliderMove(this);
+*/
+
+//ボタンイベントの通知を受け取る基底クラス
+class SelectItemNotifyBase{
+	//ボタン							//↓通知される基本的なルール
+	function onButtonEnter(target){}	//有効時
+	function onButtonLeave(target){}	//有効時
+	function onButtonDownL(target){}	//有効時
+	function onButtonDownR(target){}	//有効時＆無効時
+	function onButtonUp(target){}		//有効時
+	//スライダー
+	function onSliderEnter(target){}			//有効時
+	function onSliderLeave(target){}			//有効時
+	function onSliderMove(target,key=false){}	//有効時
+	function onSliderMoveStart(target){}		//有効時
+	function onSliderMoveEnd(target){}			//有効時
+	//エディット
+	function onEditControlOk(target){}
+	function onEditControlEnter(target){}
+	function onEditControlLeave(target){}
+	//リストボックス
+	function onListboxSelect(target){}
+}
+
+class SelectItemNotifyRootLayer extends Layer, SelectItemNotifyBase{
+	function SelectItemNotifyRootLayer(win, par){
+		Layer(...);
+	}
+}
+class SelectItemNotifyRootSprite extends Sprite, SelectItemNotifyBase{
+	function SelectItemNotifyRootSprite(win, par){
+		Sprite(...);
+	}
+}
+
+//ボタンの配置をグルーピングしたいときに使うレイヤ
+//受け取ったボタンイベントをさらに親レイヤーに通知するレイヤ
+class SelectItemGroupLayer extends Layer, SelectItemNotifyBase{
+	var _owner = null;
+	var _movable = false;
+
+	function SelectItemGroupLayer(win, par, o=null){
+		Layer(win, par);
+		hasImage=false;
+		if(o === null)	_owner = par;
+		else			_owner = o;
+	}
+	function finalize(win, par){global.Layer.finalize();}
+
+	//ボタン
+	function onButtonEnter(target){_owner.onButtonEnter(...);}
+	function onButtonLeave(target){_owner.onButtonLeave(...);}
+	function onButtonDownL(target){_owner.onButtonDownL(...);}
+	function onButtonDownR(target){_owner.onButtonDownR(...);}
+	function onButtonUp(target){_owner.onButtonUp(...);}
+	//スライダー
+	function onSliderEnter(target){_owner.onSliderEnter(...);}
+	function onSliderLeave(target){_owner.onSliderLeave(...);}
+	function onSliderMove(target){_owner.onSliderMove(...);}
+	function onSliderMoveStart(target){_owner.onSliderMoveStart(...);}
+	function onSliderMoveEnd(target){_owner.onSliderMoveEnd(...);}
+	//エディット
+	function onEditControlOk(target){_owner.onEditControlOk(...);}
+	function onEditControlEnter(target){_owner.onEditControlEnter(...);}
+	function onEditControlLeave(target){_owner.onEditControlLeave(...);}
+	//リストボックス
+	function onListboxSelect(target){_owner.onListboxSelect(...);}
+	//メニュー
+	function onMenuDecide(name){_owner.onMenuDecide(...);}
+
+	function onMouseDown(x, y, button, shift){parent.onMouseDown(...);}
+	function onKeyDown(key, shift){_owner.onKeyDown(...);}
+
+	function action(ev){}
+
+	property owner{
+		getter(){return _owner;}
+	}
+}
+//ボタンの配置をグルーピングしたいときに使うスプライト
+//受け取ったボタンイベントをさらに親レイヤーに通知するスプライト
+class SelectItemGroupSprite extends Sprite, SelectItemNotifyBase{
+	var _owner = null;
+	var _movable = false;
+	var dragging = false;
+	var dragOriginX, dragOriginY;
+
+	function SelectItemGroupSprite(win, par, o=null){
+		Sprite(win, par);
+		hasImage=false;
+		if(o === null)	_owner = par;
+		else			_owner = o;
+	}
+	function finalize(win, par){global.Sprite.finalize();}
+
+	//ボタン
+	function onButtonEnter(target){_owner.onButtonEnter(...);}
+	function onButtonLeave(target){_owner.onButtonLeave(...);}
+	function onButtonDownL(target){_owner.onButtonDownL(...);}
+	function onButtonDownR(target){_owner.onButtonDownR(...);}
+	function onButtonUp(target){_owner.onButtonUp(...);}
+	//スライダー
+	function onSliderEnter(target){_owner.onSliderEnter(...);}
+	function onSliderLeave(target){_owner.onSliderLeave(...);}
+	function onSliderMove(target){_owner.onSliderMove(...);}
+	function onSliderMoveStart(target){_owner.onSliderMoveStart(...);}
+	function onSliderMoveEnd(target){_owner.onSliderMoveEnd(...);}
+	//エディット
+	function onEditControlOk(target){_owner.onEditControlOk(...);}
+	function onEditControlEnter(target){_owner.onEditControlEnter(...);}
+	function onEditControlLeave(target){_owner.onEditControlLeave(...);}
+	//リストボックス
+	function onListboxSelect(target){_owner.onListboxSelect(...);}
+	//メニュー
+	function onMenuDecide(name){_owner.onMenuDecide(...);}
+
+	function onMouseDown(x, y, button, shift){parent.onMouseDown(...);}
+	function onKeyDown(key, shift){_owner.onKeyDown(...);}
+
+	function action(ev){}
+
+	property owner{
+		getter(){return _owner;}
+	}
+}
+
+//基底クラス
+class SelectItemBase extends Layer{
+	var _name = "SelectItemBase";
+
+	var _valid = true;
+	var _enter = false;
+
+	var _x, _y, _width, _height;
+
+	var _hotSpotX, _hotSpotY;
+
+	function SelectItemBase(win, par){
+		super.Layer(...);
+		setHotSpot(0, 0);
+		hitType = htMask;
+		hitThreshold = 0;
+		_valid = true;
+	}
+	function finalize(){cursor = crDefault; super.finalize();}
+	function kind(){return "SelectItemBese";}
+
+	function onValid(){}	//有効化された
+	function onInvalid(){}	//無効化された
+	function setButton(num){setImagePos(-(_width*num), 0);}
+
+	function enter(){_enter = true;}
+	function leave(){_enter = false;}
+	function isEnter(){return (_enter && !window.isMouseTracking());}
+
+	function setHotSpot(x=0, y=0){_hotSpotX = x; _hotSpotY = y;}
+
+	//マウスカーソルの移動
+	//カーソルをアイテムの中央に合わせる
+	function setMouseCursor(){
+		var pos = new Point();
+		GetAbsolutePos(this, pos);
+		setCursorPos(pos.x + width / 2, pos.y + height / 2);
+		invalidate pos;
+	}
+
+	//マウスカーソルの変更
+	function onMouseEnter(){
+		enter();
+
+		//無効時でも通知はする。
+		if(typeof parent.onButtonEnter != "undefined")
+			parent.onButtonEnter(this);
+
+		if(valid){
+			cursor = crHandPoint;}else{cursor = crDefault;
+		}
+	}
+	function onMouseLeave(){
+		leave();
+
+		//無効時でも通知はする。
+		if(typeof parent.onButtonLeave != "undefined")
+			parent.onButtonLeave(this);
+
+		cursor = crDefault;
+	}
+
+	property valid{
+		setter(v){
+			_valid = v;
+			if(v)	onValid();
+			else	onInvalid();
+		}
+		getter(){return _valid;}
+	}
+	property name{
+		getter(){return _name;}
+		setter(v){_name = v;}
+	}
+
+	property hotSpotX{
+		getter(){return _hotSpotX;}
+		setter(v){_hotSpotX = v;}
+	}
+	property hotSpotY{
+		getter(){return _hotSpotY;}
+		setter(v){_hotSpotY = v;}
+	}
+}
+class SelectItemBaseSprite extends Sprite{
+	var _name = "SelectItemBase";
+
+	var _valid = true;
+	var _enter = false;
+
+	var _x, _y, _width, _height;
+
+	function SelectItemBaseSprite(win, par){
+		super.Sprite(...);
+		hitType = htMask;
+		hitThreshold = 0;
+		_valid = true;
+	}
+	function finalize(){cursor = crDefault; super.finalize();}
+	function kind(){return "SelectItemBeseSprite";}
+
+	function onValid(){}	//有効化された
+	function onInvalid(){}	//無効化された
+	function setButton(num){setImagePos(-(_width*num), 0);}
+
+	function enter(){_enter = true;}
+	function leave(){_enter = false;}
+	function isEnter(){return (_enter && !window.isMouseTracking());}
+
+	//マウスカーソルの移動
+	//カーソルをアイテムの中央に合わせる
+	function setMouseCursor(){
+		var pos = new Point();
+		GetAbsolutePos(this, pos);
+		setCursorPos(pos.x + width / 2, pos.y + height / 2);
+		invalidate pos;
+	}
+
+	//マウスカーソルの変更
+	function onMouseEnter(){
+		enter();
+
+		//無効時でも通知はする。
+		if(typeof parent.onButtonEnter != "undefined")
+			parent.onButtonEnter(this);
+
+		if(valid){
+			cursor = crHandPoint;}else{cursor = crDefault;
+		}
+	}
+	function onMouseLeave(){
+		leave();
+
+		//無効時でも通知はする。
+		if(typeof parent.onButtonLeave != "undefined")
+			parent.onButtonLeave(this);
+
+		cursor = crDefault;
+	}
+
+	property valid{
+		setter(v){
+			_valid = v;
+			if(v)	onValid();
+			else	onInvalid();
+		}
+		getter(){return _valid;}
+	}
+	property name{
+		getter(){return _name;}
+		setter(v){_name = v;}
+	}
+}
+
+class Button extends SelectItemBase{
+	var _nPattern;
+	var _nNormal;
+	var _nFocus;
+	var _nInvalid;
+
+	function Button(win, par){
+		super.SelectItemBase(win, par);
+	}
+
+	function kind(){return "Button";}
+
+	function create(file, nPattern=3){
+		if(typeof file == "Object"){
+			_width = file.imageWidth / nPattern;
+			_height = file.imageHeight;
+			setSize(_width, _height);
+			setImageSize(file.imageWidth, file.imageHeight);
+			copyRect(0, 0, file, 0, 0, file.imageWidth, file.imageHeight);
+		}else{
+			loadImages(file);
+			_width = imageWidth / nPattern;
+			_height = imageHeight;
+			setSize(_width, _height);
+		}
+		visible = true;
+
+		_nPattern = nPattern;
+		_nNormal = 0;
+		_nFocus = _nPattern >= 2 ? 1 : 0;
+		_nInvalid = _nPattern >= 3 ? 2 : 0;
+
+		setButton(_nNormal);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && _valid){
+			if(typeof parent.onButtonDownL != "undefined")
+				parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+
+		if(!_valid) return;
+
+		setButton(_nFocus);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+
+		if(!_valid) return;
+
+		setButton(_nNormal);
+	}
+	function onValid(){setButton(_nNormal);}
+	function onInvalid(){setButton(_nInvalid);}
+
+	property ptnNormal{
+		getter(){return _nNormal;}
+		setter(v){_nNormal = v;}
+	}
+	property ptnFocus{
+		getter(){return _nFocus;}
+		setter(v){_nFocus = v;}
+	}
+	property ptnInvalid{
+		getter(){return _nInvalid;}
+		setter(v){_nInvalid = v;}
+	}
+}
+
+class DebugButton extends SelectItemBase{
+	var _fontFace = "メイリオ,HG丸ｺﾞｼｯｸM-PRO,ＭＳ ゴシック";
+
+	function DebugButton(win, par){
+		super.SelectItemBase(win, par);
+	}
+
+	function kind(){return "DebugButton";}
+
+	function create(strNormal, strFocus="", strInvalid="", szFont=16){
+		with(font){
+			if(strFocus == "") strFocus = strNormal;
+			if(strInvalid == "") strInvalid = strNormal;
+
+			.face = _fontFace;
+			.height = szFont;
+			.bold = true;
+
+			_height = szFont;
+
+			_width = .getTextWidth(strNormal);
+			if(_width < .getTextWidth(strFocus))	_width = .getTextWidth(strFocus);
+			if(_width < .getTextWidth(strInvalid))	_width = .getTextWidth(strInvalid);
+
+			_width += 8;
+			_height += 8;
+
+			setSize(_width, _height);
+			setImageSize(_width*3, _height);
+			fillRect(0, 0, _width*3, _height, 0);
+
+			DrawFrame(this, _width*0, 0, _width, _height, 0x8000cc44, 0xff88eecc);
+			DrawFrame(this, _width*1, 0, _width, _height, 0xc000ffcc, 0xff88eecc);
+			DrawFrame(this, _width*2, 0, _width, _height, 0x80008822, 0xff88eecc);
+			drawText(_width*0+(_width-.getTextWidth(strNormal))/2 , (_height-szFont)/2, strNormal, 0xffffff);
+			drawText(_width*1+(_width-.getTextWidth(strFocus))/2  , (_height-szFont)/2, strFocus, 0xffffff);
+			drawText(_width*2+(_width-.getTextWidth(strInvalid))/2, (_height-szFont)/2, strInvalid, 0x808080);
+
+			visible = true;
+		}
+		setButton(0);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && _valid){
+			if(typeof parent.onButtonDownL != "undefined")
+				parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+		if(!_valid) return;
+
+		setButton(1);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+		if(!_valid) return;
+
+		setButton(0);
+	}
+	function onValid(){setButton(0);}
+	function onInvalid(){setButton(2);}
+
+	property face{
+		setter(v){_fontFace = v;}
+		getter(){return _fontFace;}
+	}
+}
+
+class ToggleButton extends SelectItemBase{
+	var _state = false;
+
+	var _nPattern;
+	var _nNormalA;
+	var _nFocusA;
+	var _nInvalidA;
+	var _nNormalB;
+	var _nFocusB;
+	var _nInvalidB;
+
+	function ToggleButton(win, par){
+		super.SelectItemBase(win, par);
+	}
+
+	function kind(){return "ToggleButton";}
+
+	function create(file, nPattern=3){
+		if(typeof file == "Object"){
+			_width = file.imageWidth / nPattern;
+			_height = file.imageHeight;
+			setSize(_width, _height);
+			setImageSize(file.imageWidth, file.imageHeight);
+			copyRect(0, 0, file, 0, 0, file.imageWidth, file.imageHeight);
+		}else{
+			loadImages(file);
+			_width = imageWidth / nPattern;
+			_height = imageHeight;
+			setSize(_width, _height);
+		}
+		visible = true;
+
+		_nPattern = nPattern;
+		switch(_nPattern){
+		case 2 :
+		//AB
+			_nNormalA = 0;
+			_nFocusA = 1;
+			_nInvalidA = 1;
+			_nNormalB = 1;
+			_nFocusB = 1;
+			_nInvalidB = 1;
+			break;
+		case 4 :
+		//AABB
+			_nNormalA = 0;
+			_nFocusA = 1;
+			_nInvalidA = 0;
+			_nNormalB = 2;
+			_nFocusB = 3;
+			_nInvalidB = 2;
+			break;
+		default:
+			_nNormalA = 0;
+			_nFocusA = _nPattern >= 2 ? 1 : 0;
+			_nInvalidA = _nPattern >= 3 ? 2 : 0;
+			_nNormalB = _nPattern >= 4 ? 3 : _nFocusA;
+			_nFocusB = _nPattern >= 5 ? 4 : _nFocusA;
+			_nInvalidB = _nPattern >= 6 ? 5 : _nInvalidA;
+			break;
+		}
+
+//		setButton(_nNormalA);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			state = !state;
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+		if(!_valid) return;
+
+		_state==false?setButton(_nFocusA):setButton(_nFocusB);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+		if(!_valid) return;
+
+		_state==false?setButton(_nNormalA):setButton(_nNormalB);
+	}
+	function onValid(){_state==false?setButton(_nNormalA):setButton(_nNormalB);}
+	function onInvalid(){_state==false?setButton(_nInvalidA):setButton(_nInvalidB);}
+
+	property state{
+		setter(v){
+			_state = v;
+			if(_valid) _state==false?setButton(_nNormalA):setButton(_nNormalB);
+		}
+		getter(){return _state;}
+	}
+
+	property ptnNormalA{
+		getter(){return _nNormalA;}
+		setter(v){_nNormalA = v;}
+	}
+	property ptnFocusA{
+		getter(){return _nFocusA;}
+		setter(v){_nFocusA = v;}
+	}
+	property ptnInvalidA{
+		getter(){return _nInvalidA;}
+		setter(v){_nInvalidA = v;}
+	}
+	property ptnNormalB{
+		getter(){return _nNormalB;}
+		setter(v){_nNormalB = v;}
+	}
+	property ptnFocusB{
+		getter(){return _nFocusB;}
+		setter(v){_nFocusB = v;}
+	}
+	property ptnInvalidB{
+		getter(){return _nInvalidB;}
+		setter(v){_nInvalidB = v;}
+	}
+}
+class ToggleOnBaseButton extends SelectItemBase{
+	var _state = false;
+
+	var _check;
+
+	var _nPattern;
+	var _nNormalA;
+	var _nFocusA;
+	var _nInvalidA;
+	var _nNormalB;
+	var _nFocusB;
+	var _nInvalidB;
+
+	function ToggleOnBaseButton(win, par){
+		super.SelectItemBase(win, par);
+
+		hasImage = false;
+		@if(__BUTTON_AREA_CHECK__)
+			hasImage = true;
+		@endif
+		hitThreshold = 0;
+
+		_check = new global.Layer(win, this);
+	}
+	function finalize(){
+		invalidate _check;
+		super.finalize();
+	}
+
+	function kind(){return "ToggleOnBaseButton";}
+
+	function create(file, nPattern=3, cx=0, cy=0, bw, bh){
+		switch(typeof file){
+		case "Object" : 
+			_check.assignImages(file);
+			break;
+		default : 
+			_check.loadImages(file);
+			break;
+		}
+		with(_check){
+			.setSize(.imageWidth \ nPattern, .imageHeight);
+			.setPos(cx, cy);
+			.hitThreshold = 256;
+			.visible = true;
+		}
+		switch(typeof bw){
+		case "Object" : 
+			assignImages(bw);
+			setSizeToImageSize();
+			break;
+		case "String" : 
+			loadImages(bw);
+			setSizeToImageSize();
+			break;
+		default : 
+			if(bw === void) bw = _check.width;
+			if(bh === void) bh = _check.height;
+			setSize(bw, bh);
+			break;
+		}
+
+		@if(__BUTTON_AREA_CHECK__)
+			colorRect(0, 0, width, height, 0x0000ff, 64);
+		@endif
+
+		visible = true;
+
+		_nPattern = nPattern;
+		switch(_nPattern){
+		case 2 :
+		//AB
+			_nNormalA = 0;
+			_nFocusA = 1;
+			_nInvalidA = 1;
+			_nNormalB = 1;
+			_nFocusB = 1;
+			_nInvalidB = 1;
+			break;
+		case 4 :
+		//AABB
+			_nNormalA = 0;
+			_nFocusA = 1;
+			_nInvalidA = 0;
+			_nNormalB = 2;
+			_nFocusB = 3;
+			_nInvalidB = 2;
+			break;
+		default:
+			_nNormalA = 0;
+			_nFocusA = _nPattern >= 2 ? 1 : 0;
+			_nInvalidA = _nPattern >= 3 ? 2 : 0;
+			_nNormalB = _nPattern >= 4 ? 3 : _nFocusA;
+			_nFocusB = _nPattern >= 5 ? 4 : _nFocusA;
+			_nInvalidB = _nPattern >= 6 ? 5 : _nInvalidA;
+			break;
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			state = !state;
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+		if(!_valid) return;
+
+		_state==false?setButton(_nFocusA):setButton(_nFocusB);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+		if(!_valid) return;
+
+		_state==false?setButton(_nNormalA):setButton(_nNormalB);
+	}
+	function onValid(){_state==false?setButton(_nNormalA):setButton(_nNormalB);}
+	function onInvalid(){_state==false?setButton(_nInvalidA):setButton(_nInvalidB);}
+
+	function setButton(num){
+		_check.setImagePos(-(_check.width * num), 0);
+	}
+
+	property state{
+		setter(v){
+			_state = v;
+			if(_valid) _state==false?setButton(_nNormalA):setButton(_nNormalB);
+		}
+		getter(){return _state;}
+	}
+
+	property ptnNormalA{
+		getter(){return _nNormalA;}
+		setter(v){_nNormalA = v;}
+	}
+	property ptnFocusA{
+		getter(){return _nFocusA;}
+		setter(v){_nFocusA = v;}
+	}
+	property ptnInvalidA{
+		getter(){return _nInvalidA;}
+		setter(v){_nInvalidA = v;}
+	}
+	property ptnNormalB{
+		getter(){return _nNormalB;}
+		setter(v){_nNormalB = v;}
+	}
+	property ptnFocusB{
+		getter(){return _nFocusB;}
+		setter(v){_nFocusB = v;}
+	}
+	property ptnInvalidB{
+		getter(){return _nInvalidB;}
+		setter(v){_nInvalidB = v;}
+	}
+}
+
+class DebugToggleButton extends SelectItemBase{
+	var _state = false;
+
+	function DebugToggleButton(win, par){
+		super.SelectItemBase(win, par);
+	}
+
+	function kind(){return "DebugToggleButton";}
+
+	function create(strNormal1, strFocus1="", strInvalid1="", strNormal2="", strFocus2="", strInvalid2="", szFont=16, aa=true){
+		with(font){
+			if(strFocus1 == "") strFocus1 = strNormal1;
+			if(strInvalid1 == "") strInvalid1 = strNormal1;
+			if(strNormal2 == "") strNormal2 = strNormal1;
+			if(strFocus2 == "") strFocus2 = strNormal2;
+			if(strInvalid2 == "") strInvalid2 = strNormal2;
+
+			.face = "HG丸ｺﾞｼｯｸM-PRO,ＭＳ ゴシック";
+			.height = szFont;
+			.bold = true;
+
+			_height = szFont;
+
+			_width = .getTextWidth(strNormal1);
+			if(_width < .getTextWidth(strFocus1))	_width = .getTextWidth(strFocus1);
+			if(_width < .getTextWidth(strInvalid1))	_width = .getTextWidth(strInvalid1);
+			if(_width < .getTextWidth(strNormal2))	_width = .getTextWidth(strNormal2);
+			if(_width < .getTextWidth(strFocus2))	_width = .getTextWidth(strFocus2);
+			if(_width < .getTextWidth(strInvalid2))	_width = .getTextWidth(strInvalid2);
+
+			_width += 8;
+			_height += 8;
+
+			setSize(_width, _height);
+			setImageSize(_width*6, _height);
+
+			var thick = 2;
+			DrawFrameCurve(this, _width*0, 0, _width, _height, 0xc0008844, , thick);
+			DrawFrameCurve(this, _width*1, 0, _width, _height, 0xc022cc88, , thick);
+			DrawFrameCurve(this, _width*2, 0, _width, _height, 0xc0004422, , thick);
+			DrawFrameCurve(this, _width*3, 0, _width, _height, 0xc0ff0044, , thick);
+			DrawFrameCurve(this, _width*4, 0, _width, _height, 0xc0ff4488, , thick);
+			DrawFrameCurve(this, _width*5, 0, _width, _height, 0xc0440022, , thick);
+
+			drawText(_width*0+(_width-.getTextWidth(strNormal1))/2 , (_height-szFont)/2+thick/2, strNormal1, 0xffffff, 255, aa);
+			drawText(_width*1+(_width-.getTextWidth(strFocus1))/2  , (_height-szFont)/2+thick/2, strFocus1, 0xffffff, 255, aa);
+			drawText(_width*2+(_width-.getTextWidth(strInvalid1))/2, (_height-szFont)/2+thick/2, strInvalid1, 0xffffff, 255, aa);
+			drawText(_width*3+(_width-.getTextWidth(strNormal2))/2 , (_height-szFont)/2+thick/2, strNormal2, 0xffffff, 255, aa);
+			drawText(_width*4+(_width-.getTextWidth(strFocus2))/2  , (_height-szFont)/2+thick/2, strFocus2, 0xffffff, 255, aa);
+			drawText(_width*5+(_width-.getTextWidth(strInvalid2))/2, (_height-szFont)/2+thick/2, strInvalid2, 0xffffff, 255, aa);
+
+			visible = true;
+		}
+		setButton(0);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			state = !state;
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+		if(!_valid) return;
+
+		_state==false?setButton(1):setButton(4);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+		if(!_valid) return;
+
+		_state==false?setButton(0):setButton(3);
+	}
+	function onValid(){_state==false?setButton(0):setButton(3);}
+	function onInvalid(){_state==false?setButton(2):setButton(5);}
+
+	property state{
+		setter(v){
+			_state = v;
+			if(_valid) _state==false?setButton(0):setButton(3);
+		}
+		getter(){return _state;}
+	}
+}
+
+class SliderTrim extends Button{
+	function SliderTrim(win, par){
+		super.Button(...);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if((button == mbLeft) && _valid){
+			if(typeof parent.onButtonDownL != "undefined")
+				parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+}
+
+class SliderH extends SelectItemBase{
+	var _trim;
+	var _range;
+	var _pitch;
+	var _movePitch;
+	var _dragging = false;
+
+	var _trimPos = 0;
+
+	var _min, _max;
+
+	function SliderH(win, par){
+		super.SelectItemBase(win, par);
+		hasImage = false;
+	}
+	function finalize(){
+		invalidate _trim;
+		super.finalize();
+	}
+
+	function kind(){return "SliderH";}
+
+	function create(trim, w, h, nPattern=2, range=15){
+		setSize(w, h);
+
+		_trim = new SliderTrim(window, this);
+		_trim.create(trim, nPattern);
+		_trim.hitType = htMask;
+		_trim.hitThreshold = 256;
+		_width = width;
+		_height = height;
+		_range = range;
+		_pitch = _width/(_range+1);
+
+		_min = _trim.width/2;
+		_max = width - _trim.width/2;
+		_pitch = (_max - _min) / (_range+1);
+
+		visible = true;
+	}
+
+	function resizeWidth(w){
+		setSize(w, height);
+		_width = width;
+
+		_max = width - _trim.width/2;
+		_pitch = (_max - _min) / (_range+1);
+
+		setTrimPos(_trimPos, true);
+	}
+
+	function setTrimPos(pos, fSetPos=false){
+		var tempPos;
+		if(pos < 0) tempPos = 0;
+		else if(pos > _range) tempPos = _range;
+		else tempPos = int(pos);
+
+		_trimPos = tempPos;
+
+		if(fSetPos){
+			var x;
+			if(_trimPos == 0)
+				x = 0;
+			else if(_trimPos == _range)
+				x = _width - _trim.width;
+			else
+				x = _trimPos * _pitch + _pitch/2 + _min - _trim.width/2;
+			_trim.setPos(x, 0);
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(!_valid) return;
+
+		if(button == mbLeft){
+			_dragging = true;
+			setTrimPos(clacPos(x));
+			x -= _trim.width/2;
+			if(x < 0) x = 0;
+			else if(x > _width - _trim.width) x = _width - _trim.width;
+			_trim.setPos(x, 0);
+			parent.onSliderMoveStart(this);
+			_trim.onMouseDown(...);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+	function onMouseUp(x, y, button, shift){
+		if(!_valid) return;
+
+		if(button == mbLeft){
+			if(_dragging) parent.onSliderMoveEnd(this);
+			_dragging = false;
+			_trim.onMouseUp(...);
+		}
+	}
+	function onMouseMove(x, y, shift){
+		if(!_valid) return;
+
+		if(_dragging){
+			setTrimPos(clacPos(x));
+			x -= _trim.width/2;
+			if(x < 0) x = 0;
+			else if(x > _width - _trim.width) x = _width - _trim.width;
+			_trim.setPos(x, 0);
+			parent.onSliderMove(this);
+			_trim.onMouseMove(...);
+		}
+	}
+	function clacPos(v){
+		var pos;
+
+		pos = int((v-_min) / _pitch);
+		if(pos > _range) pos = _range;
+
+		return pos;
+	}
+
+	function onMouseEnter(){
+		if(!_valid) return;
+
+		super.onMouseEnter();
+		_trim.onMouseEnter();
+		parent.onSliderEnter(this);
+		cursor = crSizeWE;
+	}
+	function onMouseLeave(){
+		if(!_valid) return;
+
+		super.onMouseLeave();
+		_trim.onMouseLeave();
+		parent.onSliderLeave(this);
+		super.onMouseLeave();
+		cursor = crDefault;
+	}
+
+	property trim{
+		setter(v){setTrimPos(v, true);}
+		getter(){return _trimPos;}
+	}
+	property range{
+		setter(v){
+			_range = v;
+			_pitch = (_width-_trim.width)/_range;
+			trim = _trimPos;
+		}
+		getter(){return _range;}
+	}
+}
+
+class SliderV extends SelectItemBase{
+	var _trim;
+	var _range;
+	var _pitch;
+	var _movePitch;
+	var _dragging = false;
+
+	var _trimPos = 0;
+
+	var _min, _max;
+
+	function SliderV(win, par){
+		super.SelectItemBase(win, par);
+		hasImage = false;
+	}
+	function finalize(){
+		invalidate _trim;
+		super.finalize();
+	}
+
+	function kind(){return "SliderV";}
+
+	function create(trim, w, h, nPattern=2, range=15){
+		setSize(w, h);
+
+		_trim = new SliderTrim(window, this);
+		_trim.create(trim, nPattern);
+		_trim.hitType = htMask;
+		_trim.hitThreshold = 256;
+		_width = width;
+		_height = height;
+		_range = range;
+		_pitch = _height/(_range+1);
+
+		_min = _trim.height/2;
+		_max = height - _trim.height/2;
+		_pitch = (_max - _min) / (_range+1);
+
+		visible = true;
+	}
+
+	function setTrimPos(pos, fSetPos=false){
+		var tempPos;
+		if(pos < 0) tempPos = 0;
+		else if(pos > _range) tempPos = _range;
+		else tempPos = int(pos);
+
+		if(tempPos == _trimPos){return;}
+		_trimPos = tempPos;
+
+		if(fSetPos){
+			var y;
+			if(_trimPos == 0)
+				y = 0;
+			else if(_trimPos == _range)
+				y = _height - _trim.height;
+			else
+				y = _trimPos * _pitch + _pitch/2 + _min - _trim.height/2;
+			_trim.setPos(0, y);
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(!_valid) return;
+
+		if(button == mbLeft){
+			_dragging = true;
+			_trim.onMouseDown(...);
+			setTrimPos(clacPos(y));
+			y -= _trim.height/2;
+			if(y < 0) y = 0;
+			else if(y > _height - _trim.height) y = _height - _trim.height;
+			_trim.setPos(0, y);
+			parent.onSliderMoveStart(this);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+	function onMouseUp(x, y, button, shift){
+		if(!_valid) return;
+
+		if(button == mbLeft){
+			if(_dragging) parent.onSliderMoveEnd(this);
+			_dragging = false;
+			_trim.onMouseUp(...);
+		}
+	}
+	function onMouseMove(x, y, shift){
+		if(!_valid) return;
+
+		if(_dragging){
+			setTrimPos(clacPos(y));
+			y -= _trim.height/2;
+			if(y < 0) y = 0;
+			else if(y > _height - _trim.height) y = _height - _trim.height;
+			_trim.setPos(0, y);
+			parent.onSliderMove(this);
+			_trim.onMouseMove(...);
+		}
+	}
+	function clacPos(v){
+		var pos;
+
+		pos = int((v-_min) / _pitch);
+		if(pos > _range) pos = _range;
+
+		return pos;
+	}
+
+	function onMouseEnter(){
+		if(!_valid) return;
+
+		_trim.onMouseEnter();
+		parent.onSliderEnter(this);
+		cursor = crSizeNS;
+	}
+	function onMouseLeave(){
+		if(!_valid) return;
+
+		_trim.onMouseLeave();
+		parent.onSliderLeave(this);
+		super.onMouseLeave();
+		cursor = crDefault;
+	}
+
+	property trim{
+		setter(v){setTrimPos(v, true);}
+		getter(){return _trimPos;}
+	}
+	property range{
+		setter(v){
+			_range = v;
+			_pitch = (_height-_trim.height)/_range;
+			trim = _trimPos;
+		}
+		getter(){return _range;}
+	}
+}
+
+class DebugSliderH extends SelectItemBase{
+	var _trim;
+	var _sprParam;
+	var _range;
+	var _pitch;
+	var _dragging = false;
+
+	var _trimPos = 0;
+
+	function DebugSliderH(win, par){
+		super.SelectItemBase(win, par);
+	}
+	function finalize(){
+		invalidate _sprParam;
+		invalidate _trim;
+		super.finalize();
+	}
+
+	function kind(){return "DebugSliderH";}
+
+	function create(barW=128, barH=16, range=15, trimW=8, trimH=16){
+		_width = barW;
+		_height = barH;
+		_range = range;
+		_pitch = _width/_range;
+
+		setSize(_width, _height);
+
+		_trim = new global.Layer(window, this);
+		with(_trim){
+			.setSize(trimW, trimH);
+			.fillRect(0, 0, .width, .height, GetDefineColorA("gray"));
+			.fillRect(0, 0, .width, 1, GetDefineColorA("white"));
+			.fillRect(0, 0, 1, .height, GetDefineColorA("white"));
+			.fillRect(1, .height-1, _width-1, 1, GetDefineColorA("black"));
+			.fillRect(.width-1, 1, 1, .height-2, GetDefineColorA("black"));
+			.hitType = htMask;
+			.hitThreshold = 256;
+			.visible = true;
+		}
+		_sprParam = new global.Layer(window, this);
+		with(_sprParam){
+			.setSize(width, height);
+			.setPos((width-.width)/2, (height-.height)/2);
+			.font.face = "HG丸ｺﾞｼｯｸM-PRO,ＭＳ ゴシック";
+			.font.height = height;
+			.font.bold = true;
+			.hitType = htMask;
+			.hitThreshold = 256;
+			.visible = true;
+		}
+
+		DrawFrame(this);
+		fillRect(2, _height/2-1, _width-4, 1, 0x40ffffff);
+		fillRect(2, _height/2, _width-4, 1, 0x40000000);
+		fillRect(width/2, _height/2-3, 1, 6, 0x80ffffff);
+
+		visible = true;
+
+		_trimPos = -1;
+		trim = 0;
+	}
+
+	function setTrimPos(pos){
+		var tempPos;
+		if(pos < 0) tempPos = 0;
+		else if(pos > _range) tempPos = _range;
+		else tempPos = int(pos);
+
+		if(tempPos == _trimPos){return;}
+		_trimPos = tempPos;
+
+		_trim.setPos(_pitch * _trimPos, (height-_trim.height)/2);
+
+		var x, y;
+		if(_trimPos == 0){
+			x = 0; y = (height-_trim.height)/2;
+		}else if(_trimPos == _range){
+			x = _width-_trim.width; y = (height-_trim.height)/2;
+		}else{
+			x = int(_pitch * _trimPos - _trim.width/2); y = (height-_trim.height)/2;
+		}
+		x = int(x); y = int(y);
+
+		if(x < 0) x = 0;
+		else if(x > _width - _trim.width) x = _width - _trim.width;
+		_trim.setPos(x, y);
+		updateParam();
+	}
+
+	function updateParam(){
+		with(_sprParam){
+			.fillRect(0, 0, width, height, 0);
+			.drawText(0, 0, _trimPos, 0xff00ff);
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		//releaseCapture();
+		if(button == mbLeft){
+			_dragging = true;
+
+			setTrimPos(clacPos(x));
+			parent.onSliderMoveStart(this);
+		}else if((button == mbRight)){
+			if(typeof parent.onButtonDownR != "undefined")
+				parent.onButtonDownR(this);
+		}
+	}
+	function onMouseUp(x, y, button, shift){
+		if(button == mbLeft){
+			if(_dragging) parent.onSliderMoveEnd(this);
+			_dragging = false;
+		}
+	}
+	function onMouseMove(x, y, shift){
+		if(_dragging){
+			setTrimPos(clacPos(x));
+			parent.onSliderMove(this);
+		}
+	}
+
+	function clacPos(v){
+		var pos;
+		if(v < _pitch/2){
+			pos = 0;
+		}else if(_width - _pitch/2 < v){
+			pos = _range;
+		}else{
+			pos = int((v - _pitch/2) / _pitch + 1);
+		}
+		return pos;
+	}
+
+	function onMouseEnter(){enter(); if(valid){cursor = crSizeWE;}}
+	function onMouseLeave(){leave(); cursor = crDefault;}
+
+	property trim{
+		setter(v){setTrimPos(v);}
+		getter(){return _trimPos;}
+	}
+	property range{
+		setter(v){
+			_range = v;
+			_pitch = _width/(_range+1);
+			trim = _trimPos;
+		}
+		getter(){return _range;}
+	}
+}
+
+class DebugCrossSlider extends SelectItemBase{
+	var _sprTrim;
+	var _msgParam;
+
+	var _dragging = false;
+	var _correctionX, _correctionY;
+
+	var _lRange, _rRange, _tRange, _bRange;
+	var _xCenter, _yCenter;
+	var _trimPos;
+	var _trimRange;
+
+	var _xPitch, _yPitch;
+
+	var _flipDispParam = false;
+
+	function DebugCrossSlider(win, par){
+		super.SelectItemBase(win, par);
+	}
+	function finalize(){
+		invalidate _trimPos;
+		invalidate _trimRange;
+		invalidate _sprTrim;
+		invalidate _msgParam;
+		super.finalize();
+	}
+
+	function kind(){return "DebugCrossSlider";}
+
+	function create(elm = %[]){
+		var baseW = GetElm(elm.baseW, 64);
+		var baseH = GetElm(elm.baseH, 64);
+		_lRange = GetElm(elm.lRange, 12);
+		_rRange = GetElm(elm.rRange, 12);
+		_tRange = GetElm(elm.tRange, 12);
+		_bRange = GetElm(elm.bRange, 12);
+		_xCenter = GetElm(elm.xCenter, _lRange);
+		_yCenter = GetElm(elm.yCenter, _tRange);
+		var trimW = GetElm(elm.trimW, 8);
+		var trimH = GetElm(elm.trimH, 8);
+		var spr = GetElm(elm.spr, null);
+
+		setSize(baseW, baseH);
+		fillRect(0, 0, baseW, baseH, 0x0);
+		if(spr!=null){
+			operateStretch(0, 0, baseW, baseH, spr, 0, 0, spr.imageWidth, spr.imageHeight, omAuto, 255, stNearest);
+		}else{
+			fillRect(0, 0, baseW, baseH, 0x80000088);
+		}
+		fillRect(0, _yCenter, baseW, 1, 0xc0ff00ff);
+		fillRect(_xCenter, 0, 1, baseH, 0xc0ff00ff);
+		visible = true;
+
+		_trimPos = new Point();
+		_trimRange = new Point(baseW-trimW, baseH-trimH);
+
+		_xPitch = (baseW-trimW) / (_lRange + _rRange);
+		_yPitch = (baseH-trimH) / (_tRange + _bRange);
+
+		_sprTrim = new global.Layer(window, this);
+		_sprTrim.setSize(trimW, trimH);
+		_sprTrim.fillRect(0, 0, trimW, trimH, 0x80ff0000);
+		_sprTrim.hitType = htMask;
+		_sprTrim.hitThreshold = 256;
+		_sprTrim.visible = true;
+
+		_msgParam = new global.Layer(window, this);
+		_msgParam.setSize(baseW, baseW/6);
+		_msgParam.font.height = baseW/6;
+		if(baseW/6 <= height)
+			_msgParam.font.height = baseW/6;
+		else
+			_msgParam.font.height = height;
+		_msgParam.hitType = htMask;
+		_msgParam.hitThreshold = 256;
+		_msgParam.opacity = 255;
+		_msgParam.visible = true;
+
+		setTrimPos(0, 0);
+	}
+
+	function setTrimPos(x, y){
+		if(x < -_lRange)		x = -_lRange;
+		else if(x > _rRange)	x = _rRange;
+		if(y < -_tRange)		y = -_tRange;
+		else if(y > _bRange)	y = _bRange;
+
+		_trimPos.set(int(x), int(y));
+
+		drawParam(x, y);
+
+		x += _lRange;
+		y += _tRange;
+
+		with(_sprTrim){
+			var tempX = Math.round(x * _xPitch);
+			if(tempX+.width > width)
+				tempX = width - .width;
+			var tempY = Math.round(y * _yPitch);
+			if(tempY+.height > height)
+				tempY = height - .height;
+
+			.setPos(tempX, tempY);
+		}
+	}
+
+	function drawParam(x, y){
+		with(_msgParam){
+			.fillRect(0, 0, .width, .height, 0);
+			if(_flipDispParam)
+				.drawText(0, 0, "%05d, %05d".sprintf(-x, -y), 0xffffff, 255, 1, 1024, 0x0, 2);
+			else
+				.drawText(0, 0, "%05d, %05d".sprintf(x, y), 0xffffff, 255, 1, 1024, 0x0, 2);
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(button == mbLeft){
+			_dragging = true;
+			_correctionX = (_sprTrim.left+_sprTrim.width\2) - x;
+			_correctionY = (_sprTrim.top+_sprTrim.height\2) - y;
+
+			parent.onSliderMoveStart(this);
+		}else if(button == mbRight){
+			setTrimPos(0, 0);
+			parent.onButtonDownR(this);
+		}
+	}
+	function onMouseUp(x, y, button, shift){
+		if(button == mbLeft){
+			if(_dragging) parent.onSliderMoveEnd(this);
+			_dragging = false;
+		}
+	}
+	function onMouseMove(x, y, shift){
+		if(_dragging){
+			cursorToTrimPos(x+_correctionX, y+_correctionY);
+			parent.onSliderMove(this);
+		}
+	}
+	function cursorToTrimPos(x, y){
+		var tempX, tempY;
+		if(x < _sprTrim.width/2)
+			tempX = 0;
+		else if(x > width-_sprTrim.width/2)
+			tempX = _trimRange.x;
+		else
+			tempX = x - _sprTrim.width/2;
+
+		if(y < _sprTrim.height/2){
+			tempY = 0;
+		}else if(y > height-_sprTrim.height/2){
+			tempY = _trimRange.y;
+		}else{
+			tempY = y - _sprTrim.height/2;
+		}
+
+		setTrimPos(tempX/_xPitch-_lRange, tempY/_yPitch-_tRange);
+	}
+
+	property trim{
+		setter(v){_trimPos = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){return _trimPos;}
+	}
+	property trimX{
+		setter(v){_trimPos.x = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){
+			if(_flipDispParam)
+				return -_trimPos.x;
+			else
+				return _trimPos.x;
+		}
+	}
+	property trimY{
+		setter(v){_trimPos.y = v; setTrimPos(_trimPos.x, _trimPos.y);}
+		getter(){
+			if(_flipDispParam)
+				return -_trimPos.y;
+			else
+				return _trimPos.y;
+		}
+	}
+	property flipDispParam{
+		setter(v){_flipDispParam = v;}
+		getter(){return _flipDispParam;}
+	}
+}
+
+//ラジオボタン用ボタン
+class RadioButton extends Button{
+	var _group;
+
+	function RadioButton(win, par){
+		super.Button(win, par);
+	}
+
+	function kind(){return "RadioButton";}
+
+	function create(file, nPattern=3){
+		super.create(file, nPattern);
+		setButton(_nNormal);
+		visible = true;
+	}
+
+	function isOn(){
+		return (valid == false);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			if(group !== void) group.on(this);
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	property group{
+		setter(v){_group = v;}
+		getter(){return _group;}
+	}
+}
+class RadioOnBaseButton extends SelectItemBase{
+	var _group;
+
+	var _nPattern;
+	var _nNormal;
+	var _nFocus;
+	var _nInvalid;
+
+	var _check;
+
+	function RadioOnBaseButton(win, par){
+		super.SelectItemBase(win, par);
+
+		hasImage = false;
+		@if(__BUTTON_AREA_CHECK__)
+			hasImage = true;
+		@endif
+
+		hitThreshold = 0;
+
+		_check = new global.Layer(win, this);
+	}
+	function finalize(){
+		invalidate _check;
+		super.finalize();
+	}
+
+	function kind(){return "RadioOnBaseButton";}
+
+	function create(file, nPattern=3, cx=0, cy=0, bw, bh){
+		switch(typeof file){
+		case "Object" : 
+			_check.assignImages(file);
+			break;
+		default : 
+			_check.loadImages(file);
+			break;
+		}
+		with(_check){
+			.setSize(.imageWidth \ nPattern, .imageHeight);
+			.setPos(cx, cy);
+			.hitThreshold = 256;
+			.visible = true;
+		}
+		switch(typeof bw){
+		case "Object" : 
+			assignImages(bw);
+			setSizeToImageSize();
+			break;
+		case "String" : 
+			loadImages(bw);
+			setSizeToImageSize();
+			break;
+		default : 
+			if(bw === void) bw = _check.width;
+			if(bh === void) bh = _check.height;
+			setSize(bw, bh);
+			break;
+		}
+
+		@if(__BUTTON_AREA_CHECK__)
+			colorRect(0, 0, width, height, 0x0000ff, 64);
+		@endif
+
+		_nPattern = nPattern;
+		_nNormal = 0;
+		_nFocus = _nPattern >= 2 ? 1 : 0;
+		_nInvalid = _nPattern >= 3 ? 2 : 0;
+
+		setButton(_nNormal);
+		visible = true;
+	}
+
+	function onMouseEnter(){
+		super.onMouseEnter();
+
+		if(!_valid) return;
+
+		setButton(_nFocus);
+	}
+	function onMouseLeave(){
+		super.onMouseLeave();
+
+		if(!_valid) return;
+
+		setButton(_nNormal);
+	}
+	function onValid(){setButton(_nNormal);}
+	function onInvalid(){setButton(_nInvalid);}
+
+	function isOn(){
+		return (valid == false);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			if(group !== void) group.on(this);
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	function setButton(num){
+		_check.setImagePos(-(_check.width * num), 0);
+	}
+
+	property group{
+		setter(v){_group = v;}
+		getter(){return _group;}
+	}
+}
+class DebugRadioButton extends DebugButton{
+	var _group;
+
+	function DebugRadioButton(win, par){
+		super.Layer(win, par);
+	}
+
+	function kind(){return "DebugRadioButton";}
+
+	function create(strNormal, strFocus="", strInvalid="", szFont=16){
+		with(font){
+			if(strFocus == "") strFocus = strNormal;
+			if(strInvalid == "") strInvalid = strNormal;
+
+			.face = "HG丸ｺﾞｼｯｸM-PRO,ＭＳ ゴシック";
+			.height = szFont;
+			.bold = true;
+
+			_height = szFont;
+
+			_width = .getTextWidth(strNormal);
+			if(_width < .getTextWidth(strFocus))	_width = .getTextWidth(strFocus);
+			if(_width < .getTextWidth(strInvalid))	_width = .getTextWidth(strInvalid);
+
+			_width += 8;
+			_height += 8;
+
+			setSize(_width, _height);
+			setImageSize(_width*3, _height);
+
+			DrawFrame(this, _width*0, 0, _width, _height, 0x8000cc44, 0xff88eecc);
+			DrawFrame(this, _width*1, 0, _width, _height, 0xc000ffcc, 0xff88eecc);
+			DrawFrame(this, _width*2, 0, _width, _height, 0xc0ff0044, 0xff88eecc);
+			drawText(_width*0+(_width-.getTextWidth(strNormal))/2 , (_height-szFont)/2, strNormal, 0xffffff);
+			drawText(_width*1+(_width-.getTextWidth(strFocus))/2  , (_height-szFont)/2, strFocus, 0xffffff);
+			drawText(_width*2+(_width-.getTextWidth(strInvalid))/2, (_height-szFont)/2, strInvalid, 0xffffff);
+
+			visible = true;
+		}
+		setButton(0);
+	}
+
+	function isOn(){
+		return (valid == false);
+	}
+
+	function onMouseDown(x, y, button, shift){
+		releaseCapture();
+		if((button == mbLeft) && valid){
+			if(group !== void) group.on(this);
+			parent.onButtonDownL(this);
+		}else if((button == mbRight)){
+			parent.onButtonDownR(this);
+		}
+	}
+
+	property group{
+		setter(v){_group = v;}
+		getter(){return _group;}
+	}
+}
+
+//ラジオボタングループ管理
+//これはボタンではなく、ボタン集合の管理。
+//集合内に無効状態(=選択されている)は無し、または1つだけ。あとは全て有効状態(valid=true)。
+class RadioButtonGroup{
+	var _list = [];
+
+	function RadioButtonGroup(){}
+	function finalize(){
+		InvalidateArray(_list);
+		_list.clear();
+		invalidate _list;
+	}
+
+	function add(item){
+		_list.add(item);
+		item.group = this;
+		return _list.count - 1;
+	}
+	function remove(item){
+		item.group = void;
+		_list.remove(item);
+	}
+
+	function at(i){
+		return _list[i];
+	}
+	function count(){return _list.count;}
+
+	function isButton(target){
+		for(var i=0;i<_list.count;i++){
+			if(target == _list[i]) return true;
+		}
+		return false;
+	}
+
+	function on(item){
+		for(var i=0;i<_list.count;i++){
+			if(_list[i] == item){
+				_list[i].valid = false;
+			}else{
+				_list[i].valid = true;
+			}
+		}
+	}
+
+	function next(){
+		if(_list.count == 0) return;
+		if(_list.count == 1) on(_list[0]);
+
+		var i;
+		for(i=0;i<_list.count;i++) if(_list[i].isOn()) break;
+
+		i++;
+		if(i >= _list.count) i = 0;
+
+		on(_list[i]);
+
+		return _list[i];
+	}
+	function prev(){
+		if(_list.count == 0) return;
+		if(_list.count == 1) on(_list[0]);
+
+		var i;
+		for(i=0;i<_list.count;i++) if(_list[i].isOn()) break;
+
+		i--;
+		if(i < 0) i = _list.count - 1;
+
+		on(_list[i]);
+		return _list[i];
+	}
+
+	function reset(){
+		for(var i=0;i<_list.count;i++){
+			_list[i].valid = true;
+		}
+	}
+
+	function getOn(){
+		for(var i=0;i<_list.count;i++){
+			if(!_list[i].valid){
+				return _list[i];
+			}
+		}
+	}
+
+	function isOn(item){
+		if(isButton(item)==false) return false;
+		return (item.valid == false);
+	}
+}
+
+//プログレスバー
+//要 : layerExDraw.dll
+class DebugProgressBarH extends Layer{
+	var _sprMark;
+
+	var _range;
+	var _pos;
+
+	function DebugProgressBarH(win, par){
+		super.Layer(...);
+		hitType = htMask;
+		hitThreshold = 256;
+	}
+	function finalize(){
+		invalidate _sprMark;
+		super.finalize();
+	}
+	function kind(){return "DebugProgressBarH";}
+
+	function create(w=128, h=32, range=100, pos=0, text=""){
+		_range = range;
+		_pos = pos;
+
+		setImageSize(w, h);
+		setSizeToImageSize();
+		DrawFrame(this);
+
+		_sprMark = new global.Layer(window, this);
+		with(_sprMark){
+			.setImageSize(h, h);
+			.setSizeToImageSize();
+			.hitThreshold = 256;
+			DrawFrame(_sprMark, 0, 0, -1, -1, GetDefineColorA("blue"), GetDefineColorA("green"));
+			.visible = true;
+		}
+
+		if(text != ""){
+			font.height = height - 4;
+			drawText(width/2-font.getTextWidth(text)/2, 2, text, 0xffffff);
+		}
+
+		set(0);
+
+		visible = true;
+	}
+
+	function setRange(range=100){
+		_range = range;
+	}
+
+	function set(pos, range=-1){
+		if(range == -1) range = _range;
+
+		if(pos > range) pos = range;
+		if(pos < 0) pos = 0;
+
+		_sprMark.setPos(((width - _sprMark.width) / real(range)) * pos, 0);
+	}
+}
+
+//音声プログレスバー
+//要 : layerExDraw.dll
+//要 : getSample.dll
+class VoiceProgressBar extends Layer{
+	var _cursor;
+	var _pan;
+	var _label;
+
+	var _labels = [];
+
+	var _rect;
+	var _totalTime;
+	var _totalSampleTime;
+
+	var _fCreate = false;
+
+	function VoiceProgressBar(win, par){
+		Layer(...);
+		hitThreshold = 256;
+
+		_rect = new Rect();
+	}
+	function finalize(){
+		_labels.clear();
+
+		invalidate _cursor;
+		invalidate _pan;
+		invalidate _label;
+
+		invalidate _rect;
+
+		super.finalize();
+	}
+	function kind(){return "VoiceProgressBar";}
+
+	function create(file, w=257, h=16, sampleCount=100, fLabel=true){
+		if(w < 64) w = 64;
+		if(h < 16) h = 16;
+
+		var sample = [];
+		var buf = new WaveSoundBuffer(null);
+		try{
+			buf.open(file);
+		}catch{
+			return;
+		}
+		_fCreate = true;
+
+		var app = new GdiPlus.Appearance();
+		_cursor = new global.Layer(window, this);
+		with(_cursor){
+			.setSize(15, 6);
+
+			app.addBrush(0xff0000ff, 0, 0, 0);
+			app.addPen(0xffffffff, 1, 0, 0);
+			.drawPolygon(app, [[7, 0], [0, 5], [14, 5]]);
+
+			.visible = true;
+		}
+		_pan = new global.Layer(window, this);
+		with(_pan){
+			.setSize(9, 9);
+
+			app.clear();
+			app.addBrush(0xff00ff00, 0, 0, 0);
+			app.addPen(0xffffffff, 2, 0, 0);
+			.drawArc(app, 2, 2, 5, 5, 0, 360);
+
+			.setPos(16, 0);
+
+			.visible = true;
+		}
+		_label = new global.Layer(window, this);
+		with(_label){
+			.setSize(8, 16);
+
+			app.clear();
+			app.addBrush(0xffff0000, 0, 0, 0);
+			app.addPen(0xffffffff, 2, 0, 0);
+			.drawLine(app, 1, 0, 1, 15);
+			.drawPolygon(app, [[1, 0], [7, 3], [1, 6]]);
+
+			.setPos(32, 0);
+
+//			.visible = true;
+		}
+
+		_rect.set(7, _pan.height, 7+w, _pan.height+h);
+
+		setSize(w+14, h+_cursor.height+_pan.height);
+
+		app.clear();
+		app.addBrush(0x7f00007f, 0, 0, 0);
+		app.addPen(0x7fffffff, 1, 0, 0);
+		drawRectangle(app, _rect.left-1, _rect.top, _rect.width+1, _rect.height);
+		app.clear();
+		app.addPen(0x7fcfcfcf, 3, 0, 0);
+		drawLine(app, _rect.center_x, _rect.top, _rect.center_x, _rect.bottom);
+		app.clear();
+		app.addPen(0xffff0000, 1, 0, 0);
+		drawLine(app, _rect.left, _rect.bottom, _rect.right, _rect.bottom);
+
+		font.height = height \ 2;
+		drawText(8, 2, file, 0xffffff, 255, false, 2400, 0x000000, 4, 0, 0);
+
+		with(buf){
+			.useVisBuffer = true;
+			.volume = 0;
+			.play();
+
+			_totalTime = .totalTime;
+			_totalSampleTime = ((.bits \ 8) * .channels * .frequency\1000) * .totalTime;
+
+			.sampleCount = ((.bits \ 8) * .channels * .frequency\1000) * (.totalTime\sampleCount);
+
+			for(var i=0;i<=sampleCount;i++){
+				if(i == 0){
+					.position = 0;
+				}else{
+					.position = (.totalTime * i) \ sampleCount;
+				}
+
+				var x = _rect.left + (w * i) \ sampleCount;
+				var y = int (_rect.bottom - (h * .sampleValue));
+				if(y == _rect.bottom && .sampleValue > 0.0) y = _rect.bottom - 1;
+
+				sample.add([x, y]);
+			}
+			.stop();
+		}
+
+		app.clear();
+		app.addPen(0xff00ff00, 1, 0, 0);
+		drawLines(app, sample);
+
+		_cursor.setPos(0, height-_cursor.height);
+		pan = 0;
+
+		visible = true;
+
+		invalidate app;
+		invalidate buf;
+	}
+
+	property pan{
+		setter(v){
+			if(!_fCreate) return;
+
+			var x = _rect.center_x + (_rect.width \ 2) * (v/100) - _pan.width\2;
+			var y = _rect.top - _pan.height;
+			_pan.setPos(x, y);
+		}
+	}
+
+	property position{
+		getter(){}
+		setter(v){
+			if(!_fCreate) return;
+
+			var t = v / _totalTime;
+			if(t >= 1.0) t = 1.0;
+
+			var x = int (_rect.width * t);
+			var y = height - _cursor.height;
+			_cursor.setPos(x, y);
+		}
+	}
+	property samplePosition{
+		getter(){}
+		setter(v){
+			if(!_fCreate) return;
+
+			var t = v / _totalSampleTime;
+			if(t >= 1.0) t = 1.0;
+
+			var x = int (_rect.width * t);
+			var y = height - _cursor.height;
+			_cursor.setPos(x, y);
+		}
+	}
+}
+
+class ChainItemBase{
+	var _chainIndex = 0;
+	var _chainItem = [];
+
+	var _mouseTrackingMode = MOUSETRACKINGMODE_SEQUENTIAL;
+
+	//キー操作での選択アイテム移動時、無効・非表示アイテムは無視する
+	var _ignoreInvalidItem = true;
+
+	var _cursorCenterAuto = 1;
+	var _itemCenterAuto = 1;
+
+	function ChainItemBase(){}
+	function finalize(){
+		InvalidateArray(_chainItem);
+		invalidate _chainItem;
+	}
+
+	function addChainItem(obj){
+		for(var i=0;i<_chainItem.count;i++){
+			if(_chainItem[i] == obj) return;
+		}
+		_chainItem.add(obj);
+		_chainIndex = 0;
+	}
+	function removeChainItem(obj){
+		_chainItem.remove(obj);
+		_chainIndex = 0;
+	}
+	function removeChainItemAll(){
+		_chainItem.clear();
+		_chainIndex = 0;
+	}
+
+	function onKeyDown(key, shift){
+		switch(_mouseTrackingMode){
+		case MOUSETRACKINGMODE_SEQUENTIAL : 
+			sequentialTracking(...);
+			break;
+		case MOUSETRACKINGMODE_FREE : 
+			freeTracking(...);
+			break;
+		}
+	}
+
+	function sequentialTracking(key, shift){
+		switch(key){
+		case VK_RETURN :
+			for(var i=_chainItem.count-1;i>=0 && i < _chainItem.count;i--){
+				if(_chainItem.count == 0) break;
+
+				if(_chainItem[i].isEnter()){
+					if(_chainItem[i].kind().indexOf("Slider") == -1)
+						_chainItem[i].onMouseDown();
+					else
+						_chainItem[i].parent.onButtonDownL(_chainItem[i]);
+				}
+			}
+			break;
+		case VK_LEFT :
+			if(sliderControl(...)) return;
+			mouseTrackingPrev();
+			break;
+		case VK_UP :
+			if(sliderControl(...)) return;
+			mouseTrackingPrev();
+			break;
+		case VK_RIGHT :
+			if(sliderControl(...)) return;
+			mouseTrackingNext();
+			break;
+		case VK_DOWN :
+			if(sliderControl(...)) return;
+			mouseTrackingNext();
+			break;
+		case VK_TAB :
+			if(shift & ssShift)	mouseTrackingPrev();
+			else				mouseTrackingNext();
+			break;
+		}
+	}
+	function freeTracking(key, shift){
+		if(_chainItem.count == 0) return;
+
+		switch(key){
+		case VK_RETURN :
+			for(var i=_chainItem.count-1;i>=0 && i < _chainItem.count;i--){
+				if(_chainItem.count == 0) break;
+
+				if(_chainItem[i].isEnter()){
+					if(_chainItem[i].kind().indexOf("Slider") == -1)
+						_chainItem[i].onMouseDown();
+					else
+						_chainItem[i].parent.onButtonDownL(_chainItem[i]);
+				}
+			}
+			return;
+		case VK_LEFT :
+			if(sliderControl(...)) return;
+			break;
+		case VK_UP :
+			if(sliderControl(...)) return;
+			break;
+		case VK_RIGHT :
+			if(sliderControl(...)) return;
+			break;
+		case VK_DOWN :
+			if(sliderControl(...)) return;
+			break;
+		}
+
+		window.flushMouseTracking();
+
+		var pos = new Point();
+
+		//現在位置を算出
+		var cPos = new Point(window.primaryLayer.cursorX, window.primaryLayer.cursorY);
+		_chainIndex = -1;
+		for(var i=_chainItem.count-1;i>=0;i--){
+			if(_chainItem[i].isEnter()){
+				_chainIndex = i;
+				break;
+			}
+		}
+		if(_chainIndex != -1){
+			var ref = _chainItem[_chainIndex];
+			pos.set(0, 0, 0);
+			GetAbsolutePos(ref, pos, win.baseLayer);
+			if(_cursorCenterAuto){
+				switch(key){
+				case VK_LEFT  : cPos.set(pos.x, pos.y+ref.height\2); break;
+				case VK_RIGHT : cPos.set(pos.x+ref.width-1, pos.y+ref.height\2); break;
+				case VK_UP    : cPos.set(pos.x+ref.width\2, pos.y); break;
+				case VK_DOWN  : cPos.set(pos.x+ref.width\2, pos.y+ref.height-1); break;
+				}
+			}else{
+				cPos.set(pos.x+ref.width\2, pos.y+ref.height\2);
+			}
+		}
+
+		var scale = 2;		//接続強度
+
+		switch(key){
+		case VK_LEFT  : cPos.y *= scale; break;
+		case VK_RIGHT : cPos.y *= scale; break;
+		case VK_UP    : cPos.x *= scale; break;
+		case VK_DOWN  : cPos.x *= scale; break;
+		}
+
+		//各ボタンの座標をリスト化
+		var bPos = [];
+		for(var i=0;i<_chainItem.count;i++){
+			var ref = _chainItem[i];
+
+			pos.set(0, 0, 0);
+			GetAbsolutePos(ref, pos, win.baseLayer);
+			if(_itemCenterAuto){
+				switch(key){
+				case VK_LEFT  : bPos.add(new Point(pos.x+ref.width-1, pos.y+ref.height\2)); break;
+				case VK_RIGHT : bPos.add(new Point(pos.x, pos.y+ref.height\2)); break;
+				case VK_UP    : bPos.add(new Point(pos.x+ref.width\2, pos.y+ref.height-1)); break;
+				case VK_DOWN  : bPos.add(new Point(pos.x+ref.width\2, pos.y)); break;
+				}
+			}else{
+				bPos.add(new Point(pos.x+ref.width\2, pos.y+ref.height\2));
+			}
+			var temp = bPos[bPos.count-1];
+			switch(key){
+			case VK_LEFT  : temp.y *= scale; break;
+			case VK_RIGHT : temp.y *= scale; break;
+			case VK_UP    : temp.x *= scale; break;
+			case VK_DOWN  : temp.x *= scale; break;
+			}
+		}
+
+		//押されたキーの方向にあるボタンをリスト化
+		var hitID = [];
+		for(var i=0;i<bPos.count;i++){
+			var ref = _chainItem[i];
+
+			if(_ignoreInvalidItem && (!ref.valid || !ref.visible))
+				continue;
+
+			switch(key){
+			case VK_LEFT  : if(cPos.x > bPos[i].x) hitID.add(i); break;
+			case VK_RIGHT : if(cPos.x < bPos[i].x) hitID.add(i); break;
+			case VK_UP    : if(cPos.y > bPos[i].y) hitID.add(i); break;
+			case VK_DOWN  : if(cPos.y < bPos[i].y) hitID.add(i); break;
+			}
+		}
+		//リストが空だった場合は、逆側からキー方向へ調べる
+		if(hitID.count == 0){
+			for(var i=0;i<_chainItem.count;i++){
+				var ref = _chainItem[i];
+
+				if(_ignoreInvalidItem && (!ref.valid || !ref.visible))
+					continue;
+
+				switch(key){
+				case VK_LEFT  : cPos.x = WINDOW_WIDTH;
+								if(cPos.x > bPos[i].x) hitID.add(i); break;
+				case VK_RIGHT : cPos.x = -1;
+								if(cPos.x < bPos[i].x) hitID.add(i); break;
+				case VK_UP    : cPos.y = WINDOW_HEIGHT;
+								if(cPos.y > bPos[i].y) hitID.add(i); break;
+				case VK_DOWN  : cPos.y = -1;
+								if(cPos.y < bPos[i].y) hitID.add(i); break;
+				}
+			}
+		}
+		if(hitID.count == 0) return;
+
+		//一番近くにあるボタンを調べる
+		var nearID = 0;
+		var nearLength = 1000000;
+		for(var i=0;i<hitID.count;i++){
+			var length = cPos.length(bPos[hitID[i]]);
+			if(nearLength > length){
+				nearID = hitID[i];
+				nearLength = length;
+			}
+		}
+		mouseTracking(_chainItem[nearID]);
+	}
+
+	function sliderControl(key, shift){
+		var div = shift&ssShift?10:20;
+		switch(key){
+		case VK_LEFT :
+			//スライダー操作時
+			for(var i=0;i<_chainItem.count;i++){
+				if(_chainItem[i].isEnter() && _chainItem[i].kind().indexOf("SliderH") != -1){
+					_chainItem[i].trim -= _chainItem[i].range \ div;
+					_chainItem[i].parent.onSliderMove(_chainItem[i], true);
+					return true;
+				}
+			}
+			break;
+		case VK_UP :
+			//スライダー操作時
+			for(var i=0;i<_chainItem.count;i++){
+				if(_chainItem[i].isEnter() && _chainItem[i].kind().indexOf("SliderV") != -1){
+					_chainItem[i].trim -= _chainItem[i].range \ div;
+					_chainItem[i].parent.onSliderMove(_chainItem[i], true);
+					return true;
+				}
+			}
+			break;
+		case VK_RIGHT :
+			//スライダー操作時
+			for(var i=0;i<_chainItem.count;i++){
+				if(_chainItem[i].isEnter() && _chainItem[i].kind().indexOf("SliderH") != -1){
+					_chainItem[i].trim += _chainItem[i].range \ div;
+					_chainItem[i].parent.onSliderMove(_chainItem[i], true);
+					return true;
+				}
+			}
+			break;
+		case VK_DOWN :
+			//スライダー操作時
+			for(var i=0;i<_chainItem.count;i++){
+				if(_chainItem[i].isEnter() && _chainItem[i].kind().indexOf("SliderV") != -1){
+					_chainItem[i].trim += _chainItem[i].range \ div;
+					_chainItem[i].parent.onSliderMove(_chainItem[i], true);
+					return true;
+				}
+			}
+			break;
+		}
+		return false;
+	}
+
+	function mouseTracking(obj){
+		var pos = new Point(0, 0);
+		GetAbsolutePos(obj, pos);
+		pos.x += obj.width / 2;
+		pos.y += obj.height / 2;
+		window.mouseTracking(pos.x, pos.y);
+	}
+
+	function mouseTrackingNext(){
+		if(_chainItem.count == 0) return;
+		if(window.isMouseTracking()){
+			window.flushMouseTracking();
+			return;
+		}
+
+//		window.flushMouseTracking();
+
+		for(var i=0;i<_chainItem.count;i++){
+			if(_chainItem[i].isEnter()) _chainIndex = i;
+		}
+
+		if(!_ignoreInvalidItem){
+			_chainIndex++;
+			if(_chainIndex >= _chainItem.count) _chainIndex = 0;
+			mouseTracking(_chainItem[_chainIndex]);
+		}else{
+			var start = _chainIndex;
+			var index = start + 1;
+			var count = 0;
+			while(true){
+				if(index >= _chainItem.count) index = 0;
+
+				if(_chainItem[index].valid && _chainItem[index].visible){
+					_chainIndex = index;
+					mouseTracking(_chainItem[_chainIndex]);
+					break;
+				}
+
+				count++;
+				if(count >= _chainItem.count){
+					break;
+				}
+				index++;
+			}
+		}
+	}
+	function mouseTrackingPrev(){
+		if(_chainItem.count == 0) return;
+		if(window.isMouseTracking()){
+			window.flushMouseTracking();
+			return;
+		}
+
+//		window.flushMouseTracking();
+
+		for(var i=0;i<_chainItem.count;i++){
+			if(_chainItem[i].isEnter()){
+				_chainIndex = i;
+				break;
+			}
+		}
+
+		if(!_ignoreInvalidItem){
+			_chainIndex--;
+			if(_chainIndex < 0) _chainIndex = _chainItem.count - 1;
+		}else{
+			var start = _chainIndex;
+			var index = start - 1;
+			if(index >= _chainItem.count) index = _chainItem.count - 1;
+
+			var count = 0;
+			while(true){
+				if(index < 0) index = _chainItem.count - 1;
+
+				if(_chainItem[index].valid && _chainItem[index].visible){
+					_chainIndex = index;
+					mouseTracking(_chainItem[_chainIndex]);
+					return;
+				}
+
+				count++;
+				if(count >= _chainItem.count){
+					break;
+				}
+				index--;
+			}
+		}
+		mouseTracking(_chainItem[_chainIndex]);
+	}
+
+	property mouseTrackingMode{
+		getter(){return _mouseTrackingMode;}
+		setter(v){_mouseTrackingMode = v;}
+	}
+
+	property ignoreInvalidItem{
+		setter(v){_ignoreInvalidItem = v;}
+		getter(){return _ignoreInvalidItem;}
+	}
+
+	property chainItem{
+		getter(){return _chainItem;}
+	}
+
+	property cursorCenterAuto{
+		setter(v){_cursorCenterAuto = v;}
+		getter(){return _cursorCenterAuto;}
+	}
+	property itemCenterAuto{
+		setter(v){_itemCenterAuto = v;}
+		getter(){return _itemCenterAuto;}
+	}
+}
+ChainItemBase.MOUSETRACKINGMODE_SEQUENTIAL = 0;
+ChainItemBase.MOUSETRACKINGMODE_FREE = 1;
+
+class SubMenu extends SelectItemGroupSprite{
+	var _enable = true;
+
+	var _name = "SubMenu";
+
+	var _root = false;
+	var _lock = false;
+	var _active = false;
+
+	var _join = JOIN_AUTO;
+
+	var _show = false;
+	var _items = [];
+
+	var _state = 0x00;
+	var STATE_BASE = 0x01;
+	var STATE_BUTTON = 0x02;
+	var STATE_ENTER = 0x04;
+
+	var _submenu = null;
+	var _enterButton = null;
+
+	var _at;
+
+	function SubMenu(win, par, o=null){
+		SelectItemGroupSprite(...);
+		hitThreshold = 0;
+
+		_at = new AsyncTrigger(onCheckEnterLeave, "");
+		_at.mode = atmAtIdle;
+		_at.cached = true;
+
+		if(o === null){
+			show();
+			_root = true;
+		}
+	}
+	function finalize(){
+		super.finalize();
+
+		invalidate _at;
+	}
+
+	function isRoot(){return _root;}
+	function isEnter(){return (_state & STATE_ENTER) != 0;}
+
+	function show(target=null){
+		if(target != null){
+			var ref = target;
+			var pos = new Point();
+			GetAbsolutePos(target, pos, parent);
+			var rect1 = new Rect(pos.x, pos.y, pos.x+ref.width, pos.y+ref.height);
+
+			var ref = this;
+			var pos = new Point();
+			GetAbsolutePos(this, pos);
+			var rect2 = new Rect(pos.x, pos.y, pos.x+ref.width, pos.y+ref.height);
+
+			var x, y;
+			switch(_join){
+			case JOIN_TOP :
+				x = (rect1.left+rect1.right)\2 - rect2.width\2;
+				y = rect1.top - rect2.height;
+				break;
+			case JOIN_AUTO :
+			case JOIN_BOTTOM :
+				x = (rect1.left+rect1.right)\2 - rect2.width\2;
+				y = rect1.bottom;
+				break;
+			case JOIN_LEFT :
+				x = rect1.left - rect2.width;
+				y = (rect1.top+rect1.bottom)\2 - rect2.height\2;
+				break;
+			case JOIN_RIGHT :
+				x = rect1.right;
+				y = (rect1.top+rect1.bottom)\2 - rect2.height\2;
+				break;
+			}
+
+			var screenRect = new Rect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+			var menuRect = new Rect(x, y, x+width, y+height);
+			if(!screenRect.isInnerRect(menuRect)){
+				if(screenRect.left > menuRect.left) menuRect.setPos(screenRect.left, menuRect.top);
+				if(screenRect.right < menuRect.right) menuRect.setPos(screenRect.width - menuRect.width, menuRect.top);
+				if(screenRect.top > menuRect.top) menuRect.setPos(menuRect.left, screenRect.top);
+				if(screenRect.bottom < menuRect.bottom) menuRect.setPos(menuRect.left, screenRect.height - menuRect.height);
+			}
+
+			setPos(menuRect.left, menuRect.top);
+		}
+		visible = true;
+	}
+	function hide(){
+		visible = false;
+	}
+
+	function addItem(item, submenu=null){
+		for(var i=0;i<_items.count;i++){
+			if(_items[i].item == item){
+				_items[i] = %[item:item, submenu:submenu];
+				return;
+			}
+		}
+
+		var index = _items.count;
+		_items[index] = %[item:item, submenu:submenu];
+	}
+	function removeItem(item){
+		for(var i=0;i<_items.count;i++){
+			if(_items[i].item == item){
+				_items.erase(i);
+				break;
+			}
+		}
+	}
+	function clearItem(){
+		_items.clear();
+	}
+
+	function onMouseEnter(){
+		if(_state & STATE_BASE) return;
+
+		if((_state & STATE_ENTER) == 0) onMenuEnter();
+
+		_state |= STATE_ENTER | STATE_BASE;
+
+		checkTrigger();
+	}
+	function onMouseLeave(){
+		_state &= ~STATE_BASE;
+
+		checkTrigger();
+	}
+
+	function onButtonEnter(target){
+		if(!enable) return;
+
+		_enterButton = target;
+
+		if(_state & STATE_BUTTON) return;
+
+		if(_submenu != null){
+			if(_submenu.item != target) hideSubMenu();
+		}
+
+		for(var i=0;i<_items.count;i++){
+			if(	_items[i].item == target && 
+				_items[i].submenu != null){
+
+				if(_submenu != _items[i].submenu)
+					showSubMenu(_items[i]);
+			}
+		}
+
+		if((_state & STATE_ENTER) == 0) onMenuEnter();
+
+		_state |= STATE_ENTER | STATE_BUTTON;
+
+		checkTrigger();
+	}
+	function onButtonLeave(target){
+		_enterButton = null;
+
+		_state &= ~STATE_BUTTON;
+
+		checkTrigger();
+	}
+	function isButtonEnter(button){return (_enterButton == button);}
+
+	function onSliderEnter(target){
+		onButtonEnter(...);
+	}
+	function onSliderLeave(target){
+		onButtonLeave(...);
+	}
+
+	function onMenuDecide(name){
+		_owner.onMenuDecide(name);
+	}
+
+	function checkTrigger(){
+		if(isvalid _at) _at.trigger();
+	}
+	function onCheckEnterLeave(){
+		if(_state & (STATE_BASE | STATE_BUTTON)){
+			_state |= STATE_ENTER;
+
+			if(_submenu != null && (_state & STATE_BUTTON) == 0)
+				hideSubMenu();
+		}else{
+			if(_state == STATE_ENTER){
+				var enterOwner = false;
+				if(typeof owner.isEnter != "undefined") enterOwner = owner.isEnter();
+
+				var enterSubMenu = false;
+				if(_submenu != null) enterSubMenu = _submenu.submenu.isEnter();
+
+				if(enterOwner == false && enterSubMenu == false){
+					if(!isRoot()) hide();
+				}
+				if(!enterSubMenu) hideSubMenu();
+
+				if(_submenu != null){
+					if(!_submenu.submenu.isEnter()) onMenuLeave();
+					if(typeof owner.checkTrigger != "undefined") owner.checkTrigger();
+				}else{
+					onMenuLeave();
+					if(typeof owner.checkTrigger != "undefined") owner.checkTrigger();
+				}
+			}
+			if(_active && _submenu != null){
+				if(!_submenu.submenu.isEnter()) onMenuLeave();
+			}
+
+			_state = 0;
+		}
+	}
+
+	//サブメニューを表示する
+	function showSubMenu(item){
+		if(_submenu != null) hideSubMenu();
+
+		_submenu = item;
+		_submenu.submenu.show(item.item);
+	}
+	//サブメニューを消す
+	function hideSubMenu(){
+		if(_submenu === null) return;
+
+		_submenu.submenu.hideSubMenu();
+		_submenu.submenu.hide();
+		_submenu = null;
+		checkTrigger();
+	}
+
+	//サブメニューから消えたことが通知される
+	function onHideSubMenu(){
+		checkTrigger();
+	}
+
+	//イベント用ソケット
+	function onMenuEnter(){_active = true;}
+	function onMenuLeave(){_active = false;}
+
+	property join{
+		getter(){return _join;}
+		setter(v){_join = v;}
+	}
+
+	property enable{
+		setter(v){_enable = v;}
+		getter(){return _enable;}
+	}
+}
+SubMenu.JOIN_AUTO = 0;
+SubMenu.JOIN_TOP  = 1;
+SubMenu.JOIN_BOTTOM  = 2;
+SubMenu.JOIN_LEFT  = 3;
+SubMenu.JOIN_RIGHT  = 4;
+
+//=============================================================================
+
+//ボタン系ユーティリティ
+
+//有効/無効にする
+function  ValidSelectItems(obj, flag=true){
+	for(var i=0;i<obj.count;i++){
+		obj[i].valid = flag;
+	}
+}
+
+//マウス判定を変更
+function  HitThresholdSelectItems(obj, param=0){
+	for(var i=0;i<obj.count;i++){
+		if(obj[i] != void) obj[i].hitThreshold = param;
+	}
+}
+

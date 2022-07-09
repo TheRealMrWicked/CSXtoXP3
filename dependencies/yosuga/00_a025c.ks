@@ -18,7 +18,7 @@
 
 @Hitret id=7966
 
-@Talk name=Math_Teacher voice=NP120004
+@Talk name=Math@Teacher voice=NP120004
 
 @Hitret id=7967
 

@@ -623,7 +623,7 @@
 
 @StopSe
 
-@Talk name=電話のアナウンス/アナウンス voice=NP160001
+@Talk name=Telephone　Announcer voice=NP160001
 
 @Hitret id=9124
 

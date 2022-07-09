@@ -335,7 +335,7 @@
 
 @Hitret id=11818
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11819
 
@@ -343,7 +343,7 @@
 
 @Hitret id=11820
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11821
 
@@ -361,7 +361,7 @@
 
 @Hitret id=11823
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11824
 
@@ -372,11 +372,11 @@
 
 @Hitret id=11825
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11826
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11827
 
@@ -416,7 +416,7 @@
 @Hitret id=11833
 
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11834
 
@@ -457,7 +457,7 @@
 
 @Hitret id=11839
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11840
 
@@ -483,7 +483,7 @@
 
 @Hitret id=11844
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11845
 
@@ -540,7 +540,7 @@
 
 @Hitret id=11853
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11854
 
@@ -558,7 +558,7 @@
 
 @Hitret id=11856
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11857
 
@@ -566,7 +566,7 @@
 
 @Hitret id=11858
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11859
 
@@ -577,11 +577,11 @@
 
 @Hitret id=11860
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11861
 
-@Talk name=Haruka_•_Kozue voice=KO020819
+@Talk name=Haruka@and@Kozue voice=KO020819
 
 @Hitret id=11862
 
@@ -602,7 +602,7 @@
 
 @Hitret id=11864
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11865
 
@@ -620,7 +620,7 @@
 
 @Hitret id=11867
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11868
 
@@ -628,7 +628,7 @@
 
 @Hitret id=11869
 
-@Talk name=Haruka_•_Kozue voice=KO020822
+@Talk name=Haruka@and@Kozue voice=KO020822
 
 @Hitret id=11870
 
@@ -660,7 +660,7 @@
 
 @Char file=CH01_05M
 
-@Talk name=Haruka_•_Kozue voice=KO020824
+@Talk name=Haruka@and@Kozue voice=KO020824
 
 @Hitret id=11875
 
@@ -683,7 +683,7 @@
 @action id=½ action=ActionAdvJump cycle=300 count=1 height=10, 0
 @WaitAction id=½
 
-@Talk name=Haruka_•_Kozue voice=KO020825
+@Talk name=Haruka@and@Kozue voice=KO020825
 
 @Hitret id=11878
 
@@ -727,7 +727,7 @@
 
 @Hitret id=11884
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11885
 

@@ -129,7 +129,7 @@
 
 
 
-@Talk name=Yahiro_Monologue voice=YH010144
+@Talk name=Yahiro　Monologue voice=YH010144
 
 @Hitret id=5990
 
@@ -141,15 +141,15 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Yahiro_Monologue voice=YH010145
+@Talk name=Yahiro　Monologue voice=YH010145
 
 @Hitret id=5991
 
-@Talk name=Yahiro_Monologue voice=YH010146
+@Talk name=Yahiro　Monologue voice=YH010146
 
 @Hitret id=5992
 
-@Talk name=Yahiro_Monologue voice=YH010147
+@Talk name=Yahiro　Monologue voice=YH010147
 
 @Hitret id=5993
 
@@ -157,93 +157,93 @@
 @Update
 @MoveCamera x=0 y=-600 time=40000 accel=1
 
-@Talk name=Yahiro_Monologue voice=YH010148
+@Talk name=Yahiro　Monologue voice=YH010148
 
 @Hitret id=5994
 
-@Talk name=Yahiro_Monologue voice=YH010149
+@Talk name=Yahiro　Monologue voice=YH010149
 
 @Hitret id=5995
 
-@Talk name=Yahiro_Monologue voice=YH010150
+@Talk name=Yahiro　Monologue voice=YH010150
 
 @Hitret id=5996
 
-@Talk name=Yahiro_Monologue voice=YH010151
+@Talk name=Yahiro　Monologue voice=YH010151
 
 @Hitret id=5997
 
-@Talk name=Yahiro_Monologue voice=YH010152
+@Talk name=Yahiro　Monologue voice=YH010152
 
 @Hitret id=5998
 
-@Talk name=Yahiro_Monologue voice=YH010153
+@Talk name=Yahiro　Monologue voice=YH010153
 
 @Hitret id=5999
 
-@Talk name=Yahiro_Monologue voice=YH010154
+@Talk name=Yahiro　Monologue voice=YH010154
 
 @Hitret id=6000
 
-@Talk name=Yahiro_Monologue voice=YH010155
+@Talk name=Yahiro　Monologue voice=YH010155
 
 @Hitret id=6001
 
-@Talk name=Yahiro_Monologue voice=YH010156
+@Talk name=Yahiro　Monologue voice=YH010156
 
 @Hitret id=6002
 
-@Talk name=Yahiro_Monologue voice=YH010157
+@Talk name=Yahiro　Monologue voice=YH010157
 
 @Hitret id=6003
 
 
 @Cg file=B27d
 
-@Talk name=Yahiro_Monologue voice=YH010158
+@Talk name=Yahiro　Monologue voice=YH010158
 
 @Hitret id=6004
 
-@Talk name=Yahiro_Monologue voice=YH010159
+@Talk name=Yahiro　Monologue voice=YH010159
 
 @Hitret id=6005
 
-@Talk name=Yahiro_Monologue voice=YH010160
+@Talk name=Yahiro　Monologue voice=YH010160
 
 @Hitret id=6006
 
-@Talk name=Yahiro_Monologue voice=YH010161
+@Talk name=Yahiro　Monologue voice=YH010161
 
 @Hitret id=6007
 
-@Talk name=Yahiro_Monologue voice=YH010162
+@Talk name=Yahiro　Monologue voice=YH010162
 
 @Hitret id=6008
 
-@Talk name=Yahiro_Monologue voice=YH010163
+@Talk name=Yahiro　Monologue voice=YH010163
 
 @Hitret id=6009
 
-@Talk name=Yahiro_Monologue voice=YH010164
+@Talk name=Yahiro　Monologue voice=YH010164
 
 @Hitret id=6010
 
-@Talk name=Yahiro_Monologue voice=YH010165
+@Talk name=Yahiro　Monologue voice=YH010165
 
 @Hitret id=6011
 
-@Talk name=Yahiro_Monologue voice=YH010166
+@Talk name=Yahiro　Monologue voice=YH010166
 
 @Hitret id=6012
 
-@Talk name=Yahiro_Monologue voice=YH010167
+@Talk name=Yahiro　Monologue voice=YH010167
 
 @Hitret id=6013
 
 
 @Tone all type=NEGATIVE
 
-@Talk name=Yahiro_Monologue voice=YH010168
+@Talk name=Yahiro　Monologue voice=YH010168
 
 @Hitret id=6014
 
@@ -251,61 +251,61 @@
 @Tone
 @BlackOut
 
-@Talk name=Yahiro_Monologue voice=YH010169
+@Talk name=Yahiro　Monologue voice=YH010169
 
 @Hitret id=6015
 
-@Talk name=Yahiro_Monologue voice=YH010170
+@Talk name=Yahiro　Monologue voice=YH010170
 
 @Hitret id=6016
 
-@Talk name=Yahiro_Monologue voice=YH010171
+@Talk name=Yahiro　Monologue voice=YH010171
 
 @Hitret id=6017
 
-@Talk name=Yahiro_Monologue voice=YH010172
+@Talk name=Yahiro　Monologue voice=YH010172
 
 @Hitret id=6018
 
 
 @Cg file=B37a center=400,300
 
-@Talk name=Yahiro_Monologue voice=YH010173
+@Talk name=Yahiro　Monologue voice=YH010173
 
 @Hitret id=6019
 
-@Talk name=Yahiro_Monologue voice=YH010174
+@Talk name=Yahiro　Monologue voice=YH010174
 
 @Hitret id=6020
 
-@Talk name=Yahiro_Monologue voice=YH010175
+@Talk name=Yahiro　Monologue voice=YH010175
 
 @Hitret id=6021
 
-@Talk name=Yahiro_Monologue voice=YH010176
+@Talk name=Yahiro　Monologue voice=YH010176
 
 @Hitret id=6022
 
-@Talk name=Yahiro_Monologue voice=YH010177
+@Talk name=Yahiro　Monologue voice=YH010177
 
 @Hitret id=6023
 
 
 @Tone all type=SEPIA
 
-@Talk name=Yahiro_Monologue voice=YH010178
+@Talk name=Yahiro　Monologue voice=YH010178
 
 @Hitret id=6024
 
-@Talk name=Yahiro_Monologue voice=YH010179
+@Talk name=Yahiro　Monologue voice=YH010179
 
 @Hitret id=6025
 
-@Talk name=Yahiro_Monologue voice=YH010180
+@Talk name=Yahiro　Monologue voice=YH010180
 
 @Hitret id=6026
 
-@Talk name=Yahiro_Monologue voice=YH010181
+@Talk name=Yahiro　Monologue voice=YH010181
 
 @Hitret id=6027
 

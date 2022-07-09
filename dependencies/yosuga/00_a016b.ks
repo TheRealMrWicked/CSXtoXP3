@@ -462,15 +462,15 @@
 
 @Hitret id=5593
 
-@Talk name=カップルの女性/女 voice=NP130001
+@Talk name=Man voice=NP130001
 
 @Hitret id=5594
 
-@Talk name=カップルの男性/男 voice=NP140001
+@Talk name=Woman voice=NP140001
 
 @Hitret id=5595
 
-@Talk name=カップルの女性/女 voice=NP130002
+@Talk name=Man voice=NP130002
 
 @Hitret id=5596
 

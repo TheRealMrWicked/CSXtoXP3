@@ -1,0 +1,629 @@
+/*
+	サウンド管理クラス
+*/
+Plugins.link("wuvorbis.dll");	//OggVorvis再生用DLL
+
+class SoundBuffer extends WaveSoundBuffer{
+	var _file, _extension;
+	var _id;
+	var _playVolume = 1.0;
+	var _configVolume = 1.0;
+	var _speed = 1.0;
+	var _ending = false;
+	var _destroy = false;
+	var _prevStatus = "";
+	var _configStop = false;
+
+	var _files;
+	var _fileIndex = 0;
+
+	var _playing = false;
+
+	function SoundBuffer(owner){
+		WaveSoundBuffer(owner);
+	}
+
+	function open(){
+		_files = _file.split("+");
+		_fileIndex = 0;
+
+		super.open(_files[_fileIndex] + _extension);
+	}
+	function play(pos=0){
+		_playing = true;
+		if(status == "unload"){
+			_files = _file.split("+");
+			_fileIndex = 0;
+			try{
+				super.open(_files[_fileIndex] + _extension);
+			}catch{
+			}
+		}
+		super.play();
+	}
+	function stop(fConfigStop=false){
+		if(!fConfigStop) _playing = false;
+		super.stop();
+	}
+
+	function isPlay(fStatus=true){
+		if(fStatus)	return (status=="play");
+		else		return _playing;
+	}
+
+	function onStatusChanged(st){
+		if(_prevStatus == "play" && st == "stop"){
+			_fileIndex++;
+			if(_files.count > _fileIndex){
+				super.open(_files[_fileIndex] + _extension);
+				super.play();
+				return;
+			}
+
+			if(!_configStop) _destroy = true;
+		}
+
+		if(_files.count > _fileIndex && st == "stop") return;
+
+		_prevStatus = st;
+
+		super.onStatusChanged(...);
+	}
+
+	function onFadeCompleted(){
+		if(_ending){
+			stop();
+			_destroy = true;
+		}
+	}
+
+	property file{
+		setter(v){_file=v;}
+		getter(){return _file;}
+	}
+	property extension{
+		setter(v){_extension=v;}
+		getter(){return _extension;}
+	}
+	property id{
+		setter(v){_id=v;}
+		getter(){return _id;}
+	}
+	property volume{
+		setter(v){
+			if(_ending) return;
+			super.volume=v;
+		}
+		getter(){return super.volume;}
+	}
+	property speed{
+		getter(){return _speed;}
+		setter(v){
+			if(filters[0] !== void) _speed = filters[0].time = v;
+		}
+	}
+	property playVolume{
+		setter(v){if(v > 1.0) v=1.0; _playVolume=v;}
+		getter(){return _playVolume;}
+	}
+	property configVolume{
+		setter(v){if(v > 1.0) v=1.0; _configVolume=v;}
+		getter(){return _configVolume;}
+	}
+	property playing{
+		setter(v){_playing=v;}
+		getter(){return _playing;}
+	}
+	property ending{
+		setter(v){_ending=v;}
+		getter(){return _ending;}
+	}
+	property destroy{
+		setter(v){_destroy=v;}
+		getter(){return _destroy;}
+	}
+}
+
+class SoundLayer{
+	var _owner = null;
+	var _buffer = [];
+
+	var _cleaningTimer;
+
+	var _volume = 1.0;
+
+	function SoundLayer(owner){
+		_owner = owner;
+		_cleaningTimer = new Timer(cleaning, "");
+		_cleaningTimer.interval = 1000;
+		_cleaningTimer.enabled = true;
+	}
+
+	function finalize(){
+		_cleaningTimer.enabled = false;
+		invalidate _cleaningTimer;
+		InvalidateArray(_buffer);
+	}
+
+	function play(elm=%[]){
+	//再生開始パラメータ
+	// .file		: ファイル名
+	// .fade[=0]	: フェード時間
+	// .delay[=0]	: フェード遅延
+	// .loop[=0]	: ループ再生
+	// .vol[=1.0]	: 音量
+	// .pan[=0]		: 音像位置
+	// .id[=""]		: ID(空文字列の場合は.fileと同じ文字列になる)
+	// .mute[=0]	: ミュート再生
+	// .pos[=0]		: 再生位置
+	// .speed[=1.0]		: 再生速度
+	// .createFilter[=0]		: フィルターを作成する
+		//パラメータを変換
+		var file = GetElm(elm.file, "");
+		var fade = int GetElm(elm.fade, 0);
+		var delay = int GetElm(elm.delay, 0);
+		var loop = int GetElm(elm.loop, 0);
+		var playVol = real GetElm(elm.playVol, 1.0);
+		var cnfVol = real GetElm(elm.cnfVol, 1.0);
+		var pan = int GetElm(elm.pan, 0);
+		var id = GetElm(elm.id, "");
+		var mute = int GetElm(elm.mute, 0);
+		var pos = int GetElm(elm.pos, 0);
+		var playSpeed = real GetElm(elm.speed, 1.0);
+		var createFilter = int GetElm(elm.createFilter, 0);
+
+		//idが空文字列の場合はfileを利用する
+		if(id == "")			id=file;
+
+		//同じIDが存在しているか調べる
+		var ref = objectOfId(id);
+		if(ref != -1){
+			if(ref.destroy)	cleaning();	//削除可能状態なら一度掃除
+			else			return;		//まだ生きているなら何もしない
+		}
+
+		//オブジェクト生成
+		var obj = newBuffer();
+		with(obj){
+			.file = file;
+			.id = id;			//idセット
+			.playing = true;	//再生フラグを立てる
+			.volume2 = 100000 * CONFIG.volMaster;
+			.playVolume = playVol;
+			.configVolume = cnfVol;
+
+			if(createFilter){
+				.filters.clear();
+				.filters.add(new WaveSoundBuffer.PhaseVocoder());
+				.speed = playSpeed;
+			}
+
+			.pan = pan * 1000;
+			.looping = loop;
+
+			.extension = ".ogg";
+
+			if(!mute){
+				var vol = 100000 * .playVolume * .configVolume * _volume;
+				if(fade == 0){
+					.volume = vol;
+					.play(pos);
+					if(pos) .position = pos;
+				}else{
+					.volume = 0;
+					.play(pos);
+					if(pos) .position = pos;
+					.fade(vol, fade, delay);
+				}
+			}else{
+				._configStop = true;
+			}
+		}
+	}
+
+	function stop(id="", fade=0){
+		if(id == ""){
+		//全て停止
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(fade){
+					_buffer[i].fade(0, fade);
+					_buffer[i].ending = true;
+				}else{
+					_buffer[i].stop();
+					invalidate _buffer[i];
+					_buffer.erase(i);
+				}
+			}
+		}else{
+		//idだけ停止
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(_buffer[i].id != id) continue;
+
+				if(fade != 0 && _buffer[i].ending){
+				//フェード指定で、フェード中なら何もしない
+				}else if(fade != 0){
+					_buffer[i].fade(0, fade);
+					_buffer[i].ending = true;
+				}else{
+					_buffer[i].stop();
+					invalidate _buffer[i];
+					_buffer.erase(i);
+				}
+
+				break;
+			}
+		}
+	}
+
+	function changeSpeed(id="", playSpeed=1.0){
+		if(id == ""){
+		//全てフェード
+			for(var i=_buffer.count-1;i>=0;i--){
+				_buffer[i].speed = playSpeed;
+			}
+		}else{
+		//idだけフェード
+			for(var i=_buffer.count-1;i>=0;i--){
+				_buffer[i].speed = playSpeed;
+				break;
+			}
+		}
+	}
+
+	function fade(id="", fade=0, vol=1.0){
+		if(id == ""){
+		//全てフェード
+			for(var i=_buffer.count-1;i>=0;i--){
+				with(_buffer[i]){
+					.playVolume = vol;
+					var fadeVol = 100000 * .playVolume * .configVolume * _volume;
+					if(fade){
+						.fade(fadeVol, fade);
+					}else{
+						.volume = fadeVol;
+					}
+				}
+			}
+		}else{
+		//idだけフェード
+			for(var i=_buffer.count-1;i>=0;i--){
+				with(_buffer[i]){
+					if(.id != id) continue;
+
+					.playVolume = vol;
+					var fadeVol = 100000 * .playVolume * .configVolume * _volume;
+					if(fade){
+						.fade(fadeVol, fade);
+					}else{
+						.volume = fadeVol;
+					}
+
+				}
+				break;
+			}
+		}
+	}
+
+	function pause(id=""){
+		if(id == ""){
+			for(var i=_buffer.count-1;i>=0;i--){
+				_buffer[i].paused = true;
+			}
+		}else{
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(_buffer[i].id == id){
+					_buffer[i].paused = true;
+					break;
+				}
+			}
+		}
+	}
+	function restart(id=""){
+		if(id == ""){
+			for(var i=_buffer.count-1;i>=0;i--){
+				_buffer[i].paused = false;
+			}
+		}else{
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(_buffer[i].id == id){
+					_buffer[i].paused = false;
+					break;
+				}
+			}
+		}
+	}
+
+	function newBuffer(){
+		var index = _buffer.count;
+		_buffer[index] = new SoundBuffer(_owner);
+		return _buffer[index];
+	}
+
+	function isPlay(id="", fStatus=true){
+		if(id == ""){
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(_buffer[i].isPlay(fStatus)) return true;
+			}
+		}else{
+			for(var i=_buffer.count-1;i>=0;i--){
+				if(_buffer[i].id == id){
+					if(_buffer[i].isPlay(fStatus)) return true;
+					break;
+				}
+			}
+		}
+		return false;
+	}
+
+	function applyVolume(){
+		for(var i=_buffer.count-1;i>=0;i--){
+			with(_buffer[i]){
+				.volume = 100000 * .playVolume * .configVolume * _volume;
+			}
+		}
+	}
+
+	function cleaning(){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(_buffer[i].destroy){
+				_buffer[i].stop();
+				invalidate _buffer[i];
+				_buffer.erase(i);
+			}
+		}
+	}
+
+	function configPlay(){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(_buffer[i]._configStop){
+				_buffer[i]._configStop = false;
+				_buffer[i].play();
+			}
+		}
+	}
+	function configStop(){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(_buffer[i].looping){
+				_buffer[i]._configStop = true;
+				_buffer[i].stop(true);
+			}else{
+				stop(_buffer[i].id);
+			}
+		}
+	}
+
+	//------------------
+	//バッファ検索系
+	//------------------
+	//idからインデックスを得る
+	function indexOfId(id, ignoreEnding=true){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(ignoreEnding){
+				if(_buffer[i].id == id) return i;
+			}else{
+				if(_buffer[i].id == id && _buffer[i].ending == false) return i;
+			}
+		}
+		return -1;
+	}
+	//idからオブジェクトを得る
+	function objectOfId(id, ignoreEnding=true){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(ignoreEnding){
+				if(_buffer[i].id == id) return _buffer[i];
+			}else{
+				if(_buffer[i].id == id && _buffer[i].ending == false) return _buffer[i];
+			}
+		}
+		return -1;
+	}
+	//オブジェクトからインデックスを得る
+	function indexOfObject(obj, ignoreEnding=true){
+		for(var i=_buffer.count-1;i>=0;i--){
+			if(ignoreEnding){
+				if(_buffer[i] == obj) return _buffer[i];
+			}else{
+				if(_buffer[i] == obj && _buffer[i].ending == false) return _buffer[i];
+			}
+		}
+		return -1;
+	}
+
+	function idList(ignoreWaitEnding=true){
+		var list = [];
+
+		for(var i=_buffer.count-1;i>=0;i--){
+			with(_buffer[i]){
+				var fAdd = false;
+				if(ignoreWaitEnding){
+					fAdd = true;
+				}else{
+					if(.ending == false) fAdd = true;
+				}
+				if(fAdd)
+					list.add(%[file:.file, id:.id, vol:.playVolume*100, pan:int(.pan / 1000)]);
+			}
+		}
+
+		return list;
+	}
+
+	property buffer{
+		getter(){return _buffer;}
+	}
+
+	property volume{
+		setter(v){_volume=real(v); applyVolume();}
+		getter(){return _volume;}
+	}
+
+	property count{
+		getter(){return _buffer.count;}
+	}
+}
+
+//================================================
+//ラッパークラス
+//================================================
+function PlayBgm(file, fade=0, playVol=1.0, pos=0, speed=1.0, cnfVol=1.0, fConfig=true){
+	if(BGM === null) return;
+
+	//同じものが再生中なら何もしない
+	var obj;
+	if((obj = BGM.objectOfId("BGM_1", false)) != -1){
+		if(obj.file == file) return;
+	}
+	if((obj = BGM.objectOfId("BGM_2", false)) != -1){
+		if(obj.file == file) return;
+	}
+
+	//バッファを切り替えて再生する
+	if(BGM.indexOfId("BGM_1") == -1){
+		BGM.stop("BGM_2", fade);
+		BGM.stop("BGM_1");
+		BGM.play(%[file:file, fade:fade, playVol:playVol, pos:pos, speed:speed, cnfVol:cnfVol, loop:1, id:"BGM_1", mute:CONFIG.muteBgm|CONFIG.muteMaster, createFilter:1]);
+	}else{
+		BGM.stop("BGM_1", fade);
+		BGM.stop("BGM_2");
+		BGM.play(%[file:file, fade:fade, playVol:playVol, pos:pos, speed:speed, cnfVol:cnfVol, loop:1, id:"BGM_2", mute:CONFIG.muteBgm|CONFIG.muteMaster, createFilter:1]);
+	}
+
+	@if(__DEBUGMODE__)
+		debug.playBgm(file);
+	@endif
+}
+function StopBgm(fade=0){
+	@if(__DEBUGMODE__)
+		debug.playBgm();
+	@endif
+
+	if(BGM === null) return;
+
+	if(BGM.indexOfId("BGM_1") != -1){
+		BGM.stop("BGM_1", fade);
+	}
+	if(BGM.indexOfId("BGM_2") != -1){
+		BGM.stop("BGM_2", fade);
+	}
+
+}
+function ChangeBgmSpeed(speed=1.0){
+	if(BGM === null) return;
+
+	if(BGM.indexOfId("BGM_1") != -1)
+		BGM.changeSpeed("BGM_1", speed);
+	if(BGM.indexOfId("BGM_2") != -1)
+		BGM.changeSpeed("BGM_2", speed);
+}
+function FadeBgm(fade=0, vol=1.0){
+	if(BGM === null) return;
+
+	if(BGM.indexOfId("BGM_1") != -1)
+		BGM.fade("BGM_1", fade, vol);
+	if(BGM.indexOfId("BGM_2") != -1)
+		BGM.fade("BGM_2", fade, vol);
+}
+function PauseBgm(){
+	if(BGM === null) return;
+
+	var obj;
+	if((obj = BGM.objectOfId("BGM_1")) != -1)
+		obj.paused = true;
+	if((obj = BGM.objectOfId("BGM_2")) != -1)
+		obj.paused = true;
+}
+function RestartBgm(){
+	if(BGM === null) return;
+
+	var obj;
+	if((obj = BGM.objectOfId("BGM_1")) != -1)
+		obj.paused = false;
+	if((obj = BGM.objectOfId("BGM_2")) != -1)
+		obj.paused = false;
+}
+
+function PlayVoice(file, playVol=1.0, cnfVol=1.0, pan=0, fConfig=true){
+	if(VOICE === null) return;
+
+	if(fConfig){
+	//コンフィグ設定に従う
+		if(CONFIG.muteVoice == 0 && CONFIG.muteMaster == 0){
+			if(CheckPlayVoice(file.substring(0, 2))){	//個別設定チェック
+				VOICE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan]);
+			}
+		}
+	}else{
+		VOICE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan]);
+	}
+}
+function StopVoice(fade=0){
+	if(VOICE === null) return;
+
+	VOICE.stop("", fade);
+}
+function PlaySe(file, playVol=1.0, cnfVol=1.0, pan=0, fConfig=true){
+	if(SE === null) return;
+
+	if(fConfig){
+	//コンフィグ設定に従う
+		if(CONFIG.muteSe == 0 && CONFIG.muteMaster == 0){
+			SE.stop(file);
+			SE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan]);
+		}
+	}else{
+		SE.stop(file);
+		SE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan]);
+	}
+}
+function StopSe(id="", fade=0){
+	if(SE === null) return;
+
+	SE.stop(id, fade);
+}
+function PlayEnvSe(file, playVol=1.0, cnfVol=1.0, pan=0, fade=0, fConfig=true){
+	if(ENVSE === null) return;
+
+	if(fConfig){
+	//コンフィグ設定に従う
+		ENVSE.stop(file);
+		ENVSE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan, fade:fade, loop:1, mute:CONFIG.muteEnvSe|CONFIG.muteMaster]);
+	}else{
+		ENVSE.stop(file);
+		ENVSE.play(%[file:file, playVol:playVol, cnfVol:cnfVol, pan:pan, fade:fade, loop:1]);
+	}
+}
+function StopEnvSe(id="", fade=0){
+	if(ENVSE === null) return;
+
+	ENVSE.stop(id, fade);
+}
+function FadeEnvSe(id="", fade=0, vol=1.0){
+	ENVSE.fade(id, fade, vol);
+}
+function PlayBgv(id="", file, playVol=1.0, cnfVol=1.0, pan=0, fade=0, mute=0, fConfig=true){
+	if(BGV === null) return;
+
+	if(id == "") id = file;
+
+	if(fConfig){
+	//コンフィグ設定に従う
+		BGV.stop(file);
+		BGV.play(%[id:id, file:file, playVol:playVol, cnfVol:cnfVol, pan:pan, fade:fade, loop:1, mute:mute|CONFIG.muteMaster]);
+	}else{
+		BGV.stop(file);
+		BGV.play(%[id:id, file:file, playVol:playVol, cnfVol:cnfVol, pan:pan, fade:fade, loop:1]);
+	}
+}
+function StopBgv(id="", fade=0){
+	if(BGV === null) return;
+
+	BGV.stop(id, fade);
+}
+
+function PlaySystemSound(file, playVol=1.0, fConfig=true){
+	PlaySe(file, playVol, fConfig);
+}
+function StopSystemSound(fade=0){
+	StopSe("", fade);
+}
+

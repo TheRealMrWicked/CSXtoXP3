@@ -40,7 +40,7 @@
 
 @Hitret id=17907
 
-@Talk name=Child_A voice=NP180001
+@Talk name=Child　A voice=NP180001
 
 @Hitret id=17908
 
@@ -52,7 +52,7 @@
 
 @Hitret id=17910
 
-@Talk name=Child_A voice=NP180002
+@Talk name=Child　A voice=NP180002
 
 @Hitret id=17911
 
@@ -163,7 +163,7 @@
 
 @Hitret id=17932
 
-@Talk name=Child_A voice=NP180003
+@Talk name=Child　A voice=NP180003
 
 @Hitret id=17933
 
@@ -221,7 +221,7 @@
 
 @Hitret id=17945
 
-@Talk name=Child_B voice=NP190001
+@Talk name=Child　B voice=NP190001
 
 @Hitret id=17946
 
@@ -229,7 +229,7 @@
 
 @Hitret id=17947
 
-@Talk name=Child_C voice=NP200001
+@Talk name=Child　C voice=NP200001
 
 @Hitret id=17948
 
@@ -241,7 +241,7 @@
 
 @Hitret id=17950
 
-@Talk name=Child_B voice=NP190002
+@Talk name=Child　B voice=NP190002
 
 @Hitret id=17951
 
@@ -253,7 +253,7 @@
 
 @Hitret id=17953
 
-@Talk name=Child_B voice=NP190003
+@Talk name=Child　B voice=NP190003
 
 @Hitret id=17954
 
@@ -273,7 +273,7 @@
 
 @Hitret id=17958
 
-@Talk name=Child_B voice=NP190004
+@Talk name=Child　B voice=NP190004
 
 @Hitret id=17959
 
@@ -285,7 +285,7 @@
 
 @Hitret id=17961
 
-@Talk name=Child_C voice=NP200002
+@Talk name=Child　C voice=NP200002
 
 @Hitret id=17962
 
@@ -311,7 +311,7 @@
 
 @Hitret id=17966
 
-@Talk name=Child_B voice=NP190005
+@Talk name=Child　B voice=NP190005
 
 @Hitret id=17967
 
@@ -322,7 +322,7 @@
 
 @PlaySe file=se057
 
-@Talk name=Child_C voice=NP200003
+@Talk name=Child　C voice=NP200003
 
 @Hitret id=17969
 
@@ -342,7 +342,7 @@
 
 @Hitret id=17972
 
-@Talk name=Child_B voice=NP190006
+@Talk name=Child　B voice=NP190006
 
 @Hitret id=17973
 
@@ -412,7 +412,7 @@
 
 @Hitret id=17985
 
-@Talk name=Child_B voice=NP190007
+@Talk name=Child　B voice=NP190007
 
 @Hitret id=17986
 
@@ -431,7 +431,7 @@
 
 @Hitret id=17989
 
-@Talk name=Child_B voice=NP190008
+@Talk name=Child　B voice=NP190008
 
 @Hitret id=17990
 
@@ -439,7 +439,7 @@
 
 @Hitret id=17991
 
-@Talk name=Child_C voice=NP200004
+@Talk name=Child　C voice=NP200004
 
 @Hitret id=17992
 
@@ -466,7 +466,7 @@
 
 @Hitret id=17997
 
-@Talk name=Child_B voice=NP190009
+@Talk name=Child　B voice=NP190009
 
 @Hitret id=17998
 
@@ -481,7 +481,7 @@
 
 @Hitret id=18000
 
-@Talk name=Child_C voice=NP200005
+@Talk name=Child　C voice=NP200005
 
 @Hitret id=18001
 
@@ -566,7 +566,7 @@
 
 @Hitret id=18013
 
-@Talk name=Child_B voice=NP190010
+@Talk name=Child　B voice=NP190010
 
 @Hitret id=18014
 
@@ -592,7 +592,7 @@
 @action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
 @WaitAction id=カメラ
 
-@Talk name=Child_B voice=NP190011
+@Talk name=Child　B voice=NP190011
 
 @Hitret id=18018
 
@@ -727,7 +727,7 @@
 
 @Hitret id=18036
 
-@Talk name=Child_A voice=NP180004
+@Talk name=Child　A voice=NP180004
 
 @Hitret id=18037
 
@@ -760,14 +760,14 @@
 @Hitret id=18042
 
 
-@Talk name=Child_C voice=NP200006
+@Talk name=Child　C voice=NP200006
 
 @Hitret id=18043
 
 
 @PlayBgm file=BGM15
 
-@Talk name=Child_B voice=NP190012
+@Talk name=Child　B voice=NP190012
 
 @Hitret id=18044
 
@@ -795,7 +795,7 @@
 
 @Hitret id=18049
 
-@Talk name=Child_A voice=NP180005
+@Talk name=Child　A voice=NP180005
 
 @Hitret id=18050
 
@@ -803,7 +803,7 @@
 
 @Hitret id=18051
 
-@Talk name=Child_A voice=NP180006
+@Talk name=Child　A voice=NP180006
 
 @Hitret id=18052
 
@@ -841,11 +841,11 @@
 
 @Hitret id=18057
 
-@Talk name=Child_A voice=NP180007
+@Talk name=Child　A voice=NP180007
 
 @Hitret id=18058
 
-@Talk name=Child_B voice=NP190013
+@Talk name=Child　B voice=NP190013
 
 @Hitret id=18059
 
@@ -906,7 +906,7 @@
 
 @Hitret id=18069
 
-@Talk name=Child_A voice=NP180008
+@Talk name=Child　A voice=NP180008
 
 @Hitret id=18070
 
@@ -921,7 +921,7 @@
 
 @Hitret id=18072
 
-@Talk name=Child_B voice=NP190014
+@Talk name=Child　B voice=NP190014
 
 @Hitret id=18073
 
@@ -945,15 +945,15 @@
 
 @Char file=CC06_01M 
 
-@Talk name=Child_A voice=NP180009
+@Talk name=Child　A voice=NP180009
 
 @Hitret id=18077
 
-@Talk name=Child_B voice=NP190015
+@Talk name=Child　B voice=NP190015
 
 @Hitret id=18078
 
-@Talk name=Child_C voice=NP200007
+@Talk name=Child　C voice=NP200007
 
 @Hitret id=18079
 

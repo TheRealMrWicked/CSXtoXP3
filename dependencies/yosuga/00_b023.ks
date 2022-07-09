@@ -269,46 +269,46 @@
 @PlayBgm file=BGM16
 @MessageFrame type=1
 
-@Talk name=Nao_Monologue voice=NO031373
+@Talk name=Nao　Monologue voice=NO031373
 
 @Hitret id=15538
 
-@Talk name=Nao_Monologue voice=NO031374
+@Talk name=Nao　Monologue voice=NO031374
 
 @Hitret id=15539
 
 
 @Cg file=B01b   
 
-@Talk name=Nao_Monologue voice=NO031375
+@Talk name=Nao　Monologue voice=NO031375
 
 @Hitret id=15540
 
-@Talk name=Nao_Monologue voice=NO031376
+@Talk name=Nao　Monologue voice=NO031376
 
 @Hitret id=15541
 
-@Talk name=Nao_Monologue voice=NO031377
+@Talk name=Nao　Monologue voice=NO031377
 
 @Hitret id=15542
 
-@Talk name=Nao_Monologue voice=NO031378
+@Talk name=Nao　Monologue voice=NO031378
 
 @Hitret id=15543
 
-@Talk name=Nao_Monologue voice=NO031379
+@Talk name=Nao　Monologue voice=NO031379
 
 @Hitret id=15544
 
-@Talk name=Nao_Monologue voice=NO031380
+@Talk name=Nao　Monologue voice=NO031380
 
 @Hitret id=15545
 
-@Talk name=Nao_Monologue voice=NO031381
+@Talk name=Nao　Monologue voice=NO031381
 
 @Hitret id=15546
 
-@Talk name=Nao_Monologue voice=NO031382
+@Talk name=Nao　Monologue voice=NO031382
 
 @Hitret id=15547
 
@@ -317,11 +317,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Nao_Monologue voice=NO031383
+@Talk name=Nao　Monologue voice=NO031383
 
 @Hitret id=15548
 
-@Talk name=Nao_Monologue voice=NO031384
+@Talk name=Nao　Monologue voice=NO031384
 
 @Hitret id=15549
 
@@ -335,19 +335,19 @@
 
 @BlackOut
 
-@Talk name=Nao_Monologue voice=NO031386
+@Talk name=Nao　Monologue voice=NO031386
 
 @Hitret id=15551
 
-@Talk name=Nao_Monologue voice=NO031387
+@Talk name=Nao　Monologue voice=NO031387
 
 @Hitret id=15552
 
-@Talk name=Nao's_Mother voice=NP500013
+@Talk name=Nao's　Mother voice=NP500013
 
 @Hitret id=15553
 
-@Talk name=Nao_Monologue voice=NO031389
+@Talk name=Nao　Monologue voice=NO031389
 
 @Hitret id=15554
 
@@ -355,7 +355,7 @@
 
 @Hitret id=15555
 
-@Talk name=Nao's_Mother voice=NP500014
+@Talk name=Nao's　Mother voice=NP500014
 
 @Hitret id=15556
 
@@ -363,7 +363,7 @@
 
 @Hitret id=15557
 
-@Talk name=Nao's_Mother voice=NP500015
+@Talk name=Nao's　Mother voice=NP500015
 
 @Hitret id=15558
 
@@ -371,7 +371,7 @@
 
 @Hitret id=15559
 
-@Talk name=Nao's_Mother voice=NP500016
+@Talk name=Nao's　Mother voice=NP500016
 
 @Hitret id=15560
 
@@ -383,7 +383,7 @@
 
 @Hitret id=15562
 
-@Talk name=Nao's_Mother voice=NP500017
+@Talk name=Nao's　Mother voice=NP500017
 
 @Hitret id=15563
 
@@ -391,15 +391,15 @@
 
 @Hitret id=15564
 
-@Talk name=Nao_Monologue voice=NO031400
+@Talk name=Nao　Monologue voice=NO031400
 
 @Hitret id=15565
 
-@Talk name=Nao_Monologue voice=NO031401
+@Talk name=Nao　Monologue voice=NO031401
 
 @Hitret id=15566
 
-@Talk name=Nao's_Mother voice=NP500018
+@Talk name=Nao's　Mother voice=NP500018
 
 @Hitret id=15567
 
@@ -407,7 +407,7 @@
 
 @Hitret id=15568
 
-@Talk name=Nao_Monologue voice=NO031404
+@Talk name=Nao　Monologue voice=NO031404
 
 @Hitret id=15569
 
@@ -416,31 +416,31 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=Nao_Monologue voice=NO031405
+@Talk name=Nao　Monologue voice=NO031405
 
 @Hitret id=15570
 
-@Talk name=Nao_Monologue voice=NO031406
+@Talk name=Nao　Monologue voice=NO031406
 
 @Hitret id=15571
 
-@Talk name=Nao_Monologue voice=NO031407
+@Talk name=Nao　Monologue voice=NO031407
 
 @Hitret id=15572
 
-@Talk name=Nao_Monologue voice=NO031408
+@Talk name=Nao　Monologue voice=NO031408
 
 @Hitret id=15573
 
-@Talk name=Nao_Monologue voice=NO031409
+@Talk name=Nao　Monologue voice=NO031409
 
 @Hitret id=15574
 
-@Talk name=Nao_Monologue voice=NO031410
+@Talk name=Nao　Monologue voice=NO031410
 
 @Hitret id=15575
 
-@Talk name=Nao_Monologue voice=NO031411
+@Talk name=Nao　Monologue voice=NO031411
 
 @Hitret id=15576
 
@@ -451,11 +451,11 @@
 
 @Hitret id=15577
 
-@Talk name=Nao_Monologue voice=NO031413
+@Talk name=Nao　Monologue voice=NO031413
 
 @Hitret id=15578
 
-@Talk name=Nao_Monologue voice=NO031414
+@Talk name=Nao　Monologue voice=NO031414
 
 @Hitret id=15579
 
@@ -463,23 +463,23 @@
 
 @Hitret id=15580
 
-@Talk name=Nao_Monologue voice=NO031416
+@Talk name=Nao　Monologue voice=NO031416
 
 @Hitret id=15581
 
-@Talk name=Nao_Monologue voice=NO031417
+@Talk name=Nao　Monologue voice=NO031417
 
 @Hitret id=15582
 
-@Talk name=Nao_Monologue voice=NO031418
+@Talk name=Nao　Monologue voice=NO031418
 
 @Hitret id=15583
 
-@Talk name=Nao_Monologue voice=NO031419
+@Talk name=Nao　Monologue voice=NO031419
 
 @Hitret id=15584
 
-@Talk name=Nao_Monologue voice=NO031420
+@Talk name=Nao　Monologue voice=NO031420
 
 @Hitret id=15585
 
@@ -487,7 +487,7 @@
 
 @Hitret id=15586
 
-@Talk name=Nao_Monologue voice=NO031422
+@Talk name=Nao　Monologue voice=NO031422
 
 @Hitret id=15587
 

@@ -86,7 +86,7 @@
 
 @Hitret id=17
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=18
 
@@ -101,7 +101,7 @@
 
 @Hitret id=20
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=21
 
@@ -116,7 +116,7 @@
 
 @Hitret id=23
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=24
 
@@ -128,7 +128,7 @@
 
 @Hitret id=26
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=27
 
@@ -186,7 +186,7 @@
 
 @Hitret id=36
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=37
 
@@ -197,7 +197,7 @@
 
 @Char file=CC06_02M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=39
 
@@ -208,7 +208,7 @@
 
 @Hitret id=40
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=41
 
@@ -222,7 +222,7 @@
 
 @ClearChar
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=43
 
@@ -233,7 +233,7 @@
 
 @Hitret id=44
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=45
 
@@ -255,7 +255,7 @@
 
 @Hitret id=48
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=49
 
@@ -269,7 +269,7 @@
 
 @ClearChar id=‰l
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=51
 
@@ -345,7 +345,7 @@
 
 @Hitret id=67
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=68
 
@@ -360,7 +360,7 @@
 
 @Hitret id=70
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=71
 
@@ -372,7 +372,7 @@
 
 @Hitret id=73
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=74
 
@@ -380,7 +380,7 @@
 
 @Hitret id=75
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=76
 
@@ -412,7 +412,7 @@
 
 @Hitret id=80
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=81
 
@@ -449,7 +449,7 @@
 
 @Hitret id=87
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=88
 
@@ -482,7 +482,7 @@
 
 @Hitret id=92
 
-@Talk name=Class_Rep voice=KO000001
+@Talk name=Class@Rep voice=KO000001
 
 @Hitret id=93
 
@@ -494,7 +494,7 @@
 @action id=½ action=ActionAdvJump cycle=300 count=1 height=5
 @WaitAction id=½
 
-@Talk name=Class_Rep voice=KO000002
+@Talk name=Class@Rep voice=KO000002
 
 @Hitret id=94
 
@@ -509,7 +509,7 @@
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO000003
+@Talk name=Class@Rep voice=KO000003
 
 @Hitret id=97
 
@@ -533,7 +533,7 @@
 
 @Hitret id=102
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=103
 
@@ -541,7 +541,7 @@
 
 @Hitret id=104
 
-@Talk name=Class_Rep voice=KO000004
+@Talk name=Class@Rep voice=KO000004
 
 @Hitret id=105
 
@@ -555,7 +555,7 @@
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO000005
+@Talk name=Class@Rep voice=KO000005
 
 @Hitret id=107
 
@@ -619,7 +619,7 @@
 
 @Hitret id=114
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=115
 
@@ -689,7 +689,7 @@
 
 @Hitret id=127
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=128
 
@@ -701,7 +701,7 @@
 
 @Hitret id=129
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=130
 
@@ -741,7 +741,7 @@
 
 @Hitret id=135
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=136
 
@@ -749,15 +749,15 @@
 @ClearChar
 @Char file=CH02_08M
 
-@Talk name=Class_Rep voice=KO000006
+@Talk name=Class@Rep voice=KO000006
 
 @Hitret id=137
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=138
 
-@Talk name=Class_Rep voice=KO000007
+@Talk name=Class@Rep voice=KO000007
 
 @Hitret id=139
 
@@ -781,7 +781,7 @@
 
 @Hitret id=143
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=144
 
@@ -822,7 +822,7 @@
 
 @Hitret id=151
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=152
 
@@ -844,7 +844,7 @@
 @ClearChar
 @Char file=CH02_08M
 
-@Talk name=Class_Rep voice=KO000008
+@Talk name=Class@Rep voice=KO000008
 
 @Hitret id=155
 
@@ -887,7 +887,7 @@
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO000009
+@Talk name=Class@Rep voice=KO000009
 
 @Hitret id=161
 
@@ -901,7 +901,7 @@
 
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO000010
+@Talk name=Class@Rep voice=KO000010
 
 @Hitret id=163
 
@@ -920,11 +920,11 @@
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO000011
+@Talk name=Class@Rep voice=KO000011
 
 @Hitret id=166
 
-@Talk name=Class_Rep voice=KO000012
+@Talk name=Class@Rep voice=KO000012
 
 @Hitret id=167
 
@@ -943,7 +943,7 @@
 
 @Hitret id=168
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=169
 
@@ -961,7 +961,7 @@
 
 @Hitret id=171
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=172
 
@@ -977,7 +977,7 @@
 @action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=80
 @WaitAction id=ƒJƒƒ‰
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=174
 
@@ -997,7 +997,7 @@
 
 @Hitret id=178
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=179
 
@@ -1022,7 +1022,7 @@
 
 @Hitret id=182
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=183
 

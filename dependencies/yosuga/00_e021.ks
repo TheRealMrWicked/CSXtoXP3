@@ -168,7 +168,7 @@
 
 @StopBgm fade=0
 
-@Talk name=Motoka_Monologue voice=MT051003
+@Talk name=Motoka　Monologue voice=MT051003
 
 @Hitret id=37009
 
@@ -462,7 +462,7 @@
 
 @Hitret id=37066
 
-@Talk name=Motoka's_Mother voice=NP010001
+@Talk name=Motoka's　Mother voice=NP010001
 
 @Hitret id=37067
 
@@ -470,7 +470,7 @@
 
 @Hitret id=37068
 
-@Talk name=Motoka's_Mother voice=NP010002
+@Talk name=Motoka's　Mother voice=NP010002
 
 @Hitret id=37069
 
@@ -486,7 +486,7 @@
 
 @Hitret id=37072
 
-@Talk name=Motoka's_Mother voice=NP010003
+@Talk name=Motoka's　Mother voice=NP010003
 
 @Hitret id=37073
 
@@ -518,11 +518,11 @@
 
 @Hitret id=37078
 
-@Talk name=Motoka's_Mother voice=NP010004
+@Talk name=Motoka's　Mother voice=NP010004
 
 @Hitret id=37079
 
-@Talk name=Motoka's_Mother voice=NP010005
+@Talk name=Motoka's　Mother voice=NP010005
 
 @Hitret id=37080
 
@@ -541,7 +541,7 @@
 
 @Hitret id=37083
 
-@Talk name=Motoka's_Mother voice=NP010006
+@Talk name=Motoka's　Mother voice=NP010006
 
 @Hitret id=37084
 
@@ -608,7 +608,7 @@
 
 @Hitret id=37096
 
-@Talk name=Motoka's_Mother voice=NP010007
+@Talk name=Motoka's　Mother voice=NP010007
 
 @Hitret id=37097
 
@@ -619,7 +619,7 @@
 
 @Hitret id=37098
 
-@Talk name=Motoka's_Mother voice=NP010008
+@Talk name=Motoka's　Mother voice=NP010008
 
 @Hitret id=37099
 
@@ -627,7 +627,7 @@
 
 @Hitret id=37100
 
-@Talk name=Motoka's_Mother voice=NP010009
+@Talk name=Motoka's　Mother voice=NP010009
 
 @Hitret id=37101
 
@@ -635,7 +635,7 @@
 
 @Hitret id=37102
 
-@Talk name=Motoka's_Mother voice=NP010010
+@Talk name=Motoka's　Mother voice=NP010010
 
 @Hitret id=37103
 
@@ -643,7 +643,7 @@
 
 @Hitret id=37104
 
-@Talk name=Motoka's_Mother voice=NP010011
+@Talk name=Motoka's　Mother voice=NP010011
 
 @Hitret id=37105
 
@@ -691,7 +691,7 @@
 
 @Hitret id=37114
 
-@Talk name=Motoka's_Mother voice=NP010012
+@Talk name=Motoka's　Mother voice=NP010012
 
 @Hitret id=37115
 
@@ -702,7 +702,7 @@
 
 @Hitret id=37116
 
-@Talk name=Motoka's_Mother voice=NP010013
+@Talk name=Motoka's　Mother voice=NP010013
 
 @Hitret id=37117
 
@@ -710,7 +710,7 @@
 
 @Hitret id=37118
 
-@Talk name=Motoka's_Mother voice=NP010014
+@Talk name=Motoka's　Mother voice=NP010014
 
 @Hitret id=37119
 
@@ -718,7 +718,7 @@
 
 @Hitret id=37120
 
-@Talk name=Motoka's_Mother voice=NP010015
+@Talk name=Motoka's　Mother voice=NP010015
 
 @Hitret id=37121
 
@@ -935,11 +935,11 @@
 
 @Hitret id=37163
 
-@Talk name=Motoka's_Mother voice=NP010016
+@Talk name=Motoka's　Mother voice=NP010016
 
 @Hitret id=37164
 
-@Talk name=Motoka's_Mother voice=NP010017
+@Talk name=Motoka's　Mother voice=NP010017
 
 @Hitret id=37165
 
@@ -955,7 +955,7 @@
 
 @Hitret id=37168
 
-@Talk name=Motoka's_Mother voice=NP010018
+@Talk name=Motoka's　Mother voice=NP010018
 
 @Hitret id=37169
 
@@ -966,7 +966,7 @@
 
 @Hitret id=37170
 
-@Talk name=Motoka's_Mother voice=NP010019
+@Talk name=Motoka's　Mother voice=NP010019
 
 @Hitret id=37171
 
@@ -977,7 +977,7 @@
 
 @Hitret id=37172
 
-@Talk name=Motoka's_Mother voice=NP010020
+@Talk name=Motoka's　Mother voice=NP010020
 
 @Hitret id=37173
 
@@ -1082,7 +1082,7 @@
 
 @Hitret id=37193
 
-@Talk name=Motoka's_Mother voice=NP010021
+@Talk name=Motoka's　Mother voice=NP010021
 
 @Hitret id=37194
 
@@ -1093,7 +1093,7 @@
 
 @Hitret id=37195
 
-@Talk name=Motoka's_Mother voice=NP010022
+@Talk name=Motoka's　Mother voice=NP010022
 
 @Hitret id=37196
 
@@ -1120,11 +1120,11 @@
 
 @Hitret id=37201
 
-@Talk name=Motoka's_Mother voice=NP010023
+@Talk name=Motoka's　Mother voice=NP010023
 
 @Hitret id=37202
 
-@Talk name=Motoka's_Mother voice=NP010024
+@Talk name=Motoka's　Mother voice=NP010024
 
 @Hitret id=37203
 
@@ -1139,7 +1139,7 @@
 
 @Hitret id=37205
 
-@Talk name=Motoka's_Mother voice=NP010025
+@Talk name=Motoka's　Mother voice=NP010025
 
 @Hitret id=37206
 

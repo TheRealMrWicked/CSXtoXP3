@@ -1,0 +1,13 @@
+index,id,buid,vcid,name,lastname,middlename,order,relate
+0,SORA,CA,SR,穹,春日野,,100,80
+1,AKIRA,CC,AK,瑛,天女目,,90,10
+2,NAO,CB,NO,奈緒,依媛,,60,60
+3,KAZUHA,CD,KA,一葉,渚,,50,30
+4,MOTOKA,CE,MT,初佳,乃木坂,,70,70
+5,RYOUHEI,CF,RH,亮平,中里,,30,50
+6,YAHIRO,CG,YH,やひろ,伊福部,,40,90
+7,KOZUE,CH,KO,梢,倉永,,80,40
+8,TAKAYUKI,CJ,YM,隆之,月見山,,10,100
+9,SHIGEHARU,CK,SH,繁治,渚,,20,20
+10,NPC_OTHER,OT,NP,,,,,
+#以下デバッグ用,,,,,,,,

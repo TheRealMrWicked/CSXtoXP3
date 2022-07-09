@@ -108,7 +108,7 @@
 
 @Hitret id=34443
 
-@Talk name=English_Teacher voice=NP490001
+@Talk name=English　Teacher voice=NP490001
 
 @Hitret id=34444
 
@@ -119,7 +119,7 @@
 
 @Hitret id=34445
 
-@Talk name=English_Teacher voice=NP490002
+@Talk name=English　Teacher voice=NP490002
 
 @Hitret id=34446
 
@@ -172,11 +172,11 @@
 
 @Hitret id=34456
 
-@Talk name=English_Teacher voice=NP490003
+@Talk name=English　Teacher voice=NP490003
 
 @Hitret id=34457
 
-@Talk name=English_Teacher voice=NP490004
+@Talk name=English　Teacher voice=NP490004
 
 @Hitret id=34458
 
@@ -203,7 +203,7 @@
 
 @Hitret id=34463
 
-@Talk name=English_Teacher voice=NP490005
+@Talk name=English　Teacher voice=NP490005
 
 @Hitret id=34464
 

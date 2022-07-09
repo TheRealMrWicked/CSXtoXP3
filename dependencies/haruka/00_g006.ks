@@ -5,34 +5,34 @@
 @Cg file=B16a
 @Char file=CG01_01M
 
-@Talk name=Yahiro_Monologue voice=YH010213
+@Talk name=Yahiro　Monologue voice=YH010213
 
 @Hitret id=6110
 
-@Talk name=Yahiro_Monologue voice=YH010214
+@Talk name=Yahiro　Monologue voice=YH010214
 
 @Hitret id=6111
 
-@Talk name=Yahiro_Monologue voice=YH010215
+@Talk name=Yahiro　Monologue voice=YH010215
 
 @Hitret id=6112
 
-@Talk name=Yahiro_Monologue voice=YH010216
+@Talk name=Yahiro　Monologue voice=YH010216
 
 @Hitret id=6113
 
-@Talk name=Yahiro_Monologue voice=YH010217
+@Talk name=Yahiro　Monologue voice=YH010217
 
 @Hitret id=6114
 
-@Talk name=Yahiro_Monologue voice=YH010218
+@Talk name=Yahiro　Monologue voice=YH010218
 
 @Hitret id=6115
 
 
 @Char file=CG01_06M
 
-@Talk name=Yahiro_Monologue voice=YH010219
+@Talk name=Yahiro　Monologue voice=YH010219
 
 @Hitret id=6116
 
@@ -208,7 +208,7 @@
 @Update transition=universal rule=WIP_MOZV time=500
 @WaitUpdate
 
-@Talk name=Yahiro_Monologue voice=YH010230
+@Talk name=Yahiro　Monologue voice=YH010230
 
 @Hitret id=6145
 

@@ -1,0 +1,813 @@
+
+class AnimationSequenceController extends KAGParser{
+	var _handle;
+	var _waitTimer;
+
+	var _label = "";
+
+	function AnimationSequenceController(handle){
+		KAGParser();
+
+		_handle = handle;
+
+		_waitTimer = new Timer(onTimeOut, "");
+
+		multiLineTagEnabled = true;
+		ignoreCR = true;
+		debugLevel = tkdlNone;
+	}
+	function finalize(){
+		_waitTimer.enabled = false;
+		invalidate _waitTimer;
+	}
+
+	function startSetupSequence(){
+		goToLabel("*init");
+
+		startSequence();
+	}
+	function startAnimationSequence(){
+		goToLabel("*seq");
+
+		startSequence();
+	}
+	function stopAnimationSequence(){
+		_waitTimer.enabled = false;
+	}
+	function startSequence(){
+		while(true){
+			var tag = getNextTag();
+
+			if(tag === void){
+				onTag(%[tagname:"terminate"]);
+				break;
+			}
+
+			var ret = onTag(tag);
+
+			if(_waitTimer.enabled) break;
+			if(ret == taghandler_end) break;
+		}
+	}
+
+	function callback(){
+		startSequence();
+	}
+
+	function onTag(tag){
+		var ret = 0;
+		var tagname = tag.tagname;
+		var func = _handle[tagname];
+		if(func !== void){
+			ret = func(tag);
+		}else{
+			dm("不明なタグです-"+tag.tagname);
+		}
+		return ret;
+	}
+
+	function wait(time){
+		_waitTimer.interval = time;
+		_waitTimer.enabled = true;
+	}
+
+	function onTimeOut(){
+		_waitTimer.enabled = false;
+
+		startSequence();
+	}
+
+	function onLabel(label, paramname){
+		switch(label){
+		case "*attribute" : 
+			var elm = %[tagname:"attribute"];
+			switch(paramname.trim()){
+			case "fixed" : elm.fixed = true; break;
+			case "volatile" : elm.volatile = true; break;
+			}
+			onTag(elm);
+			break;
+		}
+	}
+}
+
+class AnimationSequence{
+	var _window;
+	var _parent;
+
+	var _amsCtrl;
+
+	var _image = [];
+	var _sprite = [];
+
+	var _param = %[];
+
+	var _targetObj;
+
+	var _attribute = atbVolatile;
+	var _fTerminate = false;
+
+	var _basePosX = 0;
+	var _basePosY = 0;
+	var _baseAbs = 0;
+	var _baseAngle = 0;
+	var _baseScl = 0;
+
+	var _fInit = false;
+	var _fStartSequence = false;
+
+	function AnimationSequence(win, par){
+		_window = win;
+		_parent = par;
+		_amsCtrl = new AnimationSequenceController(getHandlers());
+	}
+	function finalize(){
+		invalidate _amsCtrl;
+
+		for(var i=0;i<_sprite.count;i++){
+			_sprite[i].image.stopActivation();
+			invalidate _sprite[i].image;
+		}
+		for(var i=0;i<_image.count;i++){
+			invalidate _image[i].image;
+		}
+		InvalidateArray(_image);
+		InvalidateArray(_sprite);
+	}
+
+	function load(file){
+		_amsCtrl.loadScenario(file + ".ams");
+	}
+	function setup(param){
+		checkAttribute();
+
+		(Dictionary.clear incontextof _param)();
+		if(param !== void)
+			(Dictionary.assignStruct incontextof _param)(param);
+
+		_targetObj = param.target;
+
+		_amsCtrl.startSetupSequence();
+		_fInit = true;
+	}
+
+	function start(){
+		if(!_fInit) return;
+
+		if(_fStartSequence){
+			_amsCtrl.stopAnimationSequence();
+			clear();
+		}
+		_amsCtrl.startAnimationSequence();
+		_fStartSequence = true;
+	}
+	function stop(){
+		_amsCtrl.stopAnimationSequence();
+	}
+
+	function clear(){
+		for(var i=0;i<_sprite.count;i++){
+			invalidate _sprite[i].image;
+		}
+		InvalidateArray(_sprite);
+		_sprite.clear();
+	}
+
+	function isImage(imgid){
+		for(var i=0;i<_image.count;i++){
+			if(_image[i].id == imgid) return true;
+		}
+		return false;
+	}
+	function getImage(imgid){
+		var i = 0;
+		for(;i<_image.count;i++){
+			if(_image[i].id == imgid) return _image[i];
+		}
+
+		_image[i] = %[id:imgid];
+		_image[i].image = new Layer(_window, _parent);
+		return _image[i];
+	}
+	function removeImage(imgid){
+		for(var i=_image.count-1;i>=0;i--){
+			if(_image[i].id != imgid) continue;
+
+			_image.erase(i);
+			break;
+		}
+	}
+
+	function isSprite(sprid){
+		for(var i=0;i<_sprite.count;i++){
+			if(_sprite[i].id == sprid) return true;
+		}
+		return false;
+	}
+	function getSprite(sprid){
+		var i = 0;
+		for(;i<_sprite.count;i++){
+			if(_sprite[i].id == sprid) return _sprite[i];
+		}
+
+		_sprite[i] = %[id:sprid];
+		_sprite[i].image = new AnimationSprite(_window, _parent);
+		return _sprite[i];
+	}
+	function removeSprite(sprid){
+		for(var i=_sprite.count-1;i>=0;i--){
+			if(_sprite[i].id != sprid) continue;
+
+			_sprite.erase(i);
+			break;
+		}
+	}
+
+	function getParam(param, def=0){
+		if(param === void) return def;
+
+		var elm = param.split("/");
+
+		if(_param[elm[0]] !== void) return _param[elm[0]];
+		if(elm[1] !== void) return elm[1];
+		if(param !== void) return param;
+
+		return def;
+	}
+
+	function getRandom(min, max){
+		var ret = 0;
+
+		if(typeof min == "String"){
+			var num = min.split(",");
+			num[0] = int num[0].trim();
+			if(num.count < 2)	num[1] = num[0];
+			else				num[1] = int num[1].trim();
+			ret = random2(num[0], num[1]);
+		}else{
+			if(max === void) max = min;
+			ret = random2(min, max);
+		}
+
+		return ret;
+	}
+
+	function getHandlers(){
+		return %[
+		//-----------------------------------
+		//init
+		attribute : function(elm){
+			return setAttribute(elm);
+		} incontextof this, 
+		loadimage : function(elm){
+			return loadImage(elm);
+		} incontextof this, 
+		setparam : function(elm){
+			return setParam(elm);
+		} incontextof this, 
+		//-----------------------------------
+		//seq
+		set : function(elm){
+			return set(elm);
+		} incontextof this, 
+		setmulti : function(elm){
+			return setMulti(elm);
+		} incontextof this, 
+		show : function(elm){
+			return show(elm);
+		} incontextof this, 
+		hide : function(elm){
+			return hide(elm);
+		} incontextof this, 
+		reset : function(elm){
+			return reset(elm);
+		} incontextof this, 
+		setcell : function(elm){
+			return setCell(elm);
+		} incontextof this, 
+		pos : function(elm){
+			return pos(elm);
+		} incontextof this, 
+		motion : function(elm){
+			return motion(elm);
+		} incontextof this, 
+		se : function(elm){
+			return se(elm);
+		} incontextof this, 
+		wait : function(elm){
+			return wait(elm);
+		} incontextof this, 
+		stop : function(elm){
+			return taghandler_getcontinue;
+		} incontextof this, 
+		//-----------------------------------
+		particle : function(elm){
+			return particle(elm);
+		} incontextof this, 
+		//-----------------------------------
+		terminate : function(elm){
+			_fTerminate = true;
+			return taghandler_end;
+		} incontextof this, 
+		end : function(elm){
+			return taghandler_end;
+		} incontextof this, 
+		//-----------------------------------
+		dm : function(elm){
+			dm(elm.text);
+			return taghandler_getcontinue;
+		} incontextof this, 
+		dummy : function(elm){
+			return taghandler_getcontinue;
+		} incontextof this
+		];
+	}
+
+	function setAttribute(elm){
+		_attribute = GetElm(elm.fixed, atbFixed, atbVolatile);
+		return taghandler_getcontinue;
+	}
+
+	function loadImage(elm){
+		var imgid = GetElm(elm.imgid, "imgid");
+
+		var file = getParam(elm.file, "");
+		var cell = int getParam(elm.cell, 1);
+		var axis = getParam(elm.axis, "center");
+		var ignoreAngle = GetElm(elm.ignoreangle, true, false);
+
+		var img = getImage(imgid);
+		img.cell = cell;
+		with(img.image){
+			.loadImages(file);
+			.setSizeToImageSize();
+
+			var w = .imageWidth \ cell;
+			var h = .imageHeight;
+
+			var afx, afy;
+			switch(axis){
+			case "lt" : afx = 0; afy = 0; break;
+			case "rt" : afx = w - 1; afy = 0; break;
+			case "lb" : afx = 0; afy = h - 1; break;
+			case "rb" : afx = w - 1; afy = h - 1; break;
+			case "ct" : afx = w \ 2; afy = 0; break;
+			case "lc" : afx = 0; afy = h \ 2; break;
+			case "rc" : afx = w - 1; afy = h \ 2; break;
+			case "cb" : afx = w \ 2; afy = h - 1; break;
+			case "center" : afx = w \ 2; afy = h \ 2; break;
+			default : 
+				var pt = PointStrToNum(axis);
+				afx = pt.x;
+				afy = pt.y;
+				break;
+			}
+			img.afx = afx;
+			img.afy = afy;
+
+			img.ignoreAngle = ignoreAngle;
+		}
+		return taghandler_getcontinue;
+	}
+
+	function setParam(elm){
+		_basePosX = int getParam(elm.basex, 0);
+		_basePosY = int getParam(elm.basey, 0);
+		_baseAbs = int getParam(elm.baseabs, 0);
+		_baseAngle = int getParam(elm.baseangle, 0);
+		_baseScl = getParam(elm.basescl, 100);
+			_baseScl = (int _baseScl) / 100.0;
+
+		return taghandler_getcontinue;
+	}
+
+	function set(elm){
+		var imgid = GetElm(elm.imgid, "imgid");
+		if(!isImage(imgid)) return;
+
+		var sprid = GetElm(elm.id, "sprid");
+
+		var ptPos = new Point(int GetElm(elm.x, 0), int GetElm(elm.y, 0), 0);
+		if(_baseAngle) ptPos = D3AffineZ(ptPos, _baseAngle);
+		var abs = int GetElm(elm.abs, 0);
+		var trans = int GetElm(elm.trans, 255);
+		var rotate = int GetElm(elm.rotate, 0);
+		var zoomx = int GetElm(elm.zoomx, 100);
+		var zoomy = int GetElm(elm.zoomy, 100);
+		var cell = int GetElm(elm.cell, 0);
+		var fShow = int GetElm(elm.hide, false, true);
+		var fAdditive = GetElm(elm.add, true, false);
+
+		var refImage = getImage(imgid);
+		var spr = getSprite(sprid);
+		spr.cell = refImage.cell;
+		spr.imageIgnoreAngle = refImage.ignoreAngle;
+		if(cell >= spr.cell) cell = 0;
+		with(spr.image){
+			.assignImages(refImage.image);
+			.setSize(refImage.image.imageWidth \ refImage.cell, refImage.image.imageHeight);
+			.setCenter(refImage.afx, refImage.afy);
+			.setAffineOffset(refImage.afx, refImage.afy);
+
+			.absolute = _baseAbs + abs;
+			.opacity = trans;
+			.rotate = _baseAngle + rotate;
+			if(elm.zoom !== void){
+				.zoomx = .zoomy = int elm.zoom;
+			}else{
+				.setZoom(zoomx, zoomy);
+			}
+
+			.setPos(_basePosX + ptPos.x, _basePosY + ptPos.y);
+			.setImagePos(-.width * cell, 0);
+
+			if(fAdditive) .type = ltAdditive;
+
+			.hitTheshold = 256;
+
+			.visible = fShow;
+		}
+		invalidate ptPos;
+		return taghandler_getcontinue;
+	}
+	function setSingle(elm){
+		set(elm);
+
+		return taghandler_getcontinue;
+	}
+	function setMulti(elm){
+		var baseSprId = GetElm(elm.id, "sprid");
+		var num = GetElm(elm.num, 1);
+
+		var area = GetElm(elm.area, "0,0,0/0,0,0");
+		area = area.split("/");
+		var sArea = PointStrToNum(area[0]);
+		var dArea = PointStrToNum(area[1]);
+		if(sArea.x > dArea.x) sArea.x <-> dArea.x;
+		if(sArea.y > dArea.y) sArea.y <-> dArea.y;
+		if(sArea.z > dArea.z) sArea.z <-> dArea.z;
+
+		var zoom = GetElm(elm.zoom, "0,0");
+		zoom = zoom.split(",");
+		zoom[0] = int zoom[0];
+		zoom[1] = int zoom[1];
+		if(zoom[0] > zoom[1]) zoom[0] <-> zoom[1];
+		delete elm.zoom;
+
+		var rotate = GetElm(elm.rotate, "0,0");
+		rotate = rotate.split(",");
+		rotate[0] = int rotate[0];
+		rotate[1] = int rotate[1];
+		if(rotate[0] > rotate[1]) rotate[0] <-> rotate[1];
+		delete elm.rotate;
+
+		var trans = GetElm(elm.trans, "255,255");
+		trans = trans.split(",");
+		trans[0] = int trans[0].trim();
+		trans[1] = int trans[1].trim();
+		if(trans[0] > trans[1]) trans[0] <-> trans[1];
+		delete elm.trans;
+
+		for(var i=0;i<num;i++){
+			elm.id = baseSprId + string(i);
+			elm.x = sArea.x + random(dArea.x - sArea.x);
+			elm.y = sArea.y + random(dArea.y - sArea.y);
+			elm.zoomx = elm.zoomy = getRandom(zoom[0], zoom[1]);
+ 			elm.rotate = getRandom(rotate[0], rotate[1]);
+ 			elm.trans = getRandom(trans[0], trans[1]);
+			elm.abs = sArea.z + random(dArea.z - sArea.z);
+
+			set(elm);
+		}
+
+		return taghandler_getcontinue;
+	}
+
+	function show(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var spr = getSprite(sprid);
+		spr.image.visible = true;
+
+		return taghandler_getcontinue;
+	}
+
+	function hide(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var spr = getSprite(sprid);
+		spr.image.visible = false;
+
+		return taghandler_getcontinue;
+	}
+
+	function reset(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var spr = getSprite(sprid);
+		spr.image.visible = false;
+		removeSprite(sprid);
+
+		return taghandler_getcontinue;
+	}
+
+	function setCell(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var cell = int GetElm(elm.cell, 0);
+
+		if(cell >= _sprite[elm.id].cell) cell = 0;
+
+		with(_sprite[elm.id].image){
+			.setImagePos(-.width * cell, 0);
+		}
+		return taghandler_getcontinue;
+	}
+
+	function pos(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var x = int GetElm(elm.x, 0);
+		var y = int GetElm(elm.y, 0);
+
+		with(_sprite[id].image){
+			.setPos(_basePosX + x, _basePosY + y);
+		}
+		return taghandler_getcontinue;
+	}
+
+	function motion(elm){
+		var sprid = GetElm(elm.id, "sprid");
+		if(!isSprite(sprid)) return;
+
+		var spr = getSprite(sprid);
+
+		var path = GetElm(elm.path, "").split(",");
+		for(var i=0;i<path.count;i++){
+			path[i] = int path[i].trim();
+		}
+		var PARAM = 7;
+		var points = path.count \ PARAM;
+		var tempPos = new Point();
+		for(var i=0;i<path.count;i+=PARAM){
+			tempPos.set(path[i+0], path[i+1], path[i+2]);
+			if(_baseAngle) tempPos = D3AffineZ(tempPos, _baseAngle);
+			path[i+0] = tempPos.x * _baseScl + _basePosX;	// x
+			path[i+1] = tempPos.y * _baseScl + _basePosY;	// y
+			path[i+2] = tempPos.z + _baseAbs;	// z
+			path[i+3] = path[i+3];	// opacity
+			path[i+4] = path[i+4];	// zoomx
+			path[i+5] = path[i+5];	// zoomy
+			path[i+6] = spr.imageIgnoreAngle ? 0 : _baseAngle + path[i+6];	// rotate
+		}
+		invalidate tempPos;
+
+		var accel = int GetElm(elm.accel, 0);
+		var time = int GetElm(elm.time, 0);
+
+		spr.image.setMovingSplineEnvelope2(path, accel);
+		spr.image.beginActivation(time);
+
+		return taghandler_getcontinue;
+	}
+
+	function particle(elm){
+		var paramElm = %[id:elm.id, num:elm.num, imgid:elm.imgid, cell:elm.cell, area:elm.area, zoom:elm.zoom, rotate:elm.rotate, add:elm.add];
+		setMulti(paramElm);
+
+		var baseSprId = GetElm(elm.id, "sprid");
+		var num = int GetElm(elm.num, 1);
+		var speed = GetElm(elm.speed, 100);
+		var accel = int GetElm(elm.accel, 0);
+		var fade = int GetElm(elm.fade, 255);
+		var rotate = random(int GetElm(elm.rotate, 0));
+		var time = int GetElm(elm.time, 0);
+		var direction = GetElm(elm.direction, "radial");
+		var pos = new Point();
+
+		for(var i=0;i<num;i++){
+			var id = baseSprId + string(i);
+			var spr = getSprite(id).image;
+
+			with(spr){
+				switch(direction){
+				case "random" : 
+					pos.set(-10+random(20), -10+random(20), 0);
+					break;
+				case "radial" : 
+				default : 
+					pos.set(.left - _basePosX, .top - _basePosY, 0);
+					break;
+				}
+				pos = pos.normalize();
+
+				var sp = getRandom(speed);
+				var dx = pos.x * sp * _baseScl;
+				var dy = pos.y * sp * _baseScl;
+
+				var path = [
+				.left, .top, .absolute, .opacity, .zoomx, .zoomy, .rotate, 
+				.left+dx/2, .top+dy/2, .absolute, .opacity, .zoomx, .zoomy, .rotate+rotate\2, 
+				.left+dx, .top+dy, .absolute, fade, .zoomx, .zoomy, .rotate+rotate
+				];
+
+				.setMovingSplineEnvelope2(path, accel);
+				.beginActivation(time);
+			}
+		}
+
+		return taghandler_getcontinue;
+	}
+
+	function se(elm){
+		PlaySe(elm.file);
+		return taghandler_getcontinue;
+	}
+
+	function wait(elm){
+		var time = getParam(elm.time, 0);
+		time = getRandom(time);
+		if(time == 0) return taghandler_getcontinue;
+
+		_amsCtrl.wait(time);
+		return taghandler_end;
+	}
+
+	function isCanDestroy(){
+		for(var i=_sprite.count-1;i>=0;i--){
+			if(_sprite[i].image.isActivation()) return false;
+		}
+		return (_attribute == atbVolatile && _fTerminate);
+	}
+
+	function checkAttribute(){
+		try{
+			_amsCtrl.goToLabel("*attribute");
+			_amsCtrl.getNextTag();
+		}catch(){
+		}
+		return _attribute;
+	}
+
+	property window{
+		getter(){return _window;}
+	}
+	property parent{
+		getter(){return _parent;}
+	}
+
+	property param{
+		getter(){return _param;}
+	}
+
+	property attribute{
+		getter(){return _attribute;}
+	}
+	property terminate{
+		getter(){return _fTerminate;}
+	}
+
+	class AnimationSprite extends Sprite{
+		function AnimationSprite(win, par){
+			super.Sprite(win, par);
+
+			hitThreshold = 256;
+		}
+		function finalize(){
+			super.finalize();
+		}
+		function beginActivation(time){
+			super.beginActivation(time);
+		}
+		function flushActivation(){
+			if(!(isvalid this)) return;
+			if(parent == null ? true : !(isvalid parent)) return;
+
+			if(_moveType == MOVETYPE_SPLINE2){
+				var pos = _sMoving1.pt(1.0);
+				setPos(Math.round(pos.x), Math.round(pos.y));
+				absolute = Math.round(pos.z);
+
+				var pos = _sMoving2.pt(1.0);
+				opacity = Math.round(pos.x);
+				setZoom(Math.round(pos.y), Math.round(pos.z));
+
+				var pos = _sMoving3.pt(1.0);
+				rotate = Math.round(pos.x);
+			}else{
+				super.flushActivation();
+			}
+
+			initAsyncParameter();
+			System.removeContinuousHandler(on_activationTimer);
+			_beginActivationTime = -1;
+
+			onEndActivation(2);
+		}
+		function on_activationTimer(now){
+			if(!(isvalid this)) return;
+			if(parent == null ? true : !(isvalid parent)) return;
+
+			var tick = real(now - _beginActivationTime) / _activationTime;
+			if(tick > 1.0){
+				flushActivation();
+				return;
+			}
+
+			//透明度
+			if(_startOpacity != -1){
+				opacity = _startOpacity + (_endOpacity - _startOpacity)*tick;
+			}
+			//移動
+			if(_moveType == MOVETYPE_SPLINE2){
+				var pos = _sMoving1.pt(tick);
+				setPos(Math.round(pos.x), Math.round(pos.y));
+				absolute = Math.round(pos.z);
+
+				var pos = _sMoving2.pt(tick);
+				opacity = UDLimit(Math.round(pos.x), 255, 0);
+				setZoom(Math.round(pos.y), Math.round(pos.z));
+
+				var pos = _sMoving3.pt(tick);
+				rotate = Math.round(pos.x);
+			}else{
+				super.on_activationTimer(now);
+			}
+		}
+	}
+}
+AnimationSequence.atbVolatile = 0;
+AnimationSequence.atbFixed = 1;
+
+class AnimationSequenceList{
+	var _list = [];
+
+	function AnimationSequenceList(){}
+
+	function finalize(){
+		InvalidateArray(_list);
+	}
+
+	function clear(){
+		InvalidateArray(_list);
+		_list.clear();
+	}
+
+	function clean(){
+		for(var i=_list.count-1;i>=0;i--){
+			if(_list[i].isCanDestroy()){
+				invalidate _list[i];
+				_list.erase(i);
+			}
+		}
+	}
+
+	function stop(){
+		for(var i=_list.count-1;i>=0;i--){
+			_list[i].stop();
+		}
+	}
+
+	function add(sequence, param=%[]){
+	//sequence : エモーションファイル(拡張子なし)
+	//param : parent - 親レイヤーオブジェクト
+		clean();
+
+		var ams = new AnimationSequence(param.parent.window, param.parent);
+		_list.add(ams);
+
+		ams.load(sequence);
+		ams.setup(param);
+		ams.start();
+	}
+
+	function onSequenceEnd(target){
+		for(var i=_list.count-1;i>=0;i--){
+			if(_list[i] != target) continue;
+
+			invalidate _list[i];
+			_list.erase(i);
+			break;
+		}
+	}
+
+	function removeOfParent(parent){
+		for(var i=_list.count-1;i>=0;i--){
+			if(_list[i].parent != parent) continue;
+
+			invalidate _list[i];
+			_list.erase(i);
+		}
+	}
+
+	function at(index){return _list[index];}
+
+	property count{
+		getter(){ return _list.count; }
+	}
+}

@@ -252,7 +252,7 @@
 @Char file=CB01_01L 
 @PlayBgm file=BGM08
 
-@Talk name=Nao_and_Yu voice=NO000005
+@Talk name=NaoÅ@andÅ@Yu voice=NO000005
 
 @Hitret id=424
 

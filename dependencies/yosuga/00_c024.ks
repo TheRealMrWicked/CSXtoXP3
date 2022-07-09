@@ -18,11 +18,11 @@
 
 @Hitret id=23738
 
-@Talk name=Child_A voice=NP180011
+@Talk name=Child　A voice=NP180011
 
 @Hitret id=23739
 
-@Talk name=Child_B voice=NP190017
+@Talk name=Child　B voice=NP190017
 
 @Hitret id=23740
 
@@ -49,11 +49,11 @@
 
 @Hitret id=23745
 
-@Talk name=Child_A voice=NP180012
+@Talk name=Child　A voice=NP180012
 
 @Hitret id=23746
 
-@Talk name=Child_B voice=NP190018
+@Talk name=Child　B voice=NP190018
 
 @Hitret id=23747
 
@@ -61,11 +61,11 @@
 
 @Hitret id=23748
 
-@Talk name=Child_A voice=NP180013
+@Talk name=Child　A voice=NP180013
 
 @Hitret id=23749
 
-@Talk name=Child_B voice=NP190019
+@Talk name=Child　B voice=NP190019
 
 @Hitret id=23750
 
@@ -103,11 +103,11 @@
 
 @Hitret id=23757
 
-@Talk name=Child_A voice=NP180014
+@Talk name=Child　A voice=NP180014
 
 @Hitret id=23758
 
-@Talk name=Child_B voice=NP190020
+@Talk name=Child　B voice=NP190020
 
 @Hitret id=23759
 
@@ -122,11 +122,11 @@
 
 @Hitret id=23761
 
-@Talk name=Child_A voice=NP180015
+@Talk name=Child　A voice=NP180015
 
 @Hitret id=23762
 
-@Talk name=Child_B voice=NP190021
+@Talk name=Child　B voice=NP190021
 
 @Hitret id=23763
 
@@ -158,11 +158,11 @@
 @WaitUpdate
 @PlayEnvSe file=SE301 fade=0
 
-@Talk name=Child_A voice=NP180016
+@Talk name=Child　A voice=NP180016
 
 @Hitret id=23767
 
-@Talk name=Child_B voice=NP190022
+@Talk name=Child　B voice=NP190022
 
 @Hitret id=23768
 
@@ -173,7 +173,7 @@
 
 @Hitret id=23769
 
-@Talk name=Child_B voice=NP190023
+@Talk name=Child　B voice=NP190023
 
 @Hitret id=23770
 
@@ -207,7 +207,7 @@
 
 @Hitret id=23776
 
-@Talk name=Child_A voice=NP180017
+@Talk name=Child　A voice=NP180017
 
 @Hitret id=23777
 
@@ -215,7 +215,7 @@
 
 @Hitret id=23778
 
-@Talk name=Child_B voice=NP190024
+@Talk name=Child　B voice=NP190024
 
 @Hitret id=23779
 
@@ -223,7 +223,7 @@
 
 @Hitret id=23780
 
-@Talk name=Child_B voice=NP190025
+@Talk name=Child　B voice=NP190025
 
 @Hitret id=23781
 
@@ -234,7 +234,7 @@
 
 @Hitret id=23782
 
-@Talk name=Child_B voice=NP190026
+@Talk name=Child　B voice=NP190026
 
 @Hitret id=23783
 
@@ -280,11 +280,11 @@
 
 @Hitret id=23792
 
-@Talk name=Child_A voice=NP180018
+@Talk name=Child　A voice=NP180018
 
 @Hitret id=23793
 
-@Talk name=Child_B voice=NP190027
+@Talk name=Child　B voice=NP190027
 
 @Hitret id=23794
 
@@ -295,7 +295,7 @@
 
 @Hitret id=23795
 
-@Talk name=Child_A voice=NP180019
+@Talk name=Child　A voice=NP180019
 
 @Hitret id=23796
 
@@ -1359,11 +1359,11 @@
 
 @Hitret id=23993
 
-@Talk name=Child_A voice=NP180020
+@Talk name=Child　A voice=NP180020
 
 @Hitret id=23994
 
-@Talk name=Child_B voice=NP190028
+@Talk name=Child　B voice=NP190028
 
 @Hitret id=23995
 
@@ -1385,11 +1385,11 @@
 
 @Hitret id=23998
 
-@Talk name=Child_A voice=NP180021
+@Talk name=Child　A voice=NP180021
 
 @Hitret id=23999
 
-@Talk name=Child_B voice=NP190029
+@Talk name=Child　B voice=NP190029
 
 @Hitret id=24000
 

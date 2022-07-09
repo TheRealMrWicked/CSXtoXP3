@@ -94,7 +94,7 @@
 
 @Char file=CA01_01M 
 
-@Talk name=Sora_and_Haruka voice=SR050014
+@Talk name=Sora@and@Haruka voice=SR050014
 
 @Hitret id=33723
 

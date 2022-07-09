@@ -1,0 +1,137 @@
+/*
+	システム定数の定義
+*/
+
+//--------------------------------
+//プリコンパイルフラグ
+//--------------------------------
+
+//デバックモードフラグ
+@set(__DEBUGMODE__ = 0)
+
+//体験版フラグ
+@set(__TRIAL__ = 0)
+
+//ファイルの暗号化フラグ
+@set(__FILE_CRYPT__ = 1)
+
+//ゲーム専用特殊処理用
+@set(__SPECIAL__ = 1)
+
+@set(__HARUKA__ = 1)
+
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+
+//ブランド名
+var GAME_BRAND = "Sphere";
+
+//ゲームタイトル
+var GAME_TITLE = "ハルカナソラ";
+
+//キャプション
+@if(__TRIAL__ == 0)
+	var GAME_CAPTION = GAME_TITLE;
+@endif
+@if(__TRIAL__ != 0)
+	var GAME_CAPTION = GAME_TITLE + " 体験版";
+@endif
+
+var DATA_PATH = System.dataPath;
+
+//起動オプションファイル
+@if(__TRIAL__ == 0)
+	var GAME_CONFIG = "ハルカナソラ.cf";
+@endif
+@if(__TRIAL__ != 0)
+	var GAME_CONFIG = "ハルカナソラTR.cf";
+@endif
+
+//ゲームバージョン
+var GAME_VERSION = "1.00";
+
+//セーブデータバージョン
+@if(__TRIAL__ == 0)
+//製品版
+	var SAVE_VERSION = "1.00";
+@endif
+@if(__TRIAL__ != 0)
+//体験版
+	var SAVE_VERSION = "1.00";
+@endif
+
+//発売日 ※月は0～11の範囲で。
+var DATE_RELEASE = new Date(2015, 0, 1);
+
+//画面サイズとか
+var WINDOW_WIDTH = 800;
+var WINDOW_HEIGHT = 600;
+var WINDOW_ASPECT = WINDOW_HEIGHT / WINDOW_WIDTH;
+var WINDOW_CENTER_X = WINDOW_WIDTH\2;
+var WINDOW_CENTER_Y = WINDOW_HEIGHT\2;
+var WINDOW_ZOOM_PER = 100000;
+var WINDOW_ZOOM_PER_FILTER = 1000;
+var WINDOW_ZOOM_MIN = 25000;
+var WINDOW_ZOOM_MAX = 200000;
+
+//レイヤー優先度（数字が大きいほど手前）
+//primaryレイヤの子レイヤ
+var id = 10000;
+var LAYER_ADVSCREEN		= (id += 10000);
+var LAYER_ADVMESSAGE	= (id += 10000);
+var LAYER_EYECATCH		= (id += 10000);
+var LAYER_MOVIE			= (id += 10000);
+var LAYER_STAFFROLL		= (id += 10000);
+var LAYER_HISTORY		= (id += 10000);
+var LAYER_TITLE			= (id += 10000);
+var LAYER_CONFIG		= (id += 10000);
+var LAYER_LOADSAVE		= (id += 10000);
+var LAYER_LOGO			= (id += 10000);
+var LAYER_APPRECIATION	= (id += 10000);
+var LAYER_INFORMATION	= (id += 10000);
+var LAYER_GIDELINE		= (id += 10000);
+var LAYER_COVER			= (id += 10000);
+var LAYER_DEBUG			= (id += 10000);
+var LAYER_FONTVIEWER	= (id += 10000);
+var LAYER_FLAGEDIT		= (id += 10000);
+var LAYER_CONFIRM		= (id += 10000);
+var LAYER_END			= (id += 10000);
+delete id;
+
+//時間帯ID
+var TIMEZONE_MORNING	= 1;	//朝
+var TIMEZONE_DAYLIGHT	= 2;	//昼
+var TIMEZONE_EVENING	= 3;	//夕方
+var TIMEZONE_NIGHT		= 4;	//夜
+var TIMEZONE_MIDNIGHT	= 5;	//深夜
+
+//バストアップのトリミングサイズ
+//基準位置から下のサイズを指定する
+var BUSTUP_TRIMMING_SIZE = 750;
+
+//キャラクター情報の相互変換辞書など
+var CHAR_DATA = [];
+var BUID_TO_INDEX = %[];
+var VCID_TO_INDEX = %[];
+var NAME_TO_INDEX = %[];
+
+//セーブデータ情報
+var SAVEDATA_BOOK_MAX = 10;
+var SAVEDATA_PAGE_MAX = 10;
+var SAVEDATA_PAGE_NUM = 9;
+var SAVEDATA_PAGEDATA_MAX = SAVEDATA_PAGE_MAX * SAVEDATA_PAGE_NUM;
+var QSAVEDATA_MAX = SAVEDATA_PAGE_NUM;
+
+//イベントＣＧのサイズをファイル名からMかLかをチェックする
+//ファイル名の指定位置のアルファベットで判断
+var EVENT_SIZE_CHECK_INDEX = 5;
+
+//フラグ数
+var PARAMETER_MAX		= 255;		//ローカルフラグ
+var GLOBAL_FLAG_MAX		= 1000;		//グローバルフラグ
+var READ_FLAG_MAX		= 100000;	//既読フラグ
+var CG_FLAG_MAX			= 16000;	//ＣＧフラグ
+
+var SELECTTERMINATE_FLAG = PARAMETER_MAX - 1;
+

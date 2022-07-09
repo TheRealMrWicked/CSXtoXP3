@@ -740,7 +740,7 @@
 @Char file=CA02_13M 
 @Font face=36
 
-@Talk name=Haruka_and_Sora voice=SR020196
+@Talk name=Haruka@and@Sora voice=SR020196
 
 @Hitret id=23335
 

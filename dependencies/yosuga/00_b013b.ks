@@ -57,7 +57,7 @@
 
 @Hitret id=13170
 
-@Talk name=Shrine_Maden_A voice=NP210001
+@Talk name=Shrine　Maden　A voice=NP210001
 
 @Hitret id=13171
 
@@ -84,11 +84,11 @@
 
 @Hitret id=13176
 
-@Talk name=Shrine_Maden_A voice=NP210002
+@Talk name=Shrine　Maden　A voice=NP210002
 
 @Hitret id=13177
 
-@Talk name=Shrine_Maden_B voice=NP220001
+@Talk name=Shrine　Maden　B voice=NP220001
 
 @Hitret id=13178
 
@@ -114,7 +114,7 @@
 
 @Hitret id=13182
 
-@Talk name=Shrine_Maden_A voice=NP210003
+@Talk name=Shrine　Maden　A voice=NP210003
 
 @Hitret id=13183
 

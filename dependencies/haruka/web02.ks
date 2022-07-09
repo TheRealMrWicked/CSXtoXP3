@@ -22,7 +22,7 @@
 @WaitUpdate
 
 
-@Talk name=Class_Rep's_Thoughts voice=KO100038
+@Talk name=Class　Rep's_Thoughts voice=KO100038
 
 @Hitret id=15509
 
@@ -32,7 +32,7 @@
 @Char file=CF01_02M tone=sepia
 @バナー表示 file=banner_web02
 
-@Talk name=Class_Rep's_Thoughts voice=KO100039
+@Talk name=Class　Rep's_Thoughts voice=KO100039
 
 @Hitret id=15510
 
@@ -43,7 +43,7 @@
 @Tone all type=NORMAL
 @StopBgm
 
-@Talk name=Class_Rep's_Thoughts voice=KO100040
+@Talk name=Class　Rep's_Thoughts voice=KO100040
 
 @Hitret id=15511
 
@@ -86,7 +86,7 @@
 
 @Char file=CH01_08M
 
-@Talk name=Class_Rep voice=KO100041
+@Talk name=Class　Rep voice=KO100041
 
 @Hitret id=15516
 
@@ -114,7 +114,7 @@
 
 @Char file=CH01_01M
 
-@Talk name=Class_Rep voice=KO100042
+@Talk name=Class　Rep voice=KO100042
 
 @Hitret id=15520
 
@@ -128,7 +128,7 @@
 
 @Char file=CH01_08M
 
-@Talk name=Class_Rep voice=KO100043
+@Talk name=Class　Rep voice=KO100043
 
 @Hitret id=15522
 
@@ -142,14 +142,14 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class_Rep voice=KO100044
+@Talk name=Class　Rep voice=KO100044
 
 @Hitret id=15524
 
 
 @Char file=CH01_11M
 
-@Talk name=Class_Rep voice=KO100045
+@Talk name=Class　Rep voice=KO100045
 
 @Hitret id=15525
 
@@ -280,7 +280,7 @@
 @ClearChar
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO100046
+@Talk name=Class　Rep voice=KO100046
 
 @Hitret id=15541
 
@@ -294,7 +294,7 @@
 
 @Char file=CH01_03M
 
-@Talk name=Class_Rep voice=KO100047
+@Talk name=Class　Rep voice=KO100047
 
 @Hitret id=15543
 
@@ -308,7 +308,7 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class_Rep's_Thoughts voice=KO100048
+@Talk name=Class　Rep's_Thoughts voice=KO100048
 
 @Hitret id=15545
 
@@ -317,11 +317,11 @@
 @Tone all type=SEPIA
 @Char file=CB01_05M
 
-@Talk name=Class_Rep's_Thoughts voice=KO100049
+@Talk name=Class　Rep's_Thoughts voice=KO100049
 
 @Hitret id=15546
 
-@Talk name=Class_Rep's_Thoughts voice=KO100050
+@Talk name=Class　Rep's_Thoughts voice=KO100050
 
 @Hitret id=15547
 
@@ -333,7 +333,7 @@
 
 @StopBgm
 
-@Talk name=Class_Rep's_Thoughts voice=KO100051
+@Talk name=Class　Rep's_Thoughts voice=KO100051
 
 @Hitret id=15548
 
@@ -359,7 +359,7 @@
 
 @Char file=CH01_01M
 
-@Talk name=Class_Rep voice=KO100052
+@Talk name=Class　Rep voice=KO100052
 
 @Hitret id=15551
 
@@ -649,7 +649,7 @@
 @ClearChar
 @Char file=CH01_04M
 
-@Talk name=Class_Rep voice=KO100053
+@Talk name=Class　Rep voice=KO100053
 
 @Hitret id=15590
 
@@ -720,7 +720,7 @@
 @Char file=CD01_07M
 @Char file=CH01_04M
 
-@Talk name=Class_Rep_＆_Kazuha voice=SYN000013
+@Talk name=Class　Rep　and　Kazuha voice=SYN000013
 
 @Hitret id=15599
 
@@ -790,7 +790,7 @@
 
 @Char file=CH01_01M
 
-@Talk name=Class_Rep voice=KO100055
+@Talk name=Class　Rep voice=KO100055
 
 @Hitret id=15605
 

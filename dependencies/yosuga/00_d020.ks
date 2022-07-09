@@ -509,7 +509,7 @@
 
 @Hitret id=29583
 
-@Talk name=Street_Vendor voice=NP410001
+@Talk name=Takoyaki　Street　Vendor voice=NP410001
 
 @Hitret id=29584
 
@@ -527,7 +527,7 @@
 
 @Hitret id=29586
 
-@Talk name=たこ焼き屋/露店のおじさん voice=NP380005
+@Talk name=Street　Vendor voice=NP380005
 
 @Hitret id=29587
 
@@ -600,7 +600,7 @@
 
 @Hitret id=29602
 
-@Talk name=かき氷屋/露店のおじさん voice=NP420001
+@Talk name=Shaved　Ice　Street　Vendor voice=NP420001
 
 @Hitret id=29603
 
@@ -712,7 +712,7 @@
 
 @Char file=CD03_12L 
 
-@Talk name=Store_Keeper's_Children voice=NP470001
+@Talk name=Store　Keeper's　Children voice=NP470001
 
 @Hitret id=29625
 
@@ -739,7 +739,7 @@
 
 @Hitret id=29630
 
-@Talk name=Store_Keeper's_Children voice=NP470002
+@Talk name=Store　Keeper's　Children voice=NP470002
 
 @Hitret id=29631
 
@@ -819,7 +819,7 @@
 
 @Hitret id=29648
 
-@Talk name=Store_Keeper's_Children voice=NP470003
+@Talk name=Store　Keeper's　Children voice=NP470003
 
 @Hitret id=29649
 
@@ -846,7 +846,7 @@
 
 @Hitret id=29654
 
-@Talk name=Store_Keeper's_Children voice=NP470004
+@Talk name=Store　Keeper's　Children voice=NP470004
 
 @Hitret id=29655
 
@@ -911,7 +911,7 @@
 
 @Hitret id=29668
 
-@Talk name=Store_Keeper's_Children voice=NP470005
+@Talk name=Store　Keeper's　Children voice=NP470005
 
 @Hitret id=29669
 
@@ -1171,7 +1171,7 @@
 @StopBgm fade=0
 @Char file=CD03_12M 
 
-@Talk name=Haruka_and_Kazuha voice=KA040590
+@Talk name=Haruka　and　Kazuha voice=KA040590
 
 @Hitret id=29724
 

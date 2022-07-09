@@ -13,11 +13,11 @@
 
 @Hitret id=9062
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9063
 
-@Talk name=Yahiro's_Thoughts voice=YH011096
+@Talk name=Yahiro's　Thoughts voice=YH011096
 
 @Hitret id=9064
 
@@ -40,7 +40,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9067
 
@@ -60,7 +60,7 @@
 
 @Hitret id=9071
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9072
 
@@ -96,7 +96,7 @@
 
 @Hitret id=9077
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9078
 
@@ -131,7 +131,7 @@
 
 @Hitret id=9083
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9084
 
@@ -192,7 +192,7 @@
 
 @Hitret id=9093
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9094
 
@@ -240,7 +240,7 @@
 
 @Hitret id=9102
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9103
 
@@ -263,7 +263,7 @@
 
 @Hitret id=9105
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9106
 
@@ -295,7 +295,7 @@
 
 @Hitret id=9113
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9114
 
@@ -336,7 +336,7 @@
 
 @Hitret id=9117
 
-@Talk name=Yahiro's_Classmates voice=NP160001
+@Talk name=Yahiro's　Classmates voice=NP160001
 
 @Hitret id=9118
 
@@ -377,7 +377,7 @@
 
 @Hitret id=9126
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9127
 
@@ -392,11 +392,11 @@
 
 @Hitret id=9129
 
-@Talk name=Yahiro's_Classmates voice=NP160002
+@Talk name=Yahiro's　Classmates voice=NP160002
 
 @Hitret id=9130
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9131
 
@@ -412,19 +412,19 @@
 @action id=カメラ action=ActionWave width=0, height=20, count=2 cycle=50
 @WaitAction id=カメラ
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9133
 
-@Talk name=Yahiro's_Classmates voice=NP160003
+@Talk name=Yahiro's　Classmates voice=NP160003
 
 @Hitret id=9134
 
-@Talk name=Yahiro's_Classmates voice=NP160004
+@Talk name=Yahiro's　Classmates voice=NP160004
 
 @Hitret id=9135
 
-@Talk name=Yahiro's_Classmates voice=NP160005
+@Talk name=Yahiro's　Classmates voice=NP160005
 
 @Hitret id=9136
 
@@ -444,7 +444,7 @@
 
 @Hitret id=9139
 
-@Talk name=Yahiro's_Classmates voice=NP160006
+@Talk name=Yahiro's　Classmates voice=NP160006
 
 @Hitret id=9140
 
@@ -469,7 +469,7 @@
 
 @Hitret id=9143
 
-@Talk name=Haruka_＆_Yahiro's_Classmates voice=NP160007
+@Talk name=Haruka　and　Yahiro's　Classmates voice=NP160007
 
 @Hitret id=9144
 
@@ -481,7 +481,7 @@
 
 @Hitret id=9146
 
-@Talk name=Yahiro's_Classmates voice=NP160008
+@Talk name=Yahiro's　Classmates voice=NP160008
 
 @Hitret id=9147
 
@@ -489,15 +489,15 @@
 @StopBgm fade=0
 @Char file=CG03_06M
 
-@Talk name=Haruka_＆_Yahiro voice=YH011110
+@Talk name=Haruka　and　Yahiro voice=YH011110
 
 @Hitret id=9148
 
-@Talk name=Yahiro's_Classmates voice=NP160009
+@Talk name=Yahiro's　Classmates voice=NP160009
 
 @Hitret id=9149
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9150
 
@@ -509,7 +509,7 @@
 
 @Hitret id=9152
 
-@Talk name=Yahiro's_Classmates voice=NP160010
+@Talk name=Yahiro's　Classmates voice=NP160010
 
 @Hitret id=9153
 
@@ -547,7 +547,7 @@
 
 @Hitret id=9159
 
-@Talk name=Yahiro's_Classmates voice=NP160011
+@Talk name=Yahiro's　Classmates voice=NP160011
 
 @Hitret id=9160
 
@@ -570,7 +570,7 @@
 
 @Hitret id=9164
 
-@Talk name=Yahiro's_Classmates voice=NP160012
+@Talk name=Yahiro's　Classmates voice=NP160012
 
 @Hitret id=9165
 
@@ -591,7 +591,7 @@
 
 @Hitret id=9167
 
-@Talk name=Yahiro's_Classmates voice=NP160013
+@Talk name=Yahiro's　Classmates voice=NP160013
 
 @Hitret id=9168
 
@@ -599,7 +599,7 @@
 
 @Hitret id=9169
 
-@Talk name=Yahiro's_Classmates voice=NP160014
+@Talk name=Yahiro's　Classmates voice=NP160014
 
 @Hitret id=9170
 
@@ -618,11 +618,11 @@
 
 @Hitret id=9172
 
-@Talk name=Yahiro's_Classmates voice=NP160015
+@Talk name=Yahiro's　Classmates voice=NP160015
 
 @Hitret id=9173
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9174
 
@@ -665,7 +665,7 @@
 
 @Hitret id=9179
 
-@Talk name=Yahiro's_Classmates voice=NP160016
+@Talk name=Yahiro's　Classmates voice=NP160016
 
 @Hitret id=9180
 
@@ -683,11 +683,11 @@
 
 @Hitret id=9182
 
-@Talk name=Yahiro's_Classmates voice=NP160017
+@Talk name=Yahiro's　Classmates voice=NP160017
 
 @Hitret id=9183
 
-@Talk name=Yahiro's_Classmates voice=NP160018
+@Talk name=Yahiro's　Classmates voice=NP160018
 
 @Hitret id=9184
 
@@ -702,7 +702,7 @@
 
 @Hitret id=9186
 
-@Talk name=Yahiro's_Classmates voice=NP160019
+@Talk name=Yahiro's　Classmates voice=NP160019
 
 @Hitret id=9187
 
@@ -728,11 +728,11 @@
 
 @Hitret id=9191
 
-@Talk name=Yahiro's_Classmates voice=NP160020
+@Talk name=Yahiro's　Classmates voice=NP160020
 
 @Hitret id=9192
 
-@Talk name=Yahiro's_Classmates voice=NP160021
+@Talk name=Yahiro's　Classmates voice=NP160021
 
 @Hitret id=9193
 
@@ -746,7 +746,7 @@
 
 @Hitret id=9194
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9195
 
@@ -761,11 +761,11 @@
 
 @Hitret id=9197
 
-@Talk name=Yahiro's_Classmates voice=NP160022
+@Talk name=Yahiro's　Classmates voice=NP160022
 
 @Hitret id=9198
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9199
 
@@ -773,7 +773,7 @@
 
 @Hitret id=9200
 
-@Talk name=Yahiro's_Classmates voice=NP160023
+@Talk name=Yahiro's　Classmates voice=NP160023
 
 @Hitret id=9201
 
@@ -784,7 +784,7 @@
 
 @Hitret id=9202
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9203
 
@@ -792,11 +792,11 @@
 
 @Hitret id=9204
 
-@Talk name=Yahiro's_Classmates voice=NP160024
+@Talk name=Yahiro's　Classmates voice=NP160024
 
 @Hitret id=9205
 
-@Talk name=Yahiro's_Classmates voice=NP160025
+@Talk name=Yahiro's　Classmates voice=NP160025
 
 @Hitret id=9206
 
@@ -825,7 +825,7 @@
 @Update
 @MoveCamera x=330 y=0 time=10000 accel=1
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=9211
 
@@ -833,7 +833,7 @@
 
 @Hitret id=9212
 
-@Talk name=Yahiro's_Classmates voice=NP160026
+@Talk name=Yahiro's　Classmates voice=NP160026
 
 @Hitret id=9213
 
@@ -880,7 +880,7 @@
 
 @Hitret id=9222
 
-@Talk name=Motoka_＆_Yahrio's_Classmates voice=SYN000020
+@Talk name=Motoka　and　Yahrio's_Classmates voice=SYN000020
 
 @Hitret id=9223
 

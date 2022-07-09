@@ -311,7 +311,7 @@
 
 @Hitret id=38647
 
-@Talk name=Kimpei/電話 voice=NP020015
+@Talk name=Kimpei voice=NP020015
 
 @Hitret id=38648
 
@@ -377,7 +377,7 @@
 
 @Hitret id=38660
 
-@Talk name=Kimpei/電話 voice=NP020016
+@Talk name=Kimpei voice=NP020016
 
 @Hitret id=38661
 
@@ -389,7 +389,7 @@
 
 @Hitret id=38663
 
-@Talk name=Kimpei/電話 voice=NP020017
+@Talk name=Kimpei voice=NP020017
 
 @Hitret id=38664
 
@@ -397,7 +397,7 @@
 
 @Hitret id=38665
 
-@Talk name=Kimpei/電話 voice=NP020018
+@Talk name=Kimpei voice=NP020018
 
 @Hitret id=38666
 
@@ -409,7 +409,7 @@
 
 @Hitret id=38668
 
-@Talk name=Kimpei/電話 voice=NP020019
+@Talk name=Kimpei voice=NP020019
 
 @Hitret id=38669
 
@@ -424,7 +424,7 @@
 
 @Hitret id=38671
 
-@Talk name=Kimpei/電話 voice=NP020020
+@Talk name=Kimpei voice=NP020020
 
 @Hitret id=38672
 
@@ -432,7 +432,7 @@
 
 @Hitret id=38673
 
-@Talk name=Kimpei/電話 voice=NP020021
+@Talk name=Kimpei voice=NP020021
 
 @Hitret id=38674
 
@@ -440,7 +440,7 @@
 
 @Hitret id=38675
 
-@Talk name=Kimpei/電話 voice=NP020022
+@Talk name=Kimpei voice=NP020022
 
 @Hitret id=38676
 
@@ -456,7 +456,7 @@
 
 @Hitret id=38679
 
-@Talk name=Kimpei/電話 voice=NP020023
+@Talk name=Kimpei voice=NP020023
 
 @Hitret id=38680
 

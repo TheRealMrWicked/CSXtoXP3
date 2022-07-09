@@ -327,7 +327,7 @@
 @Char file=CH05_04M 
 @PlaySe file=se018
 
-@Talk name=Class_Rep voice=KO010001
+@Talk name=Class　Rep voice=KO010001
 
 @Hitret id=3237
 
@@ -389,7 +389,7 @@
 @StopBgm
 @Char file=CH05_07M 
 
-@Talk name=Class_Rep voice=KO010002
+@Talk name=Class　Rep voice=KO010002
 
 @Hitret id=3247
 
@@ -601,7 +601,7 @@
 @Char file=CH05_11M 
 @Char file=CD05_04M 
 
-@Talk name=Class_Rep voice=KO010003
+@Talk name=Class　Rep voice=KO010003
 
 @Hitret id=3289
 
@@ -609,7 +609,7 @@
 
 @Hitret id=3290
 
-@Talk name=Class_Rep voice=KO010004
+@Talk name=Class　Rep voice=KO010004
 
 @Hitret id=3291
 
@@ -666,7 +666,7 @@
 @BlackOut time=1000
 @Cg file=B20a   
 
-@Talk name=Sora_Monologue voice=SR010160
+@Talk name=Sora　Monologue voice=SR010160
 
 @Hitret id=3299
 
@@ -678,7 +678,7 @@
 
 @Hitret id=3301
 
-@Talk name=Sora_Monologue voice=SR010161
+@Talk name=Sora　Monologue voice=SR010161
 
 @Hitret id=3302
 
@@ -686,7 +686,7 @@
 
 @Hitret id=3303
 
-@Talk name=Sora_Monologue voice=SR010163
+@Talk name=Sora　Monologue voice=SR010163
 
 @Hitret id=3304
 
@@ -699,7 +699,7 @@
 
 @Hitret id=3305
 
-@Talk name=Sora_Monologue voice=SR010164
+@Talk name=Sora　Monologue voice=SR010164
 
 @Hitret id=3306
 
@@ -714,7 +714,7 @@
 
 @Hitret id=3308
 
-@Talk name=Sora_Monologue voice=SR010166
+@Talk name=Sora　Monologue voice=SR010166
 
 @Hitret id=3309
 
@@ -739,11 +739,11 @@
 
 @Char file=CH05_08M 
 
-@Talk name=Class_Rep voice=KO010005
+@Talk name=Class　Rep voice=KO010005
 
 @Hitret id=3313
 
-@Talk name=Sora_Monologue voice=SR010168
+@Talk name=Sora　Monologue voice=SR010168
 
 @Hitret id=3314
 
@@ -755,15 +755,15 @@
 
 @Hitret id=3316
 
-@Talk name=Sora_Monologue voice=SR010170
+@Talk name=Sora　Monologue voice=SR010170
 
 @Hitret id=3317
 
-@Talk name=Sora_Monologue voice=SR010171
+@Talk name=Sora　Monologue voice=SR010171
 
 @Hitret id=3318
 
-@Talk name=Sora_Monologue voice=SR010172
+@Talk name=Sora　Monologue voice=SR010172
 
 @Hitret id=3319
 

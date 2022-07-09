@@ -140,7 +140,7 @@
 
 @Hitret id=30559
 
-@Talk name=Kazuha's_Father voice=SH040008
+@Talk name=Kazuha's　Father voice=SH040008
 
 @Hitret id=30560
 
@@ -164,7 +164,7 @@
 
 @Char file=CK01_04M 
 
-@Talk name=Kazuha's_Father voice=SH040009
+@Talk name=Kazuha's　Father voice=SH040009
 
 @Hitret id=30564
 
@@ -190,7 +190,7 @@
 
 @ClearChar id=一葉
 
-@Talk name=Kazuha's_Father voice=SH040010
+@Talk name=Kazuha's　Father voice=SH040010
 
 @Hitret id=30569
 
@@ -210,7 +210,7 @@
 
 @Hitret id=30573
 
-@Talk name=Kazuha's_Father voice=SH040011
+@Talk name=Kazuha's　Father voice=SH040011
 
 @Hitret id=30574
 
@@ -218,7 +218,7 @@
 
 @Hitret id=30575
 
-@Talk name=Kazuha's_Father voice=SH040012
+@Talk name=Kazuha's　Father voice=SH040012
 
 @Hitret id=30576
 
@@ -226,18 +226,18 @@
 
 @Hitret id=30577
 
-@Talk name=Kazuha's_Father voice=SH040013
+@Talk name=Kazuha's　Father voice=SH040013
 
 @Hitret id=30578
 
 
 @Char file=CK01_02M 
 
-@Talk name=Kazuha's_Father voice=SH040014
+@Talk name=Kazuha's　Father voice=SH040014
 
 @Hitret id=30579
 
-@Talk name=Kazuha's_Father voice=SH040015
+@Talk name=Kazuha's　Father voice=SH040015
 
 @Hitret id=30580
 
@@ -256,7 +256,7 @@
 
 @Char file=CK01_04M 
 
-@Talk name=Kazuha's_Father voice=SH040016
+@Talk name=Kazuha's　Father voice=SH040016
 
 @Hitret id=30584
 
@@ -264,7 +264,7 @@
 
 @Hitret id=30585
 
-@Talk name=Kazuha's_Father voice=SH040017
+@Talk name=Kazuha's　Father voice=SH040017
 
 @Hitret id=30586
 

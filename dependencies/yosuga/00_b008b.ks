@@ -110,11 +110,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Child_A voice=NP180031
+@Talk name=ChildÅ@A voice=NP180031
 
 @Hitret id=12314
 
-@Talk name=Child_B voice=NP190031
+@Talk name=ChildÅ@B voice=NP190031
 
 @Hitret id=12315
 

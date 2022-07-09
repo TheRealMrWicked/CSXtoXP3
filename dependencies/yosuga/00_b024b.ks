@@ -300,7 +300,7 @@
 
 @StopSe
 
-@Talk name=Nao's_Friends voice=NP260015
+@Talk name=Nao's　Friends voice=NP260015
 
 @Hitret id=15719
 
@@ -329,7 +329,7 @@
 
 @Hitret id=15724
 
-@Talk name=Nao's_Friends voice=NP260016
+@Talk name=Nao's　Friends voice=NP260016
 
 @Hitret id=15725
 
@@ -340,7 +340,7 @@
 
 @Hitret id=15726
 
-@Talk name=Nao's_Friends voice=NP260017
+@Talk name=Nao's　Friends voice=NP260017
 
 @Hitret id=15727
 
@@ -348,7 +348,7 @@
 
 @Hitret id=15728
 
-@Talk name=Nao's_Friends voice=NP260018
+@Talk name=Nao's　Friends voice=NP260018
 
 @Hitret id=15729
 
@@ -363,7 +363,7 @@
 
 @Hitret id=15731
 
-@Talk name=Nao's_Friends voice=NP260019
+@Talk name=Nao's　Friends voice=NP260019
 
 @Hitret id=15732
 

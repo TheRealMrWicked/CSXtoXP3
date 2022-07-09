@@ -6,7 +6,7 @@
 @Cg file=B41C
 
 
-@Talk name=合コン男Ａ voice=NP090001
+@Talk name=Party　Man　A voice=NP090001
 
 @Hitret id=6946
 
@@ -17,7 +17,7 @@
 
 @Hitret id=6947
 
-@Talk name=合コン男Ａ voice=NP090002
+@Talk name=Party　Man　A voice=NP090002
 
 @Hitret id=6948
 
@@ -35,7 +35,7 @@
 
 @Hitret id=6950
 
-@Talk name=合コン男Ａ voice=NP090003
+@Talk name=Party　Man　A voice=NP090003
 
 @Hitret id=6951
 
@@ -82,7 +82,7 @@
 
 @Hitret id=6961
 
-@Talk name=女幹事 voice=NP070001
+@Talk name=Party　Organizer voice=NP070001
 
 @Hitret id=6962
 
@@ -107,7 +107,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=女幹事 voice=NP070002
+@Talk name=Party　Organizer voice=NP070002
 
 @Hitret id=6966
 
@@ -122,7 +122,7 @@
 
 @Hitret id=6968
 
-@Talk name=女幹事 voice=NP070003
+@Talk name=Party　Organizer voice=NP070003
 
 @Hitret id=6969
 
@@ -140,7 +140,7 @@
 
 @Hitret id=6971
 
-@Talk name=合コン女 voice=NP080001
+@Talk name=Party　Girl voice=NP080001
 
 @Hitret id=6972
 
@@ -151,7 +151,7 @@
 
 @Hitret id=6973
 
-@Talk name=女幹事 voice=NP070004
+@Talk name=Party　Organizer voice=NP070004
 
 @Hitret id=6974
 
@@ -160,15 +160,15 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=女幹事 voice=NP070005
+@Talk name=Party　Organizer voice=NP070005
 
 @Hitret id=6975
 
-@Talk name=合コン男Ｂ voice=NP100001
+@Talk name=Party　Man　B voice=NP100001
 
 @Hitret id=6976
 
-@Talk name=合コン女 voice=NP080002
+@Talk name=Party　Girl voice=NP080002
 
 @Hitret id=6977
 
@@ -212,7 +212,7 @@
 
 @Hitret id=6987
 
-@Talk name=合コン男Ｃ voice=NP110001
+@Talk name=Party　Man　C voice=NP110001
 
 @Hitret id=6988
 
@@ -269,7 +269,7 @@
 
 @Hitret id=6999
 
-@Talk name=合コン男Ａ voice=NP090004
+@Talk name=Party　Man　A voice=NP090004
 
 @Hitret id=7000
 
@@ -280,7 +280,7 @@
 
 @Hitret id=7001
 
-@Talk name=合コン男Ａ voice=NP090005
+@Talk name=Party　Man　A voice=NP090005
 
 @Hitret id=7002
 
@@ -300,7 +300,7 @@
 
 @Hitret id=7006
 
-@Talk name=合コン男Ａ voice=NP090006
+@Talk name=Party　Man　A voice=NP090006
 
 @Hitret id=7007
 

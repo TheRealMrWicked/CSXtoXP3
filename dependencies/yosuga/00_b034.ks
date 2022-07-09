@@ -13,7 +13,7 @@
 
 @PlayBgm file=BGM03
 
-@Talk name=Nao's_Mother voice=NP500022
+@Talk name=Nao's　Mother voice=NP500022
 
 @Hitret id=17768
 
@@ -21,7 +21,7 @@
 
 @Hitret id=17769
 
-@Talk name=Nao's_Mother voice=NP500023
+@Talk name=Nao's　Mother voice=NP500023
 
 @Hitret id=17770
 
@@ -44,7 +44,7 @@
 
 @Hitret id=17774
 
-@Talk name=Nao's_Mother voice=NP500024
+@Talk name=Nao's　Mother voice=NP500024
 
 @Hitret id=17775
 
@@ -67,7 +67,7 @@
 
 @Hitret id=17779
 
-@Talk name=Nao's_Mother voice=NP500025
+@Talk name=Nao's　Mother voice=NP500025
 
 @Hitret id=17780
 
@@ -86,7 +86,7 @@
 
 @Hitret id=17783
 
-@Talk name=Nao's_Mother voice=NP500026
+@Talk name=Nao's　Mother voice=NP500026
 
 @Hitret id=17784
 
@@ -107,7 +107,7 @@
 
 @ClearChar 
 
-@Talk name=Nao's_Mother voice=NP500027
+@Talk name=Nao's　Mother voice=NP500027
 
 @Hitret id=17787
 
@@ -115,7 +115,7 @@
 
 @Hitret id=17788
 
-@Talk name=Nao's_Mother voice=NP500028
+@Talk name=Nao's　Mother voice=NP500028
 
 @Hitret id=17789
 
@@ -147,7 +147,7 @@
 
 @Hitret id=17796
 
-@Talk name=Nao's_Mother voice=NP500029
+@Talk name=Nao's　Mother voice=NP500029
 
 @Hitret id=17797
 
@@ -163,7 +163,7 @@
 
 @Hitret id=17800
 
-@Talk name=Nao's_Mother voice=NP500030
+@Talk name=Nao's　Mother voice=NP500030
 
 @Hitret id=17801
 

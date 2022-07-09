@@ -31,7 +31,7 @@
 
 @Hitret id=8820
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8821
 
@@ -115,14 +115,14 @@
 
 @Hitret id=8833
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8834
 
 
 @Char file=CG01_06M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8835
 
@@ -226,7 +226,7 @@
 
 @Hitret id=8853
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8854
 
@@ -237,7 +237,7 @@
 
 @Hitret id=8855
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8856
 
@@ -255,7 +255,7 @@
 
 @Hitret id=8858
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8859
 
@@ -266,7 +266,7 @@
 
 @Hitret id=8860
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8861
 
@@ -277,7 +277,7 @@
 
 @Hitret id=8862
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8863
 
@@ -368,7 +368,7 @@
 
 @Hitret id=8882
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8883
 
@@ -383,7 +383,7 @@
 
 @Hitret id=8885
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8886
 
@@ -413,7 +413,7 @@
 
 @Hitret id=8891
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8892
 
@@ -430,7 +430,7 @@
 @action id=‚â‚Ğ‚ë action=ActionAdvJump cycle=300 count=1 height=30
 @WaitAction id=‚â‚Ğ‚ë
 
-@Talk name=Haruka_•_Yahiro voice=YH011054
+@Talk name=Haruka@and@Yahiro voice=YH011054
 
 @Hitret id=8894
 
@@ -542,7 +542,7 @@
 
 @Hitret id=8914
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8915
 
@@ -580,7 +580,7 @@
 
 @Hitret id=8919
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8920
 
@@ -625,11 +625,11 @@
 
 @Hitret id=8927
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8928
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8929
 
@@ -645,7 +645,7 @@
 
 @Hitret id=8931
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8932
 
@@ -677,7 +677,7 @@
 
 @Hitret id=8936
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8937
 

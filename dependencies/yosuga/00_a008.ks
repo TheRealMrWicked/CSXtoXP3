@@ -363,23 +363,23 @@
 
 
 
-@Talk name=Sora_Monologue voice=SR010177
+@Talk name=Sora　Monologue voice=SR010177
 
 @Hitret id=3387
 
-@Talk name=Sora_Monologue voice=SR010179
+@Talk name=Sora　Monologue voice=SR010179
 
 @Hitret id=3389
 
-@Talk name=Sora_Monologue voice=SR010180
+@Talk name=Sora　Monologue voice=SR010180
 
 @Hitret id=3390
 
-@Talk name=Sora_Monologue voice=SR010181
+@Talk name=Sora　Monologue voice=SR010181
 
 @Hitret id=3391
 
-@Talk name=Sora_Monologue voice=SR010182
+@Talk name=Sora　Monologue voice=SR010182
 
 @Hitret id=3392
 
@@ -388,43 +388,43 @@
 @Update
 @MoveCamera x=0 y=-600 time=40000 accel=0
 
-@Talk name=Sora_Monologue voice=SR010183
+@Talk name=Sora　Monologue voice=SR010183
 
 @Hitret id=3393
 
-@Talk name=Sora_Monologue voice=SR010184
+@Talk name=Sora　Monologue voice=SR010184
 
 @Hitret id=3394
 
-@Talk name=Sora_Monologue voice=SR010185
+@Talk name=Sora　Monologue voice=SR010185
 
 @Hitret id=3395
 
-@Talk name=Sora_Monologue voice=SR010186
+@Talk name=Sora　Monologue voice=SR010186
 
 @Hitret id=3396
 
-@Talk name=Sora_Monologue voice=SR010187
+@Talk name=Sora　Monologue voice=SR010187
 
 @Hitret id=3397
 
-@Talk name=Sora_Monologue voice=SR010188
+@Talk name=Sora　Monologue voice=SR010188
 
 @Hitret id=3398
 
-@Talk name=Sora_Monologue voice=SR010189
+@Talk name=Sora　Monologue voice=SR010189
 
 @Hitret id=3399
 
-@Talk name=Sora_Monologue voice=SR010190
+@Talk name=Sora　Monologue voice=SR010190
 
 @Hitret id=3400
 
-@Talk name=Sora_Monologue voice=SR010191
+@Talk name=Sora　Monologue voice=SR010191
 
 @Hitret id=3401
 
-@Talk name=Sora_Monologue voice=SR010192
+@Talk name=Sora　Monologue voice=SR010192
 
 @Hitret id=3402
 
@@ -432,19 +432,19 @@
 
 @Hitret id=3403
 
-@Talk name=Sora_Monologue voice=SR010194
+@Talk name=Sora　Monologue voice=SR010194
 
 @Hitret id=3404
 
-@Talk name=Sora_Monologue voice=SR010195
+@Talk name=Sora　Monologue voice=SR010195
 
 @Hitret id=3405
 
-@Talk name=Sora_Monologue voice=SR010196
+@Talk name=Sora　Monologue voice=SR010196
 
 @Hitret id=3406
 
-@Talk name=Sora_Monologue voice=SR010197
+@Talk name=Sora　Monologue voice=SR010197
 
 @Hitret id=3407
 
@@ -452,35 +452,35 @@
 
 @Hitret id=3408
 
-@Talk name=Sora_Monologue voice=SR010199
+@Talk name=Sora　Monologue voice=SR010199
 
 @Hitret id=3409
 
-@Talk name=Sora_Monologue voice=SR010200
+@Talk name=Sora　Monologue voice=SR010200
 
 @Hitret id=3410
 
-@Talk name=Sora_Monologue voice=SR010201
+@Talk name=Sora　Monologue voice=SR010201
 
 @Hitret id=3411
 
-@Talk name=Sora_Monologue voice=SR010202
+@Talk name=Sora　Monologue voice=SR010202
 
 @Hitret id=3412
 
-@Talk name=Sora_Monologue voice=SR010203
+@Talk name=Sora　Monologue voice=SR010203
 
 @Hitret id=3413
 
-@Talk name=Sora_Monologue voice=SR010204
+@Talk name=Sora　Monologue voice=SR010204
 
 @Hitret id=3414
 
-@Talk name=Sora_Monologue voice=SR010205
+@Talk name=Sora　Monologue voice=SR010205
 
 @Hitret id=3415
 
-@Talk name=Sora_Monologue voice=SR010206
+@Talk name=Sora　Monologue voice=SR010206
 
 @Hitret id=3416
 
@@ -539,35 +539,35 @@
 
 @Hitret id=3427
 
-@Talk name=Sora_Monologue voice=SR010213
+@Talk name=Sora　Monologue voice=SR010213
 
 @Hitret id=3428
 
-@Talk name=Sora_Monologue voice=SR010214
+@Talk name=Sora　Monologue voice=SR010214
 
 @Hitret id=3429
 
-@Talk name=Sora_Monologue voice=SR010215
+@Talk name=Sora　Monologue voice=SR010215
 
 @Hitret id=3430
 
-@Talk name=Sora_Monologue voice=SR010216
+@Talk name=Sora　Monologue voice=SR010216
 
 @Hitret id=3431
 
-@Talk name=Sora_Monologue voice=SR010217
+@Talk name=Sora　Monologue voice=SR010217
 
 @Hitret id=3432
 
-@Talk name=Sora_Monologue voice=SR010218
+@Talk name=Sora　Monologue voice=SR010218
 
 @Hitret id=3433
 
-@Talk name=Sora_Monologue voice=SR010219
+@Talk name=Sora　Monologue voice=SR010219
 
 @Hitret id=3434
 
-@Talk name=Sora_Monologue voice=SR010220
+@Talk name=Sora　Monologue voice=SR010220
 
 @Hitret id=3435
 
@@ -575,19 +575,19 @@
 
 @Hitret id=3436
 
-@Talk name=Sora_Monologue voice=SR010222
+@Talk name=Sora　Monologue voice=SR010222
 
 @Hitret id=3437
 
-@Talk name=Sora_Monologue voice=SR010223
+@Talk name=Sora　Monologue voice=SR010223
 
 @Hitret id=3438
 
-@Talk name=Sora_Monologue voice=SR010224
+@Talk name=Sora　Monologue voice=SR010224
 
 @Hitret id=3439
 
-@Talk name=Sora_Monologue voice=SR010225
+@Talk name=Sora　Monologue voice=SR010225
 
 @Hitret id=3440
 
@@ -595,15 +595,15 @@
 
 @Hitret id=3441
 
-@Talk name=Sora_Monologue voice=SR010227
+@Talk name=Sora　Monologue voice=SR010227
 
 @Hitret id=3442
 
-@Talk name=Sora_Monologue voice=SR010228
+@Talk name=Sora　Monologue voice=SR010228
 
 @Hitret id=3443
 
-@Talk name=Sora_Monologue voice=SR010229
+@Talk name=Sora　Monologue voice=SR010229
 
 @Hitret id=3444
 
@@ -660,7 +660,7 @@
 @MoveCamera x=907 y=0 time=1000 accel=0
 @WaitCamera
 
-@Talk name=Sora_Monologue voice=SR010234
+@Talk name=Sora　Monologue voice=SR010234
 
 @Hitret id=3453
 
@@ -690,11 +690,11 @@
 
 @ClearChar 
 
-@Talk name=Sora_Monologue voice=SR010237
+@Talk name=Sora　Monologue voice=SR010237
 
 @Hitret id=3458
 
-@Talk name=Sora_Monologue voice=SR010238
+@Talk name=Sora　Monologue voice=SR010238
 
 @Hitret id=3459
 
@@ -839,7 +839,7 @@
 
 @Hitret id=3486
 
-@Talk name=Sora_Monologue voice=SR010251
+@Talk name=Sora　Monologue voice=SR010251
 
 @Hitret id=3487
 
@@ -857,7 +857,7 @@
 
 @ClearChar id=瑛
 
-@Talk name=Sora_Monologue voice=SR010253
+@Talk name=Sora　Monologue voice=SR010253
 
 @Hitret id=3490
 
@@ -868,14 +868,14 @@
 
 @Char file=CC01_02S 
 
-@Talk name=Sora_Monologue voice=SR010255
+@Talk name=Sora　Monologue voice=SR010255
 
 @Hitret id=3492
 
 
 @StopBgm
 
-@Talk name=Sora_Monologue voice=SR010256
+@Talk name=Sora　Monologue voice=SR010256
 
 @Hitret id=3493
 
@@ -991,39 +991,39 @@
 @ClearChar 
 @MessageFrame type=1
 
-@Talk name=Sora_Monologue voice=SR010264
+@Talk name=Sora　Monologue voice=SR010264
 
 @Hitret id=3513
 
-@Talk name=Sora_Monologue voice=SR010265
+@Talk name=Sora　Monologue voice=SR010265
 
 @Hitret id=3514
 
-@Talk name=Sora_Monologue voice=SR010266
+@Talk name=Sora　Monologue voice=SR010266
 
 @Hitret id=3515
 
-@Talk name=Sora_Monologue voice=SR010267
+@Talk name=Sora　Monologue voice=SR010267
 
 @Hitret id=3516
 
-@Talk name=Sora_Monologue voice=SR010268
+@Talk name=Sora　Monologue voice=SR010268
 
 @Hitret id=3517
 
-@Talk name=Sora_Monologue voice=SR010269
+@Talk name=Sora　Monologue voice=SR010269
 
 @Hitret id=3518
 
-@Talk name=Sora_Monologue voice=SR010270
+@Talk name=Sora　Monologue voice=SR010270
 
 @Hitret id=3519
 
-@Talk name=Sora_Monologue voice=SR010271
+@Talk name=Sora　Monologue voice=SR010271
 
 @Hitret id=3520
 
-@Talk name=Sora_Monologue voice=SR010272
+@Talk name=Sora　Monologue voice=SR010272
 
 @Hitret id=3521
 

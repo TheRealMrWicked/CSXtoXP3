@@ -101,7 +101,7 @@
 @Char file=CB01_03M 
 @Char file=CD01_10M 
 
-@Talk name=Ryouhei_and_Nao_and_Kazuha voice=RH020518/NO020175/KA020612
+@Talk name=Ryouhei　and　Nao　and　Kazuha voice=RH020518/NO020175/KA020612
 
 @Hitret id=26424
 

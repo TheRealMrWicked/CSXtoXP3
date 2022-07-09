@@ -5,15 +5,15 @@
 @PlayEnvSe file=SE302 fade=0
 @MessageFrame type=1
 
-@Talk name=Kozue_Monologue voice=KO021030
+@Talk name=Kozue　Monologue voice=KO021030
 
 @Hitret id=12478
 
-@Talk name=Kozue_Monologue voice=KO021031
+@Talk name=Kozue　Monologue voice=KO021031
 
 @Hitret id=12479
 
-@Talk name=Kozue_Monologue voice=KO021032
+@Talk name=Kozue　Monologue voice=KO021032
 
 @Hitret id=12480
 
@@ -21,15 +21,15 @@
 
 @Hitret id=12481
 
-@Talk name=Kozue_Monologue voice=KO021034
+@Talk name=Kozue　Monologue voice=KO021034
 
 @Hitret id=12482
 
-@Talk name=Kozue_Monologue voice=KO021035
+@Talk name=Kozue　Monologue voice=KO021035
 
 @Hitret id=12483
 
-@Talk name=Kozue_Monologue voice=KO021036
+@Talk name=Kozue　Monologue voice=KO021036
 
 @Hitret id=12484
 
@@ -43,11 +43,11 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=12485
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=12486
 
@@ -66,11 +66,11 @@
 
 @Hitret id=12487
 
-@Talk name=Kozue_Monologue voice=KO021038
+@Talk name=Kozue　Monologue voice=KO021038
 
 @Hitret id=12488
 
-@Talk name=Kozue_Monologue voice=KO021039
+@Talk name=Kozue　Monologue voice=KO021039
 
 @Hitret id=12489
 
@@ -78,19 +78,19 @@
 
 @Hitret id=12490
 
-@Talk name=Kozue_Monologue voice=KO021041
+@Talk name=Kozue　Monologue voice=KO021041
 
 @Hitret id=12491
 
-@Talk name=Kozue_Monologue voice=KO021042
+@Talk name=Kozue　Monologue voice=KO021042
 
 @Hitret id=12492
 
-@Talk name=Kozue_Monologue voice=KO021043
+@Talk name=Kozue　Monologue voice=KO021043
 
 @Hitret id=12493
 
-@Talk name=Kozue_Monologue voice=KO021044
+@Talk name=Kozue　Monologue voice=KO021044
 
 @Hitret id=12494
 
@@ -102,7 +102,7 @@
 
 @Hitret id=12496
 
-@Talk name=Kozue_Monologue voice=KO021047
+@Talk name=Kozue　Monologue voice=KO021047
 
 @Hitret id=12497
 
@@ -110,23 +110,23 @@
 
 @Hitret id=12498
 
-@Talk name=Kozue_Monologue voice=KO021049
+@Talk name=Kozue　Monologue voice=KO021049
 
 @Hitret id=12499
 
-@Talk name=Kozue_Monologue voice=KO021050
+@Talk name=Kozue　Monologue voice=KO021050
 
 @Hitret id=12500
 
-@Talk name=Kozue_Monologue voice=KO021051
+@Talk name=Kozue　Monologue voice=KO021051
 
 @Hitret id=12501
 
-@Talk name=Kozue_Monologue voice=KO021052
+@Talk name=Kozue　Monologue voice=KO021052
 
 @Hitret id=12502
 
-@Talk name=Kozue_Monologue voice=KO021053
+@Talk name=Kozue　Monologue voice=KO021053
 
 @Hitret id=12503
 
@@ -137,15 +137,15 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=Kozue_Monologue voice=KO021054
+@Talk name=Kozue　Monologue voice=KO021054
 
 @Hitret id=12504
 
-@Talk name=Kozue_Monologue voice=KO021055
+@Talk name=Kozue　Monologue voice=KO021055
 
 @Hitret id=12505
 
-@Talk name=Kozue_Monologue voice=KO021056
+@Talk name=Kozue　Monologue voice=KO021056
 
 @Hitret id=12506
 
@@ -155,18 +155,18 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=Kozue_Monologue voice=KO021057
+@Talk name=Kozue　Monologue voice=KO021057
 
 @Hitret id=12507
 
-@Talk name=Kozue_Monologue voice=KO021058
+@Talk name=Kozue　Monologue voice=KO021058
 
 @Hitret id=12508
 
 
 @Char file=CE01_10M
 
-@Talk name=Kozue_Monologue voice=KO021059
+@Talk name=Kozue　Monologue voice=KO021059
 
 @Hitret id=12509
 
@@ -176,26 +176,26 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=Kozue_Monologue voice=KO021060
+@Talk name=Kozue　Monologue voice=KO021060
 
 @Hitret id=12510
 
-@Talk name=Kozue_Monologue voice=KO021061
+@Talk name=Kozue　Monologue voice=KO021061
 
 @Hitret id=12511
 
 
 @Char file=CC03_02M
 
-@Talk name=Kozue_Monologue voice=KO021062
+@Talk name=Kozue　Monologue voice=KO021062
 
 @Hitret id=12512
 
-@Talk name=Kozue_Monologue voice=KO021063
+@Talk name=Kozue　Monologue voice=KO021063
 
 @Hitret id=12513
 
-@Talk name=Kozue_Monologue voice=KO021064
+@Talk name=Kozue　Monologue voice=KO021064
 
 @Hitret id=12514
 
@@ -205,18 +205,18 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=Kozue_Monologue voice=KO021065
+@Talk name=Kozue　Monologue voice=KO021065
 
 @Hitret id=12515
 
-@Talk name=Kozue_Monologue voice=KO021066
+@Talk name=Kozue　Monologue voice=KO021066
 
 @Hitret id=12516
 
 
 @Cg file=ED02a
 
-@Talk name=Kozue_Monologue voice=KO021067
+@Talk name=Kozue　Monologue voice=KO021067
 
 @Hitret id=12517
 
@@ -226,11 +226,11 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=Kozue_Monologue voice=KO021068
+@Talk name=Kozue　Monologue voice=KO021068
 
 @Hitret id=12518
 
-@Talk name=Kozue_Monologue voice=KO021069
+@Talk name=Kozue　Monologue voice=KO021069
 
 @Hitret id=12519
 
@@ -244,7 +244,7 @@
 
 @Hitret id=12520
 
-@Talk name=Kozue_Monologue voice=KO021071
+@Talk name=Kozue　Monologue voice=KO021071
 
 @Hitret id=12521
 
@@ -252,15 +252,15 @@
 
 @Hitret id=12522
 
-@Talk name=Kozue_Monologue voice=KO021073
+@Talk name=Kozue　Monologue voice=KO021073
 
 @Hitret id=12523
 
-@Talk name=Kozue_Monologue voice=KO021074
+@Talk name=Kozue　Monologue voice=KO021074
 
 @Hitret id=12524
 
-@Talk name=Kozue_Monologue voice=KO021075
+@Talk name=Kozue　Monologue voice=KO021075
 
 @Hitret id=12525
 
@@ -268,7 +268,7 @@
 
 @Hitret id=12526
 
-@Talk name=Kozue_Monologue voice=KO021077
+@Talk name=Kozue　Monologue voice=KO021077
 
 @Hitret id=12527
 

@@ -156,7 +156,7 @@
 
 @Hitret id=26513
 
-@Talk name=Kazuha's_Mother voice=NP050010
+@Talk name=Kazuha's　Mother voice=NP050010
 
 @Hitret id=26514
 
@@ -195,7 +195,7 @@
 
 @Hitret id=26520
 
-@Talk name=Kazuha's_Mother voice=NP050011
+@Talk name=Kazuha's　Mother voice=NP050011
 
 @Hitret id=26521
 
@@ -243,7 +243,7 @@
 
 @Hitret id=26532
 
-@Talk name=Kazuha's_Mother voice=NP050012
+@Talk name=Kazuha's　Mother voice=NP050012
 
 @Hitret id=26533
 
@@ -253,7 +253,7 @@
 
 
 
-@Talk name=Kazuha's_Mother voice=NP050013
+@Talk name=Kazuha's　Mother voice=NP050013
 
 @Hitret id=26535
 
@@ -272,7 +272,7 @@
 
 @Hitret id=26537
 
-@Talk name=Kazuha's_Mother voice=NP050014
+@Talk name=Kazuha's　Mother voice=NP050014
 
 @Hitret id=26538
 
@@ -287,7 +287,7 @@
 
 @Hitret id=26540
 
-@Talk name=Kazuha's_Mother voice=NP050015
+@Talk name=Kazuha's　Mother voice=NP050015
 
 @Hitret id=26541
 
@@ -310,7 +310,7 @@
 
 @Hitret id=26545
 
-@Talk name=Kazuha's_Mother voice=NP050016
+@Talk name=Kazuha's　Mother voice=NP050016
 
 @Hitret id=26546
 
@@ -322,7 +322,7 @@
 
 @Hitret id=26548
 
-@Talk name=Kazuha's_Mother voice=NP050017
+@Talk name=Kazuha's　Mother voice=NP050017
 
 @Hitret id=26549
 
@@ -337,7 +337,7 @@
 
 @Hitret id=26551
 
-@Talk name=Kazuha's_Mother voice=NP050018
+@Talk name=Kazuha's　Mother voice=NP050018
 
 @Hitret id=26552
 
@@ -356,11 +356,11 @@
 
 
 
-@Talk name=Kazuha's_Mother voice=NP050019
+@Talk name=Kazuha's　Mother voice=NP050019
 
 @Hitret id=26555
 
-@Talk name=Kazuha's_Mother voice=NP050020
+@Talk name=Kazuha's　Mother voice=NP050020
 
 @Hitret id=26556
 

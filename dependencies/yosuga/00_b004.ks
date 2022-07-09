@@ -63,7 +63,7 @@
 
 @StopEnvSe id=SE151 fade=0
 
-@Talk name=Nao's_Mother voice=NP500001
+@Talk name=Nao's　Mother voice=NP500001
 
 @Hitret id=11373
 
@@ -71,7 +71,7 @@
 
 @Hitret id=11374
 
-@Talk name=Nao's_Mother voice=NP500002
+@Talk name=Nao's　Mother voice=NP500002
 
 @Hitret id=11375
 
@@ -79,7 +79,7 @@
 
 @Hitret id=11376
 
-@Talk name=Nao's_Mother voice=NP500003
+@Talk name=Nao's　Mother voice=NP500003
 
 @Hitret id=11377
 
@@ -87,7 +87,7 @@
 
 @Hitret id=11378
 
-@Talk name=Nao's_Mother voice=NP500004
+@Talk name=Nao's　Mother voice=NP500004
 
 @Hitret id=11379
 
@@ -95,7 +95,7 @@
 
 @Hitret id=11380
 
-@Talk name=Nao's_Mother voice=NP500005
+@Talk name=Nao's　Mother voice=NP500005
 
 @Hitret id=11381
 
@@ -107,7 +107,7 @@
 
 @Hitret id=11383
 
-@Talk name=Nao's_Mother voice=NP500006
+@Talk name=Nao's　Mother voice=NP500006
 
 @Hitret id=11384
 
@@ -115,7 +115,7 @@
 
 @Hitret id=11385
 
-@Talk name=Nao's_Mother voice=NP500007
+@Talk name=Nao's　Mother voice=NP500007
 
 @Hitret id=11386
 

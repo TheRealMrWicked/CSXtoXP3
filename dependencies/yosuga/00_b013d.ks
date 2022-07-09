@@ -209,7 +209,7 @@
 
 @Hitret id=13321
 
-@Talk name=Street_Vendor voice=NP430001
+@Talk name=StreetÅ@Vendor voice=NP430001
 
 @Hitret id=13322
 

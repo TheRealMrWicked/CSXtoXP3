@@ -1,0 +1,585 @@
+
+class StaffRoll extends Sprite, InputNotifyBase{
+	var _adv;
+	var _bgm;
+	var _fPlayBgm = false;
+
+	var _te = [];
+	var _seqList;
+
+	var _voice = [];
+
+	var _tgtChar = -1;
+	var _tgtCredit;
+	var _tgtGamma = [[1.0,   0, 255],[1.0,   0, 255],[1.0,   0, 255], 0, 0];
+
+	var _ptCenter = [640, 360];
+	var _creditBase;
+	var _creditBasePos;
+	var _credit = [];
+
+	var _absCount = 0;
+
+	var _spr = [];
+	var _sprDic = %[];
+
+	var _volumeBgm;
+
+	var SPR_LOGO = 0;
+
+	var _fCreateImage = false;
+	var IMAGE_LIST = [
+		%[id:"BLACK", w:800, h:600, col:RGBA(0,0,0)]
+	];
+
+	function StaffRoll(win, par, type, adv=null){
+		Sprite(...);
+
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		hitThreshold = 0;
+
+		absolute = LAYER_STAFFROLL;
+
+		//âπä÷åWí‚é~
+		StopBgm(1000);
+		StopSe("", 1000);
+		StopEnvSe("", 1000);
+		StopVoice(1000);
+
+		_adv = adv;
+
+		_seqList = Scripts.evalStorage("StaffrollSequence.tjs");
+
+		switch(type){
+		case "‚u"     : _tgtChar = 0; SetGlobalFlag(11, 1); break;
+		case "ìﬁèè"   : _tgtChar = 1; SetGlobalFlag(12, 1); break;
+		case "âl"     : _tgtChar = 2; SetGlobalFlag(13, 1); break;
+		case "àÍót"   : _tgtChar = 3; SetGlobalFlag(14, 1); break;
+		case "èââ¿"   : _tgtChar = 4; SetGlobalFlag(15, 1); break;
+		case "Ç‚Ç–ÇÎ" : _tgtChar = 5; SetGlobalFlag(16, 1); break;
+		case "èΩ"     : _tgtChar = 6; SetGlobalFlag(17, 1); break;
+		default       : _tgtChar = 0; break;
+		}
+
+		var seqProcess = _seqList.process;
+		var time = 0;
+		for(var i=0;i<seqProcess.count;i++){
+			seqProcess[i].id = i;
+			time = int GetElm(seqProcess[i].time, time);
+			seqProcess[i].time = time + (int GetElm(seqProcess[i].delay, 0));
+			if(seqProcess[i].file !== void){
+				var param = %[
+					id : seqProcess[i].file, 
+					file : seqProcess[i].file, 
+					tone : seqProcess[i].tone, 
+					adv : 1
+				];
+				IMAGE_LIST.add(param);
+			}
+		}
+		_te[_te.count] = new TimerEvent(seqProcess);
+
+		var seqCredit = _seqList.credit;
+		var time = 0;
+		for(var i=0;i<seqCredit.count;i++){
+			seqCredit[i].id = i;
+			time = int GetElm(seqCredit[i].time, time);
+			seqCredit[i].time = time + (int GetElm(seqCredit[i].delay, 0));
+			if(seqCredit[i].file !== void){
+				var param = %[
+					id : seqCredit[i].file, 
+					file : seqCredit[i].file, 
+					tone : seqCredit[i].tone, 
+					adv : 1
+				];
+				IMAGE_LIST.add(param);
+			}
+		}
+		_te[_te.count] = new TimerEvent(seqCredit);
+
+		var seqChar = _seqList.cg[_tgtChar];
+		var time = 0;
+		for(var i=0;i<seqChar.count;i++){
+			seqChar[i].id = i;
+			time = int GetElm(seqChar[i].time, time);
+			seqChar[i].time = time + (int GetElm(seqChar[i].delay, 0));
+			if(seqChar[i].file !== void){
+				var param = %[
+					id : seqChar[i].file, 
+					file : seqChar[i].file, 
+					tone : seqChar[i].tone, 
+					adv : 1
+				];
+				IMAGE_LIST.add(param);
+			}
+		}
+		_te[_te.count] = new TimerEvent(seqChar);
+
+		_sprDic.advscreen = new global.Layer(window, this);
+		with(_sprDic.advscreen){
+			.hitThreshold = 256;
+		}
+		_sprDic.logo = new global.Sprite(window, this);
+		with(_sprDic.logo){
+			.hitThreshold = 256;
+		}
+
+		var bgmFile= "BGM02.ogg";
+		_bgm = new WaveSoundBuffer(this);
+		_bgm.open(bgmFile);
+		_volumeBgm = CONFIG.muteBgm?0:100000*CONFIG.volBgm;
+		_volumeBgm *= 1.5;
+		if(_volumeBgm > 100000) _volumeBgm = 100000;
+		_bgm.volume = _volumeBgm;
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		System.removeContinuousHandler(onDraw);
+		window.removeInputNotify(this);
+
+		InvalidateArray(_voice);
+		InvalidateArray(_te);
+
+		InvalidateArray(_credit);
+		invalidate _creditBase;
+		invalidate _creditBasePos;
+
+		InvalidateArray(_spr);
+		invalidate _sprDic.logo;
+		invalidate _sprDic.advscreen;
+
+		if(_fCreateImage){
+			for(var i=0;i<IMAGE_LIST.count;i++){
+				invalidate this[IMAGE_LIST[i].id];
+			}
+		}
+
+		invalidate _bgm;
+		invalidate _seqList;
+	}
+
+	function createImage(){
+		if(_fCreateImage) return;
+
+		for(var i=0;i<IMAGE_LIST.count;i++){
+			this[IMAGE_LIST[i].id] = new global.Layer(window, this);
+			with(this[IMAGE_LIST[i].id]){
+				if(IMAGE_LIST[i].file !== void){
+					if(IMAGE_LIST[i].adv === void){
+						.loadImages(IMAGE_LIST[i].file);
+					}else{
+						var info = AdvObjLoadImagesToLayer(this[IMAGE_LIST[i].id], IMAGE_LIST[i].file);
+						.info = info;
+					}
+
+					if(IMAGE_LIST[i].tone !== void)
+						AdjustGamma(this[IMAGE_LIST[i].id], TONE_DIC[IMAGE_LIST[i].tone]);
+					.setSizeToImageSize();
+				}else{
+					.setSize(IMAGE_LIST[i].w, IMAGE_LIST[i].h);
+					.fillRect(0, 0, .width, .height, IMAGE_LIST[i].col);
+				}
+			}
+		}
+		_fCreateImage = true;
+	}
+
+	function start(){
+		for(var i=0;i<_te.count;i++) _te[i].start(onEvent);
+	}
+	function close(){
+		System.removeContinuousHandler(onDraw);
+
+		_adv.visible = true;
+		_bgm.stop();
+		visible = false;
+
+		var async = new AsyncTrigger(StaffRollDelete, "");
+		async.mode = atmAtIdle;
+		async.trigger();
+
+		_adv.action(%[type:"staffroll_end"]);
+	}
+	function onMouseDown(x, y, button, shift){
+		if(isActivation()) flushActivation();
+		if(button == mbRight) end(true);
+	}
+	function onKeyDown(key, shift){
+		if(isActivation()) flushActivation();
+		if(key == VK_ESCAPE) end(true);
+	}
+
+	function onEvent(label, id, delay, elm){
+		switch(label){
+		case "Start" : 
+			visible = true;
+			if(CONFIG.muteMaster == 0 && CONFIG.muteBgm == 0){
+				_bgm.play();
+				_fPlayBgm = true;
+			}
+			_adv.screenShot(_sprDic.advscreen);
+			_sprDic.advscreen.setSizeToImageSize();
+
+			createImage();
+
+			System.addContinuousHandler(onDraw);
+			break;
+
+		case "AdvHide" : 
+			with(_adv){
+				.hide(, true);
+				.visible = false;
+				.addOrderList(%[tagname:"cg", file:"BLACK"]);
+				._update |= UPDATE_CG;
+				.update(%[time:0]);
+			}
+			break;
+
+		case "CreditStart" : 
+			with(_creditBasePos){
+				.setPos(400, 0);
+				.visible = true;
+			}
+			with(_creditBase){
+				.setPos(0, WINDOW_HEIGHT);
+				.setMovingEnvelope(.left, .top, .left, WINDOW_HEIGHT - .height);
+				.beginActivation(elm.life);
+			}
+
+			break;
+		case "CreditMove" : 
+			var x = GetElm(elm.x, 0);
+			var accel = GetElm(elm.accel, 2);
+			var life = GetElm(elm.life, 300);
+			with(_creditBasePos){
+				.setMovingEnvelope(.left, .top, x, .top, accel);
+				.beginActivation(life);
+				.visible = true;
+			}
+			break;
+
+		case "LogoShow" : 
+			with(_sprDic.logo){
+				.loadImages("FRM_0514");
+				.setSizeToImageSize();
+				.setCenter(.width\2, .height\2);
+
+				var x = elm.pos[0];
+				var y = elm.pos[1];
+				if(x == -1) x = WINDOW_CENTER_X;
+				if(y == -1) y = WINDOW_CENTER_Y;
+				.setPos(x, y);
+
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(1000);
+				.absolute = 10000;
+
+				.visible = true;
+			}
+			break;
+
+		case "LogoHide" : 
+			with(_sprDic.logo){
+				.setBlendingEnvelope(0);
+				.beginActivation(3000);
+
+				.visible = true;
+			}
+			break;
+
+		case "BrandLogo" : 
+			with(_sprDic.logo){
+				.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+				.setCenter(0, 0);
+				.setPos(0, 0);
+				.fillRect(0, 0, .width, .height, 0);
+
+				var temp = new global.Layer(window, this);
+				temp.loadImages("FRM_0602");
+				.operateRect(WINDOW_CENTER_X-temp.imageWidth\2, WINDOW_CENTER_Y-temp.imageHeight\2, temp, 0, 0, temp.imageWidth, temp.imageHeight);
+				invalidate temp;
+
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(1000);
+
+				.visible = true;
+			}
+			break;
+
+		case "End" : end(); break;
+
+		case "TH" : case "TV" : case "TL" : 
+			var start = System.getTickCount();
+			var life = int GetElm(elm.life, 0);
+			var sp = elm.sp;
+			var dp = elm.dp;
+			var index = _spr.count;
+			_spr[index] = new StaffRollText(window, this);
+			with(_spr[index]){
+				.setLife(start, life);
+
+				switch(label){
+				case "TH" : 
+					.setSize(WINDOW_WIDTH, 230);
+					.fillRect(0, 0, .width, .height, 0xff000000);
+					break;
+				case "TV" : 
+					.setSize(306, WINDOW_HEIGHT);
+					.fillRect(0, 0, .width, .height, 0xff000000);
+					break;
+				case "TL" : 
+					.setSize(this[elm.file].width, this[elm.file].height);
+					break;
+				}
+
+				.operateRect(.width\2-this[elm.file].width\2, .height\2-this[elm.file].height\2, this[elm.file], 0, 0, this[elm.file].width, this[elm.file].height);
+
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				if(dp === void){
+					var x = sp[0] == -1 ? WINDOW_CENTER_X - this[elm.file].width \ 2 : sp[0];
+					var y = sp[1] == -1 ? WINDOW_CENTER_Y - this[elm.file].height \ 2 : sp[1];
+					.setPos(x, y);
+				}else{
+					.setMovingEnvelope(sp[0], sp[1], dp[0], dp[1], 2);
+				}
+				.beginActivation(500);
+
+				.absolute = 1000 + _absCount++;
+				.visible = true;
+			}
+			break;
+		case "CH" : case "CV" : case "CF" : 
+			var start = System.getTickCount();
+			var life = int GetElm(elm.life, 0);
+			var sp = elm.sp;
+			var dp = elm.dp;
+			var im = elm.im;
+			var ic = elm.ic;
+			var index = _spr.count;
+			_spr[index] = new StaffRollCg(window, this);
+			with(_spr[index]){
+				.setLife(start, life);
+
+				var ref;
+				if(elm.file !== void) ref = this[elm.file];
+				else if(elm.image !== void) ref = this[elm.image];
+				else ref = _sprDic.advscreen;
+
+				switch(label){
+				case "CH" : 
+					.setSize(WINDOW_WIDTH, 370);
+					.setCg(ref, ic, [0, im]);
+					break;
+				case "CV" : 
+					.setSize(494, WINDOW_HEIGHT);
+					.setCg(ref, ic, [im, 0]);
+					break;
+				case "CF" : 
+					.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+					.setCg(ref, ic, [0, 0]);
+					break;
+				}
+
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				if(dp === void)	.setPos(sp[0], sp[1]);
+				else			.setMovingEnvelope(sp[0], sp[1], dp[0], dp[1], 2);
+				.beginActivation(500);
+
+				.absolute = 1000 + _absCount++;
+				.visible = true;
+			}
+			break;
+		}
+	}
+
+	function playVoice(id, file){
+		var header = file.substring(0, 2);
+		if(CheckPlayVoice(header)){
+			var vol = 100000;
+			vol *= CONFIG.volVoice;
+			vol *= CONFIG.voiceDetails[HEADER_TO_ID[header]].volume;
+
+			_voice[id].volume = vol;
+		}
+		//_voice[id].volume *= 0.7;
+		_voice[id].play();
+	}
+
+	function onDraw(){
+		var now = System.getTickCount();
+
+		for(var i=_spr.count-1;i>=0;i--){
+			_spr[i].onDraw(now);
+
+			if(_spr[i].isLife(now)){
+				invalidate _spr[i];
+				_spr.erase(i);
+			}
+		}
+	}
+
+	function end(fFlash=false){
+		_fPlayBgm = false;
+		_bgm.stop();
+
+		setTransitionCompleteCall(close);
+		setBlendingEnvelope(0);
+		if(fFlash)	beginActivation(0);
+		else		beginActivation(3000);
+
+		with(_adv){
+			.addOrderList(%[tagname:"cg", file:"BLACK"]);
+			._update |= UPDATE_CG;
+			.update(%[time:0]);
+		}
+	}
+
+	function action(ev){
+	}
+
+}
+StaffRoll.CG_STATE_IDLE		= 0;
+StaffRoll.CG_STATE_START	= 1;
+StaffRoll.CG_STATE_ACTIVE	= 2;
+StaffRoll.CG_STATE_ENDING	= 3;
+StaffRoll.CG_STATE_END		= 4;
+
+class StaffRollCutinBase extends Sprite{
+	var _start = 0;
+	var _life = 0;
+
+	function StaffRollCutinBase(win, par){
+		Sprite(...);
+		hitThreshold = 256;
+	}
+	function finalize(){
+		super.finalize();
+	}
+
+	function setLife(start, life){
+		_start = start;
+		_life = life;
+	}
+
+	function isLife(now){return _start+life < now;}
+
+	function onDraw(now){}
+
+	function tick(now){
+		var t = (now - _start) / _life;
+		return ULimit(t, 1.0);
+	}
+
+	property life{
+		getter(){return _life;}
+		setter(v){_life = v;}
+	}
+}
+class StaffRollText extends StaffRollCutinBase{
+	function StaffRollText(win, par){
+		StaffRollCutinBase(...);
+	}
+	function finalize(){
+		super.finalize();
+	}
+}
+class StaffRollCg extends StaffRollCutinBase{
+	var _refImage;
+	var _ptDst;
+	var _ptCenter;
+	var _ptMove;
+	var _ptAffine;
+
+	function StaffRollCg(win, par){
+		StaffRollCutinBase(...);
+
+		_ptDst = new Point();
+		_ptCenter = new Point();
+		_ptMove = new Point();
+		_ptAffine = new D3Linear();
+	}
+	function finalize(){
+		invalidate _ptDst;
+		invalidate _ptCenter;
+		invalidate _ptMove;
+		invalidate _ptAffine;
+
+		super.finalize();
+	}
+
+	function setCg(img, center, move){
+		_refImage = img;
+
+		_ptDst.set(center[0]-move[0], 0);
+		_ptCenter.set(center[0], center[1]);
+		_ptMove.set(move[0], move[1]);
+		_ptAffine.set(new Point(center[0], center[1], 1.0), new Point(center[0], center[1], 1.5));
+	}
+
+	function onDraw(now){
+		var t = tick(now);
+		var pt = _ptAffine.pt(t);
+
+		var dx = _ptDst.x * pt.z;
+		var dy = _ptDst.y * pt.z;
+		var cx = _ptCenter.x * pt.z;
+		var cy = _ptCenter.y * pt.z;
+		var zw = _refImage.width * pt.z;
+		var zh = _refImage.height * pt.z;
+
+		var x1 = -(cx - _ptCenter.x) - _ptMove.x;
+		var y1 = -(cy - _ptCenter.y) - _ptMove.y;
+		var x2 = x1 + zw;
+		var y2 = y1;
+		var x3 = x1;
+		var y3 = y1 + zh;
+
+		affineCopy(_refImage, 0, 0, _refImage.width, _refImage.height, false, 
+		x1, y1, 
+		x2, y2, 
+		x3, y3, 
+		stFastLinear);
+	}
+
+	function tick(now){
+		var t = (now - _start) / 50000;
+		return ULimit(t, 1.0);
+	}
+}
+
+var SPR_STAFFROLL = null;
+function CallStaffRoll(type, adv=null){
+	if(SPR_STAFFROLL != null) return;
+
+	SPR_STAFFROLL = new StaffRoll(win, win.baseLayer, type, adv);
+
+	var async = new AsyncTrigger(StaffRollStart, "");
+	async.mode = atmAtIdle;
+	async.trigger();
+}
+
+function StaffRollStart(){
+	if(SPR_STAFFROLL == null) return;
+
+	//SPR_STAFFROLL.start();
+	OnceCall(SPR_STAFFROLL.start, 2000);
+}
+
+function StaffRollDelete(){
+	if(SPR_STAFFROLL == null) return;
+
+	OnceCallCancel(SPR_STAFFROLL.start);
+
+	invalidate SPR_STAFFROLL;
+	SPR_STAFFROLL = null;
+}
+
+function IsStaffRoll(){
+	return (SPR_STAFFROLL != null);
+}

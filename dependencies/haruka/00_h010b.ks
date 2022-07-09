@@ -52,7 +52,7 @@
 
 @Hitret id=10559
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10560
 
@@ -70,7 +70,7 @@
 
 @Hitret id=10562
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10563
 

@@ -298,7 +298,7 @@
 
 @Hitret id=10185
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10186
 
@@ -346,7 +346,7 @@
 
 @Hitret id=10194
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10195
 
@@ -357,7 +357,7 @@
 
 @Hitret id=10196
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10197
 
@@ -368,7 +368,7 @@
 
 @Hitret id=10198
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10199
 
@@ -382,7 +382,7 @@
 
 @Char file=CA02_01M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10201
 
@@ -404,7 +404,7 @@
 
 @Hitret id=10204
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10205
 
@@ -449,7 +449,7 @@
 
 @Hitret id=10212
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10213
 
@@ -460,7 +460,7 @@
 
 @Hitret id=10214
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10215
 
@@ -471,7 +471,7 @@
 
 @Hitret id=10216
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10217
 
@@ -482,7 +482,7 @@
 
 @Hitret id=10218
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10219
 
@@ -490,7 +490,7 @@
 
 @Hitret id=10220
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10221
 
@@ -501,7 +501,7 @@
 
 @Hitret id=10222
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10223
 
@@ -512,7 +512,7 @@
 
 @Hitret id=10224
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10225
 
@@ -538,7 +538,7 @@
 
 @Hitret id=10229
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10230
 
@@ -581,7 +581,7 @@
 
 @Hitret id=10236
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10237
 
@@ -638,7 +638,7 @@
 
 @Hitret id=10245
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10246
 

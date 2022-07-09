@@ -369,7 +369,7 @@
 @ClearChar 
 @Char file=CH04_04L 
 
-@Talk name=Class_Rep voice=KO010006
+@Talk name=Class　Rep voice=KO010006
 
 @Hitret id=3835
 
@@ -383,7 +383,7 @@
 @action id=梢 action=ActionAdvJump height=30 cycle=300 count=1
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO010007
+@Talk name=Class　Rep voice=KO010007
 
 @Hitret id=3837
 
@@ -401,7 +401,7 @@
 @action id=梢 action=ActionAdvHop width=4 height=0 cycle=100 count=5
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO010008
+@Talk name=Class　Rep voice=KO010008
 
 @Hitret id=3840
 
@@ -420,7 +420,7 @@
 
 @Char file=CH04_05M 
 
-@Talk name=Class_Rep voice=KO010009
+@Talk name=Class　Rep voice=KO010009
 
 @Hitret id=3844
 
@@ -439,7 +439,7 @@
 
 @Char file=CH04_07M 
 
-@Talk name=Class_Rep voice=KO010010
+@Talk name=Class　Rep voice=KO010010
 
 @Hitret id=3848
 
@@ -460,7 +460,7 @@
 @WaitUpdate
 
 
-@Talk name=Class_Rep voice=KO010011
+@Talk name=Class　Rep voice=KO010011
 
 @Hitret id=3850
 

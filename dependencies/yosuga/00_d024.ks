@@ -5,39 +5,39 @@
 @MessageFrame type=1
 @PlayBgm file=BGM08
 
-@Talk name=Kazuha_Monologue voice=KA040714
+@Talk name=Kazuha　Monologue voice=KA040714
 
 @Hitret id=30403
 
-@Talk name=Kazuha_Monologue voice=KA040715
+@Talk name=Kazuha　Monologue voice=KA040715
 
 @Hitret id=30404
 
-@Talk name=Kazuha_Monologue voice=KA040716
+@Talk name=Kazuha　Monologue voice=KA040716
 
 @Hitret id=30405
 
-@Talk name=Kazuha_Monologue voice=KA040717
+@Talk name=Kazuha　Monologue voice=KA040717
 
 @Hitret id=30406
 
-@Talk name=Kazuha_Monologue voice=KA040718
+@Talk name=Kazuha　Monologue voice=KA040718
 
 @Hitret id=30407
 
-@Talk name=Kazuha_Monologue voice=KA040719
+@Talk name=Kazuha　Monologue voice=KA040719
 
 @Hitret id=30408
 
-@Talk name=Kazuha_Monologue voice=KA040720
+@Talk name=Kazuha　Monologue voice=KA040720
 
 @Hitret id=30409
 
-@Talk name=Kazuha_Monologue voice=KA040721
+@Talk name=Kazuha　Monologue voice=KA040721
 
 @Hitret id=30410
 
-@Talk name=Kazuha_Monologue voice=KA040722
+@Talk name=Kazuha　Monologue voice=KA040722
 
 @Hitret id=30411
 

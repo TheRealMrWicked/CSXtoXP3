@@ -23,7 +23,7 @@
 
 @Hitret id=15044
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15045
 
@@ -31,7 +31,7 @@
 
 @Hitret id=15046
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15047
 
@@ -42,7 +42,7 @@
 
 @Hitret id=15048
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15049
 
@@ -53,7 +53,7 @@
 
 @Hitret id=15050
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15051
 
@@ -61,7 +61,7 @@
 
 @Hitret id=15052
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15053
 
@@ -76,7 +76,7 @@
 
 @Hitret id=15055
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15056
 
@@ -87,7 +87,7 @@
 
 @Hitret id=15057
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15058
 
@@ -95,7 +95,7 @@
 
 @Hitret id=15059
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15060
 
@@ -106,7 +106,7 @@
 
 @Hitret id=15061
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15062
 
@@ -117,7 +117,7 @@
 
 @Hitret id=15063
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15064
 
@@ -128,7 +128,7 @@
 
 @Hitret id=15065
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15066
 
@@ -151,7 +151,7 @@
 @PlayEnvSe file=SE302 fade=0
 
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15068
 
@@ -159,7 +159,7 @@
 
 @Hitret id=15069
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15070
 
@@ -189,11 +189,11 @@
 
 @Hitret id=15075
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15076
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15077
 
@@ -201,7 +201,7 @@
 
 @Hitret id=15078
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15079
 
@@ -213,7 +213,7 @@
 
 @StopEnvSe id=SE302
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15081
 
@@ -243,7 +243,7 @@
 
 @Hitret id=15085
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15086
 
@@ -254,7 +254,7 @@
 
 @Hitret id=15087
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15088
 
@@ -265,7 +265,7 @@
 
 @Hitret id=15089
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15090
 
@@ -293,7 +293,7 @@
 
 @Char file=CD02_10M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15094
 
@@ -304,7 +304,7 @@
 
 @Hitret id=15095
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15096
 
@@ -315,7 +315,7 @@
 
 @Hitret id=15097
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15098
 
@@ -334,7 +334,7 @@
 
 @Hitret id=15101
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15102
 
@@ -390,7 +390,7 @@
 @Hitret id=15109
 
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15110
 
@@ -417,7 +417,7 @@
 
 @Hitret id=15113
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15114
 
@@ -433,7 +433,7 @@
 
 @Hitret id=15116
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15117
 
@@ -454,7 +454,7 @@
 
 @PlayBgm file=BGM06
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15119
 
@@ -472,7 +472,7 @@
 @Update
 @MoveCamera x=0 y=94 z=80 time=500
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15121
 
@@ -498,7 +498,7 @@
 
 @Hitret id=15124
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15125
 
@@ -551,7 +551,7 @@
 
 @Hitret id=15134
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15135
 
@@ -576,7 +576,7 @@
 
 @Hitret id=15138
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=15139
 
@@ -599,7 +599,6 @@
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030017
-
 @Hitret id=15142
 
 
@@ -607,33 +606,27 @@
 @Char file=CA02_10M
 
 @Talk name=Sora voice=SR030021
-
 @Hitret id=15143
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15144
 
 
 @Char file=CA02_05M
 
 @Talk name=Sora voice=SR030022
-
 @Hitret id=15145
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15146
 
 @Talk name=S‚Ìº
-
 @Hitret id=15147
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030018
-
 @Hitret id=15148
 
 
@@ -643,63 +636,51 @@
 @WaitAction id=âu
 
 @Talk name=Sora voice=SR030023
-
 @Hitret id=15149
 
 @Talk name=S‚Ìº
-
 @Hitret id=15150
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030019
-
 @Hitret id=15151
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15152
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030020
-
 @Hitret id=15153
 
 @Talk name=Sora voice=SR030024
-
 @Hitret id=15154
 
 @Talk name=Akira voice=AK030021
-
 @Hitret id=15155
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030011
-
 @Hitret id=15156
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030022
-
 @Hitret id=15157
 
 @Talk name=S‚Ìº
-
 @Hitret id=15158
 
 @Talk name=S‚Ìº
-
 @Hitret id=15159
 
 @Talk name=S‚Ìº
-
 @Hitret id=15160
 
 
@@ -708,7 +689,6 @@
 @Char file=CC02_04L
 
 @Talk name=Akira voice=AK030023
-
 @Hitret id=15161
 
 
@@ -716,52 +696,43 @@
 
 @ClearChar
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15162
 
 
 @Char file=CD02_12M
 
 @Talk name=Kazuha voice=KA030012
-
 @Hitret id=15163
 
 
 @Char file=CA02_13M
 
 @Talk name=Sora voice=SR030025
-
 @Hitret id=15164
 
 
 @ClearChar
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15165
 
 @Talk name=S‚Ìº
-
 @Hitret id=15166
 
 @Talk name=S‚Ìº
-
 @Hitret id=15167
 
 @Talk name=S‚Ìº
-
 @Hitret id=15168
 
 @Talk name=S‚Ìº
-
 @Hitret id=15169
 
 
 @Char file=CD02_10M
 
 @Talk name=S‚Ìº
-
 @Hitret id=15170
 
 
@@ -770,70 +741,58 @@
 @Char file=CD02_12M
 
 @Talk name=Kazuha voice=KA030013
-
 @Hitret id=15171
 
 
 @Char file=CC02_14M
 
 @Talk name=Akira voice=AK030024
-
 @Hitret id=15172
 
 
 @PlayBgm file=BGM05
 @ClearChar
 
-@Talk name=ƒJƒ‰ƒIƒP“Xˆõ voice=NP140001
-
+@Talk name=Karaoke@Waiter voice=NP140001
 @Hitret id=15173
 
 @Talk name=S‚Ìº
-
 @Hitret id=15174
 
 @Talk name=S‚Ìº
-
 @Hitret id=15175
 
 @Talk name=S‚Ìº
-
 @Hitret id=15176
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030014
-
 @Hitret id=15177
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15178
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030025
-
 @Hitret id=15179
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15180
 
 
 @Char file=CA02_04M
 
 @Talk name=Sora voice=SR030026
-
 @Hitret id=15181
 
 
 @Char file=CC02_04M
 
 @Talk name=Akira voice=AK030026
-
 @Hitret id=15182
 
 
@@ -841,30 +800,25 @@
 @action id=‰l action=ActionAdvJump cycle=300 count=1 height=30
 @WaitAction id=‰l
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15183
 
 
 @Char file=CD02_10M
 
 @Talk name=Kazuha voice=KA030015
-
 @Hitret id=15184
 
 
 @Char file=CA02_01M
 
 @Talk name=Sora voice=SR030027
-
 @Hitret id=15185
 
 @Talk name=S‚Ìº
-
 @Hitret id=15186
 
 @Talk name=S‚Ìº
-
 @Hitret id=15187
 
 
@@ -875,19 +829,16 @@
 @WaitAction id=‰l
 
 @Talk name=Akira voice=AK030027
-
 @Hitret id=15188
 
 
 @StopBgm
 @ClearChar
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15189
 
 @Talk name=S‚Ìº
-
 @Hitret id=15190
 
 
@@ -897,72 +848,60 @@
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030028
-
 @Hitret id=15191
 
 
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030016
-
 @Hitret id=15192
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15193
 
 
 @Char file=CA02_09M
 
 @Talk name=Sora voice=SR030028
-
 @Hitret id=15194
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15195
 
 
 @Char file=CC02_14M
 
 @Talk name=Akira voice=AK030029
-
 @Hitret id=15196
 
 
 @Char file=CD02_04M
 
 @Talk name=Kazuha voice=KA030017
-
 @Hitret id=15197
 
 @Talk name=S‚Ìº
-
 @Hitret id=15198
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15199
 
 @Talk name=S‚Ìº
-
 @Hitret id=15200
 
 
 @Char file=CA02_10M
 
 @Talk name=Sora voice=SR030029
-
 @Hitret id=15201
 
 
 @StopBgm
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15202
 
 
@@ -974,47 +913,39 @@
 @WaitAction id=‰l
 
 @Talk name=Akira voice=AK030030
-
 @Hitret id=15203
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15204
 
 
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030018
-
 @Hitret id=15205
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15206
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030019
-
 @Hitret id=15207
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15208
 
 
 @Char file=CD02_10M
 
 @Talk name=Kazuha voice=KA030020
-
 @Hitret id=15209
 
 
 @StopBgm
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15210
 
 
@@ -1023,43 +954,36 @@
 @ClearChar
 
 @Talk name=Motoka voice=MT030001
-
 @Hitret id=15211
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030002
-
 @Hitret id=15212
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030031
-
 @Hitret id=15213
 
 @Talk name=S‚Ìº
-
 @Hitret id=15214
 
 @Talk name=S‚Ìº
-
 @Hitret id=15215
 
 
 @Char file=CE02_05M
 
 @Talk name=Motoka voice=MT030003
-
 @Hitret id=15216
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030021
-
 @Hitret id=15217
 
 
@@ -1069,11 +993,9 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030004
-
 @Hitret id=15218
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15219
 
 
@@ -1081,36 +1003,30 @@
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030032
-
 @Hitret id=15220
 
 
 @Char file=CE02_03M
 
 @Talk name=Motoka voice=MT030005
-
 @Hitret id=15221
 
 
 @Char file=CE02_01M
 
 @Talk name=Motoka voice=MT030006
-
 @Hitret id=15222
 
 @Talk name=Akira voice=AK030033
-
 @Hitret id=15223
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030007
-
 @Hitret id=15224
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15225
 
 
@@ -1119,11 +1035,9 @@
 @Char file=CA02_04M
 
 @Talk name=Sora voice=SR030030
-
 @Hitret id=15226
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15227
 
 
@@ -1131,7 +1045,6 @@
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030022
-
 @Hitret id=15228
 
 
@@ -1142,82 +1055,69 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030008
-
 @Hitret id=15229
 
 @Talk name=S‚Ìº
-
 @Hitret id=15230
 
 @Talk name=S‚Ìº
-
 @Hitret id=15231
 
 
 @Char file=CE02_03M
 
 @Talk name=Motoka voice=MT030009
-
 @Hitret id=15232
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030034
-
 @Hitret id=15233
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15234
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030010
-
 @Hitret id=15235
 
 
 @ClearChar id=‰‰À
 
 @Talk name=S‚Ìº
-
 @Hitret id=15236
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030035
-
 @Hitret id=15237
 
 
 @Char file=CD02_05M
 
 @Talk name=Kazuha voice=KA030023
-
 @Hitret id=15238
 
 
 @Char file=CC02_06M
 
 @Talk name=Akira voice=AK030036
-
 @Hitret id=15239
 
 
 @Char file=CD02_06M
 
 @Talk name=Kazuha voice=KA030024
-
 @Hitret id=15240
 
 
 @action id=ƒJƒƒ‰ action=ActionWave width=10, height=0, count=2 cycle=25
 @WaitAction id=ƒJƒƒ‰
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15241
 
 
@@ -1227,37 +1127,30 @@
 @WaitAction id=ˆê—t
 
 @Talk name=Kazuha voice=KA030025
-
 @Hitret id=15242
 
 @Talk name=S‚Ìº
-
 @Hitret id=15243
 
 @Talk name=S‚Ìº
-
 @Hitret id=15244
 
 
 @Char file=CC02_09M
 
 @Talk name=Akira voice=AK030037
-
 @Hitret id=15245
 
 
 @Char file=CD02_07M
 
 @Talk name=Kazuha voice=KA030026
-
 @Hitret id=15246
 
 @Talk name=S‚Ìº
-
 @Hitret id=15247
 
 @Talk name=S‚Ìº
-
 @Hitret id=15248
 
 
@@ -1265,54 +1158,45 @@
 @Char file=CE02_03M
 
 @Talk name=Motoka voice=MT030011
-
 @Hitret id=15249
 
 
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030012
-
 @Hitret id=15250
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030038
-
 @Hitret id=15251
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030027
-
 @Hitret id=15252
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030013
-
 @Hitret id=15253
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15254
 
 
 @Char file=CC02_03M
 
 @Talk name=Akira voice=AK030039
-
 @Hitret id=15255
 
 @Talk name=Kazuha voice=KA030028
-
 @Hitret id=15256
 
 @Talk name=S‚Ìº
-
 @Hitret id=15257
 
 
@@ -1320,22 +1204,18 @@
 @Char file=CA02_01M
 
 @Talk name=Sora voice=SR030031
-
 @Hitret id=15258
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15259
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030014
-
 @Hitret id=15260
 
 @Talk name=S‚Ìº
-
 @Hitret id=15261
 
 
@@ -1343,36 +1223,30 @@
 @Char file=CE02_01M
 
 @Talk name=Motoka voice=MT030015
-
 @Hitret id=15262
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15263
 
 
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030016
-
 @Hitret id=15264
 
 
 @Char file=CE02_01M
 
 @Talk name=Motoka voice=MT030017
-
 @Hitret id=15265
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15266
 
 
 @Char file=CA02_01M
 
 @Talk name=Sora voice=SR030032
-
 @Hitret id=15267
 
 
@@ -1380,74 +1254,63 @@
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030018
-
 @Hitret id=15268
 
 
 @Char file=CE02_01M
 
 @Talk name=Motoka voice=MT030019
-
 @Hitret id=15269
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030040
-
 @Hitret id=15270
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030029
-
 @Hitret id=15271
 
 
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030020
-
 @Hitret id=15272
 
 
 @Char file=CC02_03M
 
 @Talk name=Akira voice=AK030041
-
 @Hitret id=15273
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030021
-
 @Hitret id=15274
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15275
 
 
 @Char file=CE02_01L
 
 @Talk name=Motoka voice=MT030022
-
 @Hitret id=15276
 
 @Talk name=Akira voice=AK030042
-
 @Hitret id=15277
 
 
 @StopBgm
 
 @Talk name=S‚Ìº
-
 @Hitret id=15278
 
 
@@ -1457,18 +1320,15 @@
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030030
-
 @Hitret id=15279
 
 
 @Char file=CC02_03M
 
 @Talk name=Akira voice=AK030043
-
 @Hitret id=15280
 
 @Talk name=S‚Ìº
-
 @Hitret id=15281
 
 
@@ -1476,56 +1336,45 @@
 @Char file=CA02_01M
 
 @Talk name=Sora voice=SR030033
-
 @Hitret id=15282
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15283
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15284
 
 @Talk name=S‚Ìº
-
 @Hitret id=15285
 
 
 @Char file=CC02_14M
 
 @Talk name=Akira voice=AK030044
-
 @Hitret id=15286
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15287
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030045
-
 @Hitret id=15288
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15289
 
 @Talk name=S‚Ìº
-
 @Hitret id=15290
 
 @Talk name=S‚Ìº
-
 @Hitret id=15291
 
 @Talk name=S‚Ìº
-
 @Hitret id=15292
 
 
@@ -1533,11 +1382,9 @@
 @Char file=CA02_05M
 
 @Talk name=Sora voice=SR030034
-
 @Hitret id=15293
 
 @Talk name=S‚Ìº
-
 @Hitret id=15294
 
 
@@ -1557,7 +1404,6 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030023
-
 @Hitret id=15295
 
 
@@ -1566,12 +1412,10 @@
 @Char file=CC02_04M
 
 @Talk name=Akira voice=AK030046
-
 @Hitret id=15296
 
 
 @Talk name=Motoka voice=MT030024
-
 @Hitret id=15297
 
 
@@ -1587,11 +1431,9 @@
 @WaitAction id=‰l
 
 @Talk name=S‚Ìº
-
 @Hitret id=15298
 
 @Talk name=S‚Ìº
-
 @Hitret id=15299
 
 
@@ -1599,18 +1441,15 @@
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030031
-
 @Hitret id=15300
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030025
-
 @Hitret id=15301
 
 @Talk name=Motoka voice=MT030026
-
 @Hitret id=15302
 
 
@@ -1618,33 +1457,27 @@
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030027
-
 @Hitret id=15303
 
 @Talk name=S‚Ìº
-
 @Hitret id=15304
 
 
 @Char file=CE02_01M
 
 @Talk name=Motoka voice=MT030028
-
 @Hitret id=15305
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15306
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030029
-
 @Hitret id=15307
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15308
 
 
@@ -1652,14 +1485,12 @@
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030047
-
 @Hitret id=15309
 
 
 @Char file=CD02_10M
 
 @Talk name=Kazuha voice=KA030032
-
 @Hitret id=15310
 
 
@@ -1668,7 +1499,6 @@
 @Char file=CE02_04M x=200 order=908
 
 @Talk name=Motoka voice=MT030030
-
 @Hitret id=15311
 
 
@@ -1683,11 +1513,9 @@
 @WaitAction id=ˆê—t
 
 @Talk name=S‚Ìº
-
 @Hitret id=15312
 
 @Talk name=S‚Ìº
-
 @Hitret id=15313
 
 
@@ -1696,32 +1524,27 @@
 @Char file=CD02_11M
 
 @Talk name=Kazuha voice=KA030033
-
 @Hitret id=15314
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030048
-
 @Hitret id=15315
 
 
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030034
-
 @Hitret id=15316
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030049
-
 @Hitret id=15317
 
 @Talk name=S‚Ìº
-
 @Hitret id=15318
 
 
@@ -1729,14 +1552,12 @@
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030035
-
 @Hitret id=15319
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15320
 
 
@@ -1746,7 +1567,6 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030031
-
 @Hitret id=15321
 
 
@@ -1756,11 +1576,9 @@
 @WaitAction id=‰l
 
 @Talk name=Akira voice=AK030050
-
 @Hitret id=15322
 
 @Talk name=S‚Ìº
-
 @Hitret id=15323
 
 
@@ -1770,7 +1588,6 @@
 @PlayBgm file=BGM_KAZUHA pos=17000
 
 @Talk name=S‚Ìº
-
 @Hitret id=15324
 
 
@@ -1778,40 +1595,33 @@
 @Char file=CE02_05M
 
 @Talk name=Motoka voice=MT030032
-
 @Hitret id=15325
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030051
-
 @Hitret id=15326
 
 
 @Char file=CA02_01M
 
 @Talk name=Sora voice=SR030035
-
 @Hitret id=15327
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15328
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15329
 
 @Talk name=S‚Ìº
-
 @Hitret id=15330
 
 @Talk name=S‚Ìº
-
 @Hitret id=15331
 
 
@@ -1821,7 +1631,6 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030033
-
 @Hitret id=15332
 
 
@@ -1829,15 +1638,12 @@
 @Char file=CE02_10M x=200
 
 @Talk name=Akira voice=AK030052
-
 @Hitret id=15333
 
 @Talk name=S‚Ìº
-
 @Hitret id=15334
 
 @Talk name=S‚Ìº
-
 @Hitret id=15335
 
 
@@ -1846,7 +1652,6 @@
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030053
-
 @Hitret id=15336
 
 
@@ -1854,11 +1659,9 @@
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030036
-
 @Hitret id=15337
 
 @Talk name=S‚Ìº
-
 @Hitret id=15338
 
 
@@ -1866,19 +1669,15 @@
 @Char file=CE02_09M
 
 @Talk name=Motoka voice=MT030034
-
 @Hitret id=15339
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15340
 
 @Talk name=S‚Ìº
-
 @Hitret id=15341
 
 @Talk name=S‚Ìº
-
 @Hitret id=15342
 
 
@@ -1886,59 +1685,48 @@
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030054
-
 @Hitret id=15343
 
 
 @Char file=CA02_13M
 
 @Talk name=Sora voice=SR030036
-
 @Hitret id=15344
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15345
 
 @Talk name=S‚Ìº
-
 @Hitret id=15346
 
 @Talk name=S‚Ìº
-
 @Hitret id=15347
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15348
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030035
-
 @Hitret id=15349
 
 
 @Char file=CC02_03M
 
 @Talk name=Akira voice=AK030055
-
 @Hitret id=15350
 
 
 @Char file=CA02_04M
 
 @Talk name=Sora voice=SR030037
-
 @Hitret id=15351
 
 @Talk name=S‚Ìº
-
 @Hitret id=15352
 
 @Talk name=S‚Ìº
-
 @Hitret id=15353
 
 
@@ -1946,19 +1734,15 @@
 @Char file=CA02_06M
 
 @Talk name=Sora voice=SR030038
-
 @Hitret id=15354
 
 @Talk name=S‚Ìº
-
 @Hitret id=15355
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15356
 
 @Talk name=S‚Ìº
-
 @Hitret id=15357
 
 
@@ -1967,14 +1751,12 @@
 @Char file=CA02_10L
 
 @Talk name=Sora voice=SR030039
-
 @Hitret id=15358
 
 
 @PlayBgm file=BGM_SORA pos=16000
 
 @Talk name=S‚Ìº
-
 @Hitret id=15359
 
 
@@ -1983,15 +1765,13 @@
 @action id=ƒJƒƒ‰ action=ActionWave width=0, height=20, count=2 cycle=50
 @WaitAction id=ƒJƒƒ‰
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15360
 
 
 @Char file=CC02_12M
 
 @Talk name=Akira voice=AK030056
-
 @Hitret id=15361
 
 
@@ -2001,22 +1781,18 @@
 @WaitAction id=‰l
 
 @Talk name=Akira voice=AK030057
-
 @Hitret id=15363
 
 
 @Char file=CD02_03M
 
 @Talk name=Kazuha voice=KA030037
-
 @Hitret id=15364
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15365
 
 @Talk name=S‚Ìº
-
 @Hitret id=15366
 
 
@@ -2027,29 +1803,24 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030036
-
 @Hitret id=15367
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15368
 
 @Talk name=S‚Ìº
-
 @Hitret id=15369
 
 @Talk name=S‚Ìº
-
 @Hitret id=15370
 
 
 @StopBgm
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15371
 
 
@@ -2057,40 +1828,33 @@
 @Char file=CA02_11M
 
 @Talk name=Sora voice=SR030040
-
 @Hitret id=15372
 
 @Talk name=S‚Ìº
-
 @Hitret id=15373
 
 
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030058
-
 @Hitret id=15374
 
 
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA030038
-
 @Hitret id=15375
 
 
 @Char file=CA02_02M
 
 @Talk name=Sora voice=SR030041
-
 @Hitret id=15376
 
 @Talk name=S‚Ìº
-
 @Hitret id=15377
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15378
 
 
@@ -2099,7 +1863,6 @@
 @Char file=CA02_11M
 
 @Talk name=Sora voice=SR030042
-
 @Hitret id=15379
 
 
@@ -2113,11 +1876,9 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030037
-
 @Hitret id=15380
 
 @Talk name=S‚Ìº
-
 @Hitret id=15381
 
 
@@ -2127,11 +1888,9 @@
 @WaitAction id=‰‰À
 
 @Talk name=Motoka voice=MT030038
-
 @Hitret id=15382
 
 @Talk name=S‚Ìº
-
 @Hitret id=15383
 
 
@@ -2141,28 +1900,24 @@
 @Char file=CE02_12M
 
 @Talk name=Motoka voice=MT030039
-
 @Hitret id=15384
 
 
 @Char file=CE02_02M
 
 @Talk name=Motoka voice=MT030040
-
 @Hitret id=15385
 
 @Char file=CE02_02M x=-200
 @Char file=CA02_01M x=200
 
 @Talk name=Sora voice=SR030043
-
 @Hitret id=15386
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030041
-
 @Hitret id=15387
 
 
@@ -2170,7 +1925,6 @@
 @Char file=CE02_07M
 
 @Talk name=Motoka voice=MT030042
-
 @Hitret id=15388
 
 
@@ -2178,11 +1932,9 @@
 @Char file=CA02_04M
 
 @Talk name=Motoka voice=MT030043
-
 @Hitret id=15389
 
 @Talk name=S‚Ìº
-
 @Hitret id=15390
 
 
@@ -2190,50 +1942,42 @@
 @Char file=CC02_02M
 
 @Talk name=Akira voice=AK030059
-
 @Hitret id=15391
 
 
 @Char file=CD02_10M
 
 @Talk name=Kazuha voice=KA030039
-
 @Hitret id=15392
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15393
 
 @Talk name=S‚Ìº
-
 @Hitret id=15394
 
 @Talk name=S‚Ìº
-
 @Hitret id=15395
 
 
 @Char file=CC02_01M
 
 @Talk name=Akira voice=AK030060
-
 @Hitret id=15396
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030044
-
 @Hitret id=15397
 
 
 @Char file=CC02_14M
 
 @Talk name=Akira voice=AK030061
-
 @Hitret id=15398
 
 
@@ -2241,51 +1985,42 @@
 @Char file=CA02_04M
 
 @Talk name=Sora voice=SR030044
-
 @Hitret id=15399
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15400
 
 
 @Char file=CA02_11M
 
 @Talk name=Sora voice=SR030045
-
 @Hitret id=15401
 
-@Talk name=—I
-
+@Talk name=Haruka
 @Hitret id=15402
 
 
 @Char file=CA02_10M
 
 @Talk name=Sora voice=SR030046
-
 @Hitret id=15403
 
 
 @Char file=CE02_04M
 
 @Talk name=Motoka voice=MT030045
-
 @Hitret id=15404
 
 @Talk name=S‚Ìº
-
 @Hitret id=15405
 
 
 @ClearChar
 
 @Talk name=S‚Ìº
-
 @Hitret id=15406
 
 @Talk name=S‚Ìº
-
 @Hitret id=15407
 
 
@@ -2301,4 +2036,4 @@
 @WaitVoice 1
 @Wait time=1000, 1
 
-@toTitle submenu=ShortStory 
+@toTitle submenu=ShortStory

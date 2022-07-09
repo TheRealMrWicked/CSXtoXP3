@@ -174,7 +174,7 @@
 @action id=カメラ action=ActionWave width=0, height=32, count=2 cycle=150 
 @WaitAction id=カメラ
 
-@Talk name=Nao_and_Ryouhei voice=NO030011/RH030008
+@Talk name=Nao　and　Ryouhei voice=NO030011/RH030008
 
 @Hitret id=10644
 

@@ -238,7 +238,7 @@
 
 @Hitret id=11571
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11572
 

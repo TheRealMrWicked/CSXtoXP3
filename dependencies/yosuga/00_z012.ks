@@ -845,8 +845,8 @@
 @Hitret id=1836
 
 
-@AddSelect text=I_want_to_know_more_about_her...  hint=瑛
-@AddSelect text=She's_an_amusing_friend. hint=一葉/初佳
+@AddSelect text=I　want　to　know　more　about　her... hint=瑛
+@AddSelect text=She's　an　amusing　friend. hint=一葉/初佳
 @StartSelect
 
 @if exp="ChkSelect(1)"

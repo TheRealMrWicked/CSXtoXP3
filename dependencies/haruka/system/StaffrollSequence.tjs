@@ -1,0 +1,108 @@
+%[
+	//スタッフクレジット
+	credit : [
+		%[label:"TV", time: 14000, life:12000, file:"FRM_0901", sp:[131,   0], dp:[  0,   0]], 
+		%[label:"TH", time: 24000, life:14000, file:"FRM_0902", sp:[  0, 270], dp:[  0, 370]], 
+		%[label:"TH", time: 34000, life:14000, file:"FRM_0903", sp:[  0, 370]], 
+		%[label:"TV", time: 44000, life:14000, file:"FRM_0904", sp:[394,   0], dp:[494,   0]], 
+		%[label:"TV", time: 54000, life:14000, file:"FRM_0905", sp:[494,   0]], 
+		%[label:"TV", time: 64000, life:14000, file:"FRM_0906", sp:[494,   0]], 
+		%[label:"TH", time: 74000, life:14000, file:"FRM_0907", sp:[  0, 100], dp:[  0,   0]], 
+		%[label:"TH", time: 84000, life:14000, file:"FRM_0908", sp:[  0,   0]], 
+		%[label:"TV", time: 94000, life:14000, file:"FRM_0909", sp:[131,   0], dp:[  0,   0]], 
+		%[label:"TV", time:104000, life:14000, file:"FRM_0910", sp:[  0,   0], dp:[  0,   0]], 
+		%[label:"TV", time:114000, life:14000, file:"FRM_0911", sp:[  0,   0], dp:[  0,   0]], 
+		%[label:"TH", time:124000, life:14000, file:"FRM_0912", sp:[  0, 270], dp:[  0, 370]], 
+		%[label:"TH", time:134000, life:14000, file:"FRM_0913", sp:[  0, 370]], 
+		%[label:"TV", time:144000, life:14000, file:"FRM_0914", sp:[394,   0], dp:[494,   0]], 
+		%[label:"TV", time:154000, life:14000, file:"FRM_0915", sp:[494,   0]], 
+		%[label:"TV", time:164000, life:14000, file:"FRM_0916", sp:[494,   0]], 
+		%[label:"TH", time:174000, life:14000, file:"FRM_0917", sp:[  0, 100], dp:[  0,   0]], 
+		%[label:"TH", time:184000, life:14000, file:"FRM_0918", sp:[  0,   0]], 
+		%[label:"TV", time:194000, life:14000, file:"FRM_0919", sp:[131,   0], dp:[  0,   0]], 
+		%[label:"TV", time:204000, life:14000, file:"FRM_0920", sp:[  0,   0], dp:[  0,   0]], 
+		%[label:"TV", time:214000, life:14000, file:"FRM_0921", sp:[  0,   0], dp:[  0,   0]], 
+		%[label:"TH", time:224000, life:14000, file:"FRM_0922", sp:[  0, 270], dp:[  0, 370]], 
+		%[label:"TH", time:234000, life:14000, file:"FRM_0923", sp:[  0, 370]], 
+
+		%[label:"TL", time:244000, life:10000, file:"FRM_0924", sp:[-1, -1]], 
+		%[label:"TL", time:254000, life:10000, file:"FRM_0925", sp:[-1, -1]], 
+		%[label:"TL", time:264000, life: 8000, file:"FRM_0926", sp:[-1, -1]]
+	], 
+	
+	//ＣＧ表示
+	cg :
+	[
+		[
+		//穹
+			%[label:"LogoShow"   , time: 5000, pos:[-1, -1]], 
+
+			%[label:"CV", time: 14000, life:12000,  tgt:"ADVSC", sp:[131,   0], dp:[306,   0], im:140, ic:[202, 256]], 
+			%[label:"CH", time: 24000, life:23000, file:"B07a" , sp:[  0, 100], dp:[  0,   0], im:101, ic:[195, 154]], 
+			%[label:"CV", time: 44000, life:33000, file:"EA19a", sp:[100,   0], dp:[  0,   0], im:233, ic:[236, 159]], 
+			%[label:"CH", time: 74000, life:23000, file:"B12a" , sp:[  0, 130], dp:[  0, 230], im:141, ic:[569, 175]], 
+			%[label:"CV", time: 94000, life:33000, file:"EA20a", sp:[131,   0], dp:[306,   0], im:157, ic:[227, 280]], 
+			%[label:"CH", time:124000, life:23000, file:"B01a" , sp:[  0, 100], dp:[  0,   0], im: 60, ic:[313, 235]], 
+			%[label:"CV", time:144000, life:33000, file:"EA21a", sp:[100,   0], dp:[  0,   0], im:  0, ic:[196, 166]], 
+			%[label:"CH", time:174000, life:23000, file:"B44a" , sp:[  0, 130], dp:[  0, 230], im:184, ic:[206, 109]], 
+			%[label:"CV", time:194000, life:33000, file:"EA22a", sp:[131,   0], dp:[306,   0], im:163, ic:[353, 194]], 
+			%[label:"CH", time:224000, life:23000, file:"B46a" , sp:[  0, 100], dp:[  0,   0], im:183, ic:[416, 135]], 
+			%[label:"CF", time:244000, life:30000, file:"EA23a", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[400,   0]], 
+
+			%[label:"CF", time:272000, life:10000, image:"BLACK", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[  0,   0]]
+		], [
+		//奈緒
+		], [
+		//瑛
+		], [
+		//一葉
+		], [
+		//初佳
+		], [
+		//やひろ
+			%[label:"LogoShow"   , time: 5000, pos:[-1, 330]], 
+
+			%[label:"CV", time: 14000, life:12000,  tgt:"ADVSC", sp:[154,   0], dp:[306,   0], im:174, ic:[372,  51]], 
+			%[label:"CH", time: 24000, life:23000, file:"B15a" , sp:[  0, 100], dp:[  0,   0], im: 94, ic:[138, 167]], 
+			%[label:"CV", time: 44000, life:33000, file:"EZ07a", sp:[100,   0], dp:[  0,   0], im: 22, ic:[223,  26]], 
+			%[label:"CH", time: 74000, life:23000, file:"B39a" , sp:[  0, 130], dp:[  0, 230], im:110, ic:[611, 140]], 
+			%[label:"CV", time: 94000, life:33000, file:"EZ08a", sp:[131,   0], dp:[306,   0], im:  0, ic:[  0,  60]], 
+			%[label:"CH", time:124000, life:23000, file:"B35b" , sp:[  0, 100], dp:[  0,   0], im:143, ic:[ 20, 180]], 
+			%[label:"CV", time:144000, life:33000, file:"EZ09a", sp:[100,   0], dp:[  0,   0], im:  0, ic:[414,  30]], 
+			%[label:"CH", time:174000, life:23000, file:"B41c" , sp:[  0, 130], dp:[  0, 230], im:156, ic:[396, 180]], 
+			%[label:"CV", time:194000, life:33000, file:"EZ10a", sp:[131,   0], dp:[306,   0], im:194, ic:[260,   0]], 
+			%[label:"CH", time:224000, life:23000, file:"B47a" , sp:[  0, 100], dp:[  0,   0], im:128, ic:[407, 166]], 
+			%[label:"CF", time:244000, life:30000, file:"EZ11a", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[538,  77]], 
+
+			%[label:"CF", time:272000, life:10000, image:"BLACK", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[  0,   0]]
+		], [
+		//梢
+			%[label:"LogoShow"   , time: 5000, pos:[-1, -1]], 
+
+			%[label:"CV", time: 14000, life:12000,  tgt:"ADVSC", sp:[154,   0], dp:[306,   0], im: 64, ic:[166,  66]], 
+			%[label:"CH", time: 24000, life:23000, file:"B19a" , sp:[  0, 100], dp:[  0,   0], im: 63, ic:[226, 122]], 
+			%[label:"CV", time: 44000, life:33000, file:"EZ20a", sp:[100,   0], dp:[  0,   0], im: 69, ic:[177,  63]], 
+			%[label:"CH", time: 74000, life:23000, file:"B17a" , sp:[  0, 130], dp:[  0, 230], im:137, ic:[588, 104]], 
+			%[label:"CV", time: 94000, life:33000, file:"EZ22a", sp:[131,   0], dp:[306,   0], im:  0, ic:[119,  98]], 
+			%[label:"CH", time:124000, life:23000, file:"B48a" , sp:[  0, 100], dp:[  0,   0], im:201, ic:[681,  83]], 
+			%[label:"CV", time:144000, life:33000, file:"EZ23a", sp:[100,   0], dp:[  0,   0], im:221, ic:[474,  14]], 
+			%[label:"CH", time:174000, life:23000, file:"B43a" , sp:[  0, 130], dp:[  0, 230], im: 22, ic:[400,   0]], 
+			%[label:"CV", time:194000, life:33000, file:"EZ21d", sp:[131,   0], dp:[306,   0], im:  0, ic:[  0,   0]], 
+			%[label:"CH", time:224000, life:23000, file:"B23a" , sp:[  0, 100], dp:[  0,   0], im:150, ic:[ 83, 169]], 
+			%[label:"CF", time:244000, life:30000, file:"EZ24a", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[190,   0]], 
+
+			%[label:"CF", time:272000, life:10000, image:"BLACK", sp:[  0,   0], dp:[  0,   0], im:  0, ic:[  0,   0]]
+		]
+	], 
+
+	//その他
+	process : [
+		%[label:"Start"      , time: 0], 
+		%[label:"Setup"      , time: 1000], 
+		%[label:"LogoHide"   , time: 15000], 
+		%[label:"AdvHide"    , time: 17000], 
+
+		%[label:"BrandLogo"  , time:272000, life:  7000, file:"FRM_0602", sp:[-1, -1]], 
+		%[label:"End"        , time:280000]
+	]
+];

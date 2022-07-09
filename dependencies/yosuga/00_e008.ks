@@ -7,19 +7,19 @@
 
 @Char file=CE01_09M 
 
-@Talk name=Motoka_Monologue voice=MT050227
+@Talk name=Motoka　Monologue voice=MT050227
 
 @Hitret id=34347
 
-@Talk name=Motoka_Monologue voice=MT050228
+@Talk name=Motoka　Monologue voice=MT050228
 
 @Hitret id=34348
 
-@Talk name=Motoka_Monologue voice=MT050229
+@Talk name=Motoka　Monologue voice=MT050229
 
 @Hitret id=34349
 
-@Talk name=Motoka_Monologue voice=MT050230
+@Talk name=Motoka　Monologue voice=MT050230
 
 @Hitret id=34350
 
@@ -43,11 +43,11 @@
 
 @Hitret id=34353
 
-@Talk name=Motoka_Monologue voice=MT050232
+@Talk name=Motoka　Monologue voice=MT050232
 
 @Hitret id=34354
 
-@Talk name=Motoka_Monologue voice=MT050233
+@Talk name=Motoka　Monologue voice=MT050233
 
 @Hitret id=34355
 
@@ -55,7 +55,7 @@
 
 @Hitret id=34356
 
-@Talk name=Motoka_Monologue voice=MT050235
+@Talk name=Motoka　Monologue voice=MT050235
 
 @Hitret id=34357
 
@@ -71,7 +71,7 @@
 
 @Hitret id=34359
 
-@Talk name=Motoka_Monologue voice=MT050237
+@Talk name=Motoka　Monologue voice=MT050237
 
 @Hitret id=34360
 
@@ -82,19 +82,19 @@
 
 @Hitret id=34361
 
-@Talk name=Motoka_Monologue voice=MT050239
+@Talk name=Motoka　Monologue voice=MT050239
 
 @Hitret id=34362
 
-@Talk name=Motoka_Monologue voice=MT050240
+@Talk name=Motoka　Monologue voice=MT050240
 
 @Hitret id=34363
 
-@Talk name=Motoka_Monologue voice=MT050241
+@Talk name=Motoka　Monologue voice=MT050241
 
 @Hitret id=34364
 
-@Talk name=Motoka_Monologue voice=MT050242
+@Talk name=Motoka　Monologue voice=MT050242
 
 @Hitret id=34365
 
@@ -138,7 +138,7 @@
 
 @Hitret id=34372
 
-@Talk name=Motoka_Monologue voice=MT050248
+@Talk name=Motoka　Monologue voice=MT050248
 
 @Hitret id=34373
 
@@ -161,7 +161,7 @@
 
 @Char file=CJ01_01M 
 
-@Talk name=Motoka_Monologue voice=MT050251
+@Talk name=Motoka　Monologue voice=MT050251
 
 @Hitret id=34378
 
@@ -173,7 +173,7 @@
 
 @Hitret id=34380
 
-@Talk name=Motoka_Monologue voice=MT050252
+@Talk name=Motoka　Monologue voice=MT050252
 
 @Hitret id=34381
 
@@ -211,7 +211,7 @@
 
 @Hitret id=34388
 
-@Talk name=Motoka_Monologue voice=MT050256
+@Talk name=Motoka　Monologue voice=MT050256
 
 @Hitret id=34389
 
@@ -234,15 +234,15 @@
 
 @Hitret id=34393
 
-@Talk name=Motoka_Monologue voice=MT050258
+@Talk name=Motoka　Monologue voice=MT050258
 
 @Hitret id=34394
 
-@Talk name=Motoka_Monologue voice=MT050259
+@Talk name=Motoka　Monologue voice=MT050259
 
 @Hitret id=34395
 
-@Talk name=Motoka_Monologue voice=MT050260
+@Talk name=Motoka　Monologue voice=MT050260
 
 @Hitret id=34396
 
@@ -282,11 +282,11 @@
 
 @Char file=CE01_08M 
 
-@Talk name=Motoka_Monologue voice=MT050264
+@Talk name=Motoka　Monologue voice=MT050264
 
 @Hitret id=34404
 
-@Talk name=Motoka_Monologue voice=MT050265
+@Talk name=Motoka　Monologue voice=MT050265
 
 @Hitret id=34405
 
@@ -321,59 +321,59 @@
 
 @Char file=CE01_08M 
 
-@Talk name=Motoka_Monologue voice=MT050268
+@Talk name=Motoka　Monologue voice=MT050268
 
 @Hitret id=34410
 
-@Talk name=Motoka_Monologue voice=MT050269
+@Talk name=Motoka　Monologue voice=MT050269
 
 @Hitret id=34411
 
-@Talk name=Motoka_Monologue voice=MT050270
+@Talk name=Motoka　Monologue voice=MT050270
 
 @Hitret id=34412
 
-@Talk name=Motoka_Monologue voice=MT050271
+@Talk name=Motoka　Monologue voice=MT050271
 
 @Hitret id=34413
 
 
 @Char file=CE01_02M 
 
-@Talk name=Motoka_Monologue voice=MT050272
+@Talk name=Motoka　Monologue voice=MT050272
 
 @Hitret id=34414
 
-@Talk name=Motoka_Monologue voice=MT050273
+@Talk name=Motoka　Monologue voice=MT050273
 
 @Hitret id=34415
 
 
 @Char file=CE01_11M 
 
-@Talk name=Motoka_Monologue voice=MT050274
+@Talk name=Motoka　Monologue voice=MT050274
 
 @Hitret id=34416
 
 
 @Char file=CE01_01M 
 
-@Talk name=Motoka_Monologue voice=MT050275
+@Talk name=Motoka　Monologue voice=MT050275
 
 @Hitret id=34417
 
-@Talk name=Motoka_Monologue voice=MT050276
+@Talk name=Motoka　Monologue voice=MT050276
 
 @Hitret id=34418
 
-@Talk name=Motoka_Monologue voice=MT050277
+@Talk name=Motoka　Monologue voice=MT050277
 
 @Hitret id=34419
 
 
 @Char file=CE01_08M 
 
-@Talk name=Motoka_Monologue voice=MT050278
+@Talk name=Motoka　Monologue voice=MT050278
 
 @Hitret id=34420
 

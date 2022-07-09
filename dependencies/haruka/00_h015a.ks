@@ -118,11 +118,11 @@
 
 @Hitret id=11227
 
-@Talk name=Kozue_Monologue voice=KO020555
+@Talk name=Kozue　Monologue voice=KO020555
 
 @Hitret id=11228
 
-@Talk name=Kozue_Monologue voice=KO020556
+@Talk name=Kozue　Monologue voice=KO020556
 
 @Hitret id=11229
 
@@ -145,7 +145,7 @@
 
 @Hitret id=11232
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=11233
 
@@ -247,7 +247,7 @@
 
 @Hitret id=11248
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=11249
 
@@ -313,7 +313,7 @@
 @Char file=CB03_13M
 @Char file=CH02_05M
 
-@Talk name=Nao_＆_Sora_＆_Kozue voice=SYN000006
+@Talk name=Nao　and　Sora　and　Kozue voice=SYN000006
 
 @Hitret id=11259
 
@@ -388,7 +388,7 @@
 
 @Hitret id=11269
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=11270
 
@@ -432,7 +432,7 @@
 
 @Hitret id=11275
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=11276
 
@@ -444,7 +444,7 @@
 
 @Hitret id=11277
 
-@Talk name=Sora_＆_Nao_＆_Akira_＆_Kazuha_＆_Ryouhei/Everyone voice=SYN000007
+@Talk name=Sora　and　Nao　and　Akira　and　Kazuha　and　Ryouhei/Everyone voice=SYN000007
 
 @Hitret id=11278
 

@@ -271,14 +271,14 @@
 
 @Hitret id=27009
 
-@Talk name=Math_Teacher voice=NP120005
+@Talk name=Math　Teacher voice=NP120005
 
 @Hitret id=27010
 
 
 @Cg file=EZ06c  
 
-@Talk name=Akira_and_Kazuha_and_Ryouhei voice=AK040029/KA040046/RH040015
+@Talk name=Akira　and　Kazuha　and　Ryouhei voice=AK040029/KA040046/RH040015
 
 @Hitret id=27011
 

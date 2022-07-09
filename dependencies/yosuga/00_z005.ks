@@ -500,8 +500,8 @@
 
 
 @if exp="ChkFlagOn(151)"
-@AddSelect text=Knock_on_the_door. hint=穹
-@AddSelect text=Leave_her_alone_for_now. hint=奈緒/瑛/一葉/初佳
+@AddSelect text=Knock　on　the　door. hint=穹
+@AddSelect text=Leave　her　alone　for　now. hint=奈緒/瑛/一葉/初佳
 @StartSelect
 
 @if exp="ChkSelect(1)"
@@ -677,7 +677,7 @@
 @BlackOut time=1000
 @MessageFrame type=1
 
-@Talk name=Sora_Monologue voice=SR001001
+@Talk name=Sora　Monologue voice=SR001001
 
 @Hitret id=718
 
@@ -685,7 +685,7 @@
 @PlayBgm file=BGM16
 @PlaySe file=se106
 
-@Talk name=Sora_Monologue voice=SR001002
+@Talk name=Sora　Monologue voice=SR001002
 
 @Hitret id=719
 
@@ -701,7 +701,7 @@
 
 @Hitret id=721
 
-@Talk name=Sora_Monologue voice=SR001003
+@Talk name=Sora　Monologue voice=SR001003
 
 @Hitret id=722
 
@@ -715,7 +715,7 @@
 
 @Cg file=B02a   
 
-@Talk name=Sora_Monologue voice=SR001004
+@Talk name=Sora　Monologue voice=SR001004
 
 @Hitret id=724
 
@@ -730,11 +730,11 @@
 
 @Hitret id=725
 
-@Talk name=Sora_Monologue voice=SR001005
+@Talk name=Sora　Monologue voice=SR001005
 
 @Hitret id=726
 
-@Talk name=Sora_Monologue voice=SR001006
+@Talk name=Sora　Monologue voice=SR001006
 
 @Hitret id=727
 

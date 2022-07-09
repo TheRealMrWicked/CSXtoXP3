@@ -26,7 +26,7 @@
 
 @Hitret id=6767
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6768
 
@@ -41,7 +41,7 @@
 
 @Hitret id=6770
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6771
 
@@ -52,7 +52,7 @@
 
 @Hitret id=6772
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6773
 
@@ -83,7 +83,7 @@
 
 @Hitret id=6778
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6779
 
@@ -98,7 +98,7 @@
 
 @Hitret id=6781
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6782
 
@@ -129,7 +129,7 @@
 
 @Hitret id=6786
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6787
 
@@ -190,11 +190,11 @@
 
 @Leave id=‰‰À mx=-400 my=0 fade=1 time=500 accel=3
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6797
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6798
 

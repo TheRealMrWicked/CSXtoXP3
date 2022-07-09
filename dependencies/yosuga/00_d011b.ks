@@ -23,7 +23,7 @@
 
 @Char file=CH01_06M 
 
-@Talk name=Class_Rep voice=KO040101
+@Talk name=Class　Rep voice=KO040101
 
 @Hitret id=28030
 
@@ -31,14 +31,14 @@
 
 @Hitret id=28031
 
-@Talk name=Class_Rep voice=KO040102
+@Talk name=Class　Rep voice=KO040102
 
 @Hitret id=28032
 
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO040103
+@Talk name=Class　Rep voice=KO040103
 
 @Hitret id=28033
 
@@ -49,7 +49,7 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO040104
+@Talk name=Class　Rep voice=KO040104
 
 @Hitret id=28035
 
@@ -57,7 +57,7 @@
 
 @Hitret id=28036
 
-@Talk name=Class_Rep voice=KO040105
+@Talk name=Class　Rep voice=KO040105
 
 @Hitret id=28037
 
@@ -82,7 +82,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO040106
+@Talk name=Class　Rep voice=KO040106
 
 @Hitret id=28040
 
@@ -133,7 +133,7 @@
 @ClearChar id=亮平
 @Char file=CH01_08M 
 
-@Talk name=Class_Rep voice=KO040107
+@Talk name=Class　Rep voice=KO040107
 
 @Hitret id=28049
 
@@ -141,7 +141,7 @@
 
 @Hitret id=28050
 
-@Talk name=Class_Rep voice=KO040108
+@Talk name=Class　Rep voice=KO040108
 
 @Hitret id=28051
 
@@ -163,7 +163,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO040109
+@Talk name=Class　Rep voice=KO040109
 
 @Hitret id=28055
 
@@ -192,7 +192,7 @@
 @action id=梢 action=ActionAdvHop width=4 height=0 cycle=100 count=5
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO040110
+@Talk name=Class　Rep voice=KO040110
 
 @Hitret id=28059
 

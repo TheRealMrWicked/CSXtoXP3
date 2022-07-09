@@ -45,7 +45,7 @@
 
 @Hitret id=25578
 
-@Talk name=Post_Office_Clerk voice=NP460001
+@Talk name=Post　Office　Clerk voice=NP460001
 
 @Hitret id=25579
 
@@ -53,7 +53,7 @@
 
 @Hitret id=25580
 
-@Talk name=Post_Office_Clerk voice=NP460002
+@Talk name=Post　Office　Clerk voice=NP460002
 
 @Hitret id=25581
 
@@ -61,7 +61,7 @@
 
 @Hitret id=25582
 
-@Talk name=Post_Office_Clerk voice=NP460003
+@Talk name=Post　Office　Clerk voice=NP460003
 
 @Hitret id=25583
 
@@ -563,7 +563,7 @@
 @StopSe
 @Char file=CH01_01M 
 
-@Talk name=Class_Rep voice=KO020024
+@Talk name=Class　Rep voice=KO020024
 
 @Hitret id=25665
 
@@ -581,7 +581,7 @@
 
 @Char file=CH01_04M 
 
-@Talk name=Class_Rep voice=KO020025
+@Talk name=Class　Rep voice=KO020025
 
 @Hitret id=25668
 
@@ -609,7 +609,7 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO020026
+@Talk name=Class　Rep voice=KO020026
 
 @Hitret id=25672
 
@@ -639,7 +639,7 @@
 
 @Char file=CH01_10M 
 
-@Talk name=Class_Rep voice=KO020027
+@Talk name=Class　Rep voice=KO020027
 
 @Hitret id=25677
 
@@ -680,7 +680,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO020028
+@Talk name=Class　Rep voice=KO020028
 
 @Hitret id=25683
 
@@ -697,7 +697,7 @@
 @action id=梢 action=ActionAdvJump height=30 cycle=300 count=1
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO020029
+@Talk name=Class　Rep voice=KO020029
 
 @Hitret id=25685
 
@@ -1066,7 +1066,7 @@
 
 @Hitret id=25754
 
-@Talk name=Post_Office_Clerk voice=NP460004
+@Talk name=Post　Office　Clerk voice=NP460004
 
 @Hitret id=25755
 
@@ -1074,7 +1074,7 @@
 
 @Hitret id=25756
 
-@Talk name=Post_Office_Clerk voice=NP460005
+@Talk name=Post　Office　Clerk voice=NP460005
 
 @Hitret id=25757
 

@@ -1,0 +1,18 @@
+//まずこのファイルが呼び出される
+
+//諸々の初期化
+var file = "Status.tjs";
+if(Storages.isExistentStorage(file)){
+	Scripts.execStorage(file);
+}else{
+	Scripts.execStorage("system/" + file);
+}
+var file = "Initialize.tjs";
+if(Storages.isExistentStorage(file)){
+	Scripts.execStorage(file);
+}else{
+	Scripts.execStorage("system/" + file);
+}
+delete file;
+
+Scripts.execStorage("begin.tjs");

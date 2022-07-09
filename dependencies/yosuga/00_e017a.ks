@@ -375,7 +375,7 @@
 @Char file=CD02_02S 
 @Char file=CF02_02S 
 
-@Talk name=Nao_and_Akira_and_Kazuha_and_Ryouhei voice=NO050051/AK050083/KA050062/RH050191
+@Talk name=Nao　and　Akira　and　Kazuha　and　Ryouhei voice=NO050051/AK050083/KA050062/RH050191
 
 @Hitret id=36352
 
@@ -766,7 +766,7 @@
 
 @Char file=CE04_01M 
 
-@Talk name=Motoka_and_Haruka voice=MT050829
+@Talk name=Motoka　and　Haruka voice=MT050829
 
 @Hitret id=36417
 

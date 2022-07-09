@@ -356,7 +356,7 @@
 @Char file=CF01_04M 
 @Char file=CB01_04M 
 
-@Talk name=Ryouhei_and_Nao voice=RH050235/NO050075
+@Talk name=RyouheiÅ@andÅ@Nao voice=RH050235/NO050075
 
 @Hitret id=37377
 

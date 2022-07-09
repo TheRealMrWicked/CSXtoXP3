@@ -72,7 +72,7 @@
 @ClearChar 
 @Char file=CH06_06M 
 
-@Talk name=Class_Rep voice=KO010106
+@Talk name=Class　Rep voice=KO010106
 
 @Hitret id=5631
 
@@ -105,7 +105,7 @@
 @action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
 @WaitAction id=カメラ
 
-@Talk name=Sora_and_Class_Rep voice=SR010632/KO010107
+@Talk name=Sora　and　Class　Rep voice=SR010632/KO010107
 
 @Hitret id=5635
 
@@ -156,7 +156,7 @@
 
 
 
-@Talk name=Class_Rep voice=KO010108
+@Talk name=Class　Rep voice=KO010108
 
 @Hitret id=5642
 
@@ -201,7 +201,7 @@
 
 @Char file=CH06_10M 
 
-@Talk name=Class_Rep voice=KO010109
+@Talk name=Class　Rep voice=KO010109
 
 @Hitret id=5650
 
@@ -224,7 +224,7 @@
 
 @Hitret id=5653
 
-@Talk name=Class_Rep voice=KO010110
+@Talk name=Class　Rep voice=KO010110
 
 @Hitret id=5654
 
@@ -316,7 +316,7 @@
 
 @Hitret id=5668
 
-@Talk name=Class_Rep voice=KO010111
+@Talk name=Class　Rep voice=KO010111
 
 @Hitret id=5669
 
@@ -516,7 +516,7 @@
 @ClearChar 
 @Char file=CH06_07M 
 
-@Talk name=Class_Rep voice=KO010112
+@Talk name=Class　Rep voice=KO010112
 
 @Hitret id=5701
 
@@ -534,7 +534,7 @@
 
 @Hitret id=5703
 
-@Talk name=Class_Rep voice=KO010113
+@Talk name=Class　Rep voice=KO010113
 
 @Hitret id=5704
 
@@ -545,7 +545,7 @@
 
 @Char file=CH06_03M 
 
-@Talk name=Class_Rep voice=KO010114
+@Talk name=Class　Rep voice=KO010114
 
 @Hitret id=5706
 
@@ -574,7 +574,7 @@
 
 @Char file=CH06_11M 
 
-@Talk name=Class_Rep voice=KO010115
+@Talk name=Class　Rep voice=KO010115
 
 @Hitret id=5710
 
@@ -657,7 +657,7 @@
 
 @Char file=CH06_02M 
 
-@Talk name=Class_Rep voice=KO010116
+@Talk name=Class　Rep voice=KO010116
 
 @Hitret id=5724
 
@@ -773,7 +773,7 @@
 
 @Char file=CH06_01M 
 
-@Talk name=Class_Rep voice=KO010117
+@Talk name=Class　Rep voice=KO010117
 
 @Hitret id=5742
 
@@ -787,7 +787,7 @@
 
 @Char file=CH06_10M 
 
-@Talk name=Class_Rep voice=KO010118
+@Talk name=Class　Rep voice=KO010118
 
 @Hitret id=5744
 

@@ -404,7 +404,7 @@
 @ClearChar 
 @Char file=CJ01_01M 
 
-@Talk name=Yamanashi/スーツの男性 voice=YM000001
+@Talk name=Man　In　Suit voice=YM000001
 
 @Hitret id=2034
 
@@ -519,8 +519,8 @@
 @Hitret id=2054
 
 
-@AddSelect text=But_that's_what's_interesting. hint==一葉
-@AddSelect text=Too_much_teasing_would_be_bad. hint=初佳
+@AddSelect text=But　that's　what's　interesting. hint==一葉
+@AddSelect text=Too　much　teasing　would　be　bad. hint=初佳
 @StartSelect
 
 @SelectTerminate

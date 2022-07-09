@@ -1,0 +1,366 @@
+
+class EyeCatchBase extends Sprite, InputNotifyBase{
+	var _adv = null;
+	var _fPlay = false;
+	var _fOnEnd = false;
+	var _fClose = false;
+	var _fFadeOut = false;
+	var _enableCancel = false;
+
+	var _param = %[];
+
+	var _start;
+
+	var _jingle;
+	var _muteJingle = false;
+
+	var SPR_LIST = [];
+	var JINGLE = "";
+
+	function EyeCatchBase(win, par, adv=null, param=%[]){
+		Sprite(...);
+		(Dictionary.assignStruct incontextof _param)(param);
+
+		_adv = adv;
+
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+
+		hitThreshold = 0;
+		absolute = LAYER_EYECATCH;
+		visible = true;
+
+		_bg = GetElm(param.type, "");
+		_char = GetElm(param.char, "");
+		JINGLE = GetElm(param.jingle, JINGLE);
+
+		for(var i=0;i<SPR_LIST.count;i++){
+			switch(SPR_LIST[i].type){
+			case "custom" : break;
+			case "spr" : 
+				this[SPR_LIST[i].id] = new EyeCatchSprite(win, SPR_LIST[i].parent===void?this:this[SPR_LIST[i].parent]);
+				this[SPR_LIST[i].id].absolute = i * 1000;
+				break;
+			case "anime" : 
+				this[SPR_LIST[i].id] = new AnimationSequence(win, SPR_LIST[i].parent===void?this:this[SPR_LIST[i].parent]);
+				break;
+			case "layer" : 
+			default : 
+				this[SPR_LIST[i].id] = new EyeCatchLayer(win, SPR_LIST[i].parent===void?this:this[SPR_LIST[i].parent]);
+				this[SPR_LIST[i].id].absolute = i * 1000;
+				break;
+			}
+			with(this[SPR_LIST[i].id]){
+				if(SPR_LIST[i].size !== void){
+					.hasImage = GetElm(SPR_LIST[i].hasImage, false);
+					.setSize(SPR_LIST[i].size[0], SPR_LIST[i].size[1]);
+				}
+				if(SPR_LIST[i].file !== void){
+					.loadImages(SPR_LIST[i].file);
+					.setSizeToImageSize();
+				}
+			}
+		}
+
+		_muteJingle = GetElm(param.mute, true, false);
+
+		_jingle = new WaveSoundBuffer(win);
+		if(!CONFIG.muteBgm && JINGLE != ""){
+			with(_jingle){
+				.open(JINGLE + ".ogg");
+				.volume = 100000 * CONFIG.volMaster;
+				.volume2 = 100000 * CONFIG.volBgm;
+				.paused = true;
+				if(!_muteJingle) .play();
+			}
+		}
+
+		_start = new Timer(start, "");
+		_start.interval = 100;
+		_start.enabled = true;
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		invalidate _jingle;
+
+		invalidate _start;
+		for(var i=0;i<SPR_LIST.count;i++){
+			invalidate this[SPR_LIST[i].id];
+		}
+
+		global.Sprite.finalize();
+	}
+
+	//‰æ–Ê‚Ì‚Ú‚â‚©‚µŠJŽn
+	function start(){
+		OnceCall(onEnd, 1000);
+	}
+
+	//I—¹
+	function onEnd(time=2000){
+		if(_fOnEnd) return;
+		_fOnEnd = true;
+
+//		if(_adv != null && isvalid _adv){
+//			_adv.hide(0, true);
+//			_adv.update(%[time:1000]);
+//		}
+
+		setTransitionCompleteCall(_adv.eyeCatchDelete, true);
+		setBlendingEnvelope(0);
+		beginActivation(time);
+	}
+
+	function cancel(){
+		if(_fOnEnd){
+			flushActivation();
+			return;
+		}
+		if(_enableCancel == false) return;
+
+		onEnd();
+	}
+
+	function onKeyDown(key, shift){
+		if(key == VK_RETURN || key == VK_ESCAPE)
+			cancel();
+	}
+	function onMouseDown(){
+		cancel();
+	}
+
+	class EyeCatchSprite extends Sprite{
+		function EyeCatchSprite(win, par){
+			Sprite(win, par);
+			hitThreshold = 256;
+		}
+	}
+	class EyeCatchLayer extends Layer{
+		function EyeCatchLayer(win, par){
+			Layer(win, par);
+			hitThreshold = 256;
+		}
+	}
+}
+
+class EyeCatchTime extends EyeCatchBase{
+	var _bg = "";
+	var _char = "";
+	var _sd= "";
+	var _voice= "";
+
+	var _te;
+
+	var SPR_LIST = [
+		%[id:"BAND_T1", type:"layer", size:[WINDOW_WIDTH, 120], hasImage:true], 
+		%[id:"BAND_T2", type:"layer", size:[WINDOW_WIDTH, 120], hasImage:true], 
+		%[id:"BAND_B1", type:"layer", size:[WINDOW_WIDTH, 120], hasImage:true], 
+		%[id:"BAND_B2", type:"layer", size:[WINDOW_WIDTH, 120], hasImage:true], 
+		%[id:"LOGO", type:"spr", file:"FRM_0514"]
+	];
+
+	function EyeCatchTime(win, par, adv=null, param=%[]){
+		EyeCatchBase(...);
+
+		var seq = [
+			%[label:"band_show", time:   0], 
+			%[label:"band_hide", time:6000], 
+			%[label:"logo", time:1500], 
+			%[label:"advupdate", time:4000], 
+			%[label:"end", time:7000]
+		];
+		_te = new TimerEvent(seq);
+	}
+	function finalize(){
+		invalidate _te;
+
+		super.finalize();
+	}
+
+	function start(){
+		_start.enabled = false;
+
+		_te.start(onEvent);
+
+		_adv.hide(0, true);
+
+		_fPlay = true;
+		_enableCancel = true;
+	}
+
+	function onEvent(label, id, delay, elm){
+		switch(label){
+		case "band_show" : 
+			var time = 1000;
+			var vague = 64;
+			with(BAND_T2){
+				.fillRect(0, 0, .width, .height, RGBA(0, 0, 0));
+			}
+			with(BAND_B2){
+				.fillRect(0, 0, .width, .height, RGBA(0, 0, 0));
+			}
+			with(BAND_T1){
+				.beginTransition("universal", true, BAND_T2, %[time:time, rule:"WIP_LR", vague:vague]);
+				.visible = true;
+			}
+			with(BAND_B1){
+				.setPos(0, WINDOW_HEIGHT - .height);
+				.beginTransition("universal", true, BAND_B2, %[time:time, rule:"WIP_RL", vague:vague]);
+				.visible = true;
+			}
+			break;
+		case "band_hide" : 
+			var time = 1000;
+			var vague = 64;
+			with(BAND_T2){
+				.beginTransition("universal", true, BAND_T1, %[time:time, rule:"WIP_RL", vague:vague]);
+				.visible = true;
+			}
+			with(BAND_B2){
+				.setPos(0, WINDOW_HEIGHT - .height);
+				.beginTransition("universal", true, BAND_B1, %[time:time, rule:"WIP_LR", vague:vague]);
+				.visible = true;
+			}
+			with(LOGO){
+				.setBlendingEnvelope(0);
+				.beginActivation(time);
+				.visible = true;
+			}
+			break;
+		case "logo" :
+			with(LOGO){
+				.setPos(WINDOW_WIDTH - .width - 16, WINDOW_HEIGHT - .height - 24);
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(1000);
+				.visible = true;
+			}
+			break;
+		case "advupdate" :
+			_adv.update(%[time:1000]);
+			break;
+		case "end" :
+			onEnd(0);
+			break;
+		default : 
+			break;
+		}
+	}
+
+	function cancel(){
+		_adv.update(%[time:0]);
+		if(_fOnEnd){
+			flushActivation();
+			return;
+		}
+		if(_enableCancel == false) return;
+
+		onEnd(0);
+	}
+}
+
+class EyeCatchDate extends EyeCatchBase{
+	var _bg = "";
+	var _char = "";
+	var _sd= "";
+	var _voice= "";
+
+	var _te;
+
+	var SPR_LIST = [
+		%[id:"BLACK", type:"spr", size:[WINDOW_WIDTH, WINDOW_HEIGHT], hasImage:true], 
+		%[id:"LOGO", type:"spr", file:"FRM_0514"]
+	];
+
+	function EyeCatchDate(win, par, adv=null, param=%[]){
+		EyeCatchBase(...);
+
+		var seq = [
+			%[label:"blackout", time:   0], 
+			%[label:"fadein", time:7000], 
+			%[label:"logo", time:3500], 
+			%[label:"advupdate", time:5000], 
+			%[label:"end", time:10000]
+		];
+		_te = new TimerEvent(seq);
+	}
+	function finalize(){
+		invalidate _te;
+
+		super.finalize();
+	}
+
+	function start(){
+		_start.enabled = false;
+
+		_te.start(onEvent);
+
+		_adv.hide(0, true);
+
+		_fPlay = true;
+		_enableCancel = true;
+	}
+
+	function onEvent(label, id, delay, elm){
+		switch(label){
+		case "blackout" : 
+			var time = 3000;
+			with(BLACK){
+				.fillRect(0, 0, .width, .height, RGBA(0, 0, 0));
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(time);
+				.visible = true;
+			}
+			break;
+		case "fadein" : 
+			var time = 3000;
+			with(BLACK){
+				.setBlendingEnvelope(0);
+				.beginActivation(time);
+				.visible = true;
+			}
+			with(LOGO){
+				.setBlendingEnvelope(0);
+				.beginActivation(time);
+				.visible = true;
+			}
+			break;
+		case "logo" :
+			with(LOGO){
+				.setPos(WINDOW_WIDTH - .width - 16, WINDOW_HEIGHT - .height - 24);
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.beginActivation(1000);
+				.visible = true;
+			}
+			break;
+		case "advupdate" :
+			_adv.addOrderList(%[tagname:"cg", file:"BLACK"]);
+			_adv.requestUpdateCg();
+			_adv.update(%[time:0]);
+			break;
+		case "end" :
+			onEnd(0);
+			break;
+		default : 
+			break;
+		}
+	}
+
+	function cancel(){
+		_adv.addOrderList(%[tagname:"cg", file:"BLACK"]);
+		_adv.requestUpdateCg();
+		_adv.update(%[time:0]);
+		if(_fOnEnd){
+			flushActivation();
+			return;
+		}
+		if(_enableCancel == false) return;
+
+		onEnd(0);
+	}
+}

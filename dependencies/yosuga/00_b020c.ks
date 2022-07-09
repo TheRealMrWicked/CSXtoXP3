@@ -60,38 +60,38 @@
 
 @PlayBgm file=BGM19
 
-@Talk name=Nao_Monologue voice=NO031051
+@Talk name=Nao　Monologue voice=NO031051
 
 @Hitret id=14715
 
-@Talk name=Nao_Monologue voice=NO031052
+@Talk name=Nao　Monologue voice=NO031052
 
 @Hitret id=14716
 
-@Talk name=Nao_Monologue voice=NO031053
+@Talk name=Nao　Monologue voice=NO031053
 
 @Hitret id=14717
 
-@Talk name=Nao_Monologue voice=NO031054
+@Talk name=Nao　Monologue voice=NO031054
 
 @Hitret id=14718
 
-@Talk name=Nao_Monologue voice=NO031055
+@Talk name=Nao　Monologue voice=NO031055
 
 @Hitret id=14719
 
-@Talk name=Nao_Monologue voice=NO031056
+@Talk name=Nao　Monologue voice=NO031056
 
 @Hitret id=14720
 
-@Talk name=Nao_Monologue voice=NO031057
+@Talk name=Nao　Monologue voice=NO031057
 
 @Hitret id=14721
 
 
 @StopBgm
 
-@Talk name=Nao_Monologue voice=NO031058
+@Talk name=Nao　Monologue voice=NO031058
 
 @Hitret id=14722
 
@@ -121,11 +121,11 @@
 
 @Hitret id=14727
 
-@Talk name=Nao_Monologue voice=NO031062
+@Talk name=Nao　Monologue voice=NO031062
 
 @Hitret id=14728
 
-@Talk name=Nao_Monologue voice=NO031063
+@Talk name=Nao　Monologue voice=NO031063
 
 @Hitret id=14729
 

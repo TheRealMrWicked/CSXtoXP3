@@ -135,7 +135,7 @@
 
 @Hitret id=27821
 
-@Talk name=Old Lady voice=NP370005
+@Talk name=Old　Lady voice=NP370005
 
 @Hitret id=27822
 
@@ -143,7 +143,7 @@
 
 @Hitret id=27823
 
-@Talk name=Old Lady voice=NP370006
+@Talk name=Old　Lady voice=NP370006
 
 @Hitret id=27824
 
@@ -261,7 +261,7 @@
 
 @Hitret id=27847
 
-@Talk name=Old Lady voice=NP370007
+@Talk name=Old　Lady voice=NP370007
 
 @Hitret id=27848
 
@@ -418,7 +418,7 @@
 
 @PlaySe file=se018
 
-@Talk name=Old Lady voice=NP370008
+@Talk name=Old　Lady voice=NP370008
 
 @Hitret id=27879
 
@@ -437,7 +437,7 @@
 
 @Hitret id=27882
 
-@Talk name=Old Lady voice=NP370009
+@Talk name=Old　Lady voice=NP370009
 
 @Hitret id=27883
 
@@ -452,7 +452,7 @@
 
 @Hitret id=27885
 
-@Talk name=Old Lady voice=NP370010
+@Talk name=Old　Lady voice=NP370010
 
 @Hitret id=27886
 
@@ -571,7 +571,7 @@
 
 @Hitret id=27909
 
-@Talk name=Old Lady voice=NP370011
+@Talk name=Old　Lady voice=NP370011
 
 @Hitret id=27910
 

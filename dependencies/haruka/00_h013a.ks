@@ -4,11 +4,11 @@
 @Cg file=B21a
 @MessageFrame type=1
 
-@Talk name=Kozue_Monologue voice=KO020422
+@Talk name=Kozue@Monologue voice=KO020422
 
 @Hitret id=10843
 
-@Talk name=Kozue_Monologue voice=KO020423
+@Talk name=Kozue@Monologue voice=KO020423
 
 @Hitret id=10844
 
@@ -246,7 +246,7 @@
 @Update transition=universal rule=WIP_MOZV time=1000
 @WaitUpdate
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10883
 
@@ -321,7 +321,7 @@
 @Leave id=—º•½ mx=200 my=600 fade=1 time=250 accel=1
 @PlaySe file=SE204
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10892
 
@@ -332,7 +332,7 @@
 
 @Hitret id=10893
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10894
 
@@ -387,7 +387,7 @@
 
 @Hitret id=10902
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10903
 
@@ -453,11 +453,11 @@
 @PlaySe file=SE204
 @Leave id=—º•½ mx=0 my=600 fade=1 time=250 accel=1
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10911
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10912
 
@@ -473,7 +473,7 @@
 
 @Hitret id=10914
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10915
 
@@ -546,7 +546,7 @@
 
 @Hitret id=10926
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=10927
 

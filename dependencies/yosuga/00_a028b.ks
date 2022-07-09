@@ -640,7 +640,7 @@
 
 @Hitret id=8945
 
-@Talk name=Class_Rep voice=KO010192
+@Talk name=Class@Rep voice=KO010192
 
 @Hitret id=8946
 
@@ -652,7 +652,7 @@
 
 @Hitret id=8948
 
-@Talk name=Class_Rep
+@Talk name=Class@Rep
 
 @Hitret id=8949
 

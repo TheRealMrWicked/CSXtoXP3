@@ -112,15 +112,15 @@
 
 @ClearChar
 
-@Talk name=Kozue_Monologue voice=KO020401
+@Talk name=Kozue　Monologue voice=KO020401
 
 @Hitret id=10821
 
-@Talk name=Kozue_Monologue voice=KO020402
+@Talk name=Kozue　Monologue voice=KO020402
 
 @Hitret id=10822
 
-@Talk name=Kozue_Monologue voice=KO020403
+@Talk name=Kozue　Monologue voice=KO020403
 
 @Hitret id=10823
 
@@ -128,19 +128,19 @@
 
 @Hitret id=10824
 
-@Talk name=Kozue_Monologue voice=KO020405
+@Talk name=Kozue　Monologue voice=KO020405
 
 @Hitret id=10825
 
-@Talk name=Kozue_Monologue voice=KO020406
+@Talk name=Kozue　Monologue voice=KO020406
 
 @Hitret id=10826
 
-@Talk name=Kozue_Monologue voice=KO020407
+@Talk name=Kozue　Monologue voice=KO020407
 
 @Hitret id=10827
 
-@Talk name=Kozue_Monologue voice=KO020408
+@Talk name=Kozue　Monologue voice=KO020408
 
 @Hitret id=10828
 
@@ -152,7 +152,7 @@
 @回想イメージ表示
 @Char file=CH01_07M
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10829
 
@@ -169,23 +169,23 @@
 
 @Hitret id=10831
 
-@Talk name=Kozue_Monologue voice=KO020411
+@Talk name=Kozue　Monologue voice=KO020411
 
 @Hitret id=10832
 
-@Talk name=Kozue_Monologue voice=KO020412
+@Talk name=Kozue　Monologue voice=KO020412
 
 @Hitret id=10833
 
-@Talk name=Kozue_Monologue voice=KO020413
+@Talk name=Kozue　Monologue voice=KO020413
 
 @Hitret id=10834
 
-@Talk name=Kozue_Monologue voice=KO020414
+@Talk name=Kozue　Monologue voice=KO020414
 
 @Hitret id=10835
 
-@Talk name=Kozue_Monologue voice=KO020415
+@Talk name=Kozue　Monologue voice=KO020415
 
 @Hitret id=10836
 
@@ -194,11 +194,11 @@
 
 @Hitret id=10837
 
-@Talk name=Kozue_Monologue voice=KO020417
+@Talk name=Kozue　Monologue voice=KO020417
 
 @Hitret id=10838
 
-@Talk name=Kozue_Monologue voice=KO020418
+@Talk name=Kozue　Monologue voice=KO020418
 
 @Hitret id=10839
 
@@ -206,14 +206,14 @@
 
 @Hitret id=10840
 
-@Talk name=Kozue_Monologue voice=KO020420
+@Talk name=Kozue　Monologue voice=KO020420
 
 @Hitret id=10841
 
 
 @StopBgm
 
-@Talk name=Kozue_Monologue voice=KO020421
+@Talk name=Kozue　Monologue voice=KO020421
 
 @Hitret id=10842
 

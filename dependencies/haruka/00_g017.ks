@@ -27,7 +27,7 @@
 @Update transition=universal rule=CLOUD_A time=500
 @WaitUpdate
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8003
 
@@ -38,7 +38,7 @@
 
 @Hitret id=8004
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8005
 
@@ -53,7 +53,7 @@
 
 @Hitret id=8007
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8008
 
@@ -71,7 +71,7 @@
 
 @Hitret id=8010
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8011
 
@@ -79,7 +79,7 @@
 
 @Hitret id=8012
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8013
 
@@ -90,7 +90,7 @@
 
 @Hitret id=8014
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8015
 
@@ -98,7 +98,7 @@
 
 @Hitret id=8016
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8017
 
@@ -214,7 +214,7 @@
 
 @Hitret id=8034
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8035
 
@@ -225,7 +225,7 @@
 
 @Hitret id=8036
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8037
 
@@ -240,7 +240,7 @@
 
 @Hitret id=8039
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8040
 
@@ -255,7 +255,7 @@
 
 @Hitret id=8042
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8043
 
@@ -263,7 +263,7 @@
 
 @Hitret id=8044
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8045
 
@@ -298,7 +298,7 @@
 
 @Hitret id=8050
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8051
 
@@ -309,7 +309,7 @@
 
 @Hitret id=8052
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8053
 
@@ -337,7 +337,7 @@
 
 @Hitret id=8057
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8058
 
@@ -349,7 +349,7 @@
 
 @Hitret id=8060
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=8061
 

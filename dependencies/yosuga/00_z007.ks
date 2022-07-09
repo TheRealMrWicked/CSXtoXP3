@@ -29,7 +29,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO000009
+@Talk name=Class　Rep voice=KO000009
 
 @Hitret id=1033
 
@@ -37,7 +37,7 @@
 
 @Hitret id=1034
 
-@Talk name=Class_Rep voice=KO000010
+@Talk name=Class　Rep voice=KO000010
 
 @Hitret id=1035
 
@@ -48,7 +48,7 @@
 
 @Char file=CH01_03M 
 
-@Talk name=Class_Rep voice=KO000011
+@Talk name=Class　Rep voice=KO000011
 
 @Hitret id=1037
 
@@ -67,11 +67,11 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO000012
+@Talk name=Class　Rep voice=KO000012
 
 @Hitret id=1041
 
-@Talk name=Class_Rep voice=KO000013
+@Talk name=Class　Rep voice=KO000013
 
 @Hitret id=1042
 
@@ -82,7 +82,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO000014
+@Talk name=Class　Rep voice=KO000014
 
 @Hitret id=1044
 
@@ -90,7 +90,7 @@
 
 @Hitret id=1045
 
-@Talk name=Class_Rep voice=KO000015
+@Talk name=Class　Rep voice=KO000015
 
 @Hitret id=1046
 
@@ -113,7 +113,7 @@
 
 @Char file=CH01_01M 
 
-@Talk name=Class_Rep voice=KO000016
+@Talk name=Class　Rep voice=KO000016
 
 @Hitret id=1049
 
@@ -127,7 +127,7 @@
 
 @Char file=CH01_10M 
 
-@Talk name=Class_Rep voice=KO000017
+@Talk name=Class　Rep voice=KO000017
 
 @Hitret id=1051
 
@@ -366,7 +366,7 @@
 @ClearChar 
 @Char file=CE01_11M 
 
-@Talk name=Motoka/メイド voice=MT000001
+@Talk name=Maid voice=MT000001
 
 @Hitret id=1092
 
@@ -378,7 +378,7 @@
 
 @Hitret id=1094
 
-@Talk name=Motoka/メイド voice=MT000002
+@Talk name=Maid voice=MT000002
 
 @Hitret id=1095
 
@@ -438,7 +438,7 @@
 
 @Char file=CE01_03M 
 
-@Talk name=Motoka/メイド voice=MT000003
+@Talk name=Maid voice=MT000003
 
 @Hitret id=1106
 

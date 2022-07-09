@@ -33,7 +33,7 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO000018
+@Talk name=Class　Rep voice=KO000018
 
 @Hitret id=1535
 
@@ -41,7 +41,7 @@
 
 @Hitret id=1536
 
-@Talk name=Class_Rep voice=KO000019
+@Talk name=Class　Rep voice=KO000019
 
 @Hitret id=1537
 
@@ -52,7 +52,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO000020
+@Talk name=Class　Rep voice=KO000020
 
 @Hitret id=1539
 
@@ -63,7 +63,7 @@
 
 @Char file=CH01_05M 
 
-@Talk name=Class_Rep voice=KO000021
+@Talk name=Class　Rep voice=KO000021
 
 @Hitret id=1541
 
@@ -143,7 +143,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=男子生徒Ａ voice=DA000001
+@Talk name=Male　Student　A voice=DA000001
 
 @Hitret id=1555
 
@@ -154,7 +154,7 @@
 
 @Hitret id=1556
 
-@Talk name=男子生徒Ａ voice=DA000002
+@Talk name=Male　Student　A voice=DA000002
 
 @Hitret id=1557
 
@@ -165,7 +165,7 @@
 
 @Hitret id=1558
 
-@Talk name=男子生徒Ａ voice=DA000003
+@Talk name=Male　Student　A voice=DA000003
 
 @Hitret id=1559
 

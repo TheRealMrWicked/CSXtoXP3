@@ -55,7 +55,7 @@
 
 @Hitret id=19610
 
-@Talk name=Yu's_Mother/電話の声 voice=NP030001
+@Talk name=Yu's　Mother voice=NP030001
 
 @Hitret id=19611
 
@@ -63,7 +63,7 @@
 
 @Hitret id=19612
 
-@Talk name=Yu's_Mother voice=NP030002
+@Talk name=Yu's　Mother voice=NP030002
 
 @Hitret id=19613
 
@@ -71,7 +71,7 @@
 
 @Hitret id=19614
 
-@Talk name=Yu's_Mother voice=NP030003
+@Talk name=Yu's　Mother voice=NP030003
 
 @Hitret id=19615
 
@@ -79,11 +79,11 @@
 
 @Hitret id=19616
 
-@Talk name=Yu's_Mother voice=NP030004
+@Talk name=Yu's　Mother voice=NP030004
 
 @Hitret id=19617
 
-@Talk name=Yu's_Mother voice=NP030005
+@Talk name=Yu's　Mother voice=NP030005
 
 @Hitret id=19618
 
@@ -91,7 +91,7 @@
 
 @Hitret id=19619
 
-@Talk name=Yu's_Mother voice=NP030006
+@Talk name=Yu's　Mother voice=NP030006
 
 @Hitret id=19620
 
@@ -99,7 +99,7 @@
 
 @Hitret id=19621
 
-@Talk name=Yu's_Mother voice=NP030007
+@Talk name=Yu's　Mother voice=NP030007
 
 @Hitret id=19622
 
@@ -107,7 +107,7 @@
 
 @Hitret id=19623
 
-@Talk name=Yu's_Mother voice=NP030008
+@Talk name=Yu's　Mother voice=NP030008
 
 @Hitret id=19624
 
@@ -115,7 +115,7 @@
 
 @Hitret id=19625
 
-@Talk name=Yu's_Mother voice=NP030009
+@Talk name=Yu's　Mother voice=NP030009
 
 @Hitret id=19626
 

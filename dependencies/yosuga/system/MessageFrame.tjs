@@ -1,0 +1,1713 @@
+/*
+	メッセージフレーム
+*/
+
+var ADV_FONT_NAME_FACE = "30";
+var ADV_FONT_NAME_SIZE = 30;
+var ADV_FONT_MESS_FACE = "24";
+var ADV_FONT_MESS_SIZE = 24;
+var ADV_FONT_MESS_INDENT = 30;
+
+class MessageFrame extends Sprite, SelectItemNotifyBase{
+	var _isShow;
+
+	var _name, _mess, _voice, _pan, _volume;
+
+	var _advObj;
+
+	var _base;
+
+	var _msgBase = [];
+	var _maName, _maMess;
+
+	var _type = -1;
+	var _hidedType = -1;
+
+	var _tgtBlink = null;
+	var _blink, _blinkA;
+	var _blinkTimer;
+
+	//システムメニュー
+	var _systemMenuArea;
+	var _systemMenu;
+	var _menuCallArea;
+
+	//各種ボタン
+	var _btn = [];
+
+	//デバッグ用
+	@if(__DEBUGMODE__)
+		var _voiceTimer;
+		var _voiceList;
+		var _voiceProgress;
+	@endif
+
+	/* const */
+	var _btnVoice	= 0;
+	var _btnClose	= 1;
+
+	var FRAME_WIDTH  = 750;
+	var FRAME_HEIGHT = 135;
+	var FRAME_X = 0;
+	var	FRAME_Y = WINDOW_HEIGHT - FRAME_HEIGHT;
+
+	var BASE_MOVE_H = 33;
+
+	var	BASE_X = 25;
+	var	BASE_Y = FRAME_Y - BASE_MOVE_H;
+	var	NAME_MSG_X = BASE_X + 40;
+	var	NAME_MSG_Y = BASE_Y + 4;
+	var	MESS_MSG_X = NAME_MSG_X - 40;
+	var	MESS_MSG_Y = NAME_MSG_Y + 20;
+	var	NOVEL_MSG_X = 120;
+	var	NOVEL_MSG_Y = 120;
+	var	BTN_BASE_X1 = 0;
+	var	BTN_BASE_Y1 = WINDOW_HEIGHT - 33;
+	var	BTN_BASE_X2 = 324;
+	var	BTN_BASE_Y2 = 684;
+	var	BTN_X1 = 38;
+	var	BTN_Y1 = 7;
+
+	var	HIDE_X1 = 1243;		//通常
+	var	HIDE_Y1 = 560;
+	var	HIDE_X2 = 1249;		//ノベル
+	var	HIDE_Y2 = 682;
+
+	var	VOICE_X = 34;
+	var	VOICE_Y = BASE_Y + 13;
+	var	CLOSE_X = 750;
+	var	CLOSE_Y = BASE_Y + 9;
+
+	var BLINK_X = 747;
+	var BLINK_Y = FRAME_Y + 104;
+
+	var DEFAULT_X = 0;
+	var DEFAULT_Y = FRAME_Y;
+
+	var FRAMELIST = [
+		%[type:"frame", base:"FRM_0101", blink:[743, BASE_Y + 104]], 
+
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104]], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0161"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0162"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0163"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0164"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0165"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0166"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0167"], 
+		%[type:"frame", base:"FRM_0102", blink:[743, BASE_Y + 104], mark:"FRM_0168"], 
+
+		%[type:"nobel", w:1280, h:720]
+	];
+
+	function MessageFrame(win, par, advObj){
+		Sprite(win, par);
+
+		_advObj = advObj;
+
+		_name = _mess = _voice = _pan = _volume = "";
+
+		hitType = htMask;
+		hitThreshold = 256;
+
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		visible = true;
+
+		_base = new SelectItemGroupSprite(win, this);
+		_base.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		if(true){
+			_base.hasImage = false;
+		}else{
+			DrawFrame(_base);
+		}
+
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		setPos(0, 0);
+
+		_maName = new MessageArea(win, _base, true, global.GetFontFace);
+		_maName.absolute = 200;
+		_maName.visible = true;
+		_maMess = new MessageArea(win, _base, true, global.GetFontFace);
+		_maMess.absolute = 200;
+		_maMess.visible = true;
+
+		_blink = new global.Sprite(win, _base);
+		with(_blink){
+			.loadImages("FRM_0105");
+			.setSizeToImageSize();
+			.setPos(BLINK_X, BLINK_Y);
+			.hitType = htMask;
+			.hitThreshold = 256;
+			.opacity = 0;
+			.visible = true;
+		}
+		_blinkA = new global.Sprite(win, _base);
+		with(_blinkA){
+			.loadImages("FRM_0106");
+			.setSizeToImageSize();
+			.setPos(BLINK_X, BLINK_Y);
+			.hitType = htMask;
+			.hitThreshold = 256;
+			.opacity = 0;
+			.visible = true;
+		}
+
+		_blinkTimer = new Timer(onBlinkTimer, "");
+		_blinkTimer.interval = 4500;
+
+		_menuCallArea = new MenuArea(win, this, this);
+		_systemMenuArea = new SystemMenuArea(win, this);
+		_systemMenu = new SystemMenu(win, _systemMenuArea, , _advObj);
+		with(_systemMenu){
+			.setPos(BTN_BASE_X1, BTN_BASE_Y1);
+		}
+
+		with(_menuCallArea){
+			.setSize(_systemMenu.width, _systemMenu.height);
+			.setPos(BTN_BASE_X1, BTN_BASE_Y1);
+			.visible = true;
+		}
+
+		with(_systemMenuArea){
+			.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+			if(_systemMenu.lock)	.enter(0);
+			else					.leave(0);
+			.visible = true;
+		}
+
+		//音声再生
+		_btn[_btnVoice] = new Button(win, _base);
+		with(_btn[_btnVoice]){
+			.create("FRM_0109", 2);
+			.setPos(VOICE_X, VOICE_Y);
+			.visible = false;
+		}
+		//閉じる
+		_btn[_btnClose] = new Button(win, _base);
+		with(_btn[_btnClose]){
+			.create("FRM_0108", 2);
+			.setPos(CLOSE_X, CLOSE_Y);
+			.visible = true;
+		}
+
+		@if(__DEBUGMODE__)
+			_voiceProgress = [];
+
+			_voiceTimer = new Timer(onCheckPlayVoice, "");
+			_voiceTimer.capacity = 1;
+			_voiceTimer.mode = atmAtIdle;
+			_voiceTimer.interval = 50;
+		@endif
+
+		if(_systemMenu.lock)	_base.setPos(0, 0);
+		else					_base.setPos(0, BASE_MOVE_H);
+		_base.visible = true;
+		hide();
+
+		setType(0);
+
+		_isShow = false;
+	}
+	function finalize(){
+		InvalidateArray(_btn);
+		invalidate _btn;
+		invalidate _systemMenu;
+		invalidate _systemMenuArea;
+		InvalidateArray(_msgBase);
+		invalidate _maName;
+		invalidate _maMess;
+		invalidate _blink;
+		invalidate _blinkA;
+		invalidate _blinkTimer;
+		invalidate _menuCallArea;
+		invalidate _base;
+
+		global.Sprite.finalize();
+
+		@if(__DEBUGMODE__)
+			invalidate _voiceTimer;
+			invalidate _voiceProgress;
+		@endif
+	}
+
+	function show(time=0){
+		stopActivation();
+		if(time == 0){
+			opacity = 255;
+			onShowEnd();
+		}else{
+			setTransitionCompleteCall(onShowEnd);
+			setBlendingEnvelope(255);
+			beginActivation(time);
+		}
+
+		HitThresholdSelectItems(_btn, 0);
+
+		_systemMenu.buttonEnable(true);
+
+		_isShow = true;
+	}
+	function hide(time=0, fFaceHide=false){
+		if(time == 0){
+			opacity = 0;
+			onHideEnd();
+		}else{
+			setTransitionCompleteCall(onHideEnd);
+			setBlendingEnvelope(0);
+			beginActivation(time);
+		}
+
+		HitThresholdSelectItems(_btn, 256);
+
+		_systemMenu.buttonEnable(false);
+
+		_isShow = false;
+	}
+	function isShow(){
+		return _isShow;
+	}
+
+	//特殊用途のshow, hide
+	function showMessage(time=0){
+		with(_base){
+			.setBlendingEnvelope(255);
+			.beginActivation(time);
+		}
+	}
+	function hideMessage(time=0){
+		with(_base){
+			.setBlendingEnvelope(0);
+			.beginActivation(time);
+		}
+	}
+
+	function onShowEnd(){
+		setTransitionCompleteCall();
+		_advObj.trigger("show_end");
+	}
+	function onHideEnd(){
+		setTransitionCompleteCall();
+		_advObj.trigger("hide_end");
+	}
+
+	function windowDepth(depth){
+		_msgBase[_type].inner.opacity = depth;
+	}
+
+	function setType(type=0, time=300){
+		if(_type == type) return;
+
+		if(_type != -1){
+			if(_hidedType != -1) deleteMessage(_hidedType);
+			_msgBase[_type].base.setBlendingEnvelope(0);
+			_msgBase[_type].base.beginActivation(time);
+			_msgBase[_type].base.setTransitionCompleteCall(onEndSetType);
+			_hidedType = _type;
+		}
+		createMessage(type);
+		_msgBase[type].base.setBlendingEnvelope(255);
+		_msgBase[type].base.beginActivation(time);
+		_msgBase[type].base.setTransitionCompleteCall(null);
+		setMessageAreaStyle(type);
+
+		_type = type;
+	}
+	function onEndSetType(target){
+		deleteMessage(_hidedType);
+		_hidedType = -1;
+	}
+	function createMessage(id){
+		_msgBase[id] = %[];
+		_msgBase[id].base = new global.Sprite(win, _base);
+		_msgBase[id].base.absolute = 100;
+		switch(FRAMELIST[id].type){
+		case "frame" :
+			_msgBase[id].inner = new global.Sprite(win, _msgBase[id].base);
+
+			with(_msgBase[id].inner){
+				.loadImages(FRAMELIST[id].base);
+				.setSizeToImageSize();
+				.setPos(BASE_X, BASE_Y);
+				.hitThreshold = 256;
+				.opacity = (255 * CONFIG.windowDepth) \ 100;
+				.visible = true;
+			}
+			with(_msgBase[id].base){
+				.hasImage = false;
+				.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+				.hitThreshold = 256;
+				.opacity = 0;
+				.visible = true;
+			}
+			if(FRAMELIST[id].mark !== void){
+				_msgBase[id].mark = new global.Layer(win, _msgBase[id].base);
+				with(_msgBase[id].mark){
+					try{
+						.loadImages(FRAMELIST[id].mark);
+					}catch(){
+						.loadImages(FRAMELIST[id].mark);
+					}
+					.setSizeToImageSize();
+					.setPos(_msgBase[id].base.width - .width - 4, 390);
+					.hitThreshold = 256;
+					.visible = true;
+				}
+			}
+			break;
+		case "nobel" :
+			_msgBase[id].inner = new global.Sprite(win, _msgBase[id].base);
+			with(_msgBase[id].inner){
+				.setSize(FRAMELIST[id].w, FRAMELIST[id].h);
+				.fillRect(0, 0, .width, .height, 0xcf000000);
+				.hitThreshold = 256;
+				.opacity = (255 * CONFIG.windowDepth) \ 100;
+				.visible = true;
+			}
+			with(_msgBase[id].base){
+				.hasImage = false;
+				.setSize(_msgBase[id].inner.width, _msgBase[id].inner.height);
+				.hitThreshold = 256;
+				.opacity = 0;
+				.visible = true;
+			}
+			break;
+		}
+	}
+	function deleteMessage(id){
+		if(_msgBase[id].base !== void) invalidate _msgBase[id].base;
+		if(_msgBase[id].frame !== void) invalidate _msgBase[id].frame;
+		if(_msgBase[id].inner !== void) invalidate _msgBase[id].inner;
+		if(_msgBase[id].mark !== void) invalidate _msgBase[id].mark;
+	}
+
+	function setMessageAreaStyle(type){
+		switch(FRAMELIST[type].type){
+		case "frame" :
+			with(_maName){
+				.setSize(800, 60);
+				.setPos(NAME_MSG_X, NAME_MSG_Y);
+				.setMargin(4, 4, .width-4, .height-4);
+				.setDefaultDrawTextParam(RGB(255, 255, 255), 255, true, 3024, RGB(32, 32, 32), 3, 0, 0);
+				.setDefaultFontStyle(ADV_FONT_NAME_FACE, ADV_FONT_NAME_SIZE, 32);
+				.resetDrawTextParam();
+				.resetFontStyle();
+				.opacity = 255;
+			}
+			with(_maMess){
+				var marginX = 12;
+				var marginY = 22;
+				.setSize(1000, ADV_FONT_MESS_INDENT*3+marginY+8);
+				.setPos(MESS_MSG_X, MESS_MSG_Y);
+				.setMargin(marginX, marginY, 4+.width, 22+.height);
+				.setDefaultDrawTextParam(0xFFFFFF, 255, true, 1024, (32)<<16|(32)<<8|(32), 1, 1, 1);
+				.setDefaultFontStyle(ADV_FONT_MESS_FACE, ADV_FONT_MESS_SIZE, ADV_FONT_MESS_INDENT);
+				.resetDrawTextParam();
+				.resetFontStyle();
+				.setRubyParam(0.4, true, RGB(64,32,128), 255, true, 2024, RGB(255,255,255), 2, 0, 0, 2);
+				.setCompleteCall(onCompleteOutput);
+				.opacity = 255;
+			}
+			break;
+		case "nobel" :
+			with(_maName){
+				.opacity = 0;
+			}
+			with(_maMess){
+				.setSize(1180, 640);
+				.setPos(200, 120);
+				.setMargin(12, 22, 4+.width, 22+.height);
+				.setDefaultDrawTextParam(0xFFFFFF, 255, true, 1024, (32)<<16|(32)<<8|(32), 1, 1, 1);
+				//.setDefaultFontStyle(ADV_FONT_MESS_FACE, 36, 36+16);
+				.setDefaultFontStyle(ADV_FONT_NAME_FACE, 36, 36+16);
+				.resetDrawTextParam();
+				.resetFontStyle();
+				.setRubyParam(0.4, true, 0xffffff, 255, true);
+				.setCompleteCall(onCompleteOutput);
+				.opacity = 255;
+			}
+			break;
+		}
+	}
+
+	function clear(){
+		_maName.clear();
+		_maMess.clear();
+	}
+
+	function output(name, mess, voice="", pan="", volume="", flush=false, fontParam=null, ignoreKinsoku=false, fRead=false, trueName="", face="", newline=false){
+		//ブリンクカーソルを消す
+		hideBlink(0);
+
+		_name = name;
+		_mess = mess;
+		_voice = voice;
+		_pan = pan;
+		_volume = volume;
+
+		if(isMonologue(name)){
+		//これは名前表示なし
+			_maName.visible = false;
+
+		}else{
+			_maName.visible = true;
+
+			_maName.clear();
+			_maName.output(name, true);
+		}
+
+		if(isExistentVoiceFile(_voice))
+			_btn[_btnVoice].visible = true;
+		else
+			_btn[_btnVoice].visible = false;
+
+		if(fontParam != null){
+			fontParam.face = string GetElm(fontParam.face, ADV_FONT_MESS_FACE);
+			fontParam.size = GetElm(fontParam.size, ADV_FONT_MESS_SIZE);
+			fontParam.indent = GetElm(fontParam.indent, ADV_FONT_MESS_INDENT);
+		}
+
+		if(fRead && CONFIG.readMessColor)
+			_maMess.setDefaultDrawTextParam(RGB(160, 255, 210), 255, true, 3024, RGB(32, 64, 32), 3, 0, 0);
+		else
+			_maMess.setDefaultDrawTextParam(RGB(255, 255, 255), 255, true, 3024, RGB(32, 32, 32), 3, 0, 0);
+		_maMess.resetDrawTextParam();
+
+		if(newline){
+			mess = "／" + mess;
+		}else{
+			_maMess.clear();
+		}
+
+		_maMess.outputSpeed = CONFIG.messageSpeed;
+		_maMess.output(mess, flush, fontParam, ignoreKinsoku);
+
+		//if(!_isShow) show(300);
+	}
+
+	function isPending(){
+		return _maMess.isPending();
+	}
+	function flush(){
+		_maName.flush();
+		_maMess.flush();
+	}
+
+	function isExistentVoiceFile(voice){
+		var voices = voice.split(",/");
+		for(var i=0;i<voices.count;i++){
+			if(Storages.isExistentStorage(voices[i] + ".ogg")) return true;
+		}
+		return false;
+	}
+
+	function face(file){
+	}
+
+	function isMonologue(name){
+		return (name == "" || name == "心の声" || name == "語り" || name == "モノローグ");
+	}
+
+	function refreshMenu(){
+		_systemMenu.refresh();
+	}
+
+	function onMouseMenuAreaEnter(target){
+		if(_systemMenu.lock) return;
+
+		if(FRAMELIST[_type].type != "nobel"){
+			with(_base){
+				if(.isActivation()) .stopActivation();
+				.setMovingEnvelope(.left, .top, 0, 0, 2);
+				.beginActivation(150);
+			}
+		}
+		_systemMenuArea.enter();
+		_systemMenu.enable = true;
+	}
+	function onMouseMenuAreaLeave(target){
+		if(	_menuCallArea.left <= cursorX && cursorX < _menuCallArea.left + _menuCallArea.width &&
+			_menuCallArea.top <= cursorY && cursorY < _menuCallArea.top + _menuCallArea.height){
+			return;
+		}
+
+		onMenuLeave();
+	}
+	function onMenuLeave(){
+		if(_systemMenu.lock) return;
+
+		if(FRAMELIST[_type].type != "nobel"){
+			with(_base){
+				if(.isActivation()) .stopActivation();
+				.setMovingEnvelope(.left, .top, 0, BASE_MOVE_H, 2);
+				.beginActivation(150);
+			}
+		}
+		_systemMenuArea.leave();
+		_systemMenu.enable = false;
+	}
+
+	function onMenuDecide(ev){
+		var event = ev.split("/");
+		switch(event[0]){
+		case "skip" : 
+			_advObj.skip(_systemMenu.skip);
+			break;
+		case "auto" : 
+			_advObj.auto(_systemMenu.auto);
+			break;
+		case "load" : 
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_LOAD);
+			break;
+		case "save" : 
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_SAVE);
+			break;
+		case "config" : 
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_CONFIG);
+			break;
+		case "log" : 
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_HISTORY);
+			break;
+		case "hide" : 
+			if(_advObj.isAuto()) _advObj.auto(false);
+			if(_advObj.isSkip()) _advObj.skip(false);
+
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_HIDE);
+			break;
+
+		case "jumpSelectPrev" : _advObj.jump(ADVScreen.JUMPSTATE_SELECT_PREV); break;
+		case "jumpSelectNext" : _advObj.jump(ADVScreen.JUMPSTATE_SELECT_NEXT); break;
+
+		case "qsave" : _advObj.quickSave(); break;
+
+		case "qload" : _advObj.quickLoad(event[1]); break;
+		}
+	}
+
+	function onButtonDownL(target){
+		switch(target){
+		case _btn[_btnVoice] : 
+			if(_advObj.hitretState)
+				_advObj.playVoice(%[file:_voice, pan:_pan, vol:_volume, config:false]);
+			break;
+		case _btn[_btnClose] : 
+		case "hide" : 
+			if(_advObj.isAuto()) _advObj.auto(false);
+			if(_advObj.isSkip()) _advObj.skip(false);
+
+			_advObj.callSystemWindow(ADVScreen.SYSWIN_HIDE);
+			break;
+		}
+	}
+	function onButtonDownR(target){
+		_advObj.onMouseDown(0, 0, mbRight, 0);
+	}
+	function onButtonEnter(target){
+	}
+	function onButtonLeave(target){
+	}
+
+	function onCompleteOutput(target){
+		if(target == _maMess){
+			switch(FRAMELIST[_type].type){
+			case "frame" :
+				var x = _msgBase[_type].base.left + FRAMELIST[_type].blink[0];
+				var y = _msgBase[_type].base.top + FRAMELIST[_type].blink[1];
+				_blink.setPos(x, y);
+				_blinkA.setPos(x, y);
+				break;
+			case "nobel" :
+				//文字サイズを考慮して縦サイズの補正
+				var x = _maMess.left + _maMess.cursor_x;
+				var y = _maMess.top + (_maMess.cursor_y + _maMess.font.height \ 2) - _blink.height/2;
+				if(_maMess.usePrerenderedFont){
+					var h = PRFONT_DIC[_maMess.font.face].height;
+					y = _maMess.top + (_maMess.cursor_y + h \ 2) - _blink.height \ 2;
+				}
+
+				_blink.setPos(x, y);
+				_blinkA.setPos(x, y);
+				break;
+			}
+
+			showBlink(300);
+
+			_advObj.onCompleteOutput();
+		}
+	}
+
+	function showBlink(time=0){
+		_blink.stopActivation();
+		_blink.opacity = 0;
+		_blinkA.stopActivation();
+		_blinkA.opacity = 0;
+
+		if(_systemMenu.auto == 0){
+			if(time){
+				with(_blink){
+					.opacity = 128;
+					//.setZoomingEnvelope(150, 100);
+					.setBlendingEnvelope(255);
+					.beginActivation(time);
+				}
+				_blinkTimer.enabled = true;
+			}else{
+				_blink.opacity = 255;
+			}
+			_tgtBlink = _blink;
+		}else{
+			if(time){
+				with(_blinkA){
+					.opacity = 128;
+					//.setZoomingEnvelope(150, 100);
+					.setBlendingEnvelope(255);
+					.beginActivation(time);
+				}
+				_blinkTimer.enabled = true;
+			}else{
+				_blinkA.opacity = 255;
+			}
+
+			_tgtBlink = _blinkA;
+		}
+	}
+	function hideBlink(time=0){
+		if(_tgtBlink === null) return;
+
+		_tgtBlink.stopActivation();
+		_tgtBlink.opacity = 0;
+
+		if(time){
+			_tgtBlink.setBlendingEnvelope(0);
+			_tgtBlink.beginActivation(time);
+		}else{
+			_tgtBlink.opacity = 0;
+		}
+		_blinkTimer.enabled = false;
+		_tgtBlink = null;
+	}
+
+	function onBlinkTimer(){
+		showBlink(300);
+	}
+
+	function movePos(x=0, y=0, time=300){
+		if(FRAMELIST[_type].type == "frame")
+			_systemMenu.setMovingEnvelope(_systemMenu.left, _systemMenu.top, BTN_BASE_X1 + x, BTN_BASE_Y1 + y, 2);
+		else
+			_systemMenu.setMovingEnvelope(_systemMenu.left, _systemMenu.top, BTN_BASE_X2 + x, BTN_BASE_Y2 + y, 2);
+
+		_systemMenu.beginActivation(time);
+		_base.setMovingEnvelope(_base.left, _base.top, 0 + x, 0 + y, 2);
+		_base.beginActivation(time);
+	}
+
+	function playVoice(){
+		if(VOICE.count){
+			stopVoice();
+			_voiceList = VOICE.idList();
+			for(var i=0;i<_voiceList.count;i++){
+				if(debug.tglVoiceProgressDetails.state){
+					var ref = VOICE.objectOfId(_voiceList[i].id);
+					if(ref == -1) continue;
+					_voiceProgress[i] = new VoiceProgressBar(window, this);
+					_voiceProgress[i].create(ref.file+".ogg", 512, 16);
+					_voiceProgress[i].setPos(110, 428 - (_voiceProgress[i].height*i));
+					_voiceProgress[i].pan = _voiceList[i].pan;
+				}else{
+					_voiceProgress[i] = new DebugProgressBarH(window, this);
+					_voiceProgress[i].create(256, 16, , , _voiceList[i].id);
+					_voiceProgress[i].setPos(110, 428 - (_voiceProgress[i].height*i));
+					var x = _voiceProgress[i].width / 2;
+					_voiceProgress[i].colorRect(x, 0, 2, 16, GetDefineColor("lime"), 128);
+					var pitch = (_voiceProgress[i].width / 2) / 100.0;
+					x += int(pitch * _voiceList[i].pan);
+					_voiceProgress[i].colorRect(x-4, 4, 8, 8, GetDefineColor("red"), 128);
+				}
+			}
+			_voiceTimer.enabled = true;
+			_voiceProgress.visible = true;
+		}
+	}
+	function stopVoice(){
+		_voiceTimer.enabled = false;
+		InvalidateArray(_voiceProgress);
+		_voiceProgress.clear();
+	}
+	function onCheckPlayVoice(){
+		if(VOICE.isPlay()){
+			for(var i=0;i<_voiceList.count;i++){
+				var ref = VOICE.objectOfId(_voiceList[i].id);
+				if(ref == -1) continue;
+				if(ref.status != "unload"){
+					if(_voiceProgress[i].kind() == "VoiceProgressBar"){
+						_voiceProgress[i].position = ref.position;
+					}else{
+						var pos = ref.position, total = ref.totalTime;
+						if(pos == 0) pos = total;
+						_voiceProgress[i].set(pos, total);
+					}
+				}else{
+					_voiceProgress[i].position = 0;
+				}
+			}
+			if(!VOICE.isPlay())stopVoice();
+		}else{
+			stopVoice();
+		}
+	}
+
+	function enableVoiceButton(f){
+		_btn[_btnVoice].visible = f;
+	}
+
+	property skip{
+		setter(v){_systemMenu.skip = v;}
+		getter(){return _systemMenu.skip;}
+	}
+	property auto{
+		setter(v){
+			_systemMenu.auto = v;
+			if(v){
+			//on
+				_btn[_btnVoice].valid = false;
+				_btn[_btnVoice].opacity = 128;
+			}else{
+			//off
+				_btn[_btnVoice].valid = true;
+				_btn[_btnVoice].opacity = 255;
+			}
+			if(!isPending()) showBlink(300);
+		}
+		getter(){return _systemMenu.auto;}
+	}
+
+	property messageType{
+		getter(){return _type;}
+	}
+
+	property fontName{
+		getter(){return _maName.defFontParam;}
+	}
+	property fontMess{
+		getter(){return _maMess.defFontParam;}
+	}
+
+	property interrupt{
+		setter(v){
+			_maName._msgTimer.enabled = !v;
+			_maMess._msgTimer.enabled = !v;
+		}
+		getter(){
+			return !_maName._msgTimer.enabled;
+		}
+	}
+
+	class SystemMenuArea extends Sprite{
+		var _enter = false;
+		var _owner;
+
+		function SystemMenuArea(win, par, owner){
+			Sprite(win, par);
+			_owner = owner;
+			hasImage = false;
+			hitThreshold = 256;
+		}
+
+		function onMenuDecide(name){
+			parent.onMenuDecide(...);
+		}
+
+		function onMenuLeave(){
+			parent.onMenuLeave();
+		}
+
+		function enter(time=150){
+			if(isActivation()) stopActivation();
+			setMovingEnvelope(left, top, 0, 0, 2);
+			beginActivation(time);
+
+			_enter = true;
+		}
+		function leave(time=150){
+			if(isActivation()) stopActivation();
+			setMovingEnvelope(left, top, 0, 48, 2);
+			beginActivation(time);
+
+			_enter = false;
+		}
+
+		property menuEnter{
+			getter(){return _enter;}
+		}
+	}
+	class MenuArea extends Layer{
+		var _owner;
+
+		function MenuArea(win, par, owner){
+			Layer(win, par);
+			_owner = owner;
+			hasImage = false;
+			hitThreshold = 0;
+		}
+
+		function onMouseEnter(){
+			_owner.onMouseMenuAreaEnter(this);
+		}
+		function onMouseLeave(){
+			_owner.onMouseMenuAreaLeave(this);
+		}
+	}
+}
+
+class FaceWindow extends Layer{
+	var _advObj;
+	var _face;
+	var _alpha;
+
+	var _prevFace = "";
+	var _prevSameChar = false;
+
+	var _status = FW_SHOW;
+
+	function FaceWindow(win, par, adv){
+		Layer(...);
+
+		hasImage = false;
+		setSize(par.width, par.height);
+
+		_advObj = adv;
+
+		_face = new Sprite(window, this);
+		_face.hitThreshold = 256;
+
+		_alpha = new global.Layer(win, this);
+		with(_alpha){
+			.loadImages("faceAlpha");
+			.setSizeToImageSize();
+		}
+
+		visible = true;
+	}
+	function finalize(){
+		invalidate _face;
+
+		invalidate _alpha;
+
+		super.finalize();
+	}
+
+	function setup(names){
+		if(_status == FW_HIDE){
+			//if(_face.isActivation()) _face.flushActivation();
+			hide();
+			return false;
+		}
+
+		var name = names.split("＆")[0];
+		with(_face){
+			var obj = _advObj.getADVObjectObject(name);
+
+			if(obj == -1){
+				var time = 300;
+				time = ReviceEffectSpeed(time);
+				if(_advObj.isSkip() || CONFIG.screenEffect == 0)
+					time = 0;
+				hide(time);
+				return false;
+			}
+
+			var file = obj.info.file.substring(0, 7);
+			return setupFile(file, TONE_DIC[obj._tone]);
+		}
+	}
+	function setupFile(file, tone){
+		file = file.toUpperCase();
+
+		if(file == _prevFace) return true;
+
+		if(file.substring(0, 2) == _prevFace.substring(0, 2))
+			_prevSameChar = true;
+		else
+			_prevSameChar = false;
+
+		_prevFace = file;
+
+		var time = ReviceEffectSpeed(300);
+		if(_advObj.isSkip() || CONFIG.screenEffect == 0)
+			time = 0;
+
+		if(file == "HIDE" || file == ""){
+			_status = FW_HIDE;
+			hide(time);
+			return false;
+		}else if(file == "HIDEONCE"){
+			//_status = FW_HIDEONCE;
+			hide(time);
+			return true;
+		}else if(file == "SHOW"){
+			_status = FW_SHOW;
+//			show(time);
+			return false;
+		}
+
+		with(_face){
+			if(.isActivation()) .flushActivation();
+
+			file = file.substring(0, 7);
+			if(
+			Storages.isExistentStorage(file + "F.png") ||
+			Storages.isExistentStorage(file + "F.tlg")
+			)
+				.loadImages(file + "F");
+			else
+				.loadImages("dummyF");
+			.setSizeToImageSize();
+
+			.operateRect(0, .height-_alpha.height, _alpha, 0, 0, .width, _alpha.height, omMultiplicative);
+
+			.setPos(182 - .width/2, height - .height - 8);
+
+			AdjustGamma(_face, _advObj.envTone);
+			if(tone !== void) AdjustGamma(_face, tone);
+
+			show(time);
+		}
+		return true;
+	}
+
+	function reset(){
+		_prevFace = "";
+		_prevSameChar = false;
+	}
+
+	function show(time=300){
+		with(_face){
+			if(.isActivation()) .flushActivation();
+
+			if(_prevSameChar){
+				.opacity = 255;
+				.setPos(.left, .top);
+				.visible = true;
+			}else{
+				.opacity = 0;
+				.setMovingEnvelope(.left-16, .top, .left, .top, 2);
+				.setBlendingEnvelope(255);
+				.beginActivation(time);
+				.visible = true;
+			}
+		}
+	}
+	function hide(time=300){
+		with(_face){
+			if(.isActivation()) .flushActivation();
+
+			.setBlendingEnvelope(0);
+			.setMovingEnvelope(.left, .top, .left+16, .top, 2);
+			.beginActivation(time);
+		}
+		reset();
+	}
+
+	property status{
+		getter(){return _status;}
+	}
+}
+FaceWindow.FW_SHOW = 1;
+FaceWindow.FW_HIDE = 2;
+FaceWindow.FW_HIDEONCE = 3;
+
+class SystemMenu extends SubMenu{
+	var _adv;
+
+	var _btn = [];
+
+	var _btn = [];
+	var _files = [
+		["FRM_0122", [58+ 30, 4]], 	//
+		["FRM_0123", [58+115, 4]], 	//
+		["FRM_0124", [58+200, 4]], 	//
+		["FRM_0125", [58+285, 4]], 	//
+		["FRM_0126", [58+370, 4]], 	//
+		["FRM_0127", [58+455, 4]], 	//
+		["FRM_0128", [58+540, 4]], 	//
+		["FRM_0129", [58+625, 4]],		//
+		["FRM_0132", [58+  0, 11]]		//
+	];
+
+	var _qsaveMenu;
+	var _jumpMenu;
+	var _configMenu;
+
+	var HIDE_OPACITY = 0;
+
+	function SystemMenu(win, par, o=null, adv=null){
+		SubMenu(win, par, o);
+		_name = "SystemMenu";
+		_adv = adv;
+
+		hasImage = false;
+
+		setSize(800, 33);
+
+		var index = 0;
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new ToggleButton(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			._nNormalB = ._nFocusB = ._nInvalidB = 1;
+			index++;
+		}
+		_btn[index] = new ToggleButton(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			._nNormalB = ._nFocusB = ._nInvalidB = 1;
+			index++;
+		}
+		_btn[index] = new Button(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 2);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+		_btn[index] = new ToggleButton(win, this);
+		with(_btn[index]){
+			.create(_files[index][0], 4);
+			.setPos(_files[index][1][0], _files[index][1][1]);
+			index++;
+		}
+
+		_qsaveMenu = new global.QuickSaveMenu(win, par, this);
+		_qsaveMenu.join = JOIN_TOP;
+
+		_jumpMenu = new JumpMenu(win, par, this);
+		_jumpMenu.join = JOIN_TOP;
+
+		_configMenu = new ConfigSubMenu(win, par, this, _adv);
+		_configMenu.join = JOIN_TOP;
+
+		addItem(_btn[0]);
+		addItem(_btn[1], _qsaveMenu);
+		addItem(_btn[2]);
+		addItem(_btn[3]);
+		addItem(_btn[4], _configMenu);
+		addItem(_btn[5]);
+		if(_adv.isRecollect())
+			addItem(_btn[6]);
+		else
+			addItem(_btn[6], _jumpMenu);
+		addItem(_btn[7]);
+		addItem(_btn[8]);
+
+		lock = (CONFIG.systemMenuLock != 0);
+
+//		opacity = HIDE_OPACITY;
+//		if(lock) opacity =255;
+		opacity = 255;
+
+		refresh();
+	}
+	function finalize(){
+		invalidate _qsaveMenu;
+		invalidate _jumpMenu;
+		invalidate _configMenu;
+		super.finalize();
+	}
+
+	function refresh(){
+		_qsaveMenu.refresh();
+		if(saveMan.qsaveStack()){
+			addItem(_btn[1], _qsaveMenu);
+			_btn[1].opacity = 255;
+			_btn[1].valid = true;
+		}else{
+			removeItem(_btn[1]);
+			_btn[1].opacity = 128;
+			_btn[1].valid = false;
+		}
+
+		if(_adv.isRecollect()){
+			for(var i=0;i<4;i++){
+				_btn[i].opacity = 128;
+				_btn[i].hitThreshold = 256;
+				_btn[i].valid = false;
+			}
+			removeItem(_btn[1]);
+		}
+	}
+
+	function onButtonDownL(target){
+		var event = "";
+		switch(target){
+		case _btn[0] : event = "qsave"; break;
+		case _btn[1] : 
+			var save = saveMan.atQSave();
+			event = "qload/" + save.file;
+			break;
+		case _btn[2] : event = "save"; break;
+		case _btn[3] : event = "load"; break;
+		case _btn[4] : event = "config"; break;
+		case _btn[5] : event = "auto"; break;
+		case _btn[6] : event = "skip"; break;
+		case _btn[7] : event = "log"; break;
+		case _btn[9] : event = "hide"; break;
+		case _btn[8] : 
+			lock = (target.state == 0);
+			event = "lock";
+			break;
+		}
+
+		onMenuDecide(event);
+	}
+	function onButtonDownR(target){}
+	function onButtonEnter(target){
+		switch(target){
+		case _btn[6] : 
+			_jumpMenu.jumpPrevValid(_adv.countOfStackSelect() != 0);
+			_jumpMenu.jumpNextValid(!_adv.isSelectTerminate() && !_adv.isSelect());
+		}
+		super.onButtonEnter(target);
+	}
+
+	function buttonEnable(flag){
+		if(flag){
+			HitThresholdSelectItems(_btn, 0);
+			hitThreshold = 0;
+		}else{
+			HitThresholdSelectItems(_btn, 256);
+			hitThreshold = 256;
+		}
+	}
+
+	function onMenuEnter(){
+//		setBlendingEnvelope(255);
+//		beginActivation(100);
+		super.onMenuEnter();
+	}
+	function onMenuLeave(){
+//		if(!lock){
+//			setBlendingEnvelope(HIDE_OPACITY);
+//			beginActivation(100);
+//		}
+		parent.onMenuLeave();
+
+		super.onMenuLeave();
+	}
+
+	property lock{
+		getter(){return _btn[8].state == 0;}
+		setter(v){
+			_btn[8].state = v?0:1;
+			CONFIG.systemMenuLock = v?1:0;
+		}
+	}
+
+	property auto{
+		getter(){return _btn[5].state;}
+		setter(v){_btn[5].state = v;}
+	}
+	property skip{
+		getter(){return _btn[6].state;}
+		setter(v){_btn[6].state = v;}
+	}
+
+	class MenuArea extends Layer{
+		var _owner;
+		function MenuArea(win, par, owner){
+			Layer(...);
+			_owner = owner;
+			hasImage = false;
+			hitThreshold = 0;
+			visible = true;
+		}
+
+		function onMouseEnter(){
+			_owner.onMenuAreaEnter();
+		}
+		function onMouseLeave(){
+			_owner.onMenuAreaLeave();
+		}
+	}
+}
+class QuickSaveMenu extends SubMenu{
+	var _btn = [];
+
+	var MAX = 9;
+
+	function QuickSaveMenu(win, par, o=null){
+		SubMenu(...);
+
+		loadImages("FRM_0141");
+		setSizeToImageSize();
+
+		var img = new global.Layer(win, this);
+		img.loadImages("FRM_0142");
+		img.setSizeToImageSize();
+
+		var alpha = new global.Layer(win, this);
+		with(alpha){
+			.loadImages("FRM_0305");
+			.setSizeToImageSize();
+		}
+
+		for(var i=0;i<MAX;i++){
+			_btn[i] = %[];
+			_btn[i].btn = new Button(win, this);
+			_btn[i].info = new global.Layer(win, _btn[i].btn);
+			with(_btn[i].btn){
+				.create(img, 2);
+				.setPos(73, 10 + 30*(MAX-i-1));
+				.visible = false;
+
+				_btn[i].info.setSize(.width, height);
+			}
+			with(_btn[i].info){
+				.hitThreshold = 256;
+				.visible = true;
+			}
+			_btn[i].menu = new global.SubMenu(win, par, o);
+			with(_btn[i].menu){
+				.setSize(alpha.width, alpha.height);
+
+				.hitThreshold = 256;
+
+				.face = dfMask;
+				.copyRect(0, 0, alpha, 0, 0, alpha.width, alpha.height);
+				.holdAlpha = true;
+				.face = dfMain;			//以後、メインのコピだけ。
+
+				.join = JOIN_RIGHT;
+			}
+			_btn[i].file = "";
+			addItem(_btn[i].btn, _btn[i].menu);
+		}
+
+		invalidate alpha;
+
+		refresh();
+	}
+	function finalize(){
+		InvalidateArray(_btn);
+		super.finalize();
+	}
+
+	function refresh(){
+		var i = 0;
+
+		var img = new global.Layer(window, this);
+
+		for(;i<saveMan.qsaveStack();i++){
+			var save = saveMan.atQSave(i);
+			_btn[i].btn.visible = true;
+			with(_btn[i].info){
+				var trans = 128 + ((MAX-i-1) * 128) \ MAX;
+
+				var realDate = save.realDate.split("_");
+				var day = realDate[0];
+				var time = realDate[1];
+
+				.fillRect(0, 0, .width, .height, 0);
+
+				.font.height = 20;
+				.drawText(10, 2, day, RGB(255,255,255), trans, true, 1024, RGB(0,0,96), 2, 1, 1);
+
+				.font.height = 15;
+				.drawText(121, 6, time, RGB(255,255,255), trans, true, 1024, RGB(32,128,32), 2, 1, 1);
+			}
+			with(_btn[i].menu){
+				img.loadImages(DATA_PATH + save.file);
+				img.setSizeToImageSize();
+
+				.copyRect(0, 0, img, 0, 0, .width, .height);
+
+				@if(__DEBUGMODE__)
+					.font.height = 18;
+					.drawText(4, 2, save.file, 0xffffff);
+				@endif
+			}
+			_btn[i].file = save.file;
+		}
+		for(;i<MAX;i++){
+			_btn[i].file = "";
+			_btn[i].btn.visible = false;
+		}
+
+		invalidate img;
+	}
+
+	function onButtonDownL(target){
+		for(var i=0;i<_btn.count;i++){
+			if(_btn[i].btn == target){
+				onMenuDecide("qload/" + _btn[i].file);
+				break;
+			}
+		}
+	}
+}
+class JumpMenu extends SubMenu{
+	var _btn = [];
+
+	function JumpMenu(win, par, o=null){
+		SubMenu(...);
+		_name = "JumpMenu";
+		hasImage = false;
+
+		loadImages("FRM_0133");
+		setSizeToImageSize();
+
+		_btn[0] = new Button(win, this);
+		with(_btn[0]){
+			.create("FRM_0130", 2);
+			.setPos(5, 9);
+		}
+		_btn[1] = new Button(win, this);
+		with(_btn[1]){
+			.create("FRM_0131", 2);
+			.setPos(134, 9);
+		}
+
+		addItem(_btn[0]);
+		addItem(_btn[1]);
+	}
+	function finalize(){
+		super.finalize();
+	}
+
+	function onButtonDownL(target){
+		switch(target){
+		case _btn[0] : target = "jumpSelectPrev"; break;
+		case _btn[1] : target = "jumpSelectNext"; break;
+		}
+
+		onMenuDecide(target);
+	}
+
+	function jumpPrevValid(f){
+		_btn[0].valid = f;
+		_btn[0].opacity = f ? 255 : 96;
+	}
+	function jumpNextValid(f){
+		_btn[1].valid = f;
+		_btn[1].opacity = f ? 255 : 96;
+	}
+}
+class ConfigSubMenu extends SubMenu{
+	var _adv;
+	var _btn = %[];
+
+	var _numberImage;
+	var _number;
+	var NUM_DIGIT = 3;
+
+	function ConfigSubMenu(win, par, o=null, adv=null){
+		SubMenu(...);
+		_adv = adv;
+
+		loadImages("FRM_0181");
+		setSizeToImageSize();
+
+		var sliderW = 202;
+
+		_btn.PlayMaster = new ToggleButton(window, this);
+		with(_btn.PlayMaster){
+			.create("FRM_0182", 4);
+			.setPos(130, 18);
+		}
+		_btn.PlayBgm = new ToggleButton(window, this);
+		with(_btn.PlayBgm){
+			.create("FRM_0182", 4);
+			.setPos(130, 44);
+		}
+		_btn.VolBgm = new SliderH(window, this);
+		with(_btn.VolBgm){
+			.create("FRM_0183", sliderW, 13, 1, 100);
+			.setPos(200, 51);
+		}
+		_btn.PlayVoice = new ToggleButton(window, this);
+		with(_btn.PlayVoice){
+			.create("FRM_0182", 4);
+			.setPos(130, 72);
+		}
+		_btn.VolVoice = new SliderH(window, this);
+		with(_btn.VolVoice){
+			.create("FRM_0183", sliderW, 13, 1, 100);
+			.setPos(200, 78);
+		}
+		_btn.PlaySe = new ToggleButton(window, this);
+		with(_btn.PlaySe){
+			.create("FRM_0182", 4);
+			.setPos(130, 99);
+		}
+		_btn.VolSe = new SliderH(window, this);
+		with(_btn.VolSe){
+			.create("FRM_0183", sliderW, 13, 1, 100);
+			.setPos(200, 105);
+		}
+		_btn.PlayEnvSe = new ToggleButton(window, this);
+		with(_btn.PlayEnvSe){
+			.create("FRM_0182", 4);
+			.setPos(130, 126);
+		}
+		_btn.VolEnvSe = new SliderH(window, this);
+		with(_btn.VolEnvSe){
+			.create("FRM_0183", sliderW, 13, 1, 100);
+			.setPos(200, 132);
+		}
+		_btn.WindowDepth = new SliderH(window, this);
+		with(_btn.WindowDepth){
+			.create("FRM_0183", sliderW, 13, 1, 100);
+			.setPos(200, 159);
+		}
+
+		addItem(_btn.PlayBgm);
+		addItem(_btn.VolBgm);
+		addItem(_btn.PlayVoice);
+		addItem(_btn.VolVoice);
+		addItem(_btn.PlaySe);
+		addItem(_btn.VolSe);
+		addItem(_btn.PlayEnvSe);
+		addItem(_btn.VolEnvSe);
+		addItem(_btn.WindowDepth);
+
+		_numberImage = new global.Layer(win, this);
+		with(_numberImage){
+			.loadImages("FRM_02A42");
+			.setSizeToImageSize();
+		}
+		_number = new global.Sprite(win, par);
+		with(_number){
+			.setSize((_numberImage.width\10)*NUM_DIGIT, _numberImage.height);
+			.hitThreshold = 256;
+		}
+	}
+	function finalize(){
+		invalidate _number;
+		invalidate _numberImage;
+
+		super.finalize();
+	}
+
+	function onMouseDown(x, y, button, shift){
+		super.onMouseDown(...);
+	}
+
+	function onButtonDownL(target){
+		applyToSystem();
+	}
+	function onButtonDownR(target){}
+
+	function onSliderEnter(target){
+		showDrawNumber(target);
+	}
+	function onSliderLeave(target){
+		hideNumber();
+	}
+	function onSliderMove(target){
+		applyToSystem();
+		showDrawNumber(target);
+	}
+	function onSliderMoveStart(target){
+		showDrawNumber(target);
+	}
+	function onSliderMoveEnd(target){
+		applyToSystem();
+	}
+
+	function applyToSystem(){
+		CONFIG.muteMaster = _btn.PlayMaster.state?0:1;
+
+		CONFIG.muteBgm = _btn.PlayBgm.state?0:1;
+			CONFIG.muteBgm|CONFIG.muteMaster?BGM.configStop():BGM.configPlay();
+		CONFIG.muteVoice = _btn.PlayVoice.state?0:1;
+
+		CONFIG.volBgm = _btn.VolBgm.trim / 100.0;
+			BGM.volume = CONFIG.volBgm;
+		CONFIG.volSe = _btn.VolSe.trim / 100.0;
+			SE.volume = CONFIG.volSe;
+		CONFIG.volEnvSe = _btn.VolEnvSe.trim / 100.0;
+			ENVSE.volume = CONFIG.volEnvSe;
+		CONFIG.volVoice = _btn.VolVoice.trim / 100.0;
+		CONFIG.muteSe = _btn.PlaySe.state?0:1;
+			CONFIG.muteSe|CONFIG.muteMaster?SE.configStop():SE.configPlay();
+		CONFIG.muteEnvSe = _btn.PlayEnvSe.state?0:1;
+			CONFIG.muteEnvSe|CONFIG.muteMaster?ENVSE.configStop():ENVSE.configPlay();
+		CONFIG.windowDepth = _btn.WindowDepth.trim;
+
+		if(_adv){
+			if(CONFIG.muteVoice|CONFIG.muteMaster) VOICE.stop();
+			VOICE.volume = CONFIG.volVoice;
+
+			var ref = CONFIG.voiceDetails;
+			var list = BGV.idList(false);
+			for(var i=0;i<list.count;i++){
+				var id = list[i].id;
+				var obj = BGV.objectOfId(id);
+				var index = obj.file.indexOf("_ECH");
+				var fPlayEcho = index != -1;
+				if(CONFIG.echoVoice == 0 && fPlayEcho){
+				//お風呂エコーOFF
+				//現在お風呂エコーONが再生中なら切り替える
+					var pos = obj.position;
+					_adv.playBgv(%[file:obj.file.substring(0, index), fade:0]);
+					obj = BGV.objectOfId(id);
+					if(obj.isPlay()) obj.position = pos;
+				}else if(CONFIG.echoVoice != 0 && !fPlayEcho){
+				//お風呂エコーON
+				//現在お風呂エコーOFFが再生中なら切り替える
+					var pos = obj.position;
+					if(Storages.isExistentStorage(obj.file+"_ECH.ogg")){
+						_adv.playBgv(%[file:obj.file+"_ECH", fade:0]);
+						obj = BGV.objectOfId(id);
+						if(obj.isPlay()) obj.position = pos;
+					}
+				}
+				obj.configVolume = ref[NAME_TO_INDEX[id]].volumeBgv;
+
+				if(!(CONFIG.muteBgv|CONFIG.muteMaster)){
+					if(ref[NAME_TO_INDEX[id]].muteBgv || CONFIG.muteMaster){
+						if(obj.looping){
+							obj._configStop = true;
+							obj.stop(true);
+						}else{
+							BGV.stop(obj.id);
+						}
+					}else{
+						if(obj._configStop){
+							obj._configStop = false;
+							obj.play();
+						}
+					}
+				}else{
+					if(obj.looping){
+						obj._configStop = true;
+						obj.stop(true);
+					}
+				}
+			}
+			BGV.applyVolume();
+
+			_adv._msg.windowDepth((255 * CONFIG.windowDepth) \ 100);
+		}
+	}
+
+	function show(target){
+		refresh();
+		super.show(target);
+	}
+
+	function refresh(){
+	//小数点誤差を改善するために計算時にゲタを履かせている
+		var value;
+		with(_btn.PlayMaster){
+			.state = CONFIG.muteMaster?0:1;
+		}
+		with(_btn.PlayBgm){
+			.state = CONFIG.muteBgm?0:1;
+		}
+		with(_btn.VolBgm){
+			value = (10000 * CONFIG.volBgm) \ 100;
+			if(.trim != value) .trim = value;
+		}
+		with(_btn.PlayVoice){
+			.state = CONFIG.muteVoice?0:1;
+		}
+		with(_btn.VolVoice){
+			value = (10000 * CONFIG.volVoice) \ 100;
+			if(.trim != value) .trim = value;
+		}
+		with(_btn.PlaySe){
+			.state = CONFIG.muteSe?0:1;
+		}
+		with(_btn.VolSe){
+			value = (10000 * CONFIG.volSe) \ 100;
+			if(.trim != value) .trim = value;
+		}
+		with(_btn.PlayEnvSe){
+			.state = CONFIG.muteEnvSe?0:1;
+		}
+		with(_btn.VolEnvSe){
+			value = (10000 * CONFIG.volEnvSe) \ 100;
+			if(.trim != value) .trim = value;
+		}
+		with(_btn.WindowDepth){
+			.trim = CONFIG.windowDepth;
+		}
+	}
+
+	function showDrawNumber(item, revX=0, revY=0){
+		var num = item.trim;
+		var w = _numberImage.width \ 10;
+		var h = _numberImage.height;
+
+		var count = 0;
+		_number.fillRect(0, 0, _number.width, _number.height, 0x0);
+		if(num){
+			var i = 0;
+			while(num){
+				var cal = num % 10;
+
+				_number.copyRect(_number.width-(i+1)*w, 0, _numberImage, cal*w, 0, w, h);
+
+				count++;
+				num \= 10;
+				i++;
+			}
+		}else{
+			_number.copyRect(_number.width-w, 0, _numberImage, 0, 0, w, h);
+			count++;
+		}
+
+		var pos = new Point();
+		GetAbsolutePos(item._trim, pos, window.baseLayer);
+		var x = pos.x + item._trim.width\2;
+		x -= (NUM_DIGIT-count)*w + (count*w)\2;
+		var y = pos.y - _number.height;
+
+		_number.setPos(x, y);
+
+		if(!_number.visible){
+			with(_number){
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.setMovingEnvelope(.left, .top-8, .left, .top, 2);
+				.beginActivation(100);
+				.visible = true;
+			}
+		}
+	}
+	function hideNumber(){
+		if(isvalid _number) _number.visible = false;
+	}
+}
+

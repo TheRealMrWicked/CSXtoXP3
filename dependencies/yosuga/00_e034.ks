@@ -49,7 +49,7 @@
 
 @Char file=CH01_04S 
 
-@Talk name=Class_Rep voice=KO050006
+@Talk name=ClassÅ@Rep voice=KO050006
 
 @Hitret id=38577
 
@@ -63,7 +63,7 @@
 
 @Char file=CH01_01S 
 
-@Talk name=Class_Rep voice=KO050007
+@Talk name=ClassÅ@Rep voice=KO050007
 
 @Hitret id=38579
 
@@ -111,7 +111,7 @@
 @ClearChar 
 @Char file=CH01_11S 
 
-@Talk name=Class_Rep voice=KO050008
+@Talk name=ClassÅ@Rep voice=KO050008
 
 @Hitret id=38586
 

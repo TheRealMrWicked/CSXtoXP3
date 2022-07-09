@@ -1,0 +1,978 @@
+//----------------------------------------------------------
+//環境エフェクトクラス
+//雨・雪・桜・落葉・日照など、背景を演出するエフェクト
+//----------------------------------------------------------
+
+class EnvEffectBase extends Sprite{
+	var _envEffectTimer;
+
+	var _startTime = -1;
+
+	function EnvEffectBase(win, par){
+		super.Sprite(...);
+		hitThreshold = 256;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+
+		_envEffectTimer = new Timer(onDraw, "");
+		_envEffectTimer.interval = 20;
+
+		hasImage = false;
+	}
+	function finalize(){
+		global.EnvEffectBase.stop();
+
+		invalidate _envEffectTimer;
+
+		super.finalize();
+	}
+	function who(){return "EnvEffectBase";}
+
+	function onDraw(){}
+
+	function start(){
+		_startTime = System.getTickCount();
+		_envEffectTimer.enabled = true;
+	}
+	function stop(){
+		_startTime = -1;
+		_envEffectTimer.enabled = false;
+	}
+
+	function isActive(){
+		return (_startTime != -1);
+	}
+
+	function getParam(){return %[];}
+
+	property startTime{
+		getter(){return _startTime;}
+	}
+
+	property interval{
+		getter(){return _envEffectTimer.interval;}
+		setter(v){_envEffectTimer.interval = v;}
+	}
+}
+
+class EnvEffectSnow extends EnvEffectBase{
+	var _window, _parent;
+	var _preDrawTime;
+
+	var _create = false;
+
+	var _snowImg = [];
+
+	var _snowType = 0;
+	var _snow = [];
+
+	var _max = 0;
+	var _maxTemp = 0;
+
+	var _air;
+	var _airLinear;
+	var _airMovePreTime = -1;
+	var _airMoveTime = 300;
+
+	var _generateArea = "0,0,1280,720";
+	var _generateTimer;
+
+	var SNOW_FILES = [
+		"ENV_SNOW1", 
+		"ENV_SNOW2", 
+		"ENV_SNOW3", 
+		"ENV_SNOW4"
+	];
+
+	var RANDOM_GENERATE_AREA = [
+		new Rect(-100, -100, 1380, -50), 
+		new Rect(-100, -100, 1380, -50), 
+		new Rect(-100, -100, 1380, -50), 
+		new Rect(-50, 0, -50, 360), 
+		new Rect(1330, 0, 1330, 360)
+	];
+
+	function EnvEffectSnow(win, par){
+		_window = win;
+		_parent = par;
+		super.EnvEffectBase(...);
+		hitThreshold = 0;
+
+		_air = new Point(0, 0);
+		_airLinear = new D3Linear();
+
+		interval = 30;
+
+		_generateTimer = new Timer(onGenerate, "");
+		with(_generateTimer){
+			.interval = 200;
+		}
+	}
+	function finalize(){
+		stop();
+
+		invalidate _generateTimer;
+
+		InvalidateArray(_snow);
+		_snow.clear();
+		InvalidateArray(_snowImg);
+		_snowImg.clear();
+
+		invalidate _air;
+		invalidate _airLinear;
+
+		invalidate RANDOM_GENERATE_AREA;
+
+		super.finalize();
+	}
+	function who(){return "EnvEffectSnow";}
+
+	function create(){
+		for(var i=0;i<SNOW_FILES.count;i++){
+			_snowImg[i] = new global.Layer(win, this);
+			with(_snowImg[i]){
+				.loadImages(SNOW_FILES[i]);
+				.setSizeToImageSize();
+			}
+		}
+
+		_create = true;
+	}
+	function destroy(){
+		InvalidateArray(_snowImg);
+		_snowImg.clear();
+
+		_create = false;
+	}
+
+	function generate(type){
+		_snow.add(new Snow(_window, _parent, _snowImg[type]));
+		return _snow[_snow.count-1];
+	}
+
+	function onGenerate(){
+		if(_max > _snow.count) add();
+	}
+
+	function onDraw(){
+		var now = System.getTickCount();
+		var t = (now-_preDrawTime) / 1000;
+		for(var i=_snow.count-1;i>=0;i--){
+			_snow[i].onDraw(t, _air);
+			if(_snow[i].isDestroy()){
+				_snow.erase(i);
+
+				if(_max > _snow.count) add();
+
+			}
+		}
+		if(_snow.count <= 0) stop();
+		_preDrawTime = now;
+
+		if(_airMovePreTime != -1){
+			var t = (now - _airMovePreTime) / _airMoveTime;
+			if(t >= 1.0){
+				_airMovePreTime = -1;
+				t = 1.0;
+			}
+			var pt = _airLinear.pt(t);
+			_air.set(pt.x, pt.y);
+		}
+	}
+
+	function add(elm = %[]){
+	//elm.pos[x,y]
+	//elm.area[x,y,w,h]
+	//elm.move[x,y]
+	//elm.depth[d]
+	//airRegist[r]
+		if(!_create) create();
+
+		var x, y, z, mx, my, depth, airRegist;
+		if(elm.pos === void){
+			var ref = RANDOM_GENERATE_AREA[random(RANDOM_GENERATE_AREA.count-1)];
+			x = ref.left + random(ref.width);
+			y = ref.top + random(ref.height);
+
+			z = (30 + 70 * (random(100)/100)) / 100;
+		}else{
+			var pos = PointStrToNum(elm.pos);
+			x = pos.x;
+			y = pos.y;
+			if(pos.z == 0)	z = (30 + 70 * (random(100)/100)) / 100;
+			else			z = pos.z / 100;
+		}
+		if(elm.area !== void){
+			var area = RectStrToNum(elm.area);
+			x = area.left + random(area.width);
+			y = area.top + random(area.height);
+			z = (30 + 70 * (random(100)/100)) / 100;
+		}
+		if(elm.move === void){
+			mx = -64+random(128);
+			my = 300;
+		}else{
+			var pos = PointStrToNum(elm.move);
+			mx = pos.x;
+			my = pos.y;
+		}
+		if(elm.airregist === void)	airRegist = (70 + 30 * (random(100)/100)) / 100;
+		else						airRegist = real(elm.airregist) / 100;
+
+		var type = GetElm(elm.type, _snowType);
+
+		with(generate(type)){
+			.setPos(x, y);
+			.setMove(mx, my);
+			.airRegist = airRegist;
+			.depth = z;
+			if(.depth < 0.1){
+				.absolute = ADVLAYER_EFFECT1;
+			}else if(.depth < 0.4){
+				.absolute = ADVLAYER_EFFECT2;
+			}else if(.depth < 0.7){
+				.absolute = ADVLAYER_EFFECT3;
+			}else{
+				.absolute = ADVLAYER_EFFECT4;
+			}
+			.visible = true;
+		}
+
+		if(!isActive()) start();
+	}
+
+	function set(elm){
+		if(!_create) create();
+
+		var max = GetElm(elm.max, _max);
+		var num = GetElm(elm.num, 1);
+		if(max <= num) num = max;
+
+		if(elm.generateArea !== void) _generateArea = elm.area;
+
+		if(!isActive() && num > 0) start();
+
+		_maxTemp = _max;
+		_max = max;
+
+		_snowType = GetElm(elm.type, 0);
+
+		for(var i=0;i<num;i++) add(elm);
+
+		if(elm.airparam !== void) air(elm.airparam);
+
+		_generateTimer.interval = GetElm(elm.generateinterval, 100);
+	}
+
+	function air(elm){
+		_airMoveTime = GetElm(elm.time, 1000);
+		if(_airMoveTime == 0){
+			var vec = PointStrToNum(elm.vec);
+			_air.set(vec);
+			return;
+		}
+
+		_airLinear.set(_air, PointStrToNum(elm.vec), 0);
+		_airMovePreTime = System.getTickCount();
+	}
+	function type(elm){
+		_snowType = GetElm(elm.type, _snowType);
+	}
+
+	function start(){
+		super.start();
+
+		if(!_create) create();
+
+		_preDrawTime = startTime;
+		_generateTimer.enabled = true;
+		.visible = true;
+	}
+	function stop(){
+		super.stop();
+		_generateTimer.enabled = false;
+		visible = false;
+
+		clear();
+		destroy();
+	}
+
+	function clear(){
+		_air.set(0, 0);
+		_max = 0;
+		InvalidateArray(_snow);
+		_snow.clear();
+
+		_snowType = 0;
+
+		_airMovePreTime = -1;
+	}
+
+	function setParam(elm){
+		if(elm.add !== void) add(elm);
+		if(elm.set !== void) set(elm);
+		if(elm.air !== void) air(elm);
+		if(elm.type !== void) type(elm);
+		if(elm.stop !== void) stop();
+	}
+
+	function getParam(){
+		return %[type:"snow", set:1, max:_max, num:_max\5, type:_snowType, area:_generateArea, airparam:%[vec:PointNumToStr(_air.x, _air.y), time:0]];
+	}
+
+	property max{
+		getter(){return _max;}
+		setter(v){_max = v;}
+	}
+
+	class Snow extends Sprite{
+		var _pos, _move;
+
+		var _airRegist = 1.0;
+		var _depth;
+
+		function Snow(win, par, img){
+			super.Sprite(...);
+			assignImages(img);
+			setSizeToImageSize();
+
+			hitThreshold = 256;
+
+			_pos = new Point();
+			_move = new Point();
+		}
+		function finalize(){
+			invalidate _pos;
+			invalidate _move;
+			super.finalize();
+		}
+
+		function onDraw(t, air){
+			var mx = _move.x * t;
+			var my = _move.y * t;
+			mx += air.x * airRegist * t;
+			my += air.y * airRegist * t;
+			mx *= depth;
+			my *= depth;
+
+			_pos.x += mx;
+			_pos.y += my;
+
+			left = _pos.x - width\2;
+			top = _pos.y - height\2;
+		}
+
+		function setPos(x, y){
+			super.setPos(x - width\2, y - height\2);
+
+			_pos.set(x, y);
+		}
+		function setMove(x, y){
+			_move.set(x, y);
+		}
+
+		function isDestroy(){
+			return (_pos.y >= WINDOW_HEIGHT);
+		}
+
+		property airRegist{
+			getter(){return _airRegist;}
+			setter(v){_airRegist = v;}
+		}
+		property depth{
+			getter(){return _depth;}
+			setter(v){
+				_depth = v;
+				zoom = 100 * v;
+			}
+		}
+	}
+}
+
+class EnvEffectRain extends EnvEffectBase{
+	var _preDrawTime;
+
+	var _base;
+
+	var _max = 0;
+	var _air = 0;
+	var _drop = 10;
+	var _rain = [];
+
+	var _app;
+
+	var _update = true;
+
+	function EnvEffectRain(win, par){
+		super.EnvEffectBase(...);
+
+		_base = new global.Layer(win, this);
+		with(_base){
+			//.setSize(width, height);
+			.hitThreshold = 256;
+			.visible = true;
+		}
+
+		interval = 30;
+
+		_app = new GdiPlus.Appearance();
+
+		absolute = ADVLAYER_EFFECT4;
+	}
+	function finalize(){
+		stop();
+		InvalidateArray(_rain);
+		invalidate _base;
+		invalidate _app;
+		super.finalize();
+	}
+
+	function set(max=20, drop=5, air=0, frame=50){
+		_max = max;
+		_air = air;
+		_drop = drop;
+		interval = frame;
+
+		for(var i=0;i<_max;i++) add();
+
+		if(!isActive() && drop > 0) start();
+	}
+
+	function setParam(elm){
+		var max = int GetElm(elm.max, _max);
+		var air = int GetElm(elm.air, _air);
+		var drop = int GetElm(elm.drop, _drop);
+		var frame = int GetElm(elm.interval, interval);
+		set(max, drop, air, frame);
+		if(elm.stop !== void) stop();
+
+		if(GetElm(elm.back, true, false)){
+			absolute = ADVLAYER_EFFECT1;
+		}else{
+			absolute = ADVLAYER_EFFECT4;
+		}
+	}
+
+	function generate(){
+		_rain.add(new Rain());
+		return _rain[_rain.count-1];
+	}
+
+	function add(){
+		with(generate()){
+			.setPos(-200+random(1680), -random(2000), 50+random(50));
+			.setMove(_air, 3000);
+			.setDrop(_drop);
+		}
+		if(!isActive()) start();
+	}
+
+	function onDraw(){
+		var now = System.getTickCount();
+		var t = (now-_preDrawTime) / 1000;
+
+		if(_update) _base.fillRect(0, 0, width, height, 0);
+		_update = !_update;
+
+		for(var i=_rain.count-1;i>=0;i--){
+			_rain[i].onDraw(t, _base, _app);
+			if(_rain[i].y > WINDOW_HEIGHT){
+				_rain.erase(i);
+				if(_max > _rain.count) add();
+			}
+		}
+
+		if(_rain.count == 0) stop();
+
+		_preDrawTime = now;
+	}
+
+	function start(){
+		super.start();
+		_base.setSize(width, height);
+		_base.fillRect(0, 0, width, height, 0x0);
+
+		_preDrawTime = startTime;
+		visible = true;
+	}
+	function stop(){
+		super.stop();
+		_base.setSize(32, 32);
+		visible = false;
+
+		interval = 30;
+
+		clear();
+	}
+
+	function clear(){
+		InvalidateArray(_rain);
+		_rain.clear();
+
+		_update = true;
+		_drop = 10;
+		_air = 0;
+		_preDrawTime = -1;
+	}
+
+	function getParam(){
+		return %[max:_max, drop:_drop, air:_air, interval:interval];
+	}
+
+	class Rain{
+		var _pos;
+		var _vec;
+		var _vecN;
+		var _drop;
+		function Rain(){
+			_pos = new Point(0.0, 0.0);
+			_vec = new Point();
+		}
+		function finalize(){
+			invalidate _vec;
+			invalidate _pos;
+		}
+
+		function setPos(sx, sy, sz){
+			_pos.set(sx, sy, sz);
+		}
+		function setMove(mx, my){
+			_vec.set(mx, my, 0);
+			_vecN = _vec.normalize();
+		}
+		function setDrop(drop=5){
+			_drop = drop;
+		}
+
+		function onDraw(t, tgt, app){
+			var d = _pos.z / 100;
+			var mx = _vec.x * t * d;
+			var my = _vec.y * t * d;
+			var thickness = Math.round(2 * d);
+
+			_pos.x += mx;
+ 			_pos.y += my;
+
+			app.clear();
+			app.addPen(RGBA(255, 255, 255, 32+64*(_pos.z/100)), thickness, 0, 0);
+
+			var drop = _drop * 5;
+			var vx = _vecN.x * drop;
+			var vy = _vecN.y * drop;
+			tgt.drawLine(app, _pos.x - vx, _pos.y - vy, _pos.x + vx, _pos.y + vy);
+		}
+
+		property x{
+			getter(){return _pos.x;}
+		}
+		property y{
+			getter(){return _pos.y;}
+		}
+	}
+}
+
+//レンズ
+class EnvEffectDrop extends EnvEffectBase{
+	var _img;		//レンズのイメージ　共有
+	var _scrnRect;	//画面領域
+
+	var _target;
+
+	var _obj = [];					//レンズ１枚
+	var _generateInterval = 50;	//レンズを生成する間隔
+	var _generateTimer;				//レンズを生成するタイマ
+	var _max = 1;					//レンズの最大数
+
+	var _type = 0;
+
+	var _lensMinW = -1;
+	var _lensMaxW = -1;
+
+	var _wind;		//風向き
+
+	//======================================================================================================
+	//デフォルト動作パラメータ
+		//開始領域（複数）
+		//ランダムで領域が選ばれ、さらにその領域内でランダムに座標を発生させる
+		var _defPos = [
+			[new Point(-300, -300, -2000), new Point(180, WINDOW_HEIGHT, 1000)], 
+			[new Point(   0, -300, -2000), new Point(WINDOW_WIDTH, 180, 1000)], 	//ランダムで選ばれ易いように、
+			[new Point(   0, -300, -2000), new Point(WINDOW_WIDTH, 180, 1000)], 	//同じ領域を複数指定させています。
+			[new Point(   0, -300, -1000), new Point(WINDOW_WIDTH, 180, 500)], 		//
+			[new Point(WINDOW_WIDTH+120, -300, -2000), new Point(180, WINDOW_HEIGHT, 1000)]
+		];
+		//速度
+		var _defSpeed = new Point(0.0, 140.0, 0.0);
+		var _defSpeedRange = new Point(200.0, 60.0, 0.0);
+		//加速度
+		var _defAccel = 0;
+		var _defAccelRange = 0;
+		//空気抵抗
+		var _defAirResist = 40;
+		var _defAirResistRange = 20;
+		//回転速度
+		var _defRotateSpeed = new Point(60, 180, 30);
+	//======================================================================================================
+
+	function EnvEffectDrop(win, par, target, type=0){
+		super.EnvEffectBase(...);
+
+		_img = new global.Layer(...);
+		_img.loadImages("FRM_0853b");
+		_img.setSizeToImageSize();
+
+		_scrnRect = new Rect(0, 0, WINDOW_WIDTH-1, WINDOW_HEIGHT-1);
+
+		_generateTimer = new Timer(onGenerate, "");
+		_generateTimer.interval = _generateInterval;
+
+		_target = target;
+
+		_type = type;
+
+		switch(type){
+		case 1:
+			_defPos = [
+				[new Point( 320, WINDOW_HEIGHT-160), new Point(WINDOW_WIDTH-480, 60)], 	//ランダムで選ばれ易いように、
+				[new Point( 320, WINDOW_HEIGHT-160), new Point(WINDOW_WIDTH-480, 60)], 	//同じ領域を複数指定させています。
+				[new Point( 320, WINDOW_HEIGHT-160), new Point(WINDOW_WIDTH-480, 60)], 		//
+				[new Point(WINDOW_WIDTH-160, 240), new Point(60, WINDOW_HEIGHT-360)]
+			];
+			//速度
+			_defSpeed = new Point(-160.0, -120.0, 0.0);
+			_defSpeedRange = new Point(70.0, 30.0, 0.0);
+			break;
+		}
+
+		type = ltAddAlpha;
+
+		_wind = new Point();
+	}
+	function finalize(){
+		invalidate _wind;
+		invalidate _scrnRect;
+		InvalidateArray(_defPos);
+		invalidate _defPos;
+		invalidate _defSpeed;
+		invalidate _defSpeedRange;
+		_generateTimer.enabled = false;
+		invalidate _generateTimer;
+		invalidate _img;
+		InvalidateArray(_obj);
+		super.finalize();
+	}
+
+	function start(){
+		if(isvalid _generateTimer && _max > 0){
+			if(!_generateTimer.enabled) _generateTimer.enabled = true;
+		}
+		super.start();
+	}
+	function stop(){
+		if(isvalid _generateTimer) _generateTimer.enabled = false;
+		super.stop();
+	}
+
+	function onGenerate(){
+		generate();
+		if(_obj.count >= _max) _generateTimer.enabled = false;
+	}
+
+	function setDefaultParam(
+		defPos,
+		defSpeed, defSpeedRange,
+		defAccel, defAccelRange,
+		defAirResist, defAirResistRange,
+		defRotateSpeed
+	){
+		if(defPos !== void)				_defPos.assign(defPos);
+		if(defSpeed !== void)			_defSpeed.set(defSpeed);
+		if(defSpeedRange !== void)		_defSpeedRange.set(defSpeedRange);
+		if(defAccel !== void)			_defAccel = defAccel;
+		if(defAccelRange !== void)		_defAccelRange = defAccelRange;
+		if(defAirResist !== void)		_defAirResist = defAirResist;
+		if(defAirResistRange !== void)	_defAirResistRange = defAirResistRange;
+		if(defRotateSpeed !== void)		_defRotateSpeed.set(defRotateSpeed);
+	}
+
+	//生成
+	function generate(param=null){
+		var index = _obj.count;
+		if(param == null){
+			var param = %[];
+			with(param){
+				var scale = 10000;
+				var x, y, z, spdx, spdy, spdz;
+				//軌道が画面領域を通過するようになるまで設定を試行する
+				do{
+					var i = random(_defPos.count-1);
+					x = _defPos[i][0].x+random(_defPos[i][1].x);
+					y = _defPos[i][0].y+random(_defPos[i][1].y);
+					z = _defPos[i][0].z+random(_defPos[i][1].z);
+ 					spdx = _defSpeed.x*1000+random(_defSpeedRange.x*1000);
+					spdy = _defSpeed.y*1000+random(_defSpeedRange.y*1000);
+					spdz = _defSpeed.z*1000+random(_defSpeedRange.z*1000);
+					spdx /=1000;
+					spdy /=1000;
+					spdz /=1000;
+				}while(!_scrnRect.isIntersectLine(new Line(x+spdx*scale, y+spdy*scale)));
+
+				if(_lensMinW != -1 && _lensMaxW != -1){
+					.sizeW = _lensMinW + random(_lensMaxW-_lensMinW);
+				}else{
+					if(random(100) > 80){
+						.sizeW = 64 + random(32);
+					}else{
+						.sizeW = 8 + random(58);
+					}
+				}
+				.type = _type;
+				.sizeH = .sizeW;
+				.refX = -24;
+				.refY = .refX;
+				.blur = (2+random(4));
+				.pos = "%f,%f,%f".sprintf(x, y, z);
+				.speed = "%f,%f,%f".sprintf(spdx, spdy, spdz);
+				.accel = (_defAccel+random(_defAccelRange)) / 100;
+				.airResist = (_defAirResist+random(_defAirResistRange)) / 100;
+			}
+			_obj[index] = new EnvEffectLens(window, _target, _target);
+			_obj[index].create(param, _img);
+		}else{
+			_obj[index] = new EnvEffectPetal(window, _target, _target);
+			_obj[index].create(param, _img);
+		}
+	}
+
+	function onDraw(now){
+		for(var i=0;i<_obj.count;i++) _obj[i].visible = false;
+
+		for(var i=0;i<_obj.count-1;i++){
+			if(_obj[i].absolute < _obj[i+1].absolute) _obj[i] <-> _obj[i+1];
+		}
+
+		for(var i=_obj.count-1;i>=0;i--){
+			if(_obj[i].onMove(now, _wind)){
+				invalidate _obj[i];
+				_obj.erase(i);
+				if(_max > _obj.count){
+					if(!_generateTimer.enabled) _generateTimer.enabled = true;
+				}
+			}else{
+				_obj[i].onDraw(now);
+				_obj[i].visible = true;
+			}
+		}
+		for(var i=_obj.count-1;i>=0;i--){
+			if(!isvalid _obj[i]) _obj.erase(i);
+		}
+	}
+
+	property max{
+		setter(v){
+			_max = v;
+			if(_obj.count < _max && isActive()){
+				if(!_generateTimer.enabled) _generateTimer.enabled = true;
+			}else if(_max < 0){
+				_generateTimer.enabled = false;
+			}
+		}
+		getter(){return _max;}
+	}
+	property interval{
+		setter(v){_generateTimer.interval = _generateInterval = v;}
+		getter(){return _generateInterval;}
+	}
+	property lensMinW{
+		setter(v){_lensMinW = v;}
+		getter(){return _lensMinW;}
+	}
+	property lensMaxW{
+		setter(v){_lensMaxW = v;}
+		getter(){return _lensMaxW;}
+	}
+
+	property wind{
+		setter(v){_wind = v;}
+		getter(){return _wind;}
+	}
+}
+
+class EnvEffectLens extends Sprite{
+	var _target;
+	var _refX, _refY;
+	var _blur;
+
+	var _type = 0;
+	var _pos;			//現在位置
+	var _speed;			//移動速度(1秒間の移動量)
+	var _accel;			//加速度(1秒間の加速率)
+	var _airResist;		//空気抵抗(0 - 1)
+	var _drawTime;		//前回の描画時間
+
+	var _imgTemp;
+
+	function EnvEffectLens(win, par, target){
+		Sprite(...);
+		hitThreshold = 256;
+
+		_target = target;
+	}
+	function finalize(){
+		super.finalize();
+
+		invalidate _imgTemp;
+	}
+
+	function create(param, img){
+		setSize(param.sizeW, param.sizeH);
+		_refX = param.refX;
+		_refY = param.refY;
+		_blur = param.blur;
+
+		_type = param.type;
+
+		_pos = new Point(PointStrToNumR(param.pos));
+		_speed = new Point(PointStrToNumR(param.speed));
+		_accel = real param.accel;
+		_airResist = real param.airResist;
+
+		_imgTemp = new global.Layer(window, this);
+		_imgTemp.setSize(width, height);
+
+		_drawTime = System.getTickCount();
+
+		_imgTemp.stretchCopy(0, 0, width, height, img, 0, 0, img.width, img.height);
+
+		type = ltDodge;
+
+		setPos(-width, -height);
+
+		opacity = 0;
+		setBlendingEnvelope(128+random(64));
+		beginActivation(1000+random(1000));
+
+		visible = true;
+	}
+
+	function onMove(now, air){
+		var now = System.getTickCount();
+		var t = (now - _drawTime) / 1000;
+		_drawTime = now;
+
+		//空気抵抗
+		var airTemp = new Point(air);
+		airTemp.x *= _airResist;
+		airTemp.y *= _airResist;
+		airTemp.z *= _airResist;
+
+		_pos.x += (_speed.x + airTemp.x) * t;
+		_pos.y += (_speed.y + airTemp.y) * t;
+		_pos.z += (_speed.z + airTemp.z) * t;
+
+		//画面外に出たチェック
+		switch(_type){
+		case 1:
+			if(-height > _pos.y) return true;
+			break;
+		default :
+			if(WINDOW_HEIGHT+height/2 < _pos.y) return true;
+			break;
+		}
+
+		_speed.x += _speed.x * _accel * t;
+		_speed.y += _speed.y * _accel * t;
+		_speed.z += _speed.z * _accel * t;
+
+		return false;
+	}
+
+	function onDraw(){
+		setPos(_pos.x, _pos.y);
+
+		piledCopy(0, 0, _target, left-_refX, top-_refY, width, height);
+		doBoxBlur(_blur, _blur);
+		operateRect(0, 0, _imgTemp, 0, 0, width, height, omSubtractive);
+	}
+}
+
+class EnvEffectBgScroll extends EnvEffectBase{
+	var _param = %[
+		file : "", 
+		x : 0, 
+		y : 0, 
+		mx : 0, 
+		my : 0, 
+		cycle : 10000
+	];
+
+	var _imgTemp;
+
+	function EnvEffectBgScroll(win, par){
+		super.EnvEffectBase(...);
+		hasImage = true;
+
+		_imgTemp = new global.Layer(win, this);
+
+		absolute = ADVLAYER_EFFECT1;
+	}
+	function finalize(){
+		super.finalize();
+		invalidate _imgTemp;
+	}
+	function who(){return "EnvEffectBgScroll";}
+
+	function setParam(elm=%[]){
+		_param.file = elm.file;
+		_param.x = int GetElm(elm.x, 0);
+		_param.y = int GetElm(elm.y, 0);
+		_param.mx = int GetElm(elm.mx, 0);
+		_param.my = int GetElm(elm.my, 0);
+		_param.cycle = int GetElm(elm.cycle, 10000);
+
+		with(_imgTemp){
+			.loadImages(_param.file);
+			.setSizeToImageSize();
+		}
+
+		setSize(_imgTemp.width, _imgTemp.height);
+		setPos(_param.x, _param.y);
+
+		start();
+	}
+
+	function start(){
+		super.start();
+		visible = true;
+	}
+	function stop(){
+		super.stop();
+		_imgTemp.setImageSize(32, 32);
+		setImageSize(32, 32);
+		visible = false;
+	}
+
+	function getParam(){return _param;}
+
+	function onDraw(){
+		var t = ((System.getTickCount() - startTime) % _param.cycle) / _param.cycle;
+		if(t > 1.0) t = 1.0;
+
+		var srcWidth = _imgTemp.width;
+		var srcHeight = _imgTemp.height;
+		var sx = _param.mx * t;
+		var sy = _param.my * t;
+		for(;sx>=0;sx-=srcWidth){}
+		for(;sy>=0;sy-=srcHeight){}
+		var dstWidth = width;
+		var dstHeight = height;
+
+		for(var dy=sy;dy<dstHeight;dy+=srcHeight){
+			for(var dx=sx;dx<dstWidth;dx+=srcWidth){
+//				copyRect(dx, dy, _imgTemp, 0, 0, srcWidth, srcHeight);
+				affineCopy(_imgTemp, 0, 0, srcWidth, srcHeight, false,
+				dx, dy, dx+srcWidth, dy, dx, dy+srcHeight,
+				stFastLinear);
+			}
+		}
+	}
+}

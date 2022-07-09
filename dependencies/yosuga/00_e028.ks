@@ -54,7 +54,7 @@
 
 @Char file=CH01_01M 
 
-@Talk name=Class_Rep voice=KO050001
+@Talk name=Class　Rep voice=KO050001
 
 @Hitret id=38023
 
@@ -72,7 +72,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO050002
+@Talk name=Class　Rep voice=KO050002
 
 @Hitret id=38026
 
@@ -86,7 +86,7 @@
 
 @Char file=CH01_10M 
 
-@Talk name=Class_Rep voice=KO050003
+@Talk name=Class　Rep voice=KO050003
 
 @Hitret id=38028
 
@@ -100,7 +100,7 @@
 @Move id=梢 my=50 cycle=1000
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO050004
+@Talk name=Class　Rep voice=KO050004
 
 @Hitret id=38030
 
@@ -117,7 +117,7 @@
 @Move id=梢 y=0 cycle=1000
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO050005
+@Talk name=Class　Rep voice=KO050005
 
 @Hitret id=38032
 

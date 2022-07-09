@@ -578,7 +578,7 @@
 
 @Char file=CK01_04S 
 
-@Talk name=Kazuha's_Father voice=SH040007
+@Talk name=Kazuha'sÅ@Father voice=SH040007
 
 @Hitret id=29214
 

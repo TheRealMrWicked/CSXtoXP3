@@ -42,7 +42,7 @@
 
 @Hitret id=20629
 
-@Talk name=Street_Vendor voice=NP430002
+@Talk name=Street@Vendor voice=NP430002
 
 @Hitret id=20630
 
@@ -57,7 +57,7 @@
 
 @Hitret id=20631
 
-@Talk name=Street_Vendor voice=NP430003
+@Talk name=Street@Vendor voice=NP430003
 
 @Hitret id=20632
 
@@ -65,7 +65,7 @@
 
 @Hitret id=20633
 
-@Talk name=Street_Vendor voice=NP430004
+@Talk name=Street@Vendor voice=NP430004
 
 @Hitret id=20634
 
@@ -76,7 +76,7 @@
 
 @Hitret id=20635
 
-@Talk name=‚½‚±Ä‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP380001
+@Talk name=Street@Vendor voice=NP380001
 
 @Hitret id=20636
 
@@ -87,11 +87,11 @@
 
 @Hitret id=20637
 
-@Talk name=‚½‚±Ä‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP380002
+@Talk name=Street@Vendor voice=NP380002
 
 @Hitret id=20638
 
-@Talk name=‚½‚±Ä‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP380003
+@Talk name=Street@Vendor voice=NP380003
 
 @Hitret id=20639
 
@@ -102,7 +102,7 @@
 
 @Hitret id=20640
 
-@Talk name=‚½‚±Ä‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP380004
+@Talk name=Street@Vendor voice=NP380004
 
 @Hitret id=20641
 
@@ -168,7 +168,7 @@
 
 @Hitret id=20652
 
-@Talk name=Stall_Owner voice=NP450001
+@Talk name=Stall@Owner voice=NP450001
 
 @Hitret id=20653
 
@@ -187,7 +187,7 @@
 
 @Hitret id=20655
 
-@Talk name=Stall_Owner voice=NP450002
+@Talk name=Stall@Owner voice=NP450002
 
 @Hitret id=20656
 
@@ -218,7 +218,7 @@
 
 @Hitret id=20660
 
-@Talk name=Stall_Owner voice=NP450003
+@Talk name=Stall@Owner voice=NP450003
 
 @Hitret id=20661
 
@@ -237,7 +237,7 @@
 
 @Hitret id=20663
 
-@Talk name=Stall_Owner voice=NP450004
+@Talk name=Stall@Owner voice=NP450004
 
 @Hitret id=20664
 
@@ -248,7 +248,7 @@
 
 @Hitret id=20665
 
-@Talk name=Stall_Owner voice=NP450005
+@Talk name=Stall@Owner voice=NP450005
 
 @Hitret id=20666
 
@@ -259,7 +259,7 @@
 
 @Hitret id=20667
 
-@Talk name=‚­‚¶ˆø‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP390001
+@Talk name=Raffle@Stall@Owner voice=NP390001
 
 @Hitret id=20668
 
@@ -270,7 +270,7 @@
 
 @Hitret id=20669
 
-@Talk name=‚­‚¶ˆø‚«‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP390002
+@Talk name=Raffle@Stall@Owner voice=NP390002
 
 @Hitret id=20670
 
@@ -319,7 +319,7 @@
 
 @Hitret id=20679
 
-@Talk name=ƒŠƒ“ƒSˆ¹‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP400001
+@Talk name=Candy@Apple@Stall@Owner voice=NP400001
 
 @Hitret id=20680
 
@@ -327,7 +327,7 @@
 
 @Hitret id=20681
 
-@Talk name=ƒŠƒ“ƒSˆ¹‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP400002
+@Talk name=Candy@Apple@Stall@Owner voice=NP400002
 
 @Hitret id=20682
 
@@ -349,7 +349,7 @@
 
 @Hitret id=20685
 
-@Talk name=ƒŠƒ“ƒSˆ¹‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP400003
+@Talk name=Candy@Apple@Stall@Owner voice=NP400003
 
 @Hitret id=20686
 
@@ -360,7 +360,7 @@
 
 @Hitret id=20687
 
-@Talk name=ƒŠƒ“ƒSˆ¹‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP400004
+@Talk name=Candy@Apple@Stall@Owner voice=NP400004
 
 @Hitret id=20688
 
@@ -389,7 +389,7 @@
 
 @Hitret id=20692
 
-@Talk name=ƒŠƒ“ƒSˆ¹‰®/˜I“X‚Ì‚¨‚¶‚³‚ñ voice=NP400005
+@Talk name=Candy@Apple@Stall@Owner voice=NP400005
 
 @Hitret id=20693
 

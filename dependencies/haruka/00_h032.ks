@@ -8,19 +8,19 @@
 @MessageFrame type=1
 @WhiteOut
 
-@Talk name=Kozue_Monologue voice=KO022017
+@Talk name=KozueÅ@Monologue voice=KO022017
 
 @Hitret id=14595
 
-@Talk name=Kozue_Monologue voice=KO022018
+@Talk name=KozueÅ@Monologue voice=KO022018
 
 @Hitret id=14596
 
-@Talk name=Kozue_Monologue voice=KO022019
+@Talk name=KozueÅ@Monologue voice=KO022019
 
 @Hitret id=14597
 
-@Talk name=Kozue_Monologue voice=KO022020
+@Talk name=KozueÅ@Monologue voice=KO022020
 
 @Hitret id=14598
 
@@ -205,23 +205,23 @@
 
 @ClearChar
 
-@Talk name=Kozue_Monologue voice=KO022031
+@Talk name=KozueÅ@Monologue voice=KO022031
 
 @Hitret id=14628
 
-@Talk name=Kozue_Monologue voice=KO022032
+@Talk name=KozueÅ@Monologue voice=KO022032
 
 @Hitret id=14629
 
-@Talk name=Kozue_Monologue voice=KO022033
+@Talk name=KozueÅ@Monologue voice=KO022033
 
 @Hitret id=14630
 
-@Talk name=Kozue_Monologue voice=KO022034
+@Talk name=KozueÅ@Monologue voice=KO022034
 
 @Hitret id=14631
 
-@Talk name=Kozue_Monologue voice=KO022035
+@Talk name=KozueÅ@Monologue voice=KO022035
 
 @Hitret id=14632
 
@@ -244,11 +244,11 @@
 
 @StopBgm
 
-@Talk name=Kozue_Monologue voice=KO022040
+@Talk name=KozueÅ@Monologue voice=KO022040
 
 @Hitret id=14637
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14638
 
@@ -256,7 +256,7 @@
 
 @Hitret id=14639
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14640
 
@@ -264,7 +264,7 @@
 
 @Hitret id=14641
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14642
 
@@ -283,7 +283,7 @@
 
 @Hitret id=14645
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14646
 
@@ -291,7 +291,7 @@
 
 @Hitret id=14647
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14648
 
@@ -354,7 +354,7 @@
 
 @Hitret id=14660
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14661
 
@@ -362,7 +362,7 @@
 
 @Hitret id=14662
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14663
 
@@ -373,7 +373,7 @@
 
 @Hitret id=14664
 
-@Talk name=Haruka_Åï_Sora voice=SR020326
+@Talk name=HarukaÅ@andÅ@Sora voice=SR020326
 
 @Hitret id=14665
 
@@ -390,7 +390,7 @@
 
 @Hitret id=14667
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14668
 
@@ -419,7 +419,7 @@
 
 @Hitret id=14672
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14673
 
@@ -427,7 +427,7 @@
 
 @Hitret id=14674
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14675
 
@@ -450,7 +450,7 @@
 
 @Hitret id=14679
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14680
 
@@ -461,7 +461,7 @@
 
 @Hitret id=14681
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14682
 
@@ -469,7 +469,7 @@
 
 @Hitret id=14683
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14684
 
@@ -488,7 +488,7 @@
 
 @Hitret id=14687
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14688
 
@@ -511,15 +511,15 @@
 
 @Cg file=EZ24bL center=663,333
 
-@Talk name=Kozue_Monologue voice=KO022060
+@Talk name=KozueÅ@Monologue voice=KO022060
 
 @Hitret id=14693
 
-@Talk name=Kozue_Monologue voice=KO022061
+@Talk name=KozueÅ@Monologue voice=KO022061
 
 @Hitret id=14694
 
-@Talk name=Kozue_Monologue voice=KO022062
+@Talk name=KozueÅ@Monologue voice=KO022062
 
 @Hitret id=14695
 
@@ -530,7 +530,7 @@
 
 @Hitret id=14696
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14697
 
@@ -541,11 +541,11 @@
 
 @Hitret id=14698
 
-@Talk name=óI
+@Talk name=Haruka
 
 @Hitret id=14699
 
-@Talk name=Kozue_Monologue voice=KO022065
+@Talk name=KozueÅ@Monologue voice=KO022065
 
 @Hitret id=14700
 

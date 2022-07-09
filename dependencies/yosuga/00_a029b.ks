@@ -293,7 +293,7 @@
 
 @PlaySe file=se016
 
-@Talk name=Class_Rep voice=KO010194
+@Talk name=Class　Rep voice=KO010194
 
 @Hitret id=9270
 
@@ -325,7 +325,7 @@
 
 @Hitret id=9275
 
-@Talk name=Class_Rep voice=KO010195
+@Talk name=Class　Rep voice=KO010195
 
 @Hitret id=9276
 
@@ -340,7 +340,7 @@
 
 @Char file=CH02_08M 
 
-@Talk name=Class_Rep voice=KO010196
+@Talk name=Class　Rep voice=KO010196
 
 @Hitret id=9279
 
@@ -364,7 +364,7 @@
 
 @Char file=CH02_06M 
 
-@Talk name=Class_Rep voice=KO010197
+@Talk name=Class　Rep voice=KO010197
 
 @Hitret id=9283
 
@@ -407,7 +407,7 @@
 
 @Char file=CH02_08M 
 
-@Talk name=Class_Rep voice=KO010198
+@Talk name=Class　Rep voice=KO010198
 
 @Hitret id=9293
 
@@ -423,7 +423,7 @@
 @StopBgm fade=0
 @Char file=CH02_06M 
 
-@Talk name=Class_Rep voice=KO010199
+@Talk name=Class　Rep voice=KO010199
 
 @Hitret id=9296
 
@@ -443,7 +443,7 @@
 @PlayBgm file=BGM10
 @Char file=CH02_06M 
 
-@Talk name=Class_Rep voice=KO010200
+@Talk name=Class　Rep voice=KO010200
 
 @Hitret id=9300
 
@@ -459,7 +459,7 @@
 
 @Hitret id=9303
 
-@Talk name=Class_Rep voice=KO010201
+@Talk name=Class　Rep voice=KO010201
 
 @Hitret id=9304
 
@@ -471,7 +471,7 @@
 
 @Hitret id=9306
 
-@Talk name=Class_Rep voice=KO010202
+@Talk name=Class　Rep voice=KO010202
 
 @Hitret id=9307
 
@@ -479,11 +479,11 @@
 
 @Hitret id=9308
 
-@Talk name=Class_Rep voice=KO010203
+@Talk name=Class　Rep voice=KO010203
 
 @Hitret id=9309
 
-@Talk name=Class_Rep voice=KO010204
+@Talk name=Class　Rep voice=KO010204
 
 @Hitret id=9310
 
@@ -495,7 +495,7 @@
 
 @Hitret id=9312
 
-@Talk name=Class_Rep voice=KO010205
+@Talk name=Class　Rep voice=KO010205
 
 @Hitret id=9313
 
@@ -518,7 +518,7 @@
 
 @Hitret id=9317
 
-@Talk name=Class_Rep voice=KO010206
+@Talk name=Class　Rep voice=KO010206
 
 @Hitret id=9318
 
@@ -530,7 +530,7 @@
 
 @Hitret id=9320
 
-@Talk name=Class_Rep voice=KO010207
+@Talk name=Class　Rep voice=KO010207
 
 @Hitret id=9321
 
@@ -542,7 +542,7 @@
 
 @Hitret id=9323
 
-@Talk name=Class_Rep voice=KO010208
+@Talk name=Class　Rep voice=KO010208
 
 @Hitret id=9324
 
@@ -560,7 +560,7 @@
 
 @Char file=CH02_06M 
 
-@Talk name=Class_Rep voice=KO010209
+@Talk name=Class　Rep voice=KO010209
 
 @Hitret id=9327
 
@@ -571,7 +571,7 @@
 
 @Char file=CH02_08M 
 
-@Talk name=Class_Rep voice=KO010210
+@Talk name=Class　Rep voice=KO010210
 
 @Hitret id=9329
 
@@ -579,7 +579,7 @@
 
 @Hitret id=9330
 
-@Talk name=Class_Rep voice=KO010211
+@Talk name=Class　Rep voice=KO010211
 
 @Hitret id=9331
 
@@ -618,7 +618,7 @@
 
 @Char file=CH02_06M 
 
-@Talk name=Class_Rep voice=KO010212
+@Talk name=Class　Rep voice=KO010212
 
 @Hitret id=9340
 
@@ -626,7 +626,7 @@
 
 @Hitret id=9341
 
-@Talk name=Class_Rep voice=KO010213
+@Talk name=Class　Rep voice=KO010213
 
 @Hitret id=9342
 
@@ -637,7 +637,7 @@
 
 @Char file=CH02_08M 
 
-@Talk name=Class_Rep voice=KO010214
+@Talk name=Class　Rep voice=KO010214
 
 @Hitret id=9344
 
@@ -648,7 +648,7 @@
 
 @Char file=CH02_09M 
 
-@Talk name=Class_Rep voice=KO010215
+@Talk name=Class　Rep voice=KO010215
 
 @Hitret id=9346
 
@@ -681,7 +681,7 @@
 
 @Hitret id=9351
 
-@Talk name=Class_Rep voice=KO010216
+@Talk name=Class　Rep voice=KO010216
 
 @Hitret id=9352
 
@@ -1019,7 +1019,7 @@
 
 @Hitret id=9424
 
-@Talk name=Sora_Monologue voice=SR011433
+@Talk name=Sora　Monologue voice=SR011433
 
 @Hitret id=9425
 

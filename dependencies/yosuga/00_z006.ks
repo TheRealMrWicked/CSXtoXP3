@@ -197,7 +197,7 @@
 
 @Hitret id=768
 
-@Talk name=Class_Rep voice=KO000001
+@Talk name=Class　Rep voice=KO000001
 
 @Hitret id=769
 
@@ -227,7 +227,7 @@
 
 @Char file=CH01_02M 
 
-@Talk name=Class_Rep voice=KO000002
+@Talk name=Class　Rep voice=KO000002
 
 @Hitret id=775
 
@@ -246,11 +246,11 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO000003
+@Talk name=Class　Rep voice=KO000003
 
 @Hitret id=779
 
-@Talk name=Class_Rep voice=KO000004
+@Talk name=Class　Rep voice=KO000004
 
 @Hitret id=780
 
@@ -261,7 +261,7 @@
 
 @Char file=CH01_08M 
 
-@Talk name=Class_Rep voice=KO000005
+@Talk name=Class　Rep voice=KO000005
 
 @Hitret id=782
 
@@ -272,7 +272,7 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class_Rep voice=KO000006
+@Talk name=Class　Rep voice=KO000006
 
 @Hitret id=784
 
@@ -297,11 +297,11 @@
 @action id=梢 action=ActionAdvJump height=30 cycle=300 count=1
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO000007
+@Talk name=Class　Rep voice=KO000007
 
 @Hitret id=788
 
-@Talk name=Class_Rep voice=KO000008
+@Talk name=Class　Rep voice=KO000008
 
 @Hitret id=789
 
@@ -456,7 +456,7 @@
 
 @Hitret id=820
 
-@Talk name=Akira/女子 voice=AK000005
+@Talk name=Girl voice=AK000005
 
 @Hitret id=821
 
@@ -471,7 +471,7 @@
 
 @Hitret id=823
 
-@Talk name=Akira/女子 voice=AK000006
+@Talk name=Girl voice=AK000006
 
 @Hitret id=824
 
@@ -759,7 +759,7 @@
 
 @Hitret id=873
 
-@Talk name=English_Teacher voice=EI000001
+@Talk name=English　Teacher voice=EI000001
 
 @Hitret id=874
 
@@ -819,7 +819,7 @@
 
 @Hitret id=884
 
-@Talk name=English_Teacher voice=EI000002
+@Talk name=English　Teacher voice=EI000002
 
 @Hitret id=885
 
@@ -858,7 +858,7 @@
 
 
 
-@Talk name=English_Teacher voice=EI000003
+@Talk name=English　Teacher voice=EI000003
 
 @Hitret id=891
 
@@ -870,7 +870,7 @@
 
 @Hitret id=893
 
-@Talk name=English_Teacher voice=EI000004
+@Talk name=English　Teacher voice=EI000004
 
 @Hitret id=894
 

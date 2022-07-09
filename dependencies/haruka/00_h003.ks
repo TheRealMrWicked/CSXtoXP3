@@ -103,7 +103,7 @@
 
 @Hitret id=9882
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=9883
 

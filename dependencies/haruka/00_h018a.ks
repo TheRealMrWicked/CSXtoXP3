@@ -36,7 +36,7 @@
 
 @Char file=CH02_02M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11899
 
@@ -102,7 +102,7 @@
 
 @Hitret id=11910
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11911
 
@@ -158,7 +158,7 @@
 
 @Hitret id=11918
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11919
 
@@ -169,7 +169,7 @@
 
 @Hitret id=11920
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11921
 
@@ -188,7 +188,7 @@
 
 @Hitret id=11924
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11925
 
@@ -199,7 +199,7 @@
 
 @Hitret id=11926
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11927
 
@@ -315,7 +315,7 @@
 
 @Hitret id=11948
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11949
 
@@ -357,7 +357,7 @@
 
 @Hitret id=11954
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11955
 
@@ -410,7 +410,7 @@
 
 @Hitret id=11962
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11963
 
@@ -485,7 +485,7 @@
 
 @Hitret id=11971
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11972
 

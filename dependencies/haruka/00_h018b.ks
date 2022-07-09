@@ -6,11 +6,11 @@
 @Cg file=B01a
 @MessageFrame type=1
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11974
 
-@Talk name=Akira_•_Ryouhei voice=SYN000008
+@Talk name=Akira@and@Ryouhei voice=SYN000008
 
 @Hitret id=11975
 
@@ -37,7 +37,7 @@
 
 @Hitret id=11980
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11981
 
@@ -61,7 +61,7 @@
 
 @Cg file=B32a
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11985
 
@@ -96,7 +96,7 @@
 
 @Hitret id=11991
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11992
 
@@ -178,7 +178,7 @@
 
 @Hitret id=12003
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12004
 
@@ -186,7 +186,7 @@
 
 @Hitret id=12005
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12006
 
@@ -201,7 +201,7 @@
 @ClearChar
 @PlaySe file=se103
 
-@Talk name=Sora_•_Nao_•_Kazuha_•_Kozue/Everyone voice=SYN000009
+@Talk name=Sora@and@Nao@and@Kazuha@and@Kozue/Everyone voice=SYN000009
 
 @Hitret id=12008
 
@@ -751,7 +751,7 @@
 
 @Hitret id=12100
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12101
 
@@ -759,7 +759,7 @@
 
 @Hitret id=12102
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12103
 
@@ -767,7 +767,7 @@
 
 @Hitret id=12104
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12105
 
@@ -778,11 +778,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Nao_•_Kazuha_•_Kozue/Everyone voice=SYN000010
+@Talk name=Nao@and@Kazuha@and@Kozue/Everyone voice=SYN000010
 
 @Hitret id=12106
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12107
 
@@ -797,7 +797,7 @@
 
 @Hitret id=12109
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12110
 
@@ -829,7 +829,7 @@
 
 @Hitret id=12114
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12115
 
@@ -844,7 +844,7 @@
 
 @Cg file=EZ20a
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=12118
 
@@ -863,7 +863,7 @@
 @WaitAction id=ƒJƒƒ‰
 
 @Font face=36
-@Talk name=Nao_•_Kazuha_•_Kozue/Everyone voice=SYN000011
+@Talk name=Nao@and@Kazuha@and@Kozue/Everyone voice=SYN000011
 
 @Hitret id=12120
 

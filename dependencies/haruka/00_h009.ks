@@ -12,7 +12,7 @@
 
 @Char file=CA01_01M
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10425
 
@@ -27,19 +27,19 @@
 
 @ClearChar
 
-@Talk name=Kozue_Monologue voice=KO020264
+@Talk name=Kozue　Monologue voice=KO020264
 
 @Hitret id=10428
 
-@Talk name=Kozue_Monologue voice=KO020265
+@Talk name=Kozue　Monologue voice=KO020265
 
 @Hitret id=10429
 
-@Talk name=Kozue_Monologue voice=KO020266
+@Talk name=Kozue　Monologue voice=KO020266
 
 @Hitret id=10430
 
-@Talk name=Kozue_Monologue voice=KO020267
+@Talk name=Kozue　Monologue voice=KO020267
 
 @Hitret id=10431
 
@@ -47,11 +47,11 @@
 
 @Hitret id=10432
 
-@Talk name=Kozue_Monologue voice=KO020269
+@Talk name=Kozue　Monologue voice=KO020269
 
 @Hitret id=10433
 
-@Talk name=Kozue_Monologue voice=KO020270
+@Talk name=Kozue　Monologue voice=KO020270
 
 @Hitret id=10434
 
@@ -59,7 +59,7 @@
 
 @Hitret id=10435
 
-@Talk name=Kozue_Monologue voice=KO020272
+@Talk name=Kozue　Monologue voice=KO020272
 
 @Hitret id=10436
 
@@ -89,19 +89,19 @@
 
 @Hitret id=10439
 
-@Talk name=Kozue_Monologue voice=KO020276
+@Talk name=Kozue　Monologue voice=KO020276
 
 @Hitret id=10440
 
-@Talk name=Kozue_Monologue voice=KO020277
+@Talk name=Kozue　Monologue voice=KO020277
 
 @Hitret id=10441
 
-@Talk name=Kozue_Monologue voice=KO020278
+@Talk name=Kozue　Monologue voice=KO020278
 
 @Hitret id=10442
 
-@Talk name=Kozue_Monologue voice=KO020279
+@Talk name=Kozue　Monologue voice=KO020279
 
 @Hitret id=10443
 
@@ -133,15 +133,15 @@
 
 @Hitret id=10445
 
-@Talk name=Kozue_Monologue voice=KO020282
+@Talk name=Kozue　Monologue voice=KO020282
 
 @Hitret id=10446
 
-@Talk name=Kozue_Monologue voice=KO020283
+@Talk name=Kozue　Monologue voice=KO020283
 
 @Hitret id=10447
 
-@Talk name=Kozue_Monologue voice=KO020284
+@Talk name=Kozue　Monologue voice=KO020284
 
 @Hitret id=10448
 
@@ -167,7 +167,7 @@
 
 @Hitret id=10452
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10453
 
@@ -214,7 +214,7 @@
 
 @Hitret id=10458
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10459
 
@@ -230,7 +230,7 @@
 
 @Hitret id=10462
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10463
 
@@ -256,7 +256,7 @@
 
 @Hitret id=10466
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10467
 
@@ -281,7 +281,7 @@
 
 @Hitret id=10470
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=10471
 

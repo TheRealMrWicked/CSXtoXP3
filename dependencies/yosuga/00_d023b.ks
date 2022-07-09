@@ -290,7 +290,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Nao_and_Kazuha_and_Ryouhei voice=NO040073/KA040692/RH040292
+@Talk name=Nao　and　Kazuha　and　Ryouhei voice=NO040073/KA040692/RH040292
 
 @Hitret id=30298
 

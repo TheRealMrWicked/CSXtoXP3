@@ -5,15 +5,15 @@
 @PlayEnvSe file=SE308
 @MessageFrame type=1
 
-@Talk name=Nao_Monologue voice=NO031837
+@Talk name=Nao　Monologue voice=NO031837
 
 @Hitret id=17068
 
-@Talk name=Nao_Monologue voice=NO031838
+@Talk name=Nao　Monologue voice=NO031838
 
 @Hitret id=17069
 
-@Talk name=Nao_Monologue voice=NO031839
+@Talk name=Nao　Monologue voice=NO031839
 
 @Hitret id=17070
 
@@ -21,59 +21,59 @@
 @StopEnvSe id=SE308
 @PlayBgm file=BGM10
 
-@Talk name=Nao_Monologue voice=NO031840
+@Talk name=Nao　Monologue voice=NO031840
 
 @Hitret id=17071
 
-@Talk name=Nao_Monologue voice=NO031841
+@Talk name=Nao　Monologue voice=NO031841
 
 @Hitret id=17072
 
-@Talk name=Nao_Monologue voice=NO031842
+@Talk name=Nao　Monologue voice=NO031842
 
 @Hitret id=17073
 
-@Talk name=Nao_Monologue voice=NO031843
+@Talk name=Nao　Monologue voice=NO031843
 
 @Hitret id=17074
 
-@Talk name=Nao_Monologue voice=NO031844
+@Talk name=Nao　Monologue voice=NO031844
 
 @Hitret id=17075
 
-@Talk name=Nao_Monologue voice=NO031845
+@Talk name=Nao　Monologue voice=NO031845
 
 @Hitret id=17076
 
-@Talk name=Nao_Monologue voice=NO031846
+@Talk name=Nao　Monologue voice=NO031846
 
 @Hitret id=17077
 
-@Talk name=Nao_Monologue voice=NO031847
+@Talk name=Nao　Monologue voice=NO031847
 
 @Hitret id=17078
 
-@Talk name=Nao_Monologue voice=NO031848
+@Talk name=Nao　Monologue voice=NO031848
 
 @Hitret id=17079
 
-@Talk name=Nao_Monologue voice=NO031849
+@Talk name=Nao　Monologue voice=NO031849
 
 @Hitret id=17080
 
-@Talk name=Nao_Monologue voice=NO031850
+@Talk name=Nao　Monologue voice=NO031850
 
 @Hitret id=17081
 
-@Talk name=Nao_Monologue voice=NO031851
+@Talk name=Nao　Monologue voice=NO031851
 
 @Hitret id=17082
 
-@Talk name=Nao_Monologue voice=NO031852
+@Talk name=Nao　Monologue voice=NO031852
 
 @Hitret id=17083
 
-@Talk name=Nao_Monologue voice=NO031853
+@Talk name=Nao　Monologue voice=NO031853
 
 @Hitret id=17084
 
@@ -82,31 +82,31 @@
 @Update transition=universal rule=WIP_TB time=1000
 @WaitUpdate
 
-@Talk name=Nao_Monologue voice=NO031854
+@Talk name=Nao　Monologue voice=NO031854
 
 @Hitret id=17085
 
-@Talk name=Nao_Monologue voice=NO031855
+@Talk name=Nao　Monologue voice=NO031855
 
 @Hitret id=17086
 
-@Talk name=Nao_Monologue voice=NO031856
+@Talk name=Nao　Monologue voice=NO031856
 
 @Hitret id=17087
 
-@Talk name=Nao_Monologue voice=NO031857
+@Talk name=Nao　Monologue voice=NO031857
 
 @Hitret id=17088
 
-@Talk name=Nao_Monologue voice=NO031858
+@Talk name=Nao　Monologue voice=NO031858
 
 @Hitret id=17089
 
-@Talk name=Nao_Monologue voice=NO031859
+@Talk name=Nao　Monologue voice=NO031859
 
 @Hitret id=17090
 
-@Talk name=Nao_Monologue voice=NO031860
+@Talk name=Nao　Monologue voice=NO031860
 
 @Hitret id=17091
 
@@ -114,7 +114,7 @@
 
 @Hitret id=17092
 
-@Talk name=Nao_Monologue voice=NO031861
+@Talk name=Nao　Monologue voice=NO031861
 
 @Hitret id=17093
 
@@ -123,15 +123,15 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Nao_Monologue voice=NO031862
+@Talk name=Nao　Monologue voice=NO031862
 
 @Hitret id=17094
 
-@Talk name=Nao_Monologue voice=NO031863
+@Talk name=Nao　Monologue voice=NO031863
 
 @Hitret id=17095
 
-@Talk name=Nao_Monologue voice=NO031864
+@Talk name=Nao　Monologue voice=NO031864
 
 @Hitret id=17096
 
@@ -140,26 +140,26 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=Nao_Monologue voice=NO031865
+@Talk name=Nao　Monologue voice=NO031865
 
 @Hitret id=17097
 
-@Talk name=Nao_Monologue voice=NO031866
+@Talk name=Nao　Monologue voice=NO031866
 
 @Hitret id=17098
 
-@Talk name=Nao_Monologue voice=NO031867
+@Talk name=Nao　Monologue voice=NO031867
 
 @Hitret id=17099
 
-@Talk name=Nao_Monologue voice=NO031868
+@Talk name=Nao　Monologue voice=NO031868
 
 @Hitret id=17100
 
 
 @StopBgm
 
-@Talk name=Nao_Monologue voice=NO031869
+@Talk name=Nao　Monologue voice=NO031869
 
 @Hitret id=17101
 

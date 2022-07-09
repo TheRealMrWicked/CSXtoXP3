@@ -220,7 +220,7 @@
 
 @Hitret id=11121
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11122
 
@@ -231,7 +231,7 @@
 
 @Hitret id=11123
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11124
 
@@ -239,7 +239,7 @@
 
 @Hitret id=11125
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11126
 
@@ -437,7 +437,7 @@
 @Char file=CD01_12M
 @Char file=CH01_05M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11158
 
@@ -465,7 +465,7 @@
 
 @Hitret id=11162
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=11163
 
@@ -721,7 +721,7 @@
 @Update transition=universal rule=WIP_BT time=500
 @WaitUpdate
 
-@Talk name=Sora_•_Kozue voice=SYN000005
+@Talk name=Sora@and@Kozue voice=SYN000005
 
 @Hitret id=11204
 

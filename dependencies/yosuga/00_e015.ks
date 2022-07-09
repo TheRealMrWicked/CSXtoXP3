@@ -193,7 +193,7 @@
 @Char file=CC03_07M 
 @Char file=CF03_10M 
 
-@Talk name=Akira_and_Ryouhei voice=AK050065/RH050142
+@Talk name=Akira　and　Ryouhei voice=AK050065/RH050142
 
 @Hitret id=35948
 
@@ -358,7 +358,7 @@
 @Char file=CF03_10M 
 @Char file=CE01_09M 
 
-@Talk name=Akira_and_Motoka_and_Ryouhei voice=AK050069/MT050658/RH050148
+@Talk name=Akira　and　Motoka　and　Ryouhei voice=AK050069/MT050658/RH050148
 
 @Hitret id=35980
 

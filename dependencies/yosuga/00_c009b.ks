@@ -46,11 +46,11 @@
 
 @Hitret id=19355
 
-@Talk name=Child_A voice=NP180010
+@Talk name=ChildÅ@A voice=NP180010
 
 @Hitret id=19356
 
-@Talk name=Child_B voice=NP190016
+@Talk name=ChildÅ@B voice=NP190016
 
 @Hitret id=19357
 

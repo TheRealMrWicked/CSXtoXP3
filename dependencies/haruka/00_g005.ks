@@ -152,7 +152,7 @@
 @StopEnvSe id=SE406
 @PlayBgm file=BGM05
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6066
 
@@ -160,7 +160,7 @@
 
 @Hitret id=6067
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6068
 
@@ -179,7 +179,7 @@
 
 @Hitret id=6070
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6071
 
@@ -198,7 +198,7 @@
 
 @Hitret id=6074
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6075
 
@@ -206,7 +206,7 @@
 
 @Hitret id=6076
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6077
 
@@ -217,7 +217,7 @@
 
 @Hitret id=6078
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6079
 
@@ -233,7 +233,7 @@
 
 @Hitret id=6081
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6082
 
@@ -241,7 +241,7 @@
 
 @Hitret id=6083
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6084
 
@@ -275,7 +275,7 @@
 
 @Hitret id=6089
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6090
 
@@ -286,7 +286,7 @@
 
 @Hitret id=6091
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6092
 
@@ -298,7 +298,7 @@
 
 @Hitret id=6094
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6095
 
@@ -306,7 +306,7 @@
 
 @Hitret id=6096
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6097
 
@@ -314,7 +314,7 @@
 @Cg file=EZ04a
 @PlaySe file=se055
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6098
 
@@ -322,7 +322,7 @@
 
 @Hitret id=6099
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6100
 
@@ -330,7 +330,7 @@
 
 @Hitret id=6101
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6102
 
@@ -338,7 +338,7 @@
 
 @Hitret id=6103
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6104
 
@@ -361,7 +361,7 @@
 
 @Hitret id=6107
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6108
 

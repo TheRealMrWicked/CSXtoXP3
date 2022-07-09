@@ -326,7 +326,7 @@
 @Char file=CC01_02S 
 @Char file=CG01_06S 
 
-@Talk name=Yahiro/–Ú‚Â‚«‚Ìˆ«‚¢—« voice=YH040001
+@Talk name=Yahiro voice=YH040001
 
 @Hitret id=26878
 
@@ -346,7 +346,7 @@
 
 @Hitret id=26881
 
-@Talk name=Yahiro/–Ú‚Â‚«‚Ìˆ«‚¢—« voice=YH040002
+@Talk name=Yahiro voice=YH040002
 
 @Hitret id=26882
 
@@ -361,7 +361,7 @@
 
 @Char file=CG01_06M 
 
-@Talk name=Yahiro/–Ú‚Â‚«‚Ìˆ«‚¢—« voice=YH040003
+@Talk name=Yahiro voice=YH040003
 
 @Hitret id=26885
 
@@ -405,7 +405,7 @@
 
 @Char file=CG01_02M 
 
-@Talk name=Yahiro/–Ú‚Â‚«‚Ìˆ«‚¢—« voice=YH040004
+@Talk name=Yahiro voice=YH040004
 
 @Hitret id=26893
 

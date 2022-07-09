@@ -1,0 +1,995 @@
+/*
+	ロゴ・タイトル
+*/
+
+class Logo extends Sprite, SelectItemNotifyBase, SceneBase{
+	var _state = 0;
+	var _fCancel = false;
+	var _spr = %[];
+	var _attentionVoice;
+
+	var _movie;
+
+	var _te;
+
+	var SPR_LIST = [
+		%[id:"ATTENTION_MARK", file:"FRM_0502", center:[100,  19], pos:[400, 120]], 
+		%[id:"ATTENTION"     , file:"FRM_0503", center:[320, 150], pos:[400, 322]]
+	];
+
+	var stLogo = 1;
+	var stAttentionPlay = 2;
+	var stAttentionEnd = 3;
+
+	function Logo(win, par){
+		Sprite(...);
+		hasImage = false;
+		hitType = htMask;
+		hitThreshold = 0;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		fillRect(0, 0, width, height, 0x0);
+		absolute = LAYER_LOGO;
+
+		_spr["BASE"] = new global.Sprite(win, this);
+		with(_spr.BASE){
+			.loadImages("FRM_0501@");
+			.setSizeToImageSize();
+			.setPos(WINDOW_CENTER_X-.width\2, WINDOW_CENTER_Y-.height\2);
+			.hitThreshold = 256;
+		}
+
+		for(var i=0;i<SPR_LIST.count;i++){
+			_spr[SPR_LIST[i].id] = new global.Sprite(window, _spr.BASE);
+			with(_spr[SPR_LIST[i].id]){
+				.loadImages(SPR_LIST[i].file);
+				.setSizeToImageSize();
+				.setAffineOffset(SPR_LIST[i].center[0], SPR_LIST[i].center[1]);
+				.setCenter(SPR_LIST[i].center[0], SPR_LIST[i].center[1]);
+				.setPos(SPR_LIST[i].pos[0], SPR_LIST[i].pos[1]);
+				.hitThreshold = 256;
+				.visible = true;
+			}
+		}
+
+		CreateSprCover();
+		with(SPR_COVER){
+			.fillRect(0, 0, SPR_COVER.width, SPR_COVER.height, 0xffffffff);
+		}
+
+		_attentionVoice = new AttentionVoice(this);
+
+		visible = true;
+
+		_movie = new MovieLayer(win, this);
+		_movie.hitThreshold = 256;
+		_movie.start("sphere", this);
+		_state = stLogo;
+
+		_te = new TimerEvent();
+
+		OnceCall(step01, 1500);
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		cancel();
+		close();
+
+		for(var i=0;i<SPR_LIST.count;i++){
+			invalidate _spr[SPR_LIST[i].id];
+		}
+		invalidate _spr["BASE"];
+
+		invalidate _attentionVoice;
+		invalidate _movie;
+
+		_te.stop();
+		invalidate _te;
+
+		global.Sprite.finalize();
+	}
+
+	//ロゴ：時間待ち
+	function step01(){
+		PlaySystemVoice("ブランドコール");
+	}
+	//ロゴ→警告文フェード
+	function step02(){
+		_state = stAttentionPlay;
+		if(CONFIG.muteSystem || CONFIG.muteMaster)
+			keyframe(stAttentionEnd);
+
+		with(_spr.BASE){
+			.setTransitionCompleteCall(step03);
+			.opacity = 0;
+			.setBlendingEnvelope(255);
+			.beginActivation(1000);
+			.visible = true;
+		}
+	}
+	//警告文：時間待ち
+	function step03(){
+		_spr.BASE.setTransitionCompleteCall();
+		if(CONFIG.muteSystem == 0 && CONFIG.muteMaster == 0)
+			_attentionVoice.start();
+		else
+			OnceCall(step04, 8000);
+	}
+	//警告文：フェードアウト
+	function step04(){
+		with(SPR_COVER){
+			.setTransitionCompleteCall(step05);
+			.opacity = 0;
+			.setBlendingEnvelope(255);
+			.beginActivation(1000);
+			.visible = true;
+		}
+	}
+	//次のシーンに移動する
+	function step05(){
+		with(SPR_COVER){
+			.setTransitionCompleteCall();
+		}
+		game.changeScene(SCENE_MOVIE);
+		close();
+	}
+
+	function cancel(){
+		OnceCallCancel(step01);
+		OnceCallCancel(step03);
+		OnceCallCancel(step04);
+		OnceCallCancel(step05);
+		with(_spr.BASE){
+			.setTransitionCompleteCall();
+			.flushActivation();
+		}
+		with(SPR_COVER){
+			.setTransitionCompleteCall();
+			.flushActivation();
+		}
+	}
+
+	function close(){
+		cancel();
+
+		visible = false;
+		valid = false;
+	}
+
+	function onKeyDown(key, shift){
+		onAnyInput();
+	}
+	function onMouseDown(x, y, button, shift){
+		onAnyInput();
+	}
+
+	function keyframe(state){
+		switch(state){
+		case stAttentionEnd : 
+			for(var i=0;i<SPR_LIST.count;i++){
+				with(_spr[SPR_LIST[i].id]){
+					.stopActivation();
+					.setPos(SPR_LIST[i].pos[0], SPR_LIST[i].pos[1]);
+					.visible = true;
+				}
+			}
+			break;
+		}
+	}
+
+	function spriteAction(spr, path=[], accel=0, time=0, show=true){
+		spr.stopActivation();
+
+		if(!show){
+			spr.visible = false;
+			return;
+		}
+
+		for(var i=0;i<path.count;i+=7){
+			if(path[i+2] == -1) path[i+2] = spr.absolute;
+		}
+
+		spr.setMovingSplineEnvelope2(path, accel);
+		spr.beginActivation(time);
+		spr.visible = true;
+	}
+
+	function onAnyInput(){
+		if(!valid) return;
+
+		cancel();
+
+		_te.stop();
+		_attentionVoice.stop();
+
+		switch(_state){
+		case stLogo : 
+			_movie.stop();
+			break;
+		case stAttentionPlay : 
+			_fCancel = true;
+			keyframe(stAttentionEnd);
+			_state = stAttentionEnd;
+			OnceCall(step04, 1000);
+			break;
+		case stAttentionEnd : 
+		default : 
+			_fCancel = true;
+			step05(); 
+			break;
+		}
+	}
+
+	function onPlay(label){
+		_te.stop();
+		if(_fCancel) return;
+	}
+	function onEvent(label){}
+
+	function onEndAttentionVoice(){
+		_state = stAttentionEnd;
+		OnceCall(step04, 1000);
+	}
+
+	function debugJump(str, label=""){
+		StopBgm();
+		close();
+		game.changeScene(SCENE_ADV, true, %[debug:str, label:label]);
+	}
+
+	function action(ev){
+		if(ev.type == "Movie.onStatusChanged" && ev.status == "stop"){
+			_movie.visible = false;
+			OnceCall(step02, 100);
+		}
+	}
+}
+
+class AttentionVoice{
+	var _index = 0;
+	var _list = [
+		["AK200004", "AK200004"], 
+		["SR200004", "SR200004"], 
+		["AK200005", "AK200005"], 
+		["SR200005", "SR200005"], 
+		["AK200007", "AK200007"], 
+		["SR200006", "SR200006"]
+	];
+	var _tgtList;
+
+	var _owner = null;
+	var _snd;
+	var _fStop = false;
+	var _preStatus = "";
+
+	function AttentionVoice(owner){
+		_owner = owner;
+		_snd = new WaveSoundBuffer(this);
+		_preStatus = _snd.status;
+	}
+	function finalize(){
+		OnceCallCancel(onEndCall);
+		invalidate _snd;
+	}
+
+	function start(type=-1){
+		_tgtList = _list;
+
+		_index = 0;
+		play(_tgtList[_index][0], _tgtList[_index][1]);
+	}
+
+	function play(file, label){
+		with(_snd){
+			try{
+				.open(file + ".ogg");
+			}catch{
+			}
+			.volume2 = CONFIG.volSystem * 100000;
+			.volume = CONFIG.volMaster * 100000;
+
+			.play();
+			_owner.onPlay(label);
+		}
+	}
+
+	function stop(){
+		_fStop = true;
+		_snd.stop();
+		_fStop = false;
+	}
+
+	function action(ev){
+		if(_fStop) return;
+		if(_preStatus == "unload"){
+			_preStatus = ev.status;
+			 return;
+		}
+		_preStatus = ev.status;
+
+		if(ev.type == "onStatusChanged" && ev.status == "stop"){
+			if(_tgtList.count <= _index+1){
+				if(_owner != null) onEndCall();
+				 return;
+			}
+			_index++;
+			if(_tgtList[_index][0] != "") play(_tgtList[_index][0], _tgtList[_index][1]);
+		}
+	}
+
+	function onEndCall(){
+		_owner.onEndAttentionVoice();
+	}
+}
+
+class MovieScene extends Layer, SceneBase{
+	function MovieScene(win, par){
+		Layer(...);
+		hasImage = false;
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+
+		if(SPR_COVER != null){
+			with(SPR_COVER){
+				.setTransitionCompleteCall();
+				.opacity = 0;
+				.visible = false;
+			}
+		}
+
+		PlayMovie("haruka", this);
+		visible = true;
+		win.addInputNotify(this);
+	}
+	function finalize(){
+		win.removeInputNotify(this);
+		global.Layer.finalize();
+	}
+
+	function who(){return "MovieScene";}
+
+	function close(){
+		StopMovie();
+		visible = false;
+		valid = false;
+		game.changeScene(SCENE_TITLE);
+	}
+
+	function action(ev){
+		if(ev.status == "stop") close();
+	}
+
+	function debugJump(str, label=""){
+		StopBgm();
+		close();
+		game.changeScene(SCENE_ADV, true, %[debug:str, label:label]);
+	}
+
+	function onKeyDown(key, shift){
+		if(key == VK_ESCAPE) StopMovie();
+	}
+	function onMouseDown(x, y, button, shift){
+		if(button == mbRight) StopMovie();
+	}
+}
+
+class Title extends Sprite, SelectItemNotifyBase, SceneBase, ChainItemBase{
+
+	var _logo;
+	@if(__TRIAL__ != 0)
+		var _logoTR;
+	@endif
+
+	var _version;
+
+	var _te;
+	var _imgStoryboard;
+
+	var _sprASaveInfo;
+
+	var _fDecideScenario = false;
+
+	var _enterSubMenu = 0;
+
+	var _btnBase = [];
+	var _btn = %[];
+
+	var BTN_TOP   = 0;
+	var BTN_SS    = 1;
+	var BTN_WEB   = 2;
+	var BTN_BONUS = 3;
+
+	var BTN_LIST = [
+		[
+			%[id:"ss"      , base:BTN_TOP, file:"FRM_0557", pos:[341, 499]], 
+			%[id:"web"     , base:BTN_TOP, file:"FRM_0558", pos:[465, 499]], 
+
+			%[id:"continue", base:BTN_TOP, file:"FRM_0553", pos:[172, 535]], 
+			%[id:"load"    , base:BTN_TOP, file:"FRM_0552", pos:[296, 535]], 
+			%[id:"config"  , base:BTN_TOP, file:"FRM_0554", pos:[420, 535]], 
+			%[id:"bonus"   , base:BTN_TOP, file:"FRM_0555", pos:[544, 535]], 
+			%[id:"end"     , base:BTN_TOP, file:"FRM_0556", pos:[668, 535]]
+		], [
+			%[id:"ss_kozue"  , base:BTN_SS, file:"FRM_0571", pos:[159, 535]], 
+			%[id:"ss_yahiro" , base:BTN_SS, file:"FRM_0572", pos:[402, 535]], 
+			%[id:"ss_sora"   , base:BTN_SS, file:"FRM_0573", pos:[533, 535]], 
+			%[id:"ss_karaoke", base:BTN_SS, file:"FRM_0574", pos:[648, 535]]
+		], [
+			%[id:"web01"    , base:BTN_WEB, file:"FRM_0581", pos:[ 98, 464]], 
+			%[id:"web02"    , base:BTN_WEB, file:"FRM_0582", pos:[317, 464]], 
+			%[id:"web03"    , base:BTN_WEB, file:"FRM_0583", pos:[536, 464]], 
+
+			%[id:"web04"    , base:BTN_WEB, file:"FRM_0584", pos:[ 90, 500]], 
+			%[id:"web05"    , base:BTN_WEB, file:"FRM_0585", pos:[277, 500]], 
+			%[id:"web06"    , base:BTN_WEB, file:"FRM_0586", pos:[520, 500]], 
+
+			%[id:"countdown", base:BTN_WEB, file:"FRM_0587", pos:[377, 535]]
+		], [
+			%[id:"cgmode"       , base:BTN_BONUS, file:"FRM_0561", pos:[434, 535]], 
+			%[id:"musicmode"    , base:BTN_BONUS, file:"FRM_0562", pos:[548, 535]], 
+			%[id:"recollectmode", base:BTN_BONUS, file:"FRM_0563", pos:[664, 535]]
+		]
+	];
+
+	function Title(win, par, fBonus=false){
+		Sprite(...);
+		hitThreshold = 0;
+		loadImages("FRM_0512");
+		setSizeToImageSize();
+		absolute = LAYER_TITLE;
+
+		_version = new global.Layer(win, this);
+		with(_version){
+			var text = "version "+GAME_VERSION;
+			.font.height = 21;
+			.font.bold = true;
+			var w = .font.getTextWidth(text) + 8;
+			.setSize(w, .font.height+4);
+			.setPos(WINDOW_WIDTH - .width - 4, WINDOW_HEIGHT - .height - 4);
+			.drawText(4, 0, text, 0xffffff, 255, true, 1024*3, GetDefineColor("black"), 3, 0, 0);
+			.visible = true;
+		}
+
+		for(var i=0;i<BTN_BONUS+1;i++){
+			_btnBase[i] = new SelectItemGroupSprite(win, this);
+			with(_btnBase[i]){
+				.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+				.opacity = 0;
+			}
+		}
+
+		for(var c=0;c<BTN_LIST.count;c++){
+			var refList = BTN_LIST[c];
+			for(var i=0;i<refList.count;i++){
+				var elm = refList[i];
+				_btn[elm.id] = new Button(window, _btnBase[elm.base]);
+				with(_btn[elm.id]){
+					.create(elm.file, 2);
+					.setPos(elm.pos[0], elm.pos[1]);
+				}
+			}
+		}
+
+		_logo = new global.Sprite(win, this);
+		with(_logo){
+			.loadImages("FRM_0514");
+			.setSizeToImageSize();
+
+			.setPos(48, 373);
+
+			.hitThreshold = 256;
+			.visible = true;
+
+			PlaySystemVoice("タイトルコール");
+		}
+		@if(__TRIAL__)
+			_logoTR = new global.Sprite(win, this);
+			with(_logoTR){
+				.loadImages("FRM_0514");
+				.setSizeToImageSize();
+
+				.setPos(_logo.left+_logo.width-.width, _logo.top+_logo.height);
+
+				.hitThreshold = 256;
+				.visible = true;
+
+				PlaySystemVoice("タイトルコール");
+			}
+		@endif
+
+		if(SPR_COVER == null){
+			CreateSprCover();
+			SPR_COVER.fillRect(0, 0, SPR_COVER.width, SPR_COVER.height, 0xffffffff);
+		}
+		with(SPR_COVER){
+			.opacity = 255;
+			.setBlendingEnvelope(0);
+			.type = ltAdditive;
+			.beginActivation(1000);
+			.visible = true;
+		}
+
+		PlayBgm("BGM07");
+
+		_sprASaveInfo = new SavedataHeader(win, this, true);
+		if(!ChkAutoSave()){
+			_btn.continue.visible = false;
+		}
+
+		fadeEnd();
+		visible = true;
+
+		leaveSubMenu();
+		if(fBonus) enterSubMenu(fBonus);
+
+		window.addInputNotify(this);
+	}
+	function finalize(){
+		window.removeInputNotify(this);
+
+		for(var c=0;c<BTN_LIST.count;c++){
+			var refList = BTN_LIST[c];
+			for(var i=0;i<refList.count;i++){
+				var elm = refList[i];
+
+				invalidate _btn[elm.id];
+			}
+		}
+		InvalidateArray(_btnBase);
+
+		invalidate _logo;
+		@if(__TRIAL__ != 0)
+			invalidate _logoTR;
+		@endif
+		invalidate _version;
+		invalidate _sprASaveInfo;
+
+		if(_te !== void) _te.stop();
+		invalidate _te;
+
+		invalidate _imgStoryboard;
+
+		global.Sprite.finalize();
+	}
+
+	function close(){
+		visible = false;
+		valid = false;
+	}
+
+	function fadeEnd(){
+		setTransitionCompleteCall();
+
+		with(_btnBase[BTN_TOP]){
+			.opacity = 0;
+			.setBlendingEnvelope(255);
+			.beginActivation(500);
+			.visible = true;
+		}
+	}
+
+	function setLayout(layout=[], sx, sy, interval=0){
+		var dx = sx;
+		var dy = sy;
+		for(var i=0;i<layout.count;i++){
+			with(layout[i]){
+				.setPos(dx, dy - .height \ 2);
+				dx += .width + interval;
+				.visible = true;
+			}
+		}
+	}
+
+	function debugJump(str, label=""){
+		StopBgm();
+		close();
+		game.changeScene(SCENE_ADV, true, %[debug:str, label:label]);
+	}
+
+	function onButtonDownL(target){
+		switch(target){
+		case _btn.ss :
+			enterSubMenu(BTN_SS);
+			PlaySystemVoice("ショートシナリオ");
+			break;
+		case _btn.ss_kozue :
+			startScenario("00_h001", "SS_KOZUE");
+			PlaySystemVoiceIndex("ショートシナリオ：タイトル", KOZUE);
+			break;
+		case _btn.ss_sora :
+			startScenario("00_a001", "SS_SORA");
+			PlaySystemVoiceIndex("ショートシナリオ：タイトル", SORA);
+			break;
+		case _btn.ss_yahiro :
+			startScenario("00_g001", "SS_YAHIRO");
+			PlaySystemVoiceIndex("ショートシナリオ：タイトル", YAHIRO);
+			break;
+		case _btn.ss_karaoke :
+			startScenario("karaoke", "SS_KARAOKE");
+			PlaySystemVoiceIndex("ショートシナリオ：タイトル", MOTOKA);
+			break;
+
+		case _btn.web :
+			enterSubMenu(BTN_WEB);
+			PlaySystemVoice("ＷＥＢコンテンツ");
+			break;
+		case _btn.web01 :
+			startScenario("web01", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", AKIRA);
+			break;
+		case _btn.web02 :
+			startScenario("web02", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", NAO);
+			break;
+		case _btn.web03 :
+			startScenario("web03", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", SORA);
+			break;
+		case _btn.web04 :
+			startScenario("web04", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", KAZUHA);
+			break;
+		case _btn.web05 :
+			startScenario("web05", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", MOTOKA);
+			break;
+		case _btn.web06 :
+			startScenario("web06", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：タイトル", KOZUE);
+			break;
+		case _btn.countdown :
+			startScenario("countdown", "BLACK");
+			PlaySystemVoiceIndex("ＷＥＢコンテンツ：カウントダウン", AKIRA);
+			break;
+
+		case _btn.load :
+			PlaySystemVoice("タイトル：ロード");
+
+			CallLoadSave(true, null, true);
+			break;
+		case _btn.continue :
+			BeginLoad();
+			game.changeScene(SCENE_ADV, true, %[file:"asave.bmp"]);
+
+			setTransitionCompleteCall(close);
+			setBlendingEnvelope(0);
+			beginActivation(300);
+
+			break;
+		case _btn.config :
+			PlaySystemVoice("タイトル：コンフィグ");
+
+			CallConfig();
+			break;
+
+		case _btn.bonus :
+			enterSubMenu(BTN_BONUS);
+			break;
+
+		case _btn.cgmode :
+			PlaySystemVoice("ＣＧ鑑賞");
+
+			invalidSelectItems();
+
+			game.changeScene(SCENE_ALBUM);
+
+			//StopBgm(5000);
+
+			setBlendingEnvelope(0);
+			beginActivation(500);
+			setTransitionCompleteCall(close);
+			break;
+		case _btn.musicmode :
+			invalidSelectItems();
+
+			game.changeScene(SCENE_MUSIC);
+
+			StopBgm(5000);
+
+			setBlendingEnvelope(0);
+			beginActivation(500);
+			setTransitionCompleteCall(close);
+			break;
+		case _btn.recollectmode :
+			invalidSelectItems();
+
+			game.changeScene(SCENE_MEMORIES);
+
+			//StopBgm(5000);
+
+			setBlendingEnvelope(0);
+			beginActivation(500);
+			setTransitionCompleteCall(close);
+			break;
+		case _btn.end :
+			PlaySystemVoice("ゲーム終了：確認");
+			CallConfirm("ゲームを終了しますか？", SystemRegister.CONFIRM_END, game.exitGame, endCancel, true);
+			break;
+		}
+	}
+	function onButtonDownR(target){
+		onMouseDown(0, 0, mbRight, 0);
+	}
+
+	function onButtonEnter(target){
+		switch(target){
+		case _btn.load :
+			break;
+		case _btn.continue :
+			var ref = saveMan.atASave();
+			if(!ref.valid) return;
+			with(_sprASaveInfo){
+				var x = _btn.continue.parent.left + _btn.continue.left + _btn.continue.width \ 2- .width \ 2;
+				var y = _btn.continue.parent.top +_btn.continue.top - .height - 4;
+
+				.set(0, -1, ref.realDate, ref.gameDate, ref.comment, "asave", ref.root, ref.comment_edit);
+				.setupInfo();
+				.setupThumb();
+
+				._btn[0].visible = true;
+				._btn[0].valid = false;
+
+				.opacity = 0;
+				.setBlendingEnvelope(255);
+				.setMovingEnvelope(x, y-16, x, y, 2);
+				.beginActivation(300);
+
+				.onButtonEnter();
+				.visible = true;
+			}
+			break;
+		case _btn.config :
+			break;
+		case _btn.bonus :
+			break;
+		case _btn.end :
+			break;
+
+		default :
+			break;
+		}
+	}
+	function onButtonLeave(target){
+		if(target == _btn.continue){
+			_sprASaveInfo.visible = false;
+			_sprASaveInfo.onButtonLeave();
+		}
+	}
+
+	function onMouseDown(x, y, button, shift){
+		if(button == mbRight && _enterSubMenu != BTN_TOP){
+			leaveSubMenu();
+		}
+	}
+	function onKeyDown(key, shift){
+		if(key == VK_ESCAPE && _enterSubMenu != BTN_TOP){
+			leaveSubMenu();
+		}else{
+			global.ChainItemBase.onKeyDown(key, shift);
+		}
+	}
+
+	function startScenario(scenario, image){
+		invalidSelectItems();
+		game.changeScene(SCENE_ADV, true, %[scenario:scenario]);
+
+		StopBgm(5000);
+
+//		setTransitionCompleteCall(close);
+//		setBlendingEnvelope(0);
+//		beginActivation(3000);
+
+		if(image !== void){
+			var seq = [
+				%[label:"showImage", time:   0], 
+				%[label:"hideImage", time:6000], 
+				%[label:"end"      , time:8000]
+			];
+		}
+
+		var seq = [];
+		if(image !== void){
+			_imgStoryboard = new global.Sprite(win, parent);
+			with(_imgStoryboard){
+				if(image == "BLACK"){
+					.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+					.fillRect(0, 0, .width, .height, 0xff000000);
+					seq = [
+						%[label:"showImage", time:   0], 
+						%[label:"end"      , time:5000]
+					];
+				}else{
+					.loadImages(image);
+					.setSizeToImageSize();
+					seq = [
+						%[label:"showImage", time:   0], 
+						%[label:"hideImage", time:6000], 
+						%[label:"end"      , time:8000]
+					];
+				}
+			}
+		}
+
+		_te = new TimerEvent(seq);
+		_te.start(onEvent);
+
+		_fDecideScenario = true;
+	}
+
+	function onEvent(label, id, delay, elm){
+		switch(label){
+		case "showImage" : 
+			with(_imgStoryboard){
+				.opacity = 0;
+
+				.setBlendingEnvelope(255);
+				.beginActivation(2000);
+				.visible = true;
+			}
+			break;
+		case "hideImage" : 
+			visible = false;
+			with(_imgStoryboard){
+				.setBlendingEnvelope(0);
+				.beginActivation(2000);
+				.visible = true;
+			}
+			break;
+		case "end" : 
+			close();
+			break;
+		}
+	}
+
+	function enterSubMenu(id){
+		_enterSubMenu = id;
+
+		removeChainItemAll();
+		var list = BTN_LIST[id];
+		for(var i=0;i<list.count;i++){
+			addChainItem(_btn[list[i].id]);
+		}
+
+		with(_btnBase[BTN_TOP]){
+			.visible = false;
+		}
+		with(_btnBase[id]){
+			.opacity = 0;
+			.setBlendingEnvelope(255);
+			.setMovingEnvelope(0, 32, 0, 0, 2);
+			.beginActivation(300);
+			.visible = true;
+		}
+	}
+	function leaveSubMenu(){
+		if(_fDecideScenario) return;
+
+		removeChainItemAll();
+		var list = BTN_LIST[BTN_TOP];
+		for(var i=0;i<list.count;i++){
+			addChainItem(_btn[list[i].id]);
+		}
+		if(!ChkAutoSave()){
+			removeChainItem(_btn.continue);
+		}
+
+		with(_btnBase[BTN_TOP]){
+			.opacity = 0;
+			.setBlendingEnvelope(255);
+			.setMovingEnvelope(0, 32, 0, 0, 2);
+			.beginActivation(300);
+			.visible = true;
+		}
+		if(_enterSubMenu != BTN_TOP){
+			with(_btnBase[_enterSubMenu]){
+				.visible = false;
+			}
+		}
+
+		_enterSubMenu = BTN_TOP;
+	}
+
+	function endCancel(){
+	}
+
+	function invalidSelectItems(){
+		for(var c=0;c<BTN_LIST.count;c++){
+			var list = BTN_LIST[c];
+			for(var i=0;i<list.count;i++){
+				var elm = list[i];
+				_btn[elm.id].hitThreshold = 256;
+			}
+		}
+	}
+}
+
+class EndScene extends Sprite, SceneBase{
+	var _timer;
+	var _voice;
+	var _fPlay;
+
+	function EndScene(win, par){
+		Sprite(...);
+		absolute = LAYER_END;
+
+		loadImages("FRM_0501@");
+		setSizeToImageSize();
+
+		opacity = 0;
+		setBlendingEnvelope(255);
+		beginActivation(300);
+		visible = true;
+
+		_timer = new Timer(callback, "");
+
+		StopVoice(2000);
+		StopEnvSe(, 2000);
+		StopBgm(2000);
+		StopSystemSound();
+
+		var file = "";
+		if(!CONFIG.muteSystem)
+			file = PlaySystemVoice("ゲーム終了", false);
+
+		_fPlay = false;
+		if(file != ""){
+			var head = file.substring(0, 2);
+			_voice = new WaveSoundBuffer(this);
+			_voice.open(file + ".ogg");
+			with(_voice){
+				var personalVol = CONFIG.voiceDetails[VCID_TO_INDEX[head]].volumeSyv;
+				.volume2 = CONFIG.volSystem * personalVol * 100000;
+				.volume = CONFIG.volMaster * 100000;
+			}
+			_voice.play();
+			_fPlay = true;
+		}else{
+			_timer.interval = 3000;
+			_timer.enabled = true;
+		}
+
+		setMode();
+
+		win.addInputNotify(this);
+	}
+	function finalize(){
+		_timer.enabled = false;
+		invalidate _timer;
+		invalidate _voice;
+
+		win.removeInputNotify(this);
+		global.Sprite.finalize();
+	}
+
+	function callback(){
+		_timer.enabled = false;
+
+		if(!valid) return;
+
+		game.shutdown();
+	}
+
+	function action(ev){
+		if(_fPlay && ev.target == _voice){
+			_timer.interval = 2000;
+			_timer.enabled = true;
+		}
+	}
+
+	function onKeyDown(){
+		close();
+	}
+	function onMouseDown(){
+		close();
+	}
+
+	function close(){
+		if(!valid) return;
+
+		stopActivation();
+		_timer.enabled = false;
+		game.shutdown();
+		valid = false;
+	}
+}

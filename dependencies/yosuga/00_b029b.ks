@@ -248,19 +248,19 @@
 
 @Hitret id=16918
 
-@Talk name=バスの運転手 voice=NP330001
+@Talk name=Bus　Driver voice=NP330001
 
 @Hitret id=16919
 
-@Talk name=バスのアナウンス voice=NP340001
+@Talk name=Bus_Announcement voice=NP340001
 
 @Hitret id=16920
 
-@Talk name=バスのアナウンス voice=NP340002
+@Talk name=Bus_Announcement voice=NP340002
 
 @Hitret id=16921
 
-@Talk name=バスのアナウンス voice=NP340003
+@Talk name=Bus_Announcement voice=NP340003
 
 @Hitret id=16922
 

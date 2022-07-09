@@ -7,18 +7,18 @@
 @PlayEnvSe file=SE301 fade=0
 @PlaySe file=SE204
 
-@Talk name=Baseball_Player_A voice=NP290001
+@Talk name=Baseball　Player　A voice=NP290001
 
 @Hitret id=15588
 
 
 @PlaySe file=SE207
 
-@Talk name=Baseball_Player_B voice=NP300001
+@Talk name=Baseball　Player　B voice=NP300001
 
 @Hitret id=15589
 
-@Talk name=Baseball_Player_C voice=NP310001
+@Talk name=Baseball　Player　C voice=NP310001
 
 @Hitret id=15590
 
@@ -94,7 +94,7 @@
 
 @Hitret id=15608
 
-@Talk name=Swimming_Club_Leader/女子学生 voice=NP320001
+@Talk name=Swimming　Club　Leader voice=NP320001
 
 @Hitret id=15609
 
@@ -114,11 +114,11 @@
 
 @Hitret id=15613
 
-@Talk name=Swimming_Club_Leader voice=NP320002
+@Talk name=Swimming　Club　Leader voice=NP320002
 
 @Hitret id=15614
 
-@Talk name=Swimming_Club_Leader voice=NP320003
+@Talk name=Swimming　Club　Leader voice=NP320003
 
 @Hitret id=15615
 
@@ -126,7 +126,7 @@
 
 @Hitret id=15616
 
-@Talk name=Swimming_Club_Leader voice=NP320004
+@Talk name=Swimming　Club　Leader voice=NP320004
 
 @Hitret id=15617
 
@@ -134,7 +134,7 @@
 
 @Hitret id=15618
 
-@Talk name=Swimming_Club_Leader voice=NP320005
+@Talk name=Swimming　Club　Leader voice=NP320005
 
 @Hitret id=15619
 
@@ -142,7 +142,7 @@
 
 @Hitret id=15620
 
-@Talk name=Swimming_Club_Leader voice=NP320006
+@Talk name=Swimming　Club　Leader voice=NP320006
 
 @Hitret id=15621
 
@@ -162,7 +162,7 @@
 
 @Hitret id=15625
 
-@Talk name=Swimming_Club_Leader voice=NP320007
+@Talk name=Swimming　Club　Leader voice=NP320007
 
 @Hitret id=15626
 
@@ -170,7 +170,7 @@
 
 @Hitret id=15627
 
-@Talk name=Swimming_Club_Leader voice=NP320008
+@Talk name=Swimming　Club　Leader voice=NP320008
 
 @Hitret id=15628
 
@@ -178,7 +178,7 @@
 
 @Hitret id=15629
 
-@Talk name=Swimming_Club_Leader voice=NP320009
+@Talk name=Swimming　Club　Leader voice=NP320009
 
 @Hitret id=15630
 
@@ -186,7 +186,7 @@
 
 @Hitret id=15631
 
-@Talk name=Swimming_Club_Leader voice=NP320010
+@Talk name=Swimming　Club　Leader voice=NP320010
 
 @Hitret id=15632
 
@@ -194,7 +194,7 @@
 
 @Hitret id=15633
 
-@Talk name=Swimming_Club_Leader voice=NP320011
+@Talk name=Swimming　Club　Leader voice=NP320011
 
 @Hitret id=15634
 
@@ -202,7 +202,7 @@
 
 @Hitret id=15635
 
-@Talk name=Swimming_Club_Leader voice=NP320012
+@Talk name=Swimming　Club　Leader voice=NP320012
 
 @Hitret id=15636
 
@@ -210,7 +210,7 @@
 
 @Hitret id=15637
 
-@Talk name=Swimming_Club_Leader voice=NP320013
+@Talk name=Swimming　Club　Leader voice=NP320013
 
 @Hitret id=15638
 
@@ -221,7 +221,7 @@
 
 @Hitret id=15639
 
-@Talk name=Swimming_Club_Leader voice=NP320014
+@Talk name=Swimming　Club　Leader voice=NP320014
 
 @Hitret id=15640
 
@@ -229,7 +229,7 @@
 
 @Hitret id=15641
 
-@Talk name=Swimming_Club_Leader voice=NP320015
+@Talk name=Swimming　Club　Leader voice=NP320015
 
 @Hitret id=15642
 

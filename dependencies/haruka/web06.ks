@@ -10,7 +10,7 @@
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
-@Talk name=Class_Rep voice=KO100236
+@Talk name=Class　Rep voice=KO100236
 
 @Hitret id=15956
 
@@ -55,7 +55,7 @@
 @ClearChar
 @Char file=CH02_05M
 
-@Talk name=Class_Rep voice=KO100237
+@Talk name=Class　Rep voice=KO100237
 
 @Hitret id=15962
 
@@ -151,21 +151,21 @@
 @ClearChar
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100238
+@Talk name=Class　Rep voice=KO100238
 
 @Hitret id=15973
 
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100239
+@Talk name=Class　Rep voice=KO100239
 
 @Hitret id=15974
 
 
 @Char file=CH02_03M
 
-@Talk name=Class_Rep voice=KO100240
+@Talk name=Class　Rep voice=KO100240
 
 @Hitret id=15975
 
@@ -227,14 +227,14 @@
 
 @Char file=CH02_14M
 
-@Talk name=Class_Rep voice=KO100241
+@Talk name=Class　Rep voice=KO100241
 
 @Hitret id=15983
 
 
 @Char file=CH02_10M
 
-@Talk name=Class_Rep voice=KO100242
+@Talk name=Class　Rep voice=KO100242
 
 @Hitret id=15984
 
@@ -248,7 +248,7 @@
 
 @Char file=CH02_04M
 
-@Talk name=Class_Rep voice=KO100243
+@Talk name=Class　Rep voice=KO100243
 
 @Hitret id=15986
 
@@ -262,14 +262,14 @@
 
 @Char file=CH02_05M
 
-@Talk name=Class_Rep voice=KO100244
+@Talk name=Class　Rep voice=KO100244
 
 @Hitret id=15988
 
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100245
+@Talk name=Class　Rep voice=KO100245
 
 @Hitret id=15989
 
@@ -310,14 +310,14 @@
 @Char file=CH02_05M
 @Char file=CD02_02M
 
-@Talk name=Class_Rep voice=KO100246
+@Talk name=Class　Rep voice=KO100246
 
 @Hitret id=15994
 
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100247
+@Talk name=Class　Rep voice=KO100247
 
 @Hitret id=15995
 
@@ -339,7 +339,7 @@
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100248
+@Talk name=Class　Rep voice=KO100248
 
 @Hitret id=15998
 
@@ -361,7 +361,7 @@
 
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO100249
+@Talk name=Class　Rep voice=KO100249
 
 @Hitret id=16001
 
@@ -376,11 +376,11 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100250
+@Talk name=Class　Rep voice=KO100250
 
 @Hitret id=16003
 
-@Talk name=Class_Rep voice=KO100251
+@Talk name=Class　Rep voice=KO100251
 
 @Hitret id=16004
 
@@ -394,14 +394,14 @@
 
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO100252
+@Talk name=Class　Rep voice=KO100252
 
 @Hitret id=16006
 
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100253
+@Talk name=Class　Rep voice=KO100253
 
 @Hitret id=16007
 
@@ -430,7 +430,7 @@
 
 
 
-@Talk name=Class_Rep voice=KO100254
+@Talk name=Class　Rep voice=KO100254
 
 @Hitret id=16011
 
@@ -482,7 +482,7 @@
 @ClearChar
 @Char file=CH02_05M
 
-@Talk name=Class_Rep voice=KO100255
+@Talk name=Class　Rep voice=KO100255
 
 @Hitret id=16017
 
@@ -536,14 +536,14 @@
 @ClearChar id=初佳
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO100256
+@Talk name=Class　Rep voice=KO100256
 
 @Hitret id=16024
 
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100257
+@Talk name=Class　Rep voice=KO100257
 
 @Hitret id=16025
 
@@ -557,7 +557,7 @@
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100258
+@Talk name=Class　Rep voice=KO100258
 
 @Hitret id=16027
 
@@ -571,7 +571,7 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100259
+@Talk name=Class　Rep voice=KO100259
 
 @Hitret id=16029
 
@@ -586,14 +586,14 @@
 
 @Char file=CH02_03M
 
-@Talk name=Class_Rep voice=KO100260
+@Talk name=Class　Rep voice=KO100260
 
 @Hitret id=16031
 
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100261
+@Talk name=Class　Rep voice=KO100261
 
 @Hitret id=16032
 
@@ -637,7 +637,7 @@
 
 @Char file=CH02_07M
 
-@Talk name=Class_Rep voice=KO100262
+@Talk name=Class　Rep voice=KO100262
 
 @Hitret id=16038
 
@@ -659,7 +659,7 @@
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO100263
+@Talk name=Class　Rep voice=KO100263
 
 @Hitret id=16041
 
@@ -688,7 +688,7 @@
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO100264
+@Talk name=Class　Rep voice=KO100264
 
 @Hitret id=16045
 
@@ -715,21 +715,21 @@
 @ClearChar
 @Char file=CH02_11M
 
-@Talk name=Class_Rep voice=KO100265
+@Talk name=Class　Rep voice=KO100265
 
 @Hitret id=16048
 
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO100266
+@Talk name=Class　Rep voice=KO100266
 
 @Hitret id=16049
 
 
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO100267
+@Talk name=Class　Rep voice=KO100267
 
 @Hitret id=16050
 
@@ -743,7 +743,7 @@
 
 @Char file=CH02_10M
 
-@Talk name=Class_Rep voice=KO100268
+@Talk name=Class　Rep voice=KO100268
 
 @Hitret id=16052
 
@@ -822,7 +822,7 @@
 
 @Char file=CH02_06M
 
-@Talk name=Class_Rep voice=KO100269
+@Talk name=Class　Rep voice=KO100269
 
 @Hitret id=16063
 
@@ -836,7 +836,7 @@
 
 @Char file=CH02_09M
 
-@Talk name=Class_Rep voice=KO100270
+@Talk name=Class　Rep voice=KO100270
 
 @Hitret id=16065
 
@@ -852,7 +852,7 @@
 @Char file=CH02_10M
 
 
-@Talk name=Class_Rep voice=KO100271
+@Talk name=Class　Rep voice=KO100271
 
 @Hitret id=16067
 
@@ -866,7 +866,7 @@
 
 @Char file=CH02_03M
 
-@Talk name=Class_Rep voice=KO100272
+@Talk name=Class　Rep voice=KO100272
 
 @Hitret id=16069
 
@@ -903,7 +903,7 @@
 
 @Char file=CH02_14M
 
-@Talk name=Class_Rep voice=KO100273
+@Talk name=Class　Rep voice=KO100273
 
 @Hitret id=16074
 
@@ -912,14 +912,14 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100274
+@Talk name=Class　Rep voice=KO100274
 
 @Hitret id=16075
 
 
 @Char file=CH02_14M
 
-@Talk name=Class_Rep voice=KO100275
+@Talk name=Class　Rep voice=KO100275
 
 @Hitret id=16076
 
@@ -1009,7 +1009,7 @@
 @Update transition=universal rule=MOZCIR time=250
 @WaitUpdate
 
-@Talk name=Ryouhei_＆_Motoka voice=SYN000017
+@Talk name=Ryouhei　and　Motoka voice=SYN000017
 
 @Hitret id=16088
 
@@ -1087,7 +1087,7 @@
 
 @Char file=CH02_14M
 
-@Talk name=Class_Rep voice=KO100276
+@Talk name=Class　Rep voice=KO100276
 
 @Hitret id=16098
 
@@ -1101,14 +1101,14 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100277
+@Talk name=Class　Rep voice=KO100277
 
 @Hitret id=16100
 
 
 @Char file=CH02_03M
 
-@Talk name=Class_Rep voice=KO100278
+@Talk name=Class　Rep voice=KO100278
 
 @Hitret id=16101
 
@@ -1122,18 +1122,18 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class_Rep voice=KO100279
+@Talk name=Class　Rep voice=KO100279
 
 @Hitret id=16103
 
 
 @Char file=CH02_03M
 
-@Talk name=Class_Rep voice=KO100280
+@Talk name=Class　Rep voice=KO100280
 
 @Hitret id=16104
 
-@Talk name=Class_Rep voice=KO100281
+@Talk name=Class　Rep voice=KO100281
 
 @Hitret id=16105
 
@@ -1192,7 +1192,7 @@
 @ClearChar
 @Char file=CH02_02L
 
-@Talk name=Class_Rep voice=KO100282
+@Talk name=Class　Rep voice=KO100282
 
 @Hitret id=16113
 

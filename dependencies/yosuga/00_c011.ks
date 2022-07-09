@@ -220,7 +220,7 @@
 @ClearChar 
 @Char file=CH04_01M 
 
-@Talk name=Class_Rep voice=KO020009
+@Talk name=Class　Rep voice=KO020009
 
 @Hitret id=19785
 
@@ -231,7 +231,7 @@
 
 @Char file=CH04_05M 
 
-@Talk name=Class_Rep voice=KO020010
+@Talk name=Class　Rep voice=KO020010
 
 @Hitret id=19787
 
@@ -242,7 +242,7 @@
 
 @Char file=CH04_04M 
 
-@Talk name=Class_Rep voice=KO020011
+@Talk name=Class　Rep voice=KO020011
 
 @Hitret id=19789
 
@@ -260,7 +260,7 @@
 
 @Hitret id=19791
 
-@Talk name=Class_Rep voice=KO020012
+@Talk name=Class　Rep voice=KO020012
 
 @Hitret id=19792
 
@@ -467,7 +467,7 @@
 
 @Char file=CH04_10M 
 
-@Talk name=Class_Rep voice=KO020013
+@Talk name=Class　Rep voice=KO020013
 
 @Hitret id=19824
 
@@ -482,7 +482,7 @@
 @action id=梢 action=ActionAdvHop width=4 height=0 cycle=100 count=5
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO020014
+@Talk name=Class　Rep voice=KO020014
 
 @Hitret id=19826
 
@@ -688,7 +688,7 @@
 
 @Char file=CH04_01M 
 
-@Talk name=Class_Rep voice=KO020015
+@Talk name=Class　Rep voice=KO020015
 
 @Hitret id=19858
 
@@ -723,7 +723,7 @@
 @Char file=CH04_05M 
 @Char file=CF04_06M 
 
-@Talk name=Class_Rep voice=KO020016
+@Talk name=Class　Rep voice=KO020016
 
 @Hitret id=19863
 
@@ -737,7 +737,7 @@
 
 @Char file=CH04_08M 
 
-@Talk name=Class_Rep voice=KO020017
+@Talk name=Class　Rep voice=KO020017
 
 @Hitret id=19865
 
@@ -809,7 +809,7 @@
 
 @Char file=CH04_06M 
 
-@Talk name=Class_Rep voice=KO020018
+@Talk name=Class　Rep voice=KO020018
 
 @Hitret id=19877
 
@@ -919,7 +919,7 @@
 @ClearChar 
 @Char file=CH04_09M 
 
-@Talk name=Class_Rep voice=KO020019
+@Talk name=Class　Rep voice=KO020019
 
 @Hitret id=19897
 
@@ -943,7 +943,7 @@
 
 @Hitret id=19899
 
-@Talk name=Class_Rep voice=KO020020
+@Talk name=Class　Rep voice=KO020020
 
 @Hitret id=19900
 
@@ -975,7 +975,7 @@
 
 @Char file=CH04_10M 
 
-@Talk name=Class_Rep voice=KO020021
+@Talk name=Class　Rep voice=KO020021
 
 @Hitret id=19905
 
@@ -1008,7 +1008,7 @@
 
 @Char file=CH04_02M 
 
-@Talk name=Class_Rep voice=KO020022
+@Talk name=Class　Rep voice=KO020022
 
 @Hitret id=19909
 
@@ -1016,7 +1016,7 @@
 
 @Hitret id=19910
 
-@Talk name=Class_Rep voice=KO020023
+@Talk name=Class　Rep voice=KO020023
 
 @Hitret id=19911
 

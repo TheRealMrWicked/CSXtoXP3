@@ -165,7 +165,7 @@
 
 @Hitret id=19971
 
-@Talk name=Old_Man voice=NP360001
+@Talk name=Old　Man voice=NP360001
 
 @Hitret id=19972
 
@@ -195,11 +195,11 @@
 
 @Hitret id=19977
 
-@Talk name=Old_Man voice=NP360002
+@Talk name=Old　Man voice=NP360002
 
 @Hitret id=19978
 
-@Talk name=Old Lady voice=NP370001
+@Talk name=Old　Lady voice=NP370001
 
 @Hitret id=19979
 
@@ -214,11 +214,11 @@
 
 @Hitret id=19981
 
-@Talk name=Old_Man voice=NP360003
+@Talk name=Old　Man voice=NP360003
 
 @Hitret id=19982
 
-@Talk name=Old Lady voice=NP370002
+@Talk name=Old　Lady voice=NP370002
 
 @Hitret id=19983
 
@@ -719,7 +719,7 @@
 
 @Hitret id=20086
 
-@Talk name=Old_Man voice=NP360004
+@Talk name=Old　Man voice=NP360004
 
 @Hitret id=20087
 
@@ -744,11 +744,11 @@
 
 @Hitret id=20090
 
-@Talk name=Old Lady voice=NP370003
+@Talk name=Old　Lady voice=NP370003
 
 @Hitret id=20091
 
-@Talk name=Old_Man voice=NP360005
+@Talk name=Old　Man voice=NP360005
 
 @Hitret id=20092
 
@@ -770,7 +770,7 @@
 @ClearChar 
 @Char file=CG01_04M 
 
-@Talk name=Old_Man voice=NP360006
+@Talk name=Old　Man voice=NP360006
 
 @Hitret id=20095
 
@@ -778,7 +778,7 @@
 
 @Hitret id=20096
 
-@Talk name=Old_Man voice=NP360007
+@Talk name=Old　Man voice=NP360007
 
 @Hitret id=20097
 
@@ -793,11 +793,11 @@
 
 @Hitret id=20099
 
-@Talk name=Old Lady voice=NP370004
+@Talk name=Old　Lady voice=NP370004
 
 @Hitret id=20100
 
-@Talk name=Old_Man voice=NP360008
+@Talk name=Old　Man voice=NP360008
 
 @Hitret id=20101
 
@@ -1030,7 +1030,7 @@
 
 @Hitret id=20141
 
-@Talk name=Old_Man voice=NP360009
+@Talk name=Old　Man voice=NP360009
 
 @Hitret id=20142
 

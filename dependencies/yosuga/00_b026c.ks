@@ -821,7 +821,7 @@
 
 @Hitret id=16433
 
-@Talk name=Nao's_Mother voice=NP500019
+@Talk name=Nao'sÅ@Mother voice=NP500019
 
 @Hitret id=16434
 
@@ -829,7 +829,7 @@
 
 @Hitret id=16435
 
-@Talk name=Nao's_Mother voice=NP500020
+@Talk name=Nao'sÅ@Mother voice=NP500020
 
 @Hitret id=16436
 
@@ -837,7 +837,7 @@
 
 @Hitret id=16437
 
-@Talk name=Nao's_Mother voice=NP500021
+@Talk name=Nao'sÅ@Mother voice=NP500021
 
 @Hitret id=16438
 

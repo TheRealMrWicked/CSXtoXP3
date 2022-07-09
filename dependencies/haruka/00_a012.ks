@@ -5,7 +5,7 @@
 
 @Cg file=B01a
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1823
 
@@ -27,7 +27,7 @@
 
 @Hitret id=1826
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1827
 
@@ -87,7 +87,7 @@
 
 @Hitret id=1838
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1839
 
@@ -535,7 +535,7 @@
 
 @Hitret id=1904
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1905
 
@@ -562,7 +562,7 @@
 @ClearChar id=穹
 @Char file=CC01_04M x=-200
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1908
 
@@ -582,7 +582,7 @@
 
 @Hitret id=1910
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1911
 
@@ -623,7 +623,7 @@
 
 @Hitret id=1917
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1918
 
@@ -649,7 +649,7 @@
 
 @Hitret id=1921
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1922
 
@@ -689,7 +689,7 @@
 
 @Hitret id=1927
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1928
 
@@ -700,7 +700,7 @@
 
 @Hitret id=1929
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1930
 
@@ -767,26 +767,26 @@
 
 
 
-@Talk name=Class_Rep voice=KO000072
+@Talk name=Class　Rep voice=KO000072
 
 @Hitret id=1940
 
 
 @ClearChar
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1941
 
 
 @Char file=CH01_10M
 
-@Talk name=Class_Rep voice=KO000073
+@Talk name=Class　Rep voice=KO000073
 
 @Hitret id=1942
 
 
-@Talk name=Ryouehi_＆_Akira_＆_Haruka_＆_Sora voice=SYN000001
+@Talk name=Ryouehi　and　Akira　and　Haruka　and　Sora voice=SYN000001
 
 @Hitret id=1943
 
@@ -796,7 +796,7 @@
 @action id=梢 action=ActionAdvJump cycle=300 count=1 height=30
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO000074
+@Talk name=Class　Rep voice=KO000074
 
 @Hitret id=1944
 
@@ -810,11 +810,11 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO000075
+@Talk name=Class　Rep voice=KO000075
 
 @Hitret id=1946
 
-@Talk name=Class_Rep voice=KO000076
+@Talk name=Class　Rep voice=KO000076
 
 @Hitret id=1947
 
@@ -848,7 +848,7 @@
 
 @ClearChar
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1951
 
@@ -862,16 +862,16 @@
 
 @Char file=CH01_07M
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1953
 
 
-@Talk name=Class_Rep voice=KO000077
+@Talk name=Class　Rep voice=KO000077
 
 @Hitret id=1954
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1955
 
@@ -891,18 +891,18 @@
 @PlayBgm file=BGM17
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO000078
+@Talk name=Class　Rep voice=KO000078
 
 @Hitret id=1959
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1960
 
 
 @Char file=CH01_03M
 
-@Talk name=Class_Rep voice=KO000079
+@Talk name=Class　Rep voice=KO000079
 
 @Hitret id=1961
 
@@ -918,33 +918,33 @@
 
 @Hitret id=1964
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1965
 
-@Talk name=Class_Rep voice=KO000080
+@Talk name=Class　Rep voice=KO000080
 
 @Hitret id=1966
 
-@Talk name=Class_Rep voice=KO000081
+@Talk name=Class　Rep voice=KO000081
 
 @Hitret id=1967
 
 
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO000082
+@Talk name=Class　Rep voice=KO000082
 
 @Hitret id=1968
 
 
 @Char file=CH01_03M
 
-@Talk name=Class_Rep voice=KO000083
+@Talk name=Class　Rep voice=KO000083
 
 @Hitret id=1969
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1970
 
@@ -958,7 +958,7 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO000084
+@Talk name=Class　Rep voice=KO000084
 
 @Hitret id=1972
 
@@ -969,7 +969,7 @@
 
 @Char file=CH01_08M
 
-@Talk name=Class_Rep voice=KO000085
+@Talk name=Class　Rep voice=KO000085
 
 @Hitret id=1974
 
@@ -996,7 +996,7 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class_Rep voice=KO000086
+@Talk name=Class　Rep voice=KO000086
 
 @Hitret id=1980
 
@@ -1004,22 +1004,22 @@
 
 @Hitret id=1981
 
-@Talk name=Class_Rep voice=KO000087
+@Talk name=Class　Rep voice=KO000087
 
 @Hitret id=1982
 
-@Talk name=Class_Rep voice=KO000088
+@Talk name=Class　Rep voice=KO000088
 
 @Hitret id=1983
 
-@Talk name=Class_Rep voice=KO000089
+@Talk name=Class　Rep voice=KO000089
 
 @Hitret id=1984
 
 
 @Char file=CH01_06M
 
-@Talk name=Class_Rep voice=KO000090
+@Talk name=Class　Rep voice=KO000090
 
 @Hitret id=1985
 
@@ -1030,7 +1030,7 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class_Rep voice=KO000091
+@Talk name=Class　Rep voice=KO000091
 
 @Hitret id=1987
 
@@ -1038,52 +1038,52 @@
 
 @Hitret id=1988
 
-@Talk name=Class_Rep voice=KO000092
+@Talk name=Class　Rep voice=KO000092
 
 @Hitret id=1989
 
-@Talk name=Class_Rep voice=KO000093
+@Talk name=Class　Rep voice=KO000093
 
 @Hitret id=1990
 
-@Talk name=Class_Rep voice=KO000094
+@Talk name=Class　Rep voice=KO000094
 
 @Hitret id=1991
 
 
 @Char file=CH01_06M
 
-@Talk name=Class_Rep voice=KO000095
+@Talk name=Class　Rep voice=KO000095
 
 @Hitret id=1992
 
 
 @Char file=CH01_09M
 
-@Talk name=Class_Rep voice=KO000096
+@Talk name=Class　Rep voice=KO000096
 
 @Hitret id=1993
 
-@Talk name=Class_Rep voice=KO000097
+@Talk name=Class　Rep voice=KO000097
 
 @Hitret id=1994
 
 
 @Char file=CH01_06M
 
-@Talk name=Class_Rep voice=KO000098
+@Talk name=Class　Rep voice=KO000098
 
 @Hitret id=1995
 
-@Talk name=Class_Rep voice=KO000099
+@Talk name=Class　Rep voice=KO000099
 
 @Hitret id=1996
 
-@Talk name=Class_Rep voice=KO000100
+@Talk name=Class　Rep voice=KO000100
 
 @Hitret id=1997
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=1998
 
@@ -1092,7 +1092,7 @@
 @action id=梢 action=ActionAdvWave width=5 height=0 cycle=500 count=1
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO000101
+@Talk name=Class　Rep voice=KO000101
 
 @Hitret id=1999
 
@@ -1103,25 +1103,25 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class_Rep voice=KO000102
+@Talk name=Class　Rep voice=KO000102
 
 @Hitret id=2001
 
 
 @Char file=CH01_14M
 
-@Talk name=Class_Rep voice=KO000103
+@Talk name=Class　Rep voice=KO000103
 
 @Hitret id=2002
 
 
 @Char file=CH01_09M
 
-@Talk name=Class_Rep voice=KO000104
+@Talk name=Class　Rep voice=KO000104
 
 @Hitret id=2003
 
-@Talk name=Class_Rep voice=KO000105
+@Talk name=Class　Rep voice=KO000105
 
 @Hitret id=2004
 
@@ -1133,7 +1133,7 @@
 @Char file=CH01_06M x=-200 order=908
 @Char file=CA01_07M x=-100 order=909
 
-@Talk name=Class_Rep voice=KO000105_b
+@Talk name=Class　Rep voice=KO000105_b
 
 @Hitret id=2006
 

@@ -98,7 +98,7 @@
 
 @Char file=CH07_01M 
 
-@Talk name=Class_Rep voice=KO040001
+@Talk name=Class　Rep voice=KO040001
 
 @Hitret id=28419
 
@@ -110,7 +110,7 @@
 
 @Hitret id=28421
 
-@Talk name=Class_Rep voice=KO040002
+@Talk name=Class　Rep voice=KO040002
 
 @Hitret id=28422
 
@@ -128,7 +128,7 @@
 
 @Char file=CH07_07M 
 
-@Talk name=Class_Rep voice=KO040003
+@Talk name=Class　Rep voice=KO040003
 
 @Hitret id=28425
 
@@ -145,7 +145,7 @@
 @action id=梢 action=ActionAdvHop width=4 height=0 cycle=100 count=5
 @WaitAction id=梢
 
-@Talk name=Class_Rep voice=KO040004
+@Talk name=Class　Rep voice=KO040004
 
 @Hitret id=28428
 
@@ -157,7 +157,7 @@
 
 @Hitret id=28430
 
-@Talk name=Class_Rep voice=KO040005
+@Talk name=Class　Rep voice=KO040005
 
 @Hitret id=28431
 
@@ -175,7 +175,7 @@
 
 @Char file=CH07_10M 
 
-@Talk name=Class_Rep voice=KO040006
+@Talk name=Class　Rep voice=KO040006
 
 @Hitret id=28434
 
@@ -269,7 +269,7 @@
 
 @Hitret id=28452
 
-@Talk name=Class_Rep voice=KO040007
+@Talk name=Class　Rep voice=KO040007
 
 @Hitret id=28453
 
@@ -281,7 +281,7 @@
 
 @Hitret id=28455
 
-@Talk name=Class_Rep voice=KO040008
+@Talk name=Class　Rep voice=KO040008
 
 @Hitret id=28456
 
@@ -699,7 +699,7 @@
 
 @Char file=CH07_05M 
 
-@Talk name=Class_Rep voice=KO040009
+@Talk name=Class　Rep voice=KO040009
 
 @Hitret id=28532
 
@@ -981,7 +981,7 @@
 
 @Hitret id=28586
 
-@Talk name=Class_Rep voice=KO040010
+@Talk name=Class　Rep voice=KO040010
 
 @Hitret id=28587
 

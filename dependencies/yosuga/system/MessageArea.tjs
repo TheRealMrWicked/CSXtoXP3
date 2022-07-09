@@ -1,0 +1,857 @@
+/*
+	メッセージ表示レイヤクラス
+*/
+
+var FONT_DEFAULT_FACE = "メイリオ,HG丸ｺﾞｼｯｸM-PRO,ＭＳ ゴシック";
+var FONT_DEFAULT_SIZE = 18;				//
+var FONT_DEFAULT_INDENT = 20;			//
+var FONT_DEFAULT_INTERVAL = 1;			//
+var FONT_DEFAULT_BOLD = false;			//
+var FONT_DEFAULT_ITALIC = false;		//
+var FONT_DEFAULT_UNDERLINE = false;		//
+var FONT_DEFAULT_STRIKEOUT = false;		//
+
+//レンダリング済みフォント登録情報
+var PRFONT;
+var PRFONT_DIC = %[];
+
+var DEF_FONT_STYLE = %[
+	face:FONT_DEFAULT_FACE,
+	color:0xFFFFFF,
+	bold:0,
+	opa:255,
+	aa:true,
+	shadowlevel:3024, 
+	shadowcolor:(32)<<16|(32)<<8|(32),
+	shadowwidth:3,
+	shadowx:0,
+	shadowy:0,
+
+	italic:0,
+	underline:0,
+	strikeout:0
+];
+
+class MessageArea extends Layer{
+	var _msgTimer;
+
+	var _enterCode = "／";		//改行文字
+	var _ctrlCode = "$";		//制御文字
+
+	//禁則文字
+	//、。」』）ヽヾ”ーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎ々！？♪
+	var kinsoku = %[
+	、:1, 。:1, 」:1, 』:1, ）:1,
+	ヽ:1, ヾ:1, ”:1, ー:1, ァ:1,
+	ィ:1, ゥ:1, ェ:1, ォ:1, ッ:1,
+	ャ:1, ュ:1, ョ:1, ヮ:1, ヵ:1,
+	ヶ:1, ぁ:1, ぃ:1, ぅ:1, ぇ:1,
+	ぉ:1, っ:1, ゃ:1, ゅ:1, ょ:1,
+	ゎ:1, 々:1, ！:1, ？:1, ♪:1
+	];
+
+	var _scale = 1.0;
+
+	var _enableKinsoku = true;
+
+	var margin_top = 0;		//上下左右の余白。
+	var margin_left = 0;	//横書きの場合は左上、
+	var margin_right = 0;	//縦書きの場合は右上（ただしindent分左にズレる）
+	var margin_bottom = 0;	//が表示開始位置。
+
+	var _indent = FONT_DEFAULT_INDENT;			//改行幅
+	var _interval = FONT_DEFAULT_INTERVAL;		//文字間隔
+
+	//drawTextパラメータ
+	var _color;
+	var _opa;
+	var _aa;
+	var _shadowLevel;
+	var _shadowColor;
+	var _shadowWidth;
+	var _shadowX;
+	var _shadowY;
+
+	//デフォルトフォント情報
+	//DrawText()
+	var _defDrawTextParam = %[
+		color : DEF_FONT_STYLE.color, 
+		opa : DEF_FONT_STYLE.opa, 
+		aa : DEF_FONT_STYLE.aa, 
+		shadowLevel : DEF_FONT_STYLE.shadowlevel, 
+		shadowColor : DEF_FONT_STYLE.shadowcolor, 
+		shadowWidth : DEF_FONT_STYLE.shadowwidth, 
+		shadowX : DEF_FONT_STYLE.shadowx, 
+		shadowY : DEF_FONT_STYLE.shadowy
+	];
+
+	//class Font+
+	var _defFontParam = %[
+		face : FONT_DEFAULT_FACE, 
+		size : FONT_DEFAULT_SIZE, 
+		bold : FONT_DEFAULT_BOLD, 
+		italic : FONT_DEFAULT_ITALIC, 
+		underline : FONT_DEFAULT_UNDERLINE, 
+		strikeout : FONT_DEFAULT_STRIKEOUT, 
+		indent : FONT_DEFAULT_INDENT
+	];
+
+	var _outputSpeed = 20;			//出力速度（文字間の表示間隔）
+
+	var _cursor_x = 0;		//現在の表示位置
+	var _cursor_y = 0;		//
+
+	var _fDraw = true;	//falseの場合はcharOutputでDrawTextを呼び出さない。
+						//更新領域だけ調べたいときに使う
+
+	var _updateRect;
+
+	var _lineCharCount;	//出力行の現在文字数
+
+	var output_msg;
+	var output_index;
+	var output_fKinsoku;		//禁則処理が発生した
+	var output_ignoreKinsoku;	//禁則処理を無視する
+
+	var isVartical;		//縦書き
+
+	var _usePrerenderedFont = false;
+	var _PRFontElm;
+	var _PRFontHeight;
+	var _fontSelectFunc = function(face){return face;};
+
+	//ルビ設定
+	var _fEnableRuby = true;
+	var _rubyScale = 0.5;		//ルビのサイズ（通常文字からの比率）
+	var _rubyColor = 0xffffff;
+	var _rubyOpa = 255;
+	var _rubyAa = true;
+	var _rubyShadowLevel = 0;
+	var _rubyShadowColor = 0;
+	var _rubyShadowWidth = 0;
+	var _rubyShadowX = 0;
+	var _rubyShadowY = 0;
+	var _rubyBold = true;
+	var _rubyIndent = 0;
+
+	//文字数制限モード(0なら制限なし)
+	var _numberOfCharactersMode;
+
+	var _completeCall;
+
+	function MessageArea(window, parent, usePrerenderedFont=false, fontSelectFunc=null){
+		super.Layer(window, parent);
+
+		hitType = htMask;
+		hitThreshold = 256;
+
+		_msgTimer = new Timer(onTimerOutput, "");
+		_msgTimer.interval = _outputSpeed;
+
+		output_msg = "";
+		output_index = 0;
+
+		_updateRect = new Rect();
+		_updateRect.clear();
+
+		_lineCharCount = 0;
+
+		_completeCall = null;
+
+		_usePrerenderedFont = usePrerenderedFont;
+		if(fontSelectFunc != null) _fontSelectFunc = fontSelectFunc;
+
+//		resetDrawTextParam();
+//		resetFontStyle();
+	}
+
+	function finalize(){
+		invalidate _msgTimer;
+		invalidate _updateRect;
+		super.finalize();
+	}
+
+	//メッセージエリア設定
+	function setSize(width, height){
+		super.setSize(width, height);
+		super.setImageSize(width, height);
+
+		clear();
+	}
+
+	//余白設定
+	function setMargin(left=0, top=0, right=0, bottom=0){
+		margin_left = left;
+		margin_top = top;
+		margin_right = right;
+		margin_bottom = bottom;
+	}
+
+	//出力位置設定
+	//余白部分には設定できない。
+	function setCursor(x, y){
+		if(x < margin_left)
+			_cursor_x = margin_x;
+		else if(margin_right < x)
+			_cursor_x = margin_x;
+		else
+			_cursor_x = x;
+
+		if(y < margin_top)
+			_cursor_y = margin_y;
+		else if(margin_bottom < y)
+			_cursor_y = margin_y;
+		else
+			_cursor_y = y;
+	}
+
+	//メッセージクリア
+	function clear(){
+		flush(false);
+		fillRect(0, 0, width, height, RGBA(0, 0, 0, 0));
+		newPage();
+	}
+
+	//文字出力開始
+	function output(msg, isFlush, font=null, ignoreKinsoku=false, fDraw=true){
+		//drawText(_cursor_x, _cursor_y, msg, 0xFFFFFF, 255, true, 512*4, 0xFF00FF, 4, 0, 0);
+
+		resetFontStyle();
+
+		//現在文字出力中なら完了させる
+		if(_msgTimer.enabled) flush();
+
+		output_msg = msg;
+		output_index = 0;
+		output_ignoreKinsoku = ignoreKinsoku;
+
+		_fDraw = fDraw;
+
+		if(font != null){
+			setFontStyle(font.face, font.size, font.indent, font.bold, font.italic);
+			setDrawTextParam(font.color, , , , font.bkcolor);
+		}
+
+		if(isFlush || (outputSpeed == 0)){
+			flush();
+		}else{
+			_msgTimer.interval = _outputSpeed;
+			_msgTimer.enabled = true;
+		}
+	}
+
+	//一文字出力
+	function charOutput(fDraw=true){
+		var fontH;
+		var ratioY = 0;
+		var prevX = _cursor_x;
+		var prevY = _cursor_y;
+
+		while(true){
+			var code = output_msg[output_index];
+			if(code.length == 0){
+			//メッセージ終端
+				outputComplete(false);
+				return true;
+			}
+			if(code == _enterCode){
+			//強制改行文字なので改行して次の文字へ。
+				output_index++;
+
+				newLine();
+
+				//更新領域に追加
+				if(_usePrerenderedFont){
+					_updateRect.add(new Rect(_updateRect.left, _updateRect.top, _cursor_x, _cursor_y + _PRFontHeight));
+				}else{
+					_updateRect.add(new Rect(_updateRect.left, _updateRect.top, _cursor_x, _cursor_y - ratioY + fontH));
+				}
+
+				if(output_index >= output_msg.length){
+				//出力終了
+					outputComplete();
+					return true;
+				}
+			}else if(code == _ctrlCode){
+			//制御コード
+				var ctrlParam = %[];
+				ctrlParam.code = "";
+				output_index += extractCtrlCode(output_msg, output_index, ctrlParam);
+				execCtrlCode(ctrlParam);
+				if(ctrlParam.code != "")
+					output_msg = InsertString(output_msg, output_index, ctrlParam.code);
+
+				if(output_index >= output_msg.length){
+				//出力終了
+					outputComplete();
+					return true;
+				}
+			}else{
+			//通常文字
+				if(_usePrerenderedFont){
+					fontH = _PRFontElm.height;
+					ratioY = (fontH - _PRFontHeight) \ 2 - _PRFontElm.ratio;
+				}else{
+					fontH = font.height;
+					ratioY = -(fontH - _defFontParam.size) \ 2;
+				}
+
+				var charW = font.getTextWidth(code);	//文字幅取得
+
+				//文字描画
+				if(_fDraw)
+					drawText(_cursor_x, _cursor_y-ratioY, code, _color, _opa, _aa, _shadowLevel, _shadowColor, _shadowWidth, _shadowX, _shadowY);
+
+				//文字幅分カーソルを進める
+				_cursor_x += charW + _interval;
+
+				//更新領域に追加
+				if(_usePrerenderedFont){
+					if(_updateRect.isEmpty()){
+						_updateRect.set(prevX, _cursor_y, _cursor_x, _cursor_y + _PRFontHeight);
+					}else{
+						_updateRect.add(new Rect(_updateRect.left, _updateRect.top, _cursor_x, _cursor_y + _PRFontHeight));
+					}
+				}else{
+					if(_updateRect.isEmpty()){
+						_updateRect.set(prevX, _cursor_y, _cursor_x, _cursor_y - ratioY + fontH);
+					}else{
+						_updateRect.add(new Rect(_updateRect.left, _updateRect.top, _cursor_x, _cursor_y - ratioY + fontH));
+					}
+				}
+
+				//右マージンを越えた場合は改行
+				if(_cursor_x+charW > margin_right){
+					newLine();
+				}
+
+				//文字数カウント
+				_lineCharCount++;
+
+				//インデックスを次の文字に進める
+				output_index++;
+				if(output_index >= output_msg.length){
+				//出力終了
+					outputComplete();
+					return true;
+				}
+
+				var nextCode = getNextChar(output_index);
+				var fKinsoku = (kinsoku[nextCode] !== void);
+
+				//文字数制限モード
+				if(isNumberOfCharacterMode()){
+					if(_numberOfCharactersMode <= _lineCharCount){
+					//行末に到達
+						//すでに一度禁則処理が発生しているので改行
+						if(output_fKinsoku) newLine();
+						//禁則処理　無視なら改行
+						else if(output_ignoreKinsoku) newLine();
+						//次の文字で禁則が発生して「いない」なら改行
+						else if(!fKinsoku) newLine();
+						//禁則発生
+						else output_fKinsoku = true;
+					}
+				}
+
+				return false;
+			}
+		}
+	}
+
+	function getUpdateRect(msg, font=null, ignoreKinsoku=false){
+//		clear();
+		newPage();
+		output(msg, true, font, ignoreKinsoku, false);
+		return _updateRect;
+	}
+
+	function getNextChar(index){
+		var code = "";
+		while(output_msg.length >= index){
+			code = output_msg[index];
+			if(code == "%"){
+				var ctrlParam = %[];
+				ctrlParam.code = "";
+				index += extractCtrlCode(output_msg, index, ctrlParam);
+				if(ctrlParam.tag == "r" || ctrlParam.tag == "ruby"){
+					code = ctrlParam.arg[0][0];
+					break;
+				}
+			}else{
+				break;
+			}
+			index++;
+		}
+		return code;
+	}
+
+	//改ページ
+	function newPage(){
+		if(isVartical){
+			_cursor_x = margin_right - _indent;
+			_cursor_y = margin_top;
+		}else{
+			_cursor_x = margin_left;
+			_cursor_y = margin_top;
+		}
+		_updateRect.set(_cursor_x, _cursor_y, _cursor_x, _cursor_y);
+		_lineCharCount = 0;
+		output_fKinsoku = false;
+	}
+	//改行
+	function newLine(){
+		_cursor_x = margin_left;
+		_cursor_y += _indent;
+		_lineCharCount = 0;
+		output_fKinsoku = false;
+	}
+
+	//文字出力を完了させる
+	function flush(fCall=true){
+		_msgTimer.enabled = false;
+		if(output_msg.length == 0){
+			outputComplete(fCall);
+			return;
+		}
+
+		while(charOutput()==false){}	//残りの文字を全て出力
+
+//		outputComplete();
+	}
+
+	//文字出力中か？
+	function isPending(){
+		return _msgTimer.enabled;
+	}
+
+	//呼び出される毎に１文字出力
+	function onTimerOutput(){
+		return charOutput();
+	}
+
+	function outputComplete(fCall=true){
+		resetDrawTextParam();
+		resetFontStyle();
+		_msgTimer.enabled = false;
+
+		if(_completeCall != null && fCall) _completeCall(this);
+	}
+
+	function setCompleteCall(func=null){
+		_completeCall = func;
+	}
+
+	function setDrawTextParam(color=-1, opa=-1, aa=-1, shadowLevel=-1, shadowColor=-1, shadowWidth=-1, shadowX=-1, shadowY=-1){
+		if(color != -1)			_color = color;
+		if(opa != -1)			_opa = opa;
+		if(aa != -1)			_aa = aa;
+		if(shadowLevel != -1)	_shadowLevel = shadowLevel;
+		if(shadowColor != -1)	_shadowColor = shadowColor;
+		if(shadowWidth != -1)	_shadowWidth = shadowWidth;
+		if(shadowX != -1)		_shadowX = shadowX;
+		if(shadowY != -1)		_shadowY = shadowY;
+	}
+	function setDefaultDrawTextParam(color, opa, aa, shadowLevel, shadowColor, shadowWidth, shadowX, shadowY){
+		with(_defDrawTextParam){
+			.color = color;
+			.opa = opa;
+			.aa = aa;
+			.shadowLevel = shadowLevel;
+			.shadowColor = shadowColor;
+			.shadowWidth = shadowWidth;
+			.shadowX = shadowX;
+			.shadowY = shadowY;
+		}
+	}
+	function resetDrawTextParam(){
+		with(_defDrawTextParam){
+			_color = .color;
+			_opa = .opa;
+			_aa = .aa;
+			_shadowLevel = .shadowLevel;
+			_shadowColor = .shadowColor;
+			_shadowWidth = .shadowWidth;
+			_shadowX = .shadowX;
+			_shadowY = .shadowY;
+		}
+	}
+
+	function setDefaultFontStyle(
+	face=FONT_DEFAULT_FACE, size=FONT_DEFAULT_SIZE, indent=FONT_DEFAULT_INDENT, bold=FONT_DEFAULT_BOLD, 
+	italic=FONT_DEFAULT_ITALIC, underline=FONT_DEFAULT_UNDERLINE, strikeout=FONT_DEFAULT_STRIKEOUT){
+		with(_defFontParam){
+			.face = face;
+			.indent = indent;
+			if(!_usePrerenderedFont){
+				.size = size;
+				.bold = bold;
+				.italic = italic;
+				.underline = underline;
+				.strikeout = strikeout;
+			}
+		}
+	}
+
+	function setFontStyle(
+	face=FONT_DEFAULT_FACE, size=FONT_DEFAULT_SIZE, indent=FONT_DEFAULT_INDENT, bold=FONT_DEFAULT_BOLD, 
+	italic=FONT_DEFAULT_ITALIC, underline=FONT_DEFAULT_UNDERLINE, strikeout=FONT_DEFAULT_STRIKEOUT){
+		with(font){
+			if(_usePrerenderedFont){
+				var f = face;
+
+				if(PRFONT_DIC[f] === void) f = _fontSelectFunc(face);
+
+				if(PRFONT_DIC[f] !== void){
+					.face = f;
+					_PRFontElm = PRFONT_DIC[.face];
+					_PRFontHeight = _PRFontElm.height;
+				}else{
+					_PRFontHeight = .height;
+				}
+			}else{
+				.face = face;
+				.height = size;
+				.bold = bold;
+				.italic = italic;
+				.underline = underline;
+				.strikeout = strikeout;
+			}
+		}
+		_indent = indent;
+	}
+
+	function resetFontStyle(){
+		setFontStyle(
+			_defFontParam.face, 
+			_defFontParam.size, 
+			_defFontParam.indent, 
+			_defFontParam.bold, 
+			_defFontParam.otalic, 
+			_defFontParam.underline, 
+			_defFontParam.strikeout
+		);
+	}
+
+	function getFontStyle(){
+		var style = %[];
+		with(font){
+			style.face = .face;
+			style.size = .height;
+			style.bold = .bold;
+			style.italic = .italic;
+			style.underline = .underline;
+			style.strikeout = .strikeout;
+		}
+		return style;
+	}
+
+	/*
+	　1行の文字数を制限して表示するモードに切り替える
+	　0を指定すると通常表示に戻します
+
+	※動作
+	　1行がnumに指定した文字数を超える場合は、改行コードが挿入されます。
+	　ただし、改行して行頭に禁則文字が配置されるような場合はnum+1文字目に
+	　その禁則文字を表示して禁則を回避します。
+	*/
+	function numberOfCharactersMode(num = 0){
+		_numberOfCharactersMode = num;
+	}
+
+	function isNumberOfCharacterMode(){
+		return (_numberOfCharactersMode != 0);
+	}
+
+	//制御コードを抽出
+	function extractCtrlCode(str, index, code){
+		if(str[index] != _ctrlCode) return 0;
+
+		var i = index;
+		for(;i<str.length;i++) if(str[i] == ";") break;
+		if(i == str.length) return 0;
+
+		var elm = str.substring(index+1, i - index);
+		var temp = elm.split(",:;",,true);
+		code.tag = temp[0];
+		code.arg = [];
+		for(var j=1;j<temp.count;j++) code.arg[j-1] = temp[j];
+
+		return (i - index + 1);
+	}
+	//制御コードを実行
+	function execCtrlCode(code){
+		switch(code.tag){
+		case "c": case "color":
+			switch(code.arg.count){
+			case 0:
+				resetDrawTextParam();
+				break;
+			case 1:
+				_color = GetDefineColor(code.arg[0]) & 0xffffff;
+				break;
+			case 2:
+				_color = GetDefineColor(code.arg[0]) & 0xffffff;
+				_shadowColor = GetDefineColor(code.arg[1]) & 0xffffff;
+				break;
+			}
+			break;
+		case "f": case "font":
+			font.face = _fontSelectFunc(code.arg[0]);
+			if(_usePrerenderedFont){
+				var ref = PRFONT_DIC[font.face];
+				if(ref !== void) _PRFontHeight = ref.height;
+			}
+			break;
+		case "fd":
+			font.face = _fontSelectFunc(_defFontParam.face);
+			if(_usePrerenderedFont){
+				var ref = PRFONT_DIC[font.face];
+				if(ref !== void) _PRFontHeight = ref.height;
+			}
+			break;
+		case "b": case "bold":
+			if(_usePrerenderedFont) break;
+
+			font.bold = true;
+			break;
+		case "bd":
+			if(_usePrerenderedFont) break;
+
+			font.bold = false;
+			break;
+		case "i": case "italic":
+			if(_usePrerenderedFont) break;
+
+			font.italic = true;
+			break;
+		case "id":
+			if(_usePrerenderedFont) break;
+
+			font.italic = false;
+			break;
+		case "underline":
+		//下線　※吉里吉里未対応
+			if(_usePrerenderedFont) break;
+
+			font.underline = true;
+			break;
+		case "strikeout":
+		//打ち消し　※吉里吉里未対応
+			if(_usePrerenderedFont) break;
+
+			font.strikeout = true;
+			break;
+		case "n": case "normal":
+			font.face = _defFontParam.face;
+
+			if(_usePrerenderedFont) break;
+
+			font.height = _defFontParam.size;
+			font.bold = false;
+			font.italic = false;
+			font.underline = false;
+			font.strikeout = false;
+			break;
+		case "s": case "size":
+			if(_usePrerenderedFont) break;
+
+			font.height = int (code.arg[0] * _scale);
+			break;
+		case "sd":
+			if(_usePrerenderedFont) break;
+
+			font.height = _defFontParam.size;
+			break;
+		case "r": case "ruby":
+			code.code = code.arg[0];
+			if(!_fEnableRuby) break;
+			rubyOutput(code.arg[0], code.arg[1]);
+			break;
+		case "label":
+			break;
+		case "link":
+			break;
+		case "hint":
+			break;
+		default :
+			dm("不明な制御コードです-", code.code);
+			break;
+		}
+	}
+
+	function extractOutputString(str){
+		var ret = "";
+
+		for(var i=0;i<str.length;){
+			var code = str[i];
+			if(code == _ctrlCode){
+				var ctrlParam = %[];
+				i += extractCtrlCode(str, i, ctrlParam);
+				if(ctrlParam.tag == "r" || ctrlParam.tag == "ruby")
+					ret += ctrlParam.arg[0];
+			}else{
+				ret += code;
+				i++;
+			}
+		}
+
+		return ret;
+	}
+
+	//ルビ出力
+	function enableRuby(f = true){
+		_fEnableRuby = f;
+	}
+	//カレント位置から計算して出力する
+	function rubyOutput(str, read){
+		var tempFace = font.face;
+		var tempHeight = font.height;
+		var tempBold = font.bold;
+
+		var x, y;
+		var strWidth = font.getTextWidth(str) + (str.length * _interval);
+		if(_usePrerenderedFont){
+			var baseElm = PRFONT_DIC[font.face];
+			var defElm = PRFONT_DIC[_fontSelectFunc(_defFontParam.face)];
+
+			var ratioY = baseElm.height\2 - defElm.height\2;
+
+			font.face = PRFONT_DIC[font.face].ruby;
+
+			var rubyElm = PRFONT_DIC[font.face];
+
+			var readWidth = font.getTextWidth(read);
+
+			x = _cursor_x + (strWidth / 2) - (readWidth / 2);
+			y = _cursor_y - rubyElm.height + rubyElm.ratio - _rubyIndent;
+		}else{
+			var ratioY = (font.height - _defFontParam.size) \ 2;
+
+			font.height *= _rubyScale;
+			var readWidth = font.getTextWidth(read);
+
+			font.bold = _rubyBold;
+
+			x = _cursor_x + (strWidth / 2) - (readWidth / 2);
+
+			y = _cursor_y - ratioY;
+			y -= font.height - _rubyIndent;
+		}
+
+		drawText(x, y, read, _rubyColor, _rubyOpa, _rubyAa, _rubyShadowLevel, _rubyShadowColor, _rubyShadowWidth, _rubyShadowX, _rubyShadowY);
+
+		font.face = tempFace;
+		if(!_usePrerenderedFont){
+			font.height = tempHeight;
+			font.bold = tempBold;
+		}
+	}
+	function setRubyParam(scale=0.5, bold=true, color=0xffffff, opa=255, aa=false, shadowLevel=0, shadowColor=0, shadowWidth=0, shadowX=0, shadowY=0, indent=0){
+		_rubyScale = scale;
+		_rubyBold = bold;
+		_rubyColor = color;
+		_rubyOpa = opa;
+		_rubyAa = aa;
+		_rubyShadowLevel = shadowLevel;
+		_rubyShadowColor = shadowColor;
+		_rubyShadowWidth = shadowWidth;
+		_rubyShadowX = shadowX;
+		_rubyShadowY = shadowY;
+		_rubyIndent = indent;
+	}
+
+	property enterCode{
+		setter(v){_enterCode = v;}
+		getter(){return _enterCode;}
+	}
+	property ctrlCode{
+		setter(v){_ctrlCode = v;}
+		getter(){return _ctrlCode;}
+	}
+
+	property cursor_x{
+		setter(v){_cursor_x = v;}
+		getter(){return _cursor_x;}
+	}
+	property cursor_y{
+		setter(v){_cursor_y = v;}
+		getter(){return _cursor_y;}
+	}
+
+	property outputSpeed{
+		setter(v){_msgTimer.interval = _outputSpeed = v;}
+		getter(){return _outputSpeed;}
+	}
+
+	property scale{
+		setter(v){_scale = real v;}
+		getter(){return _scale;}
+	}
+
+	property defDrawTextParam{
+		getter(){return _defDrawTextParam;}
+	}
+	property defFontParam{
+		getter(){return _defFontParam;}
+	}
+
+	property enableKinsoku{
+		setter(v){
+			_enableKinsoku = v;
+		}
+		getter(){
+			return _enableKinsoku;
+		}
+	}
+
+	property updateRect{
+		getter(){return _updateRect;}
+	}
+
+	property usePrerenderedFont{
+		getter(){return _usePrerenderedFont;}
+	}
+}
+
+//レンダリング済みフォントの登録
+function PrerenderedFontInit(){
+	PRFONT = Scripts.evalStorage("PRFont.tjs");
+
+	var img = new Layer(win, win.baseLayer);
+
+	with(img.font){
+		for(var i=0;i<PRFONT.count;i++){
+			.face = PRFONT[i].face;
+			try{
+				.mapPrerenderedFont(PRFONT[i].file + ".tft");
+			}catch{
+				dm("レンダリング済みフォントが見つかりません : " + PRFONT[i].file);
+				continue;
+			}
+
+			PRFONT_DIC[.face] = PRFONT[i];
+		}
+	}
+
+	invalidate img;
+}
+
+function CheckPRFontMargin(){
+	var str = "╋ばびぶべぼざじずぜぞ╋";
+	var img = new Layer(win, win.baseLayer);
+	with(img){
+		.setSize(120, 120);
+		for(var i=0;i<PRFONT.count;i++){
+			.font.face = PRFONT[i].face;
+			var w = .font.getTextWidth(str);
+			.setImageSize(w + 16, 120);
+			.setSizeToImageSize();
+			.fillRect(0, 0, .width, .height\2, 0xff7f7f00);
+			.fillRect(0, .height\2, .width, .height\2, 0xff007f7f);
+			.drawText(.width\2-w\2, .height\2, str, 0xffffff, 255);
+			.saveLayerImage("font\\" + PRFONT[i].face + ".bmp");
+		}
+	}
+	invalidate img;
+}

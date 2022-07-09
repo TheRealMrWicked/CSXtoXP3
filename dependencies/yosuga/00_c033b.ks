@@ -788,15 +788,15 @@
 @Update transition=universal rule=CLOUD_A time=500
 @WaitUpdate
 
-@Talk name=Akira's_Grandfather voice=NP070017
+@Talk name=Akira's　Grandfather voice=NP070017
 
 @Hitret id=25954
 
-@Talk name=Akira's_Grandfather voice=NP070018
+@Talk name=Akira's　Grandfather voice=NP070018
 
 @Hitret id=25955
 
-@Talk name=Akira's_Grandfather voice=NP070019
+@Talk name=Akira's　Grandfather voice=NP070019
 
 @Hitret id=25956
 
@@ -804,11 +804,11 @@
 
 @Hitret id=25957
 
-@Talk name=Akira's_Grandfather voice=NP070020
+@Talk name=Akira's　Grandfather voice=NP070020
 
 @Hitret id=25958
 
-@Talk name=Akira's_Grandfather voice=NP070021
+@Talk name=Akira's　Grandfather voice=NP070021
 
 @Hitret id=25959
 

@@ -1578,7 +1578,7 @@
 
 @Char file=CB07_04S 
 
-@Talk name=Akira_and_Nao voice=AK040352/NO040063
+@Talk name=Akira@and@Nao voice=AK040352/NO040063
 
 @Hitret id=30098
 

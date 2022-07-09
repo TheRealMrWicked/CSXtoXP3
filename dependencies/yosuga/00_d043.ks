@@ -5,35 +5,35 @@
 @PlayBgm file=BGM20
 @MessageFrame type=1
 
-@Talk name=Kazuha_Monologue voice=KA041504
+@Talk name=Kazuha　Monologue voice=KA041504
 
 @Hitret id=33174
 
-@Talk name=Kazuha_Monologue voice=KA041505
+@Talk name=Kazuha　Monologue voice=KA041505
 
 @Hitret id=33175
 
-@Talk name=Kazuha_Monologue voice=KA041506
+@Talk name=Kazuha　Monologue voice=KA041506
 
 @Hitret id=33176
 
-@Talk name=Kazuha_Monologue voice=KA041507
+@Talk name=Kazuha　Monologue voice=KA041507
 
 @Hitret id=33177
 
-@Talk name=Kazuha_Monologue voice=KA041508
+@Talk name=Kazuha　Monologue voice=KA041508
 
 @Hitret id=33178
 
-@Talk name=Kazuha_Monologue voice=KA041509
+@Talk name=Kazuha　Monologue voice=KA041509
 
 @Hitret id=33179
 
-@Talk name=Kazuha_Monologue voice=KA041510
+@Talk name=Kazuha　Monologue voice=KA041510
 
 @Hitret id=33180
 
-@Talk name=Kazuha_Monologue voice=KA041511
+@Talk name=Kazuha　Monologue voice=KA041511
 
 @Hitret id=33181
 
@@ -54,7 +54,7 @@
 
 @Hitret id=33184
 
-@Talk name=Kazuha_Monologue voice=KA042001
+@Talk name=Kazuha　Monologue voice=KA042001
 
 @Hitret id=33185
 
@@ -62,11 +62,11 @@
 
 @Hitret id=33186
 
-@Talk name=Kazuha_Monologue voice=KA042002
+@Talk name=Kazuha　Monologue voice=KA042002
 
 @Hitret id=33187
 
-@Talk name=Kazuha_Monologue voice=KA042003
+@Talk name=Kazuha　Monologue voice=KA042003
 
 @Hitret id=33188
 
@@ -77,19 +77,19 @@
 
 @ClearChar id=隆之
 
-@Talk name=Kazuha_Monologue voice=KA042004
+@Talk name=Kazuha　Monologue voice=KA042004
 
 @Hitret id=33190
 
-@Talk name=Kazuha_Monologue voice=KA042005
+@Talk name=Kazuha　Monologue voice=KA042005
 
 @Hitret id=33191
 
-@Talk name=Kazuha_Monologue voice=KA042006
+@Talk name=Kazuha　Monologue voice=KA042006
 
 @Hitret id=33192
 
-@Talk name=Kazuha_Monologue voice=KA042007
+@Talk name=Kazuha　Monologue voice=KA042007
 
 @Hitret id=33193
 
@@ -111,7 +111,7 @@
 
 @Hitret id=33196
 
-@Talk name=Kazuha_Monologue voice=KA042008
+@Talk name=Kazuha　Monologue voice=KA042008
 
 @Hitret id=33197
 
@@ -122,7 +122,7 @@
 
 @Hitret id=33198
 
-@Talk name=Kazuha_Monologue voice=KA042009
+@Talk name=Kazuha　Monologue voice=KA042009
 
 @Hitret id=33199
 
@@ -138,22 +138,22 @@
 
 @Hitret id=33202
 
-@Talk name=Kazuha_Monologue voice=KA042010
+@Talk name=Kazuha　Monologue voice=KA042010
 
 @Hitret id=33203
 
-@Talk name=Kazuha_Monologue voice=KA042011
+@Talk name=Kazuha　Monologue voice=KA042011
 
 @Hitret id=33204
 
-@Talk name=Kazuha_Monologue voice=KA042012
+@Talk name=Kazuha　Monologue voice=KA042012
 
 @Hitret id=33205
 
 
 @Char file=CD01_08M 
 
-@Talk name=Kazuha_Monologue voice=KA042013
+@Talk name=Kazuha　Monologue voice=KA042013
 
 @Hitret id=33206
 
@@ -164,11 +164,11 @@
 
 @Char file=CD01_12L 
 
-@Talk name=Kazuha_Monologue voice=KA042014
+@Talk name=Kazuha　Monologue voice=KA042014
 
 @Hitret id=33208
 
-@Talk name=Kazuha_Monologue voice=KA042015
+@Talk name=Kazuha　Monologue voice=KA042015
 
 @Hitret id=33209
 
@@ -186,7 +186,7 @@
 
 @Cg file=B27a   
 
-@Talk name=Kazuha_Monologue voice=KA042016
+@Talk name=Kazuha　Monologue voice=KA042016
 
 @Hitret id=33212
 
@@ -194,15 +194,15 @@
 
 @Hitret id=33213
 
-@Talk name=Kazuha_Monologue voice=KA042017
+@Talk name=Kazuha　Monologue voice=KA042017
 
 @Hitret id=33214
 
-@Talk name=Kazuha_Monologue voice=KA042018
+@Talk name=Kazuha　Monologue voice=KA042018
 
 @Hitret id=33215
 
-@Talk name=Kazuha_Monologue voice=KA042019
+@Talk name=Kazuha　Monologue voice=KA042019
 
 @Hitret id=33216
 
@@ -210,11 +210,11 @@
 
 @Hitret id=33217
 
-@Talk name=Kazuha_Monologue voice=KA042020
+@Talk name=Kazuha　Monologue voice=KA042020
 
 @Hitret id=33218
 
-@Talk name=Kazuha_Monologue voice=KA042021
+@Talk name=Kazuha　Monologue voice=KA042021
 
 @Hitret id=33219
 
@@ -447,7 +447,7 @@
 
 @PlaySe file=SE262
 
-@Talk name=Kazuha's_Father voice=SH040038
+@Talk name=Kazuha's　Father voice=SH040038
 
 @Hitret id=33262
 
@@ -458,7 +458,7 @@
 
 @Hitret id=33263
 
-@Talk name=Kazuha's_Father voice=SH040039
+@Talk name=Kazuha's　Father voice=SH040039
 
 @Hitret id=33264
 
@@ -474,7 +474,7 @@
 
 @Hitret id=33267
 
-@Talk name=Kazuha's_Father voice=SH040040
+@Talk name=Kazuha's　Father voice=SH040040
 
 @Hitret id=33268
 
@@ -485,7 +485,7 @@
 
 @Hitret id=33269
 
-@Talk name=Kazuha's_Father voice=SH040041
+@Talk name=Kazuha's　Father voice=SH040041
 
 @Hitret id=33270
 
@@ -493,7 +493,7 @@
 
 @Hitret id=33271
 
-@Talk name=Kazuha's_Father voice=SH040042
+@Talk name=Kazuha's　Father voice=SH040042
 
 @Hitret id=33272
 
@@ -504,7 +504,7 @@
 
 @Hitret id=33273
 
-@Talk name=Kazuha's_Father voice=SH040043
+@Talk name=Kazuha's　Father voice=SH040043
 
 @Hitret id=33274
 

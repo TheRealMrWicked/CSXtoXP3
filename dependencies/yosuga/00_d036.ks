@@ -235,7 +235,7 @@
 
 @Char file=CH01_10M 
 
-@Talk name=Class_Rep voice=KO040011
+@Talk name=Class　Rep voice=KO040011
 
 @Hitret id=32371
 
@@ -246,7 +246,7 @@
 
 @Hitret id=32372
 
-@Talk name=Kazuha_and_Class_Rep voice=KA041288/KO040012
+@Talk name=Kazuha　and　Class　Rep voice=KA041288/KO040012
 
 @Hitret id=32373
 

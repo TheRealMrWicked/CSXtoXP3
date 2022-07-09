@@ -6,7 +6,7 @@
 @Cg file=B27a
 @PlayEnvSe file=SE302 fade=0
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6534
 
@@ -21,7 +21,7 @@
 
 @Hitret id=6536
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6537
 
@@ -45,7 +45,7 @@
 
 @Hitret id=6540
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6541
 
@@ -53,7 +53,7 @@
 
 @Hitret id=6542
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6543
 
@@ -64,14 +64,14 @@
 
 @Hitret id=6544
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6545
 
 
 @Char file=CG01_06M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6546
 
@@ -101,7 +101,7 @@
 @Update transition=universal rule=WIP_MOZH time=500
 @WaitUpdate
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6549
 
@@ -123,7 +123,7 @@
 
 @Hitret id=6552
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6553
 
@@ -146,7 +146,7 @@
 
 @Hitret id=6557
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6558
 
@@ -157,7 +157,7 @@
 
 @Hitret id=6559
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6560
 
@@ -168,7 +168,7 @@
 
 @Hitret id=6561
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6562
 
@@ -193,7 +193,7 @@
 
 @Hitret id=6566
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6567
 
@@ -204,7 +204,7 @@
 
 @Hitret id=6568
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6569
 
@@ -230,7 +230,7 @@
 
 @Hitret id=6573
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6574
 
@@ -271,7 +271,7 @@
 
 @Hitret id=6581
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6582
 
@@ -310,7 +310,7 @@
 
 @Hitret id=6590
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6591
 
@@ -321,7 +321,7 @@
 
 @Hitret id=6592
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6593
 
@@ -367,7 +367,7 @@
 
 @Hitret id=6602
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=6603
 

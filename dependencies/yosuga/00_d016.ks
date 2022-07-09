@@ -838,39 +838,39 @@
 @MoveCamera x=0 y=-600 time=20000 accel=0
 @MessageFrame type=1
 
-@Talk name=Kazuha_Monologue voice=KA040414
+@Talk name=Kazuha　Monologue voice=KA040414
 
 @Hitret id=28744
 
-@Talk name=Kazuha_Monologue voice=KA040415
+@Talk name=Kazuha　Monologue voice=KA040415
 
 @Hitret id=28745
 
-@Talk name=Kazuha_Monologue voice=KA040416
+@Talk name=Kazuha　Monologue voice=KA040416
 
 @Hitret id=28746
 
-@Talk name=Kazuha_Monologue voice=KA040417
+@Talk name=Kazuha　Monologue voice=KA040417
 
 @Hitret id=28747
 
-@Talk name=Kazuha_Monologue voice=KA040418
+@Talk name=Kazuha　Monologue voice=KA040418
 
 @Hitret id=28748
 
-@Talk name=Kazuha_Monologue voice=KA040419
+@Talk name=Kazuha　Monologue voice=KA040419
 
 @Hitret id=28749
 
-@Talk name=Kazuha_Monologue voice=KA040420
+@Talk name=Kazuha　Monologue voice=KA040420
 
 @Hitret id=28750
 
-@Talk name=Kazuha_Monologue voice=KA040421
+@Talk name=Kazuha　Monologue voice=KA040421
 
 @Hitret id=28751
 
-@Talk name=Kazuha_Monologue voice=KA040422
+@Talk name=Kazuha　Monologue voice=KA040422
 
 @Hitret id=28752
 

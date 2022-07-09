@@ -176,7 +176,7 @@
 @ClearChar 
 @Char file=CH07_01M 
 
-@Talk name=Class_Rep voice=KO020001
+@Talk name=Class　Rep voice=KO020001
 
 @Hitret id=18764
 
@@ -191,7 +191,7 @@
 
 @Char file=CH07_10M 
 
-@Talk name=Class_Rep voice=KO020002
+@Talk name=Class　Rep voice=KO020002
 
 @Hitret id=18766
 
@@ -240,7 +240,7 @@
 
 @Char file=CH07_01M 
 
-@Talk name=Class_Rep voice=KO020003
+@Talk name=Class　Rep voice=KO020003
 
 @Hitret id=18773
 
@@ -259,7 +259,7 @@
 
 
 
-@Talk name=Class_Rep voice=KO020004
+@Talk name=Class　Rep voice=KO020004
 
 @Hitret id=18776
 
@@ -274,7 +274,7 @@
 @Char file=CH07_10M 
 
 
-@Talk name=Class_Rep voice=KO020005
+@Talk name=Class　Rep voice=KO020005
 
 @Hitret id=18778
 
@@ -990,7 +990,7 @@
 @ClearChar 
 
 @Char file=CH07_01M 
-@Talk name=Class_Rep voice=KO020006
+@Talk name=Class　Rep voice=KO020006
 
 @Hitret id=18888
 
@@ -1016,7 +1016,7 @@
 
 @Char file=CH07_11M 
 
-@Talk name=Class_Rep voice=KO020007
+@Talk name=Class　Rep voice=KO020007
 
 @Hitret id=18892
 
@@ -1042,7 +1042,7 @@
 
 @Hitret id=18895
 
-@Talk name=Class_Rep voice=KO020008
+@Talk name=Class　Rep voice=KO020008
 
 @Hitret id=18896
 

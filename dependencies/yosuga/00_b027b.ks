@@ -40,7 +40,7 @@
 
 @Hitret id=16543
 
-@Talk name=Nao's_Friends voice=NP260020
+@Talk name=Nao's　Friends voice=NP260020
 
 @Hitret id=16544
 
@@ -56,7 +56,7 @@
 
 @Hitret id=16547
 
-@Talk name=Nao's_Friends voice=NP260021
+@Talk name=Nao's　Friends voice=NP260021
 
 @Hitret id=16548
 
@@ -67,7 +67,7 @@
 
 @StopEnvSe id=SE403 fade=0
 
-@Talk name=Nao's_Friends voice=NP260022
+@Talk name=Nao's　Friends voice=NP260022
 
 @Hitret id=16550
 
@@ -78,7 +78,7 @@
 
 @PlayBgm file=BGM16
 
-@Talk name=Nao's_Friends voice=NP260023
+@Talk name=Nao's　Friends voice=NP260023
 
 @Hitret id=16552
 
@@ -86,7 +86,7 @@
 
 @Hitret id=16553
 
-@Talk name=Nao's_Friends voice=NP260024
+@Talk name=Nao's　Friends voice=NP260024
 
 @Hitret id=16554
 

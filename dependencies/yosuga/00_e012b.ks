@@ -312,7 +312,7 @@
 
 @Hitret id=35210
 
-@Talk name=Street_Vendor voice=NP410002
+@Talk name=Street　Vendor voice=NP410002
 
 @Hitret id=35211
 
@@ -377,7 +377,7 @@
 
 @ClearChar 
 
-@Talk name=Street_Vendor voice=NP410003
+@Talk name=Street　Vendor voice=NP410003
 
 @Hitret id=35222
 
@@ -385,7 +385,7 @@
 
 @Hitret id=35223
 
-@Talk name=Street_Vendor voice=NP410004
+@Talk name=Street　Vendor voice=NP410004
 
 @Hitret id=35224
 
@@ -447,7 +447,7 @@
 
 @Hitret id=35237
 
-@Talk name=Street_Vendor voice=NP410005
+@Talk name=Street　Vendor voice=NP410005
 
 @Hitret id=35238
 
@@ -455,7 +455,7 @@
 
 @Hitret id=35239
 
-@Talk name=Street_Vendor voice=NP410006
+@Talk name=Street　Vendor voice=NP410006
 
 @Hitret id=35240
 

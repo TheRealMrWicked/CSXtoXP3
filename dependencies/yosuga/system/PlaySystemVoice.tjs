@@ -1,0 +1,73 @@
+
+	var SYSTEM_VOICE_LIST = %[
+	ブランドコール				:	["SR080001", "AK080001", "NO080001", "KA080001", "MT080001", "RH080001", "YH080001", "KO080001"],
+	タイトルコール				:	["SR080002", "AK080002", "NO080002", "KA080002", "MT080002", "RH080002", "YH080002", "KO080002"],
+	音声マスター：ボリューム	:	["SR000029", "AK000006", "NO000009", "KA000054", "MT000006", "RH000003", "YH000005", "KO000004", "YM000002", "SH040002"],
+	個別音声：ボリューム		:	["SR000029", "AK000006", "NO000009", "KA000054", "MT000006", "RH000003", "YH000005", "KO000004", "YM000002", "SH040002", "NP210001"],
+
+	ダミー							:	[]
+	];
+
+
+//ランダム再生
+function PlaySystemVoice(type, fPlay=true, fConfig=true, fCheckFlag=true){
+	if(SYSTEM_VOICE_LIST[type] === void) return;
+
+	var list = [];
+	list.assign(SYSTEM_VOICE_LIST[type]);
+	for(var i=list.count-1;i>=0;i--){
+		if(list[i].length == 0) list.erase(i);
+	}
+	if(fCheckFlag){
+		for(var i=list.count-1;i>=0;i--){
+			if(!CheckPlaySystemVoice(list[i].substring(0, 2)))
+				list.erase(i);
+		}
+	}
+	if(!ChkGlobalFlagOn(21)){
+	//こころと出会っていない間はシステム音から除外する。
+		for(var i=list.count-1;i>=0;i--){
+			if(list[i].indexOf("KKR") != -1)
+				list.erase(i);
+		}
+	}
+	if(list.count == 0) return;
+
+	var num = list.count;
+	var index = random(num - 1);
+	var file = list[index];
+	var id = VCID_TO_INDEX[file.substring(0, 2)];
+	var vol = CONFIG.volSystem;
+
+	if(!Storages.isExistentStorage(file + ".ogg")) return;
+
+	if(fConfig) fPlay &= !CONFIG.muteSystem;
+
+	if(fPlay){
+		StopSystemSound();
+		PlaySystemSound(file, vol, fConfig);
+	}
+	return file;
+}
+
+//キャラ指定
+function PlaySystemVoiceIndex(type, index, fPlay=true, fConfig=true){
+	if(SYSTEM_VOICE_LIST[type] === void) return;
+
+	var file = SYSTEM_VOICE_LIST[type][index];
+	if(file === void) return;
+	if(file.length == 0) return;
+
+	var id = VCID_TO_INDEX[file.substring(0, 2)];
+	var vol = CONFIG.volSystem;
+
+	if(!Storages.isExistentStorage(file + ".ogg")) return;
+
+	if(fConfig) fPlay &= !CONFIG.muteSystem;
+
+	if(fPlay){
+		StopSystemSound();
+		PlaySystemSound(file, vol, fConfig);
+	}
+	return file;
+}

@@ -5,15 +5,15 @@
 @Cg file=B27a center=400,300
 @MessageFrame type=1
 
-@Talk name=Kozue_Monologue voice=KO021672
+@Talk name=Kozue@Monologue voice=KO021672
 
 @Hitret id=13861
 
-@Talk name=Kozue_Monologue voice=KO021673
+@Talk name=Kozue@Monologue voice=KO021673
 
 @Hitret id=13862
 
-@Talk name=Kozue_Monologue voice=KO021674
+@Talk name=Kozue@Monologue voice=KO021674
 
 @Hitret id=13863
 
@@ -54,7 +54,7 @@
 
 @Hitret id=13870
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13871
 
@@ -86,7 +86,7 @@
 
 @ClearChar
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13876
 
@@ -118,11 +118,11 @@
 
 @Hitret id=13881
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13882
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13883
 
@@ -151,7 +151,7 @@
 
 @Hitret id=13886
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13887
 
@@ -234,7 +234,7 @@
 
 @Char file=CH08_13L
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13899
 
@@ -242,7 +242,7 @@
 @Char file=CA03_09M
 @Char file=CH08_07L
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13900
 
@@ -260,7 +260,7 @@
 
 @Hitret id=13902
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13903
 
@@ -278,11 +278,11 @@
 
 @Hitret id=13905
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13906
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13907
 
@@ -293,7 +293,7 @@
 
 @Hitret id=13908
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13909
 
@@ -305,7 +305,7 @@
 
 @Hitret id=13910
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13911
 
@@ -313,7 +313,7 @@
 
 @Hitret id=13912
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13913
 
@@ -321,7 +321,7 @@
 
 @Hitret id=13914
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13915
 
@@ -329,7 +329,7 @@
 
 @Hitret id=13916
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13917
 
@@ -353,7 +353,7 @@
 
 @Char file=CA03_02M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13920
 
@@ -386,7 +386,7 @@
 
 @Hitret id=13924
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13925
 
@@ -402,7 +402,7 @@
 
 @Char file=CA03_01M
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13927
 
@@ -431,7 +431,7 @@
 
 @Hitret id=13931
 
-@Talk name=—I
+@Talk name=Haruka
 
 @Hitret id=13932
 

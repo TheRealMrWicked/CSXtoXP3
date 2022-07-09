@@ -17,19 +17,19 @@
 
 @Cg file=B15a
 
-@Talk name=坊主頭の少年 voice=NP040001
+@Talk name=Boy　with　Shaved　Head voice=NP040001
 
 @Hitret id=5859
 
-@Talk name=短髪の少年 voice=NP050001
+@Talk name=Boy　with　Short　Hair voice=NP050001
 
 @Hitret id=5860
 
-@Talk name=坊主頭の少年 voice=NP040002
+@Talk name=Boy　with　Shaved　Head voice=NP040002
 
 @Hitret id=5861
 
-@Talk name=太っちょの少年 voice=NP060001
+@Talk name=Overweight　Boy voice=NP060001
 
 @Hitret id=5862
 
@@ -58,11 +58,11 @@
 
 @Hitret id=5867
 
-@Talk name=坊主頭の少年 voice=NP040003
+@Talk name=Boy　with　Shaved　Head voice=NP040003
 
 @Hitret id=5868
 
-@Talk name=短髪の少年 voice=NP050002
+@Talk name=Boy　with　Short　Hair voice=NP050002
 
 @Hitret id=5869
 
@@ -70,7 +70,7 @@
 
 @Hitret id=5870
 
-@Talk name=太っちょの少年 voice=NP060002
+@Talk name=Overweight　Boy voice=NP060002
 
 @Hitret id=5871
 
@@ -88,7 +88,7 @@
 
 @Hitret id=5873
 
-@Talk name=坊主頭の少年 voice=NP040004
+@Talk name=Boy　with　Shaved　Head voice=NP040004
 
 @Hitret id=5874
 
@@ -100,11 +100,11 @@
 
 @Hitret id=5876
 
-@Talk name=坊主頭の少年 voice=NP040005
+@Talk name=Boy　with　Shaved　Head voice=NP040005
 
 @Hitret id=5877
 
-@Talk name=短髪の少年 voice=NP050003
+@Talk name=Boy　with　Short　Hair voice=NP050003
 
 @Hitret id=5878
 
@@ -130,7 +130,7 @@
 
 @Hitret id=5882
 
-@Talk name=太っちょの少年 voice=NP060003
+@Talk name=Overweight　Boy voice=NP060003
 
 @Hitret id=5883
 
@@ -172,19 +172,19 @@
 
 @Hitret id=5891
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5892
 
-@Talk name=短髪の少年 voice=NP050004
+@Talk name=Boy　with　Short　Hair voice=NP050004
 
 @Hitret id=5893
 
-@Talk name=坊主頭の少年 voice=NP040006
+@Talk name=Boy　with　Shaved　Head voice=NP040006
 
 @Hitret id=5894
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5895
 
@@ -207,7 +207,7 @@
 
 @Hitret id=5899
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5900
 
@@ -218,11 +218,11 @@
 
 @Hitret id=5901
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5902
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5903
 
@@ -233,7 +233,7 @@
 
 @Hitret id=5904
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5905
 
@@ -241,7 +241,7 @@
 
 @Hitret id=5906
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5907
 
@@ -252,7 +252,7 @@
 
 @Hitret id=5908
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5909
 
@@ -267,7 +267,7 @@
 
 @Hitret id=5911
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5912
 
@@ -286,7 +286,7 @@
 
 @Hitret id=5915
 
-@Talk name=太っちょの少年 voice=NP060004
+@Talk name=Overweight　Boy voice=NP060004
 
 @Hitret id=5916
 
@@ -297,7 +297,7 @@
 
 @Hitret id=5917
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5918
 
@@ -305,7 +305,7 @@
 
 @Hitret id=5919
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5920
 
@@ -332,7 +332,7 @@
 
 @Hitret id=5925
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5926
 
@@ -362,7 +362,7 @@
 
 @Hitret id=5931
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5932
 
@@ -373,7 +373,7 @@
 
 @Hitret id=5933
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5934
 
@@ -410,7 +410,7 @@
 
 @Hitret id=5940
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5941
 
@@ -418,7 +418,7 @@
 
 @Hitret id=5942
 
-@Talk name=短髪の少年 voice=NP050005
+@Talk name=Boy　with　Short　Hair voice=NP050005
 
 @Hitret id=5943
 
@@ -429,11 +429,11 @@
 
 @Hitret id=5944
 
-@Talk name=坊主頭の少年 voice=NP040007
+@Talk name=Boy　with　Shaved　Head voice=NP040007
 
 @Hitret id=5945
 
-@Talk name=太っちょの少年 voice=NP060005
+@Talk name=Overweight　Boy voice=NP060005
 
 @Hitret id=5946
 
@@ -441,7 +441,7 @@
 
 @Hitret id=5947
 
-@Talk name=坊主頭の少年 voice=NP040008
+@Talk name=Boy　with　Shaved　Head voice=NP040008
 
 @Hitret id=5948
 
@@ -453,7 +453,7 @@
 
 @Hitret id=5950
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5951
 
@@ -483,7 +483,7 @@
 
 @Hitret id=5956
 
-@Talk name=短髪の少年 voice=NP050006
+@Talk name=Boy　with　Short　Hair voice=NP050006
 
 @Hitret id=5957
 
@@ -514,7 +514,7 @@
 
 @Hitret id=5963
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5964
 
@@ -529,7 +529,7 @@
 
 @Hitret id=5966
 
-@Talk name=悠
+@Talk name=Haruka
 
 @Hitret id=5967
 

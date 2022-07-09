@@ -1,0 +1,318 @@
+
+//デバッグメッセージ出力用
+@if(__DEBUGMODE__ != 0)
+	var dm = Debug.message;
+	var sm = System.inform;
+@endif
+@if(__DEBUGMODE__ == 0)
+	var dm = function(text){};
+	var sm = function(text){};
+@endif
+
+//多重起動チェック
+if(!System.createAppLock("CuffsApplication-"+GAME_CAPTION)){
+	System.inform("すでに起動しています。");
+	System.exit();
+}
+
+/*
+@if(__DEBUGMODE__ == 1)
+	//動作オプション設定
+	System.setArgument("-contfreq", "6000");	//更新周期(Hz)
+	System.setArgument("-usedb", "yes");	//ダブルバッファリング有効
+	System.setArgument("-dbstyle", "auto");	//ダブルバッファリング方式　自動
+@endif
+*/
+
+//------------------------------------------------------------------------------
+//
+// 設定ファイルの不正変更回避
+//		つまるところファイル削除程度でデバッグメニューが出るのは見苦しいので。
+//
+//------------------------------------------------------------------------------
+@if(__DEBUGMODE__ == 0)
+
+	var success = 0;
+
+	if (Storages.isExistentStorage(System.exePath + GAME_CONFIG)) {
+		var fileData = new Array();
+		var optionNum = 4, optionName = ["hkcontroller=\"\"", "hkeditor=\"\"", "hkwatch=\"\"", "hkconsole=\"\""];
+		var flags = 0, i, j;
+
+		fileData.load(System.exePath + GAME_CONFIG);
+
+		for (i = j = 0; i < fileData.count;) {
+			if (!fileData[i].indexOf( optionName[j] )) {
+				if ((flags >> j) & 1) { i = 0; break; }
+				flags |= (1 << j), j = 0, ++i;
+				continue;
+			}
+			if ((++j) > optionNum) j = 0, ++i;
+		}
+
+		if (i == fileData.count) {
+			for (i = 0; i < optionNum; ++i) {
+				if (((flags >> i) & 1) == 0) break;
+			}
+			if (i == optionNum) success = 1;
+		}
+
+		invalidate fileData;
+	}
+
+	if (!success) {
+		System.inform("正常に起動できませんでした");
+		System.exit();
+	}
+@endif
+
+//------------------------------------------------------------------------------
+//
+// 捕捉されない例外に対する処理
+// 製品版でコンソールが表示されるとみっともないので、
+// エラーだけ表示して終了させる。
+//
+//------------------------------------------------------------------------------
+@if(__DEBUGMODE__ == 0)
+	System.exceptionHandler = function (e) {
+		System.eventDisabled = true;
+
+		Debug.logAsError();
+		System.inform(e.message);
+		System.terminate();
+		return true;
+	};
+@endif
+
+//キャプション登録
+System.title = GAME_CAPTION;
+
+function AddAutoPath(name){
+	//">"で分割
+	var path = name.split(">");
+
+	if(path.count == 1){
+		//分割できなかったので普通に追加
+		Storages.addAutoPath(name);
+		return true;
+	}else{
+	//分割出来た場合は、アーカイブファイルの有無をチェックしてから追加
+		if(Storages.isExistentStorage(System.exePath + path[0])) {
+		//見つかった
+			Storages.addAutoPath(System.exePath + name);
+			return true;
+		}
+	}
+	return false;
+}
+
+//パス設定
+
+//アーカイブ読み込み
+AddAutoPath("data.xp3>system/");
+AddAutoPath("data.xp3>scenario/");
+AddAutoPath("char.xp3>");
+AddAutoPath("voice.xp3>");
+AddAutoPath("parts.xp3>");
+AddAutoPath("event.xp3>");
+AddAutoPath("parts.xp3>bg/");
+AddAutoPath("parts.xp3>bgm/");
+AddAutoPath("parts.xp3>char/");
+AddAutoPath("parts.xp3>event/");
+AddAutoPath("parts.xp3>se/");
+AddAutoPath("parts.xp3>sd/");
+AddAutoPath("parts.xp3>rule/");
+AddAutoPath("parts.xp3>frame/");
+AddAutoPath("parts.xp3>thumb/");
+AddAutoPath("parts.xp3>face/");
+AddAutoPath("parts.xp3>font/");
+AddAutoPath("parts.xp3>emotion/");
+AddAutoPath("parts.xp3>credit/");
+AddAutoPath("patch.xp3>");
+
+//後で追加したものから優先してチェックされる
+AddAutoPath("parts/");
+AddAutoPath("parts/bg/");
+AddAutoPath("parts/char/");
+AddAutoPath("parts/face/");
+AddAutoPath("parts/event/");
+AddAutoPath("parts/voice/");
+AddAutoPath("parts/bgm/");
+AddAutoPath("parts/se/");
+AddAutoPath("parts/sd/");
+AddAutoPath("parts/rule/");
+AddAutoPath("parts/frame/");
+AddAutoPath("parts/thumb/");
+AddAutoPath("parts/font/");
+AddAutoPath("parts/emotion/");
+AddAutoPath("parts/credit/");
+AddAutoPath("_debug/");
+AddAutoPath("_debug/tutorial/");
+AddAutoPath("system/");
+AddAutoPath("scenario/");
+AddAutoPath("plugin/");
+
+delete AddAutoPath;
+
+//プラグイン追加
+Plugins.link("extrans.dll");
+Plugins.link("csvParser.dll");
+Plugins.link("windowEx.dll");
+Plugins.link("layerExDraw.dll");
+Plugins.link("fstat.dll");
+Plugins.link("KAGParserEx.dll");
+@if(__DEBUGMODE__)
+	Plugins.link("getSample.dll");
+@endif
+
+//スクリプト読み込み
+function LoadScript(name){
+	if(Storages.isExistentStorage(name)){
+		Scripts.execStorage(name);
+	}else{
+		dm(name+"が見つかりませんでした。");
+	}
+}
+
+//各システム読み込み
+LoadScript("Utility.tjs");
+LoadScript("AffineLayer.tjs");
+LoadScript("Sprite.tjs");
+LoadScript("Window.tjs");
+LoadScript("MessageArea.tjs");
+LoadScript("ScController.tjs");
+LoadScript("SelectItem.tjs");
+LoadScript("GameSceneManager.tjs");
+LoadScript("ADVObject.tjs");
+LoadScript("ADVScreen.tjs");
+LoadScript("EditLayer.tjs");
+LoadScript("Sound.tjs");
+LoadScript("Action.tjs");
+LoadScript("Movie.tjs");
+LoadScript("AnimationSequence.tjs");
+
+//ゲーム固有
+LoadScript("System.tjs");
+LoadScript("MessageFrame.tjs");
+LoadScript("Confirm.tjs");
+LoadScript("SystemWindow.tjs");
+LoadScript("ConfigWindow.tjs");
+LoadScript("CgSetupInfo.tjs");
+LoadScript("SetupADVObject.tjs");
+LoadScript("Title.tjs");
+LoadScript("PlaySystemVoice.tjs");
+LoadScript("EyeCatch.tjs");
+LoadScript("Album.tjs");
+LoadScript("CgFlag.tjs");
+LoadScript("StaffRoll.tjs");
+LoadScript("EnvEffect.tjs");
+@if(__DEBUGMODE__)
+	LoadScript("debugUtility.tjs");
+@endif
+
+//乱数初期化
+randomSeed(System.getTickCount());
+
+//共有リソース
+//================================================
+//キャラクターデータ初期化
+CharDataInit();
+//================================================
+//システムレジスタ作成
+var sysReg = new SystemRegister("system.dat");
+var CONFIG = sysReg._config;
+@if(__HARUKA__)
+	SetCgFlag(0, 1);		//最初からオープンしてる系
+@endif
+//================================================
+//メインウィンドウの作成
+var win = new MainWindow();
+win.add(sysReg);
+win.add(saveMan);
+//================================================
+//サウンド管理オブジェクト
+var BGM = new SoundLayer(win);
+BGM.volume = CONFIG.volBgm;
+var SE = new SoundLayer(win);
+var ENVSE = new SoundLayer(win);
+SE.volume = ENVSE.volume = CONFIG.volSe;
+var SYSTEMSOUND = new SoundLayer(win);
+SYSTEMSOUND.volume = CONFIG.volSystem;
+
+var VOICE = null;	//これはADVScreen内で作成する
+var BGV = null;		//これはADVScreen内で作成する
+//================================================
+//レンダリング済みフォント登録
+PrerenderedFontInit();
+//================================================
+//セーブデータ用リソース
+var IMG_SAVEDATA_BASE = [];
+	IMG_SAVEDATA_BASE[0] = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_BASE[0].loadImages("FRM_0303l@");
+	IMG_SAVEDATA_BASE[0].setSizeToImageSize();
+	IMG_SAVEDATA_BASE[1] = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_BASE[1].loadImages("FRM_0303s@");
+	IMG_SAVEDATA_BASE[1].setSizeToImageSize();
+var IMG_SAVEDATA_NUM = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_NUM.loadImages("FRM_0304");
+	IMG_SAVEDATA_NUM.setSizeToImageSize();
+var IMG_SAVEDATA_ALPHA = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_ALPHA.loadImages("FRM_0305");
+	IMG_SAVEDATA_ALPHA.setSizeToImageSize();
+var IMG_SAVEDATA_BTN = [];
+	IMG_SAVEDATA_BTN[0] = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_BTN[0].loadImages("FRM_0306l");
+	IMG_SAVEDATA_BTN[0].setSizeToImageSize();
+	IMG_SAVEDATA_BTN[1] = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_BTN[1].loadImages("FRM_0306s");
+	IMG_SAVEDATA_BTN[1].setSizeToImageSize();
+var IMG_SAVEDATA_COM = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_COM.loadImages("FRM_0341");
+	IMG_SAVEDATA_COM.setSizeToImageSize();
+var IMG_SAVEDATA_COPY = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_COPY.loadImages("FRM_0343");
+	IMG_SAVEDATA_COPY.setSizeToImageSize();
+var IMG_SAVEDATA_MOVE = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_MOVE.loadImages("FRM_0344");
+	IMG_SAVEDATA_MOVE.setSizeToImageSize();
+var IMG_SAVEDATA_DEL = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_DEL.loadImages("FRM_0345");
+	IMG_SAVEDATA_DEL.setSizeToImageSize();
+var IMG_SAVEDATA_LOCK = new Layer(win, win.primaryLayer);
+	IMG_SAVEDATA_LOCK.loadImages("FRM_0346");
+	IMG_SAVEDATA_LOCK.setSizeToImageSize();
+@if(__HARUKA__ == 0)
+	var files = [
+			"FRM_0311", "FRM_0312", "FRM_0313", "FRM_0314", "FRM_0315"
+		];
+@endif
+@if(__HARUKA__ != 0)
+	var files = [
+			"FRM_0311", "FRM_0312", "FRM_0313", "FRM_0314", "FRM_0315", "FRM_0317", "FRM_0316"
+		];
+@endif
+var IMG_SAVEDATA_CHAR = [];
+	for(var i=0;i<files.count;i++){
+		IMG_SAVEDATA_CHAR[i] = new Layer(win, win.primaryLayer);
+		with(IMG_SAVEDATA_CHAR[i]){
+			IMG_SAVEDATA_CHAR[i].loadImages(files[i]);
+			IMG_SAVEDATA_CHAR[i].setSizeToImageSize();
+		}
+	}
+invalidate files;
+delete files;
+//================================================
+
+@if(__DEBUGMODE__)
+//デバックパネル作成
+	LoadScript("DebugController.tjs");
+	var debug = new DebugController(win, win.baseLayer);
+	debug.setPos(CONFIG.debugX, CONFIG.debugY);
+	debug.edtScenarioJump.text = CONFIG.debugJump;
+	debug.edtSearchSkip.text = CONFIG.debugSearch;
+	debug.tglBuCenter.state = CONFIG.debugBuCenter;
+	debug.tglSupExp.state = CONFIG.debugSupExp;
+	debug.visible = CONFIG.debugVisible;
+@endif
+
+delete LoadScript;

@@ -139,7 +139,7 @@
 
 @Hitret id=4354
 
-@Talk name=Math_Teacher voice=NP120001
+@Talk name=Math　Teacher voice=NP120001
 
 @Hitret id=4355
 
@@ -158,7 +158,7 @@
 
 @Hitret id=4358
 
-@Talk name=Math_Teacher voice=NP120002
+@Talk name=Math　Teacher voice=NP120002
 
 @Hitret id=4359
 
@@ -196,7 +196,7 @@
 
 @Hitret id=4365
 
-@Talk name=Math_Teacher voice=NP120003
+@Talk name=Math　Teacher voice=NP120003
 
 @Hitret id=4366
 
@@ -361,7 +361,7 @@
 @Char file=CC01_01M 
 @Char file=CD01_12M 
 
-@Talk name=Sora_and_Akira_and_Kazuha voice=SR010433/AK010122/KA010047
+@Talk name=Sora　and　Akira　and　Kazuha voice=SR010433/AK010122/KA010047
 
 @Hitret id=4393
 
@@ -820,7 +820,7 @@
 
 @Hitret id=4470
 
-@Talk name=Haruka_and_Sora voice=SR010438
+@Talk name=Haruka　and　Sora voice=SR010438
 
 @Hitret id=4471
 
@@ -1055,119 +1055,119 @@
 @Flash color=WHITE enter=0 leave=2000
 @MessageFrame type=1
 
-@Talk name=Sora_Monologue voice=SR010447
+@Talk name=Sora　Monologue voice=SR010447
 
 @Hitret id=4509
 
-@Talk name=Sora_Monologue voice=SR010448
+@Talk name=Sora　Monologue voice=SR010448
 
 @Hitret id=4510
 
-@Talk name=Sora_Monologue voice=SR010449
+@Talk name=Sora　Monologue voice=SR010449
 
 @Hitret id=4511
 
-@Talk name=Sora_Monologue voice=SR010450
+@Talk name=Sora　Monologue voice=SR010450
 
 @Hitret id=4512
 
-@Talk name=Sora_Monologue voice=SR010451
+@Talk name=Sora　Monologue voice=SR010451
 
 @Hitret id=4513
 
-@Talk name=Sora_Monologue voice=SR010452
+@Talk name=Sora　Monologue voice=SR010452
 
 @Hitret id=4514
 
-@Talk name=Sora_Monologue voice=SR010453
+@Talk name=Sora　Monologue voice=SR010453
 
 @Hitret id=4515
 
-@Talk name=Sora_Monologue voice=SR010454
+@Talk name=Sora　Monologue voice=SR010454
 
 @Hitret id=4516
 
-@Talk name=Sora_Monologue voice=SR010455
+@Talk name=Sora　Monologue voice=SR010455
 
 @Hitret id=4517
 
-@Talk name=Sora_Monologue voice=SR010456
+@Talk name=Sora　Monologue voice=SR010456
 
 @Hitret id=4518
 
-@Talk name=Sora_Monologue voice=SR010457
+@Talk name=Sora　Monologue voice=SR010457
 
 @Hitret id=4519
 
-@Talk name=Sora_Monologue voice=SR010458
+@Talk name=Sora　Monologue voice=SR010458
 
 @Hitret id=4520
 
-@Talk name=Sora_Monologue voice=SR010459
+@Talk name=Sora　Monologue voice=SR010459
 
 @Hitret id=4521
 
-@Talk name=Sora_Monologue voice=SR010460
+@Talk name=Sora　Monologue voice=SR010460
 
 @Hitret id=4522
 
-@Talk name=Sora_Monologue voice=SR010461
+@Talk name=Sora　Monologue voice=SR010461
 
 @Hitret id=4523
 
-@Talk name=Sora_Monologue voice=SR010462
+@Talk name=Sora　Monologue voice=SR010462
 
 @Hitret id=4524
 
-@Talk name=Sora_Monologue voice=SR010463
+@Talk name=Sora　Monologue voice=SR010463
 
 @Hitret id=4525
 
-@Talk name=Sora_Monologue voice=SR010464
+@Talk name=Sora　Monologue voice=SR010464
 
 @Hitret id=4526
 
-@Talk name=Sora_Monologue voice=SR010465
+@Talk name=Sora　Monologue voice=SR010465
 
 @Hitret id=4527
 
-@Talk name=Sora_Monologue voice=SR010466
+@Talk name=Sora　Monologue voice=SR010466
 
 @Hitret id=4528
 
-@Talk name=Sora_Monologue voice=SR010467
+@Talk name=Sora　Monologue voice=SR010467
 
 @Hitret id=4529
 
-@Talk name=Sora_Monologue voice=SR010468
+@Talk name=Sora　Monologue voice=SR010468
 
 @Hitret id=4530
 
-@Talk name=Sora_Monologue voice=SR010469
+@Talk name=Sora　Monologue voice=SR010469
 
 @Hitret id=4531
 
-@Talk name=Sora_Monologue voice=SR010470
+@Talk name=Sora　Monologue voice=SR010470
 
 @Hitret id=4532
 
-@Talk name=Sora_Monologue voice=SR010471
+@Talk name=Sora　Monologue voice=SR010471
 
 @Hitret id=4533
 
-@Talk name=Sora_Monologue voice=SR010472
+@Talk name=Sora　Monologue voice=SR010472
 
 @Hitret id=4534
 
-@Talk name=Sora_Monologue voice=SR010473
+@Talk name=Sora　Monologue voice=SR010473
 
 @Hitret id=4535
 
-@Talk name=Sora_Monologue voice=SR010474
+@Talk name=Sora　Monologue voice=SR010474
 
 @Hitret id=4536
 
-@Talk name=Sora_Monologue voice=SR010475
+@Talk name=Sora　Monologue voice=SR010475
 
 @Hitret id=4537
 
@@ -1488,7 +1488,7 @@
 @Char file=CC02_06M 
 @Char file=CF03_10M 
 
-@Talk name=Akira_and_Ryouhei voice=AK010153/RH010209
+@Talk name=Akira　and　Ryouhei voice=AK010153/RH010209
 
 @Hitret id=4588
 

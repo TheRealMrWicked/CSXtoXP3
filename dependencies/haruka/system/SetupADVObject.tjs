@@ -1,0 +1,160 @@
+//各CGおよびバストアップの基本情報を設定する。
+
+function SetupCg(adv, obj, file, envTone){
+	with(obj){
+		file = file.toUpperCase();
+		var type = file.substring(0, 1);
+		var base, diff;
+		switch(type){
+		case "E" :
+			base = file.substring(0, 4);	//ベース
+			diff = file.substring(0, 5);
+
+			break;
+		case "B" :
+			base = file;					//ベース
+			diff = file;					//個別
+
+			break;
+		case "S" :
+			base = file.substring(0, 4);	//ベース
+			diff = file;					//個別
+
+			break;
+		default :
+			base = file;					//ベース
+			diff = file;					//個別
+			break;
+		}
+
+		.id = "背景";
+		.kind = ADVOBJ_CG;
+		.file = file;
+
+		var elm = CG_SETUP_INFO[diff];
+		if(elm === void)
+			elm = GetElm(CG_SETUP_INFO[base], %[tone:TONE_DIC["normal"]]);
+
+		if(elm.center !== void){
+			.center.set(PointStrToNum(elm.center));
+		}
+
+		adv.envTone = elm.tone;
+		if(envTone !== void){
+			adv.envTone = TONE_DIC[envTone];
+		}
+
+		//個別フラグ
+		if(CG_FLAG_LIST[diff] === void){
+			dm("管理外のＣＧファイル指定です : " + file);
+			return;
+		}
+		SetCgFlag(CG_FLAG_LIST[diff], true);
+
+		//ベースフラグ
+		if(CG_FLAG_LIST[base] === void){
+			dm("管理外のＣＧファイル指定です : " + base);
+			return;
+		}
+		SetCgFlag(CG_FLAG_LIST[base], true);
+	}
+
+	return obj;
+}
+
+var ADVOBJ_DEFAULT_X	= 0xFFFFFFFF;
+var ADVOBJ_DEFAULT_Y	= 0xFFFFFFFF;
+
+function SetupBustup(obj, id){
+	id = id.toUpperCase();
+	var tempID = id;
+
+	var charID = id.substring(0, 2);
+
+	obj.id = -1;
+
+	var index = BUID_TO_INDEX[charID];
+	if(index === void){
+		obj.file = id;
+		return;
+	}
+
+	var refInfo = CHAR_DATA[index];
+
+	var baseID = id.substring(0, 4);
+	var dressID = id.substring(0, 7);
+	var sizeID = id[7];
+
+	with(obj){
+		.id = refInfo.name;
+		.order = int refInfo.order;
+		.relate = int refInfo.relate;
+	}
+
+	if(!IsRegistAdvObjInfo(id)){
+		LoadAdvObjInfo(id);
+	}
+
+	if(ADVOBJ_INFO[id] === void){
+		obj.file = id;
+		return;
+	}
+
+	obj.center.set(ADVOBJ_INFO[id].guidex, ADVOBJ_INFO[id].guidey);
+
+	with(obj){
+		.file = tempID;
+
+		//サイズ
+		switch(sizeID){
+		case "L" : 
+			.order += ADVLAYER_BUSTUP_L;
+			.zOrder = 25;
+			break;
+		case "M" : 
+			.order += ADVLAYER_BUSTUP_M;
+			.zOrder = 30;
+			break;
+		case "S" : 
+			.order += ADVLAYER_BUSTUP_S;
+			.zOrder = 35;
+			break;
+		default:
+			.order += ADVLAYER_BUSTUP_L;
+			.zOrder = 20;
+			break;
+		}
+	}
+
+	//個別フラグ
+	if(CG_FLAG_LIST[baseID] === void){
+		dm("管理外のバストアップファイル指定です : " + obj.file);
+		return;
+	}
+	SetCgFlag(CG_FLAG_LIST[baseID], true);
+
+	//ベースフラグ
+	if(CG_FLAG_LIST[dressID] === void) return;
+	SetCgFlag(CG_FLAG_LIST[dressID], true);
+
+	return obj;
+}
+
+function SetupSd(file){
+	file = file.toUpperCase();
+	var base = file.substring(0, 6);
+
+	//個別フラグ
+	if(CG_FLAG_LIST[file] === void){
+		dm("管理外のＣＧファイル指定です : " + file);
+		return;
+	}
+	SetCgFlag(CG_FLAG_LIST[file], true);
+
+	//ベースフラグ
+	if(CG_FLAG_LIST[base] === void){
+		dm("管理外のＣＧファイル指定です : " + base);
+		return;
+	}
+	SetCgFlag(CG_FLAG_LIST[base], true);
+}

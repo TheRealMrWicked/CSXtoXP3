@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import textwrap
+import time
 
 
 def dependencies():  # Checks for the program's dependencies, if they are not all found it halts execution and informs the user to add the files.
@@ -22,6 +23,9 @@ def dependencies():  # Checks for the program's dependencies, if they are not al
 def csxDecrypter(choice):  # Decrypts the csx file for the specific games using Proger's CSX Importer/Exporter.
     mainDirectory = os.getcwd()
     os.chdir("dependencies")
+    print("Please press the Enter key to after you see 'Success.' to continue program execution.")
+    print("Beginning execution...")
+    time.sleep(5)
     if choice == 1:
         os.system("csx " + mainDirectory + "\yosuga.csx export-no-names")
     elif choice == 2:
@@ -38,37 +42,76 @@ def utfCombiner():  # Combines the .utf files into 1 file for easier processing.
                 shutil.copyfileobj(readfile, outfile)
 
 
-def textReplacer():  # Removes random pieces of text that are added in the conversion process.
+def textReplacer(choice):  # Removes random pieces of text that are added in the conversion process.
     textReplace = open("temp.txt", "r", encoding="UTF-8")  # Opens the new file into the file stream.
     data = textReplace.read()  # Declaring the data variable used to store the changes to the text.
 
+    data = re.sub("<.*>", "", string=data)  # Replaces the numbers in <> before each line with nothing.
     data = data.replace('／', ' ')  # Replaces the '／' symbol with a space.
     data = data.replace('\=', '')  # Replaces the '\=' symbol with nothing.
     data = data.replace('…', '.')  # Replaces the … symbol with .
     data = data.replace('’', "'")  # Replaces the ’ symbol with '
-    data = data.replace('～', '~')  # Replaces the '～' symbol with nothing.
     data = data.replace('–', '-')  # Replaces the '–' symbol with '-'.
     data = data.replace('— ', '')  # Replaces the '— ' symbol with nothing.
     data = data.replace('—', '-')  # Replaces the '—' symbol with '-'.
     data = data.replace('－', '-')  # Replaces the '－' symbol with '-'.
     data = data.replace('[', '(')  # Replaces the '[' symbol with '('.
     data = data.replace(']', ')')  # Replaces the ']' symbol with ')'.
+    data = data.replace('*', '＊')  # Replaces the '*' symbol with ⋆.
     data = data.replace('ä', 'a')  # Replaces the 'ä' symbol with a.
     data = data.replace('é', 'e')  # Replaces the 'é' symbol with e.
-    data = data.replace('ō', 'o')  # Replaces the 'ō' symbol with e.
-    data = re.sub("<.*>", "", string=data)  # Replaces the numbers in <> before each line with nothing.
+    data = data.replace('ō', 'o')  # Replaces the 'ō' symbol with o.
 
     textReplace = open("temp.txt", "w", encoding="UTF-8")  # Reopens the file for writing the new data to the file.
     textReplace.write(data)  # Writes the variable into the file.
     textReplace.close()  # Closes the file stream.
 
+    if choice == 1:
+        with open("temp.txt", "r", encoding="UTF-8") as file:  # Adds the missed data from the csx file, this must be added because the csx file is encoded weirdly at these lines and skips the text for the choices.
+            lines = file.readlines()
+            file.close()
+        lineNumber = 1
+        with open("temp.txt", "w", encoding="UTF-8") as file:
+            for line in lines:
+                if lineNumber == 2320:
+                    file.write("Even though, we still haven't heard from her what should we do.\n")
+                elif lineNumber == 35154:
+                    file.write("At this point, Sora was projecting her annoyance so clearly that, were at it directed at Motoka-san, it would've had her stumbling over her words. It didn't seem to bother her mother, though.\n")
+                elif lineNumber == 38120:
+                    pass
+                elif lineNumber == 38121:
+                    pass
+                elif lineNumber == 38618:
+                    pass
+                elif lineNumber == 38619:
+                    pass
+                elif lineNumber == 39282:
+                    pass
+                else:
+                    file.write(line)
+                lineNumber += 1
+        file.close()
+    elif choice == 2:
+        with open("temp.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 34.txt accidentally.
+            lines = file.readlines()
+            file.close()
+        lineNumber = 1
+        with open("temp.txt", "w", encoding="UTF-8") as file:
+            for line in lines:
+                if lineNumber == 5357:
+                    pass
+                else:
+                    file.write(line)
+                lineNumber += 1
+        file.close()
+
 
 def chapterCreator():
     file = open("temp.txt", "a", encoding="UTF-8")
-    file.write("\n ~ AdvScreen::bustupJump ~ ")
+    file.write("\n ~ AdvScreen ~ ")
     file.close()
 
-    file = open("temp.txt", "r", encoding="utf8")
+    file = open("temp.txt", "r", encoding="UTF-8")
     data = file.readlines()
     temp = []
     fileNumber = 1
@@ -92,57 +135,31 @@ def deleteMiscFiles():  # Deletes the miscellaneous files generated by the conve
 
 def fileImporter(choice):  # Retrieves the file names for use in the fileConverter function.
     try:
-        shutil.rmtree('scenario')  # Removes the "scenario" folder if it exists.
+        shutil.rmtree("compile")  # Removes the "compile" folder if it exists.
     except OSError:
         pass  # If the file does not exist, it will give an error, this ignores the error.
-    os.mkdir('scenario')   # Recreate a new scenario folder for the data to be inserted into.
+    os.mkdir("compile")   # Recreate a new compile folder for the data to be inserted into.
+    os.chdir("compile")
+    os.mkdir("scenario")
+    os.chdir("..")
 
     if choice == 1:  # Used to import the files for Yosuga no Sora
-        with open("296.txt", "r+", encoding="UTF-8") as file:  # Removes lines that are not part of the text to be inserted.
-            newFile = file.readlines()
-            file.seek(0)
-            for line in newFile:
-                if "Knock on the door" not in line:
+        with open("306.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 306.txt accidentally.
+            lines = file.readlines()
+            file.close()
+        lineNumber = 1
+        with open("306.txt", "w", encoding="UTF-8") as file:
+            for line in lines:
+                if lineNumber == 145:
+                    pass
+                else:
                     file.write(line)
-            file.truncate()
-
-        with open("296.txt", "r+", encoding="UTF-8") as file:  # Removes lines that are not part of the text to be inserted.
-            newFile = file.readlines()
-            file.seek(0)
-            for line in newFile:
-                if "Leave her alone for now" not in line:
-                    file.write(line)
-            file.truncate()
-
-        with open("299.txt", "r+", encoding="UTF-8") as file:  # Removes lines that are not part of the text to be inserted.
-            newFile = file.readlines()
-            file.seek(0)
-            for line in newFile:
-                if "I'll be in your care" not in line:
-                    file.write(line)
-            file.truncate()
-
-        with open("299.txt", "r+", encoding="UTF-8") as file:  # Removes lines that are not part of the text to be inserted.
-            newFile = file.readlines()
-            file.seek(0)
-            for line in newFile:
-                if "We've grown, right?" not in line:
-                    file.write(line)
-            file.truncate()
-
-        with open("303.txt", "r+", encoding="UTF-8") as file:  # Removes lines that are not part of the text to be inserted.
-            newFile = file.readlines()
-            file.seek(0)
-            for line in newFile:
-                if "She's an amusing friend" not in line:
-                    file.write(line)
-            file.truncate()
-
-        shutil.copyfile(f"dependencies/yosuga/macro.ks", f"scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
-        for count in range(1, 305 + 1):  # Used to iterate through the files.
+                lineNumber += 1
+        shutil.copyfile(f"dependencies/yosuga/macro.ks", f"compile/scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
+        for count in range(1, 306 + 1):  # Used to iterate through the files.
             if count == 114:  # Used to skip the file that has Nao's extra chapter.
                 pass
-            elif count <= 305:
+            elif count <= 306:
                 formattedFileName = yosugaFileNames(count)  # Calls the function and stores the current value in a variable.
                 unformattedFileName = str(count) + ".txt"  # Increases the value of the unformatted file that is called.
 
@@ -154,22 +171,9 @@ def fileImporter(choice):  # Retrieves the file names for use in the fileConvert
                 unformatted = oldFile.readlines()  # Reads the lines from the file and inserts it into a variable.
                 oldFile.close()  # Closes the file stream for the unformatted (old) file.
 
-                fileConverter(formatted, unformatted, formattedFileName)  # Calls the fileConverter function to insert move the data between files.
+                fileConverter(formatted, unformatted, formattedFileName)  # Calls the fileConverter function to move the data between files.
     elif choice == 2:
-        with open("34.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 34.txt accidentally.
-            lines = file.readlines()
-            file.close()
-        lineNumber = 1
-        with open("34.txt", "w", encoding="UTF-8") as file:
-            for line in lines:
-                if lineNumber == 190:
-                    pass
-                else:
-                    file.write(line)
-                lineNumber += 1
-        file.close()
-
-        with open("114.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 34.txt accidentally.
+        with open("114.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 114.txt accidentally.
             lines = file.readlines()
             file.close()
         lineNumber = 1
@@ -182,7 +186,7 @@ def fileImporter(choice):  # Retrieves the file names for use in the fileConvert
                 lineNumber += 1
         file.close()
 
-        shutil.copyfile(f"dependencies/haruka/macro.ks", f"scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
+        shutil.copyfile(f"dependencies/haruka/macro.ks", f"compile/scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
         for count in range(1, 114 + 1):  # Used to iterate through the files.
             formattedFileName = harukaFileNames(count)  # Calls the function and stores the current value in a variable.
             unformattedFileName = str(count) + ".txt"  # Increases the value of the unformatted file that is called.
@@ -195,7 +199,7 @@ def fileImporter(choice):  # Retrieves the file names for use in the fileConvert
             unformatted = oldFile.readlines()  # Reads the lines from the file and inserts it into a variable.
             oldFile.close()  # Closes the file stream for the unformatted (old) file.
 
-            fileConverter(formatted, unformatted, formattedFileName)  # Calls the fileConverter function to insert move the data between files.
+            fileConverter(formatted, unformatted, formattedFileName)  # Calls the fileConverter function to move the data between files.
 
 
 def fileConverter(formatted, unformatted, formattedFileName):  # Converts the chapter files into KiriKiri files.
@@ -225,7 +229,7 @@ def fileConverter(formatted, unformatted, formattedFileName):  # Converts the ch
 
         if "@Talk name=" in formatted[y] and "@Hit" in formatted[y + 1]:
             val = unformatted[count]
-            wrapper = textwrap.TextWrapper(width=50)
+            wrapper = textwrap.TextWrapper(width=60)
             word_list = wrapper.wrap(text=val)
             word_list[len(word_list) - 1] = str(word_list[len(word_list) - 1] + "\n")
             formatted.insert(y + 1, "\n".join(word_list))
@@ -234,7 +238,7 @@ def fileConverter(formatted, unformatted, formattedFileName):  # Converts the ch
             pass
         y += 1
 
-    file = open(f"scenario/{formattedFileName}", "w", encoding='Shift_JIS')  # Opens the file stream for the final file.
+    file = open(f"compile/scenario/{formattedFileName}", "w", encoding='UTF-16')  # Opens the file stream for the final file.
     file.write(str(''.join(formatted)))  # Writes the data from the variable to the file.
     file.close()
 
@@ -1095,8 +1099,8 @@ print("Created by MrWicked @ https://github.com/TheRealMrWicked/Yosuga-no-Sora-P
 dependencies()
 
 print("Which game do you want to convert?\n")
-print("1. Yosuga no Sora.")
-print("2. Haruka na Sora.")
+print("1. Yosuga no Sora. (yosuga.csx)")
+print("2. Haruka na Sora. (Haruka.csx)")
 
 while True:
     try:
@@ -1112,8 +1116,18 @@ while True:
 
 csxDecrypter(choice)
 utfCombiner()
-textReplacer()
+textReplacer(choice)
 chapterCreator()
 fileImporter(choice)
 deleteMiscFiles()
-print("Success the scenario folder has been created.")
+
+if choice == 1:
+    shutil.copyfile(f"dependencies/yosuga/begin.tjs", f"compile/begin.tjs")
+    shutil.copyfile(f"dependencies/yosuga/startup.tjs", f"compile/startup.tjs")
+    shutil.copytree(f"dependencies/yosuga/system", f"compile/system")
+elif choice == 2:
+    shutil.copyfile(f"dependencies/haruka/begin.tjs", f"compile/begin.tjs")
+    shutil.copyfile(f"dependencies/haruka/startup.tjs", f"compile/startup.tjs")
+    shutil.copytree(f"dependencies/haruka/system", f"compile/system")
+
+input("Success the compile folder has been created.")
