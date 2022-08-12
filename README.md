@@ -12,7 +12,7 @@ Step 2 - Extract the downloaded zip into a folder and then place the .csx file i
 
 Step 3 - Double click the converter.exe file, if the program gives you the warning "Windows protected your PC" simply ignore and click run anyway.
 
-Step 4 - When the program launches, it will ask you to choose a game, select the respective one you want to convert.
+Step 4 - When the program launches, if you have multiple ".csx" files in the same directory as the program executable, it will ask you to choose a game, select the respective one you want to convert.
 
 Step 5 - Open the "compile" folder with GARbro and re-encrypt the files into a new data.xp3 by following the steps listed [here](https://github.com/TheRealMrWicked/Yosuga-no-Sora-Patch-Conversion/wiki/Patch-Conversion-Information/#encrypting-the-xp3-file).
 
