@@ -16,8 +16,8 @@
 
 @Char file=CA01_07M 
 @Update
-@Move id=âu my=30 cycle=1000
-@WaitAction id=âu
+@Move id=ç©¹ my=30 cycle=1000
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR020047
 
@@ -27,7 +27,7 @@
 
 @Hitret id=18655
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18656
 
@@ -38,8 +38,8 @@
 
 @Char file=CA01_01M 
 @Update
-@Move id=âu y=0 cycle=1000
-@WaitAction id=âu
+@Move id=ç©¹ y=0 cycle=1000
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR020048
 
@@ -68,8 +68,8 @@
 @Hitret id=18662
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 @Talk name=Haruka
 
 @Hitret id=18663
@@ -77,7 +77,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18664
 
@@ -85,15 +85,15 @@
 
 @Hitret id=18665
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18666
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18667
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18668
 
@@ -112,7 +112,7 @@
 
 @Hitret id=18672
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18673
 
@@ -259,7 +259,7 @@
 @Hitret id=18698
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 
 @Char file=CF01_06M 
 
@@ -270,11 +270,11 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18700
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18701
 
@@ -323,8 +323,8 @@
 @StopBgm
 @Char file=CC01_02M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020196
 
@@ -335,31 +335,31 @@
 
 @PlayBgm file=BGM08
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18711
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18712
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18713
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18714
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18715
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18716
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18717
 

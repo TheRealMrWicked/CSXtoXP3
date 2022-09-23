@@ -4,11 +4,11 @@
 @Cg file=B14b   
 @PlayEnvSe file=SE351 fade=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11695
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11696
 
@@ -16,51 +16,51 @@
 
 @Hitret id=11697
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11698
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11699
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11700
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11701
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11702
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11703
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11704
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11705
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11706
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11707
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11708
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11709
 
@@ -68,7 +68,7 @@
 
 @Hitret id=11710
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11711
 
@@ -81,8 +81,8 @@
 @Hitret id=11712
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 @PlayBgm file=BGM05
 
 @Talk name=Haruka
@@ -182,7 +182,7 @@
 
 @Hitret id=11732
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11733
 
@@ -209,11 +209,11 @@
 
 @Hitret id=11738
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11739
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11740
 
@@ -257,8 +257,8 @@
 
 @Char file=CB01_11M 
 @Update
-@action id=“Ş action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO030263
 
@@ -275,7 +275,7 @@
 
 @Hitret id=11750
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11751
 
@@ -295,15 +295,15 @@
 
 @PlayBgm file=BGM07
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11753
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11754
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11755
 
@@ -361,26 +361,26 @@
 
 @Hitret id=11767
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11768
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11769
 
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11770
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11771
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11772
 
@@ -414,7 +414,7 @@
 
 @Hitret id=11778
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11779
 
@@ -429,7 +429,7 @@
 
 @Hitret id=11781
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11782
 
@@ -437,7 +437,7 @@
 
 @Hitret id=11783
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11784
 
@@ -501,7 +501,7 @@
 
 @Hitret id=11796
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11797
 
@@ -509,7 +509,7 @@
 @ClearChar 
 @PlaySe file=se070
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11798
 
@@ -539,7 +539,7 @@
 
 @PlaySe file=se071
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11804
 
@@ -551,11 +551,11 @@
 
 @Hitret id=11806
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11807
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11808
 
@@ -563,7 +563,7 @@
 
 @Hitret id=11809
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11810
 
@@ -586,7 +586,7 @@
 
 @BlackOut
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11815
 
@@ -600,11 +600,11 @@
 
 @PlaySe file=se071
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11817
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11818
 
@@ -632,7 +632,7 @@
 
 @Hitret id=11824
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11825
 
@@ -768,11 +768,11 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11850
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11851
 
@@ -795,7 +795,7 @@
 
 @Hitret id=11854
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11855
 
@@ -817,15 +817,15 @@
 
 @Char file=CA02_01M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11859
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11860
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11861
 
@@ -855,7 +855,7 @@
 
 @Hitret id=11866
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11867
 
@@ -891,7 +891,7 @@
 @wait time=500
 @Char file=CA02_09M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11873
 
@@ -940,11 +940,11 @@
 @Hitret id=11881
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11882
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11883
 
@@ -956,9 +956,9 @@
 @Hitret id=11884
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11885
 
@@ -991,15 +991,15 @@
 
 @Hitret id=11890
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11891
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11892
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11893
 
@@ -1041,19 +1041,19 @@
 
 @Hitret id=11901
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11902
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11903
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11904
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11905
 

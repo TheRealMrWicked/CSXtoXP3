@@ -8,39 +8,39 @@
 
 @Hitret id=37315
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37316
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37317
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37318
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37319
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37320
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37321
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37322
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37323
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37324
 
@@ -62,7 +62,7 @@
 
 @Hitret id=37325
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37326
 
@@ -108,7 +108,7 @@
 
 @Char file=CA01_04S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37334
 
@@ -192,10 +192,10 @@
 @Hitret id=37347
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 @Char file=CB01_08M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37348
 
@@ -204,7 +204,7 @@
 @Hitret id=37349
 
 
-@ClearChar id=����
+@ClearChar id=亮平
 @Char file=CA01_04M 
 @Char file=CB01_02M 
 
@@ -219,7 +219,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37352
 
@@ -230,7 +230,7 @@
 
 @Hitret id=37353
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37354
 
@@ -250,8 +250,8 @@
 @Hitret id=37357
 
 
-@action id=�J���� action=ActionWave width=32, height=0, count=1 cycle=75 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=1 cycle=75 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -278,8 +278,8 @@
 @Hitret id=37361
 
 
-@action id=�J���� action=ActionWave width=32, height=0, count=1 cycle=75 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=1 cycle=75 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -356,7 +356,7 @@
 @Char file=CF01_04M 
 @Char file=CB01_04M 
 
-@Talk name=Ryouhei�@and�@Nao voice=RH050235/NO050075
+@Talk name=Ryouhei　and　Nao voice=RH050235/NO050075
 
 @Hitret id=37377
 
@@ -399,8 +399,8 @@
 @Hitret id=37384
 
 
-@action id=�J���� action=ActionWave width=32, height=0, count=2 cycle=75 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=75 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -434,7 +434,7 @@
 
 @Hitret id=37390
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37391
 
@@ -474,13 +474,13 @@
 @Hitret id=37396
 
 
-@ClearChar id=����
+@ClearChar id=亮平
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37397
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37398
 
@@ -495,7 +495,7 @@
 
 @Hitret id=37400
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37401
 
@@ -520,8 +520,8 @@
 
 
 @Update
-@action id=���� action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=����
+@action id=亮平 action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=亮平
 
 @Talk name=Haruka
 
@@ -565,11 +565,11 @@
 
 @PlayBgm file=BGM16
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37412
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37413
 
@@ -589,31 +589,31 @@
 
 @Hitret id=37417
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37418
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37419
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37420
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37421
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37422
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37423
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37424
 
@@ -629,11 +629,11 @@
 
 @Hitret id=37426
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37427
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37428
 
@@ -691,11 +691,11 @@
 
 @Hitret id=37437
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37438
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37439
 
@@ -714,7 +714,7 @@
 
 @Hitret id=37440
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37441
 
@@ -745,7 +745,7 @@
 @Hitret id=37446
 
 
-@ClearChar id=����
+@ClearChar id=亮平
 
 @Talk name=Haruka
 
@@ -766,11 +766,11 @@
 
 @Hitret id=37450
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37451
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37452
 
@@ -807,7 +807,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37459
 

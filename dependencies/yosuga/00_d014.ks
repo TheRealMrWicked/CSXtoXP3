@@ -4,7 +4,7 @@
 @PlayBgm file=BGM16
 @Cg file=B15c   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28316
 
@@ -20,15 +20,15 @@
 
 @Hitret id=28318
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28319
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28320
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28321
 
@@ -36,7 +36,7 @@
 
 @Hitret id=28322
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28323
 
@@ -57,11 +57,11 @@
 @Update
 @MoveCamera x=400 y=0 time=10000 accel=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28326
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28327
 
@@ -69,7 +69,7 @@
 
 @Hitret id=28328
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28329
 
@@ -85,15 +85,15 @@
 
 @Hitret id=28331
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28332
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28333
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28334
 
@@ -143,11 +143,11 @@
 
 @Hitret id=28344
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28345
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28346
 
@@ -177,11 +177,11 @@
 
 @Hitret id=28351
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28352
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28353
 

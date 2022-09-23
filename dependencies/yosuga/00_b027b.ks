@@ -8,19 +8,19 @@
 
 @Hitret id=16535
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16536
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16537
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16538
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16539
 
@@ -28,19 +28,19 @@
 
 @Hitret id=16540
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16541
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16542
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16543
 
-@Talk name=Nao's@Friends voice=NP260020
+@Talk name=Nao'sã€€Friends voice=NP260020
 
 @Hitret id=16544
 
@@ -48,7 +48,7 @@
 
 @Hitret id=16545
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16546
 
@@ -56,7 +56,7 @@
 
 @Hitret id=16547
 
-@Talk name=Nao's@Friends voice=NP260021
+@Talk name=Nao'sã€€Friends voice=NP260021
 
 @Hitret id=16548
 
@@ -67,7 +67,7 @@
 
 @StopEnvSe id=SE403 fade=0
 
-@Talk name=Nao's@Friends voice=NP260022
+@Talk name=Nao'sã€€Friends voice=NP260022
 
 @Hitret id=16550
 
@@ -78,7 +78,7 @@
 
 @PlayBgm file=BGM16
 
-@Talk name=Nao's@Friends voice=NP260023
+@Talk name=Nao'sã€€Friends voice=NP260023
 
 @Hitret id=16552
 
@@ -86,7 +86,7 @@
 
 @Hitret id=16553
 
-@Talk name=Nao's@Friends voice=NP260024
+@Talk name=Nao'sã€€Friends voice=NP260024
 
 @Hitret id=16554
 
@@ -94,23 +94,23 @@
 
 @Hitret id=16555
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16556
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16557
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16558
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16559
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16560
 
@@ -176,7 +176,7 @@
 @Hitret id=16568
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CF01_08M 
 
 @Talk name=Ryouhei voice=RH030375
@@ -215,7 +215,7 @@
 
 @Hitret id=16574
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16575
 

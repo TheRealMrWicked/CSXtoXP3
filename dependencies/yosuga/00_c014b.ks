@@ -46,11 +46,11 @@
 @PlayBgm file=BGM15
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20828
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20829
 
@@ -117,7 +117,7 @@
 @Hitret id=20838
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CE04_05M 
 
 @Talk name=Motoka voice=MT020010
@@ -161,10 +161,10 @@
 @Hitret id=20845
 
 
-@ClearChar id=‰l
-@ClearChar id=âu
+@ClearChar id=ç‘›
+@ClearChar id=ç©¹
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20846
 
@@ -183,10 +183,10 @@
 @Hitret id=20848
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @PlayBgm file=BGM13
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20849
 
@@ -235,7 +235,7 @@
 @Hitret id=20856
 
 
-@ClearChar id=‰‰À
+@ClearChar id=åˆä½³
 @Char file=CF06_01M 
 
 @Talk name=Ryouhei voice=RH020221
@@ -289,8 +289,8 @@
 @Hitret id=20864
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 @Char file=CB07_08M 
 @Char file=CF06_09M 
 
@@ -298,7 +298,7 @@
 
 @Hitret id=20865
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20866
 
@@ -338,7 +338,7 @@
 @Char file=CF06_06M 
 @Font face=36
 
-@Talk name=Haruka@and@Ryouhei@and@Nao voice=RH020226/NO020063
+@Talk name=Harukaã€€andã€€Ryouheiã€€andã€€Nao voice=RH020226/NO020063
 
 @Hitret id=20872
 
@@ -362,8 +362,8 @@
 
 @Char file=CF06_05M 
 @Update
-@action id=—º•½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020227
 
@@ -374,8 +374,8 @@
 @Char file=CD06_05L 
 @Update
 @PlaySe file=se006
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 @Font face=36
 
 @Talk name=Kazuha voice=KA020210
@@ -386,7 +386,7 @@
 @ClearChar 
 @Char file=CF06_06M 
 @update
-@Leave id=—º•½ mx=300 my=0 fade=1 time=1000 accel=1
+@Leave id=äº®å¹³ mx=300 my=0 fade=1 time=1000 accel=1
 
 @Talk name=Ryouhei voice=RH020228
 
@@ -430,8 +430,8 @@
 
 @Char file=CC07_04M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020624
 
@@ -441,8 +441,8 @@
 @ClearChar 
 @Char file=CD06_13M 
 @Update
-@action id=ˆê—t action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020213
 
@@ -452,7 +452,7 @@
 @Char file=CF06_05M x=300   
 @Char file=CC07_04M x=-300   
 
-@Talk name=Akira@and@Ryouhei voice=AK020625/RH020231
+@Talk name=Akiraã€€andã€€Ryouhei voice=AK020625/RH020231
 
 @Hitret id=20885
 
@@ -463,7 +463,7 @@
 
 @Hitret id=20886
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20887
 
@@ -527,22 +527,22 @@
 @PlaySe file=SE205
 @Char file=CB07_13M 
 @Update
-@action id=“Ş action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=å¥ˆç·’
 @Font face=36
 
 @Talk name=Nao voice=NO020063
 
 @Hitret id=20896
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20897
 
 
 @Char file=CB07_07M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20898
 
@@ -607,8 +607,8 @@
 
 @Char file=CF06_06M 
 @Update
-@action id=—º•½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020237
 
@@ -629,7 +629,7 @@
 @Hitret id=20910
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @PlaySe file=SE204
 
 @Talk name=Haruka
@@ -640,7 +640,7 @@
 
 @Hitret id=20912
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20913
 
@@ -652,7 +652,7 @@
 @Hitret id=20914
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CD06_06M 
 
 @Talk name=Kazuha voice=KA020219
@@ -662,15 +662,15 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20916
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20917
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20918
 
@@ -693,14 +693,14 @@
 
 @Hitret id=20922
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20923
 
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20924
 
@@ -743,7 +743,7 @@
 @Hitret id=20931
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CC07_02L 
 
 @Talk name=Akira voice=AK020632
@@ -754,7 +754,7 @@
 
 @Hitret id=20933
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20934
 

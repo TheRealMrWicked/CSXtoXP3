@@ -4,15 +4,15 @@
 @PlayBgm file=BGM17
 @Cg file=B27b   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38684
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38685
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38686
 
@@ -25,7 +25,7 @@
 
 @Hitret id=38687
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38688
 
@@ -33,7 +33,7 @@
 
 @Hitret id=38689
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38690
 
@@ -66,7 +66,7 @@
 
 @Char file=CE02_12L 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38696
 
@@ -77,7 +77,7 @@
 
 @Char file=CE02_11L 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38698
 
@@ -92,7 +92,7 @@
 
 @Char file=CE02_07M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38701
 
@@ -150,19 +150,19 @@
 
 @Char file=CE02_11L 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38714
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38715
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38716
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38717
 
@@ -215,7 +215,7 @@
 
 @Hitret id=38727
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38728
 
@@ -223,7 +223,7 @@
 @BlackOut
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=38729
 

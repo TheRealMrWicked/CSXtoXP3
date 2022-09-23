@@ -5,67 +5,67 @@
 @Cg file=B27a center=400,700
 @MessageFrame type=1
 
-@Talk name=Kozue�@Monologue voice=KO020089
+@Talk name=Kozue　Monologue voice=KO020089
 
 @Hitret id=9962
 
-@Talk name=Kozue�@Monologue voice=KO020090
+@Talk name=Kozue　Monologue voice=KO020090
 
 @Hitret id=9963
 
-@Talk name=Kozue�@Monologue voice=KO020091
+@Talk name=Kozue　Monologue voice=KO020091
 
 @Hitret id=9964
 
-@Talk name=Kozue�@Monologue voice=KO020092
+@Talk name=Kozue　Monologue voice=KO020092
 
 @Hitret id=9965
 
-@Talk name=Kozue�@Monologue voice=KO020093
+@Talk name=Kozue　Monologue voice=KO020093
 
 @Hitret id=9966
 
-@Talk name=Kozue�@Monologue voice=KO020094
+@Talk name=Kozue　Monologue voice=KO020094
 
 @Hitret id=9967
 
-@Talk name=Kozue�@Monologue voice=KO020095
+@Talk name=Kozue　Monologue voice=KO020095
 
 @Hitret id=9968
 
-@Talk name=Kozue�@Monologue voice=KO020096
+@Talk name=Kozue　Monologue voice=KO020096
 
 @Hitret id=9970
 
-@Talk name=Kozue�@Monologue voice=KO020097
+@Talk name=Kozue　Monologue voice=KO020097
 
 @Hitret id=9971
 
-@Talk name=Kozue�@Monologue voice=KO020098
+@Talk name=Kozue　Monologue voice=KO020098
 
 @Hitret id=9972
 
-@Talk name=Kozue�@Monologue voice=KO020099
+@Talk name=Kozue　Monologue voice=KO020099
 
 @Hitret id=9973
 
-@Talk name=Kozue�@Monologue voice=KO020100
+@Talk name=Kozue　Monologue voice=KO020100
 
 @Hitret id=9974
 
-@Talk name=Kozue�@Monologue voice=KO020101
+@Talk name=Kozue　Monologue voice=KO020101
 
 @Hitret id=9975
 
-@Talk name=Kozue�@Monologue voice=KO020102
+@Talk name=Kozue　Monologue voice=KO020102
 
 @Hitret id=9976
 
-@Talk name=Kozue�@Monologue voice=KO020103
+@Talk name=Kozue　Monologue voice=KO020103
 
 @Hitret id=9977
 
-@Talk name=Kozue�@Monologue voice=KO020104
+@Talk name=Kozue　Monologue voice=KO020104
 
 @Hitret id=9978
 
@@ -100,21 +100,21 @@
 
 
 @Update
-@action id=�� action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020108
 
 @Hitret id=9983
 
 
-@Leave id=�� mx=0 my=600 fade=1 time=250 accel=1
+@Leave id=梢 mx=0 my=600 fade=1 time=250 accel=1
 @Update
 @PlaySe file=SE018
-@action id=�J���� action=ActionWave width=0, height=20, count=2 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=20, count=2 cycle=50
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=9984
 
@@ -155,7 +155,7 @@
 
 @Hitret id=9993
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=9994
 
@@ -168,8 +168,8 @@
 @Char file=CH01_07M
 @Update time=0
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=25
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=25
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020115
 
@@ -185,8 +185,8 @@
 
 
 @Update
-@Move id=�� my=10 cycle=1000
-@WaitAction id=��
+@Move id=梢 my=10 cycle=1000
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020117
 
@@ -194,27 +194,27 @@
 
 
 @Update
-@Move id=�� y=0 cycle=1000
-@WaitAction id=��
+@Move id=梢 y=0 cycle=1000
+@WaitAction id=梢
 @Char file=CH01_06M
 
 @Talk name=Kozue voice=KO020118
 
 @Hitret id=10000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10001
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10002
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10003
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10004
 
@@ -231,8 +231,8 @@
 
 
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020120
 
@@ -279,11 +279,11 @@
 
 @Hitret id=10015
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10016
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10017
 
@@ -309,7 +309,7 @@
 
 @Hitret id=10021
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10022
 
@@ -339,14 +339,14 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10027
 
 
 @Char file=CH01_02M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10028
 
@@ -360,15 +360,15 @@
 
 @PlayBgm file=BGM08
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10030
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10031
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10032
 
@@ -409,18 +409,18 @@
 
 @Hitret id=10039
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10040
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10041
 
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10042
 
@@ -441,8 +441,8 @@
 
 
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020134
 
@@ -466,15 +466,15 @@
 
 @Cg file=B27a center=400,700
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10050
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10051
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10052
 

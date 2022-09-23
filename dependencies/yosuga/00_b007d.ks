@@ -15,7 +15,7 @@
 
 @Hitret id=12226
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12227
 
@@ -89,7 +89,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12242
 
@@ -97,11 +97,11 @@
 
 @Hitret id=12243
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12244
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12245
 
@@ -111,36 +111,36 @@
 
 @Hitret id=12246
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12247
 
 
 @StopBgm fade=0
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
 @Hitret id=12248
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12249
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
 @Hitret id=12250
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12251
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12252
 

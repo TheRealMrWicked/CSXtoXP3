@@ -12,7 +12,7 @@
 
 @Hitret id=24009
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24010
 
@@ -57,7 +57,7 @@
 
 @Hitret id=24018
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24019
 
@@ -88,11 +88,11 @@
 
 @Hitret id=24025
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24026
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24027
 
@@ -100,11 +100,11 @@
 
 @Hitret id=24028
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24029
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24030
 
@@ -134,11 +134,11 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24036
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24037
 
@@ -146,7 +146,7 @@
 
 @Hitret id=24038
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24039
 
@@ -161,7 +161,7 @@
 
 @Hitret id=24041
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24042
 
@@ -195,7 +195,7 @@
 
 @Hitret id=24048
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24049
 

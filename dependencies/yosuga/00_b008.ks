@@ -16,23 +16,23 @@
 
 @Hitret id=12255
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12256
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12257
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12258
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12259
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12260
 
@@ -43,7 +43,7 @@
 
 @Hitret id=12261
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12262
 
@@ -51,7 +51,7 @@
 @Cg file=B04a   
 @Char file=CA02_05M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12263
 
@@ -66,7 +66,7 @@
 
 @Hitret id=12265
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12266
 
@@ -174,7 +174,7 @@
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12287
 
@@ -182,19 +182,19 @@
 @Cg file=B02a   
 @StopEnvSe id=SE301
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12288
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12289
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12290
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12291
 

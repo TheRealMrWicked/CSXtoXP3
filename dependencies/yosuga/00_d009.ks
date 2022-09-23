@@ -3,15 +3,15 @@
 
 @Cg file=BLACK
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27664
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27665
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27666
 
@@ -19,7 +19,7 @@
 @PlayBgm file=BGM05
 @Cg file=B34a center=800,300
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27667
 
@@ -64,19 +64,19 @@
 
 @Hitret id=27674
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27675
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27676
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27677
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27678
 
@@ -103,7 +103,7 @@
 
 @Hitret id=27682
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27683
 
@@ -157,7 +157,7 @@
 @Hitret id=27693
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CC01_01M 
 
 @Talk name=Akira voice=AK040113
@@ -182,8 +182,8 @@
 @Hitret id=27696
 
 
-@ClearChar id=‰l
-@ClearChar id=ˆê—t
+@ClearChar id=ç‘›
+@ClearChar id=ä¸€è‘‰
 
 @Talk name=Ryouhei voice=RH040086
 
@@ -234,15 +234,15 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27705
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27706
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=27707
 

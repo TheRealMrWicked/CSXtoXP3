@@ -5,15 +5,15 @@
 @Cg file=B27a center=400,300
 @MessageFrame type=1
 
-@Talk name=Kozue@Monologue voice=KO021672
+@Talk name=Kozueã€€Monologue voice=KO021672
 
 @Hitret id=13861
 
-@Talk name=Kozue@Monologue voice=KO021673
+@Talk name=Kozueã€€Monologue voice=KO021673
 
 @Hitret id=13862
 
-@Talk name=Kozue@Monologue voice=KO021674
+@Talk name=Kozueã€€Monologue voice=KO021674
 
 @Hitret id=13863
 
@@ -31,15 +31,15 @@
 
 @Hitret id=13865
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13866
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13867
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13868
 
@@ -50,7 +50,7 @@
 
 @Hitret id=13869
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13870
 
@@ -65,21 +65,21 @@
 
 @Hitret id=13872
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13873
 
 
 @Char file=CH08_09M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13874
 
 
 @Char file=CH08_02M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13875
 
@@ -110,7 +110,7 @@
 
 @PlayBgm file=BGM13
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13880
 
@@ -129,8 +129,8 @@
 
 @Char file=CH08_05M
 @Update time=0
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=20, count=2 cycle=50
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=20, count=2 cycle=50
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Font face=36
 @Talk name=Kozue voice=KO021682
@@ -144,8 +144,8 @@
 
 @Char file=CH08_07M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021683
 
@@ -166,8 +166,8 @@
 
 @Char file=CH08_13M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021685
 
@@ -209,8 +209,8 @@
 @PlaySe file=se010
 @Char file=CH08_06M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021688
 
@@ -224,8 +224,8 @@
 @PlaySe file=se010
 @Char file=CH08_13M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021689
 
@@ -343,8 +343,8 @@
 
 @Char file=CH08_05M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021694
 
@@ -392,8 +392,8 @@
 
 
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021697
 
@@ -420,8 +420,8 @@
 
 @Char file=CH08_13M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO021699
 
@@ -451,14 +451,14 @@
 
 @Hitret id=13934
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13935
 
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13936
 

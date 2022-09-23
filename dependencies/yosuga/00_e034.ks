@@ -4,23 +4,23 @@
 @PlayBgm file=BGM05
 @Cg file=B17a   
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38571
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38572
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38573
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38574
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38575
 
@@ -32,7 +32,7 @@
 
 @Cg file=B19b   
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=38576
 
@@ -49,7 +49,7 @@
 
 @Char file=CH01_04S 
 
-@Talk name=Class@Rep voice=KO050006
+@Talk name=Classã€€Rep voice=KO050006
 
 @Hitret id=38577
 
@@ -63,7 +63,7 @@
 
 @Char file=CH01_01S 
 
-@Talk name=Class@Rep voice=KO050007
+@Talk name=Classã€€Rep voice=KO050007
 
 @Hitret id=38579
 
@@ -111,7 +111,7 @@
 @ClearChar 
 @Char file=CH01_11S 
 
-@Talk name=Class@Rep voice=KO050008
+@Talk name=Classã€€Rep voice=KO050008
 
 @Hitret id=38586
 
@@ -127,8 +127,8 @@
 
 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK050142
 

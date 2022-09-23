@@ -10,55 +10,55 @@
 
 @Hitret id=25201
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25202
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25203
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25204
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25205
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25206
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25207
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25208
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25209
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25210
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25211
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25212
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25213
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25214
 
@@ -96,15 +96,15 @@
 
 @Hitret id=25221
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25222
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25223
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25224
 
@@ -221,8 +221,8 @@
 
 
 @PlaySe file=se006
-@action id=�J���� action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -355,7 +355,7 @@
 
 @Hitret id=25272
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25273
 

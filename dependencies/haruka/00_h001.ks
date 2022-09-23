@@ -103,8 +103,8 @@
 
 @Char file=CF01_06M
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020005
 
@@ -146,8 +146,8 @@
 
 @Char file=CF01_10M
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020008
 
@@ -266,8 +266,8 @@
 
 @Char file=CF01_06M
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=25
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=25
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020014
 
@@ -279,8 +279,8 @@
 
 
 @Update
-@action id=—º•½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020015
 

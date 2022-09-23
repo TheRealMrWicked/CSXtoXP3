@@ -192,7 +192,7 @@
 
 @Hitret id=22031
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22032
 
@@ -252,7 +252,7 @@
 @Hitret id=22041
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CB02_01M 
 
 @Talk name=Nao voice=NO020102
@@ -260,7 +260,7 @@
 @Hitret id=22042
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 
 @Talk name=Haruka
 
@@ -287,7 +287,7 @@
 
 @BlackOut
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22047
 
@@ -322,7 +322,7 @@
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22055
 
@@ -390,8 +390,8 @@
 
 @Char file=CC06_04M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020891
 
@@ -427,11 +427,11 @@
 
 @Hitret id=22069
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22070
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22071
 
@@ -458,7 +458,7 @@
 
 @Hitret id=22075
 
-@Talk name=Akira@and@Kazuha voice=AK020894/KA020331
+@Talk name=Akiraã€€andã€€Kazuha voice=AK020894/KA020331
 
 @Hitret id=22076
 
@@ -532,7 +532,7 @@
 @Hitret id=22088
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CB02_01M 
 
 @Talk name=Nao voice=NO020110
@@ -572,7 +572,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22095
 
@@ -624,7 +624,7 @@
 @Hitret id=22103
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CB02_01M 
 
 @Talk name=Nao voice=NO020112
@@ -641,11 +641,11 @@
 @Char file=CG01_02M 
 @Update time=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22106
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22107
 
@@ -672,7 +672,7 @@
 @Hitret id=22110
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CC06_02M 
 
 @Talk name=Akira voice=AK020903
@@ -731,7 +731,7 @@
 @Hitret id=22119
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CD02_12M 
 
 @Talk name=Kazuha voice=KA020336
@@ -761,7 +761,7 @@
 @Hitret id=22123
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CB02_02M 
 
 @Talk name=Nao voice=NO020115
@@ -769,7 +769,7 @@
 @Hitret id=22124
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CF03_04M 
 
 @Talk name=Ryouhei voice=RH020414
@@ -847,21 +847,21 @@
 
 @Hitret id=22138
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22139
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22140
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22141
 
 
-@ClearChar id=âu
-@ClearChar id=—º•½
+@ClearChar id=ç©¹
+@ClearChar id=äº®å¹³
 @Char file=CB02_02M 
 
 @Talk name=Nao voice=NO020116
@@ -888,7 +888,7 @@
 @Hitret id=22145
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CF03_02M 
 
 @Talk name=Ryouhei voice=RH020416
@@ -933,8 +933,8 @@
 @Hitret id=22153
 
 
-@ClearChar id=—º•½
-@ClearChar id=ˆê—t
+@ClearChar id=äº®å¹³
+@ClearChar id=ä¸€è‘‰
 @Char file=CB02_02M 
 
 @Talk name=Nao voice=NO020118
@@ -985,7 +985,7 @@
 @Hitret id=22160
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CF03_09M 
 
 @Talk name=Ryouhei voice=RH020420
@@ -1051,7 +1051,7 @@
 @Hitret id=22170
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CB02_02M 
 
 @Talk name=Nao voice=NO020120
@@ -1103,7 +1103,7 @@
 @Hitret id=22178
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CD02_12M 
 @Char file=CC06_02M 
 
@@ -1137,7 +1137,7 @@
 @Hitret id=22184
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CD02_10M 
 
 @Talk name=Kazuha voice=KA020351
@@ -1151,7 +1151,7 @@
 
 @Hitret id=22186
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22187
 
@@ -1177,7 +1177,7 @@
 
 @PlaySe file=se064
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22191
 
@@ -1208,7 +1208,7 @@
 
 @Hitret id=22196
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22197
 
@@ -1265,7 +1265,7 @@
 
 @Hitret id=22206
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22207
 
@@ -1302,27 +1302,27 @@
 
 @PlaySe file=SE150
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22214
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22215
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22216
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22217
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22218
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=22219
 
@@ -1374,7 +1374,7 @@
 @Hitret id=22225
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CF03_01M 
 
 @Talk name=Ryouhei voice=RH020428
@@ -1382,7 +1382,7 @@
 @Hitret id=22226
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CB02_06M 
 
 @Talk name=Nao voice=NO020125

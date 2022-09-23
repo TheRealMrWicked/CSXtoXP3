@@ -9,7 +9,7 @@
 
 @Hitret id=12794
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12795
 
@@ -43,7 +43,7 @@
 @Hitret id=12799
 
 
-@ClearChar id=��
+@ClearChar id=梢
 @Char file=CC06_12M
 
 @Talk name=Akira voice=AK020144
@@ -70,11 +70,11 @@
 
 @Hitret id=12802
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12803
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12804
 
@@ -87,15 +87,15 @@
 
 @Hitret id=12805
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12806
 
 
 @Char file=CH02_11M
 @Update
-@Move id=�� my=10 cycle=1000 accel=3
-@WaitAction id=��
+@Move id=梢 my=10 cycle=1000 accel=3
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021184
 
@@ -103,13 +103,13 @@
 
 
 @Update
-@Move id=�� y=0 cycle=1000
-@WaitAction id=��
+@Move id=梢 y=0 cycle=1000
+@WaitAction id=梢
 @Char file=CH02_07M
 @Update
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021185
 
@@ -129,11 +129,11 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12811
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12812
 
@@ -179,7 +179,7 @@
 
 @Hitret id=12820
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12821
 
@@ -195,7 +195,7 @@
 
 @Hitret id=12823
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12824
 
@@ -232,7 +232,7 @@
 
 @Hitret id=12830
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12831
 
@@ -251,11 +251,11 @@
 
 @Hitret id=12834
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12835
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12836
 
@@ -293,11 +293,11 @@
 
 @Hitret id=12843
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12844
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12845
 

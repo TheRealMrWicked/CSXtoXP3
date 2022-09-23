@@ -44,7 +44,7 @@
 
 @Hitret id=24529
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24530
 
@@ -69,7 +69,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24534
 
@@ -119,13 +119,13 @@
 
 
 @PlaySe file=SE256
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 
 @Talk name=Akira voice=AK021660
 
 @Hitret id=24543
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24544
 
@@ -163,7 +163,7 @@
 
 @Hitret id=24551
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24552
 
@@ -246,11 +246,11 @@
 
 @Hitret id=24566
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24567
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24568
 
@@ -513,8 +513,8 @@
 
 
 @Char file=CC02_02M 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -715,8 +715,8 @@
 @Hitret id=24652
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 @Char file=CC02_12M 
 
 @Talk name=Haruka
@@ -725,17 +725,17 @@
 
 
 @Update
-@action id=‰l action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK021674
 
 @Hitret id=24654
 
 
-@ClearChar id=‚â‚Ğ‚ë
+@ClearChar id=ã‚„ã²ã‚
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24655
 

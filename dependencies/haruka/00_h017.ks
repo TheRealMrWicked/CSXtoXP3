@@ -5,11 +5,11 @@
 @PlayBgm file=BGM07
 @MessageFrame type=1
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11760
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11761
 
@@ -31,11 +31,11 @@
 
 @ClearChar
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11764
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11765
 
@@ -44,45 +44,45 @@
 
 @Hitret id=11766
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11767
 
 
 @Char file=CD01_03M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11768
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11769
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11770
 
 
 @Char file=CD01_02M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11771
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11772
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11773
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11774
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11775
 
@@ -91,11 +91,11 @@
 @Update transition=universal rule=MOZCIR time=500
 @WaitUpdate
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11776
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11777
 
@@ -109,7 +109,7 @@
 
 @Hitret id=11778
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11779
 
@@ -117,15 +117,15 @@
 
 @Hitret id=11780
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11781
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11782
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11783
 
@@ -151,11 +151,11 @@
 
 @Hitret id=11787
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11788
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11789
 
@@ -167,7 +167,7 @@
 
 @Hitret id=11790
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11791
 
@@ -178,7 +178,7 @@
 
 @Hitret id=11792
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11793
 
@@ -200,7 +200,7 @@
 @ClearChar
 @Char file=CD01_02M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11796
 
@@ -212,18 +212,18 @@
 
 @Hitret id=11797
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11798
 
 
 @Char file=CH01_03M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11799
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11800
 
@@ -234,21 +234,21 @@
 
 @Hitret id=11801
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11802
 
 
 @Char file=CH01_04M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11803
 
 
 @Char file=CH01_03M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11804
 
@@ -259,42 +259,42 @@
 
 @Hitret id=11805
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11806
 
 
 @Char file=CH01_07M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11807
 
 
 @Char file=CH01_02M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11808
 
 
 @Char file=CH01_04M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11809
 
 
 @Char file=CH01_03M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11810
 
 
 @Char file=CH01_01M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11811
 
@@ -312,7 +312,7 @@
 
 @Hitret id=11813
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11814
 
@@ -323,15 +323,15 @@
 
 @Hitret id=11815
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11816
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11817
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11818
 
@@ -354,8 +354,8 @@
 
 @Char file=CH01_05M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020804
 
@@ -383,8 +383,8 @@
 
 @Char file=CH01_13M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020806
 
@@ -407,11 +407,11 @@
 
 @Hitret id=11831
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11832
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11833
 
@@ -468,7 +468,7 @@
 
 @Hitret id=11841
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11842
 
@@ -490,7 +490,7 @@
 
 @ClearChar
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11846
 
@@ -547,7 +547,7 @@
 
 @ClearChar
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11855
 
@@ -581,7 +581,7 @@
 
 @Hitret id=11861
 
-@Talk name=Haruka@and@Kozue voice=KO020819
+@Talk name=Harukaã€€andã€€Kozue voice=KO020819
 
 @Hitret id=11862
 
@@ -595,8 +595,8 @@
 
 @Char file=CH01_05M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020820
 
@@ -628,11 +628,11 @@
 
 @Hitret id=11869
 
-@Talk name=Haruka@and@Kozue voice=KO020822
+@Talk name=Harukaã€€andã€€Kozue voice=KO020822
 
 @Hitret id=11870
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11871
 
@@ -660,7 +660,7 @@
 
 @Char file=CH01_05M
 
-@Talk name=Haruka@and@Kozue voice=KO020824
+@Talk name=Harukaã€€andã€€Kozue voice=KO020824
 
 @Hitret id=11875
 
@@ -680,14 +680,14 @@
 
 
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=æ¢¢
 
-@Talk name=Haruka@and@Kozue voice=KO020825
+@Talk name=Harukaã€€andã€€Kozue voice=KO020825
 
 @Hitret id=11878
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11879
 
@@ -702,8 +702,8 @@
 @PlaySe file=se011
 @Char file=CC01_09M
 @Update
-@Move id=‰l my=20 cycle=1000 accel=3
-@WaitAction id=‰l
+@Move id=ç‘› my=20 cycle=1000 accel=3
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020120
 
@@ -738,15 +738,15 @@
 
 @Cg file=B17b
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11887
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11888
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11889
 

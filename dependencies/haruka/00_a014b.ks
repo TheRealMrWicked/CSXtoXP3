@@ -26,7 +26,7 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2532
 
@@ -48,11 +48,11 @@
 
 @Hitret id=2535
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2536
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2537
 
@@ -69,7 +69,7 @@
 
 @Cg file=B02c
 
-@Talk name=Delivery�@Person voice=NP150001
+@Talk name=Delivery　Person voice=NP150001
 
 @Hitret id=2540
 
@@ -77,7 +77,7 @@
 
 @Hitret id=2541
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2542
 
@@ -92,7 +92,7 @@
 
 @Hitret id=2544
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2545
 
@@ -115,11 +115,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2549
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2550
 
@@ -128,7 +128,7 @@
 @Cg file=B01c
 @PlaySe file=se105
 
-@Talk name=Delivery�@Person voice=NP150002
+@Talk name=Delivery　Person voice=NP150002
 
 @Hitret id=2551
 
@@ -139,7 +139,7 @@
 
 @PlayBgm file=BGM13
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2553
 
@@ -156,7 +156,7 @@
 
 @Hitret id=2555
 
-@Talk name=Delivery�@Person voice=NP150003
+@Talk name=Delivery　Person voice=NP150003
 
 @Hitret id=2556
 
@@ -170,7 +170,7 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2558
 
@@ -178,7 +178,7 @@
 
 @Hitret id=2559
 
-@Talk name=Delivery�@Person voice=NP150004
+@Talk name=Delivery　Person voice=NP150004
 
 @Hitret id=2560
 
@@ -186,11 +186,11 @@
 
 @Hitret id=2561
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2562
 
-@Talk name=Delivery�@Person voice=NP150005
+@Talk name=Delivery　Person voice=NP150005
 
 @Hitret id=2563
 
@@ -201,7 +201,7 @@
 
 @PlaySe file=SE260
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2565
 
@@ -209,7 +209,7 @@
 
 @Hitret id=2566
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2567
 
@@ -244,7 +244,7 @@
 
 @Hitret id=2573
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2574
 
@@ -257,8 +257,8 @@
 @Cg file=B04c
 @Char file=CA02_13L
 @Update time=0
-@action id=�J���� action=ActionWave width=20, height=0, count=3 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=20, height=0, count=3 cycle=50
+@WaitAction id=カメラ
 
 @Talk name=Sora voice=SR000584
 
@@ -302,7 +302,7 @@
 
 @Hitret id=2584
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2585
 
@@ -362,19 +362,19 @@
 
 @Hitret id=2596
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2597
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2598
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2599
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2600
 
@@ -400,7 +400,7 @@
 
 @Hitret id=2604
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2605
 

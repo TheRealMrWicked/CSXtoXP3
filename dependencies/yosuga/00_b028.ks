@@ -16,23 +16,23 @@
 
 @Hitret id=16715
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16716
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16717
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16718
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16719
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16720
 
@@ -77,19 +77,19 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16729
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16730
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16731
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16732
 

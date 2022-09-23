@@ -6,39 +6,39 @@
 @PlayEnvSe file=SE403
 @Cg file=B18a   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11197
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11198
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11199
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11200
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11201
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11202
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11203
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11204
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11205
 
@@ -50,7 +50,7 @@
 @Cg file=B19a   
 @Char file=CA01_05S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11207
 
@@ -82,11 +82,11 @@
 
 @Hitret id=11213
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11214
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11215
 

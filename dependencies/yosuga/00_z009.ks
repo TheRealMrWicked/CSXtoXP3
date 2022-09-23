@@ -58,7 +58,7 @@
 
 @Hitret id=1290
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1291
 
@@ -84,27 +84,27 @@
 
 @Char file=CF03_03M x=-100  
 @Update
-@Move id=���� my=50 cycle=1000
+@Move id=亮平 my=50 cycle=1000
 @Update
-@WaitAction id=����
+@WaitAction id=亮平
 @Update
 @Char file=CF03_05M x=100 y=50  
 @Update
-@Move id=���� my=-25 cycle=1000
+@Move id=亮平 my=-25 cycle=1000
 @Update
-@WaitAction id=����
+@WaitAction id=亮平
 @Update
 @Char file=CF03_04M x=0 y=25  
 @Update
-@Move id=���� y=0 cycle=1000
+@Move id=亮平 y=0 cycle=1000
 @Update
-@WaitAction id=����
+@WaitAction id=亮平
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1295
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1296
 
@@ -167,7 +167,7 @@
 
 @Hitret id=1307
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1308
 
@@ -185,7 +185,7 @@
 
 @clearChar id=-1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1311
 
@@ -197,7 +197,7 @@
 
 @Hitret id=1313
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1314
 
@@ -215,7 +215,7 @@
 
 @Hitret id=1316
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1317
 
@@ -234,7 +234,7 @@
 
 @Hitret id=1320
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1321
 
@@ -275,7 +275,7 @@
 
 @Hitret id=1328
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1329
 
@@ -304,8 +304,8 @@
 
 @Char file=CF03_04M 
 @Update
-@action id=���� action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=����
+@action id=亮平 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=亮平
 @Font face=36
 
 @Talk name=Ryouhei voice=RH000090
@@ -357,7 +357,7 @@
 @StopBgm
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1343
 
@@ -365,11 +365,11 @@
 
 @Hitret id=1344
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1345
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1346
 
@@ -423,11 +423,11 @@
 
 @Hitret id=1356
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1357
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1358
 
@@ -446,11 +446,11 @@
 
 @Hitret id=1361
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1362
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1363
 
@@ -465,7 +465,7 @@
 @StopBgm
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1365
 
@@ -473,7 +473,7 @@
 
 @Hitret id=1366
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=1367
 

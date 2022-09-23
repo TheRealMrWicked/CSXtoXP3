@@ -79,8 +79,8 @@
 
 @Char file=CE01_06M 
 @Update
-@action id=���� action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=����
+@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=初佳
 
 @Talk name=Motoka voice=MT020056
 
@@ -95,9 +95,9 @@
 @Hitret id=25402
 
 
-@Leave id=���� mx=100 my=0 fade=1 time=1000 accel=1
+@Leave id=初佳 mx=100 my=0 fade=1 time=1000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25403
 
@@ -115,7 +115,7 @@
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25406
 
@@ -133,7 +133,7 @@
 
 @PlayBgm file=BGM16
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25409
 
@@ -434,19 +434,19 @@
 
 @Hitret id=25467
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25468
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25469
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25470
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25471
 
@@ -558,11 +558,11 @@
 
 @Hitret id=25492
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25493
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25494
 

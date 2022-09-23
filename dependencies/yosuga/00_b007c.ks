@@ -17,7 +17,7 @@
 
 @Hitret id=12189
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12190
 
@@ -93,7 +93,7 @@
 
 @Hitret id=12202
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12203
 
@@ -147,19 +147,19 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12211
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12212
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12213
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12214
 
@@ -212,11 +212,11 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12223
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12224
 

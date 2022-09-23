@@ -3,15 +3,15 @@
 
 @Cg file=B15b   
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25278
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25279
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25280
 
@@ -285,7 +285,7 @@
 
 @PlaySe file=SE073
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25335
 
@@ -293,7 +293,7 @@
 
 @Hitret id=25336
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25337
 
@@ -313,7 +313,7 @@
 
 @Hitret id=25340
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25341
 
@@ -343,7 +343,7 @@
 
 @Hitret id=25345
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25346
 
@@ -381,7 +381,7 @@
 
 @Hitret id=25353
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25354
 
@@ -446,14 +446,14 @@
 
 
 @Update
-@action id=‚â‚Ğ‚ë action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‚â‚Ğ‚ë
+@action id=ã‚„ã²ã‚ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ã‚„ã²ã‚
 
 @Talk name=Yahiro voice=YH020158
 
 @Hitret id=25365
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25366
 
@@ -469,19 +469,19 @@
 
 @Hitret id=25368
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25369
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25370
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25371
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25372
 
@@ -507,19 +507,19 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25376
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25377
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25378
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25379
 
@@ -532,8 +532,8 @@
 
 
 @Update
-@action id=‚â‚Ğ‚ë action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=‚â‚Ğ‚ë
+@action id=ã‚„ã²ã‚ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ã‚„ã²ã‚
 
 @Talk name=Yahiro voice=YH020159
 
@@ -575,14 +575,14 @@
 
 @Char file=CC02_09M 
 @Update
-@action id=‰l action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK021885
 
 @Hitret id=25388
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25389
 

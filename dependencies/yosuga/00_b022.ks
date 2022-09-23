@@ -4,117 +4,117 @@
 @Cg file=B12b   
 @PlayBgm file=BGM07
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15153
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15154
 
 
 @Char file=CB01_02L 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15155
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15156
 
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15157
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15158
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15159
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15160
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15161
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15162
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15163
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15164
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15165
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15166
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15167
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15168
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15169
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15170
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15171
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15172
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15173
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15174
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15175
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15176
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15177
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15178
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15179
 
@@ -129,7 +129,7 @@
 
 @Hitret id=15181
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15182
 
@@ -141,7 +141,7 @@
 
 @Hitret id=15184
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15185
 
@@ -171,19 +171,19 @@
 
 @Cg file=B05b   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15191
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15192
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15193
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15194
 
@@ -201,14 +201,14 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15197
 
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15198
 
@@ -258,7 +258,7 @@
 
 @Hitret id=15207
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15208
 
@@ -300,7 +300,7 @@
 
 @Hitret id=15216
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15217
 
@@ -345,7 +345,7 @@
 
 @Hitret id=15225
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15226
 
@@ -383,11 +383,11 @@
 @ClearChar 
 @PlaySe file=SE311
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15233
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15234
 
@@ -395,7 +395,7 @@
 @BlackOut
 @PlaySe file=SE256
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15235
 
@@ -408,27 +408,27 @@
 
 @Hitret id=15236
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15237
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15238
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15239
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15240
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15241
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15242
 
@@ -447,11 +447,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15244
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15245
 
@@ -470,11 +470,11 @@
 
 @Hitret id=15248
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15249
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15250
 
@@ -588,7 +588,7 @@
 
 @Hitret id=15270
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15271
 
@@ -596,34 +596,34 @@
 
 @Hitret id=15272
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15273
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15274
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15275
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15276
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15277
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15278
 
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=15279
 

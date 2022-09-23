@@ -5,15 +5,15 @@
 @Cg file=B27a
 @MessageFrame type=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12748
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12749
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12750
 
@@ -25,7 +25,7 @@
 
 @Hitret id=12751
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12752
 
@@ -33,11 +33,11 @@
 
 @Hitret id=12753
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12754
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12755
 
@@ -45,15 +45,15 @@
 
 @Hitret id=12756
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12757
 
 
 @Char file=CH02_07M
 @Update
-@action id=�� action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021163
 
@@ -82,8 +82,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021168
 
@@ -103,7 +103,7 @@
 
 @Hitret id=12766
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12767
 
@@ -118,8 +118,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021170
 
@@ -159,11 +159,11 @@
 
 @Hitret id=12774
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12775
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12776
 
@@ -199,14 +199,14 @@
 
 @Hitret id=12781
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12782
 
 
 @Char file=CH02_09M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12783
 
@@ -235,22 +235,22 @@
 
 @Hitret id=12787
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12788
 
 
 @Cg file=B27a center=400,300
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12789
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12790
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12791
 
@@ -258,7 +258,7 @@
 
 @Hitret id=12792
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12793
 

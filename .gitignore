@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# My Exceptions
+.idea/
+yosuga.csx
+Haruka.csx
+patch.xp3

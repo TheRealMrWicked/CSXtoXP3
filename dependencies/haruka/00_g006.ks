@@ -5,34 +5,34 @@
 @Cg file=B16a
 @Char file=CG01_01M
 
-@Talk name=Yahiro@Monologue voice=YH010213
+@Talk name=Yahiroã€€Monologue voice=YH010213
 
 @Hitret id=6110
 
-@Talk name=Yahiro@Monologue voice=YH010214
+@Talk name=Yahiroã€€Monologue voice=YH010214
 
 @Hitret id=6111
 
-@Talk name=Yahiro@Monologue voice=YH010215
+@Talk name=Yahiroã€€Monologue voice=YH010215
 
 @Hitret id=6112
 
-@Talk name=Yahiro@Monologue voice=YH010216
+@Talk name=Yahiroã€€Monologue voice=YH010216
 
 @Hitret id=6113
 
-@Talk name=Yahiro@Monologue voice=YH010217
+@Talk name=Yahiroã€€Monologue voice=YH010217
 
 @Hitret id=6114
 
-@Talk name=Yahiro@Monologue voice=YH010218
+@Talk name=Yahiroã€€Monologue voice=YH010218
 
 @Hitret id=6115
 
 
 @Char file=CG01_06M
 
-@Talk name=Yahiro@Monologue voice=YH010219
+@Talk name=Yahiroã€€Monologue voice=YH010219
 
 @Hitret id=6116
 
@@ -52,8 +52,8 @@
 
 @Char file=CE01_10M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT010047
 
@@ -67,7 +67,7 @@
 
 @Hitret id=6120
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6121
 
@@ -108,15 +108,15 @@
 
 @Hitret id=6128
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6129
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6130
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6131
 
@@ -194,7 +194,7 @@
 
 @Hitret id=6143
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6144
 
@@ -208,7 +208,7 @@
 @Update transition=universal rule=WIP_MOZV time=500
 @WaitUpdate
 
-@Talk name=Yahiro@Monologue voice=YH010230
+@Talk name=Yahiroã€€Monologue voice=YH010230
 
 @Hitret id=6145
 
@@ -219,7 +219,7 @@
 
 @Hitret id=6146
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6147
 
@@ -262,35 +262,35 @@
 
 @Hitret id=6154
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6155
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6156
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6157
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6158
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6159
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6160
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6161
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6162
 
@@ -301,7 +301,7 @@
 
 @Hitret id=6163
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6164
 
@@ -335,32 +335,32 @@
 @Hitret id=6169
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Char file=CG01_01M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6170
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6171
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6172
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6173
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6174
 
 
 @PlayBgm file=BGM03
-@ClearChar id=‚â‚Ğ‚ë
+@ClearChar id=ã‚„ã²ã‚
 @Char file=CC02_04M
 
 @Talk name=Akira voice=AK010014
@@ -400,8 +400,8 @@
 @Char file=CC02_12L
 @Update time=0
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
 @Talk name=Yahiro voice=YH010241
 
@@ -422,8 +422,8 @@
 @PlaySe file=se009
 @Char file=CC02_05L
 @Update
-@action id=‰l action=ActionAdvJump cycle=300 count=1 height=-5
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump cycle=300 count=1 height=-5
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK010019
 
@@ -432,63 +432,63 @@
 
 @Char file=CC02_14L
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6186
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6187
 
 
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6188
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6189
 
 
 @Char file=CC02_05L
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6190
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6191
 
 
 @Char file=CC02_10L
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6192
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6193
 
 
 @Char file=CC02_09L
 @Update
-@action id=‰l action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ç‘›
 
 @Talk name=Yahiro voice=YH010243
 
@@ -546,19 +546,19 @@
 
 @Hitret id=6204
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6205
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6206
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6207
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6208
 

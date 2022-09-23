@@ -6,7 +6,7 @@
 @Cg file=B21a   
 @Char file=CB06_03M 
 
-@Talk name=Soccer�@Club�@Member�@A voice=NP230001
+@Talk name=Soccer　Club　Member　A voice=NP230001
 
 @Hitret id=14632
 
@@ -17,7 +17,7 @@
 
 @Hitret id=14633
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14634
 
@@ -25,27 +25,27 @@
 
 @Hitret id=14635
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14636
 
-@Talk name=Soccer�@Club�@Member�@A voice=NP230002
+@Talk name=Soccer　Club　Member　A voice=NP230002
 
 @Hitret id=14637
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14638
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14639
 
-@Talk name=Soccer�@Club�@Member�@B voice=NP240001
+@Talk name=Soccer　Club　Member　B voice=NP240001
 
 @Hitret id=14640
 
-@Talk name=Soccer�@Club�@Member�@C voice=NP250001
+@Talk name=Soccer　Club　Member　C voice=NP250001
 
 @Hitret id=14641
 
@@ -65,15 +65,15 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14644
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14645
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14646
 
@@ -119,7 +119,7 @@
 
 @Hitret id=14655
 
-@Talk name=Nao's�@Friend�@A voice=NP260001
+@Talk name=Nao's　Friend　A voice=NP260001
 
 @Hitret id=14656
 
@@ -130,15 +130,15 @@
 
 @Hitret id=14657
 
-@Talk name=Nao's�@Friend�@A voice=NP260002
+@Talk name=Nao's　Friend　A voice=NP260002
 
 @Hitret id=14658
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14659
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14660
 
@@ -182,30 +182,30 @@
 
 @ClearChar 
 
-@Talk name=Female�@Student�@B voice=NP270001
+@Talk name=Female　Student　B voice=NP270001
 
 @Hitret id=14668
 
-@Talk name=Female�@Student�@C voice=NP280001
+@Talk name=Female　Student　C voice=NP280001
 
 @Hitret id=14669
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14670
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14671
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14672
 
 
 @Char file=CB04_05M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14673
 
@@ -228,7 +228,7 @@
 
 @Hitret id=14677
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14678
 
@@ -244,7 +244,7 @@
 @PlayEnvSe file=SE301
 @MessageFrame type=1
 
-@Talk name=Nao's�@Friends voice=NP260003
+@Talk name=Nao's　Friends voice=NP260003
 
 @Hitret id=14679
 
@@ -255,7 +255,7 @@
 
 @Hitret id=14680
 
-@Talk name=Nao's�@Friends voice=NP260004
+@Talk name=Nao's　Friends voice=NP260004
 
 @Hitret id=14681
 
@@ -263,7 +263,7 @@
 
 @Hitret id=14682
 
-@Talk name=Nao's�@Friends voice=NP260005
+@Talk name=Nao's　Friends voice=NP260005
 
 @Hitret id=14683
 
@@ -271,7 +271,7 @@
 
 @Hitret id=14684
 
-@Talk name=Nao's�@Friends voice=NP260006
+@Talk name=Nao's　Friends voice=NP260006
 
 @Hitret id=14685
 
@@ -282,7 +282,7 @@
 
 @Hitret id=14686
 
-@Talk name=Nao's�@Friends voice=NP260007
+@Talk name=Nao's　Friends voice=NP260007
 
 @Hitret id=14687
 
@@ -293,7 +293,7 @@
 
 @Hitret id=14688
 
-@Talk name=Nao's�@Friends voice=NP260008
+@Talk name=Nao's　Friends voice=NP260008
 
 @Hitret id=14689
 
@@ -304,7 +304,7 @@
 
 @Hitret id=14690
 
-@Talk name=Nao's�@Friends voice=NP260009
+@Talk name=Nao's　Friends voice=NP260009
 
 @Hitret id=14691
 
@@ -314,7 +314,7 @@
 
 @Hitret id=14692
 
-@Talk name=Nao's�@Friends voice=NP260010
+@Talk name=Nao's　Friends voice=NP260010
 
 @Hitret id=14693
 
@@ -325,11 +325,11 @@
 
 @Hitret id=14694
 
-@Talk name=Nao's�@Friends voice=NP260011
+@Talk name=Nao's　Friends voice=NP260011
 
 @Hitret id=14695
 
-@Talk name=Nao's�@Friends voice=NP260012
+@Talk name=Nao's　Friends voice=NP260012
 
 @Hitret id=14696
 
@@ -340,7 +340,7 @@
 
 @Hitret id=14697
 
-@Talk name=Nao's�@Friends voice=NP260013
+@Talk name=Nao's　Friends voice=NP260013
 
 @Hitret id=14698
 
@@ -351,11 +351,11 @@
 
 @Hitret id=14699
 
-@Talk name=Nao's�@Friends voice=NP260014
+@Talk name=Nao's　Friends voice=NP260014
 
 @Hitret id=14700
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14701
 

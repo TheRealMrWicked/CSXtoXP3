@@ -41,15 +41,15 @@
 
 @Hitret id=20758
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20759
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20760
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20761
 
@@ -75,8 +75,8 @@
 
 
 @PlaySe file=se006
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -96,7 +96,7 @@
 
 @Char file=CA03_09M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20769
 
@@ -291,7 +291,7 @@
 
 @Hitret id=20800
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20801
 
@@ -300,7 +300,7 @@
 @Hitret id=20802
 
 
-@ClearChar id=‰‰À
+@ClearChar id=åˆä½³
 @Char file=CC02_01M 
 
 @Talk name=Akira voice=AK020616
@@ -370,7 +370,7 @@
 @Hitret id=20812
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CF02_01M 
 
 @Talk name=Ryouhei voice=RH020214
@@ -416,7 +416,7 @@
 
 
 @PlaySe file=SE268
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CC02_03M 
 
 @Talk name=Akira voice=AK020619

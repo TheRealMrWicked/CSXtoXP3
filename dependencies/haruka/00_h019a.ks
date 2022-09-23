@@ -5,11 +5,11 @@
 @Cg file=B22a
 @MessageFrame type=1
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12167
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12168
 
@@ -28,17 +28,17 @@
 
 @Hitret id=12170
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12171
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12172
 
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12173
 
@@ -57,14 +57,14 @@
 
 @Hitret id=12176
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12177
 
 
 @Char file=CH02_14M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12178
 
@@ -100,12 +100,12 @@
 @Char file=CE02_01M
 @Update
 @waitUpdate
-@Move id=“Ş my=-10 cycle=1000 accel=3
+@Move id=å¥ˆç·’ my=-10 cycle=1000 accel=3
 @Update
-@WaitAction id=“Ş
-@Move id=“Ş y=0 cycle=1000
+@WaitAction id=å¥ˆç·’
+@Move id=å¥ˆç·’ y=0 cycle=1000
 @Update
-@WaitAction id=“Ş
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO020050
 
@@ -200,7 +200,7 @@
 @Hitret id=12198
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 
 @Talk name=Nao voice=NO020051
 
@@ -214,7 +214,7 @@
 @Hitret id=12200
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 
 @Talk name=Motoka voice=MT020070
 
@@ -254,8 +254,8 @@
 
 @Char file=CH02_13M
 @Update
-@Move id=½ my=10 cycle=1000 accel=3
-@WaitAction id=½
+@Move id=æ¢¢ my=10 cycle=1000 accel=3
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020918
 
@@ -278,8 +278,8 @@
 
 
 @Update
-@Move id=½ y=0 cycle=1000
-@WaitAction id=½
+@Move id=æ¢¢ y=0 cycle=1000
+@WaitAction id=æ¢¢
 @Char file=CH02_07M
 
 @Talk name=Kozue voice=KO020920
@@ -287,7 +287,7 @@
 @Hitret id=12211
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CH02_07M x=0
 @StopBgm
 
@@ -368,11 +368,11 @@
 
 @Hitret id=12223
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12224
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=12225
 
@@ -391,8 +391,8 @@
 @Hitret id=12227
 
 
-@ClearChar id=—º•½
-@ClearChar id=‰l
+@ClearChar id=äº®å¹³
+@ClearChar id=ç‘›
 @Char file=CD06_06M
 
 @Talk name=Kazuha voice=KA020143
@@ -453,7 +453,7 @@
 @Hitret id=12238
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CB07_13M
 @Char file=CE04_05M
 
@@ -505,8 +505,8 @@
 
 
 @Update
-@action id=“Ş action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO020059
 
@@ -527,7 +527,7 @@
 @ClearChar
 @Char file=CH06_05M
 
-@Talk name=Haruka@and@Kozue voice=KO020934
+@Talk name=Harukaã€€andã€€Kozue voice=KO020934
 
 @Hitret id=12251
 
@@ -679,8 +679,8 @@
 
 @Char file=CH06_07M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=5
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=5
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020948
 

@@ -16,7 +16,7 @@
 
 @Hitret id=28755
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28756
 
@@ -31,7 +31,7 @@
 
 @Hitret id=28758
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28759
 
@@ -98,11 +98,11 @@
 
 @Hitret id=28774
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28775
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28776
 
@@ -110,11 +110,11 @@
 
 @Hitret id=28777
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28778
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28779
 
@@ -151,11 +151,11 @@
 
 @Hitret id=28784
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28785
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28786
 
@@ -171,11 +171,11 @@
 
 @Hitret id=28789
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28790
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28791
 
@@ -186,7 +186,7 @@
 
 @Cg file=EZ06c  
 
-@Talk name=Math�@Teacher voice=NP120006
+@Talk name=Math　Teacher voice=NP120006
 
 @Hitret id=28793
 
@@ -202,11 +202,11 @@
 
 @Hitret id=28796
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28797
 
-@Talk name=Math�@Teacher voice=NP120007
+@Talk name=Math　Teacher voice=NP120007
 
 @Hitret id=28798
 
@@ -214,7 +214,7 @@
 
 @Hitret id=28799
 
-@Talk name=Math�@Teacher voice=NP120008
+@Talk name=Math　Teacher voice=NP120008
 
 @Hitret id=28800
 
@@ -226,22 +226,22 @@
 
 @Hitret id=28802
 
-@Talk name=Math�@Teacher voice=NP120009
+@Talk name=Math　Teacher voice=NP120009
 
 @Hitret id=28803
 
 
 @Cg file=B19a   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28804
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28805
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28806
 
@@ -252,11 +252,11 @@
 
 @Hitret id=28807
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28808
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28809
 
@@ -264,7 +264,7 @@
 
 @Hitret id=28810
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28811
 
@@ -272,15 +272,15 @@
 
 @Hitret id=28812
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28813
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28814
 
-@Talk name=Math�@Teacher voice=NP120010
+@Talk name=Math　Teacher voice=NP120010
 
 @Hitret id=28815
 
@@ -288,7 +288,7 @@
 
 @Hitret id=28816
 
-@Talk name=Math�@Teacher voice=NP120011
+@Talk name=Math　Teacher voice=NP120011
 
 @Hitret id=28817
 
@@ -296,7 +296,7 @@
 
 @Hitret id=28818
 
-@Talk name=Math�@Teacher voice=NP120012
+@Talk name=Math　Teacher voice=NP120012
 
 @Hitret id=28819
 
@@ -312,19 +312,19 @@
 
 @Hitret id=28822
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28823
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28824
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28825
 
-@Talk name=Math�@Teacher voice=NP120013
+@Talk name=Math　Teacher voice=NP120013
 
 @Hitret id=28826
 
@@ -339,11 +339,11 @@
 
 @Hitret id=28828
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28829
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28830
 
@@ -365,7 +365,7 @@
 
 @Hitret id=28834
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28835
 
@@ -381,7 +381,7 @@
 @Cg file=B19a   
 @PlayBgm file=BGM05
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28836
 
@@ -392,7 +392,7 @@
 
 @Hitret id=28837
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28838
 
@@ -407,15 +407,15 @@
 
 @Hitret id=28840
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28841
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28842
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28843
 
@@ -445,7 +445,7 @@
 
 @Hitret id=28847
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28848
 
@@ -453,7 +453,7 @@
 
 @Hitret id=28849
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28850
 
@@ -505,7 +505,7 @@
 
 @Hitret id=28860
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28861
 
@@ -540,7 +540,7 @@
 
 @Hitret id=28867
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28868
 
@@ -578,7 +578,7 @@
 
 @Hitret id=28874
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28875
 
@@ -589,7 +589,7 @@
 
 @Hitret id=28876
 
-@Talk name=Akira�@and�@Ryouhei voice=AK040251/RH040167
+@Talk name=Akira　and　Ryouhei voice=AK040251/RH040167
 
 @Hitret id=28877
 
@@ -612,15 +612,15 @@
 
 @Hitret id=28881
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28882
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28883
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=28884
 

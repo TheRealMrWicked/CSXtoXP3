@@ -36,15 +36,15 @@
 
 @Hitret id=16123
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16124
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16125
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16126
 
@@ -59,7 +59,7 @@
 
 @Hitret id=16128
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16129
 
@@ -74,7 +74,7 @@
 
 @Hitret id=16131
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16132
 

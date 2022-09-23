@@ -9,9 +9,9 @@
 @Hitret id=21199
 
 
-@ClearChar id=‰l
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@ClearChar id=ç‘›
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -35,7 +35,7 @@
 
 @Hitret id=21203
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21204
 
@@ -132,7 +132,7 @@
 @Hitret id=21219
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CC07_03M 
 @Talk name=Akira voice=AK020704
 
@@ -149,7 +149,7 @@
 @StopBgm
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21222
 
@@ -196,7 +196,7 @@
 @Hitret id=21229
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CD06_12M 
 
 @Talk name=Kazuha voice=KA020231
@@ -298,7 +298,7 @@
 @Hitret id=21245
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CE04_04M 
 
 @Talk name=Motoka voice=MT020042
@@ -317,7 +317,7 @@
 @BlackOut
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21249
 

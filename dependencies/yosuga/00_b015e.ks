@@ -15,7 +15,7 @@
 
 @Hitret id=13909
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13910
 
@@ -37,7 +37,7 @@
 
 @Hitret id=13913
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13914
 
@@ -45,15 +45,15 @@
 
 @Hitret id=13915
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13916
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13917
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13918
 
@@ -75,7 +75,7 @@
 
 @Hitret id=13921
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13922
 
@@ -100,11 +100,11 @@
 
 @Hitret id=13926
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13927
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13928
 
@@ -123,7 +123,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13932
 
@@ -138,7 +138,7 @@
 
 @Char file=CB07_11L 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13935
 
@@ -157,35 +157,35 @@
 
 @Hitret id=13938
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13939
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13940
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13941
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13942
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13943
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13944
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13945
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13946
 
@@ -200,8 +200,8 @@
 
 @Char file=CB07_13M 
 @Update
-@action id=“Ş action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO030763
 
@@ -222,9 +222,9 @@
 @Hitret id=13950
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13951
 
@@ -242,7 +242,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13954
 
@@ -263,17 +263,17 @@
 
 @Hitret id=13957
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13958
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13959
 
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13960
 

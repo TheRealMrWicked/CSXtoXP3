@@ -51,8 +51,8 @@
 
 @Char file=CG01_05M 
 @Update
-@action id=‚â‚Ğ‚ë action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=‚â‚Ğ‚ë
+@action id=ã‚„ã²ã‚ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ã‚„ã²ã‚
 
 @Talk name=Yahiro voice=YH020180
 
@@ -175,15 +175,15 @@
 @StopBgm
 @Char file=CA02_12M 
 @Update
-@action id=âu action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=âu
+@action id=ç©¹ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR020287
 
 @Hitret id=26608
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 
 @Talk name=Kazuha voice=KA020648
 
@@ -378,7 +378,7 @@
 @Hitret id=26639
 
 
-@ClearChar id=‚â‚Ğ‚ë
+@ClearChar id=ã‚„ã²ã‚
 @Char file=CD02_03M 
 
 @Talk name=Kazuha voice=KA020658
@@ -393,7 +393,7 @@
 @Hitret id=26641
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CB02_01M 
 
 @Talk name=Nao voice=NO020186
@@ -401,7 +401,7 @@
 @Hitret id=26642
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CG01_01M 
 
 @Talk name=Yahiro voice=YH020204
@@ -416,7 +416,7 @@
 @Hitret id=26644
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CG01_02M 
 
 @Talk name=Yahiro voice=YH020205
@@ -462,15 +462,15 @@
 
 @Hitret id=26651
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26652
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26653
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26654
 
@@ -534,7 +534,7 @@
 
 @Hitret id=26668
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26669
 
@@ -550,7 +550,7 @@
 
 @Hitret id=26672
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26673
 
@@ -590,11 +590,11 @@
 
 @Hitret id=26682
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26683
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26684
 
@@ -614,7 +614,7 @@
 
 @Hitret id=26688
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26689
 
@@ -646,15 +646,15 @@
 
 @Hitret id=26696
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26697
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26698
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26699
 
@@ -670,19 +670,19 @@
 
 @Hitret id=26702
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26703
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26704
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26705
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26706
 

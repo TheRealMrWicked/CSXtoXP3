@@ -22,8 +22,8 @@
 
 
 @PlaySe file=SE207
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -74,7 +74,7 @@
 
 @Hitret id=13596
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13597
 
@@ -92,8 +92,8 @@
 
 @Char file=CB07_13M 
 @Update
-@action id=“Ş action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO030683
 
@@ -126,8 +126,8 @@
 @PlaySe file=SE207
 @Char file=CB07_13M 
 @Update
-@action id=“Ş action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO030684
 
@@ -191,7 +191,7 @@
 
 @Hitret id=13614
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13615
 
@@ -236,13 +236,13 @@
 
 @Hitret id=13622
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13623
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -256,8 +256,8 @@
 @ClearChar 
 @Char file=CA07_12L 
 @Update
-@action id=âu action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=âu
+@action id=ç©¹ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR030149
 
@@ -288,11 +288,11 @@
 
 @Hitret id=13631
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13632
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13633
 
@@ -361,7 +361,7 @@
 @Hitret id=13643
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CC07_02M 
 
 @Talk name=Akira voice=AK030115
@@ -416,7 +416,7 @@
 
 
 @PlaySe file=SE202
-@Leave id=—º•½ mx=-300 my=0 fade=1 time=500 accel=1
+@Leave id=äº®å¹³ mx=-300 my=0 fade=1 time=500 accel=1
 @Update
 @Char file=CB07_13S 
 
@@ -432,15 +432,15 @@
 
 @Hitret id=13652
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13653
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13654
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13655
 
@@ -519,11 +519,11 @@
 
 @Hitret id=13671
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13672
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13673
 

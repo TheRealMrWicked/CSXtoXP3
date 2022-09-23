@@ -26,11 +26,11 @@
 @Char file=CE02_01M
 @Char file=CG01_01M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6470
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6471
 
@@ -84,11 +84,11 @@
 
 @Hitret id=6479
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6480
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6481
 
@@ -103,11 +103,11 @@
 
 @Hitret id=6483
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6484
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6485
 
@@ -133,19 +133,19 @@
 
 @Hitret id=6488
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6489
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6490
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6491
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6492
 
@@ -159,8 +159,8 @@
 
 @Char file=CG01_10M
 @Update
-@action id=‚â‚Ğ‚ë action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=‚â‚Ğ‚ë
+@action id=ã‚„ã²ã‚ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=ã‚„ã²ã‚
 
 @Talk name=Yahiro voice=YH010334
 
@@ -177,7 +177,7 @@
 
 @Hitret id=6496
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6497
 
@@ -239,15 +239,15 @@
 
 @Hitret id=6507
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6508
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6509
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6510
 
@@ -286,8 +286,8 @@
 
 
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT010084
 
@@ -304,15 +304,15 @@
 
 @Hitret id=6519
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6520
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6521
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6522
 
@@ -351,11 +351,11 @@
 
 @Char file=CE02_04M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=5
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=5
+@WaitAction id=åˆä½³
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=5
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=5
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT010088
 
@@ -383,7 +383,7 @@
 
 @Hitret id=6532
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6533
 

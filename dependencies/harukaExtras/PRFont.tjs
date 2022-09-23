@@ -1,0 +1,37 @@
+[
+	%[face:"スーラ12"			, file:"Arial12"			, height:12, ratio: 0, ruby:"スーラ12"], 
+	%[face:"スーラ24"			, file:"Arial24"			, height:24, ratio:10, ruby:"スーラ12"], 
+	%[face:"スーラ30"			, file:"Arial30"			, height:30, ratio:17, ruby:"スーラ12"], 
+	%[face:"スーラ36"			, file:"Arial36"			, height:36, ratio:20, ruby:"スーラ12"], 
+	%[face:"スーラ48"			, file:"Arial48"			, height:48, ratio:30, ruby:"スーラ12"], 
+
+	%[face:"ニューシネマ12"		, file:"Arial12"		, height:12, ratio: 0, ruby:"ニューシネマ12"], 
+	%[face:"ニューシネマ24"		, file:"Arial24"		, height:24, ratio:10, ruby:"ニューシネマ12"], 
+	%[face:"ニューシネマ30"		, file:"Arial30"		, height:30, ratio:17, ruby:"ニューシネマ12"], 
+	%[face:"ニューシネマ36"		, file:"Arial36"		, height:36, ratio:20, ruby:"ニューシネマ12"], 
+	%[face:"ニューシネマ48"		, file:"Arial48"		, height:48, ratio:30, ruby:"ニューシネマ12"], 
+
+	%[face:"ハミング12"			, file:"Arial12"			, height:12, ratio:-1, ruby:"ハミング12"], 
+	%[face:"ハミング24"			, file:"Arial24"			, height:24, ratio:10, ruby:"ハミング12"], 
+	%[face:"ハミング30"			, file:"Arial30"			, height:30, ratio:17, ruby:"ハミング12"], 
+	%[face:"ハミング36"			, file:"Arial36"			, height:36, ratio:20, ruby:"ハミング12"], 
+	%[face:"ハミング48"			, file:"Arial48"			, height:48, ratio:30, ruby:"ハミング12"], 
+
+	%[face:"ロダンカトレア12"	, file:"Arial12"	, height:12, ratio:0, ruby:"ロダンカトレア12"], 
+	%[face:"ロダンカトレア24"	, file:"Arial24"	, height:24, ratio:10, ruby:"ロダンカトレア12"], 
+	%[face:"ロダンカトレア30"	, file:"Arial30"	, height:30, ratio:17, ruby:"ロダンカトレア12"], 
+	%[face:"ロダンカトレア36"	, file:"Arial36"	, height:36, ratio:20, ruby:"ロダンカトレア12"], 
+	%[face:"ロダンカトレア48"	, file:"Arial48"	, height:48, ratio:30, ruby:"ロダンカトレア12"], 
+
+	%[face:"ロダンハッピー12"	, file:"Arial12"	, height:12, ratio:0, ruby:"ロダンハッピー12"], 
+	%[face:"ロダンハッピー24"	, file:"Arial24"	, height:24, ratio:10, ruby:"ロダンハッピー12"], 
+	%[face:"ロダンハッピー30"	, file:"Arial30"	, height:30, ratio:17, ruby:"ロダンハッピー12"], 
+	%[face:"ロダンハッピー36"	, file:"Arial36"	, height:36, ratio:20, ruby:"ロダンハッピー12"], 
+	%[face:"ロダンハッピー48"	, file:"Arial48"	, height:48, ratio:30, ruby:"ロダンハッピー12"], 
+
+	%[face:"筑紫明朝12"			, file:"Arial12"			, height:12, ratio:0, ruby:"筑紫明朝12"], 
+	%[face:"筑紫明朝24"			, file:"Arial24"			, height:24, ratio:10, ruby:"筑紫明朝12"], 
+	%[face:"筑紫明朝30"			, file:"Arial30"			, height:30, ratio:17, ruby:"筑紫明朝12"], 
+	%[face:"筑紫明朝36"			, file:"Arial36"			, height:36, ratio:20, ruby:"筑紫明朝12"], 
+	%[face:"筑紫明朝48"			, file:"Arial48"			, height:48, ratio:30, ruby:"筑紫明朝12"]
+];

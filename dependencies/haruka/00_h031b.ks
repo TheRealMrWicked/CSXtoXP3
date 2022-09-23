@@ -45,11 +45,11 @@
 @PlayBgm file=BGM18
 @Cg file=B45a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14278
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14279
 
@@ -66,8 +66,8 @@
 
 
 @Update
-@action id=�� action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021847
 
@@ -239,11 +239,11 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14314
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14315
 
@@ -263,7 +263,7 @@
 
 @Hitret id=14319
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14320
 
@@ -271,7 +271,7 @@
 
 @Hitret id=14321
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14322
 
@@ -307,7 +307,7 @@
 
 @Hitret id=14327
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14328
 
@@ -318,7 +318,7 @@
 
 @Hitret id=14329
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14330
 
@@ -370,11 +370,11 @@
 
 @Cg file=EZ27aL center=520,620
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14341
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14342
 
@@ -397,7 +397,7 @@
 @Cg file=B45a
 @Char file=CH04_11L
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14346
 
@@ -454,7 +454,7 @@
 
 @Hitret id=14357
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14358
 
@@ -494,15 +494,15 @@
 
 @Cg file=EZ27a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14366
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14367
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14368
 
@@ -532,7 +532,7 @@
 
 @Cg file=EZ27a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14374
 
@@ -571,7 +571,7 @@
 
 @Hitret id=14382
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14383
 
@@ -648,11 +648,11 @@
 @Update
 @MoveCamera x=-680 y=180 time=20000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14399
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14400
 
@@ -676,11 +676,11 @@
 
 @Hitret id=14405
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14406
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14407
 
@@ -714,11 +714,11 @@
 
 @Cg file=EZ27b
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14414
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14415
 
@@ -772,11 +772,11 @@
 
 @Cg file=EZ27b
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14427
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14428
 
@@ -831,7 +831,7 @@
 
 @Hitret id=14438
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14439
 
@@ -907,7 +907,7 @@
 
 @Hitret id=14453
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14454
 
@@ -1016,7 +1016,7 @@
 
 @Hitret id=14475
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14476
 
@@ -1031,15 +1031,15 @@
 
 @Hitret id=14478
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14479
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14480
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14481
 
@@ -1082,7 +1082,7 @@
 
 @Cg file=EZ28a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14490
 
@@ -1162,7 +1162,7 @@
 
 @Cg file=EZ28a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14508
 
@@ -1186,14 +1186,14 @@
 
 @Hitret id=14513
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14514
 
 
 @Cg file=EZ28aL center=1200,836
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14515
 
@@ -1205,11 +1205,11 @@
 
 @Hitret id=14517
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14518
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14519
 
@@ -1236,7 +1236,7 @@
 
 @Hitret id=14524
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14525
 
@@ -1263,7 +1263,7 @@
 @Update
 @MoveCamera x=718 y=496 time=20000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14530
 
@@ -1287,11 +1287,11 @@
 
 @Hitret id=14535
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14536
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14537
 
@@ -1340,7 +1340,7 @@
 
 @Cg file=EZ28bL center=1200,836
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14547
 
@@ -1384,7 +1384,7 @@
 @Update
 @MoveCamera x=-718 y=-496 time=30000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14556
 
@@ -1473,18 +1473,18 @@
 @Update time=2000
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14574
 
 
 @Cg file=EZ28cL center=1200,836
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14575
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=14576
 

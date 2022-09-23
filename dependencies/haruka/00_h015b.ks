@@ -11,11 +11,11 @@
 
 @PlayBgm file=BGM07
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11289
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11290
 
@@ -23,11 +23,11 @@
 
 @Hitret id=11291
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11292
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11293
 
@@ -35,11 +35,11 @@
 
 @Hitret id=11294
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11295
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11296
 
@@ -63,11 +63,11 @@
 
 @Hitret id=11301
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11302
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11303
 
@@ -75,7 +75,7 @@
 
 @Hitret id=11304
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11305
 
@@ -94,7 +94,7 @@
 
 @Hitret id=11308
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11309
 
@@ -146,8 +146,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020586
 
@@ -204,11 +204,11 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11329
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11330
 
@@ -303,8 +303,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020602
 
@@ -449,8 +449,8 @@
 
 @Char file=CH02_07M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020616
 
@@ -509,11 +509,11 @@
 
 @Hitret id=11387
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11388
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11389
 
@@ -531,8 +531,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020624
 

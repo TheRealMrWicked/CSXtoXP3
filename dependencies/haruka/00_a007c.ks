@@ -34,7 +34,7 @@
 @Hitret id=892
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CD01_01M
 
 @Talk name=Kazuha voice=KA000034

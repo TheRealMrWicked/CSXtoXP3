@@ -8,85 +8,85 @@
 @WaitUpdate
 @MessageFrame type=1
 
-@Talk name=Kozue　Monologue voice=KO021270
+@Talk name=Kozue縲Monologue voice=KO021270
 
 @Hitret id=13009
 
-@Talk name=Kozue　Monologue voice=KO021271
+@Talk name=Kozue縲Monologue voice=KO021271
 
 @Hitret id=13010
 
-@Talk name=Kozue　Monologue voice=KO021272
+@Talk name=Kozue縲Monologue voice=KO021272
 
 @Hitret id=13011
 
 
 @Cg file=B18a tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021273
+@Talk name=Kozue縲Monologue voice=KO021273
 
 @Hitret id=13012
 
-@Talk name=Kozue　Monologue voice=KO021274
+@Talk name=Kozue縲Monologue voice=KO021274
 
 @Hitret id=13013
 
-@Talk name=Kozue　Monologue voice=KO021275
+@Talk name=Kozue縲Monologue voice=KO021275
 
 @Hitret id=13014
 
 
 @Cg file=B19a tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021276
+@Talk name=Kozue縲Monologue voice=KO021276
 
 @Hitret id=13015
 
-@Talk name=Kozue　Monologue voice=KO021277
+@Talk name=Kozue縲Monologue voice=KO021277
 
 @Hitret id=13016
 
-@Talk name=Kozue　Monologue voice=KO021278
+@Talk name=Kozue縲Monologue voice=KO021278
 
 @Hitret id=13017
 
 
 @Cg file=B21a tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021279
+@Talk name=Kozue縲Monologue voice=KO021279
 
 @Hitret id=13018
 
 
 @Cg file=B07e tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021280
+@Talk name=Kozue縲Monologue voice=KO021280
 
 @Hitret id=13019
 
 
 @Cg file=B23a tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021281
+@Talk name=Kozue縲Monologue voice=KO021281
 
 @Hitret id=13020
 
-@Talk name=Kozue　Monologue voice=KO021282
+@Talk name=Kozue縲Monologue voice=KO021282
 
 @Hitret id=13021
 
 
 @Cg file=EZ22a tone=sepia
 
-@Talk name=Kozue　Monologue voice=KO021283
+@Talk name=Kozue縲Monologue voice=KO021283
 
 @Hitret id=13022
 
-@Talk name=Kozue　Monologue voice=KO021284
+@Talk name=Kozue縲Monologue voice=KO021284
 
 @Hitret id=13023
 
-@Talk name=Kozue　Monologue voice=KO021285
+@Talk name=Kozue縲Monologue voice=KO021285
 
 @Hitret id=13024
 
@@ -104,11 +104,11 @@
 
 @Hitret id=13026
 
-@Talk name=心の声
+@Talk name=蠢�縺ｮ螢ｰ
 
 @Hitret id=13027
 
-@Talk name=心の声
+@Talk name=蠢�縺ｮ螢ｰ
 
 @Hitret id=13028
 
@@ -200,8 +200,8 @@
 
 @Char file=CH02_01M
 @Update
-@Move id=梢 my=-10 cycle=1000 accel=3
-@WaitAction id=梢
+@Move id=譴｢ my=-10 cycle=1000 accel=3
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021294
 
@@ -209,8 +209,8 @@
 
 
 @Update
-@Move id=梢 y=0 cycle=1000
-@WaitAction id=梢
+@Move id=譴｢ y=0 cycle=1000
+@WaitAction id=譴｢
 
 @Talk name=Haruka
 
@@ -254,8 +254,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021300
 
@@ -268,8 +268,8 @@
 
 @Char file=CH02_04M
 @Update
-@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021301
 
@@ -315,8 +315,8 @@
 @PlayBgm file=BGM14
 @Char file=CH02_05M
 @Update
-@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021307
 
@@ -329,16 +329,16 @@
 
 @Char file=CH02_07M
 @Update
-@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021308
 
 @Hitret id=13067
 
 
-@action id=カメラ action=ActionWave width=0, height=20, count=3 cycle=50
-@WaitAction id=カメラ
+@action id=繧ｫ繝｡繝ｩ action=ActionWave width=0, height=20, count=3 cycle=50
+@WaitAction id=繧ｫ繝｡繝ｩ
 
 @Talk name=Haruka
 
@@ -346,8 +346,8 @@
 
 
 @Update
-@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021309
 
@@ -360,8 +360,8 @@
 
 @Char file=CH02_13M
 @Update
-@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10, 0
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvJump cycle=300 count=1 height=10, 0
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021310
 
@@ -436,8 +436,8 @@
 @PlaySe file=se011
 @Char file=CH02_13L
 @Update
-@Move id=梢 my=20 cycle=1000 accel=3
-@WaitAction id=梢
+@Move id=譴｢ my=20 cycle=1000 accel=3
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021316
 
@@ -448,9 +448,9 @@
 @HitWait id=13085
 
 @PlaySe file=SE018
-@Leave id=梢 mx=0 my=600 fade=1 time=350 accel=1
+@Leave id=譴｢ mx=0 my=600 fade=1 time=350 accel=1
 @Update
-@waitAction id=梢
+@waitAction id=譴｢
 @Char file=CA02_06M x=0
 
 @Talk name=Haruka
@@ -488,8 +488,8 @@
 
 @Char file=CH02_13M
 @Update
-@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=梢
+@action id=譴｢ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=譴｢
 
 @Talk name=Kozue voice=KO021320
 

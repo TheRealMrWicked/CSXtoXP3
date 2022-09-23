@@ -3,7 +3,7 @@
 
 @cg file=black
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3715
 
@@ -158,7 +158,7 @@
 
 @Hitret id=3741
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3742
 
@@ -181,7 +181,7 @@
 @Hitret id=3745
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 @Char file=CF01_02M 
 
 @Talk name=Ryouhei voice=RH010101
@@ -197,7 +197,7 @@
 @Hitret id=3748
 
 
-@ClearChar id=����
+@ClearChar id=亮平
 
 @Talk name=Ryouhei voice=RH010103
 
@@ -264,7 +264,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3761
 
@@ -272,11 +272,11 @@
 
 @Hitret id=3762
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3763
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3764
 
@@ -284,19 +284,19 @@
 
 @Hitret id=3765
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3766
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3767
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3768
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3769
 
@@ -304,14 +304,14 @@
 
 @Hitret id=3770
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3771
 
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3772
 

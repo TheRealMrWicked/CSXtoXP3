@@ -12,11 +12,11 @@
 
 @Hitret id=13541
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13542
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13543
 
@@ -33,8 +33,8 @@
 @ClearChar 
 @Char file=CC02_04M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK030104
 
@@ -109,19 +109,19 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13556
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13557
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13558
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13559
 
@@ -167,17 +167,17 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13566
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13567
 
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13568
 
@@ -252,7 +252,7 @@
 @Hitret id=13579
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CC02_02M 
 
 @Talk name=Akira voice=AK030109
@@ -267,8 +267,8 @@
 @Hitret id=13581
 
 
-@ClearChar id=‰l
-@ClearChar id=ˆê—t
+@ClearChar id=ç‘›
+@ClearChar id=ä¸€è‘‰
 @Char file=CE02_04M 
 
 @Talk name=Motoka voice=MT030002
@@ -276,7 +276,7 @@
 @Hitret id=13582
 
 
-@ClearChar id=‰‰À
+@ClearChar id=åˆä½³
 @Char file=CA03_09M 
 
 @Talk name=Ryouhei voice=RH030322
@@ -291,8 +291,8 @@
 @Hitret id=13584
 
 
-@ClearChar id=âu
-@ClearChar id=“Ş
+@ClearChar id=ç©¹
+@ClearChar id=å¥ˆç·’
 @Char file=CF02_10M 
 @StopBgm
 

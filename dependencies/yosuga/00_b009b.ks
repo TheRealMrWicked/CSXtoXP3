@@ -28,19 +28,19 @@
 
 @PlaySe file=se071
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12610
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12611
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12612
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12613
 
@@ -52,19 +52,19 @@
 
 @Hitret id=12615
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12616
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12617
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12618
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12619
 
@@ -84,7 +84,7 @@
 @Cg file=B02c   
 @Char file=CA02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12623
 
@@ -115,9 +115,9 @@
 @Hitret id=12628
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12629
 
@@ -133,7 +133,7 @@
 
 @Char file=CA02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12631
 
@@ -144,7 +144,7 @@
 
 @Hitret id=12632
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12633
 
@@ -163,7 +163,7 @@
 
 @Hitret id=12636
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12637
 
@@ -182,11 +182,11 @@
 
 @Hitret id=12640
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12641
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12642
 
@@ -224,13 +224,13 @@
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12650
 
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12651
 
@@ -251,7 +251,7 @@
 
 @Hitret id=12654
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12655
 
@@ -270,14 +270,14 @@
 
 @Hitret id=12658
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12659
 
 
 @Char file=CA02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12660
 
@@ -321,9 +321,9 @@
 @Hitret id=12667
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12668
 
@@ -375,7 +375,7 @@
 
 @Hitret id=12677
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12678
 
@@ -387,7 +387,7 @@
 
 @Hitret id=12680
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12681
 
@@ -412,7 +412,7 @@
 
 @Hitret id=12684
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12685
 
@@ -427,7 +427,7 @@
 
 @Hitret id=12687
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12688
 
@@ -435,15 +435,15 @@
 
 @Hitret id=12689
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12690
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12691
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=12692
 

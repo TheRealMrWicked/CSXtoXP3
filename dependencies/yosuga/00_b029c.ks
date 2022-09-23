@@ -38,11 +38,11 @@
 
 @Hitret id=16932
 
-@Talk name=Nao�@Monologue voice=NO031829
+@Talk name=Nao　Monologue voice=NO031829
 
 @Hitret id=16933
 
-@Talk name=Nao�@Monologue voice=NO031830
+@Talk name=Nao　Monologue voice=NO031830
 
 @Hitret id=16934
 
@@ -68,18 +68,18 @@
 
 @Hitret id=16937
 
-@Talk name=Nao�@Monologue voice=NO031834
+@Talk name=Nao　Monologue voice=NO031834
 
 @Hitret id=16938
 
-@Talk name=Nao�@Monologue voice=NO031835
+@Talk name=Nao　Monologue voice=NO031835
 
 @Hitret id=16939
 
 
 @StopBgm
 
-@Talk name=Nao�@Monologue voice=NO031836
+@Talk name=Nao　Monologue voice=NO031836
 
 @Hitret id=16940
 
@@ -88,15 +88,15 @@
 @BlackOut   time=1000
 @PlayEnvSe file=SE308 fade=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16941
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16942
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16943
 

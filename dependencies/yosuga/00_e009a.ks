@@ -44,7 +44,7 @@
 
 @Hitret id=34429
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34430
 
@@ -108,7 +108,7 @@
 
 @Hitret id=34443
 
-@Talk name=English@Teacher voice=NP490001
+@Talk name=Englishã€€Teacher voice=NP490001
 
 @Hitret id=34444
 
@@ -119,7 +119,7 @@
 
 @Hitret id=34445
 
-@Talk name=English@Teacher voice=NP490002
+@Talk name=Englishã€€Teacher voice=NP490002
 
 @Hitret id=34446
 
@@ -168,15 +168,15 @@
 
 @Hitret id=34455
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34456
 
-@Talk name=English@Teacher voice=NP490003
+@Talk name=Englishã€€Teacher voice=NP490003
 
 @Hitret id=34457
 
-@Talk name=English@Teacher voice=NP490004
+@Talk name=Englishã€€Teacher voice=NP490004
 
 @Hitret id=34458
 
@@ -184,7 +184,7 @@
 
 @Hitret id=34459
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34460
 
@@ -203,7 +203,7 @@
 
 @Hitret id=34463
 
-@Talk name=English@Teacher voice=NP490005
+@Talk name=Englishã€€Teacher voice=NP490005
 
 @Hitret id=34464
 
@@ -211,11 +211,11 @@
 
 @Hitret id=34465
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34466
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34467
 
@@ -284,7 +284,7 @@
 
 @Hitret id=34479
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34480
 
@@ -360,7 +360,7 @@
 @BlackOut
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34494
 
@@ -372,11 +372,11 @@
 
 @Hitret id=34495
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34496
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34497
 
@@ -405,11 +405,11 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34502
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34503
 
@@ -424,15 +424,15 @@
 
 @Hitret id=34505
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34506
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34507
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34508
 
@@ -451,7 +451,7 @@
 
 @Hitret id=34511
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34512
 
@@ -474,14 +474,14 @@
 @Hitret id=34515
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Char file=CF01_01M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34516
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34517
 
@@ -529,7 +529,7 @@
 @Hitret id=34527
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 
 @Char file=CF01_06M 
 
@@ -556,11 +556,11 @@
 
 @Hitret id=34532
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34533
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=34535
 

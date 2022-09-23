@@ -5,15 +5,15 @@
 @Cg file=B03a   
 @Char file=CE01_03M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37738
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37739
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37740
 
@@ -28,7 +28,7 @@
 
 @Hitret id=37742
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37743
 
@@ -47,7 +47,7 @@
 
 @Hitret id=37746
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37747
 
@@ -65,7 +65,7 @@
 
 @PlaySe file=SE158
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37750
 
@@ -87,11 +87,11 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37754
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37755
 

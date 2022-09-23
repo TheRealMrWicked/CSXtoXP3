@@ -11,11 +11,11 @@
 
 @PlayBgm file=BGM09
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10475
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10476
 
@@ -23,11 +23,11 @@
 
 @Hitret id=10477
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10478
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10479
 
@@ -35,7 +35,7 @@
 
 @Hitret id=10480
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10481
 
@@ -43,23 +43,23 @@
 
 @Hitret id=10482
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10483
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10484
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10485
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10486
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10487
 
@@ -68,23 +68,23 @@
 
 @Hitret id=10488
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10489
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10490
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10491
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10492
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10493
 
@@ -92,11 +92,11 @@
 
 @Hitret id=10494
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10495
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10496
 
@@ -104,11 +104,11 @@
 
 @Hitret id=10497
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10498
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10499
 
@@ -116,7 +116,7 @@
 
 @Hitret id=10500
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10501
 
@@ -144,7 +144,7 @@
 
 @Hitret id=10505
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10506
 
@@ -152,15 +152,15 @@
 
 @Hitret id=10507
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10508
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10509
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10510
 
@@ -208,15 +208,15 @@
 
 @Hitret id=10521
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10522
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10523
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10524
 
@@ -242,8 +242,8 @@
 
 @Cg file=EE02d
 @Update time=0
-@action id=�J���� action=ActionWave width=0, height=20, count=2 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=20, count=2 cycle=50
+@WaitAction id=カメラ
 
 @Talk name=Motoka voice=MT020009
 
@@ -312,11 +312,11 @@
 
 @Hitret id=10543
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10544
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10545
 
@@ -328,14 +328,14 @@
 
 @Hitret id=10547
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10548
 
 
 @Cg file=B34c center=800,300
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=10549
 

@@ -5,23 +5,23 @@
 
 @Cg file=B07d   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13160
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13161
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13162
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13163
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13164
 
@@ -40,11 +40,11 @@
 
 @Hitret id=13167
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13168
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13169
 
@@ -57,15 +57,15 @@
 
 @Hitret id=13170
 
-@Talk name=Shrine�@Maden�@A voice=NP210001
+@Talk name=Shrine　Maden　A voice=NP210001
 
 @Hitret id=13171
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13172
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13173
 
@@ -84,15 +84,15 @@
 
 @Hitret id=13176
 
-@Talk name=Shrine�@Maden�@A voice=NP210002
+@Talk name=Shrine　Maden　A voice=NP210002
 
 @Hitret id=13177
 
-@Talk name=Shrine�@Maden�@B voice=NP220001
+@Talk name=Shrine　Maden　B voice=NP220001
 
 @Hitret id=13178
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13179
 
@@ -114,7 +114,7 @@
 
 @Hitret id=13182
 
-@Talk name=Shrine�@Maden�@A voice=NP210003
+@Talk name=Shrine　Maden　A voice=NP210003
 
 @Hitret id=13183
 
@@ -132,8 +132,8 @@
 
 @Char file=CF03_06M 
 @Update
-@action id=���� action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=����
+@action id=亮平 action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=亮平
 
 @Talk name=Ryouhei voice=RH030263
 
@@ -235,7 +235,7 @@
 @PlaySe file=se002
 @Char file=CA03_11M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13202
 
@@ -263,7 +263,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13206
 
@@ -330,11 +330,11 @@
 
 @Hitret id=13216
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13217
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13218
 
@@ -349,7 +349,7 @@
 
 @Hitret id=13220
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13221
 
@@ -459,7 +459,7 @@
 
 @Hitret id=13239
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13240
 

@@ -61,7 +61,7 @@
 
 @Hitret id=19055
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19056
 
@@ -79,15 +79,15 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19059
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19060
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19061
 
@@ -199,7 +199,7 @@
 
 @Hitret id=19079
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19080
 
@@ -230,7 +230,7 @@
 @PlayBgm file=BGM05
 @PlaySe file=SE352
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19083
 
@@ -305,15 +305,15 @@
 
 @Hitret id=19095
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19096
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19097
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19098
 
@@ -358,15 +358,15 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19105
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19106
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19107
 

@@ -20,7 +20,7 @@
 
 @Hitret id=24318
 
-@Talk name=Akira　Monologue voice=AK021583
+@Talk name=Akira縲Monologue voice=AK021583
 
 @Hitret id=24319
 
@@ -45,15 +45,15 @@
 
 @Hitret id=24322
 
-@Talk name=Akira　Monologue voice=AK021587
+@Talk name=Akira縲Monologue voice=AK021587
 
 @Hitret id=24323
 
-@Talk name=Akira　Monologue voice=AK021588
+@Talk name=Akira縲Monologue voice=AK021588
 
 @Hitret id=24324
 
-@Talk name=Akira　Monologue voice=AK021589
+@Talk name=Akira縲Monologue voice=AK021589
 
 @Hitret id=24325
 
@@ -94,11 +94,11 @@
 
 @Hitret id=24331
 
-@Talk name=Grandfather's　Son voice=NP080002
+@Talk name=Grandfather's縲Son voice=NP080002
 
 @Hitret id=24332
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090001
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090001
 
 @Hitret id=24333
 
@@ -123,38 +123,38 @@
 
 @StopBgm fade=0
 
-@Talk name=Grandfather's　Son voice=NP080003
+@Talk name=Grandfather's縲Son voice=NP080003
 
 @Hitret id=24337
 
 
 @PlayBgm file=BGM11
 
-@Talk name=Akira's　Grandfather voice=NP070001
+@Talk name=Akira's縲Grandfather voice=NP070001
 
 @Hitret id=24338
 
-@Talk name=Grandfather's　Son voice=NP080004
+@Talk name=Grandfather's縲Son voice=NP080004
 
 @Hitret id=24339
 
-@Talk name=Akira's　Grandfather voice=NP070002
+@Talk name=Akira's縲Grandfather voice=NP070002
 
 @Hitret id=24340
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090002
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090002
 
 @Hitret id=24341
 
-@Talk name=Akira's　Grandfather voice=NP070003
+@Talk name=Akira's縲Grandfather voice=NP070003
 
 @Hitret id=24342
 
-@Talk name=Grandfather's　Son voice=NP080005
+@Talk name=Grandfather's縲Son voice=NP080005
 
 @Hitret id=24343
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090003
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090003
 
 @Hitret id=24344
 
@@ -165,7 +165,7 @@
 
 @Hitret id=24345
 
-@Talk name=Akira's　Grandfather voice=NP070004
+@Talk name=Akira's縲Grandfather voice=NP070004
 
 @Hitret id=24346
 
@@ -173,11 +173,11 @@
 
 @Hitret id=24347
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090004
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090004
 
 @Hitret id=24348
 
-@Talk name=Akira's　Grandfather voice=NP070005
+@Talk name=Akira's縲Grandfather voice=NP070005
 
 @Hitret id=24349
 
@@ -188,11 +188,11 @@
 
 @BlackOut
 
-@Talk name=Akira's　Grandfather voice=NP070006
+@Talk name=Akira's縲Grandfather voice=NP070006
 
 @Hitret id=24351
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090005
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090005
 
 @Hitret id=24352
 
@@ -215,15 +215,15 @@
 
 @PlaySe file=se013
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090006
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090006
 
 @Hitret id=24355
 
-@Talk name=Grandfather's　Son voice=NP080006
+@Talk name=Grandfather's縲Son voice=NP080006
 
 @Hitret id=24356
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090007
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090007
 
 @Hitret id=24357
 
@@ -235,34 +235,34 @@
 
 @Hitret id=24358
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090008
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090008
 
 @Hitret id=24359
 
-@Talk name=Grandfather's　Son voice=NP080007
+@Talk name=Grandfather's縲Son voice=NP080007
 
 @Hitret id=24360
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090009
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090009
 
 @Hitret id=24361
 
-@Talk name=Akira's　Grandfather voice=NP070007
+@Talk name=Akira's縲Grandfather voice=NP070007
 
 @Hitret id=24362
 
-@Talk name=Grandfather's　Son voice=NP080008
+@Talk name=Grandfather's縲Son voice=NP080008
 
 @Hitret id=24363
 
-@Talk name=Grandfather's　Son　In　Law voice=NP090010
+@Talk name=Grandfather's縲Son縲In縲Law voice=NP090010
 
 @Hitret id=24364
 
 
 @PlaySe file=se013
 
-@Talk name=Akira's　Grandfather voice=NP070008
+@Talk name=Akira's縲Grandfather voice=NP070008
 
 @Hitret id=24365
 
@@ -273,7 +273,7 @@
 
 @StopSe
 
-@Talk name=Akira's　Grandfather voice=NP070009
+@Talk name=Akira's縲Grandfather voice=NP070009
 
 @Hitret id=24367
 
@@ -281,7 +281,7 @@
 
 @Hitret id=24368
 
-@Talk name=Akira's　Grandfather voice=NP070010
+@Talk name=Akira's縲Grandfather voice=NP070010
 
 @Hitret id=24369
 
@@ -299,7 +299,7 @@
 
 @PlayBgm file=BGM16
 
-@Talk name=Akira's　Grandfather voice=NP070011
+@Talk name=Akira's縲Grandfather voice=NP070011
 
 @Hitret id=24372
 
@@ -307,15 +307,15 @@
 
 @Hitret id=24373
 
-@Talk name=Akira's　Grandfather voice=NP070012
+@Talk name=Akira's縲Grandfather voice=NP070012
 
 @Hitret id=24374
 
-@Talk name=Akira's　Grandfather voice=NP070013
+@Talk name=Akira's縲Grandfather voice=NP070013
 
 @Hitret id=24375
 
-@Talk name=Akira's　Grandfather voice=NP070014
+@Talk name=Akira's縲Grandfather voice=NP070014
 
 @Hitret id=24376
 
@@ -323,11 +323,11 @@
 
 @Hitret id=24377
 
-@Talk name=Akira's　Grandfather voice=NP070015
+@Talk name=Akira's縲Grandfather voice=NP070015
 
 @Hitret id=24378
 
-@Talk name=Akira's　Grandfather voice=NP070016
+@Talk name=Akira's縲Grandfather voice=NP070016
 
 @Hitret id=24379
 
@@ -340,7 +340,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Akira　Monologue voice=AK021626
+@Talk name=Akira縲Monologue voice=AK021626
 
 @Hitret id=24380
 

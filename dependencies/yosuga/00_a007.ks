@@ -65,7 +65,7 @@
 
 @Hitret id=3196
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3197
 
@@ -146,7 +146,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3209
 
@@ -228,8 +228,8 @@
 @Hitret id=3222
 
 
-@action id=�J���� action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -238,7 +238,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3224
 
@@ -271,7 +271,7 @@
 
 @Hitret id=3229
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3230
 
@@ -306,7 +306,7 @@
 
 @Hitret id=3234
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3235
 
@@ -315,8 +315,8 @@
 @Flash color=RED enter=0 leave=500
 @Char file=CF05_06M 
 @Update
-@action id=���� action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=����
+@action id=亮平 action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=亮平
 
 @Talk name=Ryouhei voice=RH010065
 
@@ -327,7 +327,7 @@
 @Char file=CH05_04M 
 @PlaySe file=se018
 
-@Talk name=Class�@Rep voice=KO010001
+@Talk name=Class　Rep voice=KO010001
 
 @Hitret id=3237
 
@@ -335,7 +335,7 @@
 
 @Hitret id=3238
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3239
 
@@ -389,7 +389,7 @@
 @StopBgm
 @Char file=CH05_07M 
 
-@Talk name=Class�@Rep voice=KO010002
+@Talk name=Class　Rep voice=KO010002
 
 @Hitret id=3247
 
@@ -408,7 +408,7 @@
 
 @Hitret id=3249
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3250
 
@@ -434,19 +434,19 @@
 
 @Hitret id=3254
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3255
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3256
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3257
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3258
 
@@ -458,24 +458,24 @@
 @Hitret id=3259
 
 
-@ClearChar id=����
+@ClearChar id=亮平
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3260
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3261
 
 
 @Char file=CA05_09S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3262
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3263
 
@@ -483,15 +483,15 @@
 
 @Hitret id=3264
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3265
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3266
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3267
 
@@ -503,11 +503,11 @@
 
 @Char file=CC05_02S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3269
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3270
 
@@ -544,7 +544,7 @@
 
 @Hitret id=3277
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=3278
 
@@ -601,7 +601,7 @@
 @Char file=CH05_11M 
 @Char file=CD05_04M 
 
-@Talk name=Class�@Rep voice=KO010003
+@Talk name=Class　Rep voice=KO010003
 
 @Hitret id=3289
 
@@ -609,7 +609,7 @@
 
 @Hitret id=3290
 
-@Talk name=Class�@Rep voice=KO010004
+@Talk name=Class　Rep voice=KO010004
 
 @Hitret id=3291
 
@@ -666,7 +666,7 @@
 @BlackOut time=1000
 @Cg file=B20a   
 
-@Talk name=Sora�@Monologue voice=SR010160
+@Talk name=Sora　Monologue voice=SR010160
 
 @Hitret id=3299
 
@@ -678,7 +678,7 @@
 
 @Hitret id=3301
 
-@Talk name=Sora�@Monologue voice=SR010161
+@Talk name=Sora　Monologue voice=SR010161
 
 @Hitret id=3302
 
@@ -686,20 +686,20 @@
 
 @Hitret id=3303
 
-@Talk name=Sora�@Monologue voice=SR010163
+@Talk name=Sora　Monologue voice=SR010163
 
 @Hitret id=3304
 
 
 @PlaySe file=se003
-@action id=�J���� action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=カメラ
 
 @Talk name=Ryouhei voice=RH010081
 
 @Hitret id=3305
 
-@Talk name=Sora�@Monologue voice=SR010164
+@Talk name=Sora　Monologue voice=SR010164
 
 @Hitret id=3306
 
@@ -714,7 +714,7 @@
 
 @Hitret id=3308
 
-@Talk name=Sora�@Monologue voice=SR010166
+@Talk name=Sora　Monologue voice=SR010166
 
 @Hitret id=3309
 
@@ -739,11 +739,11 @@
 
 @Char file=CH05_08M 
 
-@Talk name=Class�@Rep voice=KO010005
+@Talk name=Class　Rep voice=KO010005
 
 @Hitret id=3313
 
-@Talk name=Sora�@Monologue voice=SR010168
+@Talk name=Sora　Monologue voice=SR010168
 
 @Hitret id=3314
 
@@ -755,15 +755,15 @@
 
 @Hitret id=3316
 
-@Talk name=Sora�@Monologue voice=SR010170
+@Talk name=Sora　Monologue voice=SR010170
 
 @Hitret id=3317
 
-@Talk name=Sora�@Monologue voice=SR010171
+@Talk name=Sora　Monologue voice=SR010171
 
 @Hitret id=3318
 
-@Talk name=Sora�@Monologue voice=SR010172
+@Talk name=Sora　Monologue voice=SR010172
 
 @Hitret id=3319
 

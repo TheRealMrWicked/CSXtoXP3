@@ -6,11 +6,11 @@
 
 @Char file=CD01_11M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32748
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32749
 
@@ -33,15 +33,15 @@
 
 @Hitret id=32753
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32754
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32755
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32756
 
@@ -53,11 +53,11 @@
 
 @Hitret id=32758
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32759
 
-@Talk name=Kazuha's�@Father voice=SH040018
+@Talk name=Kazuha's　Father voice=SH040018
 
 @Hitret id=32760
 
@@ -70,11 +70,11 @@
 
 @Hitret id=32761
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32762
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32763
 
@@ -82,27 +82,27 @@
 
 @Char file=CK01_04S 
 
-@Talk name=Kazuha's�@Father voice=SH040019
+@Talk name=Kazuha's　Father voice=SH040019
 
 @Hitret id=32764
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32765
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32766
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32767
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32768
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32769
 
@@ -113,7 +113,7 @@
 
 @Hitret id=32770
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32771
 
@@ -121,11 +121,11 @@
 
 @Hitret id=32772
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32773
 
-@Talk name=Kazuha's�@Father voice=SH040020
+@Talk name=Kazuha's　Father voice=SH040020
 
 @Hitret id=32774
 
@@ -136,7 +136,7 @@
 
 @Char file=CK01_01M 
 
-@Talk name=Kazuha's�@Father voice=SH040021
+@Talk name=Kazuha's　Father voice=SH040021
 
 @Hitret id=32776
 
@@ -144,7 +144,7 @@
 
 @Hitret id=32777
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32778
 
@@ -152,7 +152,7 @@
 
 @Hitret id=32779
 
-@Talk name=Kazuha's�@Father voice=SH040022
+@Talk name=Kazuha's　Father voice=SH040022
 
 @Hitret id=32780
 
@@ -168,23 +168,23 @@
 @ClearChar 
 @Char file=CK01_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32782
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32783
 
-@Talk name=Kazuha's�@Father voice=SH040023
+@Talk name=Kazuha's　Father voice=SH040023
 
 @Hitret id=32784
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32785
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32786
 
@@ -192,7 +192,7 @@
 
 @Hitret id=32787
 
-@Talk name=Kazuha's�@Father voice=SH040024
+@Talk name=Kazuha's　Father voice=SH040024
 
 @Hitret id=32788
 
@@ -203,26 +203,26 @@
 
 @Char file=CK01_03M 
 
-@Talk name=Kazuha's�@Father voice=SH040025
+@Talk name=Kazuha's　Father voice=SH040025
 
 @Hitret id=32790
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32791
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32792
 
 
 @Char file=CK01_01M 
 
-@Talk name=Kazuha's�@Father voice=SH040026
+@Talk name=Kazuha's　Father voice=SH040026
 
 @Hitret id=32793
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32794
 
@@ -233,7 +233,7 @@
 
 @Char file=CK01_02M 
 
-@Talk name=Kazuha's�@Father voice=SH040027
+@Talk name=Kazuha's　Father voice=SH040027
 
 @Hitret id=32796
 
@@ -253,19 +253,19 @@
 
 @Hitret id=32800
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32801
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32802
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32803
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32804
 
@@ -281,19 +281,19 @@
 
 @Hitret id=32807
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32808
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32809
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32810
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32811
 
@@ -309,19 +309,19 @@
 
 @Hitret id=32814
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32815
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32816
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32817
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32818
 
@@ -341,71 +341,71 @@
 
 @Hitret id=32822
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32823
 
 
 @Char file=CK01_01M 
 
-@Talk name=Kazuha's�@Father voice=SH040028
+@Talk name=Kazuha's　Father voice=SH040028
 
 @Hitret id=32824
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32825
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32826
 
 
 @Char file=CK01_04M 
 
-@Talk name=Kazuha's�@Father voice=SH040029
+@Talk name=Kazuha's　Father voice=SH040029
 
 @Hitret id=32827
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32828
 
-@Talk name=Kazuha's�@Father voice=SH040030
+@Talk name=Kazuha's　Father voice=SH040030
 
 @Hitret id=32829
 
-@Talk name=Kazuha's�@Father voice=SH040031
+@Talk name=Kazuha's　Father voice=SH040031
 
 @Hitret id=32830
 
 
 @Char file=CK01_02M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32831
 
 
 @Char file=CK01_04M 
 
-@Talk name=Kazuha's�@Father voice=SH040032
+@Talk name=Kazuha's　Father voice=SH040032
 
 @Hitret id=32832
 
-@Talk name=Kazuha's�@Father voice=SH040033
+@Talk name=Kazuha's　Father voice=SH040033
 
 @Hitret id=32833
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32834
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32835
 
-@Talk name=Kazuha's�@Father voice=SH040034
+@Talk name=Kazuha's　Father voice=SH040034
 
 @Hitret id=32836
 
@@ -413,7 +413,7 @@
 
 @Hitret id=32837
 
-@Talk name=Kazuha's�@Father voice=SH040035
+@Talk name=Kazuha's　Father voice=SH040035
 
 @Hitret id=32838
 
@@ -421,11 +421,11 @@
 
 @Hitret id=32839
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32840
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32841
 
@@ -436,7 +436,7 @@
 
 @Hitret id=32842
 
-@Talk name=Kazuha's�@Father voice=SH040036
+@Talk name=Kazuha's　Father voice=SH040036
 
 @Hitret id=32843
 
@@ -447,15 +447,15 @@
 
 @Hitret id=32844
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32845
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32846
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32847
 
@@ -463,11 +463,11 @@
 @ClearChar 
 @Char file=CK01_03M 
 
-@Talk name=Kazuha's�@Father voice=SH040037
+@Talk name=Kazuha's　Father voice=SH040037
 
 @Hitret id=32848
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32849
 

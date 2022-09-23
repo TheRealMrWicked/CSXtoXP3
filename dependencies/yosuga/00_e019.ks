@@ -2,7 +2,7 @@
 
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36807
 
@@ -30,11 +30,11 @@
 
 @Hitret id=36811
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36812
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36813
 
@@ -45,7 +45,7 @@
 
 @Hitret id=36814
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36815
 
@@ -61,11 +61,11 @@
 
 @Hitret id=36818
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36819
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36820
 
@@ -80,7 +80,7 @@
 
 @Hitret id=36822
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36823
 
@@ -99,7 +99,7 @@
 
 @Hitret id=36826
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36827
 
@@ -125,7 +125,7 @@
 
 @Hitret id=36831
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36832
 
@@ -166,11 +166,11 @@
 
 @Hitret id=36839
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36840
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36841
 
@@ -234,11 +234,11 @@
 
 @Hitret id=36853
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36854
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36855
 
@@ -292,11 +292,11 @@
 
 @Hitret id=36865
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36866
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36867
 
@@ -311,11 +311,11 @@
 
 @Hitret id=36869
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36870
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36871
 
@@ -334,11 +334,11 @@
 
 @Hitret id=36874
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36875
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36876
 
@@ -380,11 +380,11 @@
 
 @Hitret id=36884
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36885
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36886
 

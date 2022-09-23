@@ -27,19 +27,19 @@
 
 @ClearChar
 
-@Talk name=Kozue@Monologue voice=KO020264
+@Talk name=Kozueã€€Monologue voice=KO020264
 
 @Hitret id=10428
 
-@Talk name=Kozue@Monologue voice=KO020265
+@Talk name=Kozueã€€Monologue voice=KO020265
 
 @Hitret id=10429
 
-@Talk name=Kozue@Monologue voice=KO020266
+@Talk name=Kozueã€€Monologue voice=KO020266
 
 @Hitret id=10430
 
-@Talk name=Kozue@Monologue voice=KO020267
+@Talk name=Kozueã€€Monologue voice=KO020267
 
 @Hitret id=10431
 
@@ -47,11 +47,11 @@
 
 @Hitret id=10432
 
-@Talk name=Kozue@Monologue voice=KO020269
+@Talk name=Kozueã€€Monologue voice=KO020269
 
 @Hitret id=10433
 
-@Talk name=Kozue@Monologue voice=KO020270
+@Talk name=Kozueã€€Monologue voice=KO020270
 
 @Hitret id=10434
 
@@ -59,14 +59,14 @@
 
 @Hitret id=10435
 
-@Talk name=Kozue@Monologue voice=KO020272
+@Talk name=Kozueã€€Monologue voice=KO020272
 
 @Hitret id=10436
 
 
 @WhiteOut time=2000
 @Cg file=B01a
-@‰ñ‘zƒCƒ[ƒW•\Ž¦
+@å›žæƒ³ã‚¤ãƒ¡ãƒ¼ã‚¸è¡¨ç¤º
 @Char file=CH01_04M
 
 @Talk name=Kozue voice=KO020273
@@ -89,26 +89,26 @@
 
 @Hitret id=10439
 
-@Talk name=Kozue@Monologue voice=KO020276
+@Talk name=Kozueã€€Monologue voice=KO020276
 
 @Hitret id=10440
 
-@Talk name=Kozue@Monologue voice=KO020277
+@Talk name=Kozueã€€Monologue voice=KO020277
 
 @Hitret id=10441
 
-@Talk name=Kozue@Monologue voice=KO020278
+@Talk name=Kozueã€€Monologue voice=KO020278
 
 @Hitret id=10442
 
-@Talk name=Kozue@Monologue voice=KO020279
+@Talk name=Kozueã€€Monologue voice=KO020279
 
 @Hitret id=10443
 
 
 @WhiteOut time=2000
 @Cg file=B12a
-@‰ñ‘zƒCƒ[ƒW•\Ž¦
+@å›žæƒ³ã‚¤ãƒ¡ãƒ¼ã‚¸è¡¨ç¤º
 @Char file=CH01_03M
 
 @Talk name=Kozue voice=KO020280
@@ -126,22 +126,22 @@
 @WaitUpdate
 @Update
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020281
 
 @Hitret id=10445
 
-@Talk name=Kozue@Monologue voice=KO020282
+@Talk name=Kozueã€€Monologue voice=KO020282
 
 @Hitret id=10446
 
-@Talk name=Kozue@Monologue voice=KO020283
+@Talk name=Kozueã€€Monologue voice=KO020283
 
 @Hitret id=10447
 
-@Talk name=Kozue@Monologue voice=KO020284
+@Talk name=Kozueã€€Monologue voice=KO020284
 
 @Hitret id=10448
 
@@ -152,11 +152,11 @@
 
 @Hitret id=10449
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=10450
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=10451
 
@@ -175,8 +175,8 @@
 @Char file=CH01_05M
 @Update time=0
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020286
 
@@ -192,25 +192,25 @@
 
 @Char file=CH01_05M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=5
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=5
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020288
 
 @Hitret id=10456
 
 
-@Leave id=½ mx=0 my=600 fade=1 time=250 accel=1
+@Leave id=æ¢¢ mx=0 my=600 fade=1 time=250 accel=1
 @Update
 @PlaySe file=SE018
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=20, count=2 cycle=50
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=20, count=2 cycle=50
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=10457
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=10458
 
@@ -249,8 +249,8 @@
 @PlaySe file=se010
 @Char file=CH01_06M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020292
 
@@ -274,8 +274,8 @@
 
 @Char file=CH01_13M
 @Update
-@Move id=½ my=10 cycle=1000
-@WaitAction id=½
+@Move id=æ¢¢ my=10 cycle=1000
+@WaitAction id=æ¢¢
 
 @Talk name=Kozue voice=KO020294
 

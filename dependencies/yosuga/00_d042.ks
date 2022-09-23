@@ -8,31 +8,31 @@
 
 @Hitret id=32850
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32851
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32852
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32853
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32854
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32855
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32856
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32857
 
@@ -61,7 +61,7 @@
 
 @Hitret id=32861
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32862
 
@@ -87,11 +87,11 @@
 
 @Char file=CE01_02M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32867
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32868
 
@@ -103,11 +103,11 @@
 
 @Hitret id=32870
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32871
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32872
 
@@ -118,7 +118,7 @@
 
 @Char file=CD03_02M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32874
 
@@ -138,13 +138,13 @@
 @Char file=CE01_04M 
 @Update
 @Wait time=1000
-@ClearChar id=����
+@ClearChar id=初佳
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32878
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32879
 
@@ -156,23 +156,23 @@
 
 @Hitret id=32881
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32882
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32883
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32884
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32885
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32886
 
@@ -183,11 +183,11 @@
 
 @Hitret id=32887
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32888
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32889
 
@@ -195,7 +195,7 @@
 
 @Hitret id=32890
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32891
 
@@ -226,11 +226,11 @@
 
 @Hitret id=32897
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32898
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32899
 
@@ -242,15 +242,15 @@
 
 @Hitret id=32901
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32902
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32903
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32904
 
@@ -265,7 +265,7 @@
 
 @Char file=CD03_11L 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=32907
 

@@ -97,21 +97,21 @@
 
 
 @Update
-@action id=�u action=ActionAdvHop height=0 cycle=100 count=5 width=5
-@WaitAction id=�u
+@action id=穹 action=ActionAdvHop height=0 cycle=100 count=5 width=5
+@WaitAction id=穹
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2624
 
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2625
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2626
 
@@ -119,7 +119,7 @@
 
 @Hitret id=2627
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2628
 
@@ -134,14 +134,14 @@
 
 @Hitret id=2630
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2631
 
 
 @Char file=CA02_06L
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2632
 
@@ -158,19 +158,19 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2635
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2636
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2637
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2638
 
@@ -178,8 +178,8 @@
 @Char file=CA02_02L
 @Update
 @waitUpdate
-@action id=�J���� action=ActionWave width=0 height=10 count=2 cycle=25
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0 height=10 count=2 cycle=25
+@WaitAction id=カメラ
 
 @Talk name=Sora voice=SR000608
 
@@ -196,11 +196,11 @@
 
 @Hitret id=2641
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2642
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2643
 
@@ -245,15 +245,15 @@
 @PlayBgm file=BGM13
 @Cg file=EA19a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2647
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2648
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2649
 
@@ -268,35 +268,35 @@
 @Update
 @MoveCamera x=182 y=10 time=10000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2651
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2652
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2653
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2654
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2655
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2656
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2657
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2658
 
@@ -308,19 +308,19 @@
 
 @Hitret id=2659
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2660
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2661
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2662
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2663
 
@@ -332,11 +332,11 @@
 
 @Hitret id=2664
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2665
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2666
 
@@ -368,11 +368,11 @@
 
 @Hitret id=2672
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2673
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2674
 
@@ -415,7 +415,7 @@
 
 @Hitret id=2681
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2682
 
@@ -466,7 +466,7 @@
 @WaitUpdate
 @Char file=CA02_13L
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2689
 
@@ -488,11 +488,11 @@
 
 @Hitret id=2692
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2693
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2694
 
@@ -500,15 +500,15 @@
 
 @Hitret id=2695
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2696
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2697
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2698
 
@@ -524,19 +524,19 @@
 
 @Hitret id=2700
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2701
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2702
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2703
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2704
 
@@ -574,8 +574,8 @@
 
 @Char file=CA02_13M
 @Update
-@action id=�u action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=�u
+@action id=穹 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=穹
 
 @Talk name=Sora voice=SR000625
 
@@ -610,19 +610,19 @@
 
 @Hitret id=2716
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2717
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2718
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2719
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2720
 
@@ -652,7 +652,7 @@
 
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2726
 
@@ -665,15 +665,15 @@
 
 @Hitret id=2727
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2728
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2729
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2730
 
@@ -696,7 +696,7 @@
 
 @Hitret id=2734
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2735
 
@@ -740,11 +740,11 @@
 @PlaySe file=se072
 @Cg file=EA19c
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2745
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2746
 
@@ -767,7 +767,7 @@
 
 @PlaySe file=se073
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2751
 
@@ -786,11 +786,11 @@
 
 @Hitret id=2754
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2755
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2756
 
@@ -801,7 +801,7 @@
 
 @Hitret id=2757
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2758
 
@@ -817,15 +817,15 @@
 @Update
 @MoveCamera x=400 y=-356 time=30000 accel=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2761
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2762
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2763
 
@@ -840,11 +840,11 @@
 
 @PlaySe file=se073
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2766
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2767
 
@@ -852,11 +852,11 @@
 
 @Hitret id=2768
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2769
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2770
 
@@ -896,7 +896,7 @@
 @PlaySe file=se073
 @Cg file=EA19c
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2779
 
@@ -907,7 +907,7 @@
 
 @Hitret id=2780
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2781
 
@@ -923,11 +923,11 @@
 
 @Hitret id=2784
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2785
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2786
 
@@ -964,26 +964,26 @@
 
 @Cg file=EA19b
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2792
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2793
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2794
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2795
 
 
 @PlaySe file=se073
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2796
 
@@ -994,11 +994,11 @@
 
 @Hitret id=2797
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2798
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2799
 
@@ -1040,13 +1040,13 @@
 
 @BlackOut	time=1000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2808
 
 
 @StopBgm
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2809
 
@@ -1138,7 +1138,7 @@
 
 @Hitret id=2826
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2827
 
@@ -1153,15 +1153,15 @@
 
 @Hitret id=2829
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2830
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2831
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2832
 
@@ -1178,7 +1178,7 @@
 
 @Hitret id=2834
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2835
 
@@ -1189,23 +1189,23 @@
 
 @Hitret id=2836
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2837
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2838
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2839
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2840
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2841
 
@@ -1213,7 +1213,7 @@
 @Cg file=B04c
 @Tone all type=MONOCHROME
 @Char file=CA02_04M
-@��z�C���[�W�\��
+@回想イメージ表示
 
 @Talk name=Sora voice=SR000672
 
@@ -1233,7 +1233,7 @@
 
 @Hitret id=2844
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2845
 
@@ -1241,15 +1241,15 @@
 
 @Hitret id=2846
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2847
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2848
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2849
 
@@ -1271,7 +1271,7 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2853
 

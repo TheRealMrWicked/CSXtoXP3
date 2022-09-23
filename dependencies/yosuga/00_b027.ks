@@ -115,8 +115,8 @@
 
 @Char file=CD01_13M 
 @Update
-@action id=ˆê—t action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA030035
 
@@ -168,60 +168,60 @@
 @Char file=CD10_01L x=0 y=62 order=930
 @Char file=CF10_01L x=200 y=-70 order=920
 @update
-	@action id=‰l action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
-	@action id=ˆê—t action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
-	@action id=—º•½ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
+	@action id=ç‘› action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
+	@action id=ä¸€è‘‰ action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
+	@action id=äº®å¹³ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
 
 @BgScroll file=EZ01a mx=800 my=0 cycle=80000
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16494
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16495
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16496
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16497
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16498
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16499
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16500
 
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16501
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16502
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16503
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16504
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16505
 
@@ -328,15 +328,15 @@
 
 @Hitret id=16531
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16532
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16533
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=16534
 

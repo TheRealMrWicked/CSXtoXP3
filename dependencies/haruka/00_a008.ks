@@ -21,11 +21,11 @@
 
 @Hitret id=925
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=926
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=927
 
@@ -61,7 +61,7 @@
 
 @Hitret id=932
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=933
 
@@ -85,49 +85,49 @@
 
 @Hitret id=937
 
-@Talk name=Class�@Rep voice=KO000029
+@Talk name=Class　Rep voice=KO000029
 
 @Hitret id=938
 
 
 @Char file=CH01_08M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=939
 
 
 @Char file=CH01_06M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=940
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=941
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=942
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=943
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=944
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=945
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=946
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=947
 
@@ -135,14 +135,14 @@
 
 @Hitret id=948
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=949
 
 
 @Char file=CH01_08M
 
-@Talk name=Class�@Rep voice=KO000030
+@Talk name=Class　Rep voice=KO000030
 
 @Hitret id=950
 
@@ -160,15 +160,15 @@
 
 
 @Update
-@action id=�u action=ActionAdvJump cycle=300 count=1 height=-10
-@WaitAction id=�u
+@action id=穹 action=ActionAdvJump cycle=300 count=1 height=-10
+@WaitAction id=穹
 
 @Talk name=Sora voice=SR000162
 
 @Hitret id=954
 
 
-@ClearChar id=��
+@ClearChar id=梢
 @Char file=CC01_02M
 
 @Talk name=Akira voice=AK000058
@@ -190,7 +190,7 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=959
 
@@ -260,7 +260,7 @@
 
 @Char file=CH01_08M
 
-@Talk name=Class�@Rep voice=KO000031
+@Talk name=Class　Rep voice=KO000031
 
 @Hitret id=970
 
@@ -271,7 +271,7 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class�@Rep voice=KO000032
+@Talk name=Class　Rep voice=KO000032
 
 @Hitret id=972
 
@@ -279,7 +279,7 @@
 
 @Hitret id=973
 
-@Talk name=Class�@Rep voice=KO000033
+@Talk name=Class　Rep voice=KO000033
 
 @Hitret id=974
 
@@ -289,11 +289,11 @@
 @Hide
 @BlackOut time=1000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=975
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=976
 

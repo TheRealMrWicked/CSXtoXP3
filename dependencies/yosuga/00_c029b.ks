@@ -5,11 +5,11 @@
 @Cg file=B28d center=400,900
 @PlayEnvSe file=SE270
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24920
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24921
 
@@ -21,14 +21,14 @@
 
 @Hitret id=24923
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24924
 
 
 @StopEnvSe id=SE270
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24925
 
@@ -56,11 +56,11 @@
 
 @Hitret id=24928
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24929
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24930
 
@@ -83,7 +83,7 @@
 
 @PlaySe file=SE267
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24934
 
@@ -108,7 +108,7 @@
 
 @Char file=CC02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24938
 
@@ -165,15 +165,15 @@
 @BlackOut
 @PlayBgm file=BGM19
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24949
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24950
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24951
 
@@ -312,11 +312,11 @@
 @WaitUpdate
 @PlaySe file=SE255
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24977
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24978
 
@@ -398,7 +398,7 @@
 
 @Hitret id=24993
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24994
 
@@ -443,15 +443,15 @@
 @ClearChar 
 @PlayEnvSe file=SE300 fade=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25002
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25003
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25004
 
@@ -459,35 +459,35 @@
 
 @Hitret id=25005
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25006
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25007
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25008
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25009
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25010
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25011
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25012
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=25013
 

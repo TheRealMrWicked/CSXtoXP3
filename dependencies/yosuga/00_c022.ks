@@ -11,7 +11,7 @@
 
 @Hitret id=23149
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23150
 
@@ -26,11 +26,11 @@
 
 @Hitret id=23152
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23153
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23154
 
@@ -39,7 +39,7 @@
 @Hitret id=23155
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23156
 
@@ -50,15 +50,15 @@
 @Update
 @MoveCamera x=0 y=-600 time=30000 accel=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23157
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23158
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23159
 
@@ -79,7 +79,7 @@
 
 @Hitret id=23163
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23164
 
@@ -125,43 +125,43 @@
 
 @Hitret id=23171
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23172
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23173
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23174
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23175
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23176
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23177
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23178
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23179
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23180
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23181
 
@@ -216,7 +216,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=23191
 

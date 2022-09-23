@@ -36,7 +36,7 @@
 @Hitret id=17216
 
 
-@ClearChar id=—²”V
+@ClearChar id=éš†ä¹‹
 
 @Talk name=Sora voice=SR030314
 

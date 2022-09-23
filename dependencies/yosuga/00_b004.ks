@@ -10,23 +10,23 @@
 
 @PlayBgm file=BGM09
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11363
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11364
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11365
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11366
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11367
 
@@ -34,14 +34,14 @@
 
 @Hitret id=11368
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11369
 
 
 @PlaySe file=SE153
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11370
 
@@ -50,11 +50,11 @@
 @PlayEnvSe file=SE151 fade=0
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11371
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11372
 
@@ -63,7 +63,7 @@
 
 @StopEnvSe id=SE151 fade=0
 
-@Talk name=Nao's�@Mother voice=NP500001
+@Talk name=Nao's　Mother voice=NP500001
 
 @Hitret id=11373
 
@@ -71,7 +71,7 @@
 
 @Hitret id=11374
 
-@Talk name=Nao's�@Mother voice=NP500002
+@Talk name=Nao's　Mother voice=NP500002
 
 @Hitret id=11375
 
@@ -79,7 +79,7 @@
 
 @Hitret id=11376
 
-@Talk name=Nao's�@Mother voice=NP500003
+@Talk name=Nao's　Mother voice=NP500003
 
 @Hitret id=11377
 
@@ -87,7 +87,7 @@
 
 @Hitret id=11378
 
-@Talk name=Nao's�@Mother voice=NP500004
+@Talk name=Nao's　Mother voice=NP500004
 
 @Hitret id=11379
 
@@ -95,7 +95,7 @@
 
 @Hitret id=11380
 
-@Talk name=Nao's�@Mother voice=NP500005
+@Talk name=Nao's　Mother voice=NP500005
 
 @Hitret id=11381
 
@@ -107,7 +107,7 @@
 
 @Hitret id=11383
 
-@Talk name=Nao's�@Mother voice=NP500006
+@Talk name=Nao's　Mother voice=NP500006
 
 @Hitret id=11384
 
@@ -115,7 +115,7 @@
 
 @Hitret id=11385
 
-@Talk name=Nao's�@Mother voice=NP500007
+@Talk name=Nao's　Mother voice=NP500007
 
 @Hitret id=11386
 
@@ -123,15 +123,15 @@
 
 @Hitret id=11387
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11388
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11389
 
-@Talk name=Nao/�d�b�̐� voice=NO030160
+@Talk name=Nao/電話の声 voice=NO030160
 
 @Hitret id=11390
 
@@ -199,11 +199,11 @@
 @Cg file=B01c   
 @PlayEnvSe file=SE300 fade=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11404
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11405
 
@@ -211,14 +211,14 @@
 
 @Hitret id=11406
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11407
 
 
 @Cg file=B05c   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11408
 
@@ -229,7 +229,7 @@
 
 @PlaySe file=se100
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11410
 
@@ -367,34 +367,34 @@
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11437
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11438
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11439
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11440
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11441
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11442
 
 
 @StopEnvSe id=SE300 fade=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11443
 

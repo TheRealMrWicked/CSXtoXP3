@@ -11,8 +11,8 @@
 
 @Char file=CC01_02S 
 @Update
-@action id=âl action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=âl
+@action id=Áëõ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=Áëõ
 
 @Talk name=Akira voice=AK020324
 
@@ -49,11 +49,11 @@
 @Char file=CD10_01L x=-414 y=62 order=930
 @Char file=CF10_01L x=-64 y=-70 order=920
 @Update transition=universal rule=WIP_BT time=500
-	@action id=‚u action=ActionAdvWave width=0 height=2 cycle=1100 count=-1
-	@action id=ìﬁèè action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
-	@action id=âl action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
-	@action id=àÍót action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
-	@action id=ó∫ïΩ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
+	@action id=Á©π action=ActionAdvWave width=0 height=2 cycle=1100 count=-1
+	@action id=Â•àÁ∑í action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
+	@action id=Áëõ action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
+	@action id=‰∏ÄËëâ action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
+	@action id=‰∫ÆÂπ≥ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
 
 @BgScroll file=EZ01a mx=800 my=0 cycle=80000
 
@@ -120,7 +120,7 @@
 
 @Char file=CC10_02L
 @update
-	@action id=âl action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
+	@action id=Áëõ action=ActionAdvWave width=0 height=3 cycle=1000 count=-1
 
 @Talk name=Akira voice=AK020328
 
@@ -129,7 +129,7 @@
 
 @Char file=CD10_02L
 @update
-	@action id=àÍót action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
+	@action id=‰∏ÄËëâ action=ActionAdvWave width=0 height=3 cycle=1500 count=-1
 
 @Talk name=Kazuha voice=KA020109
 
@@ -155,7 +155,7 @@
 
 @Char file=CA10_02L
 @update
-	@action id=‚u action=ActionAdvWave width=0 height=2 cycle=1100 count=-1
+	@action id=Á©π action=ActionAdvWave width=0 height=2 cycle=1100 count=-1
 
 @PlaySe file=se006
 @Flash color=RED enter=0 leave=500
@@ -232,7 +232,7 @@
 
 @Char file=CB10_03L
 @update
-	@action id=ìﬁèè action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
+	@action id=Â•àÁ∑í action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
 
 @Talk name=Nao voice=NO020022
 
@@ -245,7 +245,7 @@
 
 @Char file=CF10_02L
 @update
-	@action id=ó∫ïΩ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
+	@action id=‰∫ÆÂπ≥ action=ActionAdvWave width=0 height=2 cycle=1300 count=-1
 
 @Talk name=Ryouhei voice=RH020094
 
@@ -255,7 +255,7 @@
 
 @Hitret id=19326
 
-@Talk name=êSÇÃê∫
+@Talk name=ÂøÉ„ÅÆÂ£∞
 
 @Hitret id=19327
 
@@ -270,7 +270,7 @@
 
 @Char file=CB10_02L
 @update
-	@action id=ìﬁèè action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
+	@action id=Â•àÁ∑í action=ActionAdvWave width=0 height=6 cycle=1500 count=-1
 
 @Talk name=Nao voice=NO020023
 
@@ -320,11 +320,11 @@
 
 @Hitret id=19341
 
-@Talk name=êSÇÃê∫
+@Talk name=ÂøÉ„ÅÆÂ£∞
 
 @Hitret id=19342
 
-@Talk name=êSÇÃê∫
+@Talk name=ÂøÉ„ÅÆÂ£∞
 
 @Hitret id=19343
 
@@ -345,7 +345,7 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=êSÇÃê∫
+@Talk name=ÂøÉ„ÅÆÂ£∞
 
 @Hitret id=19347
 

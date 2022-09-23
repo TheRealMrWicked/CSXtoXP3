@@ -5,23 +5,23 @@
 @Cg file=B34a center=800,300
 @MessageFrame type=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11206
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11207
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11208
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11209
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11210
 
@@ -29,11 +29,11 @@
 
 @Hitret id=11211
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11212
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11213
 
@@ -41,7 +41,7 @@
 
 @Hitret id=11214
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11215
 
@@ -53,15 +53,15 @@
 
 @Hitret id=11216
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11217
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11218
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11219
 
@@ -111,18 +111,18 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020554
 
 @Hitret id=11227
 
-@Talk name=Kozue�@Monologue voice=KO020555
+@Talk name=Kozue　Monologue voice=KO020555
 
 @Hitret id=11228
 
-@Talk name=Kozue�@Monologue voice=KO020556
+@Talk name=Kozue　Monologue voice=KO020556
 
 @Hitret id=11229
 
@@ -162,11 +162,11 @@
 
 @Hitret id=11235
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11236
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11237
 
@@ -186,7 +186,7 @@
 
 @Hitret id=11239
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11240
 
@@ -313,7 +313,7 @@
 @Char file=CB03_13M
 @Char file=CH02_05M
 
-@Talk name=Nao�@and�@Sora�@and�@Kozue voice=SYN000006
+@Talk name=Nao　and　Sora　and　Kozue voice=SYN000006
 
 @Hitret id=11259
 
@@ -444,15 +444,15 @@
 
 @Hitret id=11277
 
-@Talk name=Sora�@and�@Nao�@and�@Akira�@and�@Kazuha�@and�@Ryouhei/Everyone voice=SYN000007
+@Talk name=Sora　and　Nao　and　Akira　and　Kazuha　and　Ryouhei/Everyone voice=SYN000007
 
 @Hitret id=11278
 
 
 @Char file=CH02_05L
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO020568
 
@@ -500,7 +500,7 @@
 
 @Hitret id=11285
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=11286
 

@@ -8,31 +8,31 @@
 @MessageFrame type=1
 @WhiteOut
 
-@Talk name=Kozue@Monologue voice=KO022017
+@Talk name=Kozueã€€Monologue voice=KO022017
 
 @Hitret id=14595
 
-@Talk name=Kozue@Monologue voice=KO022018
+@Talk name=Kozueã€€Monologue voice=KO022018
 
 @Hitret id=14596
 
-@Talk name=Kozue@Monologue voice=KO022019
+@Talk name=Kozueã€€Monologue voice=KO022019
 
 @Hitret id=14597
 
-@Talk name=Kozue@Monologue voice=KO022020
+@Talk name=Kozueã€€Monologue voice=KO022020
 
 @Hitret id=14598
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=14599
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=14600
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=14601
 
@@ -75,8 +75,8 @@
 
 @Char file=CF01_06M
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=25
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=25
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH020122
 
@@ -88,8 +88,8 @@
 
 
 @Update
-@action id=—º•½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=äº®å¹³
 
 
 @Talk name=Ryouhei voice=RH000106
@@ -205,23 +205,23 @@
 
 @ClearChar
 
-@Talk name=Kozue@Monologue voice=KO022031
+@Talk name=Kozueã€€Monologue voice=KO022031
 
 @Hitret id=14628
 
-@Talk name=Kozue@Monologue voice=KO022032
+@Talk name=Kozueã€€Monologue voice=KO022032
 
 @Hitret id=14629
 
-@Talk name=Kozue@Monologue voice=KO022033
+@Talk name=Kozueã€€Monologue voice=KO022033
 
 @Hitret id=14630
 
-@Talk name=Kozue@Monologue voice=KO022034
+@Talk name=Kozueã€€Monologue voice=KO022034
 
 @Hitret id=14631
 
-@Talk name=Kozue@Monologue voice=KO022035
+@Talk name=Kozueã€€Monologue voice=KO022035
 
 @Hitret id=14632
 
@@ -244,7 +244,7 @@
 
 @StopBgm
 
-@Talk name=Kozue@Monologue voice=KO022040
+@Talk name=Kozueã€€Monologue voice=KO022040
 
 @Hitret id=14637
 
@@ -373,7 +373,7 @@
 
 @Hitret id=14664
 
-@Talk name=Haruka@and@Sora voice=SR020326
+@Talk name=Harukaã€€andã€€Sora voice=SR020326
 
 @Hitret id=14665
 
@@ -511,15 +511,15 @@
 
 @Cg file=EZ24bL center=663,333
 
-@Talk name=Kozue@Monologue voice=KO022060
+@Talk name=Kozueã€€Monologue voice=KO022060
 
 @Hitret id=14693
 
-@Talk name=Kozue@Monologue voice=KO022061
+@Talk name=Kozueã€€Monologue voice=KO022061
 
 @Hitret id=14694
 
-@Talk name=Kozue@Monologue voice=KO022062
+@Talk name=Kozueã€€Monologue voice=KO022062
 
 @Hitret id=14695
 
@@ -545,12 +545,12 @@
 
 @Hitret id=14699
 
-@Talk name=Kozue@Monologue voice=KO022065
+@Talk name=Kozueã€€Monologue voice=KO022065
 
 @Hitret id=14700
 
 
-@ƒXƒ^ƒbƒtƒ[ƒ‹ id=½
+@ã‚¹ã‚¿ãƒƒãƒ•ãƒ­ãƒ¼ãƒ« id=æ¢¢
 
 
 

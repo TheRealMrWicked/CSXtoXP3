@@ -8,19 +8,19 @@
 
 @PlayBgm file=BGM05
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33652
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33653
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33654
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33655
 
@@ -28,11 +28,11 @@
 
 @Hitret id=33656
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33657
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33658
 
@@ -47,7 +47,7 @@
 
 @Hitret id=33660
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33661
 
@@ -62,11 +62,11 @@
 
 @Hitret id=33663
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33664
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33665
 
@@ -74,7 +74,7 @@
 
 @Hitret id=33666
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33667
 
@@ -82,7 +82,7 @@
 
 @Hitret id=33668
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33669
 
@@ -94,7 +94,7 @@
 
 @Hitret id=33671
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33672
 
@@ -141,7 +141,7 @@
 
 @Hitret id=33679
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33680
 
@@ -209,13 +209,13 @@
 @Hitret id=33693
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33694
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33695
 
@@ -230,7 +230,7 @@
 
 @Hitret id=33697
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33698
 

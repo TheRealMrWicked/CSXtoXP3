@@ -4,15 +4,15 @@
 @PlayBgm file=BGM16
 @Cg file=B20a center=1307,300
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=846
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=847
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=848
 
@@ -27,7 +27,7 @@
 
 @Hitret id=850
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=851
 
@@ -47,11 +47,11 @@
 
 @Hitret id=855
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=856
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=857
 
@@ -95,10 +95,10 @@
 
 @Char file=CF01_01L
 @Update time=0
-@action id=�J���� action=ActionWave width=20, height=0, count=2 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=20, height=0, count=2 cycle=50
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=865
 
@@ -110,15 +110,15 @@
 @waitCamera
 @Cg file=B20a center=400,300
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=866
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=867
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=868
 
@@ -183,27 +183,27 @@
 
 @Hitret id=881
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=882
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=883
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=884
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=885
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=886
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=887
 

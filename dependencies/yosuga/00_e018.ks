@@ -4,19 +4,19 @@
 @Cg file=B32a   
 @PlayBgm file=BGM05
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36593
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36594
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36595
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36596
 
@@ -39,7 +39,7 @@
 
 @Hitret id=36600
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36601
 
@@ -54,11 +54,11 @@
 
 @Hitret id=36603
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36604
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36605
 
@@ -101,7 +101,7 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36613
 
@@ -109,15 +109,15 @@
 
 @Hitret id=36614
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36615
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36616
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36617
 
@@ -125,7 +125,7 @@
 
 @Hitret id=36618
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36619
 
@@ -143,7 +143,7 @@
 
 @Hitret id=36621
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36622
 
@@ -158,7 +158,7 @@
 
 @Hitret id=36624
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36625
 
@@ -203,7 +203,7 @@
 
 @Char file=CA02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36634
 
@@ -237,7 +237,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36641
 
@@ -267,7 +267,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36647
 

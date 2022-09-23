@@ -10,15 +10,15 @@
 
 @Hitret id=24050
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24051
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24052
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24053
 
@@ -54,11 +54,11 @@
 
 @Hitret id=24059
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24060
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24061
 
@@ -136,15 +136,15 @@
 @Update transition=universal rule=WIP_MOZV time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24077
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24078
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24079
 
@@ -200,7 +200,7 @@
 
 @Hitret id=24089
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24090
 
@@ -212,7 +212,7 @@
 
 @Hitret id=24092
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24093
 
@@ -245,15 +245,15 @@
 @ClearChar 
 @PlayBgm file=BGM03
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24097
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24098
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24099
 
@@ -261,15 +261,15 @@
 
 @Hitret id=24100
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24101
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24102
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24103
 
@@ -277,19 +277,19 @@
 
 @Hitret id=24104
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24105
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24106
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24107
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24108
 
@@ -297,15 +297,15 @@
 
 @Hitret id=24109
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24110
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24111
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24112
 
@@ -316,7 +316,7 @@
 
 @Hitret id=24113
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24114
 
@@ -324,7 +324,7 @@
 
 @Hitret id=24115
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060001
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060001
 
 @Hitret id=24116
 
@@ -335,7 +335,7 @@
 
 @PlayBgm file=BGM08
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24118
 
@@ -343,7 +343,7 @@
 
 @Hitret id=24119
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24120
 
@@ -355,7 +355,7 @@
 
 @Hitret id=24122
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24123
 
@@ -367,43 +367,43 @@
 
 @Hitret id=24125
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24126
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24127
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24128
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24129
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24130
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060002
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060002
 
 @Hitret id=24131
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060003
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060003
 
 @Hitret id=24132
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24133
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24134
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24135
 
@@ -412,47 +412,47 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060004
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060004
 
 @Hitret id=24136
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060005
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060005
 
 @Hitret id=24137
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060006
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060006
 
 @Hitret id=24138
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060007
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060007
 
 @Hitret id=24139
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060008
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060008
 
 @Hitret id=24140
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060009
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060009
 
 @Hitret id=24141
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060010
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060010
 
 @Hitret id=24142
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060011
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060011
 
 @Hitret id=24143
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060012
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060012
 
 @Hitret id=24144
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060013
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060013
 
 @Hitret id=24145
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060014
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060014
 
 @Hitret id=24146
 
@@ -460,30 +460,30 @@
 
 @Hitret id=24147
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24148
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24149
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060015
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060015
 
 @Hitret id=24150
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060016
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060016
 
 @Hitret id=24151
 
 
 @StopBgm
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060017
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060017
 
 @Hitret id=24152
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060018
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060018
 
 @Hitret id=24153
 
@@ -493,35 +493,35 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060019
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060019
 
 @Hitret id=24154
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060020
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060020
 
 @Hitret id=24155
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060021
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060021
 
 @Hitret id=24156
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060022
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060022
 
 @Hitret id=24157
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060023
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060023
 
 @Hitret id=24158
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060024
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060024
 
 @Hitret id=24159
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060025
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060025
 
 @Hitret id=24160
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060026
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060026
 
 @Hitret id=24161
 
@@ -529,18 +529,18 @@
 
 @Hitret id=24162
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24163
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24164
 
 
 @BlackOut   time=1000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24165
 
@@ -565,7 +565,7 @@
 @Update transition=universal rule=WIP_MOZV time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24168
 
@@ -573,11 +573,11 @@
 
 @Hitret id=24169
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24170
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24171
 
@@ -586,31 +586,31 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060027
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060027
 
 @Hitret id=24172
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060028
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060028
 
 @Hitret id=24173
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060029
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060029
 
 @Hitret id=24174
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060030
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060030
 
 @Hitret id=24175
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060031
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060031
 
 @Hitret id=24176
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060032
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060032
 
 @Hitret id=24177
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060033
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060033
 
 @Hitret id=24178
 
@@ -621,27 +621,27 @@
 
 @BlackOut
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060034
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060034
 
 @Hitret id=24180
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060035
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060035
 
 @Hitret id=24181
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060036
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060036
 
 @Hitret id=24182
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060037
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060037
 
 @Hitret id=24183
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060038
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060038
 
 @Hitret id=24184
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060039
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060039
 
 @Hitret id=24185
 
@@ -654,41 +654,41 @@
 
 @Hitret id=24186
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060040
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060040
 
 @Hitret id=24187
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060041
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060041
 
 @Hitret id=24188
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060042
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060042
 
 @Hitret id=24189
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060043
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060043
 
 @Hitret id=24190
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060044
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060044
 
 @Hitret id=24191
 
 
 @StopBgm
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060045
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060045
 
 @Hitret id=24192
 
 
 @PlayBgm file=BGM16
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060046
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060046
 
 @Hitret id=24193
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060047
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060047
 
 @Hitret id=24194
 
@@ -697,46 +697,46 @@
 @Update transition=universal rule=CLOUD_A time=1000
 @WaitUpdate
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060048
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060048
 
 @Hitret id=24195
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060049
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060049
 
 @Hitret id=24196
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060050
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060050
 
 @Hitret id=24197
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060051
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060051
 
 @Hitret id=24198
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060052
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060052
 
 @Hitret id=24199
 
 
 @Cg file=B07b_  
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060053
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060053
 
 @Hitret id=24200
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060054
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060054
 
 @Hitret id=24201
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060055
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060055
 
 @Hitret id=24202
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060056
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060056
 
 @Hitret id=24203
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060057
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060057
 
 @Hitret id=24204
 
@@ -749,31 +749,31 @@
 
 @Hitret id=24205
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24206
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24207
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060058
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060058
 
 @Hitret id=24208
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24209
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24210
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24211
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24212
 
@@ -781,47 +781,47 @@
 
 @Hitret id=24213
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24214
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060059
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060059
 
 @Hitret id=24215
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060060
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060060
 
 @Hitret id=24216
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24217
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060061
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060061
 
 @Hitret id=24218
 
-@Talk name=Haruka's�@Grandmother's�@Journal voice=NP060062
+@Talk name=Haruka's　Grandmother's　Journal voice=NP060062
 
 @Hitret id=24219
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24220
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24221
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24222
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24223
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24224
 
@@ -829,15 +829,15 @@
 
 @Hitret id=24225
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24226
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24227
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24228
 
@@ -845,34 +845,34 @@
 
 @Hitret id=24229
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24230
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24231
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24232
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24233
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24234
 
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24235
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24236
 
@@ -894,14 +894,14 @@
 
 @PlaySe file=se018
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24240
 
 
 @PlaySe file=se062
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24241
 
@@ -912,11 +912,11 @@
 
 @Hitret id=24242
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24243
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24244
 
@@ -935,7 +935,7 @@
 
 @Hitret id=24247
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24248
 
@@ -961,11 +961,11 @@
 
 @Hitret id=24252
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24253
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24254
 
@@ -986,7 +986,7 @@
 
 @Hitret id=24257
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24258
 
@@ -1000,15 +1000,15 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24260
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24261
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24262
 
@@ -1016,7 +1016,7 @@
 
 @Hitret id=24263
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24264
 
@@ -1058,7 +1058,7 @@
 
 @Hitret id=24272
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24273
 
@@ -1078,11 +1078,11 @@
 
 @Hitret id=24277
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24278
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24279
 
@@ -1174,11 +1174,11 @@
 
 @Hitret id=24296
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24297
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24298
 
@@ -1194,27 +1194,27 @@
 
 @Hitret id=24301
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24302
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24303
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24304
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24305
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24306
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24307
 
@@ -1236,27 +1236,27 @@
 
 @Hitret id=24310
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24311
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24312
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24313
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24314
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24315
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=24316
 

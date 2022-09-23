@@ -176,8 +176,8 @@
 @ClearChar 
 @Char file=CC06_04M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020786
 
@@ -263,8 +263,8 @@
 
 @Char file=CD02_12M 
 @Update
-@action id=ˆê—t action=ActionAdvHop width=35 height=2 cycle=150 count=2
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=35 height=2 cycle=150 count=2
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020258
 
@@ -282,7 +282,7 @@
 
 @Hitret id=21617
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21618
 
@@ -332,15 +332,15 @@
 
 @Hitret id=21626
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21627
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21628
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21629
 
@@ -353,8 +353,8 @@
 @Hitret id=21631
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=16, count=2 cycle=150  
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=16, count=2 cycle=150  
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -371,18 +371,18 @@
 
 @Hitret id=21634
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21635
 
 
 @PlayBgm file=BGM13
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21636
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21637
 
@@ -401,7 +401,7 @@
 
 @Hitret id=21640
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21641
 
@@ -425,8 +425,8 @@
 @Hitret id=21645
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Ryouhei voice=RH020316
 
@@ -440,27 +440,27 @@
 @Update
 @MoveCamera x=-30 y=-36 z=128 time=1000
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21648
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21649
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21650
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21651
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21652
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21653
 
@@ -497,7 +497,7 @@
 
 @Hitret id=21659
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21660
 
@@ -512,7 +512,7 @@
 
 @Hitret id=21662
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21663
 
@@ -570,7 +570,7 @@
 
 @StopBgm fade=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21675
 
@@ -613,8 +613,8 @@
 @Cg file=B07a   
 @Update
 @PlaySe file=se018
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Kazuha voice=KA020264
 
@@ -647,11 +647,11 @@
 
 @Hitret id=21686
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21687
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21688
 
@@ -701,8 +701,8 @@
 
 
 @PlaySe file=se018
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Ryouhei voice=RH020328
 
@@ -773,7 +773,7 @@
 
 @Hitret id=21711
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21712
 
@@ -797,15 +797,15 @@
 @Flash color=WHITE enter=0 leave=100
 @Char file=CC06_09M 
 @Update
-@Move id=‰l my=40 cycle=1000
-@WaitAction id=‰l
+@Move id=ç‘› my=40 cycle=1000
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK020817
 
 @Hitret id=21715
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=21716
 
@@ -843,30 +843,30 @@
 @Update time=0
 @PlaySe file=se011
 @Flash color=WHITE enter=0 leave=100
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Akira voice=AK020820
 
 @Hitret id=21722
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Update time=0
 @Char file=CF03_10M 
 @Update time=0
 @PlaySe file=se003
 @Flash color=RED enter=0 leave=200
 @Update
-@action id=ƒJƒƒ‰ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Ryouhei voice=RH020332
 
 @Hitret id=21723
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Update
 @PlaySe file=se018
 @Char file=CD02_05M 

@@ -92,15 +92,15 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39026
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39027
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39028
 
@@ -190,7 +190,7 @@
 @Hitret id=39042
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 
 @Talk name=Motoka voice=MT051634
 
@@ -204,7 +204,7 @@
 @Hitret id=39044
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 
 @Char file=CE01_09M x=0  
 
@@ -238,15 +238,15 @@
 
 @Hitret id=39050
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39051
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39052
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39053
 
@@ -273,11 +273,11 @@
 
 @Hitret id=39058
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39059
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39060
 
@@ -345,11 +345,11 @@
 
 @Hitret id=39076
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39077
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=39078
 

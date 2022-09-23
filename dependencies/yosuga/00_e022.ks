@@ -6,15 +6,15 @@
 @PlayBgm file=BGM03
 @Cg file=B27a   
 
-@Talk name=Motoka　Monologue voice=MT051082
+@Talk name=Motoka縲Monologue voice=MT051082
 
 @Hitret id=37233
 
-@Talk name=Motoka　Monologue voice=MT051083
+@Talk name=Motoka縲Monologue voice=MT051083
 
 @Hitret id=37234
 
-@Talk name=Motoka　Monologue voice=MT051084
+@Talk name=Motoka縲Monologue voice=MT051084
 
 @Hitret id=37235
 
@@ -27,11 +27,11 @@
 
 @Hitret id=37236
 
-@Talk name=Motoka　Monologue voice=MT051086
+@Talk name=Motoka縲Monologue voice=MT051086
 
 @Hitret id=37237
 
-@Talk name=Motoka　Monologue voice=MT051087
+@Talk name=Motoka縲Monologue voice=MT051087
 
 @Hitret id=37238
 
@@ -64,7 +64,7 @@
 
 @Hitret id=37243
 
-@Talk name=Motoka　Monologue voice=MT051090
+@Talk name=Motoka縲Monologue voice=MT051090
 
 @Hitret id=37244
 
@@ -106,7 +106,7 @@
 
 @Hitret id=37252
 
-@Talk name=Motoka　Monologue voice=MT051095
+@Talk name=Motoka縲Monologue voice=MT051095
 
 @Hitret id=37253
 
@@ -126,16 +126,16 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=Motoka　Monologue voice=MT051096
+@Talk name=Motoka縲Monologue voice=MT051096
 
 @Hitret id=37255
 
-@Talk name=Motoka　Monologue voice=MT051097
+@Talk name=Motoka縲Monologue voice=MT051097
 
 @Hitret id=37256
 
 
-@ClearChar id=初佳
+@ClearChar id=蛻昜ｽｳ
 
 @Char file=CC06_02M 
 
@@ -162,15 +162,15 @@
 
 @Hitret id=37261
 
-@Talk name=Motoka　Monologue voice=MT051099
+@Talk name=Motoka縲Monologue voice=MT051099
 
 @Hitret id=37262
 
-@Talk name=Motoka　Monologue voice=MT051100
+@Talk name=Motoka縲Monologue voice=MT051100
 
 @Hitret id=37263
 
-@Talk name=Motoka　Monologue voice=MT051101
+@Talk name=Motoka縲Monologue voice=MT051101
 
 @Hitret id=37264
 
@@ -181,7 +181,7 @@
 
 @Hitret id=37265
 
-@Talk name=Motoka　Monologue voice=MT051102
+@Talk name=Motoka縲Monologue voice=MT051102
 
 @Hitret id=37266
 
@@ -238,7 +238,7 @@
 
 @Hitret id=37277
 
-@Talk name=Motoka　Monologue voice=MT051108
+@Talk name=Motoka縲Monologue voice=MT051108
 
 @Hitret id=37278
 
@@ -287,7 +287,7 @@
 
 @Hitret id=37287
 
-@Talk name=Motoka　Monologue voice=MT051111
+@Talk name=Motoka縲Monologue voice=MT051111
 
 @Hitret id=37288
 
@@ -299,11 +299,11 @@
 
 @Hitret id=37290
 
-@Talk name=Motoka　Monologue voice=MT051113
+@Talk name=Motoka縲Monologue voice=MT051113
 
 @Hitret id=37291
 
-@Talk name=Motoka　Monologue voice=MT051114
+@Talk name=Motoka縲Monologue voice=MT051114
 
 @Hitret id=37292
 
@@ -345,7 +345,7 @@
 
 @Hitret id=37300
 
-@Talk name=Motoka　Monologue voice=MT051120
+@Talk name=Motoka縲Monologue voice=MT051120
 
 @Hitret id=37301
 
@@ -360,11 +360,11 @@
 
 @Hitret id=37303
 
-@Talk name=Motoka　Monologue voice=MT051122
+@Talk name=Motoka縲Monologue voice=MT051122
 
 @Hitret id=37304
 
-@Talk name=Motoka　Monologue voice=MT051123
+@Talk name=Motoka縲Monologue voice=MT051123
 
 @Hitret id=37305
 
@@ -395,7 +395,7 @@
 
 @Hitret id=37311
 
-@Talk name=Motoka　Monologue voice=MT051127
+@Talk name=Motoka縲Monologue voice=MT051127
 
 @Hitret id=37312
 
@@ -403,7 +403,7 @@
 
 @Hitret id=37313
 
-@Talk name=Motoka　Monologue voice=MT051128
+@Talk name=Motoka縲Monologue voice=MT051128
 
 @Hitret id=37314
 

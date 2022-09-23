@@ -10,8 +10,8 @@
 @Hitret id=2148
 
 
-@action id=�J���� action=ActionWave width=20, height=0, count=2 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=20, height=0, count=2 cycle=50
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
@@ -29,7 +29,7 @@
 
 @Hitret id=2151
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2152
 
@@ -40,7 +40,7 @@
 
 @Hitret id=2153
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2154
 
@@ -63,11 +63,11 @@
 
 @Cg file=EA22a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2158
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2159
 
@@ -127,10 +127,10 @@
 @Hitret id=2172
 
 
-@action id=�J���� action=ActionWave width=20, height=0, count=3 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=20, height=0, count=3 cycle=50
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2173
 
@@ -141,7 +141,7 @@
 
 @Hitret id=2174
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2175
 
@@ -160,7 +160,7 @@
 
 @Hitret id=2178
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2179
 
@@ -168,7 +168,7 @@
 
 @Hitret id=2180
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2181
 
@@ -176,11 +176,11 @@
 
 @Hitret id=2182
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2183
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2184
 
@@ -207,7 +207,7 @@
 
 @Hitret id=2189
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2190
 
@@ -261,8 +261,8 @@
 
 @Char file=CF01_02M
 @Update
-@action id=���� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=����
+@action id=亮平 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=亮平
 
 @Talk name=Ryouhei voice=RH000139
 
@@ -281,8 +281,8 @@
 
 
 @Update
-@action id=���� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=����
+@action id=亮平 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=亮平
 
 @Talk name=Ryouhei voice=RH000140
 
@@ -290,11 +290,11 @@
 
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2204
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2205
 
@@ -333,15 +333,15 @@
 
 @Cg file=EA22d
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2212
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2213
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2214
 
@@ -356,15 +356,15 @@
 
 @Hitret id=2216
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2217
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2218
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2219
 
@@ -379,7 +379,7 @@
 
 @Hitret id=2221
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2222
 
@@ -387,7 +387,7 @@
 
 @Hitret id=2223
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2224
 
@@ -425,15 +425,15 @@
 
 @Hitret id=2231
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2232
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2233
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2234
 
@@ -452,7 +452,7 @@
 
 @Hitret id=2236
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2237
 
@@ -471,17 +471,17 @@
 @Hitret id=2239
 
 
-@Leave id=���� mx=-240 my=0 fade=1 time=250 accel=1
+@Leave id=亮平 mx=-240 my=0 fade=1 time=250 accel=1
 
 @Talk name=Haruka
 
 @Hitret id=2240
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2241
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=2242
 

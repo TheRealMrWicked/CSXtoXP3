@@ -11,11 +11,11 @@
 
 @Hitret id=25994
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25995
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=25996
 
@@ -50,14 +50,14 @@
 
 @Char file=CC01_12M 
 @Update
-@action id=‰l action=ActionAdvHop width=35 height=2 cycle=150 count=2
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop width=35 height=2 cycle=150 count=2
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK021951
 
 @Hitret id=26004
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26005
 
@@ -72,7 +72,7 @@
 
 @Hitret id=26007
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26008
 
@@ -105,7 +105,7 @@
 
 @Hitret id=26013
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26014
 
@@ -123,14 +123,14 @@
 
 @Char file=CC01_12M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK021956
 
 @Hitret id=26017
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26018
 
@@ -186,7 +186,7 @@
 
 @Hitret id=26028
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26029
 
@@ -266,11 +266,11 @@
 
 @Hitret id=26044
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26045
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26046
 
@@ -304,7 +304,7 @@
 
 @Hitret id=26052
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26053
 
@@ -335,11 +335,11 @@
 
 @Hitret id=26058
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26059
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26060
 
@@ -402,8 +402,8 @@
 
 @Char file=CC01_04M 
 @Update
-@action id=‰l action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK021979
 
@@ -435,7 +435,7 @@
 
 @Hitret id=26077
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26078
 
@@ -461,11 +461,11 @@
 
 @Hitret id=26082
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26083
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26084
 
@@ -510,12 +510,12 @@
 
 @Hitret id=26092
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=26093
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 
 @Talk name=Akira voice=AK021989
 

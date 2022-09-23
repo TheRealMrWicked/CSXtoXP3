@@ -33,15 +33,15 @@
 
 @Hitret id=11909
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11910
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11911
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11912
 
@@ -231,7 +231,7 @@
 @Hitret id=11946
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CF01_06M 
 
 @Talk name=Ryouhei voice=RH030133
@@ -256,8 +256,8 @@
 
 @Char file=CF01_06M 
 @Update
-@action id=—º•½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH030135
 
@@ -286,7 +286,7 @@
 
 @Hitret id=11955
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11956
 
@@ -298,7 +298,7 @@
 @Hitret id=11957
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CF01_06M 
 
 @Talk name=Ryouhei voice=RH030138
@@ -306,17 +306,17 @@
 @Hitret id=11958
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11959
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11960
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11961
 
@@ -380,8 +380,8 @@
 
 @Char file=CA01_13M 
 @Update
-@action id=âu action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=âu
+@action id=ç©¹ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR030055
 
@@ -389,22 +389,22 @@
 
 
 @Update
-@Move id=—º•½ my=30 cycle=1000
-@WaitAction id=—º•½
+@Move id=äº®å¹³ my=30 cycle=1000
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH030144
 
 @Hitret id=11971
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11972
 
 
 @Char file=CA01_13M 
 @Update
-@action id=âu action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=âu
+@action id=ç©¹ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ç©¹
 
 @Talk name=Sora voice=SR030056
 
@@ -438,9 +438,9 @@
 @Hitret id=11976
 
 
-@Leave id=âu mx=300 my=0 fade=1 time=1000 accel=1
+@Leave id=ç©¹ mx=300 my=0 fade=1 time=1000 accel=1
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11977
 
@@ -448,7 +448,7 @@
 
 @Hitret id=11978
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=11979
 

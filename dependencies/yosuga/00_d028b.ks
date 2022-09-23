@@ -25,7 +25,7 @@
 
 @Hitret id=31451
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31452
 
@@ -44,11 +44,11 @@
 
 @Hitret id=31455
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31456
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31457
 
@@ -65,11 +65,11 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31459
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31460
 
@@ -77,11 +77,11 @@
 
 @Hitret id=31461
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31462
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31463
 
@@ -97,19 +97,19 @@
 
 @Hitret id=31466
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31467
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31468
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31469
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31470
 
@@ -117,7 +117,7 @@
 
 @Hitret id=31471
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31472
 
@@ -131,7 +131,7 @@
 
 @Hitret id=31473
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31474
 
@@ -139,7 +139,7 @@
 
 @Hitret id=31475
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31476
 
@@ -147,11 +147,11 @@
 
 @Hitret id=31477
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31478
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31479
 
@@ -163,7 +163,7 @@
 
 @Hitret id=31481
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31482
 
@@ -175,7 +175,7 @@
 
 @Hitret id=31484
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31485
 
@@ -183,11 +183,11 @@
 
 @Hitret id=31486
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31487
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31488
 
@@ -195,11 +195,11 @@
 
 @Hitret id=31489
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31490
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31491
 
@@ -211,7 +211,7 @@
 
 @Hitret id=31493
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31494
 
@@ -226,15 +226,15 @@
 
 @Hitret id=31496
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31497
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31498
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31499
 
@@ -256,15 +256,15 @@
 
 @Hitret id=31502
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31503
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31504
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31505
 
@@ -298,7 +298,7 @@
 
 @Hitret id=31511
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31512
 
@@ -310,7 +310,7 @@
 
 @Hitret id=31514
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31515
 
@@ -345,7 +345,7 @@
 
 @Hitret id=31522
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31523
 
@@ -353,7 +353,7 @@
 
 @Hitret id=31524
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31525
 
@@ -364,7 +364,7 @@
 
 @Hitret id=31526
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31527
 
@@ -372,7 +372,7 @@
 
 @Hitret id=31528
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31529
 
@@ -404,7 +404,7 @@
 
 @Hitret id=31536
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31537
 
@@ -412,7 +412,7 @@
 
 @Hitret id=31538
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31539
 
@@ -454,11 +454,11 @@
 
 @Hitret id=31547
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31548
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31549
 
@@ -466,11 +466,11 @@
 
 @Hitret id=31550
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31551
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31552
 
@@ -482,11 +482,11 @@
 
 @Hitret id=31554
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31555
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31556
 
@@ -506,11 +506,11 @@
 
 @Hitret id=31560
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31561
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31562
 
@@ -530,15 +530,15 @@
 
 @Hitret id=31565
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31566
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31567
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31568
 
@@ -546,15 +546,15 @@
 
 @Hitret id=31569
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31570
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31571
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31572
 
@@ -562,15 +562,15 @@
 
 @Hitret id=31573
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31574
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31575
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31576
 
@@ -585,7 +585,7 @@
 
 @Hitret id=31577
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31578
 
@@ -601,7 +601,7 @@
 
 @Hitret id=31581
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31582
 
@@ -609,7 +609,7 @@
 
 @Hitret id=31583
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31584
 
@@ -621,15 +621,15 @@
 
 @Hitret id=31586
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31587
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31588
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31589
 
@@ -653,7 +653,7 @@
 
 @Hitret id=31594
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31595
 
@@ -661,7 +661,7 @@
 
 @Hitret id=31596
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31597
 
@@ -669,7 +669,7 @@
 
 @Hitret id=31598
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31599
 
@@ -677,7 +677,7 @@
 
 @Hitret id=31600
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31601
 
@@ -697,7 +697,7 @@
 
 @Hitret id=31605
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31606
 
@@ -725,11 +725,11 @@
 
 @Hitret id=31612
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31613
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31614
 
@@ -741,15 +741,15 @@
 
 @Hitret id=31616
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31617
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31618
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31619
 
@@ -769,7 +769,7 @@
 
 @Hitret id=31623
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31624
 
@@ -781,15 +781,15 @@
 
 @Hitret id=31626
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31627
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31628
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31629
 
@@ -797,23 +797,23 @@
 
 @Hitret id=31630
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31631
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31632
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31633
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31634
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31635
 
@@ -841,11 +841,11 @@
 
 @Hitret id=31641
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31642
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31643
 
@@ -857,7 +857,7 @@
 
 @Hitret id=31645
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31646
 
@@ -865,7 +865,7 @@
 
 @Hitret id=31647
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31648
 
@@ -877,7 +877,7 @@
 
 @Hitret id=31650
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31651
 
@@ -885,7 +885,7 @@
 
 @Hitret id=31652
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31653
 
@@ -901,7 +901,7 @@
 
 @Hitret id=31656
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31657
 
@@ -917,11 +917,11 @@
 
 @Hitret id=31660
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31661
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31662
 
@@ -957,7 +957,7 @@
 
 @Hitret id=31670
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31671
 
@@ -985,15 +985,15 @@
 
 @Hitret id=31677
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31678
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31679
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31680
 
@@ -1025,7 +1025,7 @@
 
 @Hitret id=31687
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31688
 
@@ -1033,7 +1033,7 @@
 
 @Hitret id=31689
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31690
 
@@ -1041,11 +1041,11 @@
 
 @Hitret id=31691
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31692
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31693
 
@@ -1053,11 +1053,11 @@
 
 @Hitret id=31694
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31695
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31696
 
@@ -1065,7 +1065,7 @@
 
 @Hitret id=31697
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31698
 
@@ -1085,7 +1085,7 @@
 
 @Hitret id=31702
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31703
 
@@ -1093,11 +1093,11 @@
 
 @Hitret id=31704
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31705
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31706
 
@@ -1105,7 +1105,7 @@
 
 @Hitret id=31707
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31708
 
@@ -1113,7 +1113,7 @@
 
 @Hitret id=31709
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31710
 
@@ -1145,11 +1145,11 @@
 
 @Hitret id=31716
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31717
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31718
 
@@ -1165,11 +1165,11 @@
 
 @Hitret id=31721
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31722
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31723
 
@@ -1222,11 +1222,11 @@
 @Update transition=universal rule=WIP_TB time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31735
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=31736
 

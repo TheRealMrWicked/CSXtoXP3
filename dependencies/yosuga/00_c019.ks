@@ -6,22 +6,22 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22241
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22242
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22243
 
 
 @PlaySe file=se013
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22244
 
@@ -29,11 +29,11 @@
 
 @Hitret id=22245
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22246
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22247
 
@@ -41,7 +41,7 @@
 
 @Hitret id=22248
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22249
 
@@ -182,7 +182,7 @@
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22276
 
@@ -228,7 +228,7 @@
 
 @Hitret id=22284
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22285
 
@@ -266,26 +266,26 @@
 
 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22297
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22298
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22299
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22300
 
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22301
 
@@ -333,11 +333,11 @@
 
 @Hitret id=22311
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22312
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22313
 
@@ -348,27 +348,27 @@
 
 @Hitret id=22314
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22315
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22316
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22317
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22318
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22319
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22320
 
@@ -379,7 +379,7 @@
 
 @Hitret id=22321
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22322
 
@@ -393,7 +393,7 @@
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=22324
 

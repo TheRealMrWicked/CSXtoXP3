@@ -6,42 +6,42 @@
 @PlayEnvSe file=SE302 fade=0
 @Cg file=B35a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5857
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5858
 
 
 @Cg file=B15a
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040001
+@Talk name=Boy　with　Shaved　Head voice=NP040001
 
 @Hitret id=5859
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050001
+@Talk name=Boy　with　Short　Hair voice=NP050001
 
 @Hitret id=5860
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040002
+@Talk name=Boy　with　Shaved　Head voice=NP040002
 
 @Hitret id=5861
 
-@Talk name=Overweight�@Boy voice=NP060001
+@Talk name=Overweight　Boy voice=NP060001
 
 @Hitret id=5862
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5863
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5864
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5865
 
@@ -54,15 +54,15 @@
 
 @Hitret id=5866
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5867
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040003
+@Talk name=Boy　with　Shaved　Head voice=NP040003
 
 @Hitret id=5868
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050002
+@Talk name=Boy　with　Short　Hair voice=NP050002
 
 @Hitret id=5869
 
@@ -70,7 +70,7 @@
 
 @Hitret id=5870
 
-@Talk name=Overweight�@Boy voice=NP060002
+@Talk name=Overweight　Boy voice=NP060002
 
 @Hitret id=5871
 
@@ -88,11 +88,11 @@
 
 @Hitret id=5873
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040004
+@Talk name=Boy　with　Shaved　Head voice=NP040004
 
 @Hitret id=5874
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5875
 
@@ -100,15 +100,15 @@
 
 @Hitret id=5876
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040005
+@Talk name=Boy　with　Shaved　Head voice=NP040005
 
 @Hitret id=5877
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050003
+@Talk name=Boy　with　Short　Hair voice=NP050003
 
 @Hitret id=5878
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5879
 
@@ -119,7 +119,7 @@
 
 @Hitret id=5880
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5881
 
@@ -130,7 +130,7 @@
 
 @Hitret id=5882
 
-@Talk name=Overweight�@Boy voice=NP060003
+@Talk name=Overweight　Boy voice=NP060003
 
 @Hitret id=5883
 
@@ -141,27 +141,27 @@
 
 @Hitret id=5884
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5885
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5886
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5887
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5888
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5889
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5890
 
@@ -176,11 +176,11 @@
 
 @Hitret id=5892
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050004
+@Talk name=Boy　with　Short　Hair voice=NP050004
 
 @Hitret id=5893
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040006
+@Talk name=Boy　with　Shaved　Head voice=NP040006
 
 @Hitret id=5894
 
@@ -188,7 +188,7 @@
 
 @Hitret id=5895
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5896
 
@@ -199,11 +199,11 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5898
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5899
 
@@ -275,7 +275,7 @@
 
 @Hitret id=5913
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5914
 
@@ -286,7 +286,7 @@
 
 @Hitret id=5915
 
-@Talk name=Overweight�@Boy voice=NP060004
+@Talk name=Overweight　Boy voice=NP060004
 
 @Hitret id=5916
 
@@ -301,7 +301,7 @@
 
 @Hitret id=5918
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5919
 
@@ -309,7 +309,7 @@
 
 @Hitret id=5920
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5921
 
@@ -324,11 +324,11 @@
 
 @Hitret id=5923
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5924
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5925
 
@@ -354,11 +354,11 @@
 
 @Hitret id=5929
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5930
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5931
 
@@ -388,11 +388,11 @@
 
 @Hitret id=5936
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5937
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5938
 
@@ -414,11 +414,11 @@
 
 @Hitret id=5941
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5942
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050005
+@Talk name=Boy　with　Short　Hair voice=NP050005
 
 @Hitret id=5943
 
@@ -429,11 +429,11 @@
 
 @Hitret id=5944
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040007
+@Talk name=Boy　with　Shaved　Head voice=NP040007
 
 @Hitret id=5945
 
-@Talk name=Overweight�@Boy voice=NP060005
+@Talk name=Overweight　Boy voice=NP060005
 
 @Hitret id=5946
 
@@ -441,15 +441,15 @@
 
 @Hitret id=5947
 
-@Talk name=Boy�@with�@Shaved�@Head voice=NP040008
+@Talk name=Boy　with　Shaved　Head voice=NP040008
 
 @Hitret id=5948
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5949
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5950
 
@@ -468,11 +468,11 @@
 
 @Hitret id=5953
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5954
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5955
 
@@ -483,7 +483,7 @@
 
 @Hitret id=5956
 
-@Talk name=Boy�@with�@Short�@Hair voice=NP050006
+@Talk name=Boy　with　Short　Hair voice=NP050006
 
 @Hitret id=5957
 
@@ -491,19 +491,19 @@
 
 @Hitret id=5958
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5959
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5960
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5961
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5962
 
@@ -533,11 +533,11 @@
 
 @Hitret id=5967
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5968
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=5969
 

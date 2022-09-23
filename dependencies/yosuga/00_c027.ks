@@ -69,8 +69,8 @@
 @Char file=CC02_03M x=0   
 @Char file=CD02_12M x=200   
 @Update
-@action id=ˆê—t action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020470
 
@@ -152,8 +152,8 @@
 
 @Char file=CD02_04M x=200   
 @Update
-@action id=ˆê—t action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020472
 
@@ -247,16 +247,16 @@
 @Char file=CC02_12M x=-100   
 @Update
 @wait time=500
-@Move id=‰l my=640 cycle=500
+@Move id=ç‘› my=640 cycle=500
 @Update
-@WaitAction id=‰l
+@WaitAction id=ç‘›
 @PlaySe file=se018
 
 @Talk name=Akira voice=AK021639
 
 @Hitret id=24420
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24421
 
@@ -288,7 +288,7 @@
 @Hitret id=24425
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Char file=CD02_05M 
 
 @Talk name=Kazuha voice=KA020476
@@ -345,8 +345,8 @@
 
 @Char file=CD02_12M 
 @Update
-@action id=ˆê—t action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020479
 
@@ -413,8 +413,8 @@
 
 @Char file=CF03_09M 
 @Update
-@action id=—º•½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=äº®å¹³
 @Font face=36
 
 @Talk name=Ryouhei voice=RH020479
@@ -546,7 +546,7 @@
 @Hitret id=24465
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CC02_01M 
 
 @Talk name=Akira voice=AK021648
@@ -643,8 +643,8 @@
 @Hitret id=24479
 
 
-@ClearChar id=‰l
-@ClearChar id=—º•½
+@ClearChar id=ç‘›
+@ClearChar id=äº®å¹³
 @Char file=CD02_01M 
 
 @Talk name=Kazuha voice=KA020491
@@ -777,7 +777,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24505
 
@@ -788,30 +788,30 @@
 
 @Hitret id=24506
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24507
 
 
 @PlayBgm file=BGM16
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24508
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24509
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24510
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24511
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24512
 
@@ -833,39 +833,39 @@
 @Update transition=universal rule=WIP_MOZV time=500
 @WaitUpdate
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24514
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24515
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24516
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24517
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24518
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24519
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24520
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24521
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=24522
 

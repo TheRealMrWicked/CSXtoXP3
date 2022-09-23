@@ -12,19 +12,19 @@
 
 @PlayBgm file=BGM03
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19109
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19110
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19111
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19112
 
@@ -45,7 +45,7 @@
 
 @Hitret id=19115
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19116
 
@@ -61,18 +61,18 @@
 @Hitret id=19118
 
 
-@action id=�J���� action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=カメラ
 
 @Talk name=Haruka
 
 @Hitret id=19119
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19120
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=19121
 

@@ -16,23 +16,23 @@
 
 @PlayBgm file=BGM05
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13966
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13967
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13968
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13969
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13970
 
@@ -54,15 +54,15 @@
 
 @Hitret id=13973
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13974
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13975
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13976
 
@@ -107,7 +107,7 @@
 
 @Hitret id=13984
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13985
 
@@ -129,7 +129,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13989
 
@@ -137,26 +137,26 @@
 
 @Hitret id=13990
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13991
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13992
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13993
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13994
 
 
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13995
 

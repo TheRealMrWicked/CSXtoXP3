@@ -144,7 +144,7 @@
 @Hitret id=38564
 
 
-@ClearChar id=Ç‚Ç–ÇÎ
+@ClearChar id=„ÇÑ„Å≤„Çç
 
 @Talk name=Motoka voice=MT051474
 

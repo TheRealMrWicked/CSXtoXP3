@@ -6,7 +6,7 @@
 @Cg file=B41C
 
 
-@Talk name=Party�@Man�@A voice=NP090001
+@Talk name=Party　Man　A voice=NP090001
 
 @Hitret id=6946
 
@@ -17,7 +17,7 @@
 
 @Hitret id=6947
 
-@Talk name=Party�@Man�@A voice=NP090002
+@Talk name=Party　Man　A voice=NP090002
 
 @Hitret id=6948
 
@@ -35,7 +35,7 @@
 
 @Hitret id=6950
 
-@Talk name=Party�@Man�@A voice=NP090003
+@Talk name=Party　Man　A voice=NP090003
 
 @Hitret id=6951
 
@@ -46,43 +46,43 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6953
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6954
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6955
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6956
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6957
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6958
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6959
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6960
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6961
 
-@Talk name=Party�@Organizer voice=NP070001
+@Talk name=Party　Organizer voice=NP070001
 
 @Hitret id=6962
 
@@ -93,11 +93,11 @@
 
 @Hitret id=6963
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6964
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6965
 
@@ -107,11 +107,11 @@
 @Update transition=universal rule=WIP_RL time=500
 @WaitUpdate
 
-@Talk name=Party�@Organizer voice=NP070002
+@Talk name=Party　Organizer voice=NP070002
 
 @Hitret id=6966
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6967
 
@@ -122,7 +122,7 @@
 
 @Hitret id=6968
 
-@Talk name=Party�@Organizer voice=NP070003
+@Talk name=Party　Organizer voice=NP070003
 
 @Hitret id=6969
 
@@ -140,7 +140,7 @@
 
 @Hitret id=6971
 
-@Talk name=Party�@Girl voice=NP080001
+@Talk name=Party　Girl voice=NP080001
 
 @Hitret id=6972
 
@@ -151,7 +151,7 @@
 
 @Hitret id=6973
 
-@Talk name=Party�@Organizer voice=NP070004
+@Talk name=Party　Organizer voice=NP070004
 
 @Hitret id=6974
 
@@ -160,59 +160,59 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=Party�@Organizer voice=NP070005
+@Talk name=Party　Organizer voice=NP070005
 
 @Hitret id=6975
 
-@Talk name=Party�@Man�@B voice=NP100001
+@Talk name=Party　Man　B voice=NP100001
 
 @Hitret id=6976
 
-@Talk name=Party�@Girl voice=NP080002
+@Talk name=Party　Girl voice=NP080002
 
 @Hitret id=6977
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6978
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6979
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6980
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6981
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6982
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6983
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6984
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6985
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6986
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6987
 
-@Talk name=Party�@Man�@C voice=NP110001
+@Talk name=Party　Man　C voice=NP110001
 
 @Hitret id=6988
 
@@ -226,39 +226,39 @@
 
 @ClearChar
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6990
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6991
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6992
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6993
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6994
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6995
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6996
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6997
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6998
 
@@ -269,7 +269,7 @@
 
 @Hitret id=6999
 
-@Talk name=Party�@Man�@A voice=NP090004
+@Talk name=Party　Man　A voice=NP090004
 
 @Hitret id=7000
 
@@ -280,15 +280,15 @@
 
 @Hitret id=7001
 
-@Talk name=Party�@Man�@A voice=NP090005
+@Talk name=Party　Man　A voice=NP090005
 
 @Hitret id=7002
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=7003
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=7004
 
@@ -296,11 +296,11 @@
 
 @Hitret id=7005
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=7006
 
-@Talk name=Party�@Man�@A voice=NP090006
+@Talk name=Party　Man　A voice=NP090006
 
 @Hitret id=7007
 
@@ -308,7 +308,7 @@
 
 @Hitret id=7008
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=7009
 

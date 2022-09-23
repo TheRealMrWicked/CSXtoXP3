@@ -101,7 +101,7 @@
 @Char file=CB01_03M 
 @Char file=CD01_10M 
 
-@Talk name=Ryouhei�@and�@Nao�@and�@Kazuha voice=RH020518/NO020175/KA020612
+@Talk name=Ryouhei　and　Nao　and　Kazuha voice=RH020518/NO020175/KA020612
 
 @Hitret id=26424
 
@@ -262,15 +262,15 @@
 
 @Char file=CD01_12M 
 @Update
-@action id=��t action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=��t
+@action id=一葉 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=一葉
 
 @Talk name=Kazuha voice=KA020620
 
 @Hitret id=26449
 
 
-@ClearChar id=��t
+@ClearChar id=一葉
 @Char file=CF01_01M 
 
 @Talk name=Ryouhei voice=RH020524
@@ -448,15 +448,15 @@
 
 @Hitret id=26477
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=26478
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=26479
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=26480
 

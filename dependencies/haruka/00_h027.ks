@@ -4,7 +4,7 @@
 @Cg file=B27a
 @MessageFrame type=1
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13116
 
@@ -19,7 +19,7 @@
 
 @Hitret id=13118
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13119
 
@@ -34,7 +34,7 @@
 
 @Hitret id=13121
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13122
 
@@ -78,7 +78,7 @@
 
 @Hitret id=13129
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13130
 
@@ -119,8 +119,8 @@
 @PlaySe file=se010
 @Char file=CH02_07M
 @Update
-@action id=�� action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021340
 
@@ -134,8 +134,8 @@
 @PlaySe file=se010
 @Char file=CH02_13M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021341
 
@@ -145,11 +145,11 @@
 
 @Hitret id=13140
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13141
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13142
 
@@ -170,11 +170,11 @@
 
 @Hitret id=13144
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13145
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13146
 
@@ -196,8 +196,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021345
 
@@ -249,7 +249,7 @@
 
 @Hitret id=13159
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13160
 
@@ -283,8 +283,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021354
 
@@ -380,8 +380,8 @@
 
 @Char file=CH02_05M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021365
 
@@ -424,14 +424,14 @@
 
 @Char file=CH02_09M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13193
 
 
 @Char file=CH02_02M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13194
 
@@ -491,8 +491,8 @@
 
 @Char file=CH02_13M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021375
 
@@ -509,11 +509,11 @@
 
 @Hitret id=13208
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13209
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13210
 
@@ -624,8 +624,8 @@
 
 @Char file=CH02_13M
 @Update
-@action id=�� action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=��
+@action id=梢 action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=梢
 
 @Talk name=Kozue voice=KO021388
 
@@ -665,7 +665,7 @@
 
 @Hitret id=13238
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13239
 
@@ -680,7 +680,7 @@
 
 @Hitret id=13241
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13242
 
@@ -807,11 +807,11 @@
 
 @Hitret id=13266
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13267
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13268
 
@@ -833,7 +833,7 @@
 
 @Hitret id=13272
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=13273
 

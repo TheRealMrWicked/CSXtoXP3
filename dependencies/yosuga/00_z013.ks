@@ -22,7 +22,7 @@
 
 @Hitret id=1847
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1848
 
@@ -145,7 +145,7 @@
 @Hitret id=1868
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CD01_07M 
 
 @Talk name=Kazuha voice=KA000042
@@ -157,8 +157,8 @@
 @Flash color=WHITE enter=0 leave=100
 @Char file=CC01_09M 
 @Update
-@action id=‰l action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK000124
 
@@ -185,8 +185,8 @@
 
 @Char file=CD01_04M 
 @Update
-@Move id=ˆê—t my=50 cycle=1000
-@WaitAction id=ˆê—t
+@Move id=ä¸€è‘‰ my=50 cycle=1000
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA000045
 
@@ -211,14 +211,14 @@
 
 @Hitret id=1877
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1878
 
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1879
 
@@ -289,11 +289,11 @@
 @BlackOut
 @StopSe
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1890
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1891
 
@@ -301,7 +301,7 @@
 
 @Hitret id=1892
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1893
 
@@ -316,7 +316,7 @@
 @Char file=CD01_01M 
 @Char file=CC01_01M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1895
 
@@ -327,8 +327,8 @@
 
 @Char file=CD01_12M 
 @Update
-@action id=ˆê—t action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA000048
 
@@ -345,7 +345,7 @@
 
 @Char file=CD01_10M x=200  
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1899
 
@@ -376,7 +376,7 @@
 @ClearChar 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1905
 
@@ -505,7 +505,7 @@
 
 @Hitret id=1930
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1931
 
@@ -528,7 +528,7 @@
 
 @Hitret id=1935
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1936
 
@@ -544,10 +544,10 @@
 @PlayBgm file=BGM13
 @Char file=CH01_10M 
 @Update
-@action id=½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=æ¢¢
 
-@Talk name=Class@Rep voice=KO000022
+@Talk name=Classã€€Rep voice=KO000022
 
 @Hitret id=1938
 
@@ -555,21 +555,21 @@
 
 @Hitret id=1939
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1940
 
 
 @Char file=CH01_07M 
 
-@Talk name=Class@Rep voice=KO000023
+@Talk name=Classã€€Rep voice=KO000023
 
 @Hitret id=1941
 
 
 @Char file=CH01_04M 
 
-@Talk name=Class@Rep voice=KO000024
+@Talk name=Classã€€Rep voice=KO000024
 
 @Hitret id=1942
 
@@ -587,7 +587,7 @@
 
 @Char file=CH01_08M 
 
-@Talk name=Class@Rep voice=KO000025
+@Talk name=Classã€€Rep voice=KO000025
 
 @Hitret id=1945
 
@@ -598,10 +598,10 @@
 
 @Char file=CH01_07M 
 @Update
-@action id=½ action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=æ¢¢
 
-@Talk name=Class@Rep voice=KO000026
+@Talk name=Classã€€Rep voice=KO000026
 
 @Hitret id=1947
 
@@ -613,15 +613,15 @@
 @Char file=CH01_01M 
 @Font face=36
 
-@Talk name=Class@Rep voice=KO000027
+@Talk name=Classã€€Rep voice=KO000027
 
 @Hitret id=1949
 
 
 @Char file=CF01_06M 
 @Update
-@action id=—º•½ action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH000159
 
@@ -634,15 +634,15 @@
 
 @Char file=CH01_07M 
 
-@Talk name=Class@Rep voice=KO000028
+@Talk name=Classã€€Rep voice=KO000028
 
 @Hitret id=1952
 
 
-@ClearChar id=½
+@ClearChar id=æ¢¢
 @Char file=CF01_01M 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1953
 
@@ -658,7 +658,7 @@
 
 @Hitret id=1956
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1957
 
@@ -699,11 +699,11 @@
 
 @Hitret id=1964
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1965
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=1966
 

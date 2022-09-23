@@ -6,26 +6,26 @@
 
 @PlayEnvSe file=SE406 fade=0
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6041
 
 
 @Cg file=B26a
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6042
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6043
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6044
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6045
 
@@ -37,7 +37,7 @@
 
 @Hitret id=6047
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6048
 
@@ -59,11 +59,11 @@
 
 @Hitret id=6050
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6051
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6052
 
@@ -74,11 +74,11 @@
 
 @Hitret id=6053
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6054
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6055
 
@@ -140,11 +140,11 @@
 @PlaySe file=se055
 @WaitSe
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6064
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6065
 
@@ -156,7 +156,7 @@
 
 @Hitret id=6066
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6067
 
@@ -172,10 +172,10 @@
 @Hitret id=6069
 
 
-@action id=�J���� action=ActionWave width=0, height=20, count=1 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=20, count=1 cycle=50
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6070
 
@@ -187,7 +187,7 @@
 
 @Hitret id=6072
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6073
 
@@ -222,10 +222,10 @@
 @Hitret id=6079
 
 
-@action id=�J���� action=ActionWave width=0, height=20, count=2 cycle=50
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=20, count=2 cycle=50
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6080
 
@@ -255,23 +255,23 @@
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6085
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6086
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6087
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6088
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6089
 
@@ -350,7 +350,7 @@
 @Cg file=B26a
 @Char file=CG02_07M
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=6106
 

@@ -5,34 +5,34 @@
 @Cg file=B27a   
 @PlayBgm file=BGM06
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34677
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34678
 
 
 @Cg file=B34a center=800,300
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34679
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34680
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34681
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34682
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34683
 
@@ -43,7 +43,7 @@
 
 @Hitret id=34684
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34685
 
@@ -51,7 +51,7 @@
 
 @Hitret id=34686
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34687
 
@@ -66,11 +66,11 @@
 
 @Hitret id=34689
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34690
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34691
 
@@ -96,11 +96,11 @@
 
 @Hitret id=34695
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34696
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34697
 
@@ -162,7 +162,7 @@
 
 @Hitret id=34710
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34711
 
@@ -181,11 +181,11 @@
 
 @Hitret id=34714
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34715
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34716
 
@@ -193,11 +193,11 @@
 
 @Hitret id=34717
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34718
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34719
 
@@ -216,11 +216,11 @@
 
 @Hitret id=34722
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34723
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34724
 
@@ -228,11 +228,11 @@
 
 @Hitret id=34725
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34726
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34727
 
@@ -284,11 +284,11 @@
 
 @Hitret id=34736
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34737
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34738
 
@@ -298,15 +298,15 @@
 @BlackOut time=1000
 @Cg file=B37a   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34739
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34740
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34741
 
@@ -314,10 +314,10 @@
 @Cg file=B34a center=800,300
 @Char file=CE02_03M 
 @Update
-@action id=�J���� action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=�J����
+@action id=カメラ action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=カメラ
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34742
 
@@ -329,7 +329,7 @@
 
 @Hitret id=34744
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34745
 
@@ -352,11 +352,11 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34747
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34748
 
@@ -383,11 +383,11 @@
 
 @Hitret id=34753
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34754
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34755
 
@@ -414,11 +414,11 @@
 
 @Hitret id=34760
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34761
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34762
 
@@ -429,7 +429,7 @@
 
 @Hitret id=34763
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34764
 
@@ -463,7 +463,7 @@
 
 @Hitret id=34770
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34771
 
@@ -478,15 +478,15 @@
 
 @Hitret id=34773
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34774
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34775
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34776
 
@@ -505,11 +505,11 @@
 
 @Hitret id=34779
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34780
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34781
 
@@ -529,7 +529,7 @@
 
 @Hitret id=34785
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34786
 
@@ -559,15 +559,15 @@
 
 @Hitret id=34791
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34792
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34793
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34794
 
@@ -583,11 +583,11 @@
 
 @Hitret id=34797
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34798
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34799
 
@@ -597,11 +597,11 @@
 @BlackOut time=1000
 @StopBgm
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34800
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=34801
 

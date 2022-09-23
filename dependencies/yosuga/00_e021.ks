@@ -15,7 +15,7 @@
 
 @Hitret id=36978
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36979
 
@@ -24,7 +24,7 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36980
 
@@ -47,7 +47,7 @@
 
 @Hitret id=36984
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36985
 
@@ -55,11 +55,11 @@
 
 @Hitret id=36986
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36987
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36988
 
@@ -84,11 +84,11 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36992
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36993
 
@@ -104,11 +104,11 @@
 
 @Hitret id=36996
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36997
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36998
 
@@ -117,38 +117,38 @@
 
 @Cg file=B03a   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=36999
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37001
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37002
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37003
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37004
 
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37005
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37006
 
@@ -157,7 +157,7 @@
 
 @PlaySe file=SE156
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37007
 
@@ -168,7 +168,7 @@
 
 @StopBgm fade=0
 
-@Talk name=Motoka�@Monologue voice=MT051003
+@Talk name=Motoka　Monologue voice=MT051003
 
 @Hitret id=37009
 
@@ -176,15 +176,15 @@
 
 @Hitret id=37010
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37011
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37012
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37013
 
@@ -192,7 +192,7 @@
 
 @Hitret id=37014
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37015
 
@@ -215,11 +215,11 @@
 
 @Hitret id=37017
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37018
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37019
 
@@ -249,15 +249,15 @@
 
 @Hitret id=37024
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37025
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37026
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37027
 
@@ -285,11 +285,11 @@
 
 @Char file=CE02_01M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37031
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37032
 
@@ -312,23 +312,23 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37037
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37038
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37039
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37040
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37041
 
@@ -352,11 +352,11 @@
 
 @Hitret id=37044
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37045
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37046
 
@@ -379,11 +379,11 @@
 
 @Hitret id=37050
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37051
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37052
 
@@ -391,7 +391,7 @@
 
 @Hitret id=37053
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37054
 
@@ -462,7 +462,7 @@
 
 @Hitret id=37066
 
-@Talk name=Motoka's�@Mother voice=NP010001
+@Talk name=Motoka's　Mother voice=NP010001
 
 @Hitret id=37067
 
@@ -470,7 +470,7 @@
 
 @Hitret id=37068
 
-@Talk name=Motoka's�@Mother voice=NP010002
+@Talk name=Motoka's　Mother voice=NP010002
 
 @Hitret id=37069
 
@@ -478,15 +478,15 @@
 
 @Hitret id=37070
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37071
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37072
 
-@Talk name=Motoka's�@Mother voice=NP010003
+@Talk name=Motoka's　Mother voice=NP010003
 
 @Hitret id=37073
 
@@ -494,7 +494,7 @@
 
 @Hitret id=37074
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37075
 
@@ -503,26 +503,26 @@
 @Cg file=B11c   
 @Char file=CE02_05M 
 @Update
-@action id=���� action=ActionAdvHop width=35 height=2 cycle=150 count=2
-@WaitAction id=����
+@action id=初佳 action=ActionAdvHop width=35 height=2 cycle=150 count=2
+@WaitAction id=初佳
 
 @Talk name=Motoka voice=MT051028
 
 @Hitret id=37076
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37077
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37078
 
-@Talk name=Motoka's�@Mother voice=NP010004
+@Talk name=Motoka's　Mother voice=NP010004
 
 @Hitret id=37079
 
-@Talk name=Motoka's�@Mother voice=NP010005
+@Talk name=Motoka's　Mother voice=NP010005
 
 @Hitret id=37080
 
@@ -541,7 +541,7 @@
 
 @Hitret id=37083
 
-@Talk name=Motoka's�@Mother voice=NP010006
+@Talk name=Motoka's　Mother voice=NP010006
 
 @Hitret id=37084
 
@@ -552,15 +552,15 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37086
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37087
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37088
 
@@ -575,15 +575,15 @@
 
 @Hitret id=37090
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37091
 
 
 @Char file=CE02_05M 
 @Update
-@action id=���� action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=����
+@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=初佳
 
 @Talk name=Motoka voice=MT051036
 
@@ -592,7 +592,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37093
 
@@ -604,11 +604,11 @@
 
 @Hitret id=37095
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37096
 
-@Talk name=Motoka's�@Mother voice=NP010007
+@Talk name=Motoka's　Mother voice=NP010007
 
 @Hitret id=37097
 
@@ -619,7 +619,7 @@
 
 @Hitret id=37098
 
-@Talk name=Motoka's�@Mother voice=NP010008
+@Talk name=Motoka's　Mother voice=NP010008
 
 @Hitret id=37099
 
@@ -627,7 +627,7 @@
 
 @Hitret id=37100
 
-@Talk name=Motoka's�@Mother voice=NP010009
+@Talk name=Motoka's　Mother voice=NP010009
 
 @Hitret id=37101
 
@@ -635,7 +635,7 @@
 
 @Hitret id=37102
 
-@Talk name=Motoka's�@Mother voice=NP010010
+@Talk name=Motoka's　Mother voice=NP010010
 
 @Hitret id=37103
 
@@ -643,32 +643,32 @@
 
 @Hitret id=37104
 
-@Talk name=Motoka's�@Mother voice=NP010011
+@Talk name=Motoka's　Mother voice=NP010011
 
 @Hitret id=37105
 
 
 @Update
-@action id=���� action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=����
+@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=初佳
 
 @Talk name=Motoka voice=MT051046
 
 @Hitret id=37106
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37107
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37108
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37109
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37110
 
@@ -676,7 +676,7 @@
 
 @Hitret id=37111
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37112
 
@@ -687,11 +687,11 @@
 
 @Hitret id=37113
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37114
 
-@Talk name=Motoka's�@Mother voice=NP010012
+@Talk name=Motoka's　Mother voice=NP010012
 
 @Hitret id=37115
 
@@ -702,7 +702,7 @@
 
 @Hitret id=37116
 
-@Talk name=Motoka's�@Mother voice=NP010013
+@Talk name=Motoka's　Mother voice=NP010013
 
 @Hitret id=37117
 
@@ -710,19 +710,19 @@
 
 @Hitret id=37118
 
-@Talk name=Motoka's�@Mother voice=NP010014
+@Talk name=Motoka's　Mother voice=NP010014
 
 @Hitret id=37119
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37120
 
-@Talk name=Motoka's�@Mother voice=NP010015
+@Talk name=Motoka's　Mother voice=NP010015
 
 @Hitret id=37121
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37122
 
@@ -740,14 +740,14 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37125
 
 
 @PlaySe file=SE153
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37126
 
@@ -767,7 +767,7 @@
 
 @Hitret id=37129
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37130
 
@@ -786,11 +786,11 @@
 
 @Char file=CE02_03S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37134
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37135
 
@@ -821,14 +821,14 @@
 
 @Hitret id=37141
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37142
 
 
 @Char file=CE02_03S 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37143
 
@@ -836,7 +836,7 @@
 
 @Hitret id=37144
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37145
 
@@ -859,11 +859,11 @@
 
 @Hitret id=37149
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37150
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37151
 
@@ -885,7 +885,7 @@
 
 @PlaySe file=SE156
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37155
 
@@ -900,15 +900,15 @@
 
 @Hitret id=37157
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37158
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37159
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37160
 
@@ -917,7 +917,7 @@
 @Hide
 @BlackOut time=1000
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37161
 
@@ -927,23 +927,23 @@
 @Char file=CA02_09M 
 @Char file=CE02_03M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37162
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37163
 
-@Talk name=Motoka's�@Mother voice=NP010016
+@Talk name=Motoka's　Mother voice=NP010016
 
 @Hitret id=37164
 
-@Talk name=Motoka's�@Mother voice=NP010017
+@Talk name=Motoka's　Mother voice=NP010017
 
 @Hitret id=37165
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37166
 
@@ -951,11 +951,11 @@
 
 @Hitret id=37167
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37168
 
-@Talk name=Motoka's�@Mother voice=NP010018
+@Talk name=Motoka's　Mother voice=NP010018
 
 @Hitret id=37169
 
@@ -966,7 +966,7 @@
 
 @Hitret id=37170
 
-@Talk name=Motoka's�@Mother voice=NP010019
+@Talk name=Motoka's　Mother voice=NP010019
 
 @Hitret id=37171
 
@@ -977,15 +977,15 @@
 
 @Hitret id=37172
 
-@Talk name=Motoka's�@Mother voice=NP010020
+@Talk name=Motoka's　Mother voice=NP010020
 
 @Hitret id=37173
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37174
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37175
 
@@ -1003,14 +1003,14 @@
 
 @Hitret id=37177
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37178
 
 
 @Char file=CE02_09M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37179
 
@@ -1018,11 +1018,11 @@
 
 @Hitret id=37180
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37181
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37182
 
@@ -1044,7 +1044,7 @@
 
 @Hitret id=37185
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37186
 
@@ -1074,15 +1074,15 @@
 
 @Hitret id=37191
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37192
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37193
 
-@Talk name=Motoka's�@Mother voice=NP010021
+@Talk name=Motoka's　Mother voice=NP010021
 
 @Hitret id=37194
 
@@ -1093,7 +1093,7 @@
 
 @Hitret id=37195
 
-@Talk name=Motoka's�@Mother voice=NP010022
+@Talk name=Motoka's　Mother voice=NP010022
 
 @Hitret id=37196
 
@@ -1104,15 +1104,15 @@
 
 @Char file=CA02_13M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37198
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37199
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37200
 
@@ -1120,11 +1120,11 @@
 
 @Hitret id=37201
 
-@Talk name=Motoka's�@Mother voice=NP010023
+@Talk name=Motoka's　Mother voice=NP010023
 
 @Hitret id=37202
 
-@Talk name=Motoka's�@Mother voice=NP010024
+@Talk name=Motoka's　Mother voice=NP010024
 
 @Hitret id=37203
 
@@ -1135,11 +1135,11 @@
 
 @Hitret id=37204
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37205
 
-@Talk name=Motoka's�@Mother voice=NP010025
+@Talk name=Motoka's　Mother voice=NP010025
 
 @Hitret id=37206
 
@@ -1150,26 +1150,26 @@
 
 @Hitret id=37207
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37208
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37209
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37210
 
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37211
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37212
 
@@ -1211,10 +1211,10 @@
 @Hitret id=37218
 
 
-@ClearChar id=�u
+@ClearChar id=穹
 @Char file=CE02_03M 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37219
 
@@ -1233,7 +1233,7 @@
 
 @Hitret id=37222
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37223
 
@@ -1261,7 +1261,7 @@
 
 @Hitret id=37226
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37227
 
@@ -1277,11 +1277,11 @@
 
 @Hitret id=37230
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37231
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=37232
 

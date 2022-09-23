@@ -20,11 +20,11 @@
 
 @PlayBgm file=BGM03
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18303
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18304
 
@@ -160,8 +160,8 @@
 
 @Char file=CD01_13M 
 @Update
-@action id=ˆê—t action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA020013
 
@@ -170,7 +170,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18330
 
@@ -219,10 +219,10 @@
 @Hitret id=18338
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CA01_01L 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18339
 
@@ -279,7 +279,7 @@
 
 @Hitret id=18349
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18350
 
@@ -302,7 +302,7 @@
 @Hitret id=18353
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 
 @Char file=CF01_01M 
 
@@ -426,8 +426,8 @@
 @Hitret id=18373
 
 
-@ClearChar id=‰l
-@ClearChar id=ˆê—t
+@ClearChar id=ç‘›
+@ClearChar id=ä¸€è‘‰
 
 @Talk name=Ryouhei voice=RH020037
 
@@ -457,7 +457,7 @@
 @Hitret id=18377
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18378
 
@@ -471,13 +471,13 @@
 @Hitret id=18379
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18380
 
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18381
 
@@ -508,7 +508,7 @@
 
 @Hitret id=18386
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18387
 
@@ -597,26 +597,26 @@
 
 @Hitret id=18402
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18403
 
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18404
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18405
 
 
 @StopBgm
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=18406
 

@@ -6,23 +6,23 @@
 @Cg file=B34b center=800,300
 @PlayEnvSe file=SE013 fade=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6763
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6764
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6765
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6766
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6767
 
@@ -33,7 +33,7 @@
 
 @Char file=CG04_02M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6769
 
@@ -60,7 +60,7 @@
 
 @Hitret id=6774
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6775
 
@@ -75,11 +75,11 @@
 
 @ClearChar
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6777
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6778
 
@@ -102,7 +102,7 @@
 
 @Hitret id=6782
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6783
 
@@ -116,7 +116,7 @@
 @PlaySe file=SE258
 @Char file=CG04_10M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6785
 
@@ -140,11 +140,11 @@
 
 @Char file=CE02_04M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6789
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6790
 
@@ -161,8 +161,8 @@
 
 
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT010095
 
@@ -173,7 +173,7 @@
 @Hitret id=6794
 
 
-@Leave id=‚â‚Ğ‚ë mx=-240 my=0 fade=1 time=500 accel=1
+@Leave id=ã‚„ã²ã‚ mx=-240 my=0 fade=1 time=500 accel=1
 
 @Talk name=Motoka voice=MT010096
 
@@ -188,7 +188,7 @@
 @Hitret id=6796
 
 
-@Leave id=‰‰À mx=-400 my=0 fade=1 time=500 accel=3
+@Leave id=åˆä½³ mx=-400 my=0 fade=1 time=500 accel=3
 
 @Talk name=Haruka
 
@@ -198,15 +198,15 @@
 
 @Hitret id=6798
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6799
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6800
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=6801
 

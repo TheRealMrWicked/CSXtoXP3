@@ -36,7 +36,7 @@
 
 @Hitret id=20161
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20162
 
@@ -51,11 +51,11 @@
 
 @Hitret id=20164
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20165
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20166
 
@@ -66,11 +66,11 @@
 
 @Hitret id=20167
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20168
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20169
 
@@ -144,22 +144,22 @@
 @Hitret id=20181
 
 
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
 @Hitret id=20182
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20183
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20184
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20185
 
@@ -181,7 +181,7 @@
 
 @Hitret id=20188
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20189
 
@@ -214,7 +214,7 @@
 
 @Hitret id=20194
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20195
 
@@ -250,7 +250,7 @@
 
 @PlaySe file=SE259
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20200
 
@@ -258,7 +258,7 @@
 @StopSe
 @PlaySe file=SE265
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20201
 
@@ -275,15 +275,15 @@
 
 @Hitret id=20203
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20204
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20205
 
-@Talk name=Kazuha's@Mother voice=NP050001
+@Talk name=Kazuha'sã€€Mother voice=NP050001
 
 @Hitret id=20206
 
@@ -291,18 +291,18 @@
 
 @Hitret id=20207
 
-@Talk name=Kazuha's@Mother voice=NP050002
+@Talk name=Kazuha'sã€€Mother voice=NP050002
 
 @Hitret id=20208
 
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20209
 
-@Talk name=Kazuha's@Mother voice=NP050003
+@Talk name=Kazuha'sã€€Mother voice=NP050003
 
 @Hitret id=20210
 
@@ -310,11 +310,11 @@
 
 @Hitret id=20211
 
-@Talk name=Kazuha's@Mother voice=NP050004
+@Talk name=Kazuha'sã€€Mother voice=NP050004
 
 @Hitret id=20212
 
-@Talk name=Kazuha's@Mother voice=NP050005
+@Talk name=Kazuha'sã€€Mother voice=NP050005
 
 @Hitret id=20213
 
@@ -322,7 +322,7 @@
 
 @Hitret id=20214
 
-@Talk name=Kazuha's@Mother voice=NP050006
+@Talk name=Kazuha'sã€€Mother voice=NP050006
 
 @Hitret id=20215
 
@@ -330,15 +330,15 @@
 
 @Hitret id=20216
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20217
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20218
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20219
 
@@ -349,7 +349,7 @@
 
 @Hitret id=20220
 
-@Talk name=Kazuha's@Mother voice=NP050007
+@Talk name=Kazuha'sã€€Mother voice=NP050007
 
 @Hitret id=20221
 
@@ -360,7 +360,7 @@
 
 @Hitret id=20222
 
-@Talk name=Kazuha's@Mother voice=NP050008
+@Talk name=Kazuha'sã€€Mother voice=NP050008
 
 @Hitret id=20223
 
@@ -368,13 +368,13 @@
 @ClearChar 
 @PlaySe file=SE263
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20224
 
 
 
-@Talk name=Kazuha's@Mother voice=NP050009
+@Talk name=Kazuha'sã€€Mother voice=NP050009
 
 @Hitret id=20225
 
@@ -382,7 +382,7 @@
 @StopBgm
 @PlaySe file=SE260
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20226
 
@@ -459,7 +459,7 @@
 
 @Hitret id=20238
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20239
 
@@ -480,19 +480,19 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20242
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20243
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20244
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20245
 
@@ -530,7 +530,7 @@
 @Update transition=universal rule=WIP_LR time=500
 @WaitUpdate
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20251
 
@@ -572,9 +572,9 @@
 @Hitret id=20258
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20259
 
@@ -592,35 +592,35 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20262
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20263
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20264
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20265
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20266
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20267
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20268
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=20269
 

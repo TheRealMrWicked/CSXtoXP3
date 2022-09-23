@@ -10,7 +10,7 @@
 
 @Hitret id=10805
 
-@Talk name=心の声
+@Talk name=蠢�縺ｮ螢ｰ
 
 @Hitret id=10806
 
@@ -58,8 +58,8 @@
 
 
 @Update
-@action id=亮平 action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=亮平
+@action id=莠ｮ蟷ｳ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=莠ｮ蟷ｳ
 
 @Talk name=Ryouhei voice=RH020032
 
@@ -112,15 +112,15 @@
 
 @ClearChar
 
-@Talk name=Kozue　Monologue voice=KO020401
+@Talk name=Kozue縲Monologue voice=KO020401
 
 @Hitret id=10821
 
-@Talk name=Kozue　Monologue voice=KO020402
+@Talk name=Kozue縲Monologue voice=KO020402
 
 @Hitret id=10822
 
-@Talk name=Kozue　Monologue voice=KO020403
+@Talk name=Kozue縲Monologue voice=KO020403
 
 @Hitret id=10823
 
@@ -128,19 +128,19 @@
 
 @Hitret id=10824
 
-@Talk name=Kozue　Monologue voice=KO020405
+@Talk name=Kozue縲Monologue voice=KO020405
 
 @Hitret id=10825
 
-@Talk name=Kozue　Monologue voice=KO020406
+@Talk name=Kozue縲Monologue voice=KO020406
 
 @Hitret id=10826
 
-@Talk name=Kozue　Monologue voice=KO020407
+@Talk name=Kozue縲Monologue voice=KO020407
 
 @Hitret id=10827
 
-@Talk name=Kozue　Monologue voice=KO020408
+@Talk name=Kozue縲Monologue voice=KO020408
 
 @Hitret id=10828
 
@@ -149,7 +149,7 @@
 @Hide
 @WhiteOut time=1000
 @Cg file=B34b center=800,300
-@回想イメージ表示
+@蝗樊Φ繧､繝｡繝ｼ繧ｸ陦ｨ遉ｺ
 @Char file=CH01_07M
 
 @Talk name=Haruka
@@ -169,23 +169,23 @@
 
 @Hitret id=10831
 
-@Talk name=Kozue　Monologue voice=KO020411
+@Talk name=Kozue縲Monologue voice=KO020411
 
 @Hitret id=10832
 
-@Talk name=Kozue　Monologue voice=KO020412
+@Talk name=Kozue縲Monologue voice=KO020412
 
 @Hitret id=10833
 
-@Talk name=Kozue　Monologue voice=KO020413
+@Talk name=Kozue縲Monologue voice=KO020413
 
 @Hitret id=10834
 
-@Talk name=Kozue　Monologue voice=KO020414
+@Talk name=Kozue縲Monologue voice=KO020414
 
 @Hitret id=10835
 
-@Talk name=Kozue　Monologue voice=KO020415
+@Talk name=Kozue縲Monologue voice=KO020415
 
 @Hitret id=10836
 
@@ -194,11 +194,11 @@
 
 @Hitret id=10837
 
-@Talk name=Kozue　Monologue voice=KO020417
+@Talk name=Kozue縲Monologue voice=KO020417
 
 @Hitret id=10838
 
-@Talk name=Kozue　Monologue voice=KO020418
+@Talk name=Kozue縲Monologue voice=KO020418
 
 @Hitret id=10839
 
@@ -206,14 +206,14 @@
 
 @Hitret id=10840
 
-@Talk name=Kozue　Monologue voice=KO020420
+@Talk name=Kozue縲Monologue voice=KO020420
 
 @Hitret id=10841
 
 
 @StopBgm
 
-@Talk name=Kozue　Monologue voice=KO020421
+@Talk name=Kozue縲Monologue voice=KO020421
 
 @Hitret id=10842
 

@@ -50,7 +50,7 @@
 
 @Hitret id=13481
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13482
 
@@ -119,8 +119,8 @@
 @Flash color=WHITE enter=0 leave=100
 @Char file=CC01_09M 
 @Update
-@Move id=‰l my=25 cycle=500
-@WaitAction id=‰l
+@Move id=ç‘› my=25 cycle=500
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK030097
 
@@ -136,8 +136,8 @@
 
 @ClearChar 
 @Update
-@Move id=‰l y=0 cycle=1000
-@WaitAction id=‰l
+@Move id=ç‘› y=0 cycle=1000
+@WaitAction id=ç‘›
 @Char file=CF01_01M 
 
 @Talk name=Ryouhei voice=RH030304
@@ -171,7 +171,7 @@
 @Hitret id=13499
 
 
-@ClearChar id=—º•½
+@ClearChar id=äº®å¹³
 @Char file=CC01_02M 
 
 @Talk name=Akira voice=AK030098
@@ -264,8 +264,8 @@
 @ClearChar 
 @Char file=CD01_12L 
 @Update
-@action id=ˆê—t action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA030025
 
@@ -284,8 +284,8 @@
 @ClearChar 
 @PlaySe file=se003
 @Flash color=RED enter=0 leave=500
-@action id=ƒJƒƒ‰ action=ActionWave width=0, height=32, count=4 cycle=150 
-@WaitAction id=ƒJƒƒ‰
+@action id=ã‚«ãƒ¡ãƒ© action=ActionWave width=0, height=32, count=4 cycle=150 
+@WaitAction id=ã‚«ãƒ¡ãƒ©
 
 @Talk name=Haruka
 
@@ -340,8 +340,8 @@
 
 @Char file=CD01_13M 
 @Update
-@action id=ˆê—t action=ActionAdvHop width=35 height=2 cycle=150 count=2
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop width=35 height=2 cycle=150 count=2
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA030028
 
@@ -355,11 +355,11 @@
 
 @Hitret id=13526
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13527
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13528
 
@@ -398,27 +398,27 @@
 
 @Hitret id=13534
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13535
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13536
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13537
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13538
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13539
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=13540
 

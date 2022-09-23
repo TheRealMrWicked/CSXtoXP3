@@ -45,7 +45,7 @@
 @Hitret id=21254
 
 
-@ClearChar id=����
+@ClearChar id=初佳
 @Char file=CF02_05M x=0   
 
 @Talk name=Ryouhei voice=RH020275
@@ -56,8 +56,8 @@
 @ClearChar 
 @Char file=CD02_05M 
 @Update
-@action id=��t action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=��t
+@action id=一葉 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=一葉
 
 @Talk name=Kazuha voice=KA020236
 
@@ -102,7 +102,7 @@
 
 @ClearChar 
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21262
 
@@ -161,8 +161,8 @@
 @ClearChar 
 @Char file=CE02_04L 
 @Update
-@action id=���� action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=����
+@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=初佳
 
 @Talk name=Motoka voice=MT020046
 
@@ -216,46 +216,46 @@
 
 @Hitret id=21277
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21278
 
 
 @BlackOut
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21279
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21280
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21281
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21282
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21283
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21284
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21285
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21286
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=21287
 

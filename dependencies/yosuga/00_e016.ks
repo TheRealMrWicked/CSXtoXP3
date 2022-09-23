@@ -20,11 +20,11 @@
 
 @Hitret id=36111
 
-@Talk name=Motoka　Monologue voice=MT050683
+@Talk name=Motoka縲Monologue voice=MT050683
 
 @Hitret id=36112
 
-@Talk name=Motoka　Monologue voice=MT050684
+@Talk name=Motoka縲Monologue voice=MT050684
 
 @Hitret id=36113
 
@@ -39,7 +39,7 @@
 
 @Hitret id=36115
 
-@Talk name=Motoka　Monologue voice=MT050686
+@Talk name=Motoka縲Monologue voice=MT050686
 
 @Hitret id=36116
 
@@ -90,15 +90,15 @@
 
 @Hitret id=36127
 
-@Talk name=Motoka　Monologue voice=MT050693
+@Talk name=Motoka縲Monologue voice=MT050693
 
 @Hitret id=36128
 
-@Talk name=Motoka　Monologue voice=MT050694
+@Talk name=Motoka縲Monologue voice=MT050694
 
 @Hitret id=36129
 
-@Talk name=Motoka　Monologue voice=MT050695
+@Talk name=Motoka縲Monologue voice=MT050695
 
 @Hitret id=36130
 
@@ -110,18 +110,18 @@
 @Hitret id=36131
 
 
-@action id=カメラ action=ActionWave width=0, height=32, count=2 cycle=150 
-@WaitAction id=カメラ
+@action id=繧ｫ繝｡繝ｩ action=ActionWave width=0, height=32, count=2 cycle=150 
+@WaitAction id=繧ｫ繝｡繝ｩ
 
-@Talk name=Motoka　Monologue voice=MT050696
+@Talk name=Motoka縲Monologue voice=MT050696
 
 @Hitret id=36132
 
-@Talk name=Motoka　Monologue voice=MT050697
+@Talk name=Motoka縲Monologue voice=MT050697
 
 @Hitret id=36133
 
-@Talk name=Motoka　Monologue voice=MT050698
+@Talk name=Motoka縲Monologue voice=MT050698
 
 @Hitret id=36134
 
@@ -138,30 +138,30 @@
 @Hitret id=36137
 
 
-@action id=カメラ action=ActionWave width=32, height=0, count=2 cycle=150 
-@WaitAction id=カメラ
+@action id=繧ｫ繝｡繝ｩ action=ActionWave width=32, height=0, count=2 cycle=150 
+@WaitAction id=繧ｫ繝｡繝ｩ
 
 @Talk name=Motoka voice=MT050700
 
 @Hitret id=36138
 
-@Talk name=Motoka　Monologue voice=MT050701
+@Talk name=Motoka縲Monologue voice=MT050701
 
 @Hitret id=36139
 
-@Talk name=Motoka　Monologue voice=MT050702
+@Talk name=Motoka縲Monologue voice=MT050702
 
 @Hitret id=36140
 
-@Talk name=Motoka　Monologue voice=MT050703
+@Talk name=Motoka縲Monologue voice=MT050703
 
 @Hitret id=36141
 
-@Talk name=Motoka　Monologue voice=MT050704
+@Talk name=Motoka縲Monologue voice=MT050704
 
 @Hitret id=36142
 
-@Talk name=Motoka　Monologue voice=MT050705
+@Talk name=Motoka縲Monologue voice=MT050705
 
 @Hitret id=36143
 
@@ -176,27 +176,27 @@
 
 @Hitret id=36145
 
-@Talk name=Motoka　Monologue voice=MT050707
+@Talk name=Motoka縲Monologue voice=MT050707
 
 @Hitret id=36146
 
-@Talk name=Motoka　Monologue voice=MT050708
+@Talk name=Motoka縲Monologue voice=MT050708
 
 @Hitret id=36147
 
-@Talk name=Motoka　Monologue voice=MT050709
+@Talk name=Motoka縲Monologue voice=MT050709
 
 @Hitret id=36148
 
-@Talk name=Motoka　Monologue voice=MT050710
+@Talk name=Motoka縲Monologue voice=MT050710
 
 @Hitret id=36149
 
-@Talk name=Motoka　Monologue voice=MT050711
+@Talk name=Motoka縲Monologue voice=MT050711
 
 @Hitret id=36150
 
-@Talk name=Motoka　Monologue voice=MT050712
+@Talk name=Motoka縲Monologue voice=MT050712
 
 @Hitret id=36151
 
@@ -223,7 +223,7 @@
 @Hitret id=36155
 
 
-@ClearChar id=一葉
+@ClearChar id=荳闡�
 @Char file=CJ01_01M 
 
 @Talk name=Yamanashi voice=YM050015
@@ -273,11 +273,11 @@
 
 @ClearChar 
 
-@Talk name=Motoka　Monologue voice=MT050718
+@Talk name=Motoka縲Monologue voice=MT050718
 
 @Hitret id=36165
 
-@Talk name=Motoka　Monologue voice=MT050719
+@Talk name=Motoka縲Monologue voice=MT050719
 
 @Hitret id=36166
 
@@ -291,38 +291,38 @@
 @Char file=CE01_09M 
 @PlayBgm file=BGM07
 
-@Talk name=Motoka　Monologue voice=MT050720
+@Talk name=Motoka縲Monologue voice=MT050720
 
 @Hitret id=36167
 
-@Talk name=Motoka　Monologue voice=MT050721
+@Talk name=Motoka縲Monologue voice=MT050721
 
 @Hitret id=36168
 
-@Talk name=Motoka　Monologue voice=MT050722
+@Talk name=Motoka縲Monologue voice=MT050722
 
 @Hitret id=36169
 
-@Talk name=Motoka　Monologue voice=MT050723
+@Talk name=Motoka縲Monologue voice=MT050723
 
 @Hitret id=36170
 
-@Talk name=Motoka　Monologue voice=MT050724
+@Talk name=Motoka縲Monologue voice=MT050724
 
 @Hitret id=36171
 
-@Talk name=Motoka　Monologue voice=MT050725
+@Talk name=Motoka縲Monologue voice=MT050725
 
 @Hitret id=36172
 
 
 @Char file=CE01_10M 
 
-@Talk name=Motoka　Monologue voice=MT050726
+@Talk name=Motoka縲Monologue voice=MT050726
 
 @Hitret id=36173
 
-@Talk name=Motoka　Monologue voice=MT050727
+@Talk name=Motoka縲Monologue voice=MT050727
 
 @Hitret id=36174
 
@@ -337,8 +337,8 @@
 
 @Char file=CE01_06M 
 @Update
-@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=初佳
+@action id=蛻昜ｽｳ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050729
 
@@ -355,43 +355,43 @@
 
 @Hitret id=36179
 
-@Talk name=Motoka　Monologue voice=MT050731
+@Talk name=Motoka縲Monologue voice=MT050731
 
 @Hitret id=36180
 
-@Talk name=Motoka　Monologue voice=MT050732
+@Talk name=Motoka縲Monologue voice=MT050732
 
 @Hitret id=36181
 
-@Talk name=Motoka　Monologue voice=MT050733
+@Talk name=Motoka縲Monologue voice=MT050733
 
 @Hitret id=36182
 
-@Talk name=Motoka　Monologue voice=MT050734
+@Talk name=Motoka縲Monologue voice=MT050734
 
 @Hitret id=36183
 
-@Talk name=Motoka　Monologue voice=MT050735
+@Talk name=Motoka縲Monologue voice=MT050735
 
 @Hitret id=36184
 
-@Talk name=Motoka　Monologue voice=MT050736
+@Talk name=Motoka縲Monologue voice=MT050736
 
 @Hitret id=36185
 
-@Talk name=Motoka　Monologue voice=MT050737
+@Talk name=Motoka縲Monologue voice=MT050737
 
 @Hitret id=36186
 
-@Talk name=Motoka　Monologue voice=MT050738
+@Talk name=Motoka縲Monologue voice=MT050738
 
 @Hitret id=36187
 
-@Talk name=Motoka　Monologue voice=MT050739
+@Talk name=Motoka縲Monologue voice=MT050739
 
 @Hitret id=36188
 
-@Talk name=Motoka　Monologue voice=MT050740
+@Talk name=Motoka縲Monologue voice=MT050740
 
 @Hitret id=36189
 
@@ -417,8 +417,8 @@
 
 @Char file=CE01_07M 
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050743
 
@@ -428,7 +428,7 @@
 
 @Hitret id=36195
 
-@Talk name=Motoka　Monologue voice=MT050744
+@Talk name=Motoka縲Monologue voice=MT050744
 
 @Hitret id=36196
 
@@ -461,14 +461,14 @@
 
 @Char file=CE01_05M 
 @Update
-@Move id=初佳 y=0 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
-@Talk name=Motoka　Monologue voice=MT050749
+@Talk name=Motoka縲Monologue voice=MT050749
 
 @Hitret id=36203
 
-@Talk name=Motoka　Monologue voice=MT050750
+@Talk name=Motoka縲Monologue voice=MT050750
 
 @Hitret id=36204
 
@@ -592,14 +592,14 @@
 
 @Char file=CE01_05M 
 @Update
-@action id=初佳 action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=初佳
+@action id=蛻昜ｽｳ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050763
 
 @Hitret id=36229
 
-@Talk name=Motoka　Monologue voice=MT050764
+@Talk name=Motoka縲Monologue voice=MT050764
 
 @Hitret id=36230
 
@@ -609,8 +609,8 @@
 
 
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Haruka
 
@@ -619,8 +619,8 @@
 
 @Char file=CE01_12M 
 @Update
-@Move id=初佳 y=0 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050766
 
@@ -628,8 +628,8 @@
 
 
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Haruka
 
@@ -641,12 +641,12 @@
 
 
 @Update
-@Move id=初佳 y=0 cycle=0
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=0
+@WaitAction id=蛻昜ｽｳ
 @Update
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Haruka
 
@@ -658,12 +658,12 @@
 
 
 @Update
-@Move id=初佳 y=0 cycle=0
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=0
+@WaitAction id=蛻昜ｽｳ
 @Update
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Haruka
 
@@ -672,8 +672,8 @@
 
 @Char file=CE01_01M 
 @Update
-@Move id=初佳 y=0 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050769
 
@@ -725,7 +725,7 @@
 
 @Hitret id=36249
 
-@Talk name=Motoka　Monologue voice=MT050775
+@Talk name=Motoka縲Monologue voice=MT050775
 
 @Hitret id=36250
 
@@ -759,11 +759,11 @@
 
 @Hitret id=36256
 
-@Talk name=Motoka　Monologue voice=MT050778
+@Talk name=Motoka縲Monologue voice=MT050778
 
 @Hitret id=36257
 
-@Talk name=Motoka　Monologue voice=MT050779
+@Talk name=Motoka縲Monologue voice=MT050779
 
 @Hitret id=36258
 
@@ -778,7 +778,7 @@
 
 @Char file=CE01_09M 
 
-@Talk name=Motoka　Monologue voice=MT050781
+@Talk name=Motoka縲Monologue voice=MT050781
 
 @Hitret id=36261
 
@@ -800,7 +800,7 @@
 
 @Char file=CE01_05M 
 
-@Talk name=Motoka　Monologue voice=MT050785
+@Talk name=Motoka縲Monologue voice=MT050785
 
 @Hitret id=36265
 
@@ -808,7 +808,7 @@
 
 @Hitret id=36266
 
-@Talk name=Motoka　Monologue voice=MT050786
+@Talk name=Motoka縲Monologue voice=MT050786
 
 @Hitret id=36267
 
@@ -825,10 +825,10 @@
 
 
 @Update
-@action id=初佳 action=ActionAdvHop width=35 height=2 cycle=150 count=2
-@WaitAction id=初佳
+@action id=蛻昜ｽｳ action=ActionAdvHop width=35 height=2 cycle=150 count=2
+@WaitAction id=蛻昜ｽｳ
 
-@Talk name=Motoka　Monologue voice=MT050788
+@Talk name=Motoka縲Monologue voice=MT050788
 
 @Hitret id=36270
 
@@ -846,8 +846,8 @@
 
 
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Haruka
 
@@ -855,8 +855,8 @@
 
 
 @Update
-@Move id=初佳 my=100 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ my=100 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050791
 
@@ -868,8 +868,8 @@
 
 
 @Update
-@Move id=初佳 y=0 cycle=1000
-@WaitAction id=初佳
+@Move id=蛻昜ｽｳ y=0 cycle=1000
+@WaitAction id=蛻昜ｽｳ
 
 @Talk name=Motoka voice=MT050792
 
@@ -879,7 +879,7 @@
 
 @Hitret id=36278
 
-@Talk name=Motoka　Monologue voice=MT050793
+@Talk name=Motoka縲Monologue voice=MT050793
 
 @Hitret id=36279
 
@@ -889,11 +889,11 @@
 @Hide
 @BlackOut time=1000
 
-@Talk name=Motoka　Monologue voice=MT050794
+@Talk name=Motoka縲Monologue voice=MT050794
 
 @Hitret id=36280
 
-@Talk name=Motoka　Monologue voice=MT050795
+@Talk name=Motoka縲Monologue voice=MT050795
 
 @Hitret id=36281
 

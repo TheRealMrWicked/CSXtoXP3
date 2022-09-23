@@ -121,49 +121,49 @@
 @Cg file=B33a
 @Char file=CG04_01M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8019
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8020
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8021
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8022
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8023
 
 
 @Char file=CG04_11M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8024
 
 
 @Char file=CG04_01M
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8025
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8026
 
 
 @Char file=CG04_10M
 @Update
-@action id=‚â‚Ğ‚ë action=ActionAdvJump cycle=300 count=1 height=5
-@WaitAction id=‚â‚Ğ‚ë
+@action id=ã‚„ã²ã‚ action=ActionAdvJump cycle=300 count=1 height=5
+@WaitAction id=ã‚„ã²ã‚
 
 @Talk name=Yahiro voice=YH010764
 
@@ -171,27 +171,27 @@
 
 
 @PlayBgm file=BGM13
-@Leave id=‚â‚Ğ‚ë mx=-500 my=0 fade=1 time=500 accel=1
+@Leave id=ã‚„ã²ã‚ mx=-500 my=0 fade=1 time=500 accel=1
 
 @Talk name=Akira voice=AK010061
 
 @Hitret id=8028
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8029
 
 
 @Char file=CC06_14S x=200
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8030
 
 
 @Char file=CC06_14S x=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8031
 
@@ -199,18 +199,18 @@
 @Char file=CC06_14S x=-200
 @PlaySe file=SE268
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8032
 
 
 @ClearChar
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8033
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8034
 
@@ -229,7 +229,7 @@
 
 @Hitret id=8037
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8038
 
@@ -247,7 +247,7 @@
 
 @PlaySe file=SE268
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8041
 
@@ -259,7 +259,7 @@
 
 @Hitret id=8043
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8044
 
@@ -267,7 +267,7 @@
 
 @Hitret id=8045
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8046
 
@@ -279,22 +279,22 @@
 @Hitret id=8047
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8048
 
 
 @Char file=CG04_12M x=-500
 @Update time=0
-@Leave id=‚â‚Ğ‚ë mx=900 my=0 fade=1 time=500 accel=1
+@Leave id=ã‚„ã²ã‚ mx=900 my=0 fade=1 time=500 accel=1
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8049
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8050
 
@@ -315,7 +315,7 @@
 
 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8054
 
@@ -329,7 +329,7 @@
 
 @Hitret id=8055
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=8056
 

@@ -4,19 +4,19 @@
 
 @Cg file=B17b   
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16834
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16835
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16836
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16837
 
@@ -24,19 +24,19 @@
 
 @Hitret id=16838
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16839
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16840
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16841
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16842
 
@@ -59,7 +59,7 @@
 
 @Hitret id=16846
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16847
 
@@ -67,7 +67,7 @@
 
 @Hitret id=16848
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16849
 
@@ -99,7 +99,7 @@
 
 @Hitret id=16854
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16855
 
@@ -145,7 +145,7 @@
 
 @Hitret id=16863
 
-@Talk name=�S�̐�
+@Talk name=心の声
 
 @Hitret id=16864
 

@@ -7,11 +7,11 @@
 @PlayBgm file=BGM05
 @Cg file=B07a
 @Char file=CH01_02M
-@ƒoƒi[•\¦ file=masterup
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=masterup
 @Update transition=universal rule=MOZCIR
 @WaitUpdate
 
-@Talk name=Class@Rep voice=KO110001
+@Talk name=Classã€€Rep voice=KO110001
 
 @Hitret id=14701
 
@@ -25,7 +25,7 @@
 
 @Char file=CH01_10M
 
-@Talk name=Class@Rep voice=KO110002
+@Talk name=Classã€€Rep voice=KO110002
 
 @Hitret id=14703
 
@@ -37,7 +37,7 @@
 @Hitret id=14704
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Char file=CF03_02M
 
 @Talk name=Ryouhei voice=RH110001
@@ -47,14 +47,14 @@
 @Char file=CH01_05M
 @Char file=CD02_07M
 @Char file=CF03_02M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
-@Talk name=Class@Rep voice=KO110003
+@Talk name=Classã€€Rep voice=KO110003
 
 @Hitret id=14706
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CB02_01M
 
 @Talk name=Nao voice=NO110001
@@ -64,7 +64,7 @@
 
 @Char file=CH01_07M
 
-@Talk name=Class@Rep voice=KO110004
+@Talk name=Classã€€Rep voice=KO110004
 
 @Hitret id=14708
 
@@ -79,8 +79,8 @@
 
 @Char file=CC06_03M
 @Update
-@action id=‰l action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK110002
 
@@ -94,7 +94,7 @@
 @Hitret id=14711
 
 
-@ClearChar id=âu
+@ClearChar id=ç©¹
 @Char file=CB02_03M
 
 @Talk name=Nao voice=NO110002
@@ -102,7 +102,7 @@
 @Hitret id=14712
 
 
-@ClearChar id=‰l
+@ClearChar id=ç‘›
 @Char file=CD02_02M
 
 @Talk name=Kazuha voice=KA110002
@@ -114,7 +114,7 @@
 @ClearChar
 
 @Char file=CH01_13M
-@Talk name=Class@Rep voice=KO110005
+@Talk name=Classã€€Rep voice=KO110005
 
 @Hitret id=14714
 
@@ -138,8 +138,8 @@
 @Char file=CJ01_01M x=300
 @Char file=CE01_05M x=100
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT110002
 
@@ -189,7 +189,7 @@
 @ClearChar
 @Char file=CH01_14M
 
-@Talk name=Class@Rep voice=KO110006
+@Talk name=Classã€€Rep voice=KO110006
 
 @Hitret id=14723
 
@@ -210,7 +210,7 @@
 
 @Char file=CH01_07M
 
-@Talk name=Class@Rep voice=KO110007
+@Talk name=Classã€€Rep voice=KO110007
 
 @Hitret id=14726
 
@@ -223,26 +223,26 @@
 @PlayBgm file=BGM06
 @Cg file=B20a
 @Char file=CH01_03M
-@ƒoƒi[•\¦ file=countdown14
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown14
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
-@Talk name=Class@Rep voice=KO110008
+@Talk name=Classã€€Rep voice=KO110008
 
 @Hitret id=14727
 
 
 @Char file=CH01_02M
 
-@Talk name=Class@Rep voice=KO110009
+@Talk name=Classã€€Rep voice=KO110009
 
 @Hitret id=14728
 
 
 @Char file=CC01_04M
 @Update
-@action id=‰l action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=‰l
+@action id=ç‘› action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=ç‘›
 
 @Talk name=Akira voice=AK110006
 
@@ -258,7 +258,7 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class@Rep voice=KO110010
+@Talk name=Classã€€Rep voice=KO110010
 
 @Hitret id=14731
 
@@ -266,7 +266,7 @@
 @Char file=CH01_09M
 @Char file=CD01_02M
 @Char file=CC01_01M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Akira voice=AK110007
 
@@ -275,7 +275,7 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class@Rep voice=KO110011
+@Talk name=Classã€€Rep voice=KO110011
 
 @Hitret id=14733
 
@@ -289,7 +289,7 @@
 
 @Char file=CH01_05M
 
-@Talk name=Class@Rep voice=KO110012
+@Talk name=Classã€€Rep voice=KO110012
 
 @Hitret id=14735
 
@@ -297,7 +297,7 @@
 @ClearChar
 @Char file=CH01_03M
 
-@Talk name=Class@Rep voice=KO110013
+@Talk name=Classã€€Rep voice=KO110013
 
 @Hitret id=14736
 
@@ -319,7 +319,7 @@
 @PlayBgm file=BGM15
 @Cg file=B07a
 @Char file=CC03_02M
-@ƒoƒi[•\¦ file=countdown13
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown13
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -355,7 +355,7 @@
 
 @Char file=CC03_03M
 @Char file=CD03_10M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Kazuha voice=KA110005
 
@@ -422,7 +422,7 @@
 @PlayBgm file=BGM04
 @Cg file=B47a
 @Char file=CD02_02M
-@ƒoƒi[•\¦ file=countdown12
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown12
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -461,7 +461,7 @@
 
 @Char file=CC02_02M
 @Char file=CD02_12M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Kazuha voice=KA110012
 
@@ -574,7 +574,7 @@
 @PlayBgm file=BGM05
 @Cg file=B01a
 @Char file=CA03_01M
-@ƒoƒi[•\¦ file=countdown11
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown11
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
@@ -613,7 +613,7 @@
 
 @Char file=CA03_04M
 @Char file=CB03_02M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Nao voice=NO110007
 
@@ -642,8 +642,8 @@
 
 
 @Update
-@action id=“Ş action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO110009
 
@@ -706,7 +706,7 @@
 @PlayBgm file=BGM06
 @Cg file=B21a
 @Char file=CB04_01M
-@ƒoƒi[•\¦ file=countdown10
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown10
 @Update transition=universal rule=MOZCIR
 @WaitUpdate
 
@@ -742,7 +742,7 @@
 
 @Char file=CB04_08M
 @Char file=CF04_03M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Nao voice=NO110017
 
@@ -829,7 +829,7 @@
 @PlayBgm file=BGM13
 @Cg file=B15b
 @Char file=CE01_01M
-@ƒoƒi[•\¦ file=countdown09
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown09
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -868,7 +868,7 @@
 
 @Char file=CE01_01M
 @Char file=CG01_02M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Yahiro voice=YH110002
 
@@ -984,7 +984,7 @@
 @PlayBgm file=BGM15
 @Cg file=B13a
 @Char file=CF03_03M
-@ƒoƒi[•\¦ file=countdown08
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown08
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -1012,8 +1012,8 @@
 @Char file=CB02_13L x=-200 order=907
 @Update time=0
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH110014
 
@@ -1021,15 +1021,15 @@
 
 
 @Update
-@action id=“Ş action=ActionAdvHop height=0 cycle=100 count=5 width=5
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvHop height=0 cycle=100 count=5 width=5
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO110026
 
 @Hitret id=14828
 
 
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Ryouhei voice=RH110015
 
@@ -1099,8 +1099,8 @@
 @ClearChar
 @Char file=CB02_13M
 @Update
-@action id=“Ş action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO110030
 
@@ -1166,61 +1166,61 @@
 @PlayBgm file=BGM03
 @Cg file=B15a
 @Char file=CH02_02M
-@ƒoƒi[•\¦ file=countdown07
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown07
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
-@Talk name=Class@Rep voice=KO110014
+@Talk name=Classã€€Rep voice=KO110014
 
 @Hitret id=14846
 
 
 @Char file=CH02_03M
 
-@Talk name=Class@Rep voice=KO110015
+@Talk name=Classã€€Rep voice=KO110015
 
 @Hitret id=14847
 
 
 @Char file=CH02_02M
 
-@Talk name=Class@Rep voice=KO110016
+@Talk name=Classã€€Rep voice=KO110016
 
 @Hitret id=14848
 
 
 @Char file=CH02_14M
 
-@Talk name=Class@Rep voice=KO110017
+@Talk name=Classã€€Rep voice=KO110017
 
 @Hitret id=14849
 
 
 @Char file=CH02_09M
 
-@Talk name=Class@Rep voice=KO110018
+@Talk name=Classã€€Rep voice=KO110018
 
 @Hitret id=14850
 
 
 @Char file=CH02_02M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
-@Talk name=Class@Rep voice=KO110019
+@Talk name=Classã€€Rep voice=KO110019
 
 @Hitret id=14851
 
 
 @Char file=CH02_03M
 
-@Talk name=Class@Rep voice=KO110020
+@Talk name=Classã€€Rep voice=KO110020
 
 @Hitret id=14852
 
 
 @Char file=CH02_14M
 
-@Talk name=Class@Rep voice=KO110021
+@Talk name=Classã€€Rep voice=KO110021
 
 @Hitret id=14853
 
@@ -1234,7 +1234,7 @@
 
 @Char file=CH02_05M
 
-@Talk name=Class@Rep voice=KO110022
+@Talk name=Classã€€Rep voice=KO110022
 
 @Hitret id=14855
 
@@ -1248,7 +1248,7 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class@Rep voice=KO110023
+@Talk name=Classã€€Rep voice=KO110023
 
 @Hitret id=14857
 
@@ -1269,7 +1269,7 @@
 
 @Char file=CH02_10M
 
-@Talk name=Class@Rep voice=KO110024
+@Talk name=Classã€€Rep voice=KO110024
 
 @Hitret id=14860
 
@@ -1290,7 +1290,7 @@
 @PlayBgm file=BGM07
 @Cg file=B16a
 @Char file=CG01_02M
-@ƒoƒi[•\¦ file=countdown06
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown06
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
@@ -1329,7 +1329,7 @@
 
 @Char file=CG01_02M
 @Char file=CA02_09M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Yahiro voice=YH110010
 
@@ -1437,7 +1437,7 @@
 @PlayBgm file=BGM05
 @Cg file=B35a
 @Char file=CE02_04M
-@ƒoƒi[•\¦ file=countdown05
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown05
 @Update transition=universal rule=MOZCIR
 @WaitUpdate
 
@@ -1475,7 +1475,7 @@
 
 
 @Char file=CE02_04M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Motoka voice=MT110021
 
@@ -1483,8 +1483,8 @@
 
 @Char file=CE02_05M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT110022
 
@@ -1519,7 +1519,7 @@
 @Hitret id=14891
 
 
-@ClearChar id=ˆê—t
+@ClearChar id=ä¸€è‘‰
 @Char file=CG01_03M
 
 @Talk name=Yahiro voice=YH110020
@@ -1626,7 +1626,7 @@
 @PlayBgm file=BGM06
 @Cg file=B33a
 @Char file=CF02_02M
-@ƒoƒi[•\¦ file=countdown04
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown04
 @Update transition=universal rule=MOZCIR
 @WaitUpdate
 
@@ -1665,7 +1665,7 @@
 
 
 @Char file=CD02_07M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Kazuha voice=KA110027
 
@@ -1681,8 +1681,8 @@
 
 @Char file=CD02_05M
 @Update
-@action id=ˆê—t action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA110028
 
@@ -1712,8 +1712,8 @@
 
 @Char file=CD02_13M
 @Update
-@action id=ˆê—t action=ActionAdvHop height=0 cycle=100 count=5 width=5
-@WaitAction id=ˆê—t
+@action id=ä¸€è‘‰ action=ActionAdvHop height=0 cycle=100 count=5 width=5
+@WaitAction id=ä¸€è‘‰
 
 @Talk name=Kazuha voice=KA110030
 
@@ -1821,7 +1821,7 @@
 @Char file=CF02_02M
 @Char file=CC02_04M
 
-@Talk name=Akira@and@Ryouhei voice=SYN000014
+@Talk name=Akiraã€€andã€€Ryouhei voice=SYN000014
 
 @Hitret id=14932
 
@@ -1857,7 +1857,7 @@
 
 @Cg file=B16c
 @Char file=CB02_01M
-@ƒoƒi[•\¦ file=countdown03
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown03
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -1889,8 +1889,8 @@
 
 @Char file=CE02_08M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=5
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=5
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT110032
 
@@ -1899,9 +1899,9 @@
 
 @Char file=CB02_13M
 @Update
-@action id=“Ş action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=“Ş
-@ƒoƒi[Á‹
+@action id=å¥ˆç·’ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=å¥ˆç·’
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Nao voice=NO110037
 
@@ -1940,7 +1940,7 @@
 @Hitret id=14946
 
 
-@ClearChar id=“Ş
+@ClearChar id=å¥ˆç·’
 @Char file=CG01_07M
 
 @Talk name=Yahiro voice=YH110026
@@ -1990,8 +1990,8 @@
 
 
 @Update
-@action id=“Ş action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=“Ş
+@action id=å¥ˆç·’ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=å¥ˆç·’
 
 @Talk name=Nao voice=NO110041
 
@@ -2076,7 +2076,7 @@
 @Hitret id=14965
 
 
-@Leave id=“Ş mx=-160 my=0 fade=1 time=250 accel=1
+@Leave id=å¥ˆç·’ mx=-160 my=0 fade=1 time=250 accel=1
 @Char file=CG01_01M
 
 @Talk name=Yahiro voice=YH110032
@@ -2093,7 +2093,7 @@
 @PlayBgm file=BGM03
 @Cg file=B19a
 @Char file=CA01_01M
-@ƒoƒi[•\¦ file=countdown02
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown02
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
@@ -2104,17 +2104,17 @@
 
 @Char file=CH01_05M
 @Update
-@action id=½ action=ActionAdvHop height=0 cycle=100 count=5 width=10
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvHop height=0 cycle=100 count=5 width=10
+@WaitAction id=æ¢¢
 
-@Talk name=Class@Rep voice=KO110025
+@Talk name=Classã€€Rep voice=KO110025
 
 @Hitret id=14968
 
 
 @Char file=CH01_10M
 
-@Talk name=Class@Rep voice=KO110026
+@Talk name=Classã€€Rep voice=KO110026
 
 @Hitret id=14969
 
@@ -2128,13 +2128,13 @@
 
 @Char file=CH01_07M
 
-@Talk name=Class@Rep voice=KO110027
+@Talk name=Classã€€Rep voice=KO110027
 
 @Hitret id=14971
 
 
 @Char file=CA01_06M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Sora voice=SR110019
 
@@ -2143,22 +2143,22 @@
 
 @Char file=CH01_14M
 
-@Talk name=Class@Rep voice=KO110028
+@Talk name=Classã€€Rep voice=KO110028
 
 @Hitret id=14973
 
 
 @Char file=CH01_02M
 
-@Talk name=Class@Rep voice=KO110029
+@Talk name=Classã€€Rep voice=KO110029
 
 @Hitret id=14974
 
 
 @Char file=CA01_01M
 @Update
-@Move id=âu my=20 cycle=1000
-@WaitAction id=âu
+@Move id=ç©¹ my=20 cycle=1000
+@WaitAction id=ç©¹
 @Talk name=Sora voice=SR110020
 
 @Hitret id=14975
@@ -2166,15 +2166,15 @@
 
 @Char file=CH01_09M
 
-@Talk name=Class@Rep voice=KO110030
+@Talk name=Classã€€Rep voice=KO110030
 
 @Hitret id=14976
 
 
 @Char file=CA01_09M
 @Update
-@Move id=âu y=0 cycle=1000
-@WaitAction id=âu
+@Move id=ç©¹ y=0 cycle=1000
+@WaitAction id=ç©¹
 @Talk name=Sora voice=SR110021
 
 @Hitret id=14977
@@ -2182,17 +2182,17 @@
 
 @Char file=CH01_05M
 @Update
-@action id=½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=½
+@action id=æ¢¢ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=æ¢¢
 
-@Talk name=Class@Rep voice=KO110031
+@Talk name=Classã€€Rep voice=KO110031
 
 @Hitret id=14978
 
 
 @Char file=CH01_02M
 
-@Talk name=Class@Rep voice=KO110032
+@Talk name=Classã€€Rep voice=KO110032
 
 @Hitret id=14979
 
@@ -2206,7 +2206,7 @@
 
 @Char file=CH01_07M
 
-@Talk name=Class@Rep voice=KO110033
+@Talk name=Classã€€Rep voice=KO110033
 
 @Hitret id=14981
 
@@ -2220,7 +2220,7 @@
 
 @Char file=CH01_01M
 
-@Talk name=Class@Rep voice=KO110034
+@Talk name=Classã€€Rep voice=KO110034
 
 @Hitret id=14983
 
@@ -2234,7 +2234,7 @@
 
 @Char file=CH01_02M
 
-@Talk name=Class@Rep voice=KO110035
+@Talk name=Classã€€Rep voice=KO110035
 
 @Hitret id=14985
 
@@ -2248,7 +2248,7 @@
 
 @Char file=CH01_12M
 
-@Talk name=Class@Rep voice=KO110036
+@Talk name=Classã€€Rep voice=KO110036
 
 @Hitret id=14987
 
@@ -2262,14 +2262,14 @@
 
 @Char file=CH01_07M
 
-@Talk name=Class@Rep voice=KO110037
+@Talk name=Classã€€Rep voice=KO110037
 
 @Hitret id=14989
 
 
 @Char file=CH01_03M
 
-@Talk name=Class@Rep voice=KO110038
+@Talk name=Classã€€Rep voice=KO110038
 
 @Hitret id=14990
 
@@ -2291,7 +2291,7 @@
 @PlayBgm file=BGM05
 @Cg file=B48a
 @Char file=CC06_02M
-@ƒoƒi[•\¦ file=countdown01
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown01
 @Update transition=universal rule=MOZCIR
 @WaitUpdate
 
@@ -2329,7 +2329,7 @@
 
 
 @Char file=CC06_01M
-@ƒoƒi[Á‹
+@ãƒãƒŠãƒ¼æ¶ˆå»
 
 @Talk name=Akira voice=AK110040
 
@@ -2352,8 +2352,8 @@
 
 @Char file=CF03_06M
 @Update
-@action id=—º•½ action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH110037
 
@@ -2378,8 +2378,8 @@
 
 @Char file=CE01_05M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=10
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=10
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT110039
 
@@ -2402,8 +2402,8 @@
 
 @Char file=CE01_05M
 @Update
-@action id=‰‰À action=ActionAdvJump cycle=300 count=1 height=30
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump cycle=300 count=1 height=30
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT110041
 
@@ -2421,7 +2421,7 @@
 
 @Char file=CH02_05M
 
-@Talk name=Class@Rep voice=KO110039
+@Talk name=Classã€€Rep voice=KO110039
 
 @Hitret id=15008
 
@@ -2466,7 +2466,7 @@
 
 @Char file=CH02_02M
 
-@Talk name=Class@Rep voice=KO110040
+@Talk name=Classã€€Rep voice=KO110040
 
 @Hitret id=15014
 
@@ -2530,7 +2530,7 @@
 @ClearChar
 @Char file=CH02_07M
 
-@Talk name=Class@Rep voice=KO110041
+@Talk name=Classã€€Rep voice=KO110041
 
 @Hitret id=15023
 
@@ -2557,7 +2557,7 @@
 @Hitret id=15026
 
 
-@Talk name=Nao@and@Kazuha@and@Motoka@and@Kozue@and@Ryouhei@and@Yahiro/Everyone voice=SYN000015
+@Talk name=Naoã€€andã€€Kazuhaã€€andã€€Motokaã€€andã€€Kozueã€€andã€€Ryouheiã€€andã€€Yahiro/Everyone voice=SYN000015
 
 @Hitret id=15027
 
@@ -2581,7 +2581,7 @@
 
 @Cg file=B34a center=800,300
 @Char file=CA02_01M
-@ƒoƒi[•\¦ file=countdown00
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdown00
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
@@ -2596,7 +2596,7 @@
 @Char file=CD02_02S
 @Char file=CE01_04S
 
-@Talk name=Akira@and@Kazuha@and@Nao@and@Motoka voice=SYN000016
+@Talk name=Akiraã€€andã€€Kazuhaã€€andã€€Naoã€€andã€€Motoka voice=SYN000016
 
 @Hitret id=15030
 
@@ -2647,7 +2647,7 @@
 
 @Cg file=B21a
 @Char file=CB06_02M
-@ƒoƒi[•\¦ file=countdownZZ
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdownZZ
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 
@@ -2658,7 +2658,7 @@
 
 @Cg file=B46a
 @Char file=CD02_02M
-@ƒoƒi[•\¦ file=countdownZZ
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdownZZ
 @Update transition=universal rule=WIP_LR
 @WaitUpdate
 
@@ -2669,7 +2669,7 @@
 
 @Cg file=B07e
 @Char file=CC06_04M
-@ƒoƒi[•\¦ file=countdownZZ
+@ãƒãƒŠãƒ¼è¡¨ç¤º file=countdownZZ
 @Update transition=universal rule=WIP_RL
 @WaitUpdate
 

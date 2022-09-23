@@ -1,9 +1,14 @@
-import glob  # Imports the various libraries for use in the program.
+import platform  # Imports the various libraries for use in the program.
 import os
+import sys
 import re
 import shutil
 import textwrap
-import time
+
+
+def fileCleaner():
+    for file in [file for file in os.listdir(os.getcwd()) if file.endswith(".txt")]:
+        os.remove(os.path.join(os.getcwd(), file))
 
 
 def dependencies():  # Checks for the program's dependencies, if they are not all found it halts execution and informs the user to add the files.
@@ -20,103 +25,126 @@ def dependencies():  # Checks for the program's dependencies, if they are not al
         quit()
 
 
-def csxDecrypter(choice):  # Decrypts the csx file for the specific games using Proger's CSX Importer/Exporter.
+def csxDecrypter(choice):  # Decrypts the csx file for the specific games using Xilexio's CSXtool.
     mainDirectory = os.getcwd()
     os.chdir("dependencies")
-    print("Please press the Enter key to after you see 'Success.' to continue program execution.")
-    print("Beginning execution...")
-    time.sleep(5)
-    if choice == 1:
-        os.system("csx " + mainDirectory + "\yosuga.csx export-no-names")
-    elif choice == 2:
-        os.system("csx " + mainDirectory + "\Haruka.csx export-no-names")
+    if platform.system() == "Windows":
+        if choice == 1:
+            os.system("csxtool.exe" + " export " + mainDirectory + "/yosuga.csx")
+            os.chdir("..")
+            os.rename("yosuga.txt", "temp.txt")
+        elif choice == 2:
+            os.system("csxtool.exe" + " export " + mainDirectory + "/Haruka.csx")
+            os.chdir("..")
+            os.rename("Haruka.txt", "temp.txt")
+    elif platform.system() == "Linux" or platform.system() == "Linux2":
+        if choice == 1:
+            os.system("./csxtool" + " export " + mainDirectory + "/yosuga.csx")
+            os.chdir("..")
+            os.rename("yosuga.txt", "temp.txt")
+        elif choice == 2:
+            os.system("./csxtool" + " export " + mainDirectory + "/Haruka.csx")
+            os.chdir("..")
+            os.rename("Haruka.txt", "temp.txt")
+
+
+def xp3pack():
+    mainDirectory = os.getcwd()
+    os.chdir("dependencies")
+    if platform.system() == "Windows":
+        os.system("xp3pack.exe " + mainDirectory + "/patch")
+    elif platform.system() == "Linux" or platform.system() == "Linux2":
+        print(mainDirectory + "/patch")
+        os.system("mono xp3pack.exe " + mainDirectory + "/patch/")
+    shutil.move("patch.xp3", "../patch.xp3")
     os.chdir("..")
 
 
-def utfCombiner():  # Combines the .utf files into 1 file for easier processing.
-    with open("temp.txt", "wb") as outfile:
-        for filename in glob.glob('*.utf'):
-            if filename == "temp.txt":
-                continue
-            with open(filename, 'rb') as readfile:
-                shutil.copyfileobj(readfile, outfile)
+
+def langFolder(language):
+    if language == 1:
+        langFolder = "en"
+    if language == 2:
+        langFolder = "es"
+    if language == 3:
+        langFolder = "fr"
+    if language == 4:
+        langFolder = "pt"
+    if language == 5:
+        langFolder = "cz"
+    if language == 6:
+        langFolder = "de"
+    if language == 7:
+        langFolder = "vn"
+
+    shutil.copyfile(f"dependencies/yosuga/{langFolder}/00_z005.ks", "dependencies/yosuga/00_z005.ks")
+    shutil.copyfile(f"dependencies/yosuga/{langFolder}/00_z008.ks", "dependencies/yosuga/00_z008.ks")
+    shutil.copyfile(f"dependencies/yosuga/{langFolder}/00_z012.ks", "dependencies/yosuga/00_z012.ks")
+    shutil.copyfile(f"dependencies/yosuga/{langFolder}/00_z014.ks", "dependencies/yosuga/00_z014.ks")
 
 
-def textReplacer(choice):  # Removes random pieces of text that are added in the conversion process.
+def textFormatter(choice, language):  # Formats the file so the data is easily manipulatable by the rest of the program.
+    fileLanguage = language
     textReplace = open("temp.txt", "r", encoding="UTF-8")  # Opens the new file into the file stream.
     data = textReplace.read()  # Declaring the data variable used to store the changes to the text.
 
-    data = re.sub("<.*>", "", string=data)  # Replaces the numbers in <> before each line with nothing.
-    data = data.replace('／', ' ')  # Replaces the '／' symbol with a space.
-    data = data.replace('\=', '')  # Replaces the '\=' symbol with nothing.
-    data = data.replace('…', '.')  # Replaces the … symbol with .
-    data = data.replace('’', "'")  # Replaces the ’ symbol with '
-    data = data.replace('–', '-')  # Replaces the '–' symbol with '-'.
-    data = data.replace('— ', '')  # Replaces the '— ' symbol with nothing.
-    data = data.replace('—', '-')  # Replaces the '—' symbol with '-'.
-    data = data.replace('－', '-')  # Replaces the '－' symbol with '-'.
-    data = data.replace('[', '(')  # Replaces the '[' symbol with '('.
-    data = data.replace(']', ')')  # Replaces the ']' symbol with ')'.
-    data = data.replace('*', '＊')  # Replaces the '*' symbol with ⋆.
-    data = data.replace('ä', 'a')  # Replaces the 'ä' symbol with a.
-    data = data.replace('é', 'e')  # Replaces the 'é' symbol with e.
-    data = data.replace('ō', 'o')  # Replaces the 'ō' symbol with o.
+    data = re.sub("《.*》", "", string=data)
+    data = re.sub("\[EN.*\] ", "", string=data)  # Removes the blank EN text boxes.
+    data = re.sub("\n\[JP.*\] \[", "[", string=data)  # Removes the text boxes before lines with names.
+    data = re.sub("\n\[JP.*\] ", " ", string=data)  # Removes the JP text boxes.
+    data = re.sub("\[JP.*\] ", "", string=data)  # Removes the text box at the top of the file.
+    data = re.sub("\n\n\n\n\n\n", "\n", string=data)  # Removes whitespaces.
+    data = re.sub("\n\n\n\n\n", "\n", string=data)  # Removes whitespaces.
+    data = re.sub("\n\n\n\n", "\n", string=data)  # Removes whitespaces.
+    data = re.sub("\n\n\n", "\n", string=data)  # Removes whitespaces.
+    data = re.sub("\n\n", "\n", string=data)  # Removes whitespaces.
+    data = re.sub("\n ", "\n", string=data)  # Removes whitespaces.
+    data = re.sub(r"\[[\w'\s]+\]", lambda matchobj: matchobj.group(0).replace(" ", "　"), data, flags=re.MULTILINE)  # Replaces the normal space symbol with an alternative unicode symbol.
+    data = re.sub("\[.*\] ", "", string=data)  # Removes the names, only temporary.
+    data = data.replace("[", "(") # Replaces the brackets, only temporary.
+    data = data.replace("]", ")") # Replaces the brackets, only temporary.
+    data = data.replace("…", ".")  # Replaces the '…' symbol with '.'.
+    data = data.replace("’", "'")  # Replaces the "’" symbol with "'".
+    data = data.replace("— ", "")  # Replaces the '— ' symbol with nothing.
+    data = data.replace("—", "-")  # Replaces the '—' symbol with '-'.
+    data = data.replace("－", "-")  # Replaces the '－' symbol with '-'.
+    data = data.replace("*", "＊")  # Replaces the '*' symbol with ⋆.
 
     textReplace = open("temp.txt", "w", encoding="UTF-8")  # Reopens the file for writing the new data to the file.
     textReplace.write(data)  # Writes the variable into the file.
     textReplace.close()  # Closes the file stream.
 
-    if choice == 1:
-        with open("temp.txt", "r", encoding="UTF-8") as file:  # Adds the missed data from the csx file, this must be added because the csx file is encoded weirdly at these lines and skips the text for the choices.
+    if choice == 1:  # Removes the first 4 lines that contain the choices.
+        with open("temp.txt", "r", encoding="UTF-8") as file:
             lines = file.readlines()
             file.close()
-        lineNumber = 1
-        with open("temp.txt", "w", encoding="UTF-8") as file:
-            for line in lines:
-                if lineNumber == 2320:
-                    file.write("Even though, we still haven't heard from her what should we do.\n")
-                elif lineNumber == 35154:
-                    file.write("At this point, Sora was projecting her annoyance so clearly that, were at it directed at Motoka-san, it would've had her stumbling over her words. It didn't seem to bother her mother, though.\n")
-                elif lineNumber == 38120:
-                    pass
-                elif lineNumber == 38121:
-                    pass
-                elif lineNumber == 38618:
-                    pass
-                elif lineNumber == 38619:
-                    pass
-                elif lineNumber == 39282:
-                    pass
-                else:
-                    file.write(line)
-                lineNumber += 1
-        file.close()
+            lineNumber = 1
+            with open("temp.txt", "w", encoding="UTF-8") as file:
+                for line in lines:
+                    if lineNumber == 1:
+                        pass
+                    elif lineNumber == 2:
+                        pass
+                    elif lineNumber == 3:
+                        pass
+                    elif lineNumber == 4:
+                        pass
+                    else:
+                        file.write(line)
+                    lineNumber += 1
+        yosugaSectionDivider(fileLanguage)  # Calls the yosugaSectionDivider function, to divide the file into chapters.
+
     elif choice == 2:
-        with open("temp.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 34.txt accidentally.
-            lines = file.readlines()
-            file.close()
-        lineNumber = 1
-        with open("temp.txt", "w", encoding="UTF-8") as file:
-            for line in lines:
-                if lineNumber == 5357:
-                    pass
-                else:
-                    file.write(line)
-                lineNumber += 1
-        file.close()
+        harukaSectionDivider()  # Calls the harukaSectionDivider function, to divide the file into chapters.
 
 
-def chapterCreator():
-    file = open("temp.txt", "a", encoding="UTF-8")
-    file.write("\n ~ AdvScreen ~ ")
-    file.close()
-
+def chapterCreator():  # Turns the single temp.txt file into the respective chapter files.
     file = open("temp.txt", "r", encoding="UTF-8")
     data = file.readlines()
     temp = []
     fileNumber = 1
     for i in range(1, len(data)):
-        if ' ~ ' in data[i]:
+        if "----------" in data[i]:
             fn = os.path.join(os.getcwd(), f"{fileNumber}.txt")
             with open(fn, "w", encoding="UTF-8") as file:
                 file.writelines(temp)
@@ -126,72 +154,24 @@ def chapterCreator():
             temp.append(data[i])
 
 
-def deleteMiscFiles():  # Deletes the miscellaneous files generated by the conversion of the csx file into chapter files.
-    for file in [file for file in os.listdir(os.getcwd()) if
-                 file.endswith(".txt") or file.endswith(".utf") or file.endswith(".cji") or file.endswith(
-                         "yosuga_original.csx") or file.endswith("Haruka_original.csx")]:
-        os.remove(os.path.join(os.getcwd(), file))
-
-
 def fileImporter(choice):  # Retrieves the file names for use in the fileConverter function.
-    try:
-        shutil.rmtree("compile")  # Removes the "compile" folder if it exists.
-    except OSError:
-        pass  # If the file does not exist, it will give an error, this ignores the error.
-    os.mkdir("compile")   # Recreate a new compile folder for the data to be inserted into.
-    os.chdir("compile")
-    os.mkdir("scenario")
-    os.chdir("..")
-
-    if choice == 1:  # Used to import the files for Yosuga no Sora
-        with open("306.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 306.txt accidentally.
-            lines = file.readlines()
-            file.close()
-        lineNumber = 1
-        with open("306.txt", "w", encoding="UTF-8") as file:
-            for line in lines:
-                if lineNumber == 145:
-                    pass
-                else:
-                    file.write(line)
-                lineNumber += 1
-        shutil.copyfile(f"dependencies/yosuga/macro.ks", f"compile/scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
-        for count in range(1, 306 + 1):  # Used to iterate through the files.
-            if count == 114:  # Used to skip the file that has Nao's extra chapter.
-                pass
-            elif count <= 306:
-                formattedFileName = yosugaFileNames(count)  # Calls the function and stores the current value in a variable.
-                unformattedFileName = str(count) + ".txt"  # Increases the value of the unformatted file that is called.
-
-                newFile = open(f"dependencies/yosuga/{formattedFileName}", "r", encoding="Shift_JIS")  # Opens the file stream for the formatted (new) file.
-                formatted = newFile.readlines()  # Reads the lines from the file and inserts it into a variable.
-                newFile.close()  # Closes the file stream for the formatted (new) file.
-
-                oldFile = open(f"{unformattedFileName}", "r", encoding="UTF-8")  # Opens the file stream for the unformatted (old) file.
-                unformatted = oldFile.readlines()  # Reads the lines from the file and inserts it into a variable.
-                oldFile.close()  # Closes the file stream for the unformatted (old) file.
-
-                fileConverter(formatted, unformatted, formattedFileName)  # Calls the fileConverter function to move the data between files.
+    if choice == 1:  # Used to set the amount of files so the function knows how many to search for.
+        fileAmount = 306
+        gameFolder = "yosuga"
     elif choice == 2:
-        with open("114.txt", "r", encoding="UTF-8") as file:  # Removes the additional line that was inserted into file 114.txt accidentally.
-            lines = file.readlines()
-            file.close()
-        lineNumber = 1
-        with open("114.txt", "w", encoding="UTF-8") as file:
-            for line in lines:
-                if lineNumber == 159:
-                    pass
-                else:
-                    file.write(line)
-                lineNumber += 1
-        file.close()
-
-        shutil.copyfile(f"dependencies/haruka/macro.ks", f"compile/scenario/macro.ks")  # Copies the macro.ks file that doesn't need to be changed.
-        for count in range(1, 114 + 1):  # Used to iterate through the files.
-            formattedFileName = harukaFileNames(count)  # Calls the function and stores the current value in a variable.
+        fileAmount = 114
+        gameFolder = "Haruka"
+    for count in range(1, fileAmount + 1):  # Used to iterate through the files.
+        if ((choice == 1) and (count == 114)):   # Used to skip the file that has Nao's extra chapter, which isnt in the new game.
+            pass
+        elif count <= fileAmount:
+            if choice == 1:
+                formattedFileName = yosugaFileNames(count)  # Calls the function and stores the current value in a variable.
+            elif choice == 2:
+                formattedFileName = harukaFileNames(count)  # Calls the function and stores the current value in a variable.
             unformattedFileName = str(count) + ".txt"  # Increases the value of the unformatted file that is called.
 
-            newFile = open(f"dependencies/haruka/{formattedFileName}", "r", encoding="Shift_JIS")  # Opens the file stream for the formatted (new) file.
+            newFile = open(f"dependencies/{gameFolder}/{formattedFileName}", "r", encoding="UTF-8")  # Opens the file stream for the formatted (new) file.
             formatted = newFile.readlines()  # Reads the lines from the file and inserts it into a variable.
             newFile.close()  # Closes the file stream for the formatted (new) file.
 
@@ -238,7 +218,7 @@ def fileConverter(formatted, unformatted, formattedFileName):  # Converts the ch
             pass
         y += 1
 
-    file = open(f"compile/scenario/{formattedFileName}", "w", encoding='UTF-16')  # Opens the file stream for the final file.
+    file = open(f"patch/{formattedFileName}", "w", encoding="UTF-16")  # Opens the file stream for the final file.
     file.write(str(''.join(formatted)))  # Writes the data from the variable to the file.
     file.close()
 
@@ -861,6 +841,365 @@ def yosugaFileNames(count):  # A function used to give the specific names of the
             return "Error! Make sure you are in the scenario folder, a file should look something like 00_a001.ks"
 
 
+def yosugaSectionDivider(language):
+    with open("temp.txt", "r", encoding="UTF-8") as f:
+        sectiondivider = f.readlines()
+
+    sectiondivider.insert(0, "----------\n")
+    sectiondivider.insert(206, "----------\n")
+    sectiondivider.insert(360, "----------\n")
+    sectiondivider.insert(530, "----------\n")
+    sectiondivider.insert(758, "----------\n")
+    sectiondivider.insert(864, "----------\n")
+    sectiondivider.insert(939, "----------\n")
+    sectiondivider.insert(1074, "----------\n")
+    sectiondivider.insert(1268, "----------\n")
+    sectiondivider.insert(1425, "----------\n")
+    sectiondivider.insert(1484, "----------\n")
+    sectiondivider.insert(1636, "----------\n")
+    sectiondivider.insert(1911, "----------\n")
+    sectiondivider.insert(2038, "----------\n")
+    sectiondivider.insert(2309, "----------\n")
+    if language == 1:
+        sectiondivider.insert(2319, "Although we still haven't heard any news on what we should do.\n")  # English
+    elif language == 2:
+        sectiondivider.insert(2319, "Aunque aún no habíamos oído qué debíamos hacer.\n")  # Spanish
+    elif language == 3:
+        sectiondivider.insert(2319, "Même si nous n'avons toujours pas eu de nouvelles sur ce que nous devrions faire.\n")  # French
+    elif language == 4:
+        sectiondivider.insert(2319, "Apesar que nós ainda não escutamos nada do que fazer.\n")  # Portuguese
+    elif language == 5:
+        sectiondivider.insert(2319, "I když jsme pořád neslyšeli nic o tom, co bychom měli dělat.\n")  # Czech
+    elif language == 6:
+        sectiondivider.insert(2319, "Obwohl wir noch keine Neuigkeiten darüber gehört haben, was wir tun sollten.\n")  # German
+    elif language == 7:
+        sectiondivider.insert(2319, "Mặc dù chúng tôi vẫn chưa nghe bất kỳ tin tức nào về những gì chúng tôi nên làm.\n")  # Vietnamese
+    sectiondivider.insert(2595, "----------\n")
+    sectiondivider.insert(2752, "----------\n")
+    sectiondivider.insert(2999, "----------\n")
+    sectiondivider.insert(3214, "----------\n")
+    sectiondivider.insert(3337, "----------\n")
+    sectiondivider.insert(3547, "----------\n")
+    sectiondivider.insert(3825, "----------\n")
+    sectiondivider.insert(3940, "----------\n")
+    sectiondivider.insert(4132, "----------\n")
+    sectiondivider.insert(4229, "----------\n")
+    sectiondivider.insert(4313, "----------\n")
+    sectiondivider.insert(4450, "----------\n")
+    sectiondivider.insert(4675, "----------\n")
+    sectiondivider.insert(5009, "----------\n")
+    sectiondivider.insert(5123, "----------\n")
+    sectiondivider.insert(5321, "----------\n")
+    sectiondivider.insert(5474, "----------\n")
+    sectiondivider.insert(5540, "----------\n")
+    sectiondivider.insert(5695, "----------\n")
+    sectiondivider.insert(5730, "----------\n")
+    sectiondivider.insert(5980, "----------\n")
+    sectiondivider.insert(6300, "----------\n")
+    sectiondivider.insert(6524, "----------\n")
+    sectiondivider.insert(6671, "----------\n")
+    sectiondivider.insert(6710, "----------\n")
+    sectiondivider.insert(6862, "----------\n")
+    sectiondivider.insert(6920, "----------\n")
+    sectiondivider.insert(7141, "----------\n")
+    sectiondivider.insert(7487, "----------\n")  # The change point where the count increases by 1
+    sectiondivider.insert(7729, "----------\n")
+    sectiondivider.insert(8051, "----------\n")
+    sectiondivider.insert(8156, "----------\n")
+    sectiondivider.insert(8334, "----------\n")
+    sectiondivider.insert(8367, "----------\n")
+    sectiondivider.insert(8445, "----------\n")
+    sectiondivider.insert(8539, "----------\n")
+    sectiondivider.insert(8622, "----------\n")
+    sectiondivider.insert(8806, "----------\n")
+    sectiondivider.insert(8922, "----------\n")
+    sectiondivider.insert(8942, "----------\n")
+    sectiondivider.insert(9089, "----------\n")
+    sectiondivider.insert(9172, "----------\n")
+    sectiondivider.insert(9424, "----------\n")
+    sectiondivider.insert(9636, "----------\n")
+    sectiondivider.insert(9714, "----------\n")
+    sectiondivider.insert(9920, "----------\n")
+    sectiondivider.insert(9958, "----------\n")
+    sectiondivider.insert(9989, "----------\n")
+    sectiondivider.insert(10027, "----------\n")
+    sectiondivider.insert(10154, "----------\n")
+    sectiondivider.insert(10228, "----------\n")
+    sectiondivider.insert(10345, "----------\n")
+    sectiondivider.insert(10432, "----------\n")
+    sectiondivider.insert(10518, "----------\n")
+    sectiondivider.insert(10597, "----------\n")
+    sectiondivider.insert(10847, "----------\n")
+    sectiondivider.insert(10901, "----------\n")
+    sectiondivider.insert(10987, "----------\n")
+    sectiondivider.insert(11030, "----------\n")
+    sectiondivider.insert(11220, "----------\n")
+    sectiondivider.insert(11286, "----------\n")
+    sectiondivider.insert(11332, "----------\n")
+    sectiondivider.insert(11421, "----------\n")
+    sectiondivider.insert(11439, "----------\n")
+    sectiondivider.insert(11657, "----------\n")
+    sectiondivider.insert(11714, "----------\n")
+    sectiondivider.insert(11747, "----------\n")
+    sectiondivider.insert(11957, "----------\n")
+    sectiondivider.insert(12051, "----------\n")
+    sectiondivider.insert(12108, "----------\n")
+    sectiondivider.insert(12149, "----------\n")
+    sectiondivider.insert(12229, "----------\n")
+    sectiondivider.insert(12383, "----------\n")
+    sectiondivider.insert(12455, "----------\n")
+    sectiondivider.insert(12555, "----------\n")
+    sectiondivider.insert(12907, "----------\n")
+    sectiondivider.insert(13035, "----------\n")
+    sectiondivider.insert(13255, "----------\n")
+    sectiondivider.insert(13345, "----------\n")
+    sectiondivider.insert(13420, "----------\n")
+    sectiondivider.insert(13545, "----------\n")
+    sectiondivider.insert(13878, "----------\n")
+    sectiondivider.insert(13904, "----------\n")
+    sectiondivider.insert(14010, "----------\n")
+    sectiondivider.insert(14229, "----------\n")
+    sectiondivider.insert(14297, "----------\n")
+    sectiondivider.insert(14340, "----------\n")
+    sectiondivider.insert(14478, "----------\n")
+    sectiondivider.insert(14497, "----------\n")
+    sectiondivider.insert(14599, "----------\n")
+    sectiondivider.insert(14631, "----------\n")
+    sectiondivider.insert(14696, "----------\n")
+    sectiondivider.insert(14712, "----------\n")
+    sectiondivider.insert(14837, "----------\n")
+    sectiondivider.insert(14981, "----------\n")
+    sectiondivider.insert(14990, "----------\n")
+    sectiondivider.insert(15412, "----------\n")
+    sectiondivider.insert(15539, "----------\n")
+    sectiondivider.insert(15673, "----------\n")
+    sectiondivider.insert(15712, "----------\n")
+    sectiondivider.insert(15918, "----------\n")
+    sectiondivider.insert(16062, "----------\n")
+    sectiondivider.insert(16114, "----------\n")
+    sectiondivider.insert(16222, "----------\n")
+    sectiondivider.insert(16375, "----------\n")
+    sectiondivider.insert(16470, "----------\n")
+    sectiondivider.insert(16548, "----------\n")
+    sectiondivider.insert(16724, "----------\n")
+    sectiondivider.insert(16866, "----------\n")
+    sectiondivider.insert(16928, "----------\n")
+    sectiondivider.insert(16969, "----------\n")
+    sectiondivider.insert(17103, "----------\n")
+    sectiondivider.insert(17171, "----------\n")
+    sectiondivider.insert(17396, "----------\n")
+    sectiondivider.insert(17427, "----------\n")
+    sectiondivider.insert(17571, "----------\n")
+    sectiondivider.insert(17766, "----------\n")
+    sectiondivider.insert(17983, "----------\n")
+    sectiondivider.insert(18098, "----------\n")
+    sectiondivider.insert(18153, "----------\n")
+    sectiondivider.insert(18241, "----------\n")
+    sectiondivider.insert(18326, "----------\n")
+    sectiondivider.insert(18455, "----------\n")
+    sectiondivider.insert(18584, "----------\n")
+    sectiondivider.insert(18655, "----------\n")
+    sectiondivider.insert(18769, "----------\n")
+    sectiondivider.insert(18932, "----------\n")
+    sectiondivider.insert(19035, "----------\n")
+    sectiondivider.insert(19087, "----------\n")
+    sectiondivider.insert(19126, "----------\n")
+    sectiondivider.insert(19221, "----------\n")
+    sectiondivider.insert(19413, "----------\n")
+    sectiondivider.insert(19590, "----------\n")
+    sectiondivider.insert(19657, "----------\n")
+    sectiondivider.insert(19715, "----------\n")
+    sectiondivider.insert(19849, "----------\n")
+    sectiondivider.insert(20085, "----------\n")
+    sectiondivider.insert(20166, "----------\n")
+    sectiondivider.insert(20461, "----------\n")
+    sectiondivider.insert(20488, "----------\n")
+    sectiondivider.insert(20708, "----------\n")
+    sectiondivider.insert(20993, "----------\n")
+    sectiondivider.insert(21037, "----------\n")
+    sectiondivider.insert(21183, "----------\n")
+    sectiondivider.insert(21288, "----------\n")
+    sectiondivider.insert(21582, "----------\n")
+    sectiondivider.insert(21856, "----------\n")
+    sectiondivider.insert(21898, "----------\n")
+    sectiondivider.insert(22166, "----------\n")
+    sectiondivider.insert(22234, "----------\n")
+    sectiondivider.insert(22374, "----------\n")
+    sectiondivider.insert(22516, "----------\n")
+    sectiondivider.insert(22773, "----------\n")
+    sectiondivider.insert(22868, "----------\n")
+    sectiondivider.insert(23056, "----------\n")
+    sectiondivider.insert(23134, "----------\n")
+    sectiondivider.insert(23247, "----------\n")
+    sectiondivider.insert(23353, "----------\n")
+    sectiondivider.insert(23432, "----------\n")
+    sectiondivider.insert(23657, "----------\n")
+    sectiondivider.insert(23854, "----------\n")
+    sectiondivider.insert(23956, "----------\n")
+    sectiondivider.insert(24270, "----------\n")
+    sectiondivider.insert(24353, "----------\n")
+    sectiondivider.insert(24447, "----------\n")
+    sectiondivider.insert(24572, "----------\n")
+    sectiondivider.insert(24682, "----------\n")
+    sectiondivider.insert(24820, "----------\n")
+    sectiondivider.insert(24931, "----------\n")
+    sectiondivider.insert(25130, "----------\n")
+    sectiondivider.insert(25230, "----------\n")
+    sectiondivider.insert(25416, "----------\n")
+    sectiondivider.insert(25473, "----------\n")
+    sectiondivider.insert(25535, "----------\n")
+    sectiondivider.insert(25580, "----------\n")
+    sectiondivider.insert(25669, "----------\n")
+    sectiondivider.insert(25821, "----------\n")
+    sectiondivider.insert(25902, "----------\n")
+    sectiondivider.insert(25992, "----------\n")
+    sectiondivider.insert(26120, "----------\n")
+    sectiondivider.insert(26194, "----------\n")
+    sectiondivider.insert(26240, "----------\n")
+    sectiondivider.insert(26283, "----------\n")
+    sectiondivider.insert(26470, "----------\n")
+    sectiondivider.insert(26635, "----------\n")
+    sectiondivider.insert(26768, "----------\n")
+    sectiondivider.insert(26865, "----------\n")
+    sectiondivider.insert(26993, "----------\n")
+    sectiondivider.insert(27118, "----------\n")
+    sectiondivider.insert(27227, "----------\n")
+    sectiondivider.insert(27376, "----------\n")
+    sectiondivider.insert(27647, "----------\n")
+    sectiondivider.insert(27699, "----------\n")
+    sectiondivider.insert(28093, "----------\n")
+    sectiondivider.insert(28144, "----------\n")
+    sectiondivider.insert(28296, "----------\n")
+    sectiondivider.insert(28426, "----------\n")
+    sectiondivider.insert(28521, "----------\n")
+    sectiondivider.insert(28696, "----------\n")
+    sectiondivider.insert(28993, "----------\n")
+    sectiondivider.insert(29113, "----------\n")
+    sectiondivider.insert(29266, "----------\n")
+    sectiondivider.insert(29348, "----------\n")
+    sectiondivider.insert(29638, "----------\n")
+    sectiondivider.insert(29702, "----------\n")
+    sectiondivider.insert(29810, "----------\n")
+    sectiondivider.insert(29935, "----------\n")
+    sectiondivider.insert(30027, "----------\n")
+    sectiondivider.insert(30062, "----------\n")
+    sectiondivider.insert(30161, "----------\n")
+    sectiondivider.insert(30189, "----------\n")
+    sectiondivider.insert(30239, "----------\n")
+    sectiondivider.insert(30300, "----------\n")
+    sectiondivider.insert(30449, "----------\n")
+    sectiondivider.insert(30547, "----------\n")
+    sectiondivider.insert(30575, "----------\n")
+    sectiondivider.insert(30662, "----------\n")
+    sectiondivider.insert(30765, "----------\n")
+    sectiondivider.insert(30825, "----------\n")
+    sectiondivider.insert(31091, "----------\n")
+    sectiondivider.insert(31215, "----------\n")
+    sectiondivider.insert(31262, "----------\n")
+    sectiondivider.insert(31352, "----------\n")
+    sectiondivider.insert(31485, "----------\n")
+    sectiondivider.insert(31573, "----------\n")
+    sectiondivider.insert(31630, "----------\n")
+    sectiondivider.insert(31736, "----------\n")
+    sectiondivider.insert(31847, "----------\n")
+    sectiondivider.insert(32047, "----------\n")
+    sectiondivider.insert(32118, "----------\n")
+    sectiondivider.insert(32274, "----------\n")
+    sectiondivider.insert(32349, "----------\n")
+    sectiondivider.insert(32464, "----------\n")
+    sectiondivider.insert(32606, "----------\n")
+    sectiondivider.insert(32732, "----------\n")
+    sectiondivider.insert(32957, "----------\n")
+    sectiondivider.insert(33079, "----------\n")
+    sectiondivider.insert(33207, "----------\n")
+    sectiondivider.insert(33307, "----------\n")
+    sectiondivider.insert(33468, "----------\n")
+    sectiondivider.insert(33734, "----------\n")
+    sectiondivider.insert(33848, "----------\n")
+    sectiondivider.insert(34047, "----------\n")
+    sectiondivider.insert(34221, "----------\n")
+    sectiondivider.insert(34533, "----------\n")
+    sectiondivider.insert(34589, "----------\n")
+    sectiondivider.insert(34693, "----------\n")
+    sectiondivider.insert(34750, "----------\n")
+    sectiondivider.insert(34831, "----------\n")
+    sectiondivider.insert(34922, "----------\n")
+    if language == 1:
+        sectiondivider.insert(35154, "At this point, Sora was projecting her annoyance so clearly that, were at it directed at Motoka-san, it would've had her stumbling over her words. It didn't seem to bother her mother, though.\n")  # English
+    elif language == 2:
+        sectiondivider.insert(35154, "Llegados a ese punto, Sora estaba mostrando su enfado de forma tan clara que, si fuera dirigida a Motoka-san, le habría hecho tropezarse con sus palabras. Sin embargo, a su madre no parecía molestarle.\n")  # Spanish
+    elif language == 3:
+        sectiondivider.insert(35154, "À ce stade, Sora projetait son agacement tellement clairement que, s'il était dirigé vers Motoka, elle en buterait sur ses mots. Cela ne semblait pas déranger sa mère cependant.\n")  # French
+    elif language == 4:
+        sectiondivider.insert(35154, "Nesse momento, Sora estava planejando anunciar claramente que, fosse direcionado à Makoto-san, isso teria feito ela tremer com suas palavras. Apesar que não parecia ter incômoda sua mãe.\n")  # Portuguese
+    elif language == 5:
+        sectiondivider.insert(35154, "Teď Sora ukazovala její rozčílení tak jasně, že kdyby to bylo mířeno na Motoku, začala by z toho koktat. Její mamce to ale asi nevadilo.\n")  # Czech
+    elif language == 6:
+        sectiondivider.insert(35154, "Jetzt, Sora projektiert Ihre Verärgerung so klar dass, wenn es wird an Motoka-san gerichtet, Sie würde an Ihre Wörter gefallen. Ihre Mutter war nicht ärgert von dass.\n")  # German
+    elif language == 7:
+        sectiondivider.insert(35154, "Tại thời điểm này, Sora đã thể hiện sự khó chịu của mình một cách rõ ràng đến nỗi, nó nhắm thẳng vào Motoka-san, chắc chắn cô ấy sẽ vấp phải những lời nói của mình. Tuy nhiên, điều đó dường như không làm mẹ cô bận tâm.\n")  # Vietnamese
+    sectiondivider.insert(35179, "----------\n")
+    sectiondivider.insert(35262, "----------\n")
+    sectiondivider.insert(35407, "----------\n")
+    sectiondivider.insert(35454, "----------\n")
+    sectiondivider.insert(35687, "----------\n")
+    sectiondivider.insert(35707, "----------\n")
+    sectiondivider.insert(35805, "----------\n")
+    sectiondivider.insert(35966, "----------\n")
+    sectiondivider.insert(36043, "----------\n")
+    sectiondivider.insert(36154, "----------\n")
+    sectiondivider.insert(36195, "----------\n")
+    sectiondivider.insert(36271, "----------\n")
+    sectiondivider.insert(36332, "----------\n")
+    sectiondivider.insert(36427, "----------\n")
+    sectiondivider.insert(36498, "----------\n")
+    sectiondivider.insert(36530, "----------\n")
+    sectiondivider.insert(36551, "----------\n")
+    sectiondivider.insert(36645, "----------\n")
+    sectiondivider.insert(36692, "----------\n")
+    sectiondivider.insert(36895, "----------\n")
+    sectiondivider.insert(36974, "----------\n")
+    sectiondivider.insert(37044, "----------\n")
+    sectiondivider.insert(37107, "----------\n")
+    sectiondivider.insert(37181, "----------\n")
+    sectiondivider.insert(37297, "----------\n")
+    sectiondivider.insert(37432, "----------\n")
+    sectiondivider.insert(37545, "----------\n")
+    sectiondivider.insert(37729, "----------\n")
+    if language == 1:
+        sectiondivider.insert(37759, "Given the circumstance, you'll just have to put up with bread and milk for now.\n")  # English
+    elif language == 2:
+        sectiondivider.insert(37759, "Dadas las circunstancias, tendrás que aguantar con pan y leche por ahora.\n")  # Spanish
+    elif language == 3:
+        sectiondivider.insert(37759, "Étant donné les circonstances, tu devras te contenter de pain et de lait pour l'instant.\n")  # French
+    elif language == 4:
+        sectiondivider.insert(37759, "Dados as circunstâncias, você terá que tolerar com pão e leite por agora.\n")  # Portuguese
+    elif language == 5:
+        sectiondivider.insert(37759, "Vzhledem k situaci si zatím budeš muset vystačit s chlebem a mlékem.\n")  # Czech
+    elif language == 6:
+        sectiondivider.insert(37759, "Weil die Situation, du nur Milch und Brot isst wird.\n")  # German
+    elif language == 7:
+        sectiondivider.insert(37759, "Trong hoàn cảnh này, bây giờ bạn sẽ chỉ phải ăn với bánh mì và sữa.\n")  # Vietnamese
+    sectiondivider.insert(37807, "----------\n")
+    sectiondivider.insert(37957, "----------\n")
+    sectiondivider.insert(38020, "----------\n")
+    sectiondivider.insert(38166, "----------\n")
+    sectiondivider.insert(38467, "----------\n")
+    sectiondivider.insert(38567, "----------\n")
+    sectiondivider.insert(38718, "----------\n")
+    sectiondivider.insert(38807, "----------\n")
+    sectiondivider.insert(38970, "----------\n")
+    sectiondivider.insert(39120, "----------\n")
+    sectiondivider.insert(39286, "----------\n")
+    sectiondivider.insert(39409, "----------\n")
+    sectiondivider.insert(39543, "----------\n")
+    sectiondivider.insert(39688, "----------\n")
+
+    with open("temp.txt", "w", encoding="UTF-8") as f:
+        sectiondivider = "".join(sectiondivider)
+        f.write(sectiondivider)
+
+
 def harukaFileNames(count):  # A function used to give the specific names of the new files for Haruka na Sora.
     match count:
         case 1:
@@ -1093,41 +1432,209 @@ def harukaFileNames(count):  # A function used to give the specific names of the
             return "web06.ks"
 
 
-print("Yosuga no Sora/Haruka na Sora EntisGLS to KiriKiri Convertor")
-print("Created by MrWicked @ https://github.com/TheRealMrWicked/Yosuga-no-Sora-Patch-Conversion\n")
+def harukaSectionDivider():
+    with open("temp.txt", "r", encoding="UTF-8") as f:
+        sectiondivider = f.readlines()
 
+    sectiondivider.insert(0, "----------\n")
+    sectiondivider.insert(184, "----------\n")
+    sectiondivider.insert(242, "----------\n")
+    sectiondivider.insert(373, "----------\n")
+    sectiondivider.insert(498, "----------\n")
+    sectiondivider.insert(640, "----------\n")
+    sectiondivider.insert(710, "----------\n")
+    sectiondivider.insert(851, "----------\n")
+    sectiondivider.insert(894, "----------\n")
+    sectiondivider.insert(930, "----------\n")
+    sectiondivider.insert(985, "----------\n")
+    sectiondivider.insert(1118, "----------\n")
+    sectiondivider.insert(1188, "----------\n")
+    sectiondivider.insert(1377, "----------\n")
+    sectiondivider.insert(1833, "----------\n")
+    sectiondivider.insert(2035, "----------\n")
+    sectiondivider.insert(2107, "----------\n")
+    sectiondivider.insert(2161, "----------\n")
+    sectiondivider.insert(2257, "----------\n")
+    sectiondivider.insert(2353, "----------\n")
+    sectiondivider.insert(2421, "----------\n")
+    sectiondivider.insert(2544, "----------\n")
+    sectiondivider.insert(2622, "----------\n")
+    sectiondivider.insert(2871, "----------\n")
+    sectiondivider.insert(3091, "----------\n")
+    sectiondivider.insert(3209, "----------\n")
+    sectiondivider.insert(3669, "----------\n")  # The change point.
+    sectiondivider.insert(3900, "----------\n")
+    sectiondivider.insert(4232, "----------\n")
+    sectiondivider.insert(4340, "----------\n")
+    sectiondivider.insert(4521, "----------\n")
+    sectiondivider.insert(4618, "----------\n")
+    sectiondivider.insert(4729, "----------\n")
+    sectiondivider.insert(5166, "----------\n")
+    sectiondivider.insert(5363, "----------\n")
+    sectiondivider.insert(5569, "----------\n")
+    sectiondivider.insert(5670, "----------\n")
+    sectiondivider.insert(5761, "----------\n")
+    sectiondivider.insert(5874, "----------\n")
+    sectiondivider.insert(5988, "----------\n")
+    sectiondivider.insert(6060, "----------\n")
+    sectiondivider.insert(6130, "----------\n")
+    sectiondivider.insert(6230, "----------\n")
+    sectiondivider.insert(6488, "----------\n")
+    sectiondivider.insert(6557, "----------\n")
+    sectiondivider.insert(6631, "----------\n")
+    sectiondivider.insert(6788, "----------\n")
+    sectiondivider.insert(6828, "----------\n")
+    sectiondivider.insert(6973, "----------\n")
+    sectiondivider.insert(7038, "----------\n")
+    sectiondivider.insert(7194, "----------\n")
+    sectiondivider.insert(7405, "----------\n")
+    sectiondivider.insert(7491, "----------\n")
+    sectiondivider.insert(7606, "----------\n")
+    sectiondivider.insert(8034, "----------\n")
+    sectiondivider.insert(8096, "----------\n")
+    sectiondivider.insert(8194, "----------\n")
+    sectiondivider.insert(8513, "----------\n")
+    sectiondivider.insert(8854, "----------\n")
+    sectiondivider.insert(8982, "----------\n")
+    sectiondivider.insert(9100, "----------\n")
+    sectiondivider.insert(9268, "----------\n")
+    sectiondivider.insert(9399, "----------\n")
+    sectiondivider.insert(9700, "----------\n")
+    sectiondivider.insert(9795, "----------\n")
+    sectiondivider.insert(9849, "----------\n")
+    sectiondivider.insert(9907, "----------\n")
+    sectiondivider.insert(10008, "----------\n")
+    sectiondivider.insert(10099, "----------\n")
+    sectiondivider.insert(10182, "----------\n")
+    sectiondivider.insert(10319, "----------\n")
+    sectiondivider.insert(10403, "----------\n")
+    sectiondivider.insert(10474, "----------\n")
+    sectiondivider.insert(10525, "----------\n")
+    sectiondivider.insert(10602, "----------\n")
+    sectiondivider.insert(10666, "----------\n")
+    sectiondivider.insert(10752, "----------\n")
+    sectiondivider.insert(10858, "----------\n")
+    sectiondivider.insert(10897, "----------\n")
+    sectiondivider.insert(10985, "----------\n")
+    sectiondivider.insert(11139, "----------\n")
+    sectiondivider.insert(11263, "----------\n")
+    sectiondivider.insert(11346, "----------\n")
+    sectiondivider.insert(11459, "----------\n")
+    sectiondivider.insert(11597, "----------\n")
+    sectiondivider.insert(11726, "----------\n")
+    sectiondivider.insert(11822, "----------\n")
+    sectiondivider.insert(11955, "----------\n")
+    sectiondivider.insert(12038, "----------\n")
+    sectiondivider.insert(12232, "----------\n")
+    sectiondivider.insert(12351, "----------\n")
+    sectiondivider.insert(12545, "----------\n")
+    sectiondivider.insert(12609, "----------\n")
+    sectiondivider.insert(12719, "----------\n")
+    sectiondivider.insert(12817, "----------\n")
+    sectiondivider.insert(12864, "----------\n")
+    sectiondivider.insert(12930, "----------\n")
+    sectiondivider.insert(13081, "----------\n")
+    sectiondivider.insert(13189, "----------\n")
+    sectiondivider.insert(13348, "----------\n")
+    sectiondivider.insert(13803, "----------\n")
+    sectiondivider.insert(13937, "----------\n")
+    sectiondivider.insert(14014, "----------\n")
+    sectiondivider.insert(14264, "----------\n")
+    sectiondivider.insert(14348, "----------\n")
+    sectiondivider.insert(14675, "----------\n")
+    sectiondivider.insert(14781, "----------\n")
+    sectiondivider.insert(15123, "----------\n")
+    sectiondivider.insert(15489, "----------\n")
+    sectiondivider.insert(15590, "----------\n")
+    sectiondivider.insert(15702, "----------\n")
+    sectiondivider.insert(15820, "----------\n")
+    sectiondivider.insert(15941, "----------\n")
+    sectiondivider.insert(16042, "----------\n")
+    sectiondivider.insert(16201, "----------\n")
+
+    with open("temp.txt", "w", encoding="UTF-8") as f:
+        sectiondivider = "".join(sectiondivider)
+        f.write(sectiondivider)
+
+
+try:  # This function removes the folders that this program usually generates, if they somehow remain.
+    shutil.rmtree("patch")
+except OSError:
+    pass
+
+fileCleaner()
 dependencies()
 
-print("Which game do you want to convert?\n")
-print("1. Yosuga no Sora. (yosuga.csx)")
-print("2. Haruka na Sora. (Haruka.csx)")
-
-while True:
-    try:
-        choice = int(input("Enter your choice: "))
-    except ValueError:
-        print("Please enter a valid choice.")
-        continue
-    if choice >= 3:
-        print("Please enter a valid choice.")
-        continue
+try:  # Ensures the correct arguments are passed and gives the appropriate error messages.
+    if sys.argv[1] == "yosuga.csx":
+        choice = 1
+        shutil.copytree(f"dependencies/yosugaExtras", "patch")  # Copies the extras folder which creates the patch folder.
+    elif sys.argv[1] == "Haruka.csx":
+        choice = 2
+        shutil.copytree(f"dependencies/harukaExtras", "patch")  # Copies the extras folder which creates the patch folder.
     else:
-        break
-
-csxDecrypter(choice)
-utfCombiner()
-textReplacer(choice)
-chapterCreator()
-fileImporter(choice)
-deleteMiscFiles()
+        print("This csx file is not compatible, if you are sure the file is correct please rename it to yosuga.csx or Haruka.csx.")
+        quit()
+except IndexError:
+    print("Usage: patchconvertor file.csx [language]")
+    print("Current language options are: en, es, fr, pt, cz, de, vn\n")
+    quit()
 
 if choice == 1:
-    shutil.copyfile(f"dependencies/yosuga/begin.tjs", f"compile/begin.tjs")
-    shutil.copyfile(f"dependencies/yosuga/startup.tjs", f"compile/startup.tjs")
-    shutil.copytree(f"dependencies/yosuga/system", f"compile/system")
-elif choice == 2:
-    shutil.copyfile(f"dependencies/haruka/begin.tjs", f"compile/begin.tjs")
-    shutil.copyfile(f"dependencies/haruka/startup.tjs", f"compile/startup.tjs")
-    shutil.copytree(f"dependencies/haruka/system", f"compile/system")
+    try:
+        if sys.argv[2] == "en":
+            language = 1
+        elif sys.argv[2] == "es":
+            language = 2
+        elif sys.argv[2] == "fr":
+            language = 3
+        elif sys.argv[2] == "pt":
+            language = 4
+        elif sys.argv[2] == "cz":
+            language = 5
+        elif sys.argv[2] == "de":
+            language = 6
+        elif sys.argv[2] == "vn":
+            language = 7
+        else:
+            print("Please enter one of the listed language options.")
+            quit()
+    except IndexError:
+        print("What language is the yosuga.csx file?")
+        print("1. English")
+        print("2. Spanish")
+        print("3. French")
+        print("4. Portuguese")
+        print("5. Czech")
+        print("6. German")
+        print("7. Vietnamese")
 
-input("Success the compile folder has been created.")
+        while True:
+            try:
+                language = int(input("Enter your choice: "))
+            except ValueError:
+                print("Please enter a valid number.")
+                continue
+            if language >= 8:
+                print("Please enter a valid choice.")
+                continue
+            else:
+                break
+    langFolder(language)
+
+if choice == 2:
+    language = 1
+
+csxDecrypter(choice)
+textFormatter(choice, language)
+chapterCreator()
+fileImporter(choice)
+fileCleaner()
+xp3pack()
+
+try:
+    shutil.rmtree("patch")
+except OSError:
+    pass
+
+print("Success patch.xp3 has been created.")

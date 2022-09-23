@@ -49,15 +49,15 @@
 
 @Hitret id=33348
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33349
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33350
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33351
 
@@ -72,7 +72,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33354
 
@@ -84,7 +84,7 @@
 
 @Hitret id=33356
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33357
 
@@ -99,7 +99,7 @@
 
 @Hitret id=33359
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33360
 
@@ -125,8 +125,8 @@
 
 @Char file=CF05_06M 
 @Update
-@action id=—º•½ action=ActionAdvHop width=4 height=0 cycle=100 count=5
-@WaitAction id=—º•½
+@action id=äº®å¹³ action=ActionAdvHop width=4 height=0 cycle=100 count=5
+@WaitAction id=äº®å¹³
 
 @Talk name=Ryouhei voice=RH050010
 
@@ -155,14 +155,14 @@
 @Hitret id=33368
 
 
-@ClearChar id=‰‰À
+@ClearChar id=åˆä½³
 @Update time=0
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33369
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33370
 
@@ -176,8 +176,8 @@
 
 @Char file=CE01_06M 
 @Update
-@action id=‰‰À action=ActionAdvJump height=30 cycle=300 count=1
-@WaitAction id=‰‰À
+@action id=åˆä½³ action=ActionAdvJump height=30 cycle=300 count=1
+@WaitAction id=åˆä½³
 
 @Talk name=Motoka voice=MT050004
 
@@ -201,11 +201,11 @@
 
 @Hitret id=33375
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33376
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33377
 
@@ -251,7 +251,7 @@
 
 @Hitret id=33385
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33386
 
@@ -306,11 +306,11 @@
 
 @Hitret id=33396
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33397
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33398
 
@@ -348,10 +348,10 @@
 @Hitret id=33404
 
 
-@ClearChar id=—º•½
-@ClearChar id=‰l
+@ClearChar id=äº®å¹³
+@ClearChar id=ç‘›
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33405
 
@@ -385,7 +385,7 @@
 
 @Hitret id=33411
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33412
 
@@ -400,7 +400,7 @@
 
 @Hitret id=33414
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33415
 
@@ -412,7 +412,7 @@
 
 @Hitret id=33417
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33418
 
@@ -437,7 +437,7 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33422
 
@@ -464,23 +464,23 @@
 
 @ClearChar 
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33427
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33428
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33429
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33430
 
-@Talk name=S‚Ìº
+@Talk name=å¿ƒã®å£°
 
 @Hitret id=33431
 
